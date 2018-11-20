@@ -1,5 +1,5 @@
 = LOS
 
 == Dokumenter
-. link:los-hva-er-det-og-hva-er-problemet.pptx.pptx[Los -hva er det og hva er problemet]
+. link:./los-hva-er-det-og-hva-er-problemet.pptx.pptx[Los -hva er det og hva er problemet]
 
