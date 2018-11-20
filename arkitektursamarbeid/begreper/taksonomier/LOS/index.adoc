@@ -1,5 +1,7 @@
 = LOS
 
 == Dokumenter
-. link:./docs/los-hva-er-det-og-hva-er-problemet.pptx[Los -hva er det og hva er problemet]
+. link:./docs/los-hva-er-det-og-hva-er-problemet.pptx[LOS - hva er det og hva er problemet]
+
+. https://1drv.ms/p/s!Ao0VyYhs1XdLiakctcwEzc9o3f1guw[LOS - samme dokument, men med lenke til OneDrive]
 
