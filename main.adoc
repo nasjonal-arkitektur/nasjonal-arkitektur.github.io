@@ -8,10 +8,12 @@ include::./felles/includes/standardheader.adoc[]
 :imagesdir!:
 :imagesdir: ./images
 
-image:eif.png[width=300, height=300]
+//image:eif.png[width=300, height=300]
 
 [.lead] 
 Plattform for samproduksjon og deling av arkitekturdokumentasjon på tvers av sektorer og virksomheter i Norge. 
+
+image:linked-data.png[width=150, height=150]
 
 //image:i-arbeid.png[width=50, height=50]
 
