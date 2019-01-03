@@ -1,0 +1,32 @@
+:lang: no
+:doctitle: Metode
+:keywords: Norsk, arkitekturbibliotek, offenlig sektor, virksomhetsarkitektur, NIF, samhandlingsarkitektur, rammeverk, GitHub
+
+ifndef::standardheader_included[]
+include::../felles/includes/standardheader.adoc[]
+include::../felles/includes/commonlinks1.adoc[]
+endif::[]
+
+
+image:i-arbeid.png[width=75, height=75]
+
+
+
+//:leveloffset: +1
+
+//include::Samhandlingsmønstre.adoc[]
+
+include::Metode.adoc[]
+
+//:leveloffset: +1
+
+include::Steg1.adoc[]
+
+include::Steg2.adoc[]
+
+include::Steg3.adoc[]
+
+include::Steg4.adoc[]
+
+
+

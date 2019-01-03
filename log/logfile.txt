@@ -1,0 +1,4 @@
+
+03.01.2019 00:33:47: ErstattTekstIAlleFiler(Hei Erik, Erik)
+03.01.2019 00:33:47: 1 replacements in file C:\Users\eha\OneDrive\GitHub\Difi\nasjonal_arkitektur\test1\test1.adoc
+03.01.2019 00:33:47: 2 replacements in file C:\Users\eha\OneDrive\GitHub\Difi\nasjonal_arkitektur\test1\test1.2\felles\includes\standardheader.adoc

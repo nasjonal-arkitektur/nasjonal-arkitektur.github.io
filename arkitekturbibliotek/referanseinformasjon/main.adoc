@@ -1,0 +1,20 @@
+lang: no
+:doctitle: Referansebibliotek
+:keywords: Referansebibliotek
+:preamble: Referansebibliotek...
+
+ifndef::standardheader_included[]
+include::./felles/includes/standardheader.adoc[]
+include::./felles/includes/commonlinks1.adoc[]
+endif::[]
+
+== Begreper
+== Informasjonsmodeller
+== Maler
+== Metodikk og rammeverk
+== Taksonomier
+
+== Referansearkitekturer
+leveloffset!:
+:leveloffset: +1
+include::./arkitekturbibliotek/main.adoc[]
