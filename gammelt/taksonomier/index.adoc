@@ -1,0 +1,7 @@
+= Taksonomier
+
+Dokumenter:
+
+. link:./research/klassifikasjonssystemer-research-1.docx[Klassifikasjonssystemer - research mars 2018 (MS Word)]
+
+. link:./research/klassifikasjonssysteme-research.html[Klassifikasjonssystemer - research (asciidoc, migrering fra Word i arbeid)]
