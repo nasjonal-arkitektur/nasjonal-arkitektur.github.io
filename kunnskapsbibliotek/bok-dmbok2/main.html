@@ -5,9 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="Norsk, arkitekturbibliotek, offenlig sektor, virksomhetsarkitektur, NIF, samhandlingsarkitektur, rammeverk, GitHub">
+<meta name="keywords" content="Informasjonsforvaltning, Dataforvaltning">
 <meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
-<title>Metode</title>
+<title>Data Management Book of Knowledge (DMBOK2)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -435,352 +435,1309 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Metode</h1>
+<h1>Data Management Book of Knowledge (DMBOK2)</h1>
 <div class="details">
 <span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
 <span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Innhold</div>
-<ul class="sectlevel0">
-<li><a href="#_metode">Metode</a>
 <ul class="sectlevel1">
-<li><a href="#_generelt">1. Generelt</a></li>
-</ul>
-</li>
-<li><a href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling">Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2">1. Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a></li>
-</ul>
-</li>
-<li><a href="#_steg_2_identifisere_samhandlingsmønstre">Steg 2 - Identifisere samhandlingsmønstre</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_2_identifisere_samhandlingsmønstre_2">1. Steg 2 - Identifisere samhandlingsmønstre</a></li>
-</ul>
-</li>
-<li><a href="#_steg_3_identifisere_referansearkitektur">Steg 3 - Identifisere referansearkitektur</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_3_identifisere_referansearkitektur_2">1. Steg 3 - Identifisere referansearkitektur</a></li>
-</ul>
-</li>
-<li><a href="#_steg_4_identifisere_løsningsarkitektur">Steg 4 - Identifisere løsningsarkitektur</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_4_identifisere_løsningsarkitektur_2">1. Steg 4 - Identifisere løsningsarkitektur</a></li>
-</ul>
-</li>
+<li><a href="#_hvordan_få_fatt_i_denne_boken">1. Hvordan få fatt i denne boken?</a></li>
+<li><a href="#_bokens_innholdfortegnelse_to_øverste_nivåer">2. Bokens innholdfortegnelse (to øverste nivåer)</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
+<div class="paragraph lead">
+<p>Data Management Body of Knowledge (2nd Edition) fra DAMA er et omfattende verk om data- og informasjonsforvaltning, Utgitt 2017-07-10.</p>
+</div>
 <div class="paragraph">
-<p><span class="image"><img src="..//felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span></p>
+<p><span class="image"><img src="./images/dama-dmbok-front.png" alt="dama dmbok front" width="150" height="150"></span></p>
 </div>
 </div>
-</div>
-<h1 id="_metode" class="sect0"><a class="anchor" href="#_metode"></a><a class="link" href="#_metode">Metode</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
 </div>
 <div class="sect1">
-<h2 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1. Generelt</a></h2>
+<h2 id="_hvordan_få_fatt_i_denne_boken"><a class="anchor" href="#_hvordan_få_fatt_i_denne_boken"></a><a class="link" href="#_hvordan_få_fatt_i_denne_boken">1. Hvordan få fatt i denne boken?</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Digital samhandling mellom virksomheter er i stadig endring. Som del av den digitale transformasjonen så vil man ikke lenger sette strøm på papir, men i steden identifisere prosesser for digital samhandling som skiller seg mye fra hvordan man samhandler i dag. De nye prosessene bør ha større fokus på brukernes behov ved å sette brukeren i sentrum og derigjennom understøtte Digital agenda og Personvernforordningen.
-Under <a href="https://www.difi.no/arkitektur" class="bare">https://www.difi.no/arkitektur</a> finner man <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/arkitekturrammeverk-samhandling">arkitekturrammeverk-samhandling</a> som gir en introduksjon til de 4 interoperabilitetsnivåene i European Interoperability Framework (EIF, se <a href="https://ec.europa.eu/isa2/eif_en" class="bare">https://ec.europa.eu/isa2/eif_en</a>). For å oppnå en digital transformasjon i hvordan virksomheter samhandler, er man avhengig av å også digitalisere hvordan hver enkelt virksomhet samhandler. Metoden som her beskrives er et enkelt hjelpemiddel for å starte på denne reisen. Den tar utgangspunkt i de 4 interoperabilitetsnivåene i EIF for å oppnå ønsket samhandlingsevne på tvers av virksomheter:</p>
+<p>DAMA-DMBOK: Data Management Body of Knowledge (2nd Edition) kan kjøpes via <a href="https://technicspub.com/dmbok/" class="bare">https://technicspub.com/dmbok/</a>, enten av hver enkelt eller samlet for din virksomhet (enterprise license). Den er også tilgjengelig på <a href="https://techbus.safaribooksonline.com/book/databases/business-intelligence/9781634622479">Safari Books</a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Metoden sier noe om hvordan man skal oppnå digital samhandlingsevne og vil underveis peke på de 4 interoperabilitetsnivåene. Det understrekes at man må jobbe i parallell med alle nivåene, da det er synergier mellom dem.</p>
-</div>
-<div class="paragraph">
-<p>Metoden har som formål å sikre at man ikke snakker om teknisk samhandlingsevne før man forstår det forretningsmessige behovet på en tilfredsstillende måte. Erfaringene tilsier at man lettere kommer fram til et forslag til den digitale samhandlingsprosessen når man ikke snakker om teknologi. Når man har enighet om prosessen så kan man avklare hvordan den tekniske samhandlingsevnen skal ivaretas.</p>
-</div>
-<div class="paragraph">
-<p>Metoden er først og fremst tenkt i forhold til hvordan 2 virksomheter kan digitalisere sin samhandling, men tankegodset kan også ha en verdi når man ser på hvordan 2 domener i en virksomhet skal samhandle digitalt.</p>
-</div>
-<div class="paragraph">
-<p>Metoden er uavhengig av om den ene, begge eller ingen benytter serviceprovidere i deres løsninger.</p>
-</div>
-</div>
-</div>
-<h1 id="_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling" class="sect0"><a class="anchor" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling"></a><a class="link" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling">Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
-</div>
-<div class="sect1">
-<h2 id="_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2"><a class="anchor" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2"></a><a class="link" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2">1. Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Basert på god forståelse av prosessene for fulldigitalisert samhandling mellom virksomheter og virksomhetenes rolle/ ansvar i disse prosessen har man mulighet for å gjøre gode tekniske løsningsvalg på digital samhandling. Her beskrives hvordan man kan ta fram slike prosesser som først og fremst har fokus på den digitale samhandlingen på tvers av virksomheter.</p>
-</div>
-<div class="paragraph">
-<p>Digital samhandling mellom virksomheter vil fra et forretningsperspektiv gjøres på et fåtall måter. Dette kaller vi <a href="./Samhandlingsmønstre.adoc">samhandlingsmønstre</a>. I <a href="./Steg2.adoc">steg 2</a> vil vi se på hvordan vi enkelt kan avdekke hvilke samhandlingsmønstre man har behov for å realisere en digital samhandlingsprosess og deretter mappe disse mor referansearkitekturer i <a href="./Steg3.adoc">steg 3</a>. Først når man har identifisert samhandlingsmønstre og referansearkitektur, er det riktig å diskutere løsningsarkitektur og hvilke tekniske løsningsalternativer man har for hver enkelt samhandling. Dette ser vi på i <a href="./Steg4.adoc">steg 4</a>. Sagt på en annen måte, man må forstå og være enige om behovet før man kan diskutere teknologi.</p>
-</div>
-<div class="paragraph">
-<p>Ved modellering av forretningsprosessene kan det være lurt å la seg inspirere av digital agenda:</p>
+<p>An accessible, authoritative reference book written by leading thinkers in the field and extensively
+reviewed by DAMA members, DMBOK2 brings together materials that comprehensively describe
+the challenges of data management and how to meet them by:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>"Brukeren i sentrum"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>"Offentlige tjenester skal oppleves sammenhengende og helhetlige for brukerne, uavhengig av hvilke offentlige virksomheter som tilbyr dem."</p>
+<p>Defining a set of guiding principles for data management and describing how these principles
+can be applied within data management functional areas.</p>
 </li>
 <li>
-<p>"Forvaltningen skal gjenbruke informasjon i stedet for å spørre brukerne på nytt om forhold de allerede har opplyst om."</p>
+<p>Providing a functional framework for the implementation of enterprise data management, including widely adopted practices, methods and techniques, functions, roles, deliverables and
+metrics.</p>
+</li>
+<li>
+<p>Establishing a common vocabulary for data management concepts and serving as the basis for
+best practices for data management professionals</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>"Effektiv digitalisering av offentlig sektor"</p>
-</li>
-<li>
-<p>"Godt personvern og god informasjonssikkerhet"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>"Personvern og informasjonssikkerhet skal være en integrert del av utviklingen og bruken av IKT."</p>
-</li>
-<li>
-<p>"Den enkelte innbygger skal i størst mulig grad ha råderett over egne personopplysninger."</p>
-</li>
-</ul>
 </div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>og at man utfordrer hvordan digital samhandling er realisert inntil nå. Man bør i arbeidet avklare hvor langt man kan gå i å gjennomføres en digital transformasjon. Husk å sette brukeren i fokus og at virksomhetens egne behov ikke overskygger å gi gode løsninger til brukeren.</p>
-</div>
-<div class="paragraph">
-<p>Ved modellering av forretningsprosesser på tvers av virksomheter, skal man tydelig avklare både eierskap til informasjon og funksjonalitet. Man skal deretter (eller i paralell) tenke på hvordan en fulldigitalisert prosess grovt sett ser ut hos hver enkelt part. Før man til slutt (eller i paralell) ser på hvordan samhandlingen burde fungert dersom begge parter blir fulldigitalisert på området man jobber med. Man bør prøve å forstå hvilke behov som styrer en hver samhandling, for eksempel:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Hente data der og da</p>
-</li>
-<li>
-<p>Varsle om en tilstandsendring (noe har skjedd)</p>
-</li>
-<li>
-<p>Overlevere ansvaret for videre behandling til annen part</p>
-</li>
-<li>
-<p>Oppdatere noe hos annen part</p>
-</li>
-<li>
-<p>Etc.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Det er avgjørende at hjemler/samtykke for deling av informasjon er på plass slik at prosessen kan digitaliseres. Dersom det er behov for endringer i lovverk (juridisk samhandlingsevne), så må dette initieres mot rett lovgivende departement. Dersom det dukker opp nye sentrale begreper, så bør disse løftes inn i begrepskatalogen (semantisk samhandlingsevne). Gjennom å jobbe med digital prosess for samhandling tidlig, så vil man kunne avdekke behov knyttet til samhandlingsevne på de forskjellige interoperabilitetsnivåene.</p>
-</div>
-<div class="paragraph">
-<p>Forretningsprosessens hovedformål er å identifisere digitale samhandlinger på tvers av virksomheter og ikke vise detaljer på hva som foregår i den enkelte virksomhet. Dette for å ha fokus på den digitale samhandlingen. Her følger noen eksempler på hvordan man kan modellere digital samhandling.</p>
-</div>
-<div class="paragraph">
-<p>Prosessen for samtykkebasert lånesøknad kan for eksempel modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20SBL.png" alt="bad!" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Prosessen for konkurs og lønnsgaranti kan for eksempel modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Basis%20prosess%20lønnsgaranti.png" alt="bad!" width="1100"></span></p>
-</div>
-<div class="paragraph">
-<p>Når 2 parter blir enige om en fulldigitalisert prosess, så har man et godt startpunkt på videre arbeid. Begge parter må kanskje gjøre løft i forhold til digitalisering, noe som ikke alltid er fullt ut mulig. Som regel vil man kunne digitalisere samhandlingen for fremtiden og så kan hver og en virksomhet stegvis dra nytte av dette til å digitalisere interne løsninger. Unntaksvis må man kanskje fire på kravet på hvor langt man vil gå i å digitalisere samhandlingen. I <a href="./Steg2.adoc">steg 2</a> vil vi se på hvordan man mapper fra en digital prosess ned på forretningsmønstre. <a href="./Steg2.adoc">steg 2</a> kan med fordel kjøres samtidig som steg 1, men er av pedagogiske grunner dokumentert separat.</p>
-</div>
-</div>
-</div>
-<h1 id="_steg_2_identifisere_samhandlingsmønstre" class="sect0"><a class="anchor" href="#_steg_2_identifisere_samhandlingsmønstre"></a><a class="link" href="#_steg_2_identifisere_samhandlingsmønstre">Steg 2 - Identifisere samhandlingsmønstre</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
 </div>
 <div class="sect1">
-<h2 id="_steg_2_identifisere_samhandlingsmønstre_2"><a class="anchor" href="#_steg_2_identifisere_samhandlingsmønstre_2"></a><a class="link" href="#_steg_2_identifisere_samhandlingsmønstre_2">1. Steg 2 - Identifisere samhandlingsmønstre</a></h2>
+<h2 id="_bokens_innholdfortegnelse_to_øverste_nivåer"><a class="anchor" href="#_bokens_innholdfortegnelse_to_øverste_nivåer"></a><a class="link" href="#_bokens_innholdfortegnelse_to_øverste_nivåer">2. Bokens innholdfortegnelse (to øverste nivåer)</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Som del av modellering av digital samhandlingsprosess, se <a href="./Steg1.adoc">steg 1</a>, så er det naturlig å identifisere hvilket <a href="./Samhandlingsmønstre.adoc">samhandlingsmønster</a> som gjelder for hver enkelt samhandling.</p>
+<p><strong>CHAPTER 1 Data Management</strong></p>
 </div>
-<div class="paragraph">
-<p>Rett samhandlingsmønster identifiseres best gjennom å forstå behovet for hver enkelt samhandling. Det er viktig at begge partene prater gjennom prosessen sammen, slik at man får en felles forståelse av behov, slik at man kan enes om mønster.</p>
-</div>
-<div class="paragraph">
-<p>Prosessen for samtykkebasert lånesøknad kan for eksempel da modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20SBL%20med%20angivelse%20av%20mønster.png" alt="bad!" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Prosessen for konkurs og lønnsgaranti kan for eksempel modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20med%20mønster%20lønnsgaranti.png" alt="bad!" width="1100"></span></p>
-</div>
-<div class="paragraph">
-<p>Når samhandlingsmønster er identifisert for hver enkelt samhandling, så blir neste steg å mappe mønster til referansearkitektur, se
-<a href="./Steg3.adoc">steg 3</a>.</p>
-</div>
-</div>
-</div>
-<h1 id="_steg_3_identifisere_referansearkitektur" class="sect0"><a class="anchor" href="#_steg_3_identifisere_referansearkitektur"></a><a class="link" href="#_steg_3_identifisere_referansearkitektur">Steg 3 - Identifisere referansearkitektur</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
-</div>
-<div class="sect1">
-<h2 id="_steg_3_identifisere_referansearkitektur_2"><a class="anchor" href="#_steg_3_identifisere_referansearkitektur_2"></a><a class="link" href="#_steg_3_identifisere_referansearkitektur_2">1. Steg 3 - Identifisere referansearkitektur</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Når samhandlingsmønstre er identifisert, se <a href="./Steg2.adoc">steg 2</a>, så kan man mappe disse mot <a href="../Referansearkitekturer.adoc">referansearkitektur</a> for hver enkelt samhandling.</p>
-</div>
-<div class="paragraph">
-<p>Har man fått til en god enighet om samhandlingsmønstre, så vil ofte prosessen med å mappe mot referansearkitektur være ganske enkel da det under <a href="./Samhandlingsmønstre.adoc">samhandlingsmønstre</a> er angitt hvilken referansearkitektur som gjelder for et bestemt samhandlingsmønster.</p>
-</div>
-<div class="paragraph">
-<p>Mapping til referansearkitektur for lånesøknad vil da se slik ut:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20SBL%20med%20angivelse%20av%20referansearkitektur.png" alt="bad!" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Mapping til referansearkitektur for  konkurs og lønnsgaranti vil da se slik ut:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandling%20bostyrer%20og%20NAV.png" alt="bad!" width="1100"></span></p>
-</div>
-<div class="paragraph">
-<p>Når referansearkitektur er identifisert for hver enkelt samhandling, så blir neste steg å identifisere løsningsarkitektur med tilhørende løsningskomponenter, se <a href="./Steg4.adoc">steg 4</a>.</p>
-</div>
-</div>
-</div>
-<h1 id="_steg_4_identifisere_løsningsarkitektur" class="sect0"><a class="anchor" href="#_steg_4_identifisere_løsningsarkitektur"></a><a class="link" href="#_steg_4_identifisere_løsningsarkitektur">Steg 4 - Identifisere løsningsarkitektur</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
-</div>
-<div class="sect1">
-<h2 id="_steg_4_identifisere_løsningsarkitektur_2"><a class="anchor" href="#_steg_4_identifisere_løsningsarkitektur_2"></a><a class="link" href="#_steg_4_identifisere_løsningsarkitektur_2">1. Steg 4 - Identifisere løsningsarkitektur</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Når referansearkitektur er identifisert, se <a href="./Steg3.adoc">steg 3</a>, kan man gå videre å jobbe med løsningsarkitektur.</p>
-</div>
-<div class="paragraph">
-<p>Fra et arkitekturståsted så består en referansearkitektur av et sett med funksjonelle byggeklosser (ABBer) som representerer funksjonaliteten som kreves for å realisere samhandlingsbehovet. Det vil både kunne være påbudte og valgfrie funksjonelle byggeklosser. Valgfrie byggeklosser benyttes kun der behov og krav til kvalitetsegenskaper tilsier at det kreves. For eksempel vil ikke alle samhandlingsbehov kreve kapabiliteten meldingskryptering for <a href="./2018-eOppslag/">eOppslag</a>.</p>
-</div>
-<div class="paragraph">
-<p>Hver av de funksjonelle byggeklossene kan realiseres av en eller flere løsningskomponenter (SBBer). En funksjonell byggekloss kan ha flere mulige løsningskomponenter. Rett løsningskomponent velges i få fall basert på behov og kvalitetsegenskapene som kreves og som best svarer på behov og krav til kvalitetsegenskaper, inkludert behov avdekket som del av risikoanalyse for sikkerhet og personvern. Se følgende konseptuelle figur:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Mapping%20referansearkitektur%20til%20løsningsarkitektur.png" alt="bad!" width="500"></span></p>
-</div>
-<div class="paragraph">
-<p>Man velger løsningsarkitektur ved å ta utgangspunkt i beste praksis for referansearkitekturen og se om denne dekker behovet. Der valget står mellom flere løsningskomponenter, må man vurdere hvilken som best dekker funksjonelle behov og krav til kvalitetsegenskaper. Har man spesielle behov, kan det hende man må ta i bruk løsningskomponenter som ikke ligger dokumentert som beste praksis. I så fall bør man oppdatere beste praksis.</p>
-</div>
-<div class="paragraph">
-<p>Referansearkitekturer:</p>
-</div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p><a href="https://difidrift.sharepoint.com/sites/Arkitekturbibliotek/Referansearkitekturer/Hjemmeside.aspx">eMelding</a></p>
+<p>Introduction</p>
 </li>
 <li>
-<p><a href="./2018-eOppslag/">eOppslag</a></p>
+<p>Essential Concepts</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Data</p>
+</div>
+<div class="paragraph">
+<p>2.2 Data and Information</p>
+</div>
+<div class="paragraph">
+<p>2.3 Data as an Organizational Asset</p>
+</div>
+<div class="paragraph">
+<p>2.4 Data Management Principles</p>
+</div>
+<div class="paragraph">
+<p>2.5 Data Management Challenges</p>
+</div>
+<div class="paragraph">
+<p>2.6 Data Management Strategy</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Data Management Frameworks</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>3.1 Strategic Alignment Model</p>
+</div>
+<div class="paragraph">
+<p>3.2 The Amsterdam Information Model</p>
+</div>
+<div class="paragraph">
+<p>3.3 The DAMA-DMBOK Framework</p>
+</div>
+<div class="paragraph">
+<p>3.4 DMBOK Pyramid (Aiken)</p>
+</div>
+<div class="paragraph">
+<p>3.5 DAMA Data Management Framework Evolved</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>DAMA and the DMBOK</p>
 </li>
 <li>
-<p>eNotifikasjon - Ikke påstartet</p>
+<p>Works Cited / Recommended</p>
 </li>
-</ul>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 2 Data Handling Ethics</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+<li>
+<p>Business Drivers</p>
+</li>
+<li>
+<p>Essential Concepts</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>3.1 Ethical Principles for Data</p>
+</div>
+<div class="paragraph">
+<p>3.2 Principles Behind Data Privacy Law</p>
+</div>
+<div class="paragraph">
+<p>3.3 Online Data in an Ethical Context</p>
+</div>
+<div class="paragraph">
+<p>3.4 Risks of Unethical Data Handling Practices</p>
+</div>
+<div class="paragraph">
+<p>3.5 Establishing an Ethical Data Culture</p>
+</div>
+<div class="paragraph">
+<p>3.6 Data Ethics and Governance</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 3 Data Governance<strong></strong></strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Define Data Governance for the Organization</p>
+</div>
+<div class="paragraph">
+<p>2.2 Perform Readiness Assessment</p>
+</div>
+<div class="paragraph">
+<p>2.3 Perform Discovery and Business Alignment</p>
+</div>
+<div class="paragraph">
+<p>2.4 Develop Organizational Touch Points</p>
+</div>
+<div class="paragraph">
+<p>2.5 Develop Data Governance Strategy</p>
+</div>
+<div class="paragraph">
+<p>2.6 Define the DG Operating Framework</p>
+</div>
+<div class="paragraph">
+<p>2.7 Develop Goals, Principles, and Policies</p>
+</div>
+<div class="paragraph">
+<p>2.8 Underwrite Data Management Projects</p>
+</div>
+<div class="paragraph">
+<p>2.9 Engage Change Management</p>
+</div>
+<div class="paragraph">
+<p>2.10 Engage in Issue Management</p>
+</div>
+<div class="paragraph">
+<p>2.11 Assess Regulatory Compliance Requirements</p>
+</div>
+<div class="paragraph">
+<p>2.12 Implement Data Governance</p>
+</div>
+<div class="paragraph">
+<p>2.13 Sponsor Data Standards and Procedures</p>
+</div>
+<div class="paragraph">
+<p>2.14 Develop a Business Glossary</p>
+</div>
+<div class="paragraph">
+<p>2.15 Coordinate with Architecture Groups</p>
+</div>
+<div class="paragraph">
+<p>2.16 Sponsor Data Asset Valuation</p>
+</div>
+<div class="paragraph">
+<p>2.17 Embed Data Governance</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools and Techniques</p>
+</li>
+<li>
+<p>Implementation Guidelines</p>
+</li>
+<li>
+<p>Metrics</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 4 Data Architecture</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Data Architecture Outcomes and Practices</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Establish Data Architecture Practice</p>
+</div>
+<div class="paragraph">
+<p>2.2 Integrate with Enterprise Architecture</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>Implementation Guidelines</p>
+</li>
+<li>
+<p>Data Architecture Governance</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 5 Data Modeling and Design</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Plan for Data Modeling</p>
+</div>
+<div class="paragraph">
+<p>2.2 Build the Data Model</p>
+</div>
+<div class="paragraph">
+<p>2.3 Review the Data Models</p>
+</div>
+<div class="paragraph">
+<p>2.4 Maintain the Data Models</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+<li>
+<p>Best Practices</p>
+</li>
+<li>
+<p>Data Model Governance</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>5.1 Data Model and Design Quality Management</p>
+</div>
+<div class="paragraph">
+<p>5.2 Data Modeling Metrics</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 6 Data Storage and Operations</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Manage Database Technology</p>
+</div>
+<div class="paragraph">
+<p>2.2 Manage Databases</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>Implementation Guidelines</p>
+</li>
+<li>
+<p>Data Storage and Operations Governance</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 7 Data Security</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Identify Data Security Requirements</p>
+</div>
+<div class="paragraph">
+<p>2.2 Define Data Security Policy</p>
+</div>
+<div class="paragraph">
+<p>2.3 Define Data Security Standards</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+<li>
+<p>Techniques</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>4.1 CRUD Matrix Usage</p>
+</div>
+<div class="paragraph">
+<p>4.2 Immediate Security Patch Deployment</p>
+</div>
+<div class="paragraph">
+<p>4.3 Data Security Attributes in Metadata</p>
+</div>
+<div class="paragraph">
+<p>4.4 Metrics</p>
+</div>
+<div class="paragraph">
+<p>4.5 Security Needs in Project Requirements</p>
+</div>
+<div class="paragraph">
+<p>4.6 Efficient Search of Encrypted Data</p>
+</div>
+<div class="paragraph">
+<p>4.7 Document Sanitization</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Implementation Guidelines</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>5.1 Readiness Assessment / Risk Assessment</p>
+</div>
+<div class="paragraph">
+<p>5.2 Organization and Cultural Change</p>
+</div>
+<div class="paragraph">
+<p>5.3 Visibility into User Data Entitlement</p>
+</div>
+<div class="paragraph">
+<p>5.4 Data Security in an Outsourced World</p>
+</div>
+<div class="paragraph">
+<p>5.5 Data Security in Cloud Environments</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Data Security Governance</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 8 Data Integration and Interoperability</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Data Integration Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Plan and Analyze</p>
+</div>
+<div class="paragraph">
+<p>2.2 Design Data Integration Solutions</p>
+</div>
+<div class="paragraph">
+<p>2.3 Develop Data Integration Solutions</p>
+</div>
+<div class="paragraph">
+<p>2.4 Implement and Monitor</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>Implementation Guidelines</p>
+</li>
+<li>
+<p>DII Governance</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 9 Document and Content Management</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Plan for Lifecycle Management</p>
+</div>
+<div class="paragraph">
+<p>2.2 Manage the Lifecycle</p>
+</div>
+<div class="paragraph">
+<p>2.3 Publish and Deliver Content</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>3.1 Enterprise Content Management Systems</p>
+</div>
+<div class="paragraph">
+<p>3.2 Collaboration Tools</p>
+</div>
+<div class="paragraph">
+<p>3.3 Controlled Vocabulary and Metadata Tools</p>
+</div>
+<div class="paragraph">
+<p>3.4 Standard Markup and Exchange Formats</p>
+</div>
+<div class="paragraph">
+<p>3.5 E-discovery Technology</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>Implementation Guidelines</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>5.1 Readiness Assessment / Risk Assessment</p>
+</div>
+<div class="paragraph">
+<p>5.2 Organization and Cultural Change</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Documents and Content Governance</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>6.1 Information Governance Frameworks</p>
+</div>
+<div class="paragraph">
+<p>6.2 Proliferation of Information</p>
+</div>
+<div class="paragraph">
+<p>6.3 Govern for Quality Content</p>
+</div>
+<div class="paragraph">
+<p>6.4 Metrics</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 10 Reference and Master Data</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 MDM Activities</p>
+</div>
+<div class="paragraph">
+<p>2.2 Reference Data Activities</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools and Techniques</p>
+</li>
+<li>
+<p>Implementation Guidelines</p>
+</li>
+<li>
+<p>Organization and Cultural Change</p>
+</li>
+<li>
+<p>Reference and Master Data Governance</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 11 Data Warehousing and Business Intelligence</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Understand Requirements</p>
+</div>
+<div class="paragraph">
+<p>2.2 Define and Maintain the DW/BI Architecture</p>
+</div>
+<div class="paragraph">
+<p>2.3 Develop the Data Warehouse and Data Marts</p>
+</div>
+<div class="paragraph">
+<p>2.4 Populate the Data Warehouse</p>
+</div>
+<div class="paragraph">
+<p>2.5 Implement the Business Intelligence Portfolio</p>
+</div>
+<div class="paragraph">
+<p>2.6 Maintain Data Products</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>3.1 Metadata Repository</p>
+</div>
+<div class="paragraph">
+<p>3.2 Data Integration Tools</p>
+</div>
+<div class="paragraph">
+<p>3.3 Business Intelligence Tools Types</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>Implementation Guidelines</p>
+</li>
+<li>
+<p>DW/BI Governance</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>6.1 Enabling Business Acceptance</p>
+</div>
+<div class="paragraph">
+<p>6.2 Customer / User Satisfaction</p>
+</div>
+<div class="paragraph">
+<p>6.3 Service Level Agreements</p>
+</div>
+<div class="paragraph">
+<p>6.4 Reporting Strategy</p>
+</div>
+<div class="paragraph">
+<p>6.5 Metrics</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 12 Metadata Management</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Define Metadata Strategy</p>
+</div>
+<div class="paragraph">
+<p>2.2 Understand Metadata Requirements</p>
+</div>
+<div class="paragraph">
+<p>2.3 Define Metadata Architecture</p>
+</div>
+<div class="paragraph">
+<p>2.4 Create and Maintain Metadata</p>
+</div>
+<div class="paragraph">
+<p>2.5 Query, Report, and Analyze Metadata</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>Implementation Guidelines</p>
+</li>
+<li>
+<p>Metadata Governance</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 13 Data Quality</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Define High Quality Data</p>
+</div>
+<div class="paragraph">
+<p>2.2 Define a Data Quality Strategy</p>
+</div>
+<div class="paragraph">
+<p>2.3 Identify Critical Data and Business Rules</p>
+</div>
+<div class="paragraph">
+<p>2.4 Perform an Initial Data Quality Assessment</p>
+</div>
+<div class="paragraph">
+<p>2.5 Identify and Prioritize Potential Improvements</p>
+</div>
+<div class="paragraph">
+<p>2.6 Define Goals for Data Quality Improvement</p>
+</div>
+<div class="paragraph">
+<p>2.7 Develop and Deploy Data Quality Operations</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+<li>
+<p>Techniques</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>4.1 Preventive Actions</p>
+</div>
+<div class="paragraph">
+<p>4.2 Corrective Actions</p>
+</div>
+<div class="paragraph">
+<p>4.3 Quality Check and Audit Code Modules</p>
+</div>
+<div class="paragraph">
+<p>4.4 Effective Data Quality Metrics</p>
+</div>
+<div class="paragraph">
+<p>4.5 Statistical Process Control</p>
+</div>
+<div class="paragraph">
+<p>4.6 Root Cause Analysis</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Implementation Guidelines</p>
+</li>
+<li>
+<p>Data Quality and Data Governance</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 14 Big Data and Data Science</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Define Big Data Strategy and Business Needs</p>
+</div>
+<div class="paragraph">
+<p>2.2 Choose Data Sources</p>
+</div>
+<div class="paragraph">
+<p>2.3 Acquire and Ingest Data Sources</p>
+</div>
+<div class="paragraph">
+<p>2.4 Develop Data Hypotheses and Methods</p>
+</div>
+<div class="paragraph">
+<p>2.5 Integrate / Align Data for Analysis</p>
+</div>
+<div class="paragraph">
+<p>2.6 Explore Data Using Models</p>
+</div>
+<div class="paragraph">
+<p>2.7 Deploy and Monitor</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>3.1 MPP Shared-nothing Technologies and Architecture</p>
+</div>
+<div class="paragraph">
+<p>3.2 Distributed File-based Databases</p>
+</div>
+<div class="paragraph">
+<p>3.3 In-database Algorithms</p>
+</div>
+<div class="paragraph">
+<p>3.4 Big Data Cloud Solutions</p>
+</div>
+<div class="paragraph">
+<p>3.5 Statistical Computing and Graphical Languages</p>
+</div>
+<div class="paragraph">
+<p>3.6 Data Visualization Tools</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>Implementation Guidelines</p>
+</li>
+<li>
+<p>Big Data and Data Science Governance</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>6.1 Visualization Channels Management</p>
+</div>
+<div class="paragraph">
+<p>6.2 Data Science and Visualization Standards</p>
+</div>
+<div class="paragraph">
+<p>6.3 Data Security</p>
+</div>
+<div class="paragraph">
+<p>6.4 Metadata</p>
+</div>
+<div class="paragraph">
+<p>6.5 Data Quality</p>
+</div>
+<div class="paragraph">
+<p>6.6 Metrics</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 15 Data Management Maturity Assessment</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>1.1 Business Drivers</p>
+</div>
+<div class="paragraph">
+<p>1.2 Goals and Principles</p>
+</div>
+<div class="paragraph">
+<p>1.3 Essential Concepts</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Activities</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>2.1 Plan Assessment Activities</p>
+</div>
+<div class="paragraph">
+<p>2.2 Perform Maturity Assessment</p>
+</div>
+<div class="paragraph">
+<p>2.3 Interpret Results</p>
+</div>
+<div class="paragraph">
+<p>2.4 Create a Targeted Program for Improvements</p>
+</div>
+<div class="paragraph">
+<p>2.5 Re-assess Maturity</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Tools</p>
+</li>
+<li>
+<p>Techniques</p>
+</li>
+<li>
+<p>Guidelines for a DMMA</p>
+</li>
+<li>
+<p>Maturity Management Governance</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 16 Data Management Organization and Role Expectations</strong>
+1. Introduction</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Understand Existing Organization and Cultural Norms</p>
+</li>
+<li>
+<p>Data Management Organizational Constructs</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>3.1 Decentralized Operating Model</p>
+</div>
+<div class="paragraph">
+<p>3.2 Network Operating Model</p>
+</div>
+<div class="paragraph">
+<p>3.3 Centralized Operating Model</p>
+</div>
+<div class="paragraph">
+<p>3.4 Hybrid Operating Model</p>
+</div>
+<div class="paragraph">
+<p>3.5 Federated Operating Model</p>
+</div>
+<div class="paragraph">
+<p>3.6 Identifying the Best Model for an Organization</p>
+</div>
+<div class="paragraph">
+<p>3.7 DMO Alternatives and Design Considerations</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Critical Success Factors</p>
+</li>
+<li>
+<p>Build the Data Management Organization</p>
+</li>
+<li>
+<p>Interactions Between the DMO and Other Data-oriented Bodies</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>6.1 The Chief Data Officer</p>
+</div>
+<div class="paragraph">
+<p>6.2 Data Governance</p>
+</div>
+<div class="paragraph">
+<p>6.3 Data Quality</p>
+</div>
+<div class="paragraph">
+<p>6.4 Enterprise Architecture</p>
+</div>
+<div class="paragraph">
+<p>6.5 Managing a Global Organization</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Data Management Roles</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>CHAPTER 17 Data Management and Organizational Change Management</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduction</p>
+</li>
+<li>
+<p>Laws of Change</p>
+</li>
+<li>
+<p>Not Managing a Change: Managing a Transition</p>
+</li>
+<li>
+<p>Kotter’s Eight Errors of Change Management</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>4.1 Error #1: Allowing Too Much Complacency</p>
+</div>
+<div class="paragraph">
+<p>4.2 Error #2: Failing to Create a Sufficiently Powerful Guiding Coalition</p>
+</div>
+<div class="paragraph">
+<p>4.3 Error #3: Underestimating the Power of Vision</p>
+</div>
+<div class="paragraph">
+<p>4.4 Error #4: Under Communicating the Vision by a Factor of 10, 100, or 1000</p>
+</div>
+<div class="paragraph">
+<p>4.5 Error #5: Permitting Obstacles to Block the Vision</p>
+</div>
+<div class="paragraph">
+<p>4.6 Error #6: Failing to Create Short-Term Wins</p>
+</div>
+<div class="paragraph">
+<p>4.7 Error #7: Declaring Victory Too Soon</p>
+</div>
+<div class="paragraph">
+<p>4.8 Error # 8: Neglecting to Anchor Changes Firmly in the Corporate Culture</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Kotter’s Eight Stage Process for Major Change</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>5.1 Establishing a Sense of Urgency</p>
+</div>
+<div class="paragraph">
+<p>5.2 The Guiding Coalition</p>
+</div>
+<div class="paragraph">
+<p>5.3 Developing a Vision and Strategy</p>
+</div>
+<div class="paragraph">
+<p>5.4 Communicating the Change Vision</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The Formula for Change</p>
+</li>
+<li>
+<p>Diffusion of Innovations and Sustaining Change</p>
+</li>
+<li>
+<p>Sustaining Change</p>
+</li>
+<li>
+<p>Communicating Data Management Value</p>
+</li>
+<li>
+<p>Works Cited / Recommended</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Acknowledgements</p>
+</div>
+<div class="paragraph">
+<p>Index</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Siste oppdatert 2018-11-07 01:37:56 Vest-Europa (normaltid)
+Siste oppdatert 2018-12-19 15:24:12 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

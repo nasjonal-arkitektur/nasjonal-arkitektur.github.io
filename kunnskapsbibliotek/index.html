@@ -5,9 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="Norsk, arkitekturbibliotek, offenlig sektor, virksomhetsarkitektur, NIF, samhandlingsarkitektur, rammeverk, GitHub">
+<meta name="keywords" content="Kunnskapsbibliotek">
 <meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
-<title>Metode</title>
+<title>Kunnskapsbibliotek</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -435,37 +435,73 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Metode</h1>
+<h1>Kunnskapsbibliotek</h1>
 <div class="details">
 <span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
 <span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Innhold</div>
-<ul class="sectlevel0">
-<li><a href="#_metode">Metode</a>
 <ul class="sectlevel1">
-<li><a href="#_generelt">1. Generelt</a></li>
+<li><a href="#_strategiske_temaer">1. Strategiske temaer</a>
+<ul class="sectlevel2">
+<li><a href="#_generelt">1.1. Generelt</a></li>
+<li><a href="#_tverrgående_prosesser_og_tjenesteutvikling">1.2. Tverrgående prosesser og tjenesteutvikling</a></li>
+<li><a href="#_dataanalyse_og_kunstig_intelligens">1.3. Dataanalyse og kunstig intelligens</a></li>
+<li><a href="#_datadeling_og_informajonsforvaltning">1.4. Datadeling og informajonsforvaltning</a></li>
+<li><a href="#_samhandling_og_interoperabilitet">1.5. Samhandling og interoperabilitet</a></li>
+<li><a href="#_program_portefølje_og_prosjektstyring">1.6. Program, portefølje- og prosjektstyring</a></li>
+<li><a href="#_digital_transformasjon">1.7. Digital transformasjon</a></li>
+<li><a href="#_anskaffelser">1.8. Anskaffelser</a></li>
 </ul>
 </li>
-<li><a href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling">Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2">1. Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a></li>
+<li><a href="#_metodikk">2. Metodikk</a>
+<ul class="sectlevel2">
+<li><a href="#_virksomhetsarkitektur">2.1. Virksomhetsarkitektur</a></li>
+<li><a href="#_tjenestedesign">2.2. Tjenestedesign</a></li>
+<li><a href="#_service_integration_and_management_siam">2.3. Service Integration and Management (SIAM)</a></li>
 </ul>
 </li>
-<li><a href="#_steg_2_identifisere_samhandlingsmønstre">Steg 2 - Identifisere samhandlingsmønstre</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_2_identifisere_samhandlingsmønstre_2">1. Steg 2 - Identifisere samhandlingsmønstre</a></li>
+<li><a href="#_bøker">3. Bøker</a>
+<ul class="sectlevel2">
+<li><a href="#_data_management_body_of_knowledge_dmbok2">3.1. Data Management Body of Knowledge (DMBOK2)</a></li>
+<li><a href="#_the_information_management_body_of_knowledge_imbok">3.2. The Information Management Body of Knowledge (IMBOK)</a></li>
+<li><a href="#_business_architecture_body_of_knowledge_bizbok">3.3. Business Architecture Body of Knowledge (BIZBOK)</a></li>
+<li><a href="#_business_analysis_body_of_knowledge_babok">3.4. Business Analysis Body of Knowledge (BABOK)</a></li>
+<li><a href="#_digital_professional_body_of_knowledge_dpbok">3.5. Digital Professional Body of Knowledge (DPBOK)</a></li>
 </ul>
 </li>
-<li><a href="#_steg_3_identifisere_referansearkitektur">Steg 3 - Identifisere referansearkitektur</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_3_identifisere_referansearkitektur_2">1. Steg 3 - Identifisere referansearkitektur</a></li>
+<li><a href="#_arkitekturrammeverk_fra_andre_land">4. Arkitekturrammeverk fra andre land</a></li>
+<li><a href="#_referansearkitekturer">5. Referansearkitekturer</a>
+<ul class="sectlevel2">
+<li><a href="#_foundation_architectures">5.1. Foundation Architectures</a>
+<ul class="sectlevel3">
+<li><a href="#_the_open_group_it4it">5.1.1. The Open Group: IT4IT</a></li>
+<li><a href="#_the_open_group_the_togaf_technical_reference_model_trm">5.1.2. The Open Group: The TOGAF® Technical Reference Model (TRM)</a></li>
+<li><a href="#_the_open_group_technology_base_reference_models_for_open_platform_3_0">5.1.3. The Open Group: Technology Base Reference Models for Open Platform 3.0</a></li>
 </ul>
 </li>
-<li><a href="#_steg_4_identifisere_løsningsarkitektur">Steg 4 - Identifisere løsningsarkitektur</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_4_identifisere_løsningsarkitektur_2">1. Steg 4 - Identifisere løsningsarkitektur</a></li>
+<li><a href="#_common_systems_architectures">5.2. Common Systems Architectures</a>
+<ul class="sectlevel3">
+<li><a href="#_the_open_group_four_internet_of_things_reference_architectures">5.2.1. The Open Group: Four Internet of Things Reference Architectures</a></li>
+</ul>
+</li>
+<li><a href="#_industry_arhitectures">5.3. Industry Arhitectures</a></li>
+<li><a href="#_organization_specific_architectures">5.4. Organization-Specific Architectures</a>
+<ul class="sectlevel3">
+<li><a href="#_referansearkitekturer_og_referansemodeller_fra_andre_land">5.4.1. Referansearkitekturer og referansemodeller fra andre land</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_internasjonale_aktører_og_aktiviteter">6. Internasjonale aktører og aktiviteter</a>
+<ul class="sectlevel2">
+<li><a href="#_eu">6.1. EU</a>
+<ul class="sectlevel3">
+<li><a href="#_digital_single_market">6.1.1. Digital Single Market</a></li>
+<li><a href="#_isa2_programmet">6.1.2. ISA2-programmet</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -475,312 +511,207 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="image"><img src="..//felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span></p>
+<p><span class="image"><img src="..//felles/images/i-arbeid.png" alt="Figur mangler: i-arbeid.png?" width="75" height="75"></span>Uferdig innhold - første versjon er fremdeles i arbeid</p>
+</div>
+<div class="paragraph lead">
+<p>Her finnes en samling av diverse grunnlagsinformasjon for felles forståelse og kunnskapsbygging på tvers. Dette kan være lenker og omtale av internasjonale standarder, utvalgte bøker, verktøy, arkitekturrammeverk fra andre land, med videre. Alle oppfordres til å bidra med innhold. Se <a href="..//praktiske-tips">praktiske tips</a> for å komme i gang.</p>
 </div>
 </div>
-</div>
-<h1 id="_metode" class="sect0"><a class="anchor" href="#_metode"></a><a class="link" href="#_metode">Metode</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
 </div>
 <div class="sect1">
-<h2 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1. Generelt</a></h2>
+<h2 id="_strategiske_temaer"><a class="anchor" href="#_strategiske_temaer"></a><a class="link" href="#_strategiske_temaer">1. Strategiske temaer</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1.1. Generelt</a></h3>
 <div class="paragraph">
-<p>Digital samhandling mellom virksomheter er i stadig endring. Som del av den digitale transformasjonen så vil man ikke lenger sette strøm på papir, men i steden identifisere prosesser for digital samhandling som skiller seg mye fra hvordan man samhandler i dag. De nye prosessene bør ha større fokus på brukernes behov ved å sette brukeren i sentrum og derigjennom understøtte Digital agenda og Personvernforordningen.
-Under <a href="https://www.difi.no/arkitektur" class="bare">https://www.difi.no/arkitektur</a> finner man <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/arkitekturrammeverk-samhandling">arkitekturrammeverk-samhandling</a> som gir en introduksjon til de 4 interoperabilitetsnivåene i European Interoperability Framework (EIF, se <a href="https://ec.europa.eu/isa2/eif_en" class="bare">https://ec.europa.eu/isa2/eif_en</a>). For å oppnå en digital transformasjon i hvordan virksomheter samhandler, er man avhengig av å også digitalisere hvordan hver enkelt virksomhet samhandler. Metoden som her beskrives er et enkelt hjelpemiddel for å starte på denne reisen. Den tar utgangspunkt i de 4 interoperabilitetsnivåene i EIF for å oppnå ønsket samhandlingsevne på tvers av virksomheter:</p>
+<p>Figur som viser sammenhengen mellom temaene, samt forholdet til styrende mål og strategier: <span class="red">TBD</span></p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_tverrgående_prosesser_og_tjenesteutvikling"><a class="anchor" href="#_tverrgående_prosesser_og_tjenesteutvikling"></a><a class="link" href="#_tverrgående_prosesser_og_tjenesteutvikling">1.2. Tverrgående prosesser og tjenesteutvikling</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_dataanalyse_og_kunstig_intelligens"><a class="anchor" href="#_dataanalyse_og_kunstig_intelligens"></a><a class="link" href="#_dataanalyse_og_kunstig_intelligens">1.3. Dataanalyse og kunstig intelligens</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_datadeling_og_informajonsforvaltning"><a class="anchor" href="#_datadeling_og_informajonsforvaltning"></a><a class="link" href="#_datadeling_og_informajonsforvaltning">1.4. Datadeling og informajonsforvaltning</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_samhandling_og_interoperabilitet"><a class="anchor" href="#_samhandling_og_interoperabilitet"></a><a class="link" href="#_samhandling_og_interoperabilitet">1.5. Samhandling og interoperabilitet</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_program_portefølje_og_prosjektstyring"><a class="anchor" href="#_program_portefølje_og_prosjektstyring"></a><a class="link" href="#_program_portefølje_og_prosjektstyring">1.6. Program, portefølje- og prosjektstyring</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_digital_transformasjon"><a class="anchor" href="#_digital_transformasjon"></a><a class="link" href="#_digital_transformasjon">1.7. Digital transformasjon</a></h3>
 <div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
+<p><a href="https://1drv.ms/b/s!Ao0VyYhs1XdLhc0L8fCRiZxkTzjzbA">The Seven Levers of Digital Transformation, An Overview.pdf</a></p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_anskaffelser"><a class="anchor" href="#_anskaffelser"></a><a class="link" href="#_anskaffelser">1.8. Anskaffelser</a></h3>
 <div class="paragraph">
-<p>Metoden sier noe om hvordan man skal oppnå digital samhandlingsevne og vil underveis peke på de 4 interoperabilitetsnivåene. Det understrekes at man må jobbe i parallell med alle nivåene, da det er synergier mellom dem.</p>
-</div>
-<div class="paragraph">
-<p>Metoden har som formål å sikre at man ikke snakker om teknisk samhandlingsevne før man forstår det forretningsmessige behovet på en tilfredsstillende måte. Erfaringene tilsier at man lettere kommer fram til et forslag til den digitale samhandlingsprosessen når man ikke snakker om teknologi. Når man har enighet om prosessen så kan man avklare hvordan den tekniske samhandlingsevnen skal ivaretas.</p>
-</div>
-<div class="paragraph">
-<p>Metoden er først og fremst tenkt i forhold til hvordan 2 virksomheter kan digitalisere sin samhandling, men tankegodset kan også ha en verdi når man ser på hvordan 2 domener i en virksomhet skal samhandle digitalt.</p>
-</div>
-<div class="paragraph">
-<p>Metoden er uavhengig av om den ene, begge eller ingen benytter serviceprovidere i deres løsninger.</p>
+<p>Inkl. sourcing,</p>
 </div>
 </div>
 </div>
-<h1 id="_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling" class="sect0"><a class="anchor" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling"></a><a class="link" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling">Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
 </div>
 <div class="sect1">
-<h2 id="_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2"><a class="anchor" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2"></a><a class="link" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2">1. Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a></h2>
+<h2 id="_metodikk"><a class="anchor" href="#_metodikk"></a><a class="link" href="#_metodikk">2. Metodikk</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_virksomhetsarkitektur"><a class="anchor" href="#_virksomhetsarkitektur"></a><a class="link" href="#_virksomhetsarkitektur">2.1. Virksomhetsarkitektur</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_tjenestedesign"><a class="anchor" href="#_tjenestedesign"></a><a class="link" href="#_tjenestedesign">2.2. Tjenestedesign</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_service_integration_and_management_siam"><a class="anchor" href="#_service_integration_and_management_siam"></a><a class="link" href="#_service_integration_and_management_siam">2.3. Service Integration and Management (SIAM)</a></h3>
 <div class="paragraph">
-<p>Basert på god forståelse av prosessene for fulldigitalisert samhandling mellom virksomheter og virksomhetenes rolle/ ansvar i disse prosessen har man mulighet for å gjøre gode tekniske løsningsvalg på digital samhandling. Her beskrives hvordan man kan ta fram slike prosesser som først og fremst har fokus på den digitale samhandlingen på tvers av virksomheter.</p>
-</div>
-<div class="paragraph">
-<p>Digital samhandling mellom virksomheter vil fra et forretningsperspektiv gjøres på et fåtall måter. Dette kaller vi <a href="./Samhandlingsmønstre.adoc">samhandlingsmønstre</a>. I <a href="./Steg2.adoc">steg 2</a> vil vi se på hvordan vi enkelt kan avdekke hvilke samhandlingsmønstre man har behov for å realisere en digital samhandlingsprosess og deretter mappe disse mor referansearkitekturer i <a href="./Steg3.adoc">steg 3</a>. Først når man har identifisert samhandlingsmønstre og referansearkitektur, er det riktig å diskutere løsningsarkitektur og hvilke tekniske løsningsalternativer man har for hver enkelt samhandling. Dette ser vi på i <a href="./Steg4.adoc">steg 4</a>. Sagt på en annen måte, man må forstå og være enige om behovet før man kan diskutere teknologi.</p>
-</div>
-<div class="paragraph">
-<p>Ved modellering av forretningsprosessene kan det være lurt å la seg inspirere av digital agenda:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"Brukeren i sentrum"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>"Offentlige tjenester skal oppleves sammenhengende og helhetlige for brukerne, uavhengig av hvilke offentlige virksomheter som tilbyr dem."</p>
-</li>
-<li>
-<p>"Forvaltningen skal gjenbruke informasjon i stedet for å spørre brukerne på nytt om forhold de allerede har opplyst om."</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>"Effektiv digitalisering av offentlig sektor"</p>
-</li>
-<li>
-<p>"Godt personvern og god informasjonssikkerhet"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>"Personvern og informasjonssikkerhet skal være en integrert del av utviklingen og bruken av IKT."</p>
-</li>
-<li>
-<p>"Den enkelte innbygger skal i størst mulig grad ha råderett over egne personopplysninger."</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>og at man utfordrer hvordan digital samhandling er realisert inntil nå. Man bør i arbeidet avklare hvor langt man kan gå i å gjennomføres en digital transformasjon. Husk å sette brukeren i fokus og at virksomhetens egne behov ikke overskygger å gi gode løsninger til brukeren.</p>
-</div>
-<div class="paragraph">
-<p>Ved modellering av forretningsprosesser på tvers av virksomheter, skal man tydelig avklare både eierskap til informasjon og funksjonalitet. Man skal deretter (eller i paralell) tenke på hvordan en fulldigitalisert prosess grovt sett ser ut hos hver enkelt part. Før man til slutt (eller i paralell) ser på hvordan samhandlingen burde fungert dersom begge parter blir fulldigitalisert på området man jobber med. Man bør prøve å forstå hvilke behov som styrer en hver samhandling, for eksempel:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Hente data der og da</p>
-</li>
-<li>
-<p>Varsle om en tilstandsendring (noe har skjedd)</p>
-</li>
-<li>
-<p>Overlevere ansvaret for videre behandling til annen part</p>
-</li>
-<li>
-<p>Oppdatere noe hos annen part</p>
-</li>
-<li>
-<p>Etc.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Det er avgjørende at hjemler/samtykke for deling av informasjon er på plass slik at prosessen kan digitaliseres. Dersom det er behov for endringer i lovverk (juridisk samhandlingsevne), så må dette initieres mot rett lovgivende departement. Dersom det dukker opp nye sentrale begreper, så bør disse løftes inn i begrepskatalogen (semantisk samhandlingsevne). Gjennom å jobbe med digital prosess for samhandling tidlig, så vil man kunne avdekke behov knyttet til samhandlingsevne på de forskjellige interoperabilitetsnivåene.</p>
-</div>
-<div class="paragraph">
-<p>Forretningsprosessens hovedformål er å identifisere digitale samhandlinger på tvers av virksomheter og ikke vise detaljer på hva som foregår i den enkelte virksomhet. Dette for å ha fokus på den digitale samhandlingen. Her følger noen eksempler på hvordan man kan modellere digital samhandling.</p>
-</div>
-<div class="paragraph">
-<p>Prosessen for samtykkebasert lånesøknad kan for eksempel modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20SBL.png" alt="bad!" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Prosessen for konkurs og lønnsgaranti kan for eksempel modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Basis%20prosess%20lønnsgaranti.png" alt="bad!" width="1100"></span></p>
-</div>
-<div class="paragraph">
-<p>Når 2 parter blir enige om en fulldigitalisert prosess, så har man et godt startpunkt på videre arbeid. Begge parter må kanskje gjøre løft i forhold til digitalisering, noe som ikke alltid er fullt ut mulig. Som regel vil man kunne digitalisere samhandlingen for fremtiden og så kan hver og en virksomhet stegvis dra nytte av dette til å digitalisere interne løsninger. Unntaksvis må man kanskje fire på kravet på hvor langt man vil gå i å digitalisere samhandlingen. I <a href="./Steg2.adoc">steg 2</a> vil vi se på hvordan man mapper fra en digital prosess ned på forretningsmønstre. <a href="./Steg2.adoc">steg 2</a> kan med fordel kjøres samtidig som steg 1, men er av pedagogiske grunner dokumentert separat.</p>
+<p>Se <a href="./metode_siam">Service Integration and Management (SIAM)</a>.</p>
 </div>
 </div>
 </div>
-<h1 id="_steg_2_identifisere_samhandlingsmønstre" class="sect0"><a class="anchor" href="#_steg_2_identifisere_samhandlingsmønstre"></a><a class="link" href="#_steg_2_identifisere_samhandlingsmønstre">Steg 2 - Identifisere samhandlingsmønstre</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
 </div>
 <div class="sect1">
-<h2 id="_steg_2_identifisere_samhandlingsmønstre_2"><a class="anchor" href="#_steg_2_identifisere_samhandlingsmønstre_2"></a><a class="link" href="#_steg_2_identifisere_samhandlingsmønstre_2">1. Steg 2 - Identifisere samhandlingsmønstre</a></h2>
+<h2 id="_bøker"><a class="anchor" href="#_bøker"></a><a class="link" href="#_bøker">3. Bøker</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Som del av modellering av digital samhandlingsprosess, se <a href="./Steg1.adoc">steg 1</a>, så er det naturlig å identifisere hvilket <a href="./Samhandlingsmønstre.adoc">samhandlingsmønster</a> som gjelder for hver enkelt samhandling.</p>
+<p>Tips om spesielt relevante og interessante bøker for virksomhetsarkitekter og andre roller i arbeidet med nasjonal arkitektur.</p>
 </div>
+<div class="sect2">
+<h3 id="_data_management_body_of_knowledge_dmbok2"><a class="anchor" href="#_data_management_body_of_knowledge_dmbok2"></a><a class="link" href="#_data_management_body_of_knowledge_dmbok2">3.1. Data Management Body of Knowledge (DMBOK2)</a></h3>
 <div class="paragraph">
-<p>Rett samhandlingsmønster identifiseres best gjennom å forstå behovet for hver enkelt samhandling. Det er viktig at begge partene prater gjennom prosessen sammen, slik at man får en felles forståelse av behov, slik at man kan enes om mønster.</p>
+<p><a href="./dmbok2">2017: Data Management Body of Knowledge (DMBOK2)</a> er et omfattende og sterkt verk om data- og informasjonsforvaltning fra DAMA, utarbeidet av mange spesialister over flere år. Se også  <a href="./navigating-the-labyrinth">Navigating the Labyrinth: An Executive Guide to Data Management (2018)</a>, som er en  forkortet og forenklet framstilling av den større og mer kompliserte DMBOK2.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_the_information_management_body_of_knowledge_imbok"><a class="anchor" href="#_the_information_management_body_of_knowledge_imbok"></a><a class="link" href="#_the_information_management_body_of_knowledge_imbok">3.2. The Information Management Body of Knowledge (IMBOK)</a></h3>
 <div class="paragraph">
-<p>Prosessen for samtykkebasert lånesøknad kan for eksempel da modelleres slik:</p>
+<p>Se <a href="http://www.imbok.info/" class="bare">http://www.imbok.info/</a>.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_business_architecture_body_of_knowledge_bizbok"><a class="anchor" href="#_business_architecture_body_of_knowledge_bizbok"></a><a class="link" href="#_business_architecture_body_of_knowledge_bizbok">3.3. Business Architecture Body of Knowledge (BIZBOK)</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_business_analysis_body_of_knowledge_babok"><a class="anchor" href="#_business_analysis_body_of_knowledge_babok"></a><a class="link" href="#_business_analysis_body_of_knowledge_babok">3.4. Business Analysis Body of Knowledge (BABOK)</a></h3>
 <div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20SBL%20med%20angivelse%20av%20mønster.png" alt="bad!" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Prosessen for konkurs og lønnsgaranti kan for eksempel modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20med%20mønster%20lønnsgaranti.png" alt="bad!" width="1100"></span></p>
-</div>
-<div class="paragraph">
-<p>Når samhandlingsmønster er identifisert for hver enkelt samhandling, så blir neste steg å mappe mønster til referansearkitektur, se
-<a href="./Steg3.adoc">steg 3</a>.</p>
+<p>Se <a href="https://www.iiba.org/standards-and-resources/babok/" class="bare">https://www.iiba.org/standards-and-resources/babok/</a></p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_digital_professional_body_of_knowledge_dpbok"><a class="anchor" href="#_digital_professional_body_of_knowledge_dpbok"></a><a class="link" href="#_digital_professional_body_of_knowledge_dpbok">3.5. Digital Professional Body of Knowledge (DPBOK)</a></h3>
+
 </div>
-<h1 id="_steg_3_identifisere_referansearkitektur" class="sect0"><a class="anchor" href="#_steg_3_identifisere_referansearkitektur"></a><a class="link" href="#_steg_3_identifisere_referansearkitektur">Steg 3 - Identifisere referansearkitektur</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
 </div>
 <div class="sect1">
-<h2 id="_steg_3_identifisere_referansearkitektur_2"><a class="anchor" href="#_steg_3_identifisere_referansearkitektur_2"></a><a class="link" href="#_steg_3_identifisere_referansearkitektur_2">1. Steg 3 - Identifisere referansearkitektur</a></h2>
+<h2 id="_arkitekturrammeverk_fra_andre_land"><a class="anchor" href="#_arkitekturrammeverk_fra_andre_land"></a><a class="link" href="#_arkitekturrammeverk_fra_andre_land">4. Arkitekturrammeverk fra andre land</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Når samhandlingsmønstre er identifisert, se <a href="./Steg2.adoc">steg 2</a>, så kan man mappe disse mot <a href="../Referansearkitekturer.adoc">referansearkitektur</a> for hver enkelt samhandling.</p>
-</div>
-<div class="paragraph">
-<p>Har man fått til en god enighet om samhandlingsmønstre, så vil ofte prosessen med å mappe mot referansearkitektur være ganske enkel da det under <a href="./Samhandlingsmønstre.adoc">samhandlingsmønstre</a> er angitt hvilken referansearkitektur som gjelder for et bestemt samhandlingsmønster.</p>
-</div>
-<div class="paragraph">
-<p>Mapping til referansearkitektur for lånesøknad vil da se slik ut:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20SBL%20med%20angivelse%20av%20referansearkitektur.png" alt="bad!" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Mapping til referansearkitektur for  konkurs og lønnsgaranti vil da se slik ut:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandling%20bostyrer%20og%20NAV.png" alt="bad!" width="1100"></span></p>
-</div>
-<div class="paragraph">
-<p>Når referansearkitektur er identifisert for hver enkelt samhandling, så blir neste steg å identifisere løsningsarkitektur med tilhørende løsningskomponenter, se <a href="./Steg4.adoc">steg 4</a>.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="./arkitekturrammeverk-india">indEA - arkitekturrammeverk fra India</a></p>
+</li>
+<li>
+<p>Arkitekturrammeverk fra Western Australia</p>
+</li>
+</ol>
 </div>
 </div>
-</div>
-<h1 id="_steg_4_identifisere_løsningsarkitektur" class="sect0"><a class="anchor" href="#_steg_4_identifisere_løsningsarkitektur"></a><a class="link" href="#_steg_4_identifisere_løsningsarkitektur">Steg 4 - Identifisere løsningsarkitektur</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
 </div>
 <div class="sect1">
-<h2 id="_steg_4_identifisere_løsningsarkitektur_2"><a class="anchor" href="#_steg_4_identifisere_løsningsarkitektur_2"></a><a class="link" href="#_steg_4_identifisere_løsningsarkitektur_2">1. Steg 4 - Identifisere løsningsarkitektur</a></h2>
+<h2 id="_referansearkitekturer"><a class="anchor" href="#_referansearkitekturer"></a><a class="link" href="#_referansearkitekturer">5. Referansearkitekturer</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_foundation_architectures"><a class="anchor" href="#_foundation_architectures"></a><a class="link" href="#_foundation_architectures">5.1. Foundation Architectures</a></h3>
+<div class="sect3">
+<h4 id="_the_open_group_it4it"><a class="anchor" href="#_the_open_group_it4it"></a><a class="link" href="#_the_open_group_it4it">5.1.1. The Open Group: IT4IT</a></h4>
 <div class="paragraph">
-<p>Når referansearkitektur er identifisert, se <a href="./Steg3.adoc">steg 3</a>, kan man gå videre å jobbe med løsningsarkitektur.</p>
+<p><a href="./referansearkitektur-the-opengroup-it4it">The OpenGroup&#8217;s IT4IT</a> - en standard referansearkitektur for verdikjedene i utvikling og og forvaltning av IT-tjenester.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_the_open_group_the_togaf_technical_reference_model_trm"><a class="anchor" href="#_the_open_group_the_togaf_technical_reference_model_trm"></a><a class="link" href="#_the_open_group_the_togaf_technical_reference_model_trm">5.1.2. The Open Group: The TOGAF® Technical Reference Model (TRM)</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_the_open_group_technology_base_reference_models_for_open_platform_3_0"><a class="anchor" href="#_the_open_group_technology_base_reference_models_for_open_platform_3_0"></a><a class="link" href="#_the_open_group_technology_base_reference_models_for_open_platform_3_0">5.1.3. The Open Group: Technology Base Reference Models for Open Platform 3.0</a></h4>
 <div class="paragraph">
-<p>Fra et arkitekturståsted så består en referansearkitektur av et sett med funksjonelle byggeklosser (ABBer) som representerer funksjonaliteten som kreves for å realisere samhandlingsbehovet. Det vil både kunne være påbudte og valgfrie funksjonelle byggeklosser. Valgfrie byggeklosser benyttes kun der behov og krav til kvalitetsegenskaper tilsier at det kreves. For eksempel vil ikke alle samhandlingsbehov kreve kapabiliteten meldingskryptering for <a href="./2018-eOppslag/">eOppslag</a>.</p>
+<p><a href="https://1drv.ms/b/s!Ao0VyYhs1XdLhc0J9VFSjTVqOvu_1g">Technology Base Reference Models for Open Platform 3.0.pdf</a></p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_common_systems_architectures"><a class="anchor" href="#_common_systems_architectures"></a><a class="link" href="#_common_systems_architectures">5.2. Common Systems Architectures</a></h3>
+<div class="sect3">
+<h4 id="_the_open_group_four_internet_of_things_reference_architectures"><a class="anchor" href="#_the_open_group_four_internet_of_things_reference_architectures"></a><a class="link" href="#_the_open_group_four_internet_of_things_reference_architectures">5.2.1. The Open Group: Four Internet of Things Reference Architectures</a></h4>
 <div class="paragraph">
-<p>Hver av de funksjonelle byggeklossene kan realiseres av en eller flere løsningskomponenter (SBBer). En funksjonell byggekloss kan ha flere mulige løsningskomponenter. Rett løsningskomponent velges i få fall basert på behov og kvalitetsegenskapene som kreves og som best svarer på behov og krav til kvalitetsegenskaper, inkludert behov avdekket som del av risikoanalyse for sikkerhet og personvern. Se følgende konseptuelle figur:</p>
+<p><a href="http://www.opengroup.org/iot/wp-refarchs/p3.htm" class="bare">http://www.opengroup.org/iot/wp-refarchs/p3.htm</a></p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Mapping%20referansearkitektur%20til%20løsningsarkitektur.png" alt="bad!" width="500"></span></p>
 </div>
-<div class="paragraph">
-<p>Man velger løsningsarkitektur ved å ta utgangspunkt i beste praksis for referansearkitekturen og se om denne dekker behovet. Der valget står mellom flere løsningskomponenter, må man vurdere hvilken som best dekker funksjonelle behov og krav til kvalitetsegenskaper. Har man spesielle behov, kan det hende man må ta i bruk løsningskomponenter som ikke ligger dokumentert som beste praksis. I så fall bør man oppdatere beste praksis.</p>
 </div>
-<div class="paragraph">
-<p>Referansearkitekturer:</p>
+<div class="sect2">
+<h3 id="_industry_arhitectures"><a class="anchor" href="#_industry_arhitectures"></a><a class="link" href="#_industry_arhitectures">5.3. Industry Arhitectures</a></h3>
+
 </div>
-<div class="ulist">
-<ul>
+<div class="sect2">
+<h3 id="_organization_specific_architectures"><a class="anchor" href="#_organization_specific_architectures"></a><a class="link" href="#_organization_specific_architectures">5.4. Organization-Specific Architectures</a></h3>
+<div class="sect3">
+<h4 id="_referansearkitekturer_og_referansemodeller_fra_andre_land"><a class="anchor" href="#_referansearkitekturer_og_referansemodeller_fra_andre_land"></a><a class="link" href="#_referansearkitekturer_og_referansemodeller_fra_andre_land">5.4.1. Referansearkitekturer og referansemodeller fra andre land</a></h4>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p><a href="https://difidrift.sharepoint.com/sites/Arkitekturbibliotek/Referansearkitekturer/Hjemmeside.aspx">eMelding</a></p>
+<p>New Zealand: Taksonomier</p>
 </li>
 <li>
-<p><a href="./2018-eOppslag/">eOppslag</a></p>
+<p>Danmark: Referansearkitekturer for selvbetjening, saksbehandling, tverrgående tjenester, m.m.</p>
 </li>
 <li>
-<p>eNotifikasjon - Ikke påstartet</p>
+<p>Estland: Datamodeller</p>
 </li>
-</ul>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_internasjonale_aktører_og_aktiviteter"><a class="anchor" href="#_internasjonale_aktører_og_aktiviteter"></a><a class="link" href="#_internasjonale_aktører_og_aktiviteter">6. Internasjonale aktører og aktiviteter</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_eu"><a class="anchor" href="#_eu"></a><a class="link" href="#_eu">6.1. EU</a></h3>
+<div class="sect3">
+<h4 id="_digital_single_market"><a class="anchor" href="#_digital_single_market"></a><a class="link" href="#_digital_single_market">6.1.1. Digital Single Market</a></h4>
+<div class="paragraph">
+<p><a href="https://ec.europa.eu/digital-single-market/en/news/digital-single-market-mid-term-review" class="bare">https://ec.europa.eu/digital-single-market/en/news/digital-single-market-mid-term-review</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_isa2_programmet"><a class="anchor" href="#_isa2_programmet"></a><a class="link" href="#_isa2_programmet">6.1.2. ISA2-programmet</a></h4>
+<div class="paragraph">
+<p><a href="https://ec.europa.eu/isa2/isa2_en" class="bare">https://ec.europa.eu/isa2/isa2_en</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/i-arbeid.png" alt="Figur mangler: i-arbeid.png?" width="75" height="75"></span></p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Siste oppdatert 2018-11-07 01:37:56 Vest-Europa (normaltid)
+Siste oppdatert 2019-01-03 13:15:15 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

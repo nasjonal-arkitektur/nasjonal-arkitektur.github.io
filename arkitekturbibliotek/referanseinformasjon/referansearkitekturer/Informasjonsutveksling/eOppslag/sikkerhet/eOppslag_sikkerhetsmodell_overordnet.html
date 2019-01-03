@@ -5,9 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="Norsk, arkitekturbibliotek, offenlig sektor, virksomhetsarkitektur, NIF, samhandlingsarkitektur, rammeverk, GitHub">
-<meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
-<title>Metode</title>
+<meta name="keywords" content="eOppslag sikkerhet autentisering">
+<meta name="author" content="Rolf Rander Næss">
+<title>Overordnet innføring i sikkerhetsmekanismer for eOppslag</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -435,343 +435,198 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Metode</h1>
+<h1>Overordnet innføring i sikkerhetsmekanismer for eOppslag</h1>
 <div class="details">
-<span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
-<span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
+<span id="author" class="author">Rolf Rander Næss</span><br>
+<span id="email" class="email"><a href="mailto:rolf.rander.ness@acando.no">rolf.rander.ness@acando.no</a></span><br>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Innhold</div>
 <ul class="sectlevel0">
-<li><a href="#_metode">Metode</a>
+<li><a href="#_overordnet_innføring_i_sikkerhetsmekanismer_for_eoppslag">Overordnet innføring i sikkerhetsmekanismer for eOppslag</a>
 <ul class="sectlevel1">
-<li><a href="#_generelt">1. Generelt</a></li>
-</ul>
-</li>
-<li><a href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling">Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2">1. Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a></li>
-</ul>
-</li>
-<li><a href="#_steg_2_identifisere_samhandlingsmønstre">Steg 2 - Identifisere samhandlingsmønstre</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_2_identifisere_samhandlingsmønstre_2">1. Steg 2 - Identifisere samhandlingsmønstre</a></li>
-</ul>
-</li>
-<li><a href="#_steg_3_identifisere_referansearkitektur">Steg 3 - Identifisere referansearkitektur</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_3_identifisere_referansearkitektur_2">1. Steg 3 - Identifisere referansearkitektur</a></li>
-</ul>
-</li>
-<li><a href="#_steg_4_identifisere_løsningsarkitektur">Steg 4 - Identifisere løsningsarkitektur</a>
-<ul class="sectlevel1">
-<li><a href="#_steg_4_identifisere_løsningsarkitektur_2">1. Steg 4 - Identifisere løsningsarkitektur</a></li>
+<li><a href="#_overordnede_mål">1. Overordnede mål</a></li>
+<li><a href="#_standardiserte_sikkerhetsnivå">2. Standardiserte sikkerhetsnivå</a></li>
+<li><a href="#_standardisert_autentiseringsmekanisme">3. Standardisert autentiseringsmekanisme</a></li>
+<li><a href="#_delegering_av_myndighet">4. Delegering av myndighet</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><span class="image"><img src="..//felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span></p>
-</div>
-</div>
-</div>
-<h1 id="_metode" class="sect0"><a class="anchor" href="#_metode"></a><a class="link" href="#_metode">Metode</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
+<h1 id="_overordnet_innføring_i_sikkerhetsmekanismer_for_eoppslag" class="sect0"><a class="anchor" href="#_overordnet_innføring_i_sikkerhetsmekanismer_for_eoppslag"></a><a class="link" href="#_overordnet_innføring_i_sikkerhetsmekanismer_for_eoppslag">Overordnet innføring i sikkerhetsmekanismer for eOppslag</a></h1>
 <div class="sect1">
-<h2 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1. Generelt</a></h2>
+<h2 id="_overordnede_mål"><a class="anchor" href="#_overordnede_mål"></a><a class="link" href="#_overordnede_mål">1. Overordnede mål</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Digital samhandling mellom virksomheter er i stadig endring. Som del av den digitale transformasjonen så vil man ikke lenger sette strøm på papir, men i steden identifisere prosesser for digital samhandling som skiller seg mye fra hvordan man samhandler i dag. De nye prosessene bør ha større fokus på brukernes behov ved å sette brukeren i sentrum og derigjennom understøtte Digital agenda og Personvernforordningen.
-Under <a href="https://www.difi.no/arkitektur" class="bare">https://www.difi.no/arkitektur</a> finner man <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/arkitekturrammeverk-samhandling">arkitekturrammeverk-samhandling</a> som gir en introduksjon til de 4 interoperabilitetsnivåene i European Interoperability Framework (EIF, se <a href="https://ec.europa.eu/isa2/eif_en" class="bare">https://ec.europa.eu/isa2/eif_en</a>). For å oppnå en digital transformasjon i hvordan virksomheter samhandler, er man avhengig av å også digitalisere hvordan hver enkelt virksomhet samhandler. Metoden som her beskrives er et enkelt hjelpemiddel for å starte på denne reisen. Den tar utgangspunkt i de 4 interoperabilitetsnivåene i EIF for å oppnå ønsket samhandlingsevne på tvers av virksomheter:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Metoden sier noe om hvordan man skal oppnå digital samhandlingsevne og vil underveis peke på de 4 interoperabilitetsnivåene. Det understrekes at man må jobbe i parallell med alle nivåene, da det er synergier mellom dem.</p>
-</div>
-<div class="paragraph">
-<p>Metoden har som formål å sikre at man ikke snakker om teknisk samhandlingsevne før man forstår det forretningsmessige behovet på en tilfredsstillende måte. Erfaringene tilsier at man lettere kommer fram til et forslag til den digitale samhandlingsprosessen når man ikke snakker om teknologi. Når man har enighet om prosessen så kan man avklare hvordan den tekniske samhandlingsevnen skal ivaretas.</p>
-</div>
-<div class="paragraph">
-<p>Metoden er først og fremst tenkt i forhold til hvordan 2 virksomheter kan digitalisere sin samhandling, men tankegodset kan også ha en verdi når man ser på hvordan 2 domener i en virksomhet skal samhandle digitalt.</p>
-</div>
-<div class="paragraph">
-<p>Metoden er uavhengig av om den ene, begge eller ingen benytter serviceprovidere i deres løsninger.</p>
-</div>
-</div>
-</div>
-<h1 id="_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling" class="sect0"><a class="anchor" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling"></a><a class="link" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling">Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
-</div>
-<div class="sect1">
-<h2 id="_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2"><a class="anchor" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2"></a><a class="link" href="#_steg_1_modeller_fulldigitaliserte_forretningsprosesser_med_fokus_på_samhandling_2">1. Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Basert på god forståelse av prosessene for fulldigitalisert samhandling mellom virksomheter og virksomhetenes rolle/ ansvar i disse prosessen har man mulighet for å gjøre gode tekniske løsningsvalg på digital samhandling. Her beskrives hvordan man kan ta fram slike prosesser som først og fremst har fokus på den digitale samhandlingen på tvers av virksomheter.</p>
-</div>
-<div class="paragraph">
-<p>Digital samhandling mellom virksomheter vil fra et forretningsperspektiv gjøres på et fåtall måter. Dette kaller vi <a href="./Samhandlingsmønstre.adoc">samhandlingsmønstre</a>. I <a href="./Steg2.adoc">steg 2</a> vil vi se på hvordan vi enkelt kan avdekke hvilke samhandlingsmønstre man har behov for å realisere en digital samhandlingsprosess og deretter mappe disse mor referansearkitekturer i <a href="./Steg3.adoc">steg 3</a>. Først når man har identifisert samhandlingsmønstre og referansearkitektur, er det riktig å diskutere løsningsarkitektur og hvilke tekniske løsningsalternativer man har for hver enkelt samhandling. Dette ser vi på i <a href="./Steg4.adoc">steg 4</a>. Sagt på en annen måte, man må forstå og være enige om behovet før man kan diskutere teknologi.</p>
-</div>
-<div class="paragraph">
-<p>Ved modellering av forretningsprosessene kan det være lurt å la seg inspirere av digital agenda:</p>
+<p>Sikkerhetsarkitekturen for eOppslag er laget med tanke på å nå følgende overordnede målsetninger:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>"Brukeren i sentrum"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>"Offentlige tjenester skal oppleves sammenhengende og helhetlige for brukerne, uavhengig av hvilke offentlige virksomheter som tilbyr dem."</p>
+<p>Standardiserte sikkerhetsnivå med definerte sett av sikkerhetsmekanismer, slik at det er mulig å velge grad av sikkerhet tilpasset en risikovurdering av tjenesten det gjelder.</p>
 </li>
 <li>
-<p>"Forvaltningen skal gjenbruke informasjon i stedet for å spørre brukerne på nytt om forhold de allerede har opplyst om."</p>
+<p>Standardisert mekanisme for autentisering av klienter for å få teknisk konsolidering på tvers av offentlig sektor og mulighet til gjenbruk av komponenter</p>
+</li>
+<li>
+<p>Standardisert mekanisme for delegering av myndighet, hvor en virksomhet kaller tjenester på vegne av en annen virksomhet</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I tillegg er følgende tekniske forutsetninger lagt til grunn:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Vi ønsker å redusere bruken av virksomhetssertifikat, og heller bruke en mekanisme som kan begrenses i gyldighetsområde og -tidsrom.</p>
+</li>
+<li>
+<p>Det er behov for en mekanisme som kan integreres i HTTP og som virker gjennom proxy/gateway-løsninger på en transparent måte.</p>
+</li>
+<li>
+<p>Vi ønsker også en mekanisme som i størst mulig grad er standardisert, slik at vi kan gjenbruke eksisterende infrastruktur for håndtering av token-mekanismer og applikasjoner integrert mot denne.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I arbeidet med sikkerhetsarkitekturen er det antatt at eOppslag kun dreier seg om synkrone "request-reply"-tjenester for å lese informasjon. Skrive-tjenester, eller "request-reply" brukt som et element i en større protokoll er ikke diskutert.</p>
+</div>
+<div class="paragraph">
+<p>Disse er beskrevet i mer detalj i det følgende</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_standardiserte_sikkerhetsnivå"><a class="anchor" href="#_standardiserte_sikkerhetsnivå"></a><a class="link" href="#_standardiserte_sikkerhetsnivå">2. Standardiserte sikkerhetsnivå</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Referansearkitekturen definerer følgende standardiserte sikkerhetsnivå, men det er opp til API-tilbyder å velge hvilket nivå som er passende for en gitt tjeneste. Hvert nivå bygger på det foregående ved at hvert nivå inkluderer mekanismene gitt i forrige nivå.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nivå 0: kryptert kanal, men ingen autentisering av klienten. Dette innebærer bruk av TLS (https) som gir integritet og konfidensialitet for trafikk rutet over åpne nett, samt autentisering av API-tilbyder</p>
+</li>
+<li>
+<p>Nivå 1: autentisering av klienten. Mesteparten av dette dokumentet beskriver denne autentiseringsmekanismen.</p>
+</li>
+<li>
+<p>Nivå 2: integritetskontroll på meldingsnivå, typisk gjennom bruk av digitale signaturer som signerer meldingen uavhengig av transportkanalen</p>
+</li>
+<li>
+<p>Nivå 3: kryptering på meldingsnivå</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Nivå 2 og 3 forutsetter en strategi for distribusjon og håndtering av nøkler og sertifikater, dette er foreløpig ikke definert i denne referansearkitekturen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_standardisert_autentiseringsmekanisme"><a class="anchor" href="#_standardisert_autentiseringsmekanisme"></a><a class="link" href="#_standardisert_autentiseringsmekanisme">3. Standardisert autentiseringsmekanisme</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Autentisering i denne sammenheng innebærer at en klient autentiseres som den virksomheten den representerer, identifisert med organisasjonsnummer. Arkitekturen tar ikke høyde for å skille mellom ulike klienter internt i samme virksomhet, det er forventet at virksomheten selv håndterer styring av hvilke klienter som får kalle hvilke tjenester gjennom sin egen integrasjonsarkitektur og sikkerhetsarkitektur. Det er utenfor rammen av denne referansearkitekturen å gi føringer for hvordan dette skal løses.</p>
+</div>
+<div class="paragraph">
+<p>På bakgrunn av de tekniske forutsetningene velger vi i denne referansearkitekturen en autentisering hvor:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klienten autentiserer seg mot en token-tjeneste med et virksomhetssertifikat.</p>
+</li>
+<li>
+<p>Token-tjenesten utsteder et token som kun er gyldig for et begrenset tidsrom mot en spesifisert tjeneste.</p>
+</li>
+<li>
+<p>Tokenet brukes som autentisering mot aktuell tjeneste.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Denne løsningen gjør også at vi har fleksibilitet til å innføre andre autentiseringsmekanismer eller støtte for andre typer sertifikat senere.</p>
+</div>
+<div class="paragraph">
+<p>Bruk av token på denne måten oppfyller også de tekniske føringene:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bruk av virksomhetssertifikatet reduseres til kun å utstede token, virksomhetssertifikatet brukes ikke direkte mot hver enkelt tjeneste klienten ønsker å kalle.</p>
+</li>
+<li>
+<p>Bruk av proxy/gateway-løsninger innebærer at TLS-forbindelsen termineres i en gateway og en ny forbindelse settes opp for videre kommunikasjon. Autentiseringsmekanismer knyttet til TLS-forbindelsen blir dermed ikke videreformidlet inn mot bakenforliggende tjenester, men må kontrolleres av gateway-en. Løsningen som foreslås her innebærer i stedet at autentiseringsmekanismen legges i en http-header og kan videreformidles gjennom gateway/proxy inn til tjenesten som kalles.</p>
+</li>
+<li>
+<p>Gjennom å implementere token-tjenesten med standard OAuth2- og JWT-mekanismer finnes det hyllevare for å ta imot, verifisere og konvertere slike tokens.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_delegering_av_myndighet"><a class="anchor" href="#_delegering_av_myndighet"></a><a class="link" href="#_delegering_av_myndighet">4. Delegering av myndighet</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dette er nyttig i mange situasjoner og en felles løsning for dette på tvers av offentlig sektor vil kunne gi stor gevinst, for eksempel i situasjoner som:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Regnskapskontor, advokater, meglere osv opptrer på vegne av sine oppdragsgivere</p>
+</li>
+<li>
+<p>Tjenesteleverandører, driftsleverandører eller aggregeringstjenester opptrer på vegne av sine kunder</p>
+</li>
+<li>
+<p>Bransjeorganisasjoner opptrer på vegne av sine medlemmer</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I den videre diskusjonen trenger vi å skille mellom:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Konsumenten &#169; som er den juridiske ansvarlige for bruken av tjenesten og den som i siste instans får informasjonen som etterspørres</p>
+</li>
+<li>
+<p>Leverandøren (L) er den som kontrollerer klienten og som faktisk kaller tjenesten på vegne av konsument &#169;.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturen legger her opp til:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tilgangsstyringen i tjenesten er uavhengig av hvem som er leverandøren, det er kun konsumenten som er relevant</p>
+</li>
+<li>
+<p>Klienten autentiserer seg til token-tjenesten som leverandør, men sier samtidig at den ønsker tilgang til en bestemt tjeneste på vegne av konsument</p>
+</li>
+<li>
+<p>Token-tjenesten vil bare utstede et token dersom begge disse holder:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Konsumenten er autorisert for å kalle tjenesten, dette styres av API-tilbyder</p>
+</li>
+<li>
+<p>Leverandøren er autorisert til å opptre på vegne av konsumenten for denne tjenesten, dette styres av konsumenten</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>"Effektiv digitalisering av offentlig sektor"</p>
-</li>
-<li>
-<p>"Godt personvern og god informasjonssikkerhet"</p>
-<div class="ulist">
-<ul>
-<li>
-<p>"Personvern og informasjonssikkerhet skal være en integrert del av utviklingen og bruken av IKT."</p>
-</li>
-<li>
-<p>"Den enkelte innbygger skal i størst mulig grad ha råderett over egne personopplysninger."</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>og at man utfordrer hvordan digital samhandling er realisert inntil nå. Man bør i arbeidet avklare hvor langt man kan gå i å gjennomføres en digital transformasjon. Husk å sette brukeren i fokus og at virksomhetens egne behov ikke overskygger å gi gode løsninger til brukeren.</p>
-</div>
-<div class="paragraph">
-<p>Ved modellering av forretningsprosesser på tvers av virksomheter, skal man tydelig avklare både eierskap til informasjon og funksjonalitet. Man skal deretter (eller i paralell) tenke på hvordan en fulldigitalisert prosess grovt sett ser ut hos hver enkelt part. Før man til slutt (eller i paralell) ser på hvordan samhandlingen burde fungert dersom begge parter blir fulldigitalisert på området man jobber med. Man bør prøve å forstå hvilke behov som styrer en hver samhandling, for eksempel:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Hente data der og da</p>
-</li>
-<li>
-<p>Varsle om en tilstandsendring (noe har skjedd)</p>
-</li>
-<li>
-<p>Overlevere ansvaret for videre behandling til annen part</p>
-</li>
-<li>
-<p>Oppdatere noe hos annen part</p>
-</li>
-<li>
-<p>Etc.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Det er avgjørende at hjemler/samtykke for deling av informasjon er på plass slik at prosessen kan digitaliseres. Dersom det er behov for endringer i lovverk (juridisk samhandlingsevne), så må dette initieres mot rett lovgivende departement. Dersom det dukker opp nye sentrale begreper, så bør disse løftes inn i begrepskatalogen (semantisk samhandlingsevne). Gjennom å jobbe med digital prosess for samhandling tidlig, så vil man kunne avdekke behov knyttet til samhandlingsevne på de forskjellige interoperabilitetsnivåene.</p>
-</div>
-<div class="paragraph">
-<p>Forretningsprosessens hovedformål er å identifisere digitale samhandlinger på tvers av virksomheter og ikke vise detaljer på hva som foregår i den enkelte virksomhet. Dette for å ha fokus på den digitale samhandlingen. Her følger noen eksempler på hvordan man kan modellere digital samhandling.</p>
-</div>
-<div class="paragraph">
-<p>Prosessen for samtykkebasert lånesøknad kan for eksempel modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20SBL.png" alt="bad!" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Prosessen for konkurs og lønnsgaranti kan for eksempel modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Basis%20prosess%20lønnsgaranti.png" alt="bad!" width="1100"></span></p>
-</div>
-<div class="paragraph">
-<p>Når 2 parter blir enige om en fulldigitalisert prosess, så har man et godt startpunkt på videre arbeid. Begge parter må kanskje gjøre løft i forhold til digitalisering, noe som ikke alltid er fullt ut mulig. Som regel vil man kunne digitalisere samhandlingen for fremtiden og så kan hver og en virksomhet stegvis dra nytte av dette til å digitalisere interne løsninger. Unntaksvis må man kanskje fire på kravet på hvor langt man vil gå i å digitalisere samhandlingen. I <a href="./Steg2.adoc">steg 2</a> vil vi se på hvordan man mapper fra en digital prosess ned på forretningsmønstre. <a href="./Steg2.adoc">steg 2</a> kan med fordel kjøres samtidig som steg 1, men er av pedagogiske grunner dokumentert separat.</p>
-</div>
-</div>
-</div>
-<h1 id="_steg_2_identifisere_samhandlingsmønstre" class="sect0"><a class="anchor" href="#_steg_2_identifisere_samhandlingsmønstre"></a><a class="link" href="#_steg_2_identifisere_samhandlingsmønstre">Steg 2 - Identifisere samhandlingsmønstre</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
-</div>
-<div class="sect1">
-<h2 id="_steg_2_identifisere_samhandlingsmønstre_2"><a class="anchor" href="#_steg_2_identifisere_samhandlingsmønstre_2"></a><a class="link" href="#_steg_2_identifisere_samhandlingsmønstre_2">1. Steg 2 - Identifisere samhandlingsmønstre</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Som del av modellering av digital samhandlingsprosess, se <a href="./Steg1.adoc">steg 1</a>, så er det naturlig å identifisere hvilket <a href="./Samhandlingsmønstre.adoc">samhandlingsmønster</a> som gjelder for hver enkelt samhandling.</p>
-</div>
-<div class="paragraph">
-<p>Rett samhandlingsmønster identifiseres best gjennom å forstå behovet for hver enkelt samhandling. Det er viktig at begge partene prater gjennom prosessen sammen, slik at man får en felles forståelse av behov, slik at man kan enes om mønster.</p>
-</div>
-<div class="paragraph">
-<p>Prosessen for samtykkebasert lånesøknad kan for eksempel da modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20SBL%20med%20angivelse%20av%20mønster.png" alt="bad!" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Prosessen for konkurs og lønnsgaranti kan for eksempel modelleres slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20med%20mønster%20lønnsgaranti.png" alt="bad!" width="1100"></span></p>
-</div>
-<div class="paragraph">
-<p>Når samhandlingsmønster er identifisert for hver enkelt samhandling, så blir neste steg å mappe mønster til referansearkitektur, se
-<a href="./Steg3.adoc">steg 3</a>.</p>
-</div>
-</div>
-</div>
-<h1 id="_steg_3_identifisere_referansearkitektur" class="sect0"><a class="anchor" href="#_steg_3_identifisere_referansearkitektur"></a><a class="link" href="#_steg_3_identifisere_referansearkitektur">Steg 3 - Identifisere referansearkitektur</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
-</div>
-<div class="sect1">
-<h2 id="_steg_3_identifisere_referansearkitektur_2"><a class="anchor" href="#_steg_3_identifisere_referansearkitektur_2"></a><a class="link" href="#_steg_3_identifisere_referansearkitektur_2">1. Steg 3 - Identifisere referansearkitektur</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Når samhandlingsmønstre er identifisert, se <a href="./Steg2.adoc">steg 2</a>, så kan man mappe disse mot <a href="../Referansearkitekturer.adoc">referansearkitektur</a> for hver enkelt samhandling.</p>
-</div>
-<div class="paragraph">
-<p>Har man fått til en god enighet om samhandlingsmønstre, så vil ofte prosessen med å mappe mot referansearkitektur være ganske enkel da det under <a href="./Samhandlingsmønstre.adoc">samhandlingsmønstre</a> er angitt hvilken referansearkitektur som gjelder for et bestemt samhandlingsmønster.</p>
-</div>
-<div class="paragraph">
-<p>Mapping til referansearkitektur for lånesøknad vil da se slik ut:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Prosess%20SBL%20med%20angivelse%20av%20referansearkitektur.png" alt="bad!" width="750"></span></p>
-</div>
-<div class="paragraph">
-<p>Mapping til referansearkitektur for  konkurs og lønnsgaranti vil da se slik ut:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandling%20bostyrer%20og%20NAV.png" alt="bad!" width="1100"></span></p>
-</div>
-<div class="paragraph">
-<p>Når referansearkitektur er identifisert for hver enkelt samhandling, så blir neste steg å identifisere løsningsarkitektur med tilhørende løsningskomponenter, se <a href="./Steg4.adoc">steg 4</a>.</p>
-</div>
-</div>
-</div>
-<h1 id="_steg_4_identifisere_løsningsarkitektur" class="sect0"><a class="anchor" href="#_steg_4_identifisere_løsningsarkitektur"></a><a class="link" href="#_steg_4_identifisere_løsningsarkitektur">Steg 4 - Identifisere løsningsarkitektur</a></h1>
-<div class="paragraph">
-<p>Direktoratet for forvaltning og ikt (Difi)
-:toc-title: Innhold
-:icons: font
-:sectnums:
-:leveloffset: +0
-:toclevels: 3
-:sectlinks:
-:linkattrs:
-:sectids:
-:sectanchors:
-:sectnumlevels: 3
-:xrefstyle: short
-:imagesdir: ..//felles/images</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Samhandlingsevne.png" alt="Samhandlingsevne" width="750"></span></p>
-</div>
-<div class="sect1">
-<h2 id="_steg_4_identifisere_løsningsarkitektur_2"><a class="anchor" href="#_steg_4_identifisere_løsningsarkitektur_2"></a><a class="link" href="#_steg_4_identifisere_løsningsarkitektur_2">1. Steg 4 - Identifisere løsningsarkitektur</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Når referansearkitektur er identifisert, se <a href="./Steg3.adoc">steg 3</a>, kan man gå videre å jobbe med løsningsarkitektur.</p>
-</div>
-<div class="paragraph">
-<p>Fra et arkitekturståsted så består en referansearkitektur av et sett med funksjonelle byggeklosser (ABBer) som representerer funksjonaliteten som kreves for å realisere samhandlingsbehovet. Det vil både kunne være påbudte og valgfrie funksjonelle byggeklosser. Valgfrie byggeklosser benyttes kun der behov og krav til kvalitetsegenskaper tilsier at det kreves. For eksempel vil ikke alle samhandlingsbehov kreve kapabiliteten meldingskryptering for <a href="./2018-eOppslag/">eOppslag</a>.</p>
-</div>
-<div class="paragraph">
-<p>Hver av de funksjonelle byggeklossene kan realiseres av en eller flere løsningskomponenter (SBBer). En funksjonell byggekloss kan ha flere mulige løsningskomponenter. Rett løsningskomponent velges i få fall basert på behov og kvalitetsegenskapene som kreves og som best svarer på behov og krav til kvalitetsegenskaper, inkludert behov avdekket som del av risikoanalyse for sikkerhet og personvern. Se følgende konseptuelle figur:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Mapping%20referansearkitektur%20til%20løsningsarkitektur.png" alt="bad!" width="500"></span></p>
-</div>
-<div class="paragraph">
-<p>Man velger løsningsarkitektur ved å ta utgangspunkt i beste praksis for referansearkitekturen og se om denne dekker behovet. Der valget står mellom flere løsningskomponenter, må man vurdere hvilken som best dekker funksjonelle behov og krav til kvalitetsegenskaper. Har man spesielle behov, kan det hende man må ta i bruk løsningskomponenter som ikke ligger dokumentert som beste praksis. I så fall bør man oppdatere beste praksis.</p>
-</div>
-<div class="paragraph">
-<p>Referansearkitekturer:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://difidrift.sharepoint.com/sites/Arkitekturbibliotek/Referansearkitekturer/Hjemmeside.aspx">eMelding</a></p>
-</li>
-<li>
-<p><a href="./2018-eOppslag/">eOppslag</a></p>
-</li>
-<li>
-<p>eNotifikasjon - Ikke påstartet</p>
+<p>Tokenet som genereres vil inneholde identitet til både konsument og leverandør, men det er forutsatt at informasjon om leverandøren kun brukes til sporingsformål (logging).</p>
 </li>
 </ul>
 </div>
@@ -780,7 +635,7 @@ Under <a href="https://www.difi.no/arkitektur" class="bare">https://www.difi.no/
 </div>
 <div id="footer">
 <div id="footer-text">
-Siste oppdatert 2018-11-07 01:37:56 Vest-Europa (normaltid)
+Siste oppdatert 2018-11-07 01:24:17 Vest-Europa (normaltid)
 </div>
 </div>
 </body>
