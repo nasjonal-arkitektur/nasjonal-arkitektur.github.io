@@ -34,6 +34,8 @@ image:difilogo.svg[image,width=169,height=66]
 ==============
 ////
 
+image:i-arbeid.png[width=75, height=75] I arbeid... innholdsfortegnelsen er ikke komplett!
+
 == Introduksjon
 === Bakgrunn og formål
 Norsk fellesoffentlig arkitekturbibliotek er opprettet av Difi 2018 for å samle dokumentasjon om virksomhetsarkitektur som kan være av felles interesse og bidra tli økt samhandling, gjenbruk og innovasjon.
