@@ -1,12 +1,12 @@
-lang: no
-:doctitle: Referansebibliotek
+:lang: no
+:doctitle: Referanseinformasjon
 :keywords: Referansebibliotek
-:preamble: Referansebibliotek...
 
-ifndef::standardheader_included[]
+
 include::./felles/includes/standardheader.adoc[]
-include::./felles/includes/commonlinks1.adoc[]
-endif::[]
+
+:imagesdir!:
+:imagesdir: ./images
 
 == Begreper
 == Informasjonsmodeller
@@ -17,4 +17,7 @@ endif::[]
 == Referansearkitekturer
 leveloffset!:
 :leveloffset: +1
-include::./arkitekturbibliotek/main.adoc[]
+include::./referansearkitekturer/main.adoc[]
+include::./informasjonsmodeller/main.adoc[]
+include::./metodikk/main.adoc[]
+include::./maler/main.adoc[]

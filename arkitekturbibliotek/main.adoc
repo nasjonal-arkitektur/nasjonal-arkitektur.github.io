@@ -2,11 +2,11 @@
 :doctitle: Nasjonalt arkitekturbibliotek
 :keywords: Norsk, arkitekturbibliotek, offenlig sektor, virksomhetsarkitektur, NIF, samhandlingsarkitektur, rammeverk, GitHub
 //:preamble: 
-ifndef::standardheader_included[]
-include::../felles/includes/standardheader.adoc[]
-include::../felles/includes/commonlinks1.adoc[]
-endif::[]
 
+include::./felles/includes/standardheader.adoc[]
+
+:imagesdir!:
+:imagesdir: ./images
 [.lead]
 Arkitekturdokumentasjon - modeller, standarder, referansearkitekturer, veiledninger, anbefalinger, tips, maler og annet av  interesse på tvers av offentlig (og privat) sektor i Norge
 
@@ -88,14 +88,14 @@ Se også:
 
 :leveloffset!:
 :leveloffset: +1
-include::./Overordnet-metode/main.adoc[]
-include::./Arkitekturlandskap/main.adoc[]
-include::./Løsningslandskap/main.adoc[]
-include::./Standarder/main.adoc[]
-include::./Kravbibliotek/main.adoc[]
-include::./Referansebibliotek/main.adoc[]
-include::./Gjennomføringsevne/main.adoc[]
-include::./Styring_og_oppfølging/main.adoc[]
+include::./rammeverk/main.adoc[]
+include::./arkitekturlandskap/main.adoc[]
+include::./løsningslandskap/main.adoc[]
+include::./standarder/main.adoc[]
+include::./kravbibliotek/main.adoc[]
+include::./referanseinformasjon/main.adoc[]
+include::./organisering-og-kompetanse/main.adoc[]
+include::./styring-og-oppfølging/main.adoc[]
 
 
 

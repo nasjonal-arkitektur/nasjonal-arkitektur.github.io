@@ -1,14 +1,10 @@
 :lang: no
-:keywords: Steg3
-ifndef::standardheader_included[]
-:doctitle: Steg 3 - Identifisere referansearkitektur
-include::../felles/includes/standardheader.adoc[]
-endif::[]
+:doctitle: Steg 3 - Identifisere referansearkitektur med fokus på samhandling
+:keywords: metodikk
+include::./felles/includes/standardheader.adoc[]
 
+:imagesdir!:
 :imagesdir: ./images
-image:Samhandlingsevne.png[alt="Samhandlingsevne", width=750]
-
-== Steg 3 - Identifisere referansearkitektur
 
 Når samhandlingsmønstre er identifisert, se link:./Steg2.adoc[steg 2], så kan man mappe disse mot link:../Referansearkitekturer.adoc[referansearkitektur] for hver enkelt samhandling.
 

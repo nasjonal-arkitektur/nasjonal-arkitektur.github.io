@@ -1,14 +1,11 @@
 :lang: no
-:keywords: Steg1
-ifndef::standardheader_included[]
 :doctitle: Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling
-include::../felles/includes/standardheader.adoc[]
-endif::[]
+:keywords: metodikk
+include::./felles/includes/standardheader.adoc[]
 
+:imagesdir!:
 :imagesdir: ./images
-image:Samhandlingsevne.png[alt="Samhandlingsevne", width=750]
 
-== Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling
 
 Basert på god forståelse av prosessene for fulldigitalisert samhandling mellom virksomheter og virksomhetenes rolle/ ansvar i disse prosessen har man mulighet for å gjøre gode tekniske løsningsvalg på digital samhandling. Her beskrives hvordan man kan ta fram slike prosesser som først og fremst har fokus på den digitale samhandlingen på tvers av virksomheter.
 

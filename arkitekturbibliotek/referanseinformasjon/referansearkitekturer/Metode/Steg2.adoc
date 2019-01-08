@@ -1,14 +1,11 @@
 :lang: no
-:keywords: Steg2
-ifndef::standardheader_included[]
 :doctitle: Steg 2 - Identifisere samhandlingsmønstre
-include::../felles/includes/standardheader.adoc[]
-endif::[]
+:keywords: Metodikk
+include::./felles/includes/standardheader.adoc[]
 
+:imagesdir!:
 :imagesdir: ./images
-image:Samhandlingsevne.png[alt="Samhandlingsevne", width=750]
 
-== Steg 2 - Identifisere samhandlingsmønstre
 
 Som del av modellering av digital samhandlingsprosess, se link:./Steg1.adoc[steg 1], så er det naturlig å identifisere hvilket link:./Samhandlingsmønstre.adoc[samhandlingsmønster] som gjelder for hver enkelt samhandling.
 

@@ -5,9 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="Steg4">
+<meta name="keywords" content="Referansearkitekturer">
 <meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
-<title>Steg 4 - Identifisere løsningsarkitektur</title>
+<title>Strategi for arbeidet med referansearkitekturer</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -435,7 +435,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Steg 4 - Identifisere løsningsarkitektur</h1>
+<h1>Strategi for arbeidet med referansearkitekturer</h1>
 <div class="details">
 <span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
 <span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
@@ -443,40 +443,46 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="paragraph">
-<p>Når referansearkitektur er identifisert, se <a href="./Steg3.adoc">steg 3</a>, kan man gå videre å jobbe med løsningsarkitektur.</p>
+<p>Det vil bli etablert flere referansearkitekturer for digital samhandling som dokumenterer beste praksis for hvordan man skal samhandle gitt et konkret behov for samhandling. Dokumentasjonen vil være i henhold til <a href="https://www.difi.no/arkitektur">Nasjonal-arkitektur</a> og da spesielt <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/arkitekturrammeverk-samhandling">Nasjonal-arkitektur arkitekturrammeverk-samhandling</a>.</p>
 </div>
 <div class="paragraph">
-<p>Fra et arkitekturståsted så består en referansearkitektur av et sett med funksjonelle byggeklosser (ABBer) som representerer funksjonaliteten som kreves for å realisere samhandlingsbehovet. Det vil både kunne være påbudte og valgfrie funksjonelle byggeklosser. Valgfrie byggeklosser benyttes kun der behov og krav til kvalitetsegenskaper tilsier at det kreves. For eksempel vil ikke alle samhandlingsbehov kreve kapabiliteten meldingskryptering for <a href="./2018-eOppslag/">eOppslag</a>.</p>
+<p>I dokumentasjon av <a href="./Metode/Samhandlingsmønstre.adoc/">Samhandlingsmønstre</a> dokumenteres det hvordan de forskjellige forretningsmessige samhandlingsmønstrene hver og en kan mappes mot en bestemt referansearkitektur. For en referansearkitektur kan man så igjen finne beste tekniske løsningsarkitektur som dokumenterer beste praksis for hvordan man teknisk skal samhandle for å realisere et samhandlingsmønster. Se <a href="./Metode/main.adoc">Metode</a> for beste praksis for å gå fra digital samhandlingsprosess til løsningsarkitektur.</p>
 </div>
 <div class="paragraph">
-<p>Hver av de funksjonelle byggeklossene kan realiseres av en eller flere løsningskomponenter (SBBer). En funksjonell byggekloss kan ha flere mulige løsningskomponenter. Rett løsningskomponent velges i få fall basert på behov og kvalitetsegenskapene som kreves og som best svarer på behov og krav til kvalitetsegenskaper, inkludert behov avdekket som del av risikoanalyse for sikkerhet og personvern. Se følgende konseptuelle figur:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/Mapping%20referansearkitektur%20til%20løsningsarkitektur.png" alt="bad!" width="500"></span></p>
-</div>
-<div class="paragraph">
-<p>Man velger løsningsarkitektur ved å ta utgangspunkt i beste praksis for referansearkitekturen og se om denne dekker behovet. Der valget står mellom flere løsningskomponenter, må man vurdere hvilken som best dekker funksjonelle behov og krav til kvalitetsegenskaper. Har man spesielle behov, kan det hende man må ta i bruk løsningskomponenter som ikke ligger dokumentert som beste praksis. I så fall bør man oppdatere beste praksis.</p>
-</div>
-<div class="paragraph">
-<p>Referansearkitekturer:</p>
+<p>Det jobbes for øyeblikket med 3 referansearkitekturer:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://difidrift.sharepoint.com/sites/Arkitekturbibliotek/Referansearkitekturer/Hjemmeside.aspx">eMelding</a></p>
+<p>eMelding</p>
 </li>
 <li>
-<p><a href="./2018-eOppslag/">eOppslag</a></p>
+<p>eOppslag</p>
 </li>
 <li>
-<p>eNotifikasjon - Ikke påstartet</p>
+<p>eNotifikasjon</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Følgende figur gir en skisse over disse:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="..//felles/images/Referansearkitekturer.png" alt="missing image (Referansearkitekturer.png)"></span></p>
+</div>
+<div class="paragraph">
+<p>Se <a href="https://difidrift.sharepoint.com/sites/Arkitekturbibliotek/Referansearkitekturer/Hjemmeside.aspx">eMelding</a> for mer informasjon om referansearkitektur for eMelding.</p>
+</div>
+<div class="paragraph">
+<p>Se <a href="./2018-eOppslag/">eOppslag</a> for mer informasjon om referansearkitektur for eOppslag.</p>
+</div>
+<div class="paragraph">
+<p>Det er ikke påbegynt arbeid med referansearkitektur for eNotifikasjon enda.</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Siste oppdatert 2019-01-09 00:48:39 Vest-Europa (normaltid)
+Siste oppdatert 2019-01-09 00:29:34 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

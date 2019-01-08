@@ -1,14 +1,11 @@
 :lang: no
-:keywords: Steg4
-ifndef::standardheader_included[]
 :doctitle: Steg 4 - Identifisere løsningsarkitektur
-include::../felles/includes/standardheader.adoc[]
-endif::[]
+:keywords: Steg4
+include::./felles/includes/standardheader.adoc[]
 
+:imagesdir!:
 :imagesdir: ./images
-image:Samhandlingsevne.png[alt="Samhandlingsevne", width=750]
 
-== Steg 4 - Identifisere løsningsarkitektur
 
 Når referansearkitektur er identifisert, se link:./Steg3.adoc[steg 3], kan man gå videre å jobbe med løsningsarkitektur.
 
