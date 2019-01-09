@@ -12,6 +12,12 @@ include::../felles/includes/commonincludes.adoc[]
 Se også: 
 
 * Forholdet mellom Archimate og andre språk.
+* Osv.
+
+=== Om Archimate vs. andre standarder
+Om metamodeller
+Forholdet tli BPMN og UML
+
 
 === Hvorfor modellere - generelt?
 * Konsistent dokumentasjon (database, referanseintegritet)
@@ -35,7 +41,7 @@ WARNING: Archimate som sådan har ikke støtte for kataloger. Til dette kreves s
 
 NOTE: En historie fra virkeligheten: På Entercard ble det tilrettelagt for å bruke egne utvidelser av Archimate også til datamodellering, løsningsdesign,  risikomodellering, infrastruktur, kompetansestyring, begrepsdefinisjoner, konsekvensanalyse m.m. 
 
-
+== Verktøy
 === Hvorfor verktøy (innledningsvis)
 * Effektiv input, f.eks. gjennom matriser
 * Generering av grafiske visninger
@@ -44,25 +50,24 @@ Funksjonalitet...
 
 === Utvidelser og tilpasning av Archimate
 
-=== Innledningsvis om Archimate vs. andre standarder
 
-=== Archimate og EA (generelt)
 
+
+== Utvalgte "konsepter"
 === Tjenesteorientering
 
-=== Utvalgte "konsepter"
-==== Prosess vs. funksjon
+=== Prosess vs. funksjon
 
-==== Retning på piler:
+=== Retning på piler:
 https://bizzdesign.com/blog/archimate-relationships-point-in-the-same-direction-as-the-enterprise/
 
-==== Arkitektur vs. løsning
+=== Arkitektur vs. løsning
 https://bizzdesign.com/blog/archimate-relationships-point-in-the-same-direction-as-the-enterprise/
 
 
-==== Abstraksjon
+=== Abstraksjon
 
-===== Komseptuell, logisk, fysisk
+==== Konseptuell, logisk, fysisk
 Ref. Archimate 3.01:
 +       
 A third distinction is between conceptual, logical, and physical abstraction levels. This has its roots in data modeling: conceptual elements represent the information the business finds relevant; logical elements provide logical structure to this information for manipulation by information systems; physical elements describe the storage of this information; for example, in the form of files or database tables. In the ArchiMate language, this corresponds with business objects, data objects, and artifacts, and the realization relationships between them.
@@ -78,19 +83,14 @@ The ArchiMate language has *[blue]#three ways#* of modeling such abstractions.
 3. Third, __logical and physical application components can be defined as specializations of the application component element__, as described in Chapter 15 (see also the examples in Section 15.2.2). The same holds for the logical and physical technology components of the TOGAF Content Metamodel, which can be defined as specializations of the node element (see Section 15.2.3).
 
 
-==== Instanser
+=== Instanser
 #The ArchiMate language intentionally does not support a difference between types and instances#. At the Enterprise Architecture abstraction level, it is more common to model types and/or exemplars rather than instances. Similarly, a business process in the ArchiMate language does not describe an individual instance (i.e., one execution of that process). In most cases, a business object is therefore used to model an object type (cf. a UML class), of which several instances may exist within the organization. For instance, each execution of an insurance application process may result in a specific instance of the insurance policy business object, but that is not modeled in the Enterprise Architecture.
 
 WARNING: Erik: Det kan diskuteres om det er smart å utelukke muligheten til å dokumentere instanser! Det er f.eks. interessant å analysere hvor mange instanser av en applikasjon som finnes, hvor mange brukere som bruker hvilke funksjoner osv. Dette kan selvsagt fanges og analyseres i andre verktøy, men det kan være hensiktsmessig å samle "alt" på en konsistent måte i ett verktøy. 
 
 NOTE: 
 
-==== Derived connections
-
-=== Mer om Archimate vs. andre standarder
-
-* BPMN med Archimate
-* ER-diagrammer som Archmate + kardinalitet
+=== Derived connections
 
 === Tilpasning og utvidelser (extensions)
 ==== Egne symboler
@@ -99,7 +99,6 @@ NOTE:
 
 === Modelleringskonvensjoner
 ==== Navnekonvensjoner
-==== Tjenesteorientering
 ==== Attributter
 ==== Spesielt om prosessmodellering
 ==== Spesielt om datamodellering
@@ -107,12 +106,31 @@ NOTE:
 === Eksempler
 
 
-=== Viderekommen bruk
-==== Risk modeling
+== Temaer for viderekomne
+=== Risikomodelinger
+Kan gjøre som en utvidelse av Archimate, f.eks. slik:
 
-==== Mer om verktøy 
+image:./images/Example 35, Specializations of Business Layer and Motivation Elements.png[]
+Kilde:
+http://pubs.opengroup.org/architecture/archimate3-doc/chap15.html#_Toc489946142
 
 
+NOTE: Dette er støttet på en god måte av  Bizzdesign Studio, slik at en slipper å finne opp kruttet. 
+
+Se også:
+
+* Bizzdesign blogg
+* The Open Group White Paper
+* Eksempler fra GDPR-arbeidet på RR
+* Kjør Bizzdesign demo?
+
+
+=== Archimate sammen med andre standarder
+
+* BPMN look-alike med Archimate
+* ER-diagrammer som Archmate + kardinalitet
+
+=== Mer om verktøy 
 
 
 
