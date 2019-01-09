@@ -72,3 +72,11 @@
 09.01.2019 04:17:19: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\main.adoc)
 09.01.2019 04:17:19: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\styring-og-oppfølging\main.adoc)
 09.01.2019 11:27:54: GenerateHtml
+09.01.2019 11:31:57: GenerateHtml
+09.01.2019 11:31:57: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Metode\main.adoc)
+09.01.2019 11:31:57: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Metode\Steg1.adoc)
+09.01.2019 11:31:57: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Metode\Steg2.adoc)
+09.01.2019 11:31:57: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Metode\Steg3.adoc)
+09.01.2019 11:31:57: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Metode\Steg4.adoc)
+09.01.2019 11:32:56: GenerateHtml
+09.01.2019 11:32:56: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\main.adoc)

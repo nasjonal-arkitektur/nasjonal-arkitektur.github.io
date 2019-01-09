@@ -4,7 +4,7 @@
 
 include::./felles/includes/commonincludes.adoc[]
 
-:imagesdir!:
+
 image:./felles/images/i-arbeid.png[width=75, height=75]
 
 

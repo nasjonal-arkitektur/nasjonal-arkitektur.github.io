@@ -1,10 +1,9 @@
 :lang: no
 :doctitle: Steg 4 - Identifisere løsningsarkitektur
-:keywords: Metodik
+:keywords: Metodikk
 
 include::./felles/includes/commonincludes.adoc[]
 
-:imagesdir!:
 :imagesdir: ./images
 
 

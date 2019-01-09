@@ -4,7 +4,7 @@
 
 include::./felles/includes/commonincludes.adoc[]
 
-:imagesdir!:
+
 :imagesdir: ./images
 
 Når samhandlingsmønstre er identifisert, se link:./Steg2.adoc[steg 2], så kan man mappe disse mot link:../Referansearkitekturer.adoc[referansearkitektur] for hver enkelt samhandling.
