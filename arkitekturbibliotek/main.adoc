@@ -10,7 +10,7 @@ include::./felles/includes/commonincludes.adoc[]
 Arkitekturdokumentasjon - modeller, standarder, referansearkitekturer, veiledninger, anbefalinger, tips, maler og annet av  interesse på tvers av offentlig (og privat) sektor i Norge.
 
 
-image:./felles/images/difilogo.svg[image,width=169,height=66]
+//image:./felles/images/difilogo.svg[image,width=169,height=66]
 
 //image:./felles/images/i-arbeid.png[width=75, height=75]I arbeid
 
@@ -62,7 +62,7 @@ Terskelen for å publisere innhold skal ikke være for høy. Eksempler og praksi
 
 ////
 
-Oppbyggingen av dette arkitekturbiblioteket følger i grove trekk strukturen som angitt av TOGAF og Nasjonalt rammverk for samhandlingsarkitektur (NIF).
+Oppbyggingen av dette arkitekturbiblioteket følger i grove trekk strukturen som angitt i TOGAF og Nasjonalt rammverk for samhandlingsarkitektur (NIF):
 
 . link:./rammeverk/[Overordnet rammeverk]
 . link:./arkitekturlandskap/[Arkitekturlandskap]
