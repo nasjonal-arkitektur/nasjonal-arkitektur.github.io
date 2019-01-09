@@ -5,9 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="Github, asciidoc, archi">
+<meta name="keywords" content="kurs, standard, modellering">
 <meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
-<title>Praktiske tips for å komme igang</title>
+<title>Archimate-kurs del 1</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -435,34 +435,69 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Praktiske tips for å komme igang</h1>
+<h1>Archimate-kurs del 1</h1>
 <div class="details">
 <span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
 <span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Innhold</div>
+<ul class="sectlevel1">
+<li><a href="#_målgrupper_og_formål">1. Målgrupper og formål</a></li>
+<li><a href="#_kursplan">2. Kursplan</a></li>
+<li><a href="#_temaer">3. Temaer</a>
 <ul class="sectlevel2">
-<li><a href="#_praktiske_tips_for_å_komme_igang_med_github">1. Praktiske tips for å komme igang med GitHub</a>
+<li><a href="#_hva_er_archimate">3.1. Hva er Archimate?</a></li>
+<li><a href="#_er_archimate_vanskeligere_enn_andre_modellspråk_og_notasjoner">3.2. Er Archimate vanskeligere enn andre modellspråk og notasjoner?</a></li>
+<li><a href="#_er_det_begrensninger_i_archimate">3.3. Er det begrensninger i Archimate?</a></li>
+<li><a href="#_hvorfor_modellere">3.4. Hvorfor modellere?</a></li>
+<li><a href="#_hva_skal_vi_i_difi_modellere_innledningsvis_refleksjon">3.5. Hva skal vi i Difi modellere - innledningsvis refleksjon?</a></li>
+<li><a href="#_hvorfor_verktøy_innledningsvis">3.6. Hvorfor verktøy (innledningsvis)</a></li>
+<li><a href="#_utvidelser_og_tilpasning_av_archimate">3.7. Utvidelser og tilpasning av Archimate</a></li>
+<li><a href="#_innledningsvis_om_archimate_vs_andre_standarder">3.8. Innledningsvis om Archimate vs. andre standarder</a></li>
+<li><a href="#_archimate_og_ea_generelt">3.9. Archimate og EA (generelt)</a></li>
+<li><a href="#_tjenesteorientering">3.10. Tjenesteorientering</a></li>
+<li><a href="#_utvalgte_konsepter">3.11. Utvalgte "konsepter"</a>
 <ul class="sectlevel3">
-<li><a href="#_generelt">1.1. Generelt</a></li>
-<li><a href="#_prosedyre_for_å_komme_i_gang_med_git_og_github">1.2. Prosedyre for å komme i gang med git og Github</a></li>
+<li><a href="#_prosess_vs_funksjon">3.11.1. Prosess vs. funksjon</a></li>
+<li><a href="#_retning_på_piler">3.11.2. Retning på piler:</a></li>
+<li><a href="#_arkitektur_vs_løsning">3.11.3. Arkitektur vs. løsning</a></li>
+<li><a href="#_abstraksjon">3.11.4. Abstraksjon</a></li>
+<li><a href="#_instanser">3.11.5. Instanser</a></li>
+<li><a href="#_derived_connections">3.11.6. Derived connections</a></li>
 </ul>
 </li>
-<li><a href="#_asciidoc">2. Asciidoc</a>
+<li><a href="#_mer_om_archimate_vs_andre_standarder">3.12. Mer om Archimate vs. andre standarder</a></li>
+<li><a href="#_tilpasning_og_utvidelser_extensions">3.13. Tilpasning og utvidelser (extensions)</a>
 <ul class="sectlevel3">
-<li><a href="#_om_asciidoc">2.1. Om Asciidoc</a></li>
-<li><a href="#_tips_om_redigeringsverktøy_for_asciidoc">2.2. Tips om redigeringsverktøy for Asciidoc</a></li>
-<li><a href="#_tips_om_skriving_i_asciidoc">2.3. Tips om skriving i Asciidoc</a></li>
+<li><a href="#_egne_symboler">3.13.1. Egne symboler</a></li>
+<li><a href="#_attributter">3.13.2. Attributter</a></li>
+<li><a href="#_spesialiserte_objekter">3.13.3. Spesialiserte objekter</a></li>
 </ul>
 </li>
-<li><a href="#_praktiske_tips_om_samarbeid_med_archi">3. Praktiske tips om samarbeid med Archi</a>
+<li><a href="#_modelleringskonvensjoner">3.14. Modelleringskonvensjoner</a>
 <ul class="sectlevel3">
-<li><a href="#_generelt_3">3.1. Generelt</a></li>
-<li><a href="#_installer_archi_og_plugin">3.2. Installer Archi og plugin</a></li>
-<li><a href="#_importer_github_repository">3.3. Importer Github-repository</a></li>
-<li><a href="#_endring_og_synkronisering">3.4. Endring og synkronisering</a></li>
-<li><a href="#_andre_tips">3.5. Andre tips</a></li>
+<li><a href="#_navnekonvensjoner">3.14.1. Navnekonvensjoner</a></li>
+<li><a href="#_tjenesteorientering_2">3.14.2. Tjenesteorientering</a></li>
+<li><a href="#_attributter_2">3.14.3. Attributter</a></li>
+<li><a href="#_spesielt_om_prosessmodellering">3.14.4. Spesielt om prosessmodellering</a></li>
+<li><a href="#_spesielt_om_datamodellering">3.14.5. Spesielt om datamodellering</a></li>
+</ul>
+</li>
+<li><a href="#_eksempler">3.15. Eksempler</a></li>
+<li><a href="#_viderekommen_bruk">3.16. Viderekommen bruk</a>
+<ul class="sectlevel3">
+<li><a href="#_risk_modeling">3.16.1. Risk modeling</a></li>
+<li><a href="#_mer_om_verktøy">3.16.2. Mer om verktøy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_kilder_til_kunnskap">4. Kilder til kunnskap</a>
+<ul class="sectlevel3">
+<li><a href="#_getting_started">4.1. Getting started</a></li>
+<li><a href="#_om_archimate_standarden_som_sådan">4.2. Om Archimate-standarden som sådan</a></li>
+<li><a href="#_noen_interessante_anvendelser_av_archimate">4.3. Noen interessante anvendelser av Archimate</a></li>
 </ul>
 </li>
 </ul>
@@ -472,25 +507,84 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Plattform for samproduksjon og deling av arkitekturdokumentasjon, etablert av Difi i 2018.</p>
+<p>The ArchiMate S&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span> Uferdig innhold</p>
+<p><span class="image"><img src="./felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span> Første versjon av denne omtalen er fremdeles i arbeid</p>
 </div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/archimate-logo.jpg" alt="archimate logo" width="200"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_målgrupper_og_formål"><a class="anchor" href="#_målgrupper_og_formål"></a><a class="link" href="#_målgrupper_og_formål">1. Målgrupper og formål</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Arkitekter: Lær å modellere med Archimate</p>
+</li>
+<li>
+<p>Andre: Lær å lese Archimate-modeller</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kursplan"><a class="anchor" href="#_kursplan"></a><a class="link" href="#_kursplan">2. Kursplan</a></h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Runde rundt bordet – ønsker og forventninger</p>
+</li>
+<li>
+<p>Introduksjon til Archimate og relaterte temaer</p>
+</li>
+<li>
+<p>Om verktøy</p>
+</li>
+<li>
+<p>Installer og kom i gang med et gratisverktøy (Archi)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>5.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_temaer"><a class="anchor" href="#_temaer"></a><a class="link" href="#_temaer">3. Temaer</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_hva_er_archimate"><a class="anchor" href="#_hva_er_archimate"></a><a class="link" href="#_hva_er_archimate">3.1. Hva er Archimate?</a></h3>
+<div class="paragraph">
+<p>The ArchiMate Specification, an Open Group Standard, is an open and independent modeling language for Enterprise Architecture that is supported by different tool vendors and consulting firms. The ArchiMate language enables Enterprise Architects to describe, analyze, and visualize the relationships among architecture domains in an unambiguous way.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Grafiske modeller</p>
+</li>
+<li>
+<p>Kataloger</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_praktiske_tips_for_å_komme_igang_med_github"><a class="anchor" href="#_praktiske_tips_for_å_komme_igang_med_github"></a><a class="link" href="#_praktiske_tips_for_å_komme_igang_med_github">1. Praktiske tips for å komme igang med GitHub</a></h3>
-<div class="paragraph lead">
-<p>Her gis praktiske tips om bruk av Github i tilknytning til arbeidet med Nasjonal arkitektur. Det gis tips om spesifikke verktøy, men hver enkelt står fritt til å velge andre alternativer.</p>
-</div>
+<h3 id="_er_archimate_vanskeligere_enn_andre_modellspråk_og_notasjoner"><a class="anchor" href="#_er_archimate_vanskeligere_enn_andre_modellspråk_og_notasjoner"></a><a class="link" href="#_er_archimate_vanskeligere_enn_andre_modellspråk_og_notasjoner">3.2. Er Archimate vanskeligere enn andre modellspråk og notasjoner?</a></h3>
 <div class="paragraph">
-<p><span class="image"><img src="./felles//images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span>  Omstrukturering og tillegg i arbeid</p>
+<p>Nei, ikke egenlig&#8230;&#8203; i alle fall ikke dersom en er bevisst og bruker verktøy som hjelper til med å forenkle modeller og grafikk!</p>
 </div>
-<div class="sect3">
-<h4 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1.1. Generelt</a></h4>
+</div>
+<div class="sect2">
+<h3 id="_er_det_begrensninger_i_archimate"><a class="anchor" href="#_er_det_begrensninger_i_archimate"></a><a class="link" href="#_er_det_begrensninger_i_archimate">3.3. Er det begrensninger i Archimate?</a></h3>
 <div class="paragraph">
-<p>Git er en standard for versjonskontroll og lagring av kode og dokumenter. GitHub er en av flere skytjenester som støtter git, og er den tjenesten som er valgt av Difi. Det er i utgangspunktet gratisversjonen av Github som benyttes.</p>
+<p>Arhimate-standarden er innrettet på å dekke 80% av behovet for (virksomhets-)arkitekter, men kan med noe verktøystøtte utvides og skreddersys til å dekke mye mer.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -499,411 +593,131 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Github ble oppkjøpt av Microsoft i 2018.
+På Entercard ble det tilrettelagt for å bruke egne utvidelser av Archimate også til datamodellering, løsningsdesign,  risikomodellering, infrastruktur, kompetansestyring, begrepsdefinisjoner, m.m.
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>Github kan brukes til å lagre vilkårlige dokumenttyper, men egner seg best til tekstbaserte dokumenter, dvs. dokumenter hvor kildeformatet er rå tekst. Det er dette git ble laget for, og da opprinnelig for versjonsstyring og samarbeid om
-kode (programvare).</p>
-</div>
-<div class="paragraph">
-<p>Markupspråk som Markdown og Asciidoc lar deg skrive dokumenter i ren tekst, og egner seg tilsvarende godt for den funksjonaliteten som finnes rundt versjonsstyring i Github. Asciidoc er valgt her, fordi dette er lett å komme i gang med for nye brukere, samtidig som det gir avanserte muligheter for erfarne brukere. Asciidoc som kildeformat foretrekkes framfor f.eks. Microsoft Word, fordi det framstår som mer åpent og "prosesseringsvennlig". Se <a href="asciidoc-tips.adoc">Praktiske tips on Asciidoc</a> for mer informasjon.</p>
-</div>
-<div class="paragraph">
-<p>Standard utvekslingsformater for modelleringsspråk som Archimate, BPMN, DMN og UML er også tekstbaserte, og egner seg for versjonsstyring i Github.</p>
-</div>
-<div class="paragraph">
-<p>Nasjonalt Arkitekturbibliotek er organisert i en mappestruktur med undermapper for dokumentasjon av arkitekturer, løsninger, referansearkitekturer m.m.</p>
-</div>
-<div class="paragraph">
-<p>I tillegg finnes seperate prosjektbiblioteker. Prosjektleveranser i form av dokumentasjon kopieres til "riktig" sted i strukturen under Nasjonalt arkitekturbiblitotek før prosjektslutt, mens arbeidsversjoner, møtereferater og annet prosjektspesifikt innhold tas vare på i prosjektområdet så lenge det er interessant.</p>
-</div>
-<div class="paragraph">
-<p>Skriverettigheter til selve arkitekturbiblioteket er forbeholdt medlemmer av bibliotekredaksjonen. Tilsvarende er det kun prosjektmedlemmenene som vil ha skrivetilgang til hvert  prosjekt-repository.</p>
-</div>
-<div class="paragraph">
-<p>Andre som vil bidra med innhold kan gjøre dette ved å kopiere aktuelt GitHub repository (git Fork), gjøre endringer og så spille inn endringsforslag (git Pull Request). Redaksjonen for aktuelt GitHub-repository (arkitekturbibliotek eller prosjekt) vil så behandle endringsforslaget og eventuelt ta inn nytt eller endret innhold (git merge).</p>
-</div>
-<div class="paragraph">
-<p><em>Merk: Git gir flere muligheter enn "fork" og "pull request" for å spille inn endringsforslag, men vi anbefaler inntil videre "fork" og "pull request" som nevnt.</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_prosedyre_for_å_komme_i_gang_med_git_og_github"><a class="anchor" href="#_prosedyre_for_å_komme_i_gang_med_git_og_github"></a><a class="link" href="#_prosedyre_for_å_komme_i_gang_med_git_og_github">1.2. Prosedyre for å komme i gang med git og Github</a></h4>
-<div class="sect4">
-<h5 id="_opprett_github_bruker"><a class="anchor" href="#_opprett_github_bruker"></a><a class="link" href="#_opprett_github_bruker">Opprett GitHub bruker</a></h5>
-<div class="paragraph">
-<p>Dersom du ikke allerede har en GitHub-bruker, kan dette gjøres <a href="https://github.com/join?source=header">her</a>.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_etabler_lokal_filmappe_for_kloning_av_github_filer"><a class="anchor" href="#_etabler_lokal_filmappe_for_kloning_av_github_filer"></a><a class="link" href="#_etabler_lokal_filmappe_for_kloning_av_github_filer">Etabler lokal filmappe for kloning av github-filer</a></h5>
-<div class="paragraph">
-<p>Lag en filmappe som hjemmeområde for å arbeide lokalt med github-filer, eventuelt med en undermappe for biblioteker fra Difi.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-For spesielt interesserte: Om du bruker lange navn og dyp mappestruktur i Windows, kan du få problemer med en begrensning på 260
-karakterer i total lengde på filnavn. I og med Windows 10 kan denne begrensningen oppheves. Se f.eks.
-<a href="https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/" class="bare">https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/</a> for en oppskrift på
-hvordan dette kan gjøres.<br>
-<br>
-Kort fortalt: På Windows 10 Enterprise kan du kjøre gpedit.msc og endre Aktiver lange Win32 baner under
-Datamaskinkonfigurasjon, Administrative maler, System, Filsystem. Du må restarte eller logge av og på for at endringen skal tre i kraft.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_installer_programvare_for_git_og_github"><a class="anchor" href="#_installer_programvare_for_git_og_github"></a><a class="link" href="#_installer_programvare_for_git_og_github">Installer programvare for git og GitHub</a></h5>
-
-</div>
-<div class="sect4">
-<h5 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">Generelt</a></h5>
-<div class="paragraph">
-<p>Det finnes tre kategorier mennesker:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>De som foretrekker grafiske brukergrensesnitt</p>
-</li>
-<li>
-<p>De som foretrekker å skrive tekstkommandoer</p>
-</li>
-<li>
-<p>De som ikke har anledning til å installere programvare</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Anbefalinger for disse kategoriene er:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Bruk GitHub Desktop (enkel bruk) eller TortoiseGit (mer avansert)</p>
-</li>
-<li>
-<p>Bruk <em>Git Bash</em> eller <em>Git CMD</em> (eller Windows CMD).</p>
-</li>
-<li>
-<p>Arbeid direkte i nettleseren under <a href="https://github.com/difi/nasjonal_arkitektur" class="bare">https://github.com/difi/nasjonal_arkitektur</a> , uten å klone til lokalt filområde;  eventuelt bruk asciidoclive for asciidoc-dokumentasjon; ref. <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a></p>
-</li>
-</ol>
-</div>
-<div class="sect5">
-<h6 id="_alternativ_1_github_desktop"><a class="anchor" href="#_alternativ_1_github_desktop"></a><a class="link" href="#_alternativ_1_github_desktop">Alternativ 1: GitHub Desktop</a></h6>
-<div class="paragraph">
-<p>GitHub Desktop er en mye brukt og god klient for å klone og oppdatere GitHub-biblioteker.</p>
-</div>
-<div class="paragraph">
-<p>GitHub Desktop kan lastes ned her: <a href="https://desktop.github.com/" class="bare">https://desktop.github.com/</a>.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-Om GitHub desktop har problemer med å aksessere .gitconfig-filen, er en fix å opprette en systemvariabel HOME til den mappen du har opprettet som hjemmeområde for dine lokale GitHub-filer (bruk Kontrollpanel, System, Avanserte systeminnstillinger, miljøvariabler).<br>
-<br>
-Tips: Det er kanskje en god ide å unngå å bruke nettverks-drive (som noen virksomheter bruker som default for Dokumenter)? Bruk  heller en katalog direkte under ditt brukernavn på C:\Users? Se også  <a href="https://github.com/desktop/desktop/issues/4119" class="bare">https://github.com/desktop/desktop/issues/4119</a>.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_alternativ_2_tortoisegit"><a class="anchor" href="#_alternativ_2_tortoisegit"></a><a class="link" href="#_alternativ_2_tortoisegit">Alternativ 2: TortoiseGit</a></h6>
-
-</div>
-<div class="sect5">
-<h6 id="_alternativ_3_git_bash"><a class="anchor" href="#_alternativ_3_git_bash"></a><a class="link" href="#_alternativ_3_git_bash">Alternativ 3: Git Bash</a></h6>
-<div class="paragraph">
-<p>Git Bash fås med siste versjon av Git for Windows her: <a href="https://git-scm.com/download/win" class="bare">https://git-scm.com/download/win</a></p>
-</div>
-<div class="paragraph">
-<p>Generelle tips om å komme igang med Bash kommandolinke:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://rubygarage.org/blog/most-basic-git-commands-with-examples" class="bare">https://rubygarage.org/blog/most-basic-git-commands-with-examples</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_alternativ_4_asciidoclive"><a class="anchor" href="#_alternativ_4_asciidoclive"></a><a class="link" href="#_alternativ_4_asciidoclive">Alternativ 4: Asciidoclive</a></h6>
-<div class="paragraph">
-<p>Ingen installasjon nødvendig. Se <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a>.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-Bruke MS Internet Explorer eller MS Edge! Preview fungerer ikke i Chrome eller Firefox.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_klon_github_prosjektet_til_din_maskin"><a class="anchor" href="#_klon_github_prosjektet_til_din_maskin"></a><a class="link" href="#_klon_github_prosjektet_til_din_maskin">Klon GitHub-prosjektet til din maskin</a></h5>
-<div class="sect5">
-<h6 id="_kloning_med_github_desktop"><a class="anchor" href="#_kloning_med_github_desktop"></a><a class="link" href="#_kloning_med_github_desktop">Kloning med GitHub Desktop</a></h6>
-<div class="paragraph">
-<p>Om du bruker GitHub Desktop, kan det gjøres slik:</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Åpne  GitHub-biblioteket i nettleser, dvs.   <a href="https://github.com/difi/nasjonal_arkitektur" class="bare">https://github.com/difi/nasjonal_arkitektur</a></p>
-</li>
-<li>
-<p>Velg "Clone or Download" i GitHub og velg så "Open in Desktop".</p>
-</li>
-<li>
-<p>I GitHub Desktop, velg File | Clone a repository og angi hvor filene skal legges på din harddisk, som omtalt under avsnittet om lokla filmappe ovenfor. Om du f.eks. benytter C:\Users\eha\GitHub\Difi, vil GitHub Desktop opprette C:\Users\eha\GitHub\Difi\nasjonal_arkitektur.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_kloning_med_tortoisegit"><a class="anchor" href="#_kloning_med_tortoisegit"></a><a class="link" href="#_kloning_med_tortoisegit">Kloning med TortoiseGit</a></h6>
-
-</div>
-<div class="sect5">
-<h6 id="_kloning_med_windows_kommandolinje"><a class="anchor" href="#_kloning_med_windows_kommandolinje"></a><a class="link" href="#_kloning_med_windows_kommandolinje">Kloning med Windows kommandolinje</a></h6>
-
-</div>
-<div class="sect5">
-<h6 id="_kloning_med_git_bash"><a class="anchor" href="#_kloning_med_git_bash"></a><a class="link" href="#_kloning_med_git_bash">Kloning med Git Bash</a></h6>
-
-</div>
-</div>
-<div class="sect4">
-<h5 id="_gjør_endringer"><a class="anchor" href="#_gjør_endringer"></a><a class="link" href="#_gjør_endringer">Gjør endringer</a></h5>
-<div class="paragraph">
-<p>Du kan gjøre det helt enkelt eller mer eller mindre avansert.</p>
-</div>
-<div class="paragraph">
-<p>Difi har etablert noen maler i tilknytning til arkitekturbiblioteket som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde tekster på flere språk, metadata m.m.</p>
-</div>
-<div class="paragraph">
-<p>Disse malene finnes her: &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_publiser_endringer"><a class="anchor" href="#_publiser_endringer"></a><a class="link" href="#_publiser_endringer">Publiser endringer</a></h5>
-<div class="sect5">
-<h6 id="_publisering_med_github_desktop"><a class="anchor" href="#_publisering_med_github_desktop"></a><a class="link" href="#_publisering_med_github_desktop">Publisering med GitHub Desktop</a></h6>
-
-</div>
-<div class="sect5">
-<h6 id="_publisering_med_tortoisegit"><a class="anchor" href="#_publisering_med_tortoisegit"></a><a class="link" href="#_publisering_med_tortoisegit">Publisering med TortoiseGit</a></h6>
-
-</div>
-<div class="sect5">
-<h6 id="_publisering_med_windows_kommandolinje"><a class="anchor" href="#_publisering_med_windows_kommandolinje"></a><a class="link" href="#_publisering_med_windows_kommandolinje">Publisering med Windows kommandolinje</a></h6>
-
-</div>
-<div class="sect5">
-<h6 id="_publisering_med_git_bash"><a class="anchor" href="#_publisering_med_git_bash"></a><a class="link" href="#_publisering_med_git_bash">Publisering med Git Bash</a></h6>
-
-</div>
-</div>
-<div class="sect4">
-<h5 id="_mer_avanserte_temaer"><a class="anchor" href="#_mer_avanserte_temaer"></a><a class="link" href="#_mer_avanserte_temaer">Mer avanserte temaer</a></h5>
-<div class="sect5">
-<h6 id="_git_submodules"><a class="anchor" href="#_git_submodules"></a><a class="link" href="#_git_submodules">Git Submodules</a></h6>
-<div class="paragraph">
-<p>Git Submodules brukes for prosjektarbeid der en ønsker å tildele skriverettigheter til  prosjektmedlemmene, noe som ikke uten videre er tilrådelig for hele arkitekturbiblioteket.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_annet"><a class="anchor" href="#_annet"></a><a class="link" href="#_annet">Annet</a></h6>
-<div class="paragraph">
-<p><span class="image"><img src="./felles//images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span>I arbeid</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_asciidoc"><a class="anchor" href="#_asciidoc"></a><a class="link" href="#_asciidoc">2. Asciidoc</a></h3>
-<div class="paragraph lead">
-<p>Asciidoc er&#8230;&#8203;.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="i-arbeid.png" alt="i arbeid" width="75" height="75"></span> Uferdig innhold</p>
-</div>
-<div class="sect3">
-<h4 id="_om_asciidoc"><a class="anchor" href="#_om_asciidoc"></a><a class="link" href="#_om_asciidoc">2.1. Om Asciidoc</a></h4>
-<div class="paragraph">
-<p>Asciidoc er &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Her er noen kilder til informasjon om Asciidoc:</p>
-</div>
+<h3 id="_hvorfor_modellere"><a class="anchor" href="#_hvorfor_modellere"></a><a class="link" href="#_hvorfor_modellere">3.4. Hvorfor modellere?</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">Asciidoc syntax quick reference</a></p>
+<p>Konsistent dokumentasjon (database, referanseintegritet)</p>
 </li>
 <li>
-<p><a href="https://asciidoctor.org/docs/asciidoc-writers-guide/">Asciidoc Writers Guide</a></p>
+<p>Tilpasning av visninger til ulike interessenter</p>
 </li>
 <li>
-<p><a href="https://asciidoctor.org/docs/user-manual/">Asciidoctor User Manual</a></p>
+<p>Prosesserbar informasjon - automatisering og analyse</p>
+</li>
+<li>
+<p>Se sammenhenger på tvers - direkte og indirekte - hvordan alt henger sammen</p>
+</li>
+<li>
+<p>Ett bilde sier mer enn 1000 ord?</p>
+</li>
+<li>
+<p>Verktøystøtte - tilgangsstyring, versjonsstyring, &#8230;&#8203;</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_tips_om_redigeringsverktøy_for_asciidoc"><a class="anchor" href="#_tips_om_redigeringsverktøy_for_asciidoc"></a><a class="link" href="#_tips_om_redigeringsverktøy_for_asciidoc">2.2. Tips om redigeringsverktøy for Asciidoc</a></h4>
-<div class="paragraph">
-<p>Flere verktøy for editering av Asciidoc finnes. De fleste vil ha nytte av en editor som gir støtte til formatering og gir  forhåndsvisnig av resultatet, men det er også mulig å benytte en ordinær teksteditor som f.eks. Notepad++ eller redigere tekst direkte i netleseren på Github.com.</p>
-</div>
-<div class="paragraph">
-<p>Om du ikke har mulighet til å installere programvare på din maskin og ikke vil vente til du får hjelp av noen med administratorrettigheter, kan du forsøke å arbeide direkte i nettleseren under <a href="https://github.com/difi/nasjonal_arkitektur" class="bare">https://github.com/difi/nasjonal_arkitektur</a> , uten å klone til lokalt filområde. Du kan alternativt bruke asciidoclive; ref. <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a></p>
-</div>
-<div class="paragraph">
-<p>Anbefalt her:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>AsciidocFX fungerer godt for editering av innhold på AsciiDoc-format, og støtter dessuten en rekke andre formater, inkl. Markdown. Last ned AsciidocFX fra
-<a href="https://github.com/asciidocfx/AsciidocFX/releases/" class="bare">https://github.com/asciidocfx/AsciidocFX/releases/</a> og arbeid lokalt etter å ha klonet Github-biblioteket.</p>
-<div class="paragraph">
-<p><em>Merk: Oppstart av AsciidocFX kan ta litt tid, men fungerer ellers meget raskt. Html forhåndsvisning er umiddelbar og nær opp til det endelige resultatet (som Difi genererer med programmet Asciidoctor). Noen mindre bugs finnes, men programmet er i kontinuerlig utvikling.</em></p>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Se også <a href="./asciidoc-fx/main.adoc">mer om AsciidocFX</a>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Du står helt fritt til å bruke andre verktøy om du vil.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_tips_om_skriving_i_asciidoc"><a class="anchor" href="#_tips_om_skriving_i_asciidoc"></a><a class="link" href="#_tips_om_skriving_i_asciidoc">2.3. Tips om skriving i Asciidoc</a></h4>
-<div class="paragraph">
-<p>Du kan gjøre det helt enkelt eller mer eller mindre avansert.</p>
-</div>
-<div class="paragraph">
-<p>Difi har etablert noen maler i tilknytning til arkitekturbiblioteket som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde tekster på flere språk, metadata m.m.</p>
-</div>
-<div class="paragraph">
-<p><span class="red">Disse malene finnes her: &#8230;&#8203;</span></p>
-</div>
-<div class="paragraph">
-<p>Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-<mark>TODO: her kommer det mer info&#8230;&#8203;</mark>
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_praktiske_tips_om_samarbeid_med_archi"><a class="anchor" href="#_praktiske_tips_om_samarbeid_med_archi"></a><a class="link" href="#_praktiske_tips_om_samarbeid_med_archi">3. Praktiske tips om samarbeid med Archi</a></h3>
-<div class="paragraph lead">
-<p>Archi er et gratis og open-source verktøy som støtter Archimate-standarden for arkitekturdokumentasjon, og har tillegg som muliggjør samarbeid rundt felles repository på Github.</p>
+<h3 id="_hva_skal_vi_i_difi_modellere_innledningsvis_refleksjon"><a class="anchor" href="#_hva_skal_vi_i_difi_modellere_innledningsvis_refleksjon"></a><a class="link" href="#_hva_skal_vi_i_difi_modellere_innledningsvis_refleksjon">3.5. Hva skal vi i Difi modellere - innledningsvis refleksjon?</a></h3>
+<div class="paragraph">
+<p>Er nasjonal arkitektur kun overordnet?</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/archi-logo.png" alt="archi logo"></span></p>
+<p>Ref. det enkelte andre land gjør med etablering av "nasjonalt arkitekturbibliotek" som en fellesløsning&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hvorfor_verktøy_innledningsvis"><a class="anchor" href="#_hvorfor_verktøy_innledningsvis"></a><a class="link" href="#_hvorfor_verktøy_innledningsvis">3.6. Hvorfor verktøy (innledningsvis)</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Effektiv input, f.eks. gjennom matriser</p>
+</li>
+<li>
+<p>Generering av grafiske visninger
+Konsistens
+Funksjonalitet&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utvidelser_og_tilpasning_av_archimate"><a class="anchor" href="#_utvidelser_og_tilpasning_av_archimate"></a><a class="link" href="#_utvidelser_og_tilpasning_av_archimate">3.7. Utvidelser og tilpasning av Archimate</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_innledningsvis_om_archimate_vs_andre_standarder"><a class="anchor" href="#_innledningsvis_om_archimate_vs_andre_standarder"></a><a class="link" href="#_innledningsvis_om_archimate_vs_andre_standarder">3.8. Innledningsvis om Archimate vs. andre standarder</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_archimate_og_ea_generelt"><a class="anchor" href="#_archimate_og_ea_generelt"></a><a class="link" href="#_archimate_og_ea_generelt">3.9. Archimate og EA (generelt)</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_tjenesteorientering"><a class="anchor" href="#_tjenesteorientering"></a><a class="link" href="#_tjenesteorientering">3.10. Tjenesteorientering</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_utvalgte_konsepter"><a class="anchor" href="#_utvalgte_konsepter"></a><a class="link" href="#_utvalgte_konsepter">3.11. Utvalgte "konsepter"</a></h3>
+<div class="sect3">
+<h4 id="_prosess_vs_funksjon"><a class="anchor" href="#_prosess_vs_funksjon"></a><a class="link" href="#_prosess_vs_funksjon">3.11.1. Prosess vs. funksjon</a></h4>
+
 </div>
 <div class="sect3">
-<h4 id="_generelt_3"><a class="anchor" href="#_generelt_3"></a><a class="link" href="#_generelt_3">3.1. Generelt</a></h4>
+<h4 id="_retning_på_piler"><a class="anchor" href="#_retning_på_piler"></a><a class="link" href="#_retning_på_piler">3.11.2. Retning på piler:</a></h4>
 <div class="paragraph">
-<p>Et felles Archi-repository for arbeidet med nasjonal arkitektur finnes på Github, her: <a href="https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur" class="bare">https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur</a>.</p>
-</div>
-<div class="paragraph">
-<p>Du behøver ikke skriverettigheter til selve Github-biblioteket, siden du får det gjennom bruk av en "collaboration plugin" i Archi.</p>
+<p><a href="https://bizzdesign.com/blog/archimate-relationships-point-in-the-same-direction-as-the-enterprise/" class="bare">https://bizzdesign.com/blog/archimate-relationships-point-in-the-same-direction-as-the-enterprise/</a></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installer_archi_og_plugin"><a class="anchor" href="#_installer_archi_og_plugin"></a><a class="link" href="#_installer_archi_og_plugin">3.2. Installer Archi og plugin</a></h4>
+<h4 id="_arkitektur_vs_løsning"><a class="anchor" href="#_arkitektur_vs_løsning"></a><a class="link" href="#_arkitektur_vs_løsning">3.11.3. Arkitektur vs. løsning</a></h4>
+<div class="paragraph">
+<p><a href="https://bizzdesign.com/blog/archimate-relationships-point-in-the-same-direction-as-the-enterprise/" class="bare">https://bizzdesign.com/blog/archimate-relationships-point-in-the-same-direction-as-the-enterprise/</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_abstraksjon"><a class="anchor" href="#_abstraksjon"></a><a class="link" href="#_abstraksjon">3.11.4. Abstraksjon</a></h4>
+<div class="sect4">
+<h5 id="_komseptuell_logisk_fysisk"><a class="anchor" href="#_komseptuell_logisk_fysisk"></a><a class="link" href="#_komseptuell_logisk_fysisk">Komseptuell, logisk, fysisk</a></h5>
+<div class="paragraph">
+<p>Ref. Archimate 3.01:</p>
+</div>
+<div class="paragraph">
+<p>+
+A third distinction is between conceptual, logical, and physical abstraction levels. This has its roots in data modeling: conceptual elements represent the information the business finds relevant; logical elements provide logical structure to this information for manipulation by information systems; physical elements describe the storage of this information; for example, in the form of files or database tables. In the ArchiMate language, this corresponds with business objects, data objects, and artifacts, and the realization relationships between them.</p>
+</div>
+<div class="paragraph">
+<p>The distinction between logical and physical elements has also been carried over to the description of applications. The TOGAF Content Metamodel [4] describes logical and physical data, application, and technology components. Logical components are implementation or product-independent encapsulations of data or functionality, whereas physical components are tangible software components, devices, etc. The distinction within the TOGAF framework between Architecture Building Blocks (ABBs) and Solution Building Blocks (SBBs) is very similar. This distinction is again useful in progressing Enterprise Architectures from high-level, abstract descriptions to tangible, implementation-level designs. Note that building blocks may contain multiple elements, which are typically modeled using the grouping notation in the ArchiMate language.</p>
+</div>
+<div class="paragraph">
+<p>The ArchiMate language has <strong><span class="blue">three ways</span></strong> of modeling such abstractions.</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>Last ned og installer Archi</strong></p>
-<div class="paragraph">
-<p>Last ned og installer siste versjon av Archi fra <a href="https://www.archimatetool.com/download/" class="bare">https://www.archimatetool.com/download/</a></p>
-</div>
+<p>First, as described in [6], <strong><span class="blue">behavior elements</span></strong> such as application and technology functions can be used to model <span class="blue">logical components</span>, since they represent implementation-independent encapsulations of functionality. The corresponding <span class="blue">physical components</span> can then be modeled using <strong><span class="blue">active structure elements</span></strong> such as application components and nodes, assigned to the behavior elements.</p>
 </li>
 <li>
-<p><strong>Skaff deg en GitHub-bruker</strong></p>
-<div class="paragraph">
-<p>Du trenger en brukerkonto på GitHub. Dersom du ikke allerede har en GitHub-bruker, kan du skaffe deg det <a href="https://github.com/join?source=header">her</a>.</p>
-</div>
+<p>Second, the ArchiMate language supports the concept of <strong><span class="blue">realization</span></strong>. This can best be described by working with the Technology Layer upwards. The Technology Layer defines the physical artifacts and software that realize an application component. It also provides a mapping to other physical concepts such as devices, networks, etc., needed for the realization of an information system. The realization relationship is also used to model more abstract kinds of realization, such as that between a (more specific) requirement and a (more generic) principle, where fulfillment of the requirement implies adherence to the principle. Realization is also allowed between application components and between nodes. This way you can model a physical application or technology component realizing a logical application or technology component, respectively.</p>
 </li>
 <li>
-<p><strong>Last ned og installer Collaboration Plugin</strong></p>
-<div class="paragraph">
-<p>Last ned og installer Model Repository Collaboration Plugin fra  <a href="https://www.archimatetool.com/plugins/" class="bare">https://www.archimatetool.com/plugins/</a>. Collaboration-menyen skal da komme til syne, slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/collaboration-plugin.png" alt="collaboration plugin" width="450" height="450"></span></p>
-</div>
-</li>
-<li>
-<p><strong>Konfigurer Collaboration Plugin</strong></p>
-<div class="paragraph">
-<p>Sett inn ditt git brukernavn (Name) og e-post (Email), og mappe-navnet (Local Repository Folder) der du ønsker at Archi skal legge filene når du importerer fra "Github-repoet".</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/archi-collaboration-preferences.png" alt="archi collaboration preferences" width="600" height="600"></span></p>
-</div>
-</li>
-<li>
-<p><strong>Eventuell videre konfigurering</strong></p>
-<div class="paragraph">
-<p>Du kan konfigurere dine foretrukne standardfigurer under menyen Edit, Preferences, f.eks. slik:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/preferences-default-figures.png" alt="preferences default figures" width="600" height="600"></span></p>
-</div>
+<p>Third, <em>logical and physical application components can be defined as specializations of the application component element</em>, as described in Chapter 15 (see also the examples in Section 15.2.2). The same holds for the logical and physical technology components of the TOGAF Content Metamodel, which can be defined as specializations of the node element (see Section 15.2.3).</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_instanser"><a class="anchor" href="#_instanser"></a><a class="link" href="#_instanser">3.11.5. Instanser</a></h4>
+<div class="paragraph">
+<p><mark>The ArchiMate language intentionally does not support a difference between types and instances</mark>. At the Enterprise Architecture abstraction level, it is more common to model types and/or exemplars rather than instances. Similarly, a business process in the ArchiMate language does not describe an individual instance (i.e., one execution of that process). In most cases, a business object is therefore used to model an object type (cf. a UML class), of which several instances may exist within the organization. For instance, each execution of an insurance application process may result in a specific instance of the insurance policy business object, but that is not modeled in the Enterprise Architecture.</p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -912,67 +726,159 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 <i class="fa icon-warning" title="Advarsel"></i>
 </td>
 <td class="content">
-Archi har per januar 2019 begrenset funksjonalitet for dette. En har f.eks, ikke noen alternativer for Actor. En kan heller ikke benytte egne symboler.
+Erik: Det kan diskuteres om det er smart å utelukke muligheten til å dokumentere instanser! Det er f.eks. interessant å analysere hvor mange instanser av en applikasjon som finnes, hvor mange brukere som bruker hvilke funksjoner osv. Dette kan selvsagt fanges og analyseres i andre verktøy, men det kan være hensiktsmessig å samle "alt" på en konsistent måte i ett verktøy.
 </td>
 </tr>
 </table>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_importer_github_repository"><a class="anchor" href="#_importer_github_repository"></a><a class="link" href="#_importer_github_repository">3.3. Importer Github-repository</a></h4>
 <div class="paragraph">
-<p>Velg <span class="underline">Import Remote Model to Workspace</span> fra menyen under Collaboration i Archi, og oppgi <a href="https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur" class="bare">https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur</a> som URL og oppgi ditt git brukernavn og passord.</p>
-</div>
-<div class="paragraph">
-<p>Når du klikker OK, vil det bli opprettet en mappe ved navn  <em>archi-collab-nasjonal-arkitektur</em> under den mappen du har satt opp under Preferences (se over).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/add-remote-model.png" alt="add remote model" width="550" height="550"></span></p>
-</div>
-<div class="paragraph">
-<p>Modell-vinduet i Archi vil vise <mark>difi-nasjonal-arkitektur</mark> som modellnavn:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/archi-workspace.png" alt="archi workspace" width="220" height="220"></span></p>
+<p>NOTE:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_endring_og_synkronisering"><a class="anchor" href="#_endring_og_synkronisering"></a><a class="link" href="#_endring_og_synkronisering">3.4. Endring og synkronisering</a></h4>
-<div class="paragraph">
-<p>De endringene du gjør blir ikke synlige for andre før du publiserer endringene dine. Det finnes flere valg i Collaboration-menyen for synkronisering. Tips:</p>
+<h4 id="_derived_connections"><a class="anchor" href="#_derived_connections"></a><a class="link" href="#_derived_connections">3.11.6. Derived connections</a></h4>
+
 </div>
+</div>
+<div class="sect2">
+<h3 id="_mer_om_archimate_vs_andre_standarder"><a class="anchor" href="#_mer_om_archimate_vs_andre_standarder"></a><a class="link" href="#_mer_om_archimate_vs_andre_standarder">3.12. Mer om Archimate vs. andre standarder</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Bruk <span class="underline">Refresh</span> om du bare vil laste ned endringer som andre har gjort (git pull).</p>
+<p>BPMN med Archimate</p>
 </li>
 <li>
-<p><span class="underline">Publish</span> gjør både Refresh, Commit og Publish - alt i ett.</p>
+<p>ER-diagrammer som Archmate + kardinalitet</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_tilpasning_og_utvidelser_extensions"><a class="anchor" href="#_tilpasning_og_utvidelser_extensions"></a><a class="link" href="#_tilpasning_og_utvidelser_extensions">3.13. Tilpasning og utvidelser (extensions)</a></h3>
+<div class="sect3">
+<h4 id="_egne_symboler"><a class="anchor" href="#_egne_symboler"></a><a class="link" href="#_egne_symboler">3.13.1. Egne symboler</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_attributter"><a class="anchor" href="#_attributter"></a><a class="link" href="#_attributter">3.13.2. Attributter</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_spesialiserte_objekter"><a class="anchor" href="#_spesialiserte_objekter"></a><a class="link" href="#_spesialiserte_objekter">3.13.3. Spesialiserte objekter</a></h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modelleringskonvensjoner"><a class="anchor" href="#_modelleringskonvensjoner"></a><a class="link" href="#_modelleringskonvensjoner">3.14. Modelleringskonvensjoner</a></h3>
+<div class="sect3">
+<h4 id="_navnekonvensjoner"><a class="anchor" href="#_navnekonvensjoner"></a><a class="link" href="#_navnekonvensjoner">3.14.1. Navnekonvensjoner</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_tjenesteorientering_2"><a class="anchor" href="#_tjenesteorientering_2"></a><a class="link" href="#_tjenesteorientering_2">3.14.2. Tjenesteorientering</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_attributter_2"><a class="anchor" href="#_attributter_2"></a><a class="link" href="#_attributter_2">3.14.3. Attributter</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_spesielt_om_prosessmodellering"><a class="anchor" href="#_spesielt_om_prosessmodellering"></a><a class="link" href="#_spesielt_om_prosessmodellering">3.14.4. Spesielt om prosessmodellering</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_spesielt_om_datamodellering"><a class="anchor" href="#_spesielt_om_datamodellering"></a><a class="link" href="#_spesielt_om_datamodellering">3.14.5. Spesielt om datamodellering</a></h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eksempler"><a class="anchor" href="#_eksempler"></a><a class="link" href="#_eksempler">3.15. Eksempler</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_viderekommen_bruk"><a class="anchor" href="#_viderekommen_bruk"></a><a class="link" href="#_viderekommen_bruk">3.16. Viderekommen bruk</a></h3>
+<div class="sect3">
+<h4 id="_risk_modeling"><a class="anchor" href="#_risk_modeling"></a><a class="link" href="#_risk_modeling">3.16.1. Risk modeling</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_mer_om_verktøy"><a class="anchor" href="#_mer_om_verktøy"></a><a class="link" href="#_mer_om_verktøy">3.16.2. Mer om verktøy</a></h4>
+
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kilder_til_kunnskap"><a class="anchor" href="#_kilder_til_kunnskap"></a><a class="link" href="#_kilder_til_kunnskap">4. Kilder til kunnskap</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><em>NB: Om flere jobber på de samme modellene samtidig, kan det bli behov for å rydde opp i "merge-operasjoner". Jeg (erikhag1) har opplevd problemer med dette, men er usikker på hvordan det best håndteres. Tips meg om du vet?</em></p>
+<p>Unresolved directive in kurs-del1.adoc - include::kilder-til-kunnskap.adoc[]</p>
+</div>
+<div class="sect3">
+<h4 id="_getting_started"><a class="anchor" href="#_getting_started"></a><a class="link" href="#_getting_started">4.1. Getting started</a></h4>
+<div class="paragraph">
+<p>ArchiMate Tutorial fra Visual Paradigm
+<a href="https://online.visual-paradigm.com/tutorials/archimate-tutorial/" class="bare">https://online.visual-paradigm.com/tutorials/archimate-tutorial/</a></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_andre_tips"><a class="anchor" href="#_andre_tips"></a><a class="link" href="#_andre_tips">3.5. Andre tips</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Collaboration-plugin oppretter en .git undermappe som ikke uten videre er synlig, der det blant annet ligger en <mark>temp.archimate</mark> fil. Det er denne filen som åpnes i Archi når du har importert biblioteket. Nyttig å vite dersom du f.eks. har kommet til å lukke modellen fra workspace i Archi før du har publisert endringene dine! Det er altså bare å åpne denne filen, så kommer den opp i Archi, helt tilsvarende "normale" Archi-filer.</p>
+<h4 id="_om_archimate_standarden_som_sådan"><a class="anchor" href="#_om_archimate_standarden_som_sådan"></a><a class="link" href="#_om_archimate_standarden_som_sådan">4.2. Om Archimate-standarden som sådan</a></h4>
+<div class="sect4">
+<h5 id="_standardspesifikasjonen_fra_the_open_group"><a class="anchor" href="#_standardspesifikasjonen_fra_the_open_group"></a><a class="link" href="#_standardspesifikasjonen_fra_the_open_group">Standardspesifikasjonen fra The Open Group</a></h5>
 <div class="paragraph">
-<p><span class="image"><img src="./images/hidden-git-files.png" alt="hidden git files" width="300" height="300"></span></p>
+<p>Selve standarden finnes online her: <a href="http://pubs.opengroup.org/architecture/archimate3-doc/">ArchiMate® 3.0.1 Specification</a></p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_pocket_guide_fra_the_open_group"><a class="anchor" href="#_pocket_guide_fra_the_open_group"></a><a class="link" href="#_pocket_guide_fra_the_open_group">Pocket guide fra The Open Group</a></h5>
+<div class="paragraph">
+<p>Nedlastbar pdf gratisversjon av <a href="https://www.slideshare.net/pafaxaxaku/free-download-archimate-30-a-pocket-guide-the-open-group-series-book-online?qid=f9f116a7-950d-4785-b731-3f45c071bdf9&amp;v=&amp;b=&amp;from_search=7">ArchiMate 3.0 - A Pocket Guide</a>. Merk: Siste versjon av A Pocket Guide to the ArchiMate® 3.0.1 Specification (PDF) kan eventuelt kjøpes <a href="https://shop.opengroup.org/g163">her</a> (men det er ikke store forskjeller).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bok_mastering_archimate"><a class="anchor" href="#_bok_mastering_archimate"></a><a class="link" href="#_bok_mastering_archimate">Bok: Mastering Archimate</a></h5>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_noen_interessante_anvendelser_av_archimate"><a class="anchor" href="#_noen_interessante_anvendelser_av_archimate"></a><a class="link" href="#_noen_interessante_anvendelser_av_archimate">4.3. Noen interessante anvendelser av Archimate</a></h4>
+<div class="sect4">
+<h5 id="_technology_base_reference_models_for_open_platform_3_0"><a class="anchor" href="#_technology_base_reference_models_for_open_platform_3_0"></a><a class="link" href="#_technology_base_reference_models_for_open_platform_3_0">Technology Base Reference Models for Open Platform 3.0™</a></h5>
+<div class="paragraph">
+<p>The Open Group utga i 2017 en standard ved navn <em>Technology Base Reference Models for Open Platform 3.0™</em>.</p>
+</div>
+<div class="paragraph">
+<p>Standarden sier: "It specifies basic architecture models in which platforms interact with each other and with other system components."</p>
+</div>
+<div class="paragraph">
+<p>Ressurser:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://1drv.ms/b/s!Ao0VyYhs1XdLhc0J9VFSjTVqOvu_1g">PDF-versjon av Technology Base Reference Models for Open Platform 3.0™</a></p>
 </li>
-</ul>
+<li>
+<p><a href="http://www.opengroup.org/openplatform3.0/op3-snapshot/p6.htm">Online utdrag av standarden, med Archimate-modellene</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_eira"><a class="anchor" href="#_eira"></a><a class="link" href="#_eira">EIRA</a></h5>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Siste oppdatert 2019-01-09 17:29:47 Vest-Europa (normaltid)
+Siste oppdatert 2019-01-09 17:51:58 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

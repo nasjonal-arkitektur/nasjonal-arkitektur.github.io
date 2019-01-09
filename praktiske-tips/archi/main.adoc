@@ -28,10 +28,13 @@ Du behøver ikke skriverettigheter til selve Github-biblioteket, siden du får d
 +
 Last ned og installer siste versjon av Archi fra https://www.archimatetool.com/download/
 
+2. *Skaff deg en GitHub-bruker*
++
+Du trenger en brukerkonto på GitHub. Dersom du ikke allerede har en GitHub-bruker, kan du skaffe deg det https://github.com/join?source=header[her].
 
 2. *Last ned og installer Collaboration Plugin*
 +
-Last ned og installer Model Repository Collaboration Plugin fra  https://www.archimatetool.com/plugins/. Collaboration-menyen skal da komem til syne, slik: 
+Last ned og installer Model Repository Collaboration Plugin fra  https://www.archimatetool.com/plugins/. Collaboration-menyen skal da komme til syne, slik: 
 +
 image:collaboration-plugin.png[width=450, height=450]
 +
@@ -42,6 +45,13 @@ Sett inn ditt git brukernavn (Name) og e-post (Email), og mappe-navnet (Local Re
 +
 image:archi-collaboration-preferences.png[width=600, height=600]
 
+4. *Eventuell videre konfigurering*
++
+Du kan konfigurere dine foretrukne standardfigurer under menyen Edit, Preferences, f.eks. slik:
++
+image:preferences-default-figures.png[width=600, height=600]
+
+WARNING: Archi har per januar 2019 begrenset funksjonalitet for dette. En har f.eks, ikke noen alternativer for Actor. En kan heller ikke benytte egne symboler.
 
 == Importer Github-repository
 Velg [underline]#Import Remote Model to Workspace# fra menyen under Collaboration i Archi, og oppgi https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur som URL og oppgi ditt git brukernavn og passord.

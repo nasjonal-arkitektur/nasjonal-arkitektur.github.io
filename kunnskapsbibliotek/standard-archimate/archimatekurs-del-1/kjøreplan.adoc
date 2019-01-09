@@ -1,0 +1,42 @@
+:lang: no
+:doctitle: Kjøreplan for kurset
+
+include::../felles/includes/commonincludes.adoc[]
+
+[.lead]
+
+
+:imagesdir!:
+
+
+
+. Runde rundt bordet (30 min)
++
+    Bakgrunn, erfaring, ønsker, forventninger
+
+. Introduksjon til Archimate (40 min) 
++
+    Hva er Archinate? Hvorfor modellere? 
+
+. Installer og kom i gang med Archi
++
+    Archi er et gratisverktøy for Archimate-modellering - ikke perfekt, men det er i utstrakt bruk. Se link:https://nasjonal-arkitektur.github.io/praktiske-tips/#_opprett_github_bruker[] og 
+    
+
+. Mer om verktøy
++
+
+    
+. Mer om utvalget temaer
+
+. 
+
+
+
+
+
+
+
+
+
+

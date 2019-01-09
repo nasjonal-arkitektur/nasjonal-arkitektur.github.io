@@ -80,3 +80,22 @@
 09.01.2019 11:31:57: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Metode\Steg4.adoc)
 09.01.2019 11:32:56: GenerateHtml
 09.01.2019 11:32:56: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\main.adoc)
+09.01.2019 12:11:29: GenerateHtml
+09.01.2019 12:11:29: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\main.adoc)
+09.01.2019 12:11:29: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\main.adoc)
+09.01.2019 12:19:13: GenerateHtml
+09.01.2019 12:19:13: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\main.adoc)
+09.01.2019 12:25:24: GenerateHtml
+09.01.2019 12:25:24: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\main.adoc)
+09.01.2019 12:33:36: GenerateHtml
+09.01.2019 12:33:36: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\main.adoc)
+09.01.2019 20:00:09: GenerateHtml
+09.01.2019 20:00:09: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\delmemain.adoc)
+09.01.2019 20:00:09: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\kjøreplan.adoc)
+09.01.2019 20:00:09: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\kurs-del1 – Kopi – Kopi.adoc)
+09.01.2019 20:00:09: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\kurs-del1.adoc)
+09.01.2019 20:00:09: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\main.adoc)
+09.01.2019 20:00:09: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\praktiske-øvelser.adoc)
+09.01.2019 20:00:09: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\temaer.adoc)
+09.01.2019 20:00:09: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\praktiske-tips\main.adoc)
+09.01.2019 20:00:09: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\praktiske-tips\archi\main.adoc)

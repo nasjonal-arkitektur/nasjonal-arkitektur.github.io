@@ -25,6 +25,16 @@ image:./images/archimate-logo.jpg[width= 200]
 
 == Kursplan
 
+1. Runde rundt bordet – ønsker og forventninger
+
+2. Introduksjon til Archimate og relaterte temaer
+
+3. Om verktøy
+
+4. Installer og kom i gang med et gratisverktøy (Archi)
+
+5. 
+
 == Temaer
 
 === Hva er Archimate?

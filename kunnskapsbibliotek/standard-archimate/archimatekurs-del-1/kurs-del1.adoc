@@ -1,0 +1,188 @@
+:lang: no
+:doctitle: Archimate-kurs del 1 
+:keywords: kurs, standard, modellering
+
+include::../felles/includes/commonincludes.adoc[]
+
+
+[.lead]
+The ArchiMate S...
+
+
+:imagesdir!:
+image:./felles/images/i-arbeid.png[width=75, height=75] Første versjon av denne omtalen er fremdeles i arbeid 
+
+:imagesdir!:
+
+
+image:./images/archimate-logo.jpg[width= 200]
+////
+////
+
+== Målgrupper og formål
+* Arkitekter: Lær å modellere med Archimate
+* Andre: Lær å lese Archimate-modeller 
+
+== Kursplan
+
+1. Runde rundt bordet – ønsker og forventninger
+
+2. Introduksjon til Archimate og relaterte temaer
+
+3. Om verktøy
+
+4. Installer og kom i gang med et gratisverktøy (Archi)
+
+5. 
+
+== Temaer
+
+=== Hva er Archimate?
+The ArchiMate Specification, an Open Group Standard, is an open and independent modeling language for Enterprise Architecture that is supported by different tool vendors and consulting firms. The ArchiMate language enables Enterprise Architects to describe, analyze, and visualize the relationships among architecture domains in an unambiguous way.
+
+* Grafiske modeller
+* Kataloger
+
+=== Er Archimate vanskeligere enn andre modellspråk og notasjoner?
+Nei, ikke egenlig... i alle fall ikke dersom en er bevisst og bruker verktøy som hjelper til med å forenkle modeller og grafikk!
+
+=== Er det begrensninger i Archimate?
+Arhimate-standarden er innrettet på å dekke 80% av behovet for (virksomhets-)arkitekter, men kan med noe verktøystøtte utvides og skreddersys til å dekke mye mer.
+
+NOTE: På Entercard ble det tilrettelagt for å bruke egne utvidelser av Archimate også til datamodellering, løsningsdesign,  risikomodellering, infrastruktur, kompetansestyring, begrepsdefinisjoner, m.m. 
+
+
+=== Hvorfor modellere?
+* Konsistent dokumentasjon (database, referanseintegritet)
+* Tilpasning av visninger til ulike interessenter
+* Prosesserbar informasjon - automatisering og analyse
+* Se sammenhenger på tvers - direkte og indirekte - hvordan alt henger sammen
+* Ett bilde sier mer enn 1000 ord?
+* Verktøystøtte - tilgangsstyring, versjonsstyring, ...
+
+=== Hva skal vi i Difi modellere - innledningsvis refleksjon?
+Er nasjonal arkitektur kun overordnet?
+
+Ref. det enkelte andre land gjør med etablering av "nasjonalt arkitekturbibliotek" som en fellesløsning...
+
+=== Hvorfor verktøy (innledningsvis)
+* Effektiv input, f.eks. gjennom matriser
+* Generering av grafiske visninger
+Konsistens
+Funksjonalitet...
+
+=== Utvidelser og tilpasning av Archimate
+
+=== Innledningsvis om Archimate vs. andre standarder
+
+=== Archimate og EA (generelt)
+
+=== Tjenesteorientering
+
+=== Utvalgte "konsepter"
+==== Prosess vs. funksjon
+
+==== Retning på piler:
+https://bizzdesign.com/blog/archimate-relationships-point-in-the-same-direction-as-the-enterprise/
+
+==== Arkitektur vs. løsning
+https://bizzdesign.com/blog/archimate-relationships-point-in-the-same-direction-as-the-enterprise/
+
+
+==== Abstraksjon
+
+===== Komseptuell, logisk, fysisk
+Ref. Archimate 3.01:
++       
+A third distinction is between conceptual, logical, and physical abstraction levels. This has its roots in data modeling: conceptual elements represent the information the business finds relevant; logical elements provide logical structure to this information for manipulation by information systems; physical elements describe the storage of this information; for example, in the form of files or database tables. In the ArchiMate language, this corresponds with business objects, data objects, and artifacts, and the realization relationships between them.
+
+The distinction between logical and physical elements has also been carried over to the description of applications. The TOGAF Content Metamodel [4] describes logical and physical data, application, and technology components. Logical components are implementation or product-independent encapsulations of data or functionality, whereas physical components are tangible software components, devices, etc. The distinction within the TOGAF framework between Architecture Building Blocks (ABBs) and Solution Building Blocks (SBBs) is very similar. This distinction is again useful in progressing Enterprise Architectures from high-level, abstract descriptions to tangible, implementation-level designs. Note that building blocks may contain multiple elements, which are typically modeled using the grouping notation in the ArchiMate language.
+
+The ArchiMate language has *[blue]#three ways#* of modeling such abstractions. 
+
+1. First, as described in [6], *[blue]#behavior elements#* such as application and technology functions can be used to model [blue]#logical components#, since they represent implementation-independent encapsulations of functionality. The corresponding [blue]#physical components# can then be modeled using *[blue]#active structure elements#* such as application components and nodes, assigned to the behavior elements. 
+
+2. Second, the ArchiMate language supports the concept of **[blue]#realization#**. This can best be described by working with the Technology Layer upwards. The Technology Layer defines the physical artifacts and software that realize an application component. It also provides a mapping to other physical concepts such as devices, networks, etc., needed for the realization of an information system. The realization relationship is also used to model more abstract kinds of realization, such as that between a (more specific) requirement and a (more generic) principle, where fulfillment of the requirement implies adherence to the principle. Realization is also allowed between application components and between nodes. This way you can model a physical application or technology component realizing a logical application or technology component, respectively. 
+
+3. Third, __logical and physical application components can be defined as specializations of the application component element__, as described in Chapter 15 (see also the examples in Section 15.2.2). The same holds for the logical and physical technology components of the TOGAF Content Metamodel, which can be defined as specializations of the node element (see Section 15.2.3).
+
+
+==== Instanser
+#The ArchiMate language intentionally does not support a difference between types and instances#. At the Enterprise Architecture abstraction level, it is more common to model types and/or exemplars rather than instances. Similarly, a business process in the ArchiMate language does not describe an individual instance (i.e., one execution of that process). In most cases, a business object is therefore used to model an object type (cf. a UML class), of which several instances may exist within the organization. For instance, each execution of an insurance application process may result in a specific instance of the insurance policy business object, but that is not modeled in the Enterprise Architecture.
+
+WARNING: Erik: Det kan diskuteres om det er smart å utelukke muligheten til å dokumentere instanser! Det er f.eks. interessant å analysere hvor mange instanser av en applikasjon som finnes, hvor mange brukere som bruker hvilke funksjoner osv. Dette kan selvsagt fanges og analyseres i andre verktøy, men det kan være hensiktsmessig å samle "alt" på en konsistent måte i ett verktøy. 
+
+NOTE: 
+
+==== Derived connections
+
+
+
+=== Mer om Archimate vs. andre standarder
+
+* BPMN med Archimate
+* ER-diagrammer som Archmate + kardinalitet
+
+=== Tilpasning og utvidelser (extensions)
+==== Egne symboler
+==== Attributter
+==== Spesialiserte objekter
+
+=== Modelleringskonvensjoner
+==== Navnekonvensjoner
+==== Tjenesteorientering
+==== Attributter
+==== Spesielt om prosessmodellering
+==== Spesielt om datamodellering
+
+=== Eksempler
+
+
+=== Viderekommen bruk
+==== Risk modeling
+
+==== Mer om verktøy
+
+== Kilder til kunnskap
+
+:leveloffset: +1
+include::kilder-til-kunnskap.adoc[]
+
+
+
+=== Getting started
+ArchiMate Tutorial fra Visual Paradigm
+https://online.visual-paradigm.com/tutorials/archimate-tutorial/
+
+=== Om Archimate-standarden som sådan
+==== Standardspesifikasjonen fra The Open Group
+Selve standarden finnes online her: link:http://pubs.opengroup.org/architecture/archimate3-doc/[ArchiMate® 3.0.1 Specification]
+
+==== Pocket guide fra The Open Group
+Nedlastbar pdf gratisversjon av link:https://www.slideshare.net/pafaxaxaku/free-download-archimate-30-a-pocket-guide-the-open-group-series-book-online?qid=f9f116a7-950d-4785-b731-3f45c071bdf9&v=&b=&from_search=7[ArchiMate 3.0 - A Pocket Guide]. Merk: Siste versjon av A Pocket Guide to the ArchiMate® 3.0.1 Specification (PDF) kan eventuelt kjøpes link:https://shop.opengroup.org/g163[her] (men det er ikke store forskjeller).
+
+==== Bok: Mastering Archimate
+...
+
+=== Noen interessante anvendelser av Archimate
+
+==== Technology Base Reference Models for Open Platform 3.0™
+The Open Group utga i 2017 en standard ved navn __Technology Base Reference Models for Open Platform 3.0™__.
+
+Standarden sier: "It specifies basic architecture models in which platforms interact with each other and with other system components."
+
+Ressurser:
+
+. link:https://1drv.ms/b/s!Ao0VyYhs1XdLhc0J9VFSjTVqOvu_1g[PDF-versjon av Technology Base Reference Models for Open Platform 3.0™]
+
+. link:http://www.opengroup.org/openplatform3.0/op3-snapshot/p6.htm[Online utdrag av standarden, med Archimate-modellene].
+
+==== EIRA
+...
+
+
+
+
+
+
+

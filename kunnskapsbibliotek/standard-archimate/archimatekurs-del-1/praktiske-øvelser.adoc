@@ -1,0 +1,47 @@
+:lang: no
+:doctitle: Praktiske øvelser
+
+include::../felles/includes/commonincludes.adoc[]
+
+[.lead]
+
+
+:imagesdir!:
+
+
+
+1. Installer Archi og Collaboration plugin.
++
+    Se link:https://nasjonal-arkitektur.github.io/praktiske-tips/#_installer_archi_og_plugin[].
++
+    Refleksjon: Bør oppskriften forbedres?
+
+2. Importer     
+    
+2. Tilpass Default Figures under Preferences
++
+    Se link:https://nasjonal-arkitektur.github.io/praktiske-tips/#_installer_archi_og_plugin[].
++
+    Refleksjon: Ønsker du deg andre figurer?
+    
+2. Modeller "Hei verden" - dvs. deg selv i verden.
++
+    Ta med minst følgende tre objekter og knytt disse sammen på en måte som du selv velger: Verden, Difi og deg. Hvilke Archimate-konsepter og relasjoner passer? Ta eventuelt med flere konsepter og relasjoner som beskriver deg i forhold til resten av verden om du ligger foran i løypa.
++
+    Refleksjon: Hva var vanskelig?
+
+3. Modeller (deler av) Difis organisasjonskart.
++
+    Se link:http://intranett.difi.local/om-difi/organisasjonen/organisasjonskart-difi[organisasjonskartet på intranettet].
+
+4. Modeller (deler av) Difis fellesløsninger
++
+    Lag en modell med 
+
+
+
+
+
+
+
+

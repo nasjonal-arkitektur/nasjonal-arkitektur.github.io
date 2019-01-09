@@ -1,0 +1,32 @@
+:lang: no
+:doctitle: Archimate-kurs del 1 
+:keywords: kurs, standard, modellering
+
+include::./felles/includes/commonincludes.adoc[]
+
+
+[.lead]
+The ArchiMate S...
+
+
+:imagesdir!:
+image:./felles/images/i-arbeid.png[width=75, height=75] Første versjon av denne omtalen er fremdeles i arbeid 
+
+:imagesdir!:
+
+
+image:./images/archimate-logo.jpg[width= 200]
+////
+////
+
+== Målgrupper og formål
+* Arkitekter: Lær å modellere med Archimate
+* Andre: Lær å lese Archimate-modeller 
+
+== Kjøreplan
+include::./kjøreplan.adoc[Kjøreplan]
+
+== Temaer
+include::./kjøreplan.adoc[Kjøreplan]
+
+
