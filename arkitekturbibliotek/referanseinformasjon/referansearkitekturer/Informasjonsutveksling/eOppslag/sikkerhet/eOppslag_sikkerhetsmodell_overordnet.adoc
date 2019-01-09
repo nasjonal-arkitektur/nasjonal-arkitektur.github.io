@@ -4,11 +4,9 @@
 :doctitle_no: Overordnet innføring i sikkerhetsmekanismer for eOppslag
 :keywords: eOppslag sikkerhet autentisering
 
-ifndef::standardheader_included[]
-include::../felles/includes/standardheader.adoc[]
-endif::[]
+include::./felles/includes/commonincludes.adoc[]
 
-= Overordnet innføring i sikkerhetsmekanismer for eOppslag
+
 == Overordnede mål
 
 Sikkerhetsarkitekturen for eOppslag er laget med tanke på å nå følgende overordnede målsetninger:

@@ -27,25 +27,27 @@ include::./Metode/main.adoc[]
 :leveloffset: +1
 include::./Brukstilfeller/Samhandlingsmønstre.adoc[]
 
+:leveloffset: -1
 
-:leveloffset!:
-== Spesifikke referansearkitekurer
-
-=== Informasjonssikkerhet (felles)
+== Informasjonssikkerhet (felles)
 Kommer.
 
-:leveloffset!:
+== Spesifikke referansearkitekurer
+
+
+
 === eOppslag
 :leveloffset: +2
 include::./Informasjonsutveksling/eOppslag/eOppslag-Referansearkitektur.adoc[]
 
+////
 :leveloffset: +1
 include::./Informasjonsutveksling/eOppslag/Informasjonssikkerhet_eoppslag/README.adoc[]
 :leveloffset: +1
 include::./Informasjonsutveksling/eOppslag/Informasjonssikkerhet_eoppslag/eOppslag_sikkerhetsmodell_overordnet.adoc[]
 
 include::./Informasjonsutveksling/eOppslag/Informasjonssikkerhet_eoppslag/20180629 eoppslag autorisering og delegering.adoc[]
-
+////
 
 
 

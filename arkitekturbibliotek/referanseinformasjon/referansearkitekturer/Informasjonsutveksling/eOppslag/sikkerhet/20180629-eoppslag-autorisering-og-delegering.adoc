@@ -4,11 +4,7 @@
 :doctitle: e-oppslag, modell for autorisering og delegering
 :keywords: eOppslag sikkerhet autentisering
 
-ifndef::standardheader_included[]
-include::../felles/includes/standardheader.adoc[]
-endif::[]
-
-= eOppslag, modell for autorisering og delegering
+include::./felles/includes/commonincludes.adoc[]
 
 == Innledning
 

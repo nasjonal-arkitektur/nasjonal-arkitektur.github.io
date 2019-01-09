@@ -1,9 +1,8 @@
 :lang: no
-:keywords: eOppslag
-ifndef::standardheader_included[]
 :doctitle: Referansearkitektur eOppslag 
-include::../felles/includes/standardheader.adoc[]
-endif::[]
+:keywords: eOppslag
+
+include::./felles/includes/commonincludes.adoc[]
 
 image:eOppslagRefArk.png[alt="missing image, eOppslag Referanse arkitektur"]
  
@@ -186,6 +185,14 @@ Også kjent som: RPC-stil
  * (evt. WS/SOAP)
  * Hvis mulig som direkte integrajon, ellers ved bruk av en integrasjonsproxy (som f.eks. AltInn Innsynstjeneste/mapper)
 
+////
+////
+
+== Sikkerhet, eOppslag
+
+. link:./sikkerhet/eOppslag_sikkerhetsmodell_overordnet.adoc[Overordnet innføring i sikkerhetsmekanismer for eOppslag]
+
+. link:./sikkerhet/20180629-eoppslag-autorisering-og-delegering.adoc[Modell for autorisering og delegering - eOppslag]
 
 
 
