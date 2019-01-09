@@ -62,14 +62,14 @@ Terskelen for å publisere innhold skal ikke være for høy. Eksempler og praksi
 
 ////
 
-Oppbyggingen av dette arkitekturbiblioteket følger i grove trekk strukturen som angitt i TOGAF og Nasjonalt rammverk for samhandlingsarkitektur (NIF):
+Oppbyggingen av dette arkitekturbiblioteket følger i grove trekk strukturen som angitt i link:http://pubs.opengroup.org/architecture/togaf9-doc/arch/[TOGAF 9.2] og link:https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/arkitekturrammeverk-samhandling[Norsk arkitekturrammeverk for samhandling]:
 
 . link:./rammeverk/[Overordnet rammeverk]
 . link:./arkitekturlandskap/[Arkitekturlandskap]
 . link:./løsningslandskap/[Løsningslandskap]
 . link:./standarder/[Standarder]
-. link:./kravbibliotek/[Kravbibliotek]
-. link:./referanseinformasjon/[Referansebibliotek]
+. link:./kravbibliotek/[Funksjonelle behov]
+. link:./referanseinformasjon/[Referanseinformasjon]
 . link:./organisering-og-kompetanse/[Organisering og kompetanse]
 . link:./styring-og-oppfølging/[Styring og oppfølging]
 
