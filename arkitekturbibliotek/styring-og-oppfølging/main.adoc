@@ -1,4 +1,11 @@
-= Styring og oppfølging
+:lang: no
+:doctitle: Styring og oppfølging
+:keywords: Referansebibliotek
+
+
+include::./felles/includes/commonincludes.adoc[]
+
+WARNING: Teksten nedenfor er generell og må tilpasses nasjonalt arkitekturbibliotek! 
 
 Hovedhensikten med styring og oppfølging er å levere drivkraft knyttet til samhandling ved å:
 

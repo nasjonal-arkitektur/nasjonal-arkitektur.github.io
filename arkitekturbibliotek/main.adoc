@@ -6,7 +6,7 @@
 include::./felles/includes/commonincludes.adoc[]
 
 :imagesdir!:
-:imagesdir: ./images
+
 [.lead]
 Arkitekturdokumentasjon - modeller, standarder, referansearkitekturer, veiledninger, anbefalinger, tips, maler og annet av  interesse på tvers av offentlig (og privat) sektor i Norge
 
@@ -34,7 +34,7 @@ image:difilogo.svg[image,width=169,height=66]
 ==============
 ////
 
-image:i-arbeid.png[width=75, height=75] I arbeid... innholdsfortegnelsen er ikke komplett!
+image:./felles/images/i-arbeid.png[width=75, height=75] I arbeid... innholdsfortegnelsen er ikke komplett!
 
 == Introduksjon
 === Bakgrunn og formål
@@ -92,34 +92,30 @@ include::./rammeverk/main.adoc[]
 
 include::./arkitekturlandskap/main.adoc[]
 
-:leveloffset!:
+
 == Løsningslandskap
 :leveloffset: +1
 include::./løsningslandskap/main.adoc[]
 
-:leveloffset!:
+:leveloffset: -1
 == Standarder
-:leveloffset: +1
 include::./standarder/main.adoc[]
 
-:leveloffset!:
 == Kravbibliotek
 :leveloffset: +1
 include::./kravbibliotek/main.adoc[]
 
-:leveloffset!:
+:leveloffset: -1
 == Referansebibliotek
 :leveloffset: +1
 include::./referanseinformasjon/main.adoc[]
 
-:leveloffset!:
 == Organisering og kompetanse
 :leveloffset: +1
 include::./organisering-og-kompetanse/main.adoc[]
 
-:leveloffset!:
+:leveloffset: -1
 == Styring og oppfølging
-:leveloffset: +1
 include::./styring-og-oppfølging/main.adoc[]
 
 

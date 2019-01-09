@@ -1,5 +1,11 @@
-= Gjennomføring - gjennomføringsevne og kompetanse
+:lang: no
+:doctitle: Organisering og kompetanse
+:keywords: Referansebibliotek
 
+
+include::./felles/includes/commonincludes.adoc[]
+
+[.lead]
 Strukturer og prosesser  for å styre arkitekturarbeidet. 
 
 Her oppbevares bakgrunnsmateriale som er kilde til krav og endringsaktiviteter. Her oppbevares også arkitekturmandatet (og charteret) som beskriver mål, virkemidler og planer for arkitekturarbeidet.

@@ -35,26 +35,13 @@ Kommer.
 == Spesifikke referansearkitekurer
 
 
+=== eMelding
+Kommer.
+
+=== eNotifikasjon
+Kommer.
 
 === eOppslag
 :leveloffset: +2
 include::./Informasjonsutveksling/eOppslag/eOppslag-Referansearkitektur.adoc[]
 
-////
-:leveloffset: +1
-include::./Informasjonsutveksling/eOppslag/Informasjonssikkerhet_eoppslag/README.adoc[]
-:leveloffset: +1
-include::./Informasjonsutveksling/eOppslag/Informasjonssikkerhet_eoppslag/eOppslag_sikkerhetsmodell_overordnet.adoc[]
-
-include::./Informasjonsutveksling/eOppslag/Informasjonssikkerhet_eoppslag/20180629 eoppslag autorisering og delegering.adoc[]
-////
-
-
-
-:leveloffset!:
-=== eMelding
-Kommer.
-
-:leveloffset!:
-=== eNotifikasjon
-Kommer.

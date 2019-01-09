@@ -66,3 +66,8 @@
 09.01.2019 03:57:45: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Informasjonsutveksling\eOppslag\sikkerhet\20180629-eoppslag-autorisering-og-delegering.adoc)
 09.01.2019 03:57:45: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Informasjonsutveksling\eOppslag\sikkerhet\eOppslag_sikkerhetsmodell_overordnet.adoc)
 09.01.2019 03:57:45: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\main.adoc)
+09.01.2019 04:17:19: GenerateHtml
+09.01.2019 04:17:19: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\main.adoc)
+09.01.2019 04:17:19: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\organisering-og-kompetanse\main.adoc)
+09.01.2019 04:17:19: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\main.adoc)
+09.01.2019 04:17:19: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\styring-og-oppfølging\main.adoc)
