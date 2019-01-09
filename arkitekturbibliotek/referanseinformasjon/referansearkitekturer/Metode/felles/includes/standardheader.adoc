@@ -91,7 +91,8 @@ endif::[]
 :sectanchors:
 :sectnumlevels: 3
 :xrefstyle: short
-:imagesdir: ..//felles/images
+:imagesdir!:
+//:imagesdir: ..//felles/images
 ////
 ifdef::attr-root-dir[]
 :imagesdir: ./common/images

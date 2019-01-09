@@ -71,3 +71,4 @@
 09.01.2019 04:17:19: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\organisering-og-kompetanse\main.adoc)
 09.01.2019 04:17:19: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\main.adoc)
 09.01.2019 04:17:19: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\styring-og-oppfølging\main.adoc)
+09.01.2019 11:27:54: GenerateHtml
