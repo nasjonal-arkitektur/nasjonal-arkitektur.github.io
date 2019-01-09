@@ -2,7 +2,7 @@
 :doctitle: Praktiske tips for å komme igang med GitHub
 :keywords: Github
 
-include::./felles/includes/standardheader.adoc[]
+include::./felles/includes/commonincludes.adoc[]
 
 [.lead]
 Her gis praktiske tips om bruk av Github i tilknytning til arbeidet med Nasjonal arkitektur. Det gis tips om spesifikke verktøy, men hver enkelt står fritt til å velge andre alternativer.
@@ -15,11 +15,7 @@ image:./felles//images/i-arbeid.png[width=75, height=75]  Omstrukturering og til
 ////
 
 
-// **** Variabler for dette dokumentet ****
 
-// ****************
-
-:numbered:
 == Generelt
 Git er en standard for versjonskontroll og lagring av kode og dokumenter. GitHub er en av flere skytjenester som støtter git, og er den tjenesten som er valgt av Difi. Det er i utgangspunktet gratisversjonen av Github som benyttes. 
 

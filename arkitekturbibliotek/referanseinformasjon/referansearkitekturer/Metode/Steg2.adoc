@@ -1,7 +1,8 @@
 :lang: no
 :doctitle: Steg 2 - Identifisere samhandlingsmønstre
 :keywords: Metodikk
-include::./felles/includes/standardheader.adoc[]
+
+include::./felles/includes/commonincludes.adoc[]
 
 :imagesdir!:
 :imagesdir: ./images

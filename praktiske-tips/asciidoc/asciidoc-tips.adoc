@@ -2,10 +2,7 @@
 :doctitle: Praktiske tips om Asciidoc for å redigere dokumenter
 :keywords: Asciidoc
 
-ifndef::standardheader_included[]
-include::../felles/includes/standardheader.adoc[]
-endif::[]
-
+include::./felles/includes/commonincludes.adoc[]
 
 [.lead]
 Asciidoc er....

@@ -3,7 +3,7 @@
 :keywords: Norsk, arkitekturbibliotek, offenlig sektor, virksomhetsarkitektur, NIF, samhandlingsarkitektur, rammeverk, Referansearkitekturer
 :preamble: Det arbeides per 2018 med å ta fram prioriterte nasjonale referansearkitekturer for  samhandling, som et samarbeid mellom Difi og flere andre offentlige virksomheter. Den dokumentasjonen du finner her nå, er fremdeles pågående arbeid i tidlig fase.
 
-include::./felles/includes/standardheader.adoc[]
+include::./felles/includes/commonincludes.adoc[]
 
 
 :imagesdir!:
