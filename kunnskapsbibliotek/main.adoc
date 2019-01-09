@@ -46,7 +46,7 @@ Se link:./metode_siam[Service Integration and Management (SIAM)].
 Tips om spesielt relevante og interessante bøker for virksomhetsarkitekter og andre roller i arbeidet med nasjonal arkitektur.  
 
 === Data Management Body of Knowledge (DMBOK2)
-link:./dmbok2[2017: Data Management Body of Knowledge (DMBOK2)] er et omfattende og sterkt verk om data- og informasjonsforvaltning fra DAMA, utarbeidet av mange spesialister over flere år. Se også  link:./navigating-the-labyrinth[Navigating the Labyrinth: An Executive Guide to Data Management (2018)], som er en  forkortet og forenklet framstilling av den større og mer kompliserte DMBOK2. 
+link:./bok-dmbok2[2017: Data Management Body of Knowledge (DMBOK2)] er et omfattende og sterkt verk om data- og informasjonsforvaltning fra DAMA, utarbeidet av mange spesialister over flere år. Se også  link:./bok-navigating-the-labyrinth[Navigating the Labyrinth: An Executive Guide to Data Management (2018)], som er en  forkortet og forenklet framstilling av den større og mer kompliserte DMBOK2. 
 
 === The Information Management Body of Knowledge (IMBOK)
 Se http://www.imbok.info/.

@@ -57,3 +57,5 @@
 09.01.2019 02:59:25: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Metode\Steg4.adoc)
 09.01.2019 02:59:25: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\referanseinformasjon\referansearkitekturer\Strategisk_tilnærming\main.adoc)
 09.01.2019 02:59:25: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\standarder\main.adoc)
+09.01.2019 03:08:30: GenerateHtml
+09.01.2019 03:08:30: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\main.adoc)
