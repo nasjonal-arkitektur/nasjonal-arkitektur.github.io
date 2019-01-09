@@ -2,7 +2,7 @@
 :doctitle: Praktiske tips om samarbeid med Archi
 :keywords: Archi
 
-include::./felles/includes/standardheader.adoc[]
+include::./felles/includes/commonincludes.adoc[]
 
 :imagesdir!:
 

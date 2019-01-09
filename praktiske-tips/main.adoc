@@ -14,22 +14,24 @@ image:./felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold
 ////
 ////
 
-== Introduksjon 
-...
-
-
 :leveloffset!:
 :leveloffset: +1
 
+== Praktiske tips for å komme igang med GitHub
+:leveloffset: +1
 include::./github/main.adoc[]
 
 :leveloffset!:
+:leveloffset: +1
+== Asciidoc
 :leveloffset: +1
 include::./asciidoc/asciidoc-tips.adoc[]
 
 :leveloffset!:
 :leveloffset: +1
-include::./archi/archi-tips.adoc[]
+== Praktiske tips om samarbeid med Archi
+:leveloffset: +1
+include::./archi/main.adoc[]
 
 
 

@@ -40,3 +40,6 @@
 09.01.2019 01:21:48: GenerateHtml
 09.01.2019 01:21:48: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\praktiske-tips\main.adoc)
 09.01.2019 01:21:48: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\praktiske-tips\archi\archi-tips.adoc)
+09.01.2019 01:36:44: GenerateHtml
+09.01.2019 01:36:44: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\praktiske-tips\main.adoc)
+09.01.2019 01:36:44: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\praktiske-tips\archi\main.adoc)
