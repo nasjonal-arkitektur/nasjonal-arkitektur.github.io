@@ -28,7 +28,6 @@ include::./github/main.adoc[]
 include::./asciidoc/asciidoc-tips.adoc[]
 
 :leveloffset!:
-== Praktiske tips om samarbeid med Archi for Archimate-modellering
 :leveloffset: +1
 include::./archi/archi-tips.adoc[]
 

@@ -1,10 +1,10 @@
 :lang: no
 :doctitle: Praktiske tips om samarbeid med Archi
+:keywords: Archi
 
+include::./felles/includes/standardheader.adoc[]
 
-ifndef::standardheader_included[]
-include::../felles/includes/standardheader.adoc[]
-endif::[]
+:imagesdir!:
 
 
 [.lead]
