@@ -15,16 +15,15 @@ image:./felles/images/i-arbeid.png[width=75, height=75]
 == Begreper
 TBD
 
-//== Strategisk tilnærming
-:leveloffset: +1
+== Strategi for arbeidet med referansearkitekturer
 include::./Strategisk_tilnærming/main.adoc[]
 
-:leveloffset!:
-:leveloffset: +1
+== Metode
+:leveloffset: +2
 include::./Metode/main.adoc[]
 
-:leveloffset!:
-//== Brukstilfeller - samhandlingsmønstre
+:leveloffset: -2
+== Brukstilfeller - samhandlingsmønstre
 :leveloffset: +1
 include::./Brukstilfeller/Samhandlingsmønstre.adoc[]
 

@@ -4,23 +4,25 @@
 
 include::./felles/includes/commonincludes.adoc[]
 
-
-image:i-arbeid.png[width=75, height=75]
+:imagesdir!:
+image:./felles/images/i-arbeid.png[width=75, height=75]
 
 
 //include::Samhandlingsmønstre.adoc[]
 
-:leveloffset!:
-:leveloffset: +1
-
+== Generelt
 include::Generelt.adoc[]
 
+== Steg 1 - Modeller fulldigitaliserte forretningsprosesser med fokus på samhandling
 include::Steg1.adoc[]
 
+== Steg 2 - Identifisere samhandlingsmønstre
 include::Steg2.adoc[]
 
+== Steg 3 - Identifisere referansearkitektur med fokus på samhandling
 include::Steg3.adoc[]
 
+== Steg 4 - Identifisere løsningsarkitektur
 include::Steg4.adoc[]
 
 

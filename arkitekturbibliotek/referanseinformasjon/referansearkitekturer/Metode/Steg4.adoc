@@ -1,6 +1,6 @@
 :lang: no
 :doctitle: Steg 4 - Identifisere løsningsarkitektur
-:keywords: Steg4
+:keywords: Metodik
 
 include::./felles/includes/commonincludes.adoc[]
 

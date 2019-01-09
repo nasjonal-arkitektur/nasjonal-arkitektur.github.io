@@ -1,1 +1,5 @@
-= Standarder
+:lang: no
+:doctitle: Standarder
+:keywords: Standarder 
+
+include::./felles/includes/commonincludes.adoc[]

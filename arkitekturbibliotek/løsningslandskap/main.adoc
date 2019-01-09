@@ -7,10 +7,12 @@
 :doctitle_en: English title TBD  
 :keywords_en: English keywords TBD
 
-:preamble: Løsningslandskapet inneholder byggeklosser i form av spesifikke applikasjoner, tjenester, prosesser m.m.
 
-include::../felles/includes/standardheader.adoc[]
-include::../felles/includes/commonlinks1.adoc[]
+include::./felles/includes/commonincludes.adoc[]
+
+[.lead]
+Løsningslandskapet inneholder byggeklosser i form av spesifikke applikasjoner, tjenester, prosesser m.m.
+
 
 // Article contents written below
 == Generelt

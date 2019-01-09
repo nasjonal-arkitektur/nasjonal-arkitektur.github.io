@@ -79,22 +79,47 @@ Det legges opp til utstrakt samarbeid på tvers av av offentlig sektor for å et
 
 Terskelen for å publisere innhold skal ikke være for høy. Eksempler og praksis må deles for å få fram god praksis, anbefalinger, retningslinjer og standarder.
 
-Gi beskjed via e-post til nasjonalarkitektur@difi.no om du ønsker å bidra og vil ha skrivetilgang. Oppgi da ditt brukernavn på GitHub (se eventuelt {url_hvordan_opprette_github_bruker}).
+//Gi beskjed via e-post til nasjonalarkitektur@difi.no om du ønsker å bidra og vil ha skrivetilgang. Oppgi da ditt brukernavn på GitHub (se eventuelt {url_hvordan_opprette_github_bruker}).
 
-Se også:
 
-1. {link_praktiske_tips_komme_igang_med_innholdsproduksjon}
-2. {link_dokumentasjonskonvensjoner}
 
 :leveloffset!:
-:leveloffset: +1
+
+== Overordnet rammeverk
 include::./rammeverk/main.adoc[]
+
+== Arkitekturlandskap
+
 include::./arkitekturlandskap/main.adoc[]
+
+:leveloffset!:
+== Løsningslandskap
+:leveloffset: +1
 include::./løsningslandskap/main.adoc[]
+
+:leveloffset!:
+== Standarder
+:leveloffset: +1
 include::./standarder/main.adoc[]
+
+:leveloffset!:
+== Kravbibliotek
+:leveloffset: +1
 include::./kravbibliotek/main.adoc[]
+
+:leveloffset!:
+== Referansebibliotek
+:leveloffset: +1
 include::./referanseinformasjon/main.adoc[]
+
+:leveloffset!:
+== Organisering og kompetanse
+:leveloffset: +1
 include::./organisering-og-kompetanse/main.adoc[]
+
+:leveloffset!:
+== Styring og oppfølging
+:leveloffset: +1
 include::./styring-og-oppfølging/main.adoc[]
 
 

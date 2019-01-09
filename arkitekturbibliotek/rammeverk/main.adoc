@@ -1,6 +1,18 @@
-= Overordnet metodikk
+:lang: no
+:doctitle: Overordnet rammeverk
+:keywords: Norsk, arkitekturbibliotek, offenlig sektor, virksomhetsarkitektur, NIF, samhandlingsarkitektur, rammeverk, GitHub
+//:preamble: 
 
-(Foreløpig tekst)
+include::./felles/includes/commonincludes.adoc[]
+
+[.lead]
+Overordnet rammeverk for arbeidet med nasjonal arkitektur 
+
+:imagesdir!:
+
+image:./felles/images/i-arbeid.png[width=75, height=75] Foreløpig tekst
+
+
 
 Arbeidet med nasjonal arkitektur i Norge baserer seg på flere metoder og rammeverk, på tvers av flere fagdisipliner.
 
@@ -17,3 +29,4 @@ Videre detaljer om metodikk, veiledninger, dokumentasjonskonvensjoner og metamod
 
 
 
+    
