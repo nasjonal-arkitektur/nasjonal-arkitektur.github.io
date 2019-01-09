@@ -5,8 +5,6 @@
 
 include::./felles/includes/commonincludes.adoc[]
 
-:imagesdir!:
-:imagesdir: ./images
 
 == Begreper
 == Informasjonsmodeller
