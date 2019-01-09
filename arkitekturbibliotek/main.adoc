@@ -4,41 +4,20 @@
 //:preamble: 
 
 include::./felles/includes/commonincludes.adoc[]
-
 :imagesdir!:
 
 [.lead]
-Arkitekturdokumentasjon - modeller, standarder, referansearkitekturer, veiledninger, anbefalinger, tips, maler og annet av  interesse på tvers av offentlig (og privat) sektor i Norge
+Arkitekturdokumentasjon - modeller, standarder, referansearkitekturer, veiledninger, anbefalinger, tips, maler og annet av  interesse på tvers av offentlig (og privat) sektor i Norge.
 
+
+image:./felles/images/difilogo.svg[image,width=169,height=66]
+
+//image:./felles/images/i-arbeid.png[width=75, height=75]I arbeid
 
 ////
-
-:path_arkitekturbibliotek_brukerveiledning: {path_solution_building_blocks}/Arkitekturbibliotek_på_github.difi.no/Brukerveiledning
-
-:url_hvordan_opprette_github_bruker: https://www.wikihow.com/Create-an-Account-on-GitHub[Tips om å opprette github bruker]
-
-:link_praktiske_tips_komme_igang_med_innholdsproduksjon: <<../praktisketips/Praktiske_tips_for_å_komme_igang.adoc#, Praktiske tips for å komme i gang med GitHub og bidra med innhold>>
-
-
-:link_grunnleggende_prinsipper_for_biblioteket: <<../praktisketips/grunnleggende_prinsipper_for_biblioteket.adoc#, Grunnleggende prinsipper>>
-
-:link_visjoner_for_biblioteket: <<../praktisketips/visjoner_for_biblioteket.adoc#, Visjoner for arkitekturbiblioteket>>
-
-
-:link_dokumentasjonskonvensjoner: <<{path_arkitekturbibliotek_brukerveiledning}/dokumentasjonskonvensjoner.adoc#, Dokumentasjonskonvensjoner>>
-
-image::../images/i-arbeid.png[width=75, height=75]
-
-==============
-image:difilogo.svg[image,width=169,height=66]
-==============
-////
-
-image:./felles/images/i-arbeid.png[width=75, height=75] I arbeid... innholdsfortegnelsen er ikke komplett!
-
 == Introduksjon
 === Bakgrunn og formål
-Norsk fellesoffentlig arkitekturbibliotek er opprettet av Difi 2018 for å samle dokumentasjon om virksomhetsarkitektur som kan være av felles interesse og bidra tli økt samhandling, gjenbruk og innovasjon.
+Norsk fellesoffentlig arkitekturbibliotek er opprettet av Difi 2018 for å samle dokumentasjon om virksomhetsarkitektur som kan være av felles interesse og bidra til økt samhandling, gjenbruk og innovasjon.
 
 Biblioteket inneholder informasjon om rammeverk, retningslinjer, anbefalinger, tips, maler, felleskomponenter, behov.
 
@@ -81,10 +60,27 @@ Terskelen for å publisere innhold skal ikke være for høy. Eksempler og praksi
 
 //Gi beskjed via e-post til nasjonalarkitektur@difi.no om du ønsker å bidra og vil ha skrivetilgang. Oppgi da ditt brukernavn på GitHub (se eventuelt {url_hvordan_opprette_github_bruker}).
 
+////
+
+Oppbyggingen av dette arkitekturbiblioteket følger i grove trekk strukturen som angitt av TOGAF og Nasjonalt rammverk for samhandlingsarkitektur (NIF).
+
+. link:./rammeverk/[Overordnet rammeverk]
+. link:./arkitekturlandskap/[Arkitekturlandskap]
+. link:./løsningslandskap/[Løsningslandskap]
+. link:./standarder/[Standarder]
+. link:./kravbibliotek/[Kravbibliotek]
+. link:./referanseinformasjon/[Referansebibliotek]
+. link:./organisering-og-kompetanse/[Organisering og kompetanse]
+. link:./styring-og-oppfølging/[Styring og oppfølging]
+
+image:./images/nasjonalt-arkitekturbibliotek.png[width=900]
 
 
-:leveloffset!:
+Tilsvarende bilde fra TOGAF 9.2:
+image:./images/togaf92-architecture-repository.png[width=900]
 
+
+////
 == Overordnet rammeverk
 include::./rammeverk/main.adoc[]
 
@@ -118,6 +114,6 @@ include::./organisering-og-kompetanse/main.adoc[]
 == Styring og oppfølging
 include::./styring-og-oppfølging/main.adoc[]
 
-
+////
 
 
