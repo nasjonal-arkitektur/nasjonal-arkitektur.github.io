@@ -10,7 +10,7 @@ include::./felles/includes/commonincludes.adoc[]
 
 
 :imagesdir!:
-image:./felles/images/i-arbeid.png[width=75, height=75] Første versjon av denne omtalen er fremdeles i arbeid 
+//image:./felles/images/i-arbeid.png[width=75, height=75] Første versjon av denne omtalen er fremdeles i arbeid 
 
 
 image:./images/archimate-logo.jpg[width= 200]

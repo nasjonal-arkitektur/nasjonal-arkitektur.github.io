@@ -108,3 +108,8 @@
 10.01.2019 01:49:16: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\main.adoc)
 10.01.2019 01:49:16: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\praktiske-øvelser.adoc)
 10.01.2019 01:49:16: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\temaer.adoc)
+10.01.2019 03:08:11: GenerateHtml
+10.01.2019 03:08:11: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\main.adoc)
+10.01.2019 03:08:11: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\praktiske-øvelser.adoc)
+10.01.2019 03:09:53: GenerateHtml
+10.01.2019 03:09:53: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\kunnskapsbibliotek\standard-archimate\archimatekurs-del-1\praktiske-øvelser.adoc)
