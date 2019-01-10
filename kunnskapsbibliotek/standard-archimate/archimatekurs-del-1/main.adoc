@@ -6,7 +6,7 @@ include::./felles/includes/commonincludes.adoc[]
 
 
 [.lead]
-The ArchiMate S...
+50-50 teori og praksis for å komme i gang med Archimate
 
 
 :imagesdir!:
@@ -27,4 +27,7 @@ include::./kjøreplan.adoc[Kjøreplan]
 == Temaer
 :leveloffset: +1
 include::./temaer.adoc[Kjøreplan]
-
+:leveloffset: -1
+== Kilder til kunnskap
+:leveloffset: +1
+include::kilder-til-kunnskap.adoc[]

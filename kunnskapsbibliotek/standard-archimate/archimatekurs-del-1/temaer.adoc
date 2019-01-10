@@ -9,6 +9,8 @@ include::../felles/includes/commonincludes.adoc[]
 === Hva er Archimate?
 "The ArchiMate Specification, an Open Group Standard, is an open and independent modeling language for Enterprise Architecture that is supported by different tool vendors and consulting firms. The ArchiMate language enables Enterprise Architects to describe, analyze, and visualize the relationships among architecture domains in an unambiguous way."
 
+
+
 Se også: 
 
 * Forholdet mellom Archimate og andre språk.
