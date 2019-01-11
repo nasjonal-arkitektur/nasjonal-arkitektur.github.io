@@ -6,3 +6,5 @@
 :difi_translation_status: -
 :difi_test_attr_translation_status!:
 
+:author_no: Direktoratet for forvaltning og ikt (Difi)
+

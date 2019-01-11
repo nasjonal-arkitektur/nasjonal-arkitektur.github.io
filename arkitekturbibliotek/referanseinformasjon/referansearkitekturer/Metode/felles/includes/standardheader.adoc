@@ -1,3 +1,5 @@
+ifndef::standardheader_included[]
+
 include::translation.adoc[]
 
 ifndef::difi_orig_language[]
@@ -91,8 +93,8 @@ endif::[]
 :sectanchors:
 :sectnumlevels: 3
 :xrefstyle: short
-:imagesdir!:
 //:imagesdir: ..//felles/images
+:imagesdir!:
 ////
 ifdef::attr-root-dir[]
 :imagesdir: ./common/images
@@ -101,9 +103,11 @@ endif::[]
 // data-uri benyttes for å inkludere images i generert html-fil :data-uri:
 :toc: left
 
+// consider deprecate support for preamble and realy on .lead insteads
 ifdef::preamble[]
 {preamble}
 endif::[]
+
 
 
 ////
@@ -161,3 +165,4 @@ endif::[]
 endif::[]
 
 endif::difi_translation_status[]
+endif::standardheader_included[]
