@@ -8,7 +8,7 @@ Asciidoc FX is a book / document editor to build PDF, Epub, Mobi and HTML books,
 
 
 
-image:i-arbeid.png[width=75, height=75] Uferdig innhold
+image:./felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold
 
 
 :numbered:

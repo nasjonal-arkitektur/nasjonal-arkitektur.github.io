@@ -12,7 +12,7 @@ endif::[]
 ////
 
 
-image:i-arbeid.png[width=75, height=75] Uferdig innhold
+image:./felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold
 
 
 :numbered:

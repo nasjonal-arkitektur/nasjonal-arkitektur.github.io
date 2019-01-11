@@ -7,7 +7,7 @@ include::./felles/includes/commonincludes.adoc[]
 [.lead]
 Asciidoc er....
 
-image:i-arbeid.png[width=75, height=75] Uferdig innhold
+image:./felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold
 
 :imagesdir!:
 :imagesdir: ./images

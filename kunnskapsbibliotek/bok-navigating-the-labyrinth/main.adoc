@@ -18,7 +18,7 @@ image:bokfront-navigating-the-labyrinth.png[width=100, height=100]
 ////
 ////
 
-//image:i-arbeid.png[width=75, height=75] Uferdig innhold - første versjon er fremdeles i arbeid
+//image:./felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold - første versjon er fremdeles i arbeid
 
 :numbered!:
 

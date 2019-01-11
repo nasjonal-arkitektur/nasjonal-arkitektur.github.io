@@ -10,7 +10,7 @@ include::../felles/includes/commonlinks1.adoc[]
 endif::[]
 
 
-image:i-arbeid.png[width=75, height=75]
+image:./felles/images/i-arbeid.png[width=75, height=75]
 
 [.lead] 
 Fellesoffentlige arkitekturmodeller finnes i et felles modellbibliotek som kan nås via GitHub.

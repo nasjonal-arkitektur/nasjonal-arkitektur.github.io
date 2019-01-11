@@ -15,7 +15,7 @@ image:it4it-logo.png[]
 
 :imagesdir!:
 :imagesdir: ./felles/images
-image:i-arbeid.png[width=75, height=75] Første versjon av denne omtalen er fremdeles i arbeid - men kanskje du finner noe nyttig?
+image:./felles/images/i-arbeid.png[width=75, height=75] Første versjon av denne omtalen er fremdeles i arbeid - men kanskje du finner noe nyttig?
 
 :imagesdir!:
 :imagesdir: ./images
@@ -96,4 +96,4 @@ image::it-value-chain.png[]
 osv.
 
 :imagesdir: ./felles/images
-image:i-arbeid.png[width=75, height=75] I arbeid 
+image:./felles/images/i-arbeid.png[width=75, height=75] I arbeid 

@@ -5,7 +5,7 @@
 include::./felles/includes/commonincludes.adoc[]
 
 
-image:i-arbeid.png[width=75, height=75, alt="Figur mangler: i-arbeid.png?",]Uferdig innhold - første versjon er fremdeles i arbeid
+image:./felles/images/i-arbeid.png[width=75, height=75, alt="Figur mangler: i-arbeid.png?",]Uferdig innhold - første versjon er fremdeles i arbeid
 
 :imagesdir!:
 

@@ -10,7 +10,7 @@ The London Workshop included presentations of four emerging standard reference a
 
 
 
-image:i-arbeid.png[width=75, height=75] Første versjon av denne omtalen er fremdeles i arbeid 
+image:./felles/images/i-arbeid.png[width=75, height=75] Første versjon av denne omtalen er fremdeles i arbeid 
 
 :imagesdir!:
 :imagesdir: ./images
