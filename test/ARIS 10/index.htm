@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>Business Publisher</title>
+	<link rel="STYLESHEET" type="text/css" href="styles.css">
+<script language="JavaScript">
+
+		var str = new String();
+
+		function setObject(x) {
+			str = x;
+		}
+		function getObject() {
+			return str;
+		}
+		function frameResize() {
+			w = document.getElementById("tree").offsetWidth;
+			h = document.getElementById("tree").offsetHeight;
+			parent.data.getZoomManager().overviewResize(w, h);
+		}
+				
+		setObject("noObject");
+			
+</script>
+
+<FRAMESET  rows="32px,*">
+	<FRAMESET  cols="*,70%" border="0" framespacing="0">
+		<FRAME id ="model" name="model" src="empty.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize>
+		<FRAME id ="head" name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize>
+	</FRAMESET>
+	<FRAMESET cols="*,70%">
+		<FRAMESET  rows="40%,*">
+			<FRAME id="tree" name="tree" class="treebord" src="tree.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no" >
+			<FRAME id="info" name="info" src="empty.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no">
+		</FRAMESET>
+		<FRAME id="data" name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no">
+	</FRAMESET>
+</FRAMESET>
+
+</head>
+<body>
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+BODY
+{
+}
+
+.menu
+{
+    	WIDTH: 100%;
+	POSITION: absolute;
+    
+}
+.menuItem
+{
+    PADDING-RIGHT: 15px;
+    PADDING-LEFT: 10px;
+    WIDTH: 100%;
+    CURSOR: hand;
+    LINE-HEIGHT: 20px;
+    BORDER-BOTTOM: white 1px solid
+}
+.ItemMouseOver
+{
+    PADDING-RIGHT: 15px;
+    PADDING-LEFT: 10px;
+    WIDTH: 100%;
+    CURSOR: hand;
+    COLOR: highlighttext;
+    LINE-HEIGHT: 20px;
+    BORDER-BOTTOM: white 1px solid;
+    BACKGROUND-COLOR: highlight
+}
+.ItemMouseOut
+{
+    WIDTH: 100%
+}
+
+

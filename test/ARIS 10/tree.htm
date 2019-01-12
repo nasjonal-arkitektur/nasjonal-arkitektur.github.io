@@ -1,0 +1,460 @@
+<html>
+	
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>Business Publisher</title>
+	<link rel="STYLESHEET" type="text/css" href="styles.css">	
+<style>BODY {
+	font-size : 12px;
+	font-family : Arial, Helvetica, sans-serif;
+	font-weight : bold;
+}  TD {
+	font-size : 12px;
+	font-family : Arial, Helvetica, sans-serif;
+	font-weight : bold;
+}
+</style>
+<script src='tree_logic.js' type='text/javascript'></script>
+<script src='tree_data.js' type='text/javascript'></script>
+<script src='helper.js' type='text/javascript'></script>
+<script src="properties.js"></script>
+
+<script>
+var selectedLangTag = "en";
+var show = false;
+
+var isIE=document.all;
+var isNN=!document.all&&document.getElementById;
+var isN4=document.layers;
+
+
+window.onresize=function() {
+	parent.frameResize();
+}
+
+
+function setTreeDimension(w, h) {
+	if (treeWidthNew) {
+		treeWidthOld = treeWidthNew;
+		treeHeightOld = treeHeightNew;
+	}
+	else {
+		treeHeightOld = parent.document.getElementById("tree").offsetHeight;
+		treeWidthOld = parent.document.getElementById("tree").offsetWidth;
+	}
+	treeWidthNew = w;
+	treeHeightNew = h;
+}
+
+function showOverviewTab() {
+	var overview = document.getElementById("overviewTab");	
+    overview.style.display = '';	
+	var blank = document.getElementById("blank");
+	var treeTab = document.getElementById("treeTab");		
+	
+	if (treeTab.className == "tabinactive") {
+		parent.tree.scrollTo(0,0);
+	}
+
+	rectangle.style.top = 25 + "px";
+	rectangle.style.left = 0 + "px";
+	rectangle.style.display = 'none';
+}
+
+function showOverview(isToZoom){
+	zoom = isToZoom;
+	currentW = parent.document.getElementById("tree").offsetWidth;
+	currentH = parent.document.getElementById("tree").offsetHeight;
+			
+	modelFrameWidth = parent.document.getElementById("data").offsetWidth;
+	modelFrameHeight = parent.document.getElementById("data").offsetHeight; 
+	
+	modelId = parent.data.getZoomManager().id;
+	modelWidth = parent.data.document.getElementById(modelId).width;
+	modelHeight = parent.data.document.getElementById(modelId).height;
+	
+	parent.data.getZoomManager().showOverview(currentW, currentH, modelWidth, modelHeight);	
+	
+	var treeTab = document.getElementById("treeTab");	
+	treeTab.className = "tabinactive";
+	
+	var tree = document.getElementById("tree");
+	tree.style.display = 'none';
+	
+	var overview = document.getElementById("overviewTab");
+	overview.className = "tab";
+
+	document.body.style.overflow = "hidden";
+
+	currentH = currentH - 25;
+	show = true;
+	setTimeout("setRectangle(zoom, modelWidth, currentH, currentW)", 100);
+		
+}
+
+
+function showOverviewInitial(){
+	zoom = true;
+	currentW = parent.document.getElementById("tree").offsetWidth;
+	currentH = parent.document.getElementById("tree").offsetHeight;
+	
+	modelId = parent.data.getZoomManager().id;
+	modelWidth = parent.data.document.getElementById(modelId).width; 
+	modelHeight = parent.data.document.getElementById(modelId).height;
+	
+	parent.data.getZoomManager().showOverview(currentW, currentH, modelWidth, modelHeight);	
+	
+	var treeTab = document.getElementById("treeTab");	
+	treeTab.className = "tabinactive";
+	
+	var tree = document.getElementById("tree");
+	tree.style.display = 'none';
+	
+	var overview = document.getElementById("overviewTab");
+	overview.className = "tab";
+
+	document.body.style.overflow = "hidden";
+	
+	currentH = currentH - 25;
+	show = true;
+	
+	w = parent.document.getElementById("tree").offsetWidth;
+	h = parent.document.getElementById("tree").offsetHeight;
+	
+	parent.data.getZoomManager().overviewResize(w, h);
+	setTimeout("parent.data.getZoomManager().overviewResize(w, h)", 100);
+		
+}
+
+function setRectangle(zoom, oldmodelWidth, currentH, currentW) {
+	var modelId = parent.data.getZoomManager().id;
+	isToZoom = zoom;
+	modelW = oldmodelWidth;
+	modelWidth = parent.data.document.getElementById(modelId).offsetWidth;
+	modelFrameWidth = parent.document.getElementById("data").offsetWidth;
+	modelFrameHeight = parent.document.getElementById("data").offsetHeight;
+	if ((show == true) && (modelWidth > 0) && (modelFrameWidth != undefined) && (modelHeight > 0) && (modelFrameHeight != undefined) &&  ((zoom!=true) || (oldmodelWidth != modelWidth))) {
+		show = false;
+		modelHeight = parent.data.document.getElementById(modelId).height;
+		modelWidth = parent.data.document.getElementById(modelId).width;
+		
+		corrWidth = currentW/modelWidth;
+		corrHeight = currentH/modelHeight;
+		if (corrWidth > corrHeight) {
+			currentW = modelWidth * corrHeight;
+		}
+		else {
+			currentH = modelHeight * corrWidth;
+		}
+
+		corrWidth = currentW/modelWidth;
+		corrHeight = currentH/modelHeight;
+		
+		corrViewModWidth = modelFrameWidth / modelWidth;
+		corrViewModHeight = modelFrameHeight / modelHeight;
+		rectHeightOld = parseInt(rectangle.style.height);
+		var top=parseInt(rectangle.style.top);
+		rectangle.style.width = currentW * corrViewModWidth+5;
+		rectangle.style.height = currentH * corrViewModHeight+5;
+		
+		ScrollTop = parent.data.document.body.scrollTop;
+		ScrollLeft = parent.data.document.body.scrollLeft;
+		
+		top = ScrollTop * corrHeight + 25;
+		left = ScrollLeft * corrWidth;
+
+		rectangle.style.top = top + "px";
+		rectangle.style.left = left + "px";
+
+		if ((corrViewModWidth >= 1) && 
+		    (corrViewModHeight >= 1)) {
+			rectangle.style.display = 'none';
+		}
+
+		else {
+			rectangle.style.display = '';
+		}
+	
+		
+	}
+	else {
+		setTimeout("setRectangle(isToZoom, modelW, currentH, currentW)", 100);
+	}
+}
+
+function setRectangleInitial(zoom, oldmodelWidth, currentH, currentW) {
+	var modelId = parent.data.getZoomManager().id;
+	isToZoom = zoom;
+	modelW = oldmodelWidth;
+	modelWidth = parent.data.document.getElementById(modelId).width;
+	modelFrameWidth = parent.document.getElementById("data").offsetWidth;
+	modelFrameHeight = parent.document.getElementById("data").offsetHeight;
+	 
+	if ((show == true) && (modelWidth > 0) && (modelFrameWidth != undefined) && (modelHeight > 0) && (modelFrameHeight != undefined) &&  ((zoom==true) || (oldmodelWidth != modelWidth))) {
+		show = false;
+		modelHeight = parent.data.document.getElementById(modelId).height;
+		modelWidth = parent.data.document.getElementById(modelId).width;
+		
+		corrWidth = currentW/modelWidth;
+		corrHeight = currentH/modelHeight;
+		if (corrWidth > corrHeight) {
+			currentW = modelWidth * corrHeight;
+		}
+		else {
+			currentH = modelHeight * corrWidth;
+		}
+
+		corrWidth = currentW/modelWidth;
+		corrHeight = currentH/modelHeight;
+		
+		corrViewModWidth = modelFrameWidth / modelWidth;
+		corrViewModHeight = modelFrameHeight / modelHeight;
+		rectHeightOld = parseInt(rectangle.style.height);
+		var top=parseInt(rectangle.style.top);
+		rectangle.style.width = currentW * corrViewModWidth+5;
+		rectangle.style.height = currentH * corrViewModHeight+5;
+		
+		ScrollTop = parent.data.document.body.scrollTop;
+		ScrollLeft = parent.data.document.body.scrollLeft;
+		
+		top = ScrollTop * corrHeight + 25;
+		left = ScrollLeft * corrWidth;
+
+		rectangle.style.top = top + "px";
+		rectangle.style.left = left + "px";
+
+		if ((corrViewModWidth >= 1) && 
+		    (corrViewModHeight >= 1)) {
+			rectangle.style.display = 'none';
+		}
+
+		else {
+			rectangle.style.display = '';
+		}
+		
+	}
+	else {
+		setTimeout("setRectangleInitial(isToZoom, modelW, currentH, currentW)", 100);
+	}
+}
+
+
+
+function showTree(){	
+	var blank = document.getElementById("blank");
+	blank.style.display = 'none';
+		
+	var treeTab = document.getElementById("treeTab");	
+	treeTab.className = "tab";
+	
+	var tree = document.getElementById("tree");
+	tree.style.display = '';
+	
+	var overview = document.getElementById("overviewTab");
+	overview.className = "tabinactive";
+
+	document.body.style.overflow = "auto";
+
+    rectangle.style.display = "none";
+		
+}
+
+function scrollToCoordinates() {
+	var mouseCoord = getMousePointInWindow();
+	var mouseX = mouseCoord.getX();
+	var mouseY = mouseCoord.getY();
+
+	m_mouseX = document.all ? window.event.clientX : p_event.pageX;
+	m_mouseY = document.all ? window.event.clientY : p_event.pageY;
+	var divR = getObjectBounds('dragRectangle');
+        x = m_mouseX - divR.x;
+        y = m_mouseY - divR.y;
+	
+	var overviewWidth = document.blank.width;
+	var overviewHeight = document.blank.height;
+	
+	var percentX = mouseX / overviewWidth;
+	var percentY = mouseY / overviewHeight;
+	
+	var modelId = parent.data.getZoomManager().id;
+	
+	var modelWidth = parent.data.document.getElementById(modelId).width;
+	var modelHeight = parent.data.document.getElementById(modelId).height;
+	
+	parent.data.scrollTo(modelWidth * percentX, modelHeight * percentY);
+
+	var top=parseInt(rectangle.style.top);
+    	top=y;
+	var left=parseInt(rectangle.style.left);
+    	left=x;
+	rectangle.style.top = top + "px";
+	rectangle.style.left = left + "px";
+	rectangle.style.display = '';
+}
+
+
+
+
+var m_isDragActive = false;
+
+// position of the mouse inside the div
+var m_innerX = 0;
+var m_innerY = 0;
+
+// absolute mouse position
+var m_mouseX = 0;
+var m_mouseY = 0;
+
+var m_rectWidth = 10;
+var m_rectHeight = 10;
+
+
+
+function DragInit() {
+	document.onmousemove = Drag;
+	document.onmouseup = DragStop;
+	var ob = document.getElementById("blank");
+	ob.ondrag=function(){return false;};
+	ob.onselectstart=function(){return false;};
+}
+
+function DragStart() {
+	m_innerX = m_mouseX - rectangle.offsetLeft;
+	m_innerY = m_mouseY - rectangle.offsetTop;
+	if ((0 < m_innerX) && (m_innerX < parseInt(rectangle.style.width)) && (0 < m_innerY) && (m_innerY < parseInt(rectangle.style.height))) {
+		m_isDragActive = true;
+	} 
+	else {
+		DragStop();
+	}
+	
+}
+
+function DragStop() {
+	m_isDragActive = false;
+	document.getElementById("blank").style.cursor="auto";
+}
+
+var m_lastCall = 0;
+
+function Drag(p_event) {
+	m_mouseX = document.all ? window.event.clientX : p_event.pageX;
+	m_mouseY = document.all ? window.event.clientY : p_event.pageY;
+
+	if ((0 < m_innerX) && (m_innerX < parseInt(rectangle.style.width)) && (0 < m_innerY) && (m_innerY < parseInt(rectangle.style.height))) {
+		document.getElementById("blank").style.cursor="hand";
+		
+	} 
+
+	
+	if(m_isDragActive) {
+		setRectPosition(m_mouseX - m_innerX, m_mouseY - m_innerY);
+		var now = (new Date()).getTime();
+		if((now - m_lastCall) > 50) {
+			m_lastCall = now;
+			var overviewWidth = document.blank.width;
+			var overviewHeight = document.blank.height;
+			var modelId = parent.data.getZoomManager().id;
+			var modelWidth = parent.data.document.getElementById(modelId).width;
+			var modelHeight = parent.data.document.getElementById(modelId).height;
+			var percentX = modelWidth / overviewWidth;
+			var percentY = modelHeight / overviewHeight;
+			parent.data.scrollTo((m_mouseX - m_innerX) * percentX, (m_mouseY - m_innerY-25) * percentX);
+		}
+
+	}
+	else {
+		document.getElementById("blank").style.cursor="auto";
+	}
+}
+
+
+function setRectPosition(p_left, p_top) {
+    	p_left = (p_left < 0) ? 0 : p_left;
+	p_top = (p_top < 0) ? 0 : p_top;
+	p_left = ((p_left + m_rectWidth) > document.body.clientWidth) ? (document.body.clientWidth - m_rectWidth) : p_left;
+	p_top = ((p_top + m_rectHeight) > document.body.clientHeight) ? (document.body.clientHeight - m_rectHeight) : p_top;
+	rectangle.style.top =  p_top + "px";
+	rectangle.style.left = p_left + "px";
+}
+
+function setRectSize(p_width, p_height) {
+    m_rectWidth = p_width;
+	m_rectHeight = p_height;
+	rectangle.style.width  = p_width + "px";
+	rectangle.style.height = p_height + "px";
+}
+
+function setRectPositionAfterModelScroll(p_left, p_top) {
+	if(!m_isDragActive) {
+		var overviewWidth = document.blank.width;
+		var overviewHeight = document.blank.height;
+		if ((overviewWidth < 10) || (overviewHeight < 10)) {
+			overviewWidth = parent.document.getElementById("tree").width;
+			overviewHeight = parent.document.getElementById("tree").height - 30;
+		}
+		var modelId = parent.data.getZoomManager().id;
+		var modelWidth = parent.data.document.getElementById(modelId).width;
+		var modelHeight = parent.data.document.getElementById(modelId).height;
+		var percentX = overviewWidth / modelWidth;
+		var percentY = overviewHeight / modelHeight;
+		var corrX = p_left * percentX;
+		var corrY = p_top * percentY + 25;
+		setRectPosition(corrX, corrY);
+	}
+	
+}
+
+function selectNodeOfDisplayedModelInTree(modId) {
+	selectNodeOfDisplayedModel(modId);
+}
+
+
+
+</script>
+</head>
+<body text='#000000' bgcolor='#FFFFFF' onload="DragInit()">
+
+<div onmousedown="javascript:DragStart()" onmousemove = "javascript:Drag">
+<img id="blank" name="blank" src="images\blank.gif" onmousemove = "javascript:Drag" style="position: absolute; left: 6px; top: 31px; z-index: 90;"></img>
+</div>
+
+<div id="overview" style="border-bottom:1px solid #808080;width:100%;padding-top:4px;">
+
+<nobr>
+<span id="treeTab" class="tab" onclick="javascript:showTree();return false;" style=""><script>document.write(properties[selectedLangTag]['wp_navigation_tree']);</script></span>
+<span id="overviewTab" class="tabinactive" onclick="javascript:showOverviewInitial();return false;" style="display:none;"><script>document.write(properties[selectedLangTag]['wp_model_overview']);</script>
+
+<div id="dragRectangle" style="position:absolute; top:25px; left:0px; height:100px; width:100px; border:solid; z-index: 100" 
+
+onmousedown="javascript:DragStart()">
+</div>
+
+</span>
+
+</nobr>
+
+</div>
+
+<div id="tree" class="tree" style="position: absolute; left: 0px; top: 30px;">
+ <script>
+	//parent hinzuf�gen, sonst auch bei IE undefined!?!
+	var treeWidthOld = document.getElementById('tree').width;
+	var treeHeightOld = document.getElementById('tree').height;
+	var treeWidthNew = treeWidthOld; 
+	var treeHeightNew = treeHeightOld;
+
+ 	nod_root.TwriteTree();
+ 	closeTree();
+ </script>
+</div>
+
+<script>
+	var rectangle = document.getElementById('dragRectangle');
+
+</script>
+
+
+</body>
+
+</html>

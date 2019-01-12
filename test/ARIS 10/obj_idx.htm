@@ -1,0 +1,208 @@
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>Business Publisher</title>
+	<script src="properties.js"></script>
+	<link rel="STYLESHEET" type="text/css" href="styles.css">
+</head>
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+<!--
+var selectedLangTag = "en";
+
+var JS_Array_Entries = new Array('Application Component','Application Interface','Business Actor','Business actor','Business function','Business Object','Capability','Course of action','Data object','End event','End event','Start event','Start event','Subprocess','Task','Task','Task','Task2', "");
+
+var keycode = 0;
+var Netscape = new Boolean();
+
+function MyTaste(Ereignis) {
+	if(Netscape) {
+		keycode = Ereignis.which;
+		JS_Index_SearchEntry();
+	}
+} 
+function JS_Index_FillCombo(){
+var i;
+var str = new String();
+	JS_Array_Entries.length -=1;
+	for(i=0; i<JS_Array_Entries.length; i++) {
+		str=JS_Array_Entries[i];
+		JS_Array_Entries[i]=str.toLowerCase();
+	}
+	document.frm.cbo.options.selectedIndex=0;
+}
+
+function JS_Index_Jump(){
+	document.frm.search.value=JS_Array_Entries[document.frm.cbo.options.selectedIndex];
+	document.location.href="#E_"+document.frm.cbo.selectedIndex;
+}
+
+function getPrefixLen(such, comp) {
+	var len = (such.length < comp.length) ? such.length : comp.length;
+	for(var i=0; i<len; i++) {
+		z1 = such.charCodeAt(i);
+		z2 = comp.charCodeAt(i);
+		if (z1 != z2) { return i; }
+	}
+	return len;
+}
+
+function JS_Index_SearchEntry(){
+var pos=0;
+var i=0;
+var such=new String(document.frm.search.value.toLowerCase());
+	oldInput=such;
+	var longestPrefixLen = 0;
+	var longestPrefixPos = 0;
+	if(such != "") {
+		var erg;
+		while (i<JS_Array_Entries.length) {
+			var pre = getPrefixLen(such, JS_Array_Entries[i]);
+			if (pre > longestPrefixLen) {
+				longestPrefixLen = pre;
+				longestPrefixPos = i;
+			}
+			i++;
+		}
+		if(such.length<1) {longestPrefixPos=0;}
+		if (longestPrefixLen == 0) {
+			for(var i=0; i<JS_Array_Entries.length; i++) {
+				longestPrefixPos = i;
+				if (such < JS_Array_Entries[i]) {
+					document.frm.cbo.options.selectedIndex=longestPrefixPos;
+					return;
+				}
+			}
+			
+		}
+		document.frm.cbo.options.selectedIndex=longestPrefixPos;
+	}
+	else {
+		document.frm.cbo.options.selectedIndex=0;
+	}
+}
+//-->
+</SCRIPT>
+
+<body  bgcolor='#FFFFFF' onLoad="javascript: JS_Index_FillCombo(); return true;">
+
+<a name="LINK_TOP">&nbsp;</a>
+<form name="frm" action="javascript: JS_Index_Jump();" method="POST">
+<input type="Text" class="text" name="search" onKeyup="javascript: JS_Index_SearchEntry(); return false;">
+<script>document.write('<input type="Submit" class="button" name="go" value="' + properties[selectedLangTag]['wp_search'] + '" />');</script>
+<span style="line-height:8px"><br /><br /></span>
+<select class="idx" name="cbo" size="4" onChange="javascript: JS_Index_Jump(); return false;";>
+<option>Application Component</option><option>Application Interface</option><option>Business Actor</option><option>Business actor</option><option>Business function</option><option>Business Object</option><option>Capability</option><option>Course of action</option><option>Data object</option><option>End event</option><option>End event</option><option>Start event</option><option>Start event</option><option>Subprocess</option><option>Task</option><option>Task</option><option>Task</option><option>Task2</option>
+</select></form>
+
+<table class="dataTable"><tr><th colspan="2">
+<a name="<ARIS LINK>"></a><a class='head' href='#L_1'>A</a>&nbsp;<a class='head' href='#L_2'>B</a>&nbsp;<a class='head' href='#L_3'>C</a>&nbsp;<a class='head' href='#L_4'>D</a>&nbsp;<a class='head' href='#L_5'>E</a>&nbsp;<a class='head' href='#L_6'>S</a>&nbsp;<a class='head' href='#L_7'>T</a>&nbsp;&nbsp;</th></tr><table class="dataTable"><tr><th colspan="2">
+<a name="L_1"></a>A&nbsp;</th></tr><tr>
+<td><a name="E_0"></a><a href="o1156e2f1-1155-11e9-3e58-c85b7643609d_inf.htm" target="info">Application Component</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_1"></a><a href="o34c21de3-1155-11e9-3e58-c85b7643609d_inf.htm" target="info">Application Interface</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<table class="dataTable"><tr><th colspan="2">
+<a name="L_2"></a>B&nbsp;</th></tr><tr>
+<td><a name="E_2"></a><a href="o115646b0-1155-11e9-3e58-c85b7643609d_inf.htm" target="info">Business Actor</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_3"></a><a href="o6f53c614-1075-11e9-3e58-c85b7643609d_inf.htm" target="info">Business actor</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_4"></a><a href="o972a2de0-1076-11e9-3e58-c85b7643609d_inf.htm" target="info">Business function</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_5"></a><a href="o34c21de0-1155-11e9-3e58-c85b7643609d_inf.htm" target="info">Business Object</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<table class="dataTable"><tr><th colspan="2">
+<a name="L_3"></a>C&nbsp;</th></tr><tr>
+<td><a name="E_6"></a><a href="o6f53c610-1075-11e9-3e58-c85b7643609d_inf.htm" target="info">Capability</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_7"></a><a href="o6f53c612-1075-11e9-3e58-c85b7643609d_inf.htm" target="info">Course of action</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<table class="dataTable"><tr><th colspan="2">
+<a name="L_4"></a>D&nbsp;</th></tr><tr>
+<td><a name="E_8"></a><a href="o99b4a595-1274-11e9-3e58-c85b7643609d_inf.htm" target="info">Data object</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<table class="dataTable"><tr><th colspan="2">
+<a name="L_5"></a>E&nbsp;</th></tr><tr>
+<td><a name="E_9"></a><a href="o4772327f-164d-11e9-3e58-c85b7643609d_inf.htm" target="info">End event</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_10"></a><a href="o47723277-164d-11e9-3e58-c85b7643609d_inf.htm" target="info">End event</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<table class="dataTable"><tr><th colspan="2">
+<a name="L_6"></a>S&nbsp;</th></tr><tr>
+<td><a name="E_11"></a><a href="o4772327a-164d-11e9-3e58-c85b7643609d_inf.htm" target="info">Start event</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_12"></a><a href="o47716f20-164d-11e9-3e58-c85b7643609d_inf.htm" target="info">Start event</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_13"></a><a href="o47723274-164d-11e9-3e58-c85b7643609d_inf.htm" target="info">Subprocess</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<table class="dataTable"><tr><th colspan="2">
+<a name="L_7"></a>T&nbsp;</th></tr><tr>
+<td><a name="E_14"></a><a href="o47723271-164d-11e9-3e58-c85b7643609d_inf.htm" target="info">Task</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_15"></a><a href="o99b4a590-1274-11e9-3e58-c85b7643609d_inf.htm" target="info">Task</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_16"></a><a href="o99b4a592-1274-11e9-3e58-c85b7643609d_inf.htm" target="info">Task</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+<tr>
+<td><a name="E_17"></a><a href="o4772327c-164d-11e9-3e58-c85b7643609d_inf.htm" target="info">Task2</a></td>
+<td class="arrow"><a href="#LINK_TOP"><img src="images/up_arrow.gif" width="16" height="16" alt="TOP" border="0"></a></td>
+</tr><tr><td colspan="2"><i><ARIS OBJECT_TYPE></i>&nbsp;&nbsp;</td></tr>
+
+
+
+
+</table>
+
+
+
+</table>
+
+
+</table>
+
+</table>
+
+
+</table>
+
+
+
+
+</table>
+
+
+</table>
+</table>
+
+
+
+</body>
+</html>

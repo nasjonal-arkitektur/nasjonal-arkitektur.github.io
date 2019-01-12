@@ -1,0 +1,168 @@
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; UTF-8" />
+	<title>Business Publisher</title>
+<script language="JavaScript" type="text/javascript">
+
+var str = new String();
+
+function setObject(x) {
+	str = x;
+}
+function getObject() {
+	return str;
+}
+setObject("noObject");
+
+var idx = new Array(	
+	new Array(  // 1 L,R
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="*,70%" border="0" framespacing="0"> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+</FRAMESET>',
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="70%,*" border="0" framespacing="0"> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+</FRAMESET>'),
+	new Array( // 2 L,R
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="*,70%"> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAMESET cols="*,70%"> \
+		<FRAME name="tree" src="tree.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+	</FRAMESET> \
+</FRAMESET>',
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="70%,*" border="0" framespacing="0"> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAMESET cols="70%,*"> \
+		<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		<FRAME name="tree" src="tree.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+	</FRAMESET> \
+</FRAMESET>'),
+	new Array( // 3 L,R
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="*,70%" border="0" framespacing="0"> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAMESET cols="*,70%"> \
+		<FRAME name="info" src="empty.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+	</FRAMESET> \
+</FRAMESET>',
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="70%,*" border="0" framespacing="0"> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAMESET cols="70%,*"> \
+		<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		<FRAME name="info" src="empty.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+	</FRAMESET> \
+</FRAMESET>'),
+	new Array( // 4 L,R
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="*,80%" border="0" framespacing="0"> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAMESET  cols="*,60%,20%"> \
+		<FRAME name="info" src="empty.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		<FRAME name="tree" src="tree.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+	</FRAMESET> \
+</FRAMESET>',
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="80%,*" border="0" framespacing="0"> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAMESET  cols="20%,60%,*"> \
+		<FRAME name="tree" src="tree.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		<FRAME name="info" src="empty.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+	</FRAMESET> \
+</FRAMESET>'),
+	new Array( // 5 L,R
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="*,70%" border="0" framespacing="0"> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAMESET cols="*,70%"> \
+		<FRAMESET  rows="40%,*"> \
+			<FRAME name="tree" src="tree.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+			<FRAME name="info" src="empty.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		</FRAMESET> \
+		<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+	</FRAMESET> \
+</FRAMESET>',
+'<FRAMESET  rows="51,*"> \
+	<FRAMESET  cols="70%,*" border="0" framespacing="0"> \
+		<FRAME name="head" src="main_nav.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+		<FRAME name="model" src="##MODEL##" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize> \
+	</FRAMESET> \
+	<FRAMESET  cols="70%,*"> \
+		<FRAME name="data" src="main_entry.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		<FRAMESET  rows="40%,*"> \
+			<FRAME name="tree" src="tree.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+			<FRAME name="info" src="empty.htm" marginwidth="0" marginheight="0" scrolling="auto" frameborder="no"> \
+		</FRAMESET> \
+	</FRAMESET> \
+</FRAMESET>')
+);
+
+
+function parseQueryString(str) {
+	str = str ? str : location.search;
+	var query = str.charAt(0) == '?' ? str.substring(1) : str;
+	var args = new Object();
+	if (query) {
+		var fields = query.split('&');
+		for (var f = 0; f < fields.length; f++) {
+			var field = fields[f].split('=');
+			args[unescape(field[0].replace(/\+/g, ' '))] = unescape(field[1].replace(/\+/g, ' '));
+		}
+	}
+	return args;
+}
+
+// layout 1..5
+// direction 0=L 1=R
+
+function OpenModel(layout, direction) {
+  	document.close();
+  	document.close();
+  	var args = parseQueryString();
+	document.open("text/html","replace");
+	var model = args['model'] ? args['model'] : 'empty.htm';
+	var userlayout = args['layout'] ? args['layout'] : layout;
+	var userdirection = args['direction'] ? args['direction'] : direction;
+	if ((userlayout > 0) && (userlayout < 6)) {
+		layout = userlayout;
+	}
+	if ((userdirection >= 0) && (userdirection < 2)) {
+		direction = userdirection;
+	}
+	var frame = idx[layout-1][direction];
+	var newframe = frame.replace(/##MODEL##/,model);
+	document.writeln(newframe);
+  	document.close();
+	
+}
+
+
+OpenModel(5,0);
+</script>

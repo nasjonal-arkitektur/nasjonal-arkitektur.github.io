@@ -1,0 +1,68 @@
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>Business Publisher</title>
+	<script src="properties.js"></script>
+<script language="JavaScript"> 
+<!-- 
+var selectedLangTag = "en";
+
+var JsTargetModInf = "info"; 
+var JsTargetGfx = "data"; 
+var JsModName = "Subprocess"; 
+var JsModFile = "m6af477d0-164d-11e9-3e58-c85b7643609d"; 
+
+
+
+var str = new String();
+	
+function getObject() {
+	if (parent.frames.length != 0) {
+		str = parent.getObject();
+	}
+	return str;
+}
+
+function setObject(x) {
+	if (parent.frames.length != 0) {
+		parent.setObject(x);
+	}
+}
+
+function forCenter(model,fname) {
+	if (parent.frames.length != 0) {
+		parent.frames.model.location.href = model;
+		parent.setObject(fname);
+	}
+	
+}
+
+
+function JS_Open_Initialize() { 
+    if (parent.frames.length == 0) { 
+        //call index; 
+        top.location.href = "index_flex.htm?model=" + JsModFile + "_nav.htm"; 
+    } else { 
+        window.setTimeout('GoIT()',100); 
+    } 
+} 
+
+function GoIT() { 
+	if (parent.frames.length != 0) {		
+	    parent.frames["head"].JS_History_AddModel( JsModName, JsModFile+"_nav.htm"); 
+	    parent.frames[JsTargetModInf].location.href = JsModFile + "_inf.htm"; 
+    	parent.frames[JsTargetGfx].location.href = JsModFile + "_gfx.htm"; 
+		parent.frames["tree"].showOverviewTab();
+	}
+} 
+
+//--> 
+</script> 
+<link rel="STYLESHEET" type="text/css" href="styles.css">
+</head>
+<body class="nav" onLoad="javascript: JS_Open_Initialize(); return true;">
+<img src="images/webpublisher_logo.gif" width="16" height="16" alt="" border="0" align="middle">
+<span id="aris" style="padding-top:4px;font-weight: bold; font-family: Arial; font-size: 10px;height:16px;">
+&nbsp;<script>document.write(properties[selectedLangTag]['wp_title']);</script></span>
+</body>
+</html>
