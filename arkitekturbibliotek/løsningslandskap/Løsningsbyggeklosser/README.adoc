@@ -9,8 +9,8 @@
 
 :preamble: Løsningsbyggeklosser ...
 
-include::../felles/includes/standardheader.adoc[]
-include::../felles/includes/commonlinks1.adoc[]
+include::./felles/includes/standardheader.adoc[]
+include::./felles/includes/commonlinks1.adoc[]
 
 // Article contents written below
 :numbered: 

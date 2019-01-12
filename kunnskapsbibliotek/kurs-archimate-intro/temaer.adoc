@@ -1,6 +1,6 @@
 :lang: no
 :doctitle: Temaer
-include::../felles/includes/commonincludes.adoc[]
+include::./felles/includes/commonincludes.adoc[]
 [.lead]
 :imagesdir!:
 

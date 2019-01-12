@@ -10,8 +10,8 @@
 :keywords_en: 
 :keywords_en:
 :revdate: 2018-08-06
-include::..//common/includes/standardheader.adoc[]
-include::..//common/includes/commonlinks1.adoc[]
+include::./felles/includes/standardheader.adoc[]
+include::./felles/includes/commonlinks1.adoc[]
 
 ifeval::["{lang}" == "no"]
 #Norsk innhold skrives her...#

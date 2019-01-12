@@ -7,8 +7,8 @@
 :keywords_no: dokumentasjon, GitHub, innholdsproduksjon
 :keywords_en: documentation, GitHub, content production
 
-include::..//common/includes/standardheader.adoc[]
-include::..//common/includes/commonlinks1.adoc[]
+include::./felles/includes/standardheader.adoc[]
+include::./felles/includes/commonlinks1.adoc[]
 
 
 == Etabler lokal filmappe for kloning av github-filer

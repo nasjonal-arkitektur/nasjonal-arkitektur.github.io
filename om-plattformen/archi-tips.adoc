@@ -3,7 +3,7 @@
 
 
 ifndef::standardheader_included[]
-include::../felles/includes/standardheader.adoc[]
+include::./felles/includes/standardheader.adoc[]
 endif::[]
 
 

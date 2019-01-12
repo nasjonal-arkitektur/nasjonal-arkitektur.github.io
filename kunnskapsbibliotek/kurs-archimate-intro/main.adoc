@@ -30,4 +30,4 @@ include::./temaer.adoc[Kjøreplan]
 :leveloffset: -1
 == Kilder til kunnskap
 :leveloffset: +1
-include::../kilder-til-kunnskap.adoc[]
+include::../standard-archimate/kilder-til-kunnskap.adoc[]

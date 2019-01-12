@@ -6,8 +6,8 @@
 :doctitle_no: Introduksjon til dokumentasjonskonvensjoner
 :keywords_no: dokumentasjon, konvensjoner, retningslinjer
 :keywords_en: documentation, conventions, guidelines
-include::..//common/includes/standardheader.adoc[]
-include::..//common/includes/commonlinks1.adoc[]
+include::./felles/includes/standardheader.adoc[]
+include::./felles/includes/commonlinks1.adoc[]
 
 
 == Generelt om dokumentasjonsformater, lagringsmedia og verktøy 

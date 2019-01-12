@@ -4,8 +4,8 @@
 :preamble: Om Archimate-standarden, læringsressurser og opplæringstilbud 
 
 ifndef::standardheader_included[]
-include::../felles/includes/standardheader.adoc[]
-include::../felles/includes/commonlinks1.adoc[]
+include::./felles/includes/standardheader.adoc[]
+include::./felles/includes/commonlinks1.adoc[]
 endif::[]
 
 

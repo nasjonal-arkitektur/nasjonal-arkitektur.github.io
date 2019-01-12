@@ -2,7 +2,7 @@
 :keywords: Referansearkitekturer
 ifndef::standardheader_included[]
 :doctitle: Strategi for arbeidet med referansearkitekturer
-include::../felles/includes/standardheader.adoc[]
+include::./felles/includes/standardheader.adoc[]
 endif::[]
 
 = Strategi for arbeidet med referansearkitekturer

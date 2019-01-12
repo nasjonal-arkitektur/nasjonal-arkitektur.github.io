@@ -1,7 +1,7 @@
 :lang: no
 :doctitle: Praktiske øvelser
 
-include::../felles/includes/commonincludes.adoc[]
+include::./felles/includes/commonincludes.adoc[]
 
 [.lead]
 
