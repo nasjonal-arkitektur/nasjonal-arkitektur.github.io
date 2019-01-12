@@ -5,7 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<title>Generelt om dokumentasjonsformater, lagringsmedia og verktøy</title>
+<meta name="keywords" content="dokumentasjon, konvensjoner, retningslinjer">
+<meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
+<title>Introduksjon til dokumentasjonskonvensjoner</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -429,17 +431,32 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
+<h1>Introduksjon til dokumentasjonskonvensjoner</h1>
+<div class="details">
+<span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
+<span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
+<span id="revdate">2018-08-06</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Innhold</div>
+<ul class="sectlevel1">
+<li><a href="#_generelt_om_dokumentasjonsformater_lagringsmedia_og_verktøy">1. Generelt om dokumentasjonsformater, lagringsmedia og verktøy</a></li>
+<li><a href="#_innholdsproduksjon_i_markdown_format">2. Innholdsproduksjon i Markdown format</a></li>
+<li><a href="#_innholdsproduksjon_i_asciidoc_format">3. Innholdsproduksjon i Asciidoc format</a></li>
+<li><a href="#_archimate_modellering">4. Archimate-modellering</a></li>
+<li><a href="#_bpmn_modellering">5. BPMN-modellering</a></li>
+<li><a href="#_uml_modellering">6. UML-modellering</a></li>
+<li><a href="#_annet">7. Annet</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
-<div class="paragraph">
-<p>Unresolved directive in --dokumentasjonskonvensjoner.adoc - include::./felles/includes/standardheader.adoc[]
-Unresolved directive in --dokumentasjonskonvensjoner.adoc - include::./felles/includes/commonlinks1.adoc[]</p>
-</div>
 <div class="sect1">
-<h2 id="_generelt_om_dokumentasjonsformater_lagringsmedia_og_verktøy">Generelt om dokumentasjonsformater, lagringsmedia og verktøy</h2>
+<h2 id="_generelt_om_dokumentasjonsformater_lagringsmedia_og_verktøy"><a class="anchor" href="#_generelt_om_dokumentasjonsformater_lagringsmedia_og_verktøy"></a><a class="link" href="#_generelt_om_dokumentasjonsformater_lagringsmedia_og_verktøy">1. Generelt om dokumentasjonsformater, lagringsmedia og verktøy</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Eksisterende innhold i diverse formater og verktøy for tekst og multimedia bør kunne lenkes til fra innhold og oversikter i det GitHub-baserte arkitekturbiblioteket, uten at filene flyttes tli GitHub eller konverteres til nye formater. Se <mark>TBD</mark> for mer om dette.</p>
@@ -464,7 +481,7 @@ Unresolved directive in --dokumentasjonskonvensjoner.adoc - include::./felles/in
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Mange  har sterke synspunkter om hva som burde være "vår" standard - Markdown eller Asciidoc. Dette er bakgrunnen for at det i det minste inntil videre åpnes for begge deler, selv om det gir risiko for ekstrajobb med opprydding i neste omgang. Det viktigste er uansett at "alle" som vil dokumentere, får det gjort.
@@ -501,7 +518,7 @@ Mange  har sterke synspunkter om hva som burde være "vår" standard - Markdown 
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Det er mulig å lagre tradisjonelle dokumenter på github, slik som f.eks Word eller pdf, men dette gjøres i minst mulig grad. Andre teknologier er bedre egnet enn GitHub for lagring og søk i dokumenter. Total størrelse på Github-biblioteket bør dessuten begrenses, slik at det lar seg klone til den enkeltes lokale filområde (det er slik en jobber med innhold i github).
@@ -512,7 +529,7 @@ Det er mulig å lagre tradisjonelle dokumenter på github, slik som f.eks Word e
 </div>
 </div>
 <div class="sect1">
-<h2 id="_innholdsproduksjon_i_markdown_format">Innholdsproduksjon i Markdown format</h2>
+<h2 id="_innholdsproduksjon_i_markdown_format"><a class="anchor" href="#_innholdsproduksjon_i_markdown_format"></a><a class="link" href="#_innholdsproduksjon_i_markdown_format">2. Innholdsproduksjon i Markdown format</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Marddown kan brukes</p>
@@ -520,7 +537,7 @@ Det er mulig å lagre tradisjonelle dokumenter på github, slik som f.eks Word e
 </div>
 </div>
 <div class="sect1">
-<h2 id="_innholdsproduksjon_i_asciidoc_format">Innholdsproduksjon i Asciidoc format</h2>
+<h2 id="_innholdsproduksjon_i_asciidoc_format"><a class="anchor" href="#_innholdsproduksjon_i_asciidoc_format"></a><a class="link" href="#_innholdsproduksjon_i_asciidoc_format">3. Innholdsproduksjon i Asciidoc format</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><mark>TBD</mark></p>
@@ -528,7 +545,7 @@ Det er mulig å lagre tradisjonelle dokumenter på github, slik som f.eks Word e
 </div>
 </div>
 <div class="sect1">
-<h2 id="_archimate_modellering">Archimate-modellering</h2>
+<h2 id="_archimate_modellering"><a class="anchor" href="#_archimate_modellering"></a><a class="link" href="#_archimate_modellering">4. Archimate-modellering</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><mark>TBD</mark></p>
@@ -536,7 +553,7 @@ Det er mulig å lagre tradisjonelle dokumenter på github, slik som f.eks Word e
 </div>
 </div>
 <div class="sect1">
-<h2 id="_bpmn_modellering">BPMN-modellering</h2>
+<h2 id="_bpmn_modellering"><a class="anchor" href="#_bpmn_modellering"></a><a class="link" href="#_bpmn_modellering">5. BPMN-modellering</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><mark>TBD</mark></p>
@@ -544,7 +561,7 @@ Det er mulig å lagre tradisjonelle dokumenter på github, slik som f.eks Word e
 </div>
 </div>
 <div class="sect1">
-<h2 id="_uml_modellering">UML-modellering</h2>
+<h2 id="_uml_modellering"><a class="anchor" href="#_uml_modellering"></a><a class="link" href="#_uml_modellering">6. UML-modellering</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><mark>TBD</mark></p>
@@ -552,7 +569,7 @@ Det er mulig å lagre tradisjonelle dokumenter på github, slik som f.eks Word e
 </div>
 </div>
 <div class="sect1">
-<h2 id="_annet">Annet</h2>
+<h2 id="_annet"><a class="anchor" href="#_annet"></a><a class="link" href="#_annet">7. Annet</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -569,7 +586,7 @@ Det er mulig å lagre tradisjonelle dokumenter på github, slik som f.eks Word e
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-10-19 20:58:26 Vest-Europa (sommertid)
+Siste oppdatert 2019-01-12 03:10:11 Vest-Europa (normaltid)
 </div>
 </div>
 </body>
