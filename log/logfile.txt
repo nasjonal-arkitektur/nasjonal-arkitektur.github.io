@@ -283,3 +283,5 @@
 12.01.2019 04:06:50: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\test1\test1.2\test1.2.adoc)
 12.01.2019 04:09:01: GenerateHtml
 12.01.2019 04:09:02: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\praktiske-tips\archi\main.adoc)
+12.01.2019 04:19:34: GenerateHtml
+12.01.2019 04:19:34: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\praktiske-tips\archi\main.adoc)
