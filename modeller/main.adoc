@@ -27,10 +27,11 @@ Se https://nasjonal-arkitektur.github.io/praktiske-tips/#_praktiske_tips_om_sama
 
 Det primære fellesbiblioteket er: https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur.
 
-Følgende biblioteker er dessuten tilgjengelige for lesing, samt eventuelt redigering av autoriserte brukere:
+Følgende biblioteker er dessuten tilgjengelige for lesing, samt eventuelt redigering av autoriserte brukere via Archi Collaboration plugin:
 
 (Flere kommer her.)
 
+== Nedlastbare modellfiler
+(Flere kommer her.)
 
 
-Som verktøy benyttes et  Archi  difi-nasjonal-arkitektur et felles bibliotek i vektøyet Archi, der det ...

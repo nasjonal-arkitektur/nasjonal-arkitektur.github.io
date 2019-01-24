@@ -242,3 +242,6 @@
 24.01.2019 05:51:49: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\test1\test1-Kopi.adoc)
 24.01.2019 05:51:51: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\test1\test1.1\index.adoc)
 24.01.2019 05:51:52: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\test1\test1.2\test1.2.adoc)
+24.01.2019 06:07:10: GenerateHtml
+24.01.2019 06:07:10: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\arkitekturbibliotek\main.adoc)
+24.01.2019 06:07:12: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\modeller\main.adoc)
