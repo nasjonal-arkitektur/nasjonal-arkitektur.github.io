@@ -10,7 +10,7 @@ Asciidoc er....
 image:./felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold
 
 :imagesdir!:
-:imagesdir: ./images
+:imagesdir@: ./images
 
 
 ////

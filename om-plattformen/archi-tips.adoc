@@ -11,7 +11,7 @@ endif::[]
 Archi er et gratis og open-source verktøy som støtter Archimate-standarden for arkitekturdokumentasjon, og har tillegg som muliggjør samarbeid rundt felles repository på Github.  
 
 :imagesdir!:
-:imagesdir: ./images
+:imagesdir@: ./images
 image:archi-logo.png[]
 
 ////

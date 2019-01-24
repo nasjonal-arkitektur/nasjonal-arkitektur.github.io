@@ -5,8 +5,8 @@
 
 include::./felles/includes/commonincludes.adoc[]
 
-:imagesdir!:
-:imagesdir: ./images
+
+//:imagesdir@: ./images
 
 //image:eif.png[width=300, height=300]
 

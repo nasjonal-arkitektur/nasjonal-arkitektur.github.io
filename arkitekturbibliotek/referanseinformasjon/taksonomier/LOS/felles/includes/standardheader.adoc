@@ -94,11 +94,11 @@ endif::[]
 :sectanchors:
 :sectnumlevels: 3
 :xrefstyle: short
-//:imagesdir: ..//felles/images
+//:imagesdir@: ..//felles/images
 //:imagesdir!:
 ////
 ifdef::attr-root-dir[]
-:imagesdir: ./common/images
+:imagesdir@: ./common/images
 endif::[]
 ////
 // data-uri benyttes for å inkludere images i generert html-fil :data-uri:

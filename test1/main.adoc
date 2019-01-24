@@ -6,7 +6,7 @@
 include::./felles/includes/standardheader.adoc[]
 
 :imagesdir!:
-:imagesdir: ./images
+:imagesdir@: ./images
 
 image:eif.png[width=300, height=300]
 

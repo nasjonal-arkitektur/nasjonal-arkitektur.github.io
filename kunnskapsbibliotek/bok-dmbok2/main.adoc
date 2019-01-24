@@ -12,7 +12,7 @@ endif::[]
 Data Management Body of Knowledge (2nd Edition) fra DAMA er et omfattende verk om data- og informasjonsforvaltning, Utgitt 2017-07-10.
 
 :imagesdir!:
-:imagesdir: ./images
+:imagesdir@: ./images
 image:dama-dmbok-front.png[width=150, height=150] 
 
 

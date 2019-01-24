@@ -5,7 +5,7 @@
 include::./felles/includes/commonincludes.adoc[]
 
 
-:imagesdir: ./images
+:imagesdir@: ./images
 
 
 Som del av modellering av digital samhandlingsprosess, se link:./Steg1.adoc[steg 1], så er det naturlig å identifisere hvilket link:./Samhandlingsmønstre.adoc[samhandlingsmønster] som gjelder for hver enkelt samhandling.

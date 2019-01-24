@@ -14,7 +14,6 @@ image:./felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold
 ////
 
 
-:leveloffset: +1
 == Praktiske tips for å komme igang med GitHub
 :leveloffset: +1
 include::./github/main.adoc[]

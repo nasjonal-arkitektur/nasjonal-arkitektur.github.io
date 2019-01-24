@@ -12,7 +12,7 @@ endif::[]
 Navigating the Labyrinth is a concise guide to data management, providing an executive’s overview to the DMBOK2. Utgitt 2018-06-01.
 
 :imagesdir!:
-:imagesdir: ./images
+:imagesdir@: ./images
 image:bokfront-navigating-the-labyrinth.png[width=100, height=100]
 
 ////
