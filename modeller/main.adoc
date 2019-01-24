@@ -13,10 +13,24 @@ endif::[]
 image:./felles/images/i-arbeid.png[width=75, height=75]
 
 [.lead] 
-Fellesoffentlige arkitekturmodeller finnes i et felles modellbibliotek som kan nås via GitHub.
+Samarbeid om arkitekturmodeller i Nasjonalt arkitekturbibliotek gjøres via filutveksling av standard utvekslingsformater for Archimate, BPMN, UML og DMN, med lagring på Github. Det benyttes også en Collaboration plugin til gratisverktøyet Archi. Modellene publiseres på web.
 
 
 //:leveloffset: +1
 
-== Praktiske tips
+== Publiserte modeller
+Se https://nasjonal-arkitektur.github.io/modeller/hovedbibliotek
+
+
+== Redigering av Archi-modeller via Collaboration plugin
+Se https://nasjonal-arkitektur.github.io/praktiske-tips/#_praktiske_tips_om_samarbeid_med_archi.
+
+Det primære fellesbiblioteket er: https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur.
+
+Følgende biblioteker er dessuten tilgjengelige for lesing, samt eventuelt redigering av autoriserte brukere:
+
+(Flere kommer her.)
+
+
+
 Som verktøy benyttes et  Archi  difi-nasjonal-arkitektur et felles bibliotek i vektøyet Archi, der det ...
