@@ -16,3 +16,4 @@
 11.02.2019 12:13:26: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_ssb_skattetaten--folkeregisteret\main.adoc)
 11.02.2019 12:13:28: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_ssb_xxx – Kopi (10) – Kopi – Kopi – Kopi\main.adoc)
 11.02.2019 12:13:30: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_referanse_maler_asciidoc\mal-fellesløsning.adoc)
+11.02.2019 12:19:18: GenerateHtml
