@@ -5,8 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="Fellesløsning">
-<title>&lt;Løsningsnavn&gt;</title>
+<meta name="keywords" content="nasjonal arkitektur, virksomhetsarkitektur">
+<title>Altinn tilgangsstyring</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -433,13 +433,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>&lt;Løsningsnavn&gt;</h1>
+<h1>Altinn tilgangsstyring</h1>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved directive in mal-fellesløsning.adoc - include::./na_felles/includes/commonincludes.adoc[]</p>
+<p>Unresolved directive in altinn-tilgangsstyring.adoc - include::./na_felles/includes/commonincludes.adoc[]</p>
 </div>
 </div>
 </div>
@@ -447,7 +447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_løsningsnavn">Løsningsnavn</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Navn på "løsning" (komponent, tjeneste, register).&gt;</span></p>
+<p>Altinn tilgangsstyring</p>
 </div>
 </div>
 </div>
@@ -455,7 +455,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_kort_beskrivelse">Kort beskrivelse</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Kort beskrivelse med overordnet informasjon om formål og funksjonsområde.&gt;</span></p>
+<p>Altinn Tilgangsstyring (tidligere Altinn Autorisasjon), betegner et sett tjenester og funksjoner knyttet til å styre hvem som kan bruke en digital tjeneste.
+Bruker (person eller virksomhet) autentiseres av ID-porten eller en egen løsning for autentisering i Altinn, før Altinn overtar og gir adgang til å benytte data eller tjenester basert på autorisasjon.
+Autorisasjon kan være basert på hjemmel, delegert tilgang, fullmakter, eller samtykke til å dele data og Altinn benytter eksterne autorisasjonskilder (Enhetsregisteret, DSF) i beslutning om autorisasjon.
+I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logger (""mine data som er levert ut basert på mine samtykker""), og som kan bygges ut til mer fullstendige oversikter iht. behov avlevert av GDPR e a.
+Disse løsningene skal kunne benyttes som frittstående moduler, uavhengig av om man benytter andre moduler/tjenester/funksjoner i Altinn. F eks kjøres det en POC på bruk av løsningen for helsenorge.no. Løsningen er under utvikling i et eget prosjekt kalt Helhetlig tilgangsstyring (HELT), og innsikts- og spesifikasjonsarbeid pågår høsten 2018. Herunder samspillet med den ""videreutviklete"" ID-porten (OAuth mv).</p>
 </div>
 </div>
 </div>
@@ -463,7 +467,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_forvaltningsansvarlig">Forvaltningsansvarlig</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Navn på virksomhet.&gt;</span></p>
+<p>Brønnøysundregistrene v/ avd Digitalisering (Altinn-organisasjonen)</p>
 </div>
 </div>
 </div>
@@ -471,7 +475,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_målgruppe">Målgruppe</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Angi en eller flere av følgende, eventuelt med kommentarer: 1. Borgere eller 2. Virksomheter i a) offentlig sektor (stat/kommune), b) privat sektor, c) frivillige organisasjoner, d) skoler og universiteter.&gt;</span></p>
+<p>Primært offentlige virksomheter som utvikler og tilbyr digitale tjenester til sine brukere, både innbyggere og virksomheter. Det jobbes for at data og tjenester også skal kunne tilbys virksomheter i privat sektor, og således bli en plattform for innovasjon og verdiskaping også i privat sektor.</p>
 </div>
 </div>
 </div>
@@ -479,7 +483,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_funksjonalitet_as_is">Funksjonalitet (as-is)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Opplisting av funksjoner eller tjenester, eventuelt med forklaring.&gt;</span></p>
+<p>Hjemmelbasert Autorisasjon (f eks i kraft av et ansettelsesforhold eller registrert regnskapsfører/revisor)
+Tilgang kan delegeres (leder gir tilgang til underordnet, eller virksomhet til regnskapsfører etc)
+Fullmakt basert tilgang (f eks foreldre til barn, advokat for en privatperson, vergemål mv)
+Samtykke basert tilgang (samtykkebasert innhenting av opplysninger, f eks ved en søknad om boliglån)
+I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logger (""mine data som er levert ut basert på mine samtykker""), og som kan bygges ut til mer fullstendige oversikter iht. behov avlevert av GDPR e a.</p>
+</div>
+<div class="paragraph">
+<p>Disse løsningene skal kunne benyttes som frittstående moduler, uavhengig av om man benytter andre moduler/tjenester/funksjoner i Altinn.</p>
 </div>
 </div>
 </div>
@@ -487,7 +498,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_føringer_for_bruk">Føringer for bruk</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Lover, regler eller andre føringer som gir holdepunkt for å si at det er obligatorisk eller anbefalt å bruke eller vurdere aktuell løsning.&gt;</span></p>
+<p>Samme som Altinn tjenesteplattform.</p>
 </div>
 </div>
 </div>
@@ -495,7 +506,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_bruk">Bruk</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Relevant tilgjengelig informasjon om bruk og utbredelse - hvem bruker hva hvor mye, f.eks. statistikk med antall virksomheter eller personer og f.eks. antall tjenestekall eller transaksjoner. Eventuelt trendanalyse.&gt;</span></p>
+<p>Benyttes til å delegere tilganger og rettigheter på vegne av andre</p>
 </div>
 </div>
 </div>
@@ -503,7 +514,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_datakvalitet">Datakvalitet</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Dette feltet er spesielt relevant for dataregistrene, men kan også oppgis for løsninger som bruker dataregistre. Er datakvaliteten svært god, akseptabel, problematisk, uakseptabel? Gi gjerne også videre kommentarer som belyser problemene, f.eks. hvilke data det gjelder, årsaker og mulige løsninger. &gt;</span></p>
+<p>Altinn tilgangsstryring bruker roller registrert i Enhetsregisteret(ER) grunnlaget for tilgangsstyring til virksomheter. I dag oppleves kvaliteten som tilfredstillende, noe bruken av disse dataene i Altinn har bidratt til.</p>
 </div>
 </div>
 </div>
@@ -511,7 +522,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_dagens_sourcingmodell">Dagens sourcingmodell</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Hvem gjør utvikling og drift av plattform og applikasjoner per i dag. Outsourcing? Skybasert (IaaS, Paas, SaaS)?&gt;</span></p>
+<p>Samme som Altinn tjenesteplattform.</p>
 </div>
 </div>
 </div>
@@ -519,7 +530,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_effektproduktregnskap">Effekt/produktregnskap</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Relevant, tilgjengelig, informasjon om kost/nytte, f.eks. i form av produktkalkyler, ROI, oversikt over kostnader og inntekter, samfunnsøkonomisk analyse, gevinstrealisering.&gt;</span></p>
+<p>-</p>
 </div>
 </div>
 </div>
@@ -527,7 +538,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_merkantile_forhold">Merkantile forhold</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Kostnader og betalingsmodleller forbundet med bruk. Er det f.eks. sentralfinansiering av alle kostnader, eller betales det for bruk av virksomheter eller sluttbrukere (eventuelt på transaksjonesbasis eller abonnementsbasis).&gt;</span></p>
+<p>Alle komponenten i Altinn bortsett fra DPV finansieres etter samme prinsipper:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Utvikling av Altinn-løsningen skal finansieres sentralt via BRs budsjetter.</p>
+</li>
+<li>
+<p>Tjenesteeiere skal finansiere kostnader knyttet til drift og driftsrelatert applikasjonsforvaltning</p>
+</li>
+<li>
+<p>Utvikling og vedlikehold av sluttbrukertjenestene finansieres særskilt enten av en enkelt
+tjenesteeier eller som egne satsninger.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -535,7 +560,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_utviklingsplaner_og_finansiering">Utviklingsplaner og finansiering</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Redegjør for gjeldende utvklingsplaner, helst med spesifisering av finansiering (beløp og kilde), tidplaner og funksjonalitet/tjenester.&gt;</span></p>
+<p>Plattformen er underveis i et større videreutviklingsløp; hvor man ser tjenesteplattformen (både tjenesteutviklingsløsningen beskrevet over, og også avansert funksjonalitet rundt API-management mv) i samspill med Altinn Autorisasjon (og ID-porten), og de felles katalogene fra informasjonsforvaltning, i sammenheng. Det er for 2018 tildelt 100 millioner til videreutvikling i 2018 (inkludert også Altinn Autorisasjon og API-katalog). De første leveransene kommer i 4 kvartal, og det vil bli kontinuerlige leveranser gjennom 2019 og 2020.</p>
 </div>
 </div>
 </div>
@@ -543,7 +568,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_langsiktig_roadmap">Langsiktig roadmap</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Ser en for seg vesentlige endringer i videreutvikling av løsningen på sikt - funksjonelt, teknisk, sourcing?&gt;</span></p>
+<p>Stor satsing på Helhetlig tilgangsstyring nå- videreutvikling av dagens autorisasjonsløsning</p>
 </div>
 </div>
 </div>
@@ -551,8 +576,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_overlappende_løsninger">Overlappende løsninger</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Finnes det andre løsninger som helt eller delvis dekker samme behov, slik at det kan være interessant å vurdere konsolidering? Hvilke andre løsninger (eventuelt eksempler)?
-&gt;</span></p>
+<p>Nei, det finnes ikke andre løsninger i forvaltningen i dag.</p>
 </div>
 </div>
 </div>
@@ -560,7 +584,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_gjenbrukspotensiale">Gjenbrukspotensiale</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Er dette en løsning som er ment å skulle gjenbrukes (eller viderebrukes) i utvikling av andre løsninger. Eventuelt kvantisfiser som "lite, middels. stort" eller angi mer spesifikke estimater.&gt;</span></p>
+<p>Stort gjennbrukspotensiale.</p>
 </div>
 </div>
 </div>
@@ -568,7 +592,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_interoperabilitet">Interoperabilitet</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Spesielle problemstilllinger rundt interoperabilitet - juridisk, organisasjonsmessig, teknisk, semantisk. Herunder f.eks. problemer med tilgang til data.&gt;</span></p>
+<p>-</p>
 </div>
 </div>
 </div>
@@ -576,7 +600,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_integrasjonsamhandling">Integrasjon/samhandling</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Hvordan samspiller denne løsningen med andre løsninger (fellesløsninger eller annet)?&gt;</span></p>
+<p>Spiller sammen med autentiseringskomponenten ID-Porten</p>
 </div>
 </div>
 </div>
@@ -584,7 +608,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_avhengigheter">Avhengigheter</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Hvilke typer tjenester er denne løsningen avhengg av? Hvilke spesifikke tjenester er denne løsningen avhengg av?&gt;</span></p>
+<p>Avhengig av resten av Altinn-plattformen og ID-porten</p>
 </div>
 </div>
 </div>
@@ -592,7 +616,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_arkitekturprinsipper">Arkitekturprinsipper</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Finnes dokumentert vurdering av samsvar med  de overordende arkitekturprinsippene fra Difi ; ref. [1]? Finnes dokumentert vurdering av samsvar med  "Kap. 11.1 Strategiske prinsipper for nasjonale felleskomponenter" i Digital Agenda av 2016; ref. [2]?.  Finnes alternativt eller i tillegg dokumentert vurdering av samsvar med andre arkitekturprinsipper, designprinsipper eller liknende (f.eks. innen innovasjon, brukerretting, informasjonsforvaltning)?&gt;</span></p>
+<p>Systemdokumentasjon finnes på <a href="https://github.com/Altinn/docs" class="bare">https://github.com/Altinn/docs</a></p>
 </div>
 </div>
 </div>
@@ -600,15 +624,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_annet">Annet</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="blue">&lt;Annen informasjon eller synspunkter (i tilknytning til denne fellesløsningen eller mer generelt) som kan være relevant for arbeid med regjeringens digitaliseringsstrategi.
-&gt;</span></p>
+<p>-</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-11 11:27:51 Vest-Europa (normaltid)
+Last updated 2019-02-11 10:34:17 Vest-Europa (normaltid)
 </div>
 </div>
 </body>
