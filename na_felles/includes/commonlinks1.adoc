@@ -4,7 +4,7 @@
 
 :path_solution_building_blocks: {path_architeture_repo_root}/Løsningsbyggeklosser
 
-:url_github_difi_nasjonal_arkitektur: https://github.com/difi/nasjonal_arkitektur/[GitHub-bibliotek for Nasjonal arkitektur]
+:url_github_difi_nasjonal_arkitektur: https://github.com/nasjonal-arkitektur/[GitHub-bibliotek for Nasjonal arkitektur]
 
 :url_togaf_92: http://pubs.opengroup.org/architecture/togaf9-doc/arch/[TOGAF 9.2]
 

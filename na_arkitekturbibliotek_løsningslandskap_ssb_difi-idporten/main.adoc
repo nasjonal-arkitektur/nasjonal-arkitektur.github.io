@@ -1,18 +1,21 @@
 :lang: no
-:doctitle: <Løsningsnavn>
+:doctitle: ID-porten
 :keywords: Fellesløsning
 :audience: alle
 include::./na_felles/includes/commonincludes.adoc[]
 
 
 == Løsningsnavn
-[blue]#<Navn på "løsning" (komponent, tjeneste, register).>#
+ID-porten
 
 == Kort beskrivelse
-[blue]#<Kort beskrivelse med overordnet informasjon om formål og funksjonsområde.>#
+ID-porten er ei felles nasjonal påloggingsløysing og ein sentral byggekloss i utviklinga av offentlege tenester på nett. Med ID-porten kan offentlege verksemder tilby innbyggarane ei sikker digital teneste.  
+
+Med kjende elektroniske ID som MinID, BankID, Buypass og Commfides får brukarane fordelen av å nytta påloggingsløysingar dei kjenner frå før. Dermed slepp verksemdene å tenkje på administrasjon av brukarnamn og passord, samt brukarstøtte for eiga påloggingsløysing.
+
 
 == Forvaltningsansvarlig
-[blue]#<Navn på virksomhet.>#
+Difi
 
 == Målgruppe
 [blue]#<Angi en eller flere av følgende, eventuelt med kommentarer: 1. Borgere eller 2. Virksomheter i a) offentlig sektor (stat/kommune), b) privat sektor, c) frivillige organisasjoner, d) skoler og universiteter.>#
