@@ -4,6 +4,9 @@
 
 include::../na_felles/includes/commonincludes.adoc[]
 
+
+
+
 [.lead]
 Her gis praktiske tips om bruk av Github i tilknytning til arbeidet med Nasjonal arkitektur. Det gis tips om spesifikke verktøy, men hver enkelt står fritt til å velge andre alternativer.
 
@@ -68,7 +71,7 @@ Anbefalinger for disse kategoriene er:
 
 1. Bruk GitHub Desktop (enkel bruk) eller TortoiseGit (mer avansert)
 2. Bruk _Git Bash_ eller _Git CMD_ (eller Windows CMD).
-3. Arbeid direkte i nettleseren under https://github.com/nasjonal-arkitektur , uten å klone til lokalt filområde;  eventuelt bruk asciidoclive for asciidoc-dokumentasjon; ref. https://asciidoclive.com/edit/scratch/1
+3. Arbeid direkte i nettleseren under https://github.com/nasjonal-arkitektur/nasjonal-arkitektur.github.io , uten å klone til lokalt filområde;  eventuelt bruk asciidoclive for asciidoc-dokumentasjon; ref. https://asciidoclive.com/edit/scratch/1
 
 
 ==== Alternativ 1: GitHub Desktop
@@ -102,7 +105,7 @@ WARNING: Bruke MS Internet Explorer eller MS Edge! Preview fungerer ikke i Chrom
 
 Om du bruker GitHub Desktop, kan det gjøres slik:
 
-a. Åpne  GitHub-biblioteket i nettleser, dvs.   https://github.com/nasjonal-arkitektur
+a. Åpne  GitHub-biblioteket i nettleser, dvs.   https://github.com/nasjonal-arkitektur/nasjonal-arkitektur.github.io
 
 b. Velg "Clone or Download" i GitHub og velg så "Open in Desktop".
 
@@ -125,7 +128,7 @@ Disse malene finnes her: ...
 Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.
 
 === Publiser endringer
-
+Erik:TODO!
 ==== Publisering med GitHub Desktop 
 
 ==== Publisering med TortoiseGit

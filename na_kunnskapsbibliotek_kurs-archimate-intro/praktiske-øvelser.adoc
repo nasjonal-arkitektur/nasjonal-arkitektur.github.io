@@ -16,7 +16,7 @@ Se link:https://nasjonal-arkitektur.github.io/praktiske-tips/#_installer_archi_o
 
 . *Importer kurs-modellene.*
 +
-Følg oppskriften under https://nasjonal-arkitektur.github.io/praktiske-tips/#_importer_github_repository, men oppgi https://github.com/nasjonal-arkitektur/archi-kurs-1. 
+Følg oppskriften under https://nasjonal-arkitektur.github.io/praktiske-tips/#_importer_github_repository, men oppgi https://github.com/nasjonal-arkitektur/nasjonal-arkitektur.github.io/archi-kurs-1. 
 +
 WARNING: Husk å sette Preferences slik at du har kontroll på hvor på harddisken din resultatet havner.
     
