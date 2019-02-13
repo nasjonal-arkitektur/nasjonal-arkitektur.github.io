@@ -82,7 +82,7 @@ Løsning for å signere dokumenter digitalt.
 +
 Oversikt over hvilke data de ulike offentlige virksomhetene har, hvordan de henger sammen og hva de betyr.
 
-. link:../na_arkitekturbibliotek_løsningslandskap_sbb_skattetaten--folkeregisteret/[Folkeregisteret]
+. link:../na_arkitekturbibliotek_løsningslandskap_sbb_skattetaten-folkeregisteret/[Folkeregisteret]
 +
 Nasjonalt grunndataregister om personer.
 

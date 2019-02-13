@@ -343,3 +343,5 @@
 13.02.2019 14:59:36: GenerateHtml
 13.02.2019 14:59:36: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\main.adoc)
 13.02.2019 14:59:38: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-samhandlings-og-integrasjonsplattform\main.adoc)
+13.02.2019 15:01:20: GenerateHtml
+13.02.2019 15:01:20: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap\main.adoc)
