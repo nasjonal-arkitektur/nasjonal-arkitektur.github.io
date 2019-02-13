@@ -345,3 +345,8 @@
 13.02.2019 14:59:38: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-samhandlings-og-integrasjonsplattform\main.adoc)
 13.02.2019 15:01:20: GenerateHtml
 13.02.2019 15:01:20: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap\main.adoc)
+13.02.2019 15:06:18: GenerateHtml
+13.02.2019 15:06:18: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_skattetaten-folkeregisteret\main.adoc)
+13.02.2019 15:17:11: GenerateHtml
+13.02.2019 15:17:11: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap\main.adoc)
+13.02.2019 15:17:13: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_ssb\main.adoc)
