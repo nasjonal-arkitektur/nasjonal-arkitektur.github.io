@@ -11,8 +11,6 @@ include::../na_felles/includes/commonincludes.adoc[]
 Her gis praktiske tips om bruk av Github i tilknytning til arbeidet med Nasjonal arkitektur. Det gis tips om spesifikke verktøy, men hver enkelt står fritt til å velge andre alternativer.
 
 
-image:../na_felles/images/i-arbeid.png[width=75, height=75]  Omstrukturering og tillegg i arbeid
-
 ////
 ////
 
@@ -86,6 +84,7 @@ Tips: Det er kanskje en god ide å unngå å bruke nettverks-drive (som noen vir
 
 
 ==== Alternativ 2: TortoiseGit
+TBD.
 
 ==== Alternativ 3: Git Bash
 Git Bash fås med siste versjon av Git for Windows her: https://git-scm.com/download/win
@@ -112,30 +111,36 @@ b. Velg "Clone or Download" i GitHub og velg så "Open in Desktop".
 c. I GitHub Desktop, velg File | Clone a repository og angi hvor filene skal legges på din harddisk, som omtalt under avsnittet om lokla filmappe ovenfor. Om du f.eks. benytter C:\Users\eha\GitHub\Difi, vil GitHub Desktop opprette C:\Users\eha\GitHub\Difi\nasjonal_arkitektur.
 
 ==== Kloning med TortoiseGit 
+TBD.
 
 ==== Kloning med Windows kommandolinje
+TBD.
 
 ==== Kloning med Git Bash
-
+TBD.
 
 === Gjør endringer
-Du kan gjøre det helt enkelt eller mer eller mindre avansert.
+Gitt at du har skriverettigheter, kan du endre eksisterende filer, slette filer og tilsvarende for mapper. Når du gjør dette i et lokalt, klonet, repository, må du deretter synkronisere og eventuelt publisere dette før det blir tilgjengelig for andre.
 
-Difi har etablert noen maler i tilknytning til arkitekturbiblioteket som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde tekster på flere språk, metadata m.m.
 
-Disse malene finnes her: ...
+=== Synkronisering og publisering av endringer
 
-Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.
+image:../na_felles/images/i-arbeid.png[width=75, height=75] I arbeid.
 
-=== Publiser endringer
-Erik:TODO!
-==== Publisering med GitHub Desktop 
+==== Synkronisering og publisering med GitHub Desktop
+GitHub Desktop vil kontinuerlig polle og hente ned endringer fra GitHub til valgt _Current Repository_. Du vil også løpende se hvilke endringer du selv har gjort som foreløpig ikke er synkronisert tli GitHub. 
+
+For å publisere endringer med GitHub Desktop, må du først gi en _Description_, så trykke  _Commit to Master_ og til sist trykke _Push to origin_.
+
 
 ==== Publisering med TortoiseGit
+TBD.
 
 ==== Publisering med Windows kommandolinje
+TBD.
 
 ==== Publisering med Git Bash
+TBD.
 
 === Mer avanserte temaer
 

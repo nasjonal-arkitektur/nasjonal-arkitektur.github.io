@@ -5,9 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="Github">
-<meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
-<title>Praktiske tips for å komme igang med GitHub</title>
+<meta name="keywords" content="nasjonal arkitektur, virksomhetsarkitektur">
+<title>Altinn tilgangsstyring</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -431,348 +430,208 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article toc2 toc-left">
+<body class="article">
 <div id="header">
-<h1>Praktiske tips for å komme igang med GitHub</h1>
-<div class="details">
-<span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
-<span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
-</div>
-<div id="toc" class="toc2">
-<div id="toctitle">Innhold</div>
-<ul class="sectlevel1">
-<li><a href="#_generelt">1. Generelt</a></li>
-<li><a href="#_prosedyre_for_å_komme_i_gang_med_git_og_github">2. Prosedyre for å komme i gang med git og Github</a>
-<ul class="sectlevel2">
-<li><a href="#_opprett_github_bruker">2.1. Opprett GitHub bruker</a></li>
-<li><a href="#_etabler_lokal_filmappe_for_kloning_av_github_filer">2.2. Etabler lokal filmappe for kloning av github-filer</a></li>
-<li><a href="#_installer_programvare_for_git_og_github">2.3. Installer programvare for git og GitHub</a></li>
-<li><a href="#_generelt_2">2.4. Generelt</a>
-<ul class="sectlevel3">
-<li><a href="#_alternativ_1_github_desktop">2.4.1. Alternativ 1: GitHub Desktop</a></li>
-<li><a href="#_alternativ_2_tortoisegit">2.4.2. Alternativ 2: TortoiseGit</a></li>
-<li><a href="#_alternativ_3_git_bash">2.4.3. Alternativ 3: Git Bash</a></li>
-<li><a href="#_alternativ_4_asciidoclive">2.4.4. Alternativ 4: Asciidoclive</a></li>
-</ul>
-</li>
-<li><a href="#_klon_github_prosjektet_til_din_maskin">2.5. Klon GitHub-prosjektet til din maskin</a>
-<ul class="sectlevel3">
-<li><a href="#_kloning_med_github_desktop">2.5.1. Kloning med GitHub Desktop</a></li>
-<li><a href="#_kloning_med_tortoisegit">2.5.2. Kloning med TortoiseGit</a></li>
-<li><a href="#_kloning_med_windows_kommandolinje">2.5.3. Kloning med Windows kommandolinje</a></li>
-<li><a href="#_kloning_med_git_bash">2.5.4. Kloning med Git Bash</a></li>
-</ul>
-</li>
-<li><a href="#_gjør_endringer">2.6. Gjør endringer</a></li>
-<li><a href="#_synkronisering_og_publisering_av_endringer">2.7. Synkronisering og publisering av endringer</a>
-<ul class="sectlevel3">
-<li><a href="#_synkronisering_og_publisering_med_github_desktop">2.7.1. Synkronisering og publisering med GitHub Desktop</a></li>
-<li><a href="#_publisering_med_tortoisegit">2.7.2. Publisering med TortoiseGit</a></li>
-<li><a href="#_publisering_med_windows_kommandolinje">2.7.3. Publisering med Windows kommandolinje</a></li>
-<li><a href="#_publisering_med_git_bash">2.7.4. Publisering med Git Bash</a></li>
-</ul>
-</li>
-<li><a href="#_mer_avanserte_temaer">2.8. Mer avanserte temaer</a>
-<ul class="sectlevel3">
-<li><a href="#_git_submodules">2.8.1. Git Submodules</a></li>
-<li><a href="#_annet">2.8.2. Annet</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
+<h1>Altinn tilgangsstyring</h1>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph lead">
-<p>Her gis praktiske tips om bruk av Github i tilknytning til arbeidet med Nasjonal arkitektur. Det gis tips om spesifikke verktøy, men hver enkelt står fritt til å velge andre alternativer.</p>
+<div class="paragraph">
+<p>Unresolved directive in main.adoc - include::./na_felles/includes/commonincludes.adoc[]</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1. Generelt</a></h2>
+<h2 id="_løsningsnavn">Løsningsnavn</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Git er en standard for versjonskontroll og lagring av kode og dokumenter. GitHub er en av flere skytjenester som støtter git, og er den tjenesten som er valgt av Difi. Det er i utgangspunktet gratisversjonen av Github som benyttes.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Github ble oppkjøpt av Microsoft i 2018.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Github kan brukes til å lagre vilkårlige dokumenttyper, men egner seg best til tekstbaserte dokumenter, dvs. dokumenter hvor kildeformatet er rå tekst. Det er dette <em>git</em> ble laget for, og da opprinnelig for versjonsstyring og samarbeid om
-kode (programvare).</p>
-</div>
-<div class="paragraph">
-<p>Markupspråk som Markdown og Asciidoc lar deg skrive dokumenter i ren tekst, og egner seg tilsvarende godt for den funksjonaliteten som finnes rundt versjonsstyring i Github. Asciidoc er valgt her, fordi dette er lett å komme i gang med for nye brukere, samtidig som det gir avanserte muligheter for erfarne brukere. Asciidoc som kildeformat foretrekkes framfor f.eks. Microsoft Word, fordi det framstår som mer åpent og "prosesseringsvennlig". Se <a href="../na_praktiske-tips_asciidoc/asciidoc-tips.adoc">Praktiske tips on Asciidoc</a> for mer informasjon.</p>
-</div>
-<div class="paragraph">
-<p>Standard utvekslingsformater for modelleringsspråk som Archimate, BPMN, DMN og UML er også tekstbaserte, og egner seg for versjonsstyring i Github.</p>
-</div>
-<div class="paragraph">
-<p>Nasjonalt Arkitekturbibliotek er organisert i en mappestruktur med undermapper for dokumentasjon av arkitekturer, løsninger, referansearkitekturer m.m.</p>
-</div>
-<div class="paragraph">
-<p>I tillegg finnes seperate prosjektbiblioteker. Prosjektleveranser i form av dokumentasjon kopieres til "riktig" sted i strukturen under Nasjonalt arkitekturbiblitotek før prosjektslutt, mens arbeidsversjoner, møtereferater og annet prosjektspesifikt innhold tas vare på i prosjektområdet så lenge det er interessant.</p>
-</div>
-<div class="paragraph">
-<p>Skriverettigheter til selve arkitekturbiblioteket er forbeholdt medlemmer av bibliotekredaksjonen. Tilsvarende er det kun prosjektmedlemmenene som vil ha skrivetilgang til hvert  prosjekt-repository.</p>
-</div>
-<div class="paragraph">
-<p>Andre som vil bidra med innhold kan gjøre dette ved å kopiere aktuelt GitHub repository (git Fork), gjøre endringer og så spille inn endringsforslag (git Pull Request). Redaksjonen for aktuelt GitHub-repository (arkitekturbibliotek eller prosjekt) vil så behandle endringsforslaget og eventuelt ta inn nytt eller endret innhold (git merge).</p>
-</div>
-<div class="paragraph">
-<p><em>Merk: Git gir flere muligheter enn "fork" og "pull request" for å spille inn endringsforslag, men vi anbefaler inntil videre "fork" og "pull request" som nevnt.</em></p>
+<p>Altinn tilgangsstyring</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_prosedyre_for_å_komme_i_gang_med_git_og_github"><a class="anchor" href="#_prosedyre_for_å_komme_i_gang_med_git_og_github"></a><a class="link" href="#_prosedyre_for_å_komme_i_gang_med_git_og_github">2. Prosedyre for å komme i gang med git og Github</a></h2>
+<h2 id="_kort_beskrivelse">Kort beskrivelse</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_opprett_github_bruker"><a class="anchor" href="#_opprett_github_bruker"></a><a class="link" href="#_opprett_github_bruker">2.1. Opprett GitHub bruker</a></h3>
 <div class="paragraph">
-<p>Dersom du ikke allerede har en GitHub-bruker, kan dette gjøres <a href="https://github.com/join?source=header">her</a>.</p>
+<p>Altinn Tilgangsstyring (tidligere Altinn Autorisasjon), betegner et sett tjenester og funksjoner knyttet til å styre hvem som kan bruke en digital tjeneste.
+Bruker (person eller virksomhet) autentiseres av ID-porten eller en egen løsning for autentisering i Altinn, før Altinn overtar og gir adgang til å benytte data eller tjenester basert på autorisasjon.
+Autorisasjon kan være basert på hjemmel, delegert tilgang, fullmakter, eller samtykke til å dele data og Altinn benytter eksterne autorisasjonskilder (Enhetsregisteret, DSF) i beslutning om autorisasjon.
+I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logger (""mine data som er levert ut basert på mine samtykker""), og som kan bygges ut til mer fullstendige oversikter iht. behov avlevert av GDPR e a.
+Disse løsningene skal kunne benyttes som frittstående moduler, uavhengig av om man benytter andre moduler/tjenester/funksjoner i Altinn. F eks kjøres det en POC på bruk av løsningen for helsenorge.no. Løsningen er under utvikling i et eget prosjekt kalt Helhetlig tilgangsstyring (HELT), og innsikts- og spesifikasjonsarbeid pågår høsten 2018. Herunder samspillet med den ""videreutviklete"" ID-porten (OAuth mv).</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_etabler_lokal_filmappe_for_kloning_av_github_filer"><a class="anchor" href="#_etabler_lokal_filmappe_for_kloning_av_github_filer"></a><a class="link" href="#_etabler_lokal_filmappe_for_kloning_av_github_filer">2.2. Etabler lokal filmappe for kloning av github-filer</a></h3>
+</div>
+<div class="sect1">
+<h2 id="_forvaltningsansvarlig">Forvaltningsansvarlig</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Lag en filmappe som hjemmeområde for å arbeide lokalt med github-filer, eventuelt med en undermappe for biblioteker fra Difi.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-For spesielt interesserte: Om du bruker lange navn og dyp mappestruktur i Windows, kan du få problemer med en begrensning på 260
-karakterer i total lengde på filnavn. I og med Windows 10 kan denne begrensningen oppheves. Se f.eks.
-<a href="https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/" class="bare">https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/</a> for en oppskrift på
-hvordan dette kan gjøres.<br>
-<br>
-Kort fortalt: På Windows 10 Enterprise kan du kjøre gpedit.msc og endre Aktiver lange Win32 baner under
-Datamaskinkonfigurasjon, Administrative maler, System, Filsystem. Du må restarte eller logge av og på for at endringen skal tre i kraft.
-</td>
-</tr>
-</table>
+<p>Brønnøysundregistrene v/ avd Digitalisering (Altinn-organisasjonen)</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_installer_programvare_for_git_og_github"><a class="anchor" href="#_installer_programvare_for_git_og_github"></a><a class="link" href="#_installer_programvare_for_git_og_github">2.3. Installer programvare for git og GitHub</a></h3>
-
 </div>
-<div class="sect2">
-<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">2.4. Generelt</a></h3>
+<div class="sect1">
+<h2 id="_målgruppe">Målgruppe</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Det finnes tre kategorier mennesker:</p>
+<p>Primært offentlige virksomheter som utvikler og tilbyr digitale tjenester til sine brukere, både innbyggere og virksomheter. Det jobbes for at data og tjenester også skal kunne tilbys virksomheter i privat sektor, og således bli en plattform for innovasjon og verdiskaping også i privat sektor.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>De som foretrekker grafiske brukergrensesnitt</p>
-</li>
-<li>
-<p>De som foretrekker å skrive tekstkommandoer</p>
-</li>
-<li>
-<p>De som ikke har anledning til å installere programvare</p>
-</li>
-</ol>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_funksjonalitet_as_is">Funksjonalitet (as-is)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hjemmelbasert Autorisasjon (f eks i kraft av et ansettelsesforhold eller registrert regnskapsfører/revisor)
+Tilgang kan delegeres (leder gir tilgang til underordnet, eller virksomhet til regnskapsfører etc)
+Fullmakt basert tilgang (f eks foreldre til barn, advokat for en privatperson, vergemål mv)
+Samtykke basert tilgang (samtykkebasert innhenting av opplysninger, f eks ved en søknad om boliglån)
+I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logger (""mine data som er levert ut basert på mine samtykker""), og som kan bygges ut til mer fullstendige oversikter iht. behov avlevert av GDPR e a.</p>
 </div>
 <div class="paragraph">
-<p>Anbefalinger for disse kategoriene er:</p>
+<p>Disse løsningene skal kunne benyttes som frittstående moduler, uavhengig av om man benytter andre moduler/tjenester/funksjoner i Altinn.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Bruk GitHub Desktop (enkel bruk) eller TortoiseGit (mer avansert)</p>
-</li>
-<li>
-<p>Bruk <em>Git Bash</em> eller <em>Git CMD</em> (eller Windows CMD).</p>
-</li>
-<li>
-<p>Arbeid direkte i nettleseren under <a href="https://github.com/nasjonal-arkitektur/nasjonal-arkitektur.github.io" class="bare">https://github.com/nasjonal-arkitektur/nasjonal-arkitektur.github.io</a> , uten å klone til lokalt filområde;  eventuelt bruk asciidoclive for asciidoc-dokumentasjon; ref. <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a></p>
-</li>
-</ol>
 </div>
-<div class="sect3">
-<h4 id="_alternativ_1_github_desktop"><a class="anchor" href="#_alternativ_1_github_desktop"></a><a class="link" href="#_alternativ_1_github_desktop">2.4.1. Alternativ 1: GitHub Desktop</a></h4>
+</div>
+<div class="sect1">
+<h2 id="_føringer_for_bruk">Føringer for bruk</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>GitHub Desktop er en mye brukt og god klient for å klone og oppdatere GitHub-biblioteker.</p>
+<p>Samme som Altinn tjenesteplattform.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bruk">Bruk</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>GitHub Desktop kan lastes ned her: <a href="https://desktop.github.com/" class="bare">https://desktop.github.com/</a>.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-Om GitHub desktop har problemer med å aksessere .gitconfig-filen, er en fix å opprette en systemvariabel HOME til den mappen du har opprettet som hjemmeområde for dine lokale GitHub-filer (bruk Kontrollpanel, System, Avanserte systeminnstillinger, miljøvariabler).<br>
-<br>
-Tips: Det er kanskje en god ide å unngå å bruke nettverks-drive (som noen virksomheter bruker som default for Dokumenter)? Bruk  heller en katalog direkte under ditt brukernavn på C:\Users? Se også  <a href="https://github.com/desktop/desktop/issues/4119" class="bare">https://github.com/desktop/desktop/issues/4119</a>.
-</td>
-</tr>
-</table>
+<p>Benyttes til å delegere tilganger og rettigheter på vegne av andre</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_alternativ_2_tortoisegit"><a class="anchor" href="#_alternativ_2_tortoisegit"></a><a class="link" href="#_alternativ_2_tortoisegit">2.4.2. Alternativ 2: TortoiseGit</a></h4>
+</div>
+<div class="sect1">
+<h2 id="_datakvalitet">Datakvalitet</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>TBD.</p>
+<p>Altinn tilgangsstryring bruker roller registrert i Enhetsregisteret(ER) grunnlaget for tilgangsstyring til virksomheter. I dag oppleves kvaliteten som tilfredstillende, noe bruken av disse dataene i Altinn har bidratt til.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_alternativ_3_git_bash"><a class="anchor" href="#_alternativ_3_git_bash"></a><a class="link" href="#_alternativ_3_git_bash">2.4.3. Alternativ 3: Git Bash</a></h4>
+</div>
+<div class="sect1">
+<h2 id="_dagens_sourcingmodell">Dagens sourcingmodell</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Git Bash fås med siste versjon av Git for Windows her: <a href="https://git-scm.com/download/win" class="bare">https://git-scm.com/download/win</a></p>
+<p>Samme som Altinn tjenesteplattform.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_effektproduktregnskap">Effekt/produktregnskap</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Generelle tips om å komme igang med Bash kommandolinke:</p>
+<p>-</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_merkantile_forhold">Merkantile forhold</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Alle komponenten i Altinn bortsett fra DPV finansieres etter samme prinsipper:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://rubygarage.org/blog/most-basic-git-commands-with-examples" class="bare">https://rubygarage.org/blog/most-basic-git-commands-with-examples</a></p>
+<p>Utvikling av Altinn-løsningen skal finansieres sentralt via BRs budsjetter.</p>
+</li>
+<li>
+<p>Tjenesteeiere skal finansiere kostnader knyttet til drift og driftsrelatert applikasjonsforvaltning</p>
+</li>
+<li>
+<p>Utvikling og vedlikehold av sluttbrukertjenestene finansieres særskilt enten av en enkelt
+tjenesteeier eller som egne satsninger.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_alternativ_4_asciidoclive"><a class="anchor" href="#_alternativ_4_asciidoclive"></a><a class="link" href="#_alternativ_4_asciidoclive">2.4.4. Alternativ 4: Asciidoclive</a></h4>
+</div>
+<div class="sect1">
+<h2 id="_utviklingsplaner_og_finansiering">Utviklingsplaner og finansiering</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Ingen installasjon nødvendig. Se <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a>.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-Bruke MS Internet Explorer eller MS Edge! Preview fungerer ikke i Chrome eller Firefox.
-</td>
-</tr>
-</table>
+<p>Plattformen er underveis i et større videreutviklingsløp; hvor man ser tjenesteplattformen (både tjenesteutviklingsløsningen beskrevet over, og også avansert funksjonalitet rundt API-management mv) i samspill med Altinn Autorisasjon (og ID-porten), og de felles katalogene fra informasjonsforvaltning, i sammenheng. Det er for 2018 tildelt 100 millioner til videreutvikling i 2018 (inkludert også Altinn Autorisasjon og API-katalog). De første leveransene kommer i 4 kvartal, og det vil bli kontinuerlige leveranser gjennom 2019 og 2020.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_klon_github_prosjektet_til_din_maskin"><a class="anchor" href="#_klon_github_prosjektet_til_din_maskin"></a><a class="link" href="#_klon_github_prosjektet_til_din_maskin">2.5. Klon GitHub-prosjektet til din maskin</a></h3>
-<div class="sect3">
-<h4 id="_kloning_med_github_desktop"><a class="anchor" href="#_kloning_med_github_desktop"></a><a class="link" href="#_kloning_med_github_desktop">2.5.1. Kloning med GitHub Desktop</a></h4>
+<div class="sect1">
+<h2 id="_langsiktig_roadmap">Langsiktig roadmap</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Om du bruker GitHub Desktop, kan det gjøres slik:</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Åpne  GitHub-biblioteket i nettleser, dvs.   <a href="https://github.com/nasjonal-arkitektur/nasjonal-arkitektur.github.io" class="bare">https://github.com/nasjonal-arkitektur/nasjonal-arkitektur.github.io</a></p>
-</li>
-<li>
-<p>Velg "Clone or Download" i GitHub og velg så "Open in Desktop".</p>
-</li>
-<li>
-<p>I GitHub Desktop, velg File | Clone a repository og angi hvor filene skal legges på din harddisk, som omtalt under avsnittet om lokla filmappe ovenfor. Om du f.eks. benytter C:\Users\eha\GitHub\Difi, vil GitHub Desktop opprette C:\Users\eha\GitHub\Difi\nasjonal_arkitektur.</p>
-</li>
-</ol>
+<p>Stor satsing på Helhetlig tilgangsstyring nå- videreutvikling av dagens autorisasjonsløsning</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_kloning_med_tortoisegit"><a class="anchor" href="#_kloning_med_tortoisegit"></a><a class="link" href="#_kloning_med_tortoisegit">2.5.2. Kloning med TortoiseGit</a></h4>
+</div>
+<div class="sect1">
+<h2 id="_overlappende_løsninger">Overlappende løsninger</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>TBD.</p>
+<p>Nei, det finnes ikke andre løsninger i forvaltningen i dag.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_kloning_med_windows_kommandolinje"><a class="anchor" href="#_kloning_med_windows_kommandolinje"></a><a class="link" href="#_kloning_med_windows_kommandolinje">2.5.3. Kloning med Windows kommandolinje</a></h4>
+</div>
+<div class="sect1">
+<h2 id="_gjenbrukspotensiale">Gjenbrukspotensiale</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>TBD.</p>
+<p>Stort gjennbrukspotensiale.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_kloning_med_git_bash"><a class="anchor" href="#_kloning_med_git_bash"></a><a class="link" href="#_kloning_med_git_bash">2.5.4. Kloning med Git Bash</a></h4>
+</div>
+<div class="sect1">
+<h2 id="_interoperabilitet">Interoperabilitet</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>TBD.</p>
+<p>-</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_gjør_endringer"><a class="anchor" href="#_gjør_endringer"></a><a class="link" href="#_gjør_endringer">2.6. Gjør endringer</a></h3>
+<div class="sect1">
+<h2 id="_integrasjonsamhandling">Integrasjon/samhandling</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Gitt at du har skriverettigheter, kan du endre eksisterende filer, slette filer og tilsvarende for mapper. Når du gjør dette i et lokalt, klonet, repository, må du deretter synkronisere og eventuelt publisere dette før det blir tilgjengelig for andre.</p>
+<p>Spiller sammen med autentiseringskomponenten ID-Porten</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_synkronisering_og_publisering_av_endringer"><a class="anchor" href="#_synkronisering_og_publisering_av_endringer"></a><a class="link" href="#_synkronisering_og_publisering_av_endringer">2.7. Synkronisering og publisering av endringer</a></h3>
+</div>
+<div class="sect1">
+<h2 id="_avhengigheter">Avhengigheter</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><span class="image"><img src="../na_felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span> I arbeid.</p>
+<p>Avhengig av resten av Altinn-plattformen og ID-porten</p>
 </div>
-<div class="sect3">
-<h4 id="_synkronisering_og_publisering_med_github_desktop"><a class="anchor" href="#_synkronisering_og_publisering_med_github_desktop"></a><a class="link" href="#_synkronisering_og_publisering_med_github_desktop">2.7.1. Synkronisering og publisering med GitHub Desktop</a></h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_arkitekturprinsipper">Arkitekturprinsipper</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>GitHub Desktop vil kontinuerlig polle og hente ned endringer fra GitHub til valgt <em>Current Repository</em>. Du vil også løpende se hvilke endringer du selv har gjort som foreløpig ikke er synkronisert tli GitHub.</p>
+<p>Systemdokumentasjon finnes på <a href="https://github.com/Altinn/docs" class="bare">https://github.com/Altinn/docs</a></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_annet">Annet</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>For å publisere endringer med GitHub Desktop, må du først gi en <em>Description</em>, så trykke  <em>Commit to Master</em> og til sist trykke <em>Push to origin</em>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_publisering_med_tortoisegit"><a class="anchor" href="#_publisering_med_tortoisegit"></a><a class="link" href="#_publisering_med_tortoisegit">2.7.2. Publisering med TortoiseGit</a></h4>
-<div class="paragraph">
-<p>TBD.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_publisering_med_windows_kommandolinje"><a class="anchor" href="#_publisering_med_windows_kommandolinje"></a><a class="link" href="#_publisering_med_windows_kommandolinje">2.7.3. Publisering med Windows kommandolinje</a></h4>
-<div class="paragraph">
-<p>TBD.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_publisering_med_git_bash"><a class="anchor" href="#_publisering_med_git_bash"></a><a class="link" href="#_publisering_med_git_bash">2.7.4. Publisering med Git Bash</a></h4>
-<div class="paragraph">
-<p>TBD.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_mer_avanserte_temaer"><a class="anchor" href="#_mer_avanserte_temaer"></a><a class="link" href="#_mer_avanserte_temaer">2.8. Mer avanserte temaer</a></h3>
-<div class="sect3">
-<h4 id="_git_submodules"><a class="anchor" href="#_git_submodules"></a><a class="link" href="#_git_submodules">2.8.1. Git Submodules</a></h4>
-<div class="paragraph">
-<p>Git Submodules brukes for prosjektarbeid der en ønsker å tildele skriverettigheter til  prosjektmedlemmene, noe som ikke uten videre er tilrådelig for hele arkitekturbiblioteket.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_annet"><a class="anchor" href="#_annet"></a><a class="link" href="#_annet">2.8.2. Annet</a></h4>
-<div class="paragraph">
-<p><span class="image"><img src="../na_felles//images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span>I arbeid</p>
-</div>
-</div>
+<p>-</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Siste oppdatert 2019-02-13 08:54:50 Vest-Europa (normaltid)
+Last updated 2019-02-11 10:34:17 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

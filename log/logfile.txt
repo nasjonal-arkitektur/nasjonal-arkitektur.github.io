@@ -269,3 +269,17 @@
 12.02.2019 17:40:24: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_praktiske-tips_asciidoc\asciidoc-tips.adoc)
 12.02.2019 17:40:25: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_praktiske-tips_asciidoctor\asciidoctor.adoc)
 12.02.2019 17:40:26: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_praktiske-tips_github\main.adoc)
+12.02.2019 20:51:26: SøkTekstIAlleFiler(TBD.)
+12.02.2019 20:51:28: Linje: TBD.
+12.02.2019 20:51:28: Linje: TBD.
+12.02.2019 20:51:28: Linje: TBD.
+12.02.2019 20:51:28: Linje: TBD.
+12.02.2019 20:51:28: Linje: TBD.
+12.02.2019 20:51:28: Linje: TBD.
+12.02.2019 20:51:28: 6 occurences in C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_praktiske-tips_github\main.adoc
+13.02.2019 13:49:51: ErstattTekstIAlleFiler(_ssb_, _sbb_)
+13.02.2019 13:50:28: GenerateHtml
+13.02.2019 13:50:29: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_praktiske-tips_github\main.adoc)
+13.02.2019 14:35:56: GenerateHtml
+13.02.2019 14:35:57: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap\main.adoc)
+13.02.2019 14:36:01: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-tilgangsstyring\main.adoc)
