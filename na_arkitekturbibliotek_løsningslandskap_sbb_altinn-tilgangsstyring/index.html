@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
 <meta name="keywords" content="nasjonal arkitektur, virksomhetsarkitektur">
+<meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
 <title>Altinn tilgangsstyring</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -430,29 +431,52 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>Altinn tilgangsstyring</h1>
+<div class="details">
+<span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
+<span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Innhold</div>
+<ul class="sectlevel1">
+<li><a href="#_løsningsnavn">1. Løsningsnavn</a></li>
+<li><a href="#_kort_beskrivelse">2. Kort beskrivelse</a></li>
+<li><a href="#_forvaltningsansvarlig">3. Forvaltningsansvarlig</a></li>
+<li><a href="#_målgruppe">4. Målgruppe</a></li>
+<li><a href="#_funksjonalitet_as_is">5. Funksjonalitet (as-is)</a></li>
+<li><a href="#_føringer_for_bruk">6. Føringer for bruk</a></li>
+<li><a href="#_bruk">7. Bruk</a></li>
+<li><a href="#_datakvalitet">8. Datakvalitet</a></li>
+<li><a href="#_dagens_sourcingmodell">9. Dagens sourcingmodell</a></li>
+<li><a href="#_effektproduktregnskap">10. Effekt/produktregnskap</a></li>
+<li><a href="#_merkantile_forhold">11. Merkantile forhold</a></li>
+<li><a href="#_utviklingsplaner_og_finansiering">12. Utviklingsplaner og finansiering</a></li>
+<li><a href="#_langsiktig_roadmap">13. Langsiktig roadmap</a></li>
+<li><a href="#_overlappende_løsninger">14. Overlappende løsninger</a></li>
+<li><a href="#_gjenbrukspotensiale">15. Gjenbrukspotensiale</a></li>
+<li><a href="#_interoperabilitet">16. Interoperabilitet</a></li>
+<li><a href="#_integrasjonsamhandling">17. Integrasjon/samhandling</a></li>
+<li><a href="#_avhengigheter">18. Avhengigheter</a></li>
+<li><a href="#_arkitekturprinsipper">19. Arkitekturprinsipper</a></li>
+<li><a href="#_annet">20. Annet</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_løsningsnavn"><a class="anchor" href="#_løsningsnavn"></a><a class="link" href="#_løsningsnavn">1. Løsningsnavn</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved directive in main.adoc - include::./na_felles/includes/commonincludes.adoc[]</p>
+<p><strong>Altinn tilgangsstyring</strong></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_løsningsnavn">Løsningsnavn</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Altinn tilgangsstyring</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_kort_beskrivelse">Kort beskrivelse</h2>
+<h2 id="_kort_beskrivelse"><a class="anchor" href="#_kort_beskrivelse"></a><a class="link" href="#_kort_beskrivelse">2. Kort beskrivelse</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Altinn Tilgangsstyring (tidligere Altinn Autorisasjon), betegner et sett tjenester og funksjoner knyttet til å styre hvem som kan bruke en digital tjeneste.
@@ -464,7 +488,7 @@ Disse løsningene skal kunne benyttes som frittstående moduler, uavhengig av om
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forvaltningsansvarlig">Forvaltningsansvarlig</h2>
+<h2 id="_forvaltningsansvarlig"><a class="anchor" href="#_forvaltningsansvarlig"></a><a class="link" href="#_forvaltningsansvarlig">3. Forvaltningsansvarlig</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Brønnøysundregistrene v/ avd Digitalisering (Altinn-organisasjonen)</p>
@@ -472,7 +496,7 @@ Disse løsningene skal kunne benyttes som frittstående moduler, uavhengig av om
 </div>
 </div>
 <div class="sect1">
-<h2 id="_målgruppe">Målgruppe</h2>
+<h2 id="_målgruppe"><a class="anchor" href="#_målgruppe"></a><a class="link" href="#_målgruppe">4. Målgruppe</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Primært offentlige virksomheter som utvikler og tilbyr digitale tjenester til sine brukere, både innbyggere og virksomheter. Det jobbes for at data og tjenester også skal kunne tilbys virksomheter i privat sektor, og således bli en plattform for innovasjon og verdiskaping også i privat sektor.</p>
@@ -480,7 +504,7 @@ Disse løsningene skal kunne benyttes som frittstående moduler, uavhengig av om
 </div>
 </div>
 <div class="sect1">
-<h2 id="_funksjonalitet_as_is">Funksjonalitet (as-is)</h2>
+<h2 id="_funksjonalitet_as_is"><a class="anchor" href="#_funksjonalitet_as_is"></a><a class="link" href="#_funksjonalitet_as_is">5. Funksjonalitet (as-is)</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Hjemmelbasert Autorisasjon (f eks i kraft av et ansettelsesforhold eller registrert regnskapsfører/revisor)
@@ -495,7 +519,7 @@ I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logg
 </div>
 </div>
 <div class="sect1">
-<h2 id="_føringer_for_bruk">Føringer for bruk</h2>
+<h2 id="_føringer_for_bruk"><a class="anchor" href="#_føringer_for_bruk"></a><a class="link" href="#_føringer_for_bruk">6. Føringer for bruk</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Samme som Altinn tjenesteplattform.</p>
@@ -503,7 +527,7 @@ I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logg
 </div>
 </div>
 <div class="sect1">
-<h2 id="_bruk">Bruk</h2>
+<h2 id="_bruk"><a class="anchor" href="#_bruk"></a><a class="link" href="#_bruk">7. Bruk</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Benyttes til å delegere tilganger og rettigheter på vegne av andre</p>
@@ -511,7 +535,7 @@ I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logg
 </div>
 </div>
 <div class="sect1">
-<h2 id="_datakvalitet">Datakvalitet</h2>
+<h2 id="_datakvalitet"><a class="anchor" href="#_datakvalitet"></a><a class="link" href="#_datakvalitet">8. Datakvalitet</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Altinn tilgangsstryring bruker roller registrert i Enhetsregisteret(ER) grunnlaget for tilgangsstyring til virksomheter. I dag oppleves kvaliteten som tilfredstillende, noe bruken av disse dataene i Altinn har bidratt til.</p>
@@ -519,7 +543,7 @@ I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logg
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dagens_sourcingmodell">Dagens sourcingmodell</h2>
+<h2 id="_dagens_sourcingmodell"><a class="anchor" href="#_dagens_sourcingmodell"></a><a class="link" href="#_dagens_sourcingmodell">9. Dagens sourcingmodell</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Samme som Altinn tjenesteplattform.</p>
@@ -527,7 +551,7 @@ I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logg
 </div>
 </div>
 <div class="sect1">
-<h2 id="_effektproduktregnskap">Effekt/produktregnskap</h2>
+<h2 id="_effektproduktregnskap"><a class="anchor" href="#_effektproduktregnskap"></a><a class="link" href="#_effektproduktregnskap">10. Effekt/produktregnskap</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>-</p>
@@ -535,7 +559,7 @@ I tillegg til å ivareta selve tilgangsstyringen, omfatter løsningen også logg
 </div>
 </div>
 <div class="sect1">
-<h2 id="_merkantile_forhold">Merkantile forhold</h2>
+<h2 id="_merkantile_forhold"><a class="anchor" href="#_merkantile_forhold"></a><a class="link" href="#_merkantile_forhold">11. Merkantile forhold</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Alle komponenten i Altinn bortsett fra DPV finansieres etter samme prinsipper:</p>
@@ -557,7 +581,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_utviklingsplaner_og_finansiering">Utviklingsplaner og finansiering</h2>
+<h2 id="_utviklingsplaner_og_finansiering"><a class="anchor" href="#_utviklingsplaner_og_finansiering"></a><a class="link" href="#_utviklingsplaner_og_finansiering">12. Utviklingsplaner og finansiering</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Plattformen er underveis i et større videreutviklingsløp; hvor man ser tjenesteplattformen (både tjenesteutviklingsløsningen beskrevet over, og også avansert funksjonalitet rundt API-management mv) i samspill med Altinn Autorisasjon (og ID-porten), og de felles katalogene fra informasjonsforvaltning, i sammenheng. Det er for 2018 tildelt 100 millioner til videreutvikling i 2018 (inkludert også Altinn Autorisasjon og API-katalog). De første leveransene kommer i 4 kvartal, og det vil bli kontinuerlige leveranser gjennom 2019 og 2020.</p>
@@ -565,7 +589,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_langsiktig_roadmap">Langsiktig roadmap</h2>
+<h2 id="_langsiktig_roadmap"><a class="anchor" href="#_langsiktig_roadmap"></a><a class="link" href="#_langsiktig_roadmap">13. Langsiktig roadmap</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Stor satsing på Helhetlig tilgangsstyring nå- videreutvikling av dagens autorisasjonsløsning</p>
@@ -573,7 +597,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_overlappende_løsninger">Overlappende løsninger</h2>
+<h2 id="_overlappende_løsninger"><a class="anchor" href="#_overlappende_løsninger"></a><a class="link" href="#_overlappende_løsninger">14. Overlappende løsninger</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Nei, det finnes ikke andre løsninger i forvaltningen i dag.</p>
@@ -581,7 +605,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_gjenbrukspotensiale">Gjenbrukspotensiale</h2>
+<h2 id="_gjenbrukspotensiale"><a class="anchor" href="#_gjenbrukspotensiale"></a><a class="link" href="#_gjenbrukspotensiale">15. Gjenbrukspotensiale</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Stort gjennbrukspotensiale.</p>
@@ -589,7 +613,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_interoperabilitet">Interoperabilitet</h2>
+<h2 id="_interoperabilitet"><a class="anchor" href="#_interoperabilitet"></a><a class="link" href="#_interoperabilitet">16. Interoperabilitet</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>-</p>
@@ -597,7 +621,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_integrasjonsamhandling">Integrasjon/samhandling</h2>
+<h2 id="_integrasjonsamhandling"><a class="anchor" href="#_integrasjonsamhandling"></a><a class="link" href="#_integrasjonsamhandling">17. Integrasjon/samhandling</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Spiller sammen med autentiseringskomponenten ID-Porten</p>
@@ -605,7 +629,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_avhengigheter">Avhengigheter</h2>
+<h2 id="_avhengigheter"><a class="anchor" href="#_avhengigheter"></a><a class="link" href="#_avhengigheter">18. Avhengigheter</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Avhengig av resten av Altinn-plattformen og ID-porten</p>
@@ -613,7 +637,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_arkitekturprinsipper">Arkitekturprinsipper</h2>
+<h2 id="_arkitekturprinsipper"><a class="anchor" href="#_arkitekturprinsipper"></a><a class="link" href="#_arkitekturprinsipper">19. Arkitekturprinsipper</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Systemdokumentasjon finnes på <a href="https://github.com/Altinn/docs" class="bare">https://github.com/Altinn/docs</a></p>
@@ -621,7 +645,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_annet">Annet</h2>
+<h2 id="_annet"><a class="anchor" href="#_annet"></a><a class="link" href="#_annet">20. Annet</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>-</p>
@@ -631,7 +655,7 @@ tjenesteeier eller som egne satsninger.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-11 10:34:17 Vest-Europa (normaltid)
+Siste oppdatert 2019-02-13 14:55:21 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

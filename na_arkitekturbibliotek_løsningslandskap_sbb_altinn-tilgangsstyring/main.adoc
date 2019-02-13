@@ -2,10 +2,10 @@
 :doctitle: Altinn tilgangsstyring
 :keywords: nasjonal arkitektur, virksomhetsarkitektur
 :audience: alle
-include::./na_felles/includes/commonincludes.adoc[]
+include::../na_felles/includes/commonincludes.adoc[]
 
 == Løsningsnavn
-Altinn tilgangsstyring
+*Altinn tilgangsstyring*
 
 == Kort beskrivelse
 Altinn Tilgangsstyring (tidligere Altinn Autorisasjon), betegner et sett tjenester og funksjoner knyttet til å styre hvem som kan bruke en digital tjeneste. 

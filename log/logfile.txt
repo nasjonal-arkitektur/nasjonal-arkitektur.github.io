@@ -283,3 +283,63 @@
 13.02.2019 14:35:56: GenerateHtml
 13.02.2019 14:35:57: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap\main.adoc)
 13.02.2019 14:36:01: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-tilgangsstyring\main.adoc)
+13.02.2019 14:56:58: ErstattTekstIAlleFiler(include::./na_felles, include::../na_felles)
+13.02.2019 14:56:58: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:58: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\main.adoc
+13.02.2019 14:56:58: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:58: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-samhandlings-og-integrasjonsplattform\main.adoc
+13.02.2019 14:56:58: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:58: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-tjenesteplattform\main.adoc
+13.02.2019 14:56:58: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:58: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_brreg-digital-kontaktinformasjon-og-fullmakter-for-virksomheter\main.adoc
+13.02.2019 14:56:58: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:58: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_brreg-digital-post-til-virksomheter\main.adoc
+13.02.2019 14:56:58: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:58: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_brreg-enhetsregisteret\main.adoc
+13.02.2019 14:56:58: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:58: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_brreg-felles-datakatalog\main.adoc
+13.02.2019 14:56:58: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:58: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-digital-post-til-innbyggere\main.adoc
+13.02.2019 14:56:58: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:58: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-eformidling\main.adoc
+13.02.2019 14:56:59: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:59: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-einnsyn​\main.adoc
+13.02.2019 14:56:59: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:59: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-esignering\main.adoc
+13.02.2019 14:56:59: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:59: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-idporten\main.adoc
+13.02.2019 14:56:59: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:59: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-kontakt-og-reservasjonsregisteret​-for-innbyggere\main.adoc
+13.02.2019 14:56:59: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:59: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_kartverket-matrikkelen\main.adoc
+13.02.2019 14:56:59: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:59: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_ks-fiks-tjenesteplattform\main.adoc
+13.02.2019 14:56:59: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:59: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_ks-svarut\main.adoc
+13.02.2019 14:56:59: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:59: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_skattetaten--folkeregisteret\main.adoc
+13.02.2019 14:56:59: Linje: include::./na_felles/includes/commonincludes.adoc[]
+13.02.2019 14:56:59: 1 replacements in file C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_referanse_maler_asciidoc\mal-fellesløsning.adoc
+13.02.2019 14:57:20: GenerateHtml
+13.02.2019 14:57:21: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\main.adoc)
+13.02.2019 14:57:23: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-samhandlings-og-integrasjonsplattform\main.adoc)
+13.02.2019 14:57:25: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-tilgangsstyring\main.adoc)
+13.02.2019 14:57:28: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-tjenesteplattform\main.adoc)
+13.02.2019 14:57:29: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_brreg-digital-kontaktinformasjon-og-fullmakter-for-virksomheter\main.adoc)
+13.02.2019 14:57:30: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_brreg-digital-post-til-virksomheter\main.adoc)
+13.02.2019 14:57:32: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_brreg-enhetsregisteret\main.adoc)
+13.02.2019 14:57:33: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_brreg-felles-datakatalog\main.adoc)
+13.02.2019 14:57:34: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-digital-post-til-innbyggere\main.adoc)
+13.02.2019 14:57:36: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-eformidling\main.adoc)
+13.02.2019 14:57:37: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-einnsyn​\main.adoc)
+13.02.2019 14:57:39: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-esignering\main.adoc)
+13.02.2019 14:57:40: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-idporten\main.adoc)
+13.02.2019 14:57:43: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_difi-kontakt-og-reservasjonsregisteret​-for-innbyggere\main.adoc)
+13.02.2019 14:57:45: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_kartverket-matrikkelen\main.adoc)
+13.02.2019 14:57:46: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_ks-fiks-tjenesteplattform\main.adoc)
+13.02.2019 14:57:48: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_ks-svarut\main.adoc)
+13.02.2019 14:57:49: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_skattetaten--folkeregisteret\main.adoc)
+13.02.2019 14:57:51: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_referanse_maler_asciidoc\mal-fellesløsning.adoc)
+13.02.2019 14:59:36: GenerateHtml
+13.02.2019 14:59:36: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\main.adoc)
+13.02.2019 14:59:38: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_sbb_altinn-samhandlings-og-integrasjonsplattform\main.adoc)

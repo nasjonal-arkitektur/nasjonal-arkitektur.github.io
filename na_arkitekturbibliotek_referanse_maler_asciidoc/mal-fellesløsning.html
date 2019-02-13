@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
 <meta name="keywords" content="Fellesløsning">
+<meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
 <title>&lt;Løsningsnavn&gt;</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -430,21 +431,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>&lt;Løsningsnavn&gt;</h1>
+<div class="details">
+<span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
+<span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Innhold</div>
+<ul class="sectlevel1">
+<li><a href="#_løsningsnavn">1. Løsningsnavn</a></li>
+<li><a href="#_kort_beskrivelse">2. Kort beskrivelse</a></li>
+<li><a href="#_forvaltningsansvarlig">3. Forvaltningsansvarlig</a></li>
+<li><a href="#_målgruppe">4. Målgruppe</a></li>
+<li><a href="#_funksjonalitet_as_is">5. Funksjonalitet (as-is)</a></li>
+<li><a href="#_føringer_for_bruk">6. Føringer for bruk</a></li>
+<li><a href="#_bruk">7. Bruk</a></li>
+<li><a href="#_datakvalitet">8. Datakvalitet</a></li>
+<li><a href="#_dagens_sourcingmodell">9. Dagens sourcingmodell</a></li>
+<li><a href="#_effektproduktregnskap">10. Effekt/produktregnskap</a></li>
+<li><a href="#_merkantile_forhold">11. Merkantile forhold</a></li>
+<li><a href="#_utviklingsplaner_og_finansiering">12. Utviklingsplaner og finansiering</a></li>
+<li><a href="#_langsiktig_roadmap">13. Langsiktig roadmap</a></li>
+<li><a href="#_overlappende_løsninger">14. Overlappende løsninger</a></li>
+<li><a href="#_gjenbrukspotensiale">15. Gjenbrukspotensiale</a></li>
+<li><a href="#_interoperabilitet">16. Interoperabilitet</a></li>
+<li><a href="#_integrasjonsamhandling">17. Integrasjon/samhandling</a></li>
+<li><a href="#_avhengigheter">18. Avhengigheter</a></li>
+<li><a href="#_arkitekturprinsipper">19. Arkitekturprinsipper</a></li>
+<li><a href="#_annet">20. Annet</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved directive in mal-fellesløsning.adoc - include::./na_felles/includes/commonincludes.adoc[]</p>
-</div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="_løsningsnavn">Løsningsnavn</h2>
+<h2 id="_løsningsnavn"><a class="anchor" href="#_løsningsnavn"></a><a class="link" href="#_løsningsnavn">1. Løsningsnavn</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Navn på "løsning" (komponent, tjeneste, register).&gt;</span></p>
@@ -452,7 +476,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_kort_beskrivelse">Kort beskrivelse</h2>
+<h2 id="_kort_beskrivelse"><a class="anchor" href="#_kort_beskrivelse"></a><a class="link" href="#_kort_beskrivelse">2. Kort beskrivelse</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Kort beskrivelse med overordnet informasjon om formål og funksjonsområde.&gt;</span></p>
@@ -460,7 +484,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forvaltningsansvarlig">Forvaltningsansvarlig</h2>
+<h2 id="_forvaltningsansvarlig"><a class="anchor" href="#_forvaltningsansvarlig"></a><a class="link" href="#_forvaltningsansvarlig">3. Forvaltningsansvarlig</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Navn på virksomhet.&gt;</span></p>
@@ -468,7 +492,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_målgruppe">Målgruppe</h2>
+<h2 id="_målgruppe"><a class="anchor" href="#_målgruppe"></a><a class="link" href="#_målgruppe">4. Målgruppe</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Angi en eller flere av følgende, eventuelt med kommentarer: 1. Borgere eller 2. Virksomheter i a) offentlig sektor (stat/kommune), b) privat sektor, c) frivillige organisasjoner, d) skoler og universiteter.&gt;</span></p>
@@ -476,7 +500,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_funksjonalitet_as_is">Funksjonalitet (as-is)</h2>
+<h2 id="_funksjonalitet_as_is"><a class="anchor" href="#_funksjonalitet_as_is"></a><a class="link" href="#_funksjonalitet_as_is">5. Funksjonalitet (as-is)</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Opplisting av funksjoner eller tjenester, eventuelt med forklaring.&gt;</span></p>
@@ -484,7 +508,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_føringer_for_bruk">Føringer for bruk</h2>
+<h2 id="_føringer_for_bruk"><a class="anchor" href="#_føringer_for_bruk"></a><a class="link" href="#_føringer_for_bruk">6. Føringer for bruk</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Lover, regler eller andre føringer som gir holdepunkt for å si at det er obligatorisk eller anbefalt å bruke eller vurdere aktuell løsning.&gt;</span></p>
@@ -492,7 +516,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_bruk">Bruk</h2>
+<h2 id="_bruk"><a class="anchor" href="#_bruk"></a><a class="link" href="#_bruk">7. Bruk</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Relevant tilgjengelig informasjon om bruk og utbredelse - hvem bruker hva hvor mye, f.eks. statistikk med antall virksomheter eller personer og f.eks. antall tjenestekall eller transaksjoner. Eventuelt trendanalyse.&gt;</span></p>
@@ -500,7 +524,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_datakvalitet">Datakvalitet</h2>
+<h2 id="_datakvalitet"><a class="anchor" href="#_datakvalitet"></a><a class="link" href="#_datakvalitet">8. Datakvalitet</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Dette feltet er spesielt relevant for dataregistrene, men kan også oppgis for løsninger som bruker dataregistre. Er datakvaliteten svært god, akseptabel, problematisk, uakseptabel? Gi gjerne også videre kommentarer som belyser problemene, f.eks. hvilke data det gjelder, årsaker og mulige løsninger. &gt;</span></p>
@@ -508,7 +532,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dagens_sourcingmodell">Dagens sourcingmodell</h2>
+<h2 id="_dagens_sourcingmodell"><a class="anchor" href="#_dagens_sourcingmodell"></a><a class="link" href="#_dagens_sourcingmodell">9. Dagens sourcingmodell</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Hvem gjør utvikling og drift av plattform og applikasjoner per i dag. Outsourcing? Skybasert (IaaS, Paas, SaaS)?&gt;</span></p>
@@ -516,7 +540,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_effektproduktregnskap">Effekt/produktregnskap</h2>
+<h2 id="_effektproduktregnskap"><a class="anchor" href="#_effektproduktregnskap"></a><a class="link" href="#_effektproduktregnskap">10. Effekt/produktregnskap</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Relevant, tilgjengelig, informasjon om kost/nytte, f.eks. i form av produktkalkyler, ROI, oversikt over kostnader og inntekter, samfunnsøkonomisk analyse, gevinstrealisering.&gt;</span></p>
@@ -524,7 +548,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_merkantile_forhold">Merkantile forhold</h2>
+<h2 id="_merkantile_forhold"><a class="anchor" href="#_merkantile_forhold"></a><a class="link" href="#_merkantile_forhold">11. Merkantile forhold</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Kostnader og betalingsmodleller forbundet med bruk. Er det f.eks. sentralfinansiering av alle kostnader, eller betales det for bruk av virksomheter eller sluttbrukere (eventuelt på transaksjonesbasis eller abonnementsbasis).&gt;</span></p>
@@ -532,7 +556,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_utviklingsplaner_og_finansiering">Utviklingsplaner og finansiering</h2>
+<h2 id="_utviklingsplaner_og_finansiering"><a class="anchor" href="#_utviklingsplaner_og_finansiering"></a><a class="link" href="#_utviklingsplaner_og_finansiering">12. Utviklingsplaner og finansiering</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Redegjør for gjeldende utvklingsplaner, helst med spesifisering av finansiering (beløp og kilde), tidplaner og funksjonalitet/tjenester.&gt;</span></p>
@@ -540,7 +564,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_langsiktig_roadmap">Langsiktig roadmap</h2>
+<h2 id="_langsiktig_roadmap"><a class="anchor" href="#_langsiktig_roadmap"></a><a class="link" href="#_langsiktig_roadmap">13. Langsiktig roadmap</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Ser en for seg vesentlige endringer i videreutvikling av løsningen på sikt - funksjonelt, teknisk, sourcing?&gt;</span></p>
@@ -548,7 +572,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_overlappende_løsninger">Overlappende løsninger</h2>
+<h2 id="_overlappende_løsninger"><a class="anchor" href="#_overlappende_løsninger"></a><a class="link" href="#_overlappende_løsninger">14. Overlappende løsninger</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Finnes det andre løsninger som helt eller delvis dekker samme behov, slik at det kan være interessant å vurdere konsolidering? Hvilke andre løsninger (eventuelt eksempler)?
@@ -557,7 +581,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_gjenbrukspotensiale">Gjenbrukspotensiale</h2>
+<h2 id="_gjenbrukspotensiale"><a class="anchor" href="#_gjenbrukspotensiale"></a><a class="link" href="#_gjenbrukspotensiale">15. Gjenbrukspotensiale</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Er dette en løsning som er ment å skulle gjenbrukes (eller viderebrukes) i utvikling av andre løsninger. Eventuelt kvantisfiser som "lite, middels. stort" eller angi mer spesifikke estimater.&gt;</span></p>
@@ -565,7 +589,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_interoperabilitet">Interoperabilitet</h2>
+<h2 id="_interoperabilitet"><a class="anchor" href="#_interoperabilitet"></a><a class="link" href="#_interoperabilitet">16. Interoperabilitet</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Spesielle problemstilllinger rundt interoperabilitet - juridisk, organisasjonsmessig, teknisk, semantisk. Herunder f.eks. problemer med tilgang til data.&gt;</span></p>
@@ -573,7 +597,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_integrasjonsamhandling">Integrasjon/samhandling</h2>
+<h2 id="_integrasjonsamhandling"><a class="anchor" href="#_integrasjonsamhandling"></a><a class="link" href="#_integrasjonsamhandling">17. Integrasjon/samhandling</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Hvordan samspiller denne løsningen med andre løsninger (fellesløsninger eller annet)?&gt;</span></p>
@@ -581,7 +605,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_avhengigheter">Avhengigheter</h2>
+<h2 id="_avhengigheter"><a class="anchor" href="#_avhengigheter"></a><a class="link" href="#_avhengigheter">18. Avhengigheter</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Hvilke typer tjenester er denne løsningen avhengg av? Hvilke spesifikke tjenester er denne løsningen avhengg av?&gt;</span></p>
@@ -589,7 +613,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_arkitekturprinsipper">Arkitekturprinsipper</h2>
+<h2 id="_arkitekturprinsipper"><a class="anchor" href="#_arkitekturprinsipper"></a><a class="link" href="#_arkitekturprinsipper">19. Arkitekturprinsipper</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Finnes dokumentert vurdering av samsvar med  de overordende arkitekturprinsippene fra Difi ; ref. [1]? Finnes dokumentert vurdering av samsvar med  "Kap. 11.1 Strategiske prinsipper for nasjonale felleskomponenter" i Digital Agenda av 2016; ref. [2]?.  Finnes alternativt eller i tillegg dokumentert vurdering av samsvar med andre arkitekturprinsipper, designprinsipper eller liknende (f.eks. innen innovasjon, brukerretting, informasjonsforvaltning)?&gt;</span></p>
@@ -597,7 +621,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_annet">Annet</h2>
+<h2 id="_annet"><a class="anchor" href="#_annet"></a><a class="link" href="#_annet">20. Annet</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="blue">&lt;Annen informasjon eller synspunkter (i tilknytning til denne fellesløsningen eller mer generelt) som kan være relevant for arbeid med regjeringens digitaliseringsstrategi.
@@ -608,7 +632,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-11 11:27:51 Vest-Europa (normaltid)
+Siste oppdatert 2019-02-13 14:56:59 Vest-Europa (normaltid)
 </div>
 </div>
 </body>
