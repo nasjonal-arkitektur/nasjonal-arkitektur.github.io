@@ -4,11 +4,12 @@
 
 include::../na_felles/includes/commonincludes.adoc[]
 
+
 [.lead]
 Archi er et gratis og open-source verktøy som støtter Archimate-standarden for arkitekturdokumentasjon, og har tillegg som muliggjør samarbeid rundt felles repository på Github.  
 
-image: ../na_praktiske-tips_archi/images/archi-logo.png[]
-
+image:../na_praktiske-tips_archi/images/archi-logo.png[]
+ 
 image:../na_felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold
 ////
 ////

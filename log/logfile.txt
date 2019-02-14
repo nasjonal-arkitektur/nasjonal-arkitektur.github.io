@@ -350,3 +350,13 @@
 13.02.2019 15:17:11: GenerateHtml
 13.02.2019 15:17:11: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap\main.adoc)
 13.02.2019 15:17:13: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_ssb\main.adoc)
+14.02.2019 18:44:55: GenerateHtml
+14.02.2019 18:44:56: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_løsningslandskap_ssb\main.adoc)
+14.02.2019 18:45:04: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_modeller\main.adoc)
+14.02.2019 18:52:53: GenerateHtml
+14.02.2019 18:52:54: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_modeller\main.adoc)
+14.02.2019 18:52:56: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_praktiske-tips_archi\main.adoc)
+14.02.2019 18:53:52: GenerateHtml
+14.02.2019 18:53:53: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_praktiske-tips_archi\main.adoc)
+14.02.2019 19:06:26: GenerateHtml
+14.02.2019 19:06:26: RunAsciiDoctor(C:\Users\eha\OneDrive\GitHub\nasjonal-arkitektur\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_modeller\main.adoc)

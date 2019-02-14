@@ -21,11 +21,11 @@ Påloggingsløsning som tilbyr innbyggerne en sikker digital tjeneste.
 
 . link:../na_arkitekturbibliotek_løsningslandskap_sbb_altinn-tilgangsstyring/[Altinn Tilgangsstyring]
 +
-Gir tilgang til å benytte data eller tjenester basert på autorisasjon
+Gir tilgang til å benytte data eller tjenester basert på autorisasjon.
 
 . link:../na_arkitekturbibliotek_løsningslandskap_sbb_altinn-tjenesteplattform/[Altinn tjenesteplattform]
 +
-Samling av tjenester og funksjoner for deling og gjenbruk av data og tjenester fra offentlig sektor. Plattformen gjør det enkelt for offentlige virksomheter (tjenesteeiere) å utvikle digitale tjenester til sine brukere, både innbyggere og virksomheter
+Samling av tjenester og funksjoner for deling og gjenbruk av data og tjenester fra offentlig sektor. Plattformen gjør det enkelt for offentlige virksomheter (tjenesteeiere) å utvikle digitale tjenester til sine brukere, både innbyggere og virksomheter.
 
 . link:../na_arkitekturbibliotek_løsningslandskap_sbb_altinn-samhandlings-og-integrasjonsplattform/[Altinn samhandlings- og 
 integrasjonsplattform]
@@ -34,7 +34,7 @@ Samling tjenester og funksjoner for utveksling av data og informasjon.
 
 . link:../na_arkitekturbibliotek_løsningslandskap_sbb_difi-digital-post-til-innbyggere/[Digital postkasse til innbyggere (DPI)]
 +
-Løsning for å sende digital post til innbyggere
+Løsning for å sende digital post til innbyggere.
 
 . link:../na_arkitekturbibliotek_løsningslandskap_sbb_brreg-digital-post-til-virksomheter/[Digital post til virksomheter (DPV)]
 +
@@ -43,7 +43,7 @@ Løsning for å sende digital post til virksomheter.
 
 . link:../na_arkitekturbibliotek_løsningslandskap_sbb_difi-kontakt-og-reservasjonsregisteret​-for-innbyggere/[Kontakt- og reservasjonsregisteret​ for innbyggere (KRR)]
 +
-Register over digital kontaktinformasjon (mobilnummer og e-postadresse) og reservasjonsstatus. Fellesløsning for å samle inn og tilgjengeliggjøre informasjonen
+Register over digital kontaktinformasjon (mobilnummer og e-postadresse) og reservasjonsstatus. Fellesløsning for å samle inn og tilgjengeliggjøre informasjonen.
 
 . link:../na_arkitekturbibliotek_løsningslandskap_sbb_brreg-digital-kontaktinformasjon-og-fullmakter-for-virksomheter/[Digital kontaktinformasjon og fullmakter for virksomheter (KoFuVi)]
 +

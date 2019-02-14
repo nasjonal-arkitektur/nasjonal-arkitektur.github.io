@@ -13,20 +13,21 @@ image:../na_felles/images/i-arbeid.png[width=75, height=75]
 
 //:leveloffset: +1
 
-== Publiserte modeller
-Se https://nasjonal-arkitektur.github.io/modeller/html-hovedbibliotek
+== Modell-biblioteker
+Det primære fellesbiblioteket er: https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur .
+
+Alle kan laste ned innholdet fra dette til lokal Archi-installasjon gjennom Collaoration-plugin til Archi. Om du har skriverettigheter, vil du også kunne gjøre endringer og laste opp disse til Github. Se
+link:../na_praktiske-tips_archi[Praktiske tips om samarbeid med Archi].
 
 
-== Redigering av Archi-modeller via Collaboration plugin
-Se https://nasjonal-arkitektur.github.io/praktiske-tips/#_praktiske_tips_om_samarbeid_med_archi.
+== Web-publisering for lesing 
+Publiserte modeller kan navigeres via nettleser; se https://nasjonal-arkitektur.github.io/na_arkitekturbibliotek_modeller/html-hovedbibliotek.
 
-Det primære fellesbiblioteket er: https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur.
 
-Følgende biblioteker er dessuten tilgjengelige for lesing, samt eventuelt redigering av autoriserte brukere via Archi Collaboration plugin:
+Følgende biblioteker er dessuten tilgjengelige for lesing, samt eventuelt redigering av autoriserte brukere via Archi Collaboration plugin: TBD.
 
-(Flere kommer her.)
 
 == Nedlastbare modellfiler
-(Flere kommer her.)
+TBD.
 
 
