@@ -9,6 +9,11 @@ include::../na_felles/includes/commonincludes.adoc[]
 
 image:../na_felles/images/i-arbeid.png[width=75, height=75]
 
+== Om referansearkitekturer
+include::..C:\Users\HenrikPaus\OneDrive-ViventoAS\GitHub_repo\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_referanse_arkitekturer\om-referansearkitekturer.adoc[]
+
+
+
 
 == Strategi for arbeidet med referansearkitekturer
 include::../na_arkitekturbibliotek_referanse_arkitekturer/strategi-for-referansearkitekturer.adoc[]
@@ -18,7 +23,7 @@ include::../na_arkitekturbibliotek_referanse_arkitekturer/strategi-for-referanse
 include::../na_arkitekturbibliotek_referanse_arkitekturer_veiledning_valg-av-referansearkitekturer/main.adoc[]
 
 :leveloffset: -2
-== Brukstilfeller (samhandlingsmønstre
+== Brukstilfeller (samhandlingsmønstre)
 :leveloffset: +1
 include::../na_arkitekturbibliotek_referanse_arkitekturer_samhandlingsmønstre/samhandlingsmønstre.adoc[]
 
