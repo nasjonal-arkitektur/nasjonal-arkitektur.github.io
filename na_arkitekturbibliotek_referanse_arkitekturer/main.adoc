@@ -10,8 +10,7 @@ include::../na_felles/includes/commonincludes.adoc[]
 image:../na_felles/images/i-arbeid.png[width=75, height=75]
 
 == Om referansearkitekturer
-include::..C:\Users\HenrikPaus\OneDrive-ViventoAS\GitHub_repo\nasjonal-arkitektur.github.io\na_arkitekturbibliotek_referanse_arkitekturer\om-referansearkitekturer.adoc[]
-
+include::../na_arkitekturbibliotek_referanse_arkitekturer/om-referansearkitekturer.adoc[]
 
 
 
