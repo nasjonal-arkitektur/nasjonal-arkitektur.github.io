@@ -1,0 +1,538 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Realisering av kapabiliteter i arkitekturlagene</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Realisering av kapabiliteter i arkitekturlagene</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/913081d6-b9cd-455c-8b23-08f0c3d6a4a4.png" alt="Realisering av kapabiliteter i arkitekturlagene" usemap="#913081d6-b9cd-455c-8b23-08f0c3d6a4a4map"/>
+			   <map name="913081d6-b9cd-455c-8b23-08f0c3d6a4a4map">
+				  		<area shape="rect" coords="10,10,143,910" href="../elements/de18d41c-54ce-4159-a820-be625189044f.html"  target="element">
+				  						<area shape="rect" coords="262,796,395,863" href="../elements/18bfb8ce-d560-4272-83ed-8b6c72e4952f.html"  target="element">
+				  						<area shape="rect" coords="466,670,599,737" href="../elements/838c4282-5c38-4822-a929-421e88787982.html"  target="element">
+				  						<area shape="rect" coords="274,668,371,735" href="../elements/12556677-f6e9-4e60-8e8f-936a2c213b13.html"  target="element">
+				  						<area shape="rect" coords="466,796,599,863" href="../elements/6c1ff82b-2dbe-442e-a2ca-0131833c06d2.html"  target="element">
+				  						<area shape="rect" coords="658,730,791,797" href="../elements/2f66f7eb-f587-4130-a5ef-8d552d1468e2.html"  target="element">
+
+				  				<area shape="rect" coords="238,634,815,887" href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html"  target="element">
+				  						<area shape="rect" coords="274,80,371,147" href="../elements/e490448b-0aa7-4621-870b-8332132e0c22.html"  target="element">
+				  						<area shape="rect" coords="466,202,599,269" href="../elements/e4e65698-990f-4ea1-9492-d98477594031.html"  target="element">
+				  						<area shape="rect" coords="260,202,393,269" href="../elements/58f8a20b-66cc-4f6c-ba1f-62f5f3341e88.html"  target="element">
+				  						<area shape="rect" coords="466,82,599,149" href="../elements/c90f7e9d-07ef-4697-b01b-85212510a268.html"  target="element">
+				  						<area shape="rect" coords="658,146,791,213" href="../elements/b7310c0d-6e55-47f0-a2e1-5f393c77187d.html"  target="element">
+
+				  				<area shape="rect" coords="238,46,815,287" href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html"  target="element">
+				  						<area shape="rect" coords="256,496,389,563" href="../elements/687e68a1-f92f-4f7d-8009-625afff99197.html"  target="element">
+				  						<area shape="rect" coords="466,373,599,440" href="../elements/eb476600-52e3-4a07-b3da-aa50dcaaf19e.html"  target="element">
+				  						<area shape="rect" coords="274,371,371,438" href="../elements/4c88c0c9-588b-43ee-a284-cb19bceb2464.html"  target="element">
+				  						<area shape="rect" coords="466,496,599,563" href="../elements/009531cc-ab2f-43eb-be20-fd78ce02a23a.html"  target="element">
+				  						<area shape="rect" coords="658,439,791,506" href="../elements/5bd322cd-9f1c-43f8-9481-92c818ebe1e8.html"  target="element">
+
+				  				<area shape="rect" coords="238,340,815,587" href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html"  target="element">
+
+				  		<area shape="rect" coords="214,10,839,910" href="../elements/a4daa9b5-1a20-40b9-be9e-41e835e4edcc.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<textarea id="docsrc" style="display:none"></textarea>
+						<div id="doctgt" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/de18d41c-54ce-4159-a820-be625189044f.html" target="element"> Kapabiliteter (forretning og IT) </a> </td>
+											    <td> <a href="../elements/de18d41c-54ce-4159-a820-be625189044f.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/a4daa9b5-1a20-40b9-be9e-41e835e4edcc.html" target="element"> Arkitektur-og l&#248;sningsbyggeklosser </a> </td>
+											    <td> <a href="../elements/a4daa9b5-1a20-40b9-be9e-41e835e4edcc.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element"> Teknologiarkitektur </a> </td>
+													    <td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+													</tr>
+
+															<tr>
+															    <td> <a href="../elements/18bfb8ce-d560-4272-83ed-8b6c72e4952f.html" target="element"> Plattformer og kommunikasjons-infrastruktur </a> </td>
+															    <td> <a href="../elements/18bfb8ce-d560-4272-83ed-8b6c72e4952f.html" target="element" class="i18n-elementtype-Node"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/838c4282-5c38-4822-a929-421e88787982.html" target="element"> Infrastrukturtjenester </a> </td>
+															    <td> <a href="../elements/838c4282-5c38-4822-a929-421e88787982.html" target="element" class="i18n-elementtype-TechnologyService"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/12556677-f6e9-4e60-8e8f-936a2c213b13.html" target="element"> Transport-protokoller og HW </a> </td>
+															    <td> <a href="../elements/12556677-f6e9-4e60-8e8f-936a2c213b13.html" target="element" class="i18n-elementtype-TechnologyInterface"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/6c1ff82b-2dbe-442e-a2ca-0131833c06d2.html" target="element"> Infrastrukturprosesser </a> </td>
+															    <td> <a href="../elements/6c1ff82b-2dbe-442e-a2ca-0131833c06d2.html" target="element" class="i18n-elementtype-TechnologyProcess"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/2f66f7eb-f587-4130-a5ef-8d552d1468e2.html" target="element"> Fysiske data (masterdata og kopier) </a> </td>
+															    <td> <a href="../elements/2f66f7eb-f587-4130-a5ef-8d552d1468e2.html" target="element" class="i18n-elementtype-Artifact"> </a> </td>
+															</tr>
+
+													
+													<tr>
+													    <td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element"> Forretningsarkitektur </a> </td>
+													    <td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+													</tr>
+
+															<tr>
+															    <td> <a href="../elements/e490448b-0aa7-4621-870b-8332132e0c22.html" target="element"> Leveranse-modeller </a> </td>
+															    <td> <a href="../elements/e490448b-0aa7-4621-870b-8332132e0c22.html" target="element" class="i18n-elementtype-BusinessInterface"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/e4e65698-990f-4ea1-9492-d98477594031.html" target="element"> Forretningsprosesser </a> </td>
+															    <td> <a href="../elements/e4e65698-990f-4ea1-9492-d98477594031.html" target="element" class="i18n-elementtype-BusinessProcess"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/58f8a20b-66cc-4f6c-ba1f-62f5f3341e88.html" target="element"> Roller </a> </td>
+															    <td> <a href="../elements/58f8a20b-66cc-4f6c-ba1f-62f5f3341e88.html" target="element" class="i18n-elementtype-BusinessRole"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/c90f7e9d-07ef-4697-b01b-85212510a268.html" target="element"> Forretninngstjenester </a> </td>
+															    <td> <a href="../elements/c90f7e9d-07ef-4697-b01b-85212510a268.html" target="element" class="i18n-elementtype-BusinessService"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/b7310c0d-6e55-47f0-a2e1-5f393c77187d.html" target="element"> Konseptuelle data (informasjon) </a> </td>
+															    <td> <a href="../elements/b7310c0d-6e55-47f0-a2e1-5f393c77187d.html" target="element" class="i18n-elementtype-BusinessObject"> </a> </td>
+															</tr>
+
+													
+													<tr>
+													    <td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+													    <td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+													</tr>
+
+															<tr>
+															    <td> <a href="../elements/687e68a1-f92f-4f7d-8009-625afff99197.html" target="element"> Applikasjons-komponenter </a> </td>
+															    <td> <a href="../elements/687e68a1-f92f-4f7d-8009-625afff99197.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/eb476600-52e3-4a07-b3da-aa50dcaaf19e.html" target="element"> Applikasjonstjenester </a> </td>
+															    <td> <a href="../elements/eb476600-52e3-4a07-b3da-aa50dcaaf19e.html" target="element" class="i18n-elementtype-ApplicationService"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/4c88c0c9-588b-43ee-a284-cb19bceb2464.html" target="element"> API-er </a> </td>
+															    <td> <a href="../elements/4c88c0c9-588b-43ee-a284-cb19bceb2464.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/009531cc-ab2f-43eb-be20-fd78ce02a23a.html" target="element"> Automatiserte prosesser </a> </td>
+															    <td> <a href="../elements/009531cc-ab2f-43eb-be20-fd78ce02a23a.html" target="element" class="i18n-elementtype-ApplicationProcess"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/5bd322cd-9f1c-43f8-9481-92c818ebe1e8.html" target="element"> Logiske data (datamodeller) </a> </td>
+															    <td> <a href="../elements/5bd322cd-9f1c-43f8-9481-92c818ebe1e8.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+															</tr>
+
+													
+											
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/aa7fc72a-c6b1-4d85-84fc-d8d07413e839.html" target="element">  </a> </td>
+																		<td> <a href="../elements/aa7fc72a-c6b1-4d85-84fc-d8d07413e839.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/a4daa9b5-1a20-40b9-be9e-41e835e4edcc.html" target="element"> Arkitektur-og l&#248;sningsbyggeklosser </a> </td>
+																		<td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element"> Teknologiarkitektur </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/f4cdb16c-a5a7-4ec5-8980-94866327b4ed.html" target="element">  </a> </td>
+																		<td> <a href="../elements/f4cdb16c-a5a7-4ec5-8980-94866327b4ed.html" target="element" class="i18n-elementtype-AssignmentRelationship"></a> </td>
+																		<td> <a href="../elements/a4daa9b5-1a20-40b9-be9e-41e835e4edcc.html" target="element"> Arkitektur-og l&#248;sningsbyggeklosser </a> </td>
+																		<td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element"> Forretningsarkitektur </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/2900a326-27ae-451f-a4a7-0cbaffcbf7cf.html" target="element">  </a> </td>
+																		<td> <a href="../elements/2900a326-27ae-451f-a4a7-0cbaffcbf7cf.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/a4daa9b5-1a20-40b9-be9e-41e835e4edcc.html" target="element"> Arkitektur-og l&#248;sningsbyggeklosser </a> </td>
+																		<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/e77734eb-f012-4112-903f-b1a0fa421fae.html" target="element"> realiserer </a> </td>
+																		<td> <a href="../elements/e77734eb-f012-4112-903f-b1a0fa421fae.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																		<td> <a href="../elements/a4daa9b5-1a20-40b9-be9e-41e835e4edcc.html" target="element"> Arkitektur-og l&#248;sningsbyggeklosser </a> </td>
+																		<td> <a href="../elements/de18d41c-54ce-4159-a820-be625189044f.html" target="element"> Kapabiliteter (forretning og IT) </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/93adbfb2-da27-4b77-822f-b302931cdde8.html" target="element"> realiserer (automatiserer) </a> </td>
+																				<td> <a href="../elements/93adbfb2-da27-4b77-822f-b302931cdde8.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element"> Teknologiarkitektur </a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/6835d283-f4cf-404c-bfad-205d7a9e5810.html" target="element">  </a> </td>
+																				<td> <a href="../elements/6835d283-f4cf-404c-bfad-205d7a9e5810.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element"> Teknologiarkitektur </a> </td>
+																				<td> <a href="../elements/18bfb8ce-d560-4272-83ed-8b6c72e4952f.html" target="element"> Plattformer og kommunikasjons-infrastruktur </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/80ec26ed-ed0c-4d2f-bea0-ed0ee156b4c5.html" target="element">  </a> </td>
+																				<td> <a href="../elements/80ec26ed-ed0c-4d2f-bea0-ed0ee156b4c5.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																				<td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element"> Teknologiarkitektur </a> </td>
+																				<td> <a href="../elements/12556677-f6e9-4e60-8e8f-936a2c213b13.html" target="element"> Transport-protokoller og HW </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/5c29edb1-c501-4a26-a69c-d5a43dd0d99b.html" target="element"> brukes av </a> </td>
+																				<td> <a href="../elements/5c29edb1-c501-4a26-a69c-d5a43dd0d99b.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																				<td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element"> Teknologiarkitektur </a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/59278080-9f92-41b5-8bbc-1d0f9d741594.html" target="element">  </a> </td>
+																				<td> <a href="../elements/59278080-9f92-41b5-8bbc-1d0f9d741594.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element"> Teknologiarkitektur </a> </td>
+																				<td> <a href="../elements/6c1ff82b-2dbe-442e-a2ca-0131833c06d2.html" target="element"> Infrastrukturprosesser </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/88933ecd-89de-4a81-ba2b-a7f7ec2168e6.html" target="element">  </a> </td>
+																				<td> <a href="../elements/88933ecd-89de-4a81-ba2b-a7f7ec2168e6.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element"> Teknologiarkitektur </a> </td>
+																				<td> <a href="../elements/838c4282-5c38-4822-a929-421e88787982.html" target="element"> Infrastrukturtjenester </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/d973b9b1-565e-4ae7-8499-f6aac5e4ace9.html" target="element"> skriver </a> </td>
+																				<td> <a href="../elements/d973b9b1-565e-4ae7-8499-f6aac5e4ace9.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																				<td> <a href="../elements/a6e71ec3-5c82-43f9-b308-88b756346d31.html" target="element"> Teknologiarkitektur </a> </td>
+																				<td> <a href="../elements/2f66f7eb-f587-4130-a5ef-8d552d1468e2.html" target="element"> Fysiske data (masterdata og kopier) </a> </td>
+																			</tr>
+
+																					<tr>
+																						<td> <a href="../elements/0bb7e14a-3852-41a6-a81a-68e5b24105c6.html" target="element"> kj&#248;rer </a> </td>
+																						<td> <a href="../elements/0bb7e14a-3852-41a6-a81a-68e5b24105c6.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																						<td> <a href="../elements/18bfb8ce-d560-4272-83ed-8b6c72e4952f.html" target="element"> Plattformer og kommunikasjons-infrastruktur </a> </td>
+																						<td> <a href="../elements/6c1ff82b-2dbe-442e-a2ca-0131833c06d2.html" target="element"> Infrastrukturprosesser </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/a508a08a-1415-4484-ae32-e870888cf2a1.html" target="element"> har </a> </td>
+																						<td> <a href="../elements/a508a08a-1415-4484-ae32-e870888cf2a1.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																						<td> <a href="../elements/18bfb8ce-d560-4272-83ed-8b6c72e4952f.html" target="element"> Plattformer og kommunikasjons-infrastruktur </a> </td>
+																						<td> <a href="../elements/12556677-f6e9-4e60-8e8f-936a2c213b13.html" target="element"> Transport-protokoller og HW </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/28a84ba9-7ba2-4044-93f8-df27bdc9c7ee.html" target="element"> realiserer </a> </td>
+																						<td> <a href="../elements/28a84ba9-7ba2-4044-93f8-df27bdc9c7ee.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/18bfb8ce-d560-4272-83ed-8b6c72e4952f.html" target="element"> Plattformer og kommunikasjons-infrastruktur </a> </td>
+																						<td> <a href="../elements/838c4282-5c38-4822-a929-421e88787982.html" target="element"> Infrastrukturtjenester </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/835533dc-8ced-44e2-a84f-f8c4f244fd01.html" target="element"> input/ourput </a> </td>
+																						<td> <a href="../elements/835533dc-8ced-44e2-a84f-f8c4f244fd01.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/838c4282-5c38-4822-a929-421e88787982.html" target="element"> Infrastrukturtjenester </a> </td>
+																						<td> <a href="../elements/2f66f7eb-f587-4130-a5ef-8d552d1468e2.html" target="element"> Fysiske data (masterdata og kopier) </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/885c86ea-d1ac-4880-8c36-872b6ec74952.html" target="element"> tilgjengeliggj&#248;r </a> </td>
+																						<td> <a href="../elements/885c86ea-d1ac-4880-8c36-872b6ec74952.html" target="element" class="i18n-elementtype-AssignmentRelationship"></a> </td>
+																						<td> <a href="../elements/12556677-f6e9-4e60-8e8f-936a2c213b13.html" target="element"> Transport-protokoller og HW </a> </td>
+																						<td> <a href="../elements/838c4282-5c38-4822-a929-421e88787982.html" target="element"> Infrastrukturtjenester </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/a0907c86-56e3-44b1-907a-1a9b2985190f.html" target="element"> realiserer </a> </td>
+																						<td> <a href="../elements/a0907c86-56e3-44b1-907a-1a9b2985190f.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/6c1ff82b-2dbe-442e-a2ca-0131833c06d2.html" target="element"> Infrastrukturprosesser </a> </td>
+																						<td> <a href="../elements/838c4282-5c38-4822-a929-421e88787982.html" target="element"> Infrastrukturtjenester </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/afdb3a24-5a7d-46b0-adf8-c725574c5ee3.html" target="element"> skriver/leser </a> </td>
+																						<td> <a href="../elements/afdb3a24-5a7d-46b0-adf8-c725574c5ee3.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/6c1ff82b-2dbe-442e-a2ca-0131833c06d2.html" target="element"> Infrastrukturprosesser </a> </td>
+																						<td> <a href="../elements/2f66f7eb-f587-4130-a5ef-8d552d1468e2.html" target="element"> Fysiske data (masterdata og kopier) </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/d053dc22-e1ff-4bdb-84d8-8444d7d03fc7.html" target="element"> realiserer </a> </td>
+																						<td> <a href="../elements/d053dc22-e1ff-4bdb-84d8-8444d7d03fc7.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/2f66f7eb-f587-4130-a5ef-8d552d1468e2.html" target="element"> Fysiske data (masterdata og kopier) </a> </td>
+																						<td> <a href="../elements/5bd322cd-9f1c-43f8-9481-92c818ebe1e8.html" target="element"> Logiske data (datamodeller) </a> </td>
+																					</tr>
+
+													
+																			<tr>
+																				<td> <a href="../elements/72b35270-df1a-49c6-b610-6c557cb4ecd4.html" target="element">  </a> </td>
+																				<td> <a href="../elements/72b35270-df1a-49c6-b610-6c557cb4ecd4.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																				<td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element"> Forretningsarkitektur </a> </td>
+																				<td> <a href="../elements/e490448b-0aa7-4621-870b-8332132e0c22.html" target="element"> Leveranse-modeller </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/4435616f-becc-48e7-8b85-8b38019c1752.html" target="element">  </a> </td>
+																				<td> <a href="../elements/4435616f-becc-48e7-8b85-8b38019c1752.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element"> Forretningsarkitektur </a> </td>
+																				<td> <a href="../elements/58f8a20b-66cc-4f6c-ba1f-62f5f3341e88.html" target="element"> Roller </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/b6d3e53d-6da9-4699-afe7-5f02602ee8ad.html" target="element">  </a> </td>
+																				<td> <a href="../elements/b6d3e53d-6da9-4699-afe7-5f02602ee8ad.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element"> Forretningsarkitektur </a> </td>
+																				<td> <a href="../elements/e4e65698-990f-4ea1-9492-d98477594031.html" target="element"> Forretningsprosesser </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/430a8e66-0d57-4bb7-bda4-9367eb3e98df.html" target="element">  </a> </td>
+																				<td> <a href="../elements/430a8e66-0d57-4bb7-bda4-9367eb3e98df.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element"> Forretningsarkitektur </a> </td>
+																				<td> <a href="../elements/c90f7e9d-07ef-4697-b01b-85212510a268.html" target="element"> Forretninngstjenester </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/690c04d5-4ec9-4bf5-86f3-703dfeb65fcb.html" target="element"> behandler </a> </td>
+																				<td> <a href="../elements/690c04d5-4ec9-4bf5-86f3-703dfeb65fcb.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																				<td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element"> Forretningsarkitektur </a> </td>
+																				<td> <a href="../elements/b7310c0d-6e55-47f0-a2e1-5f393c77187d.html" target="element"> Konseptuelle data (informasjon) </a> </td>
+																			</tr>
+
+																					<tr>
+																						<td> <a href="../elements/3802cae5-f98f-4c92-b33a-93a51c52123e.html" target="element"> tilgjengeliggj&#248;r </a> </td>
+																						<td> <a href="../elements/3802cae5-f98f-4c92-b33a-93a51c52123e.html" target="element" class="i18n-elementtype-AssignmentRelationship"></a> </td>
+																						<td> <a href="../elements/e490448b-0aa7-4621-870b-8332132e0c22.html" target="element"> Leveranse-modeller </a> </td>
+																						<td> <a href="../elements/c90f7e9d-07ef-4697-b01b-85212510a268.html" target="element"> Forretninngstjenester </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/40b43b99-db18-4251-ae00-d572d76e583e.html" target="element"> realiserer </a> </td>
+																						<td> <a href="../elements/40b43b99-db18-4251-ae00-d572d76e583e.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/e4e65698-990f-4ea1-9492-d98477594031.html" target="element"> Forretningsprosesser </a> </td>
+																						<td> <a href="../elements/c90f7e9d-07ef-4697-b01b-85212510a268.html" target="element"> Forretninngstjenester </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/3bedda88-b623-4067-b273-4ca3efc7a86e.html" target="element"> skriver/leser </a> </td>
+																						<td> <a href="../elements/3bedda88-b623-4067-b273-4ca3efc7a86e.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/e4e65698-990f-4ea1-9492-d98477594031.html" target="element"> Forretningsprosesser </a> </td>
+																						<td> <a href="../elements/b7310c0d-6e55-47f0-a2e1-5f393c77187d.html" target="element"> Konseptuelle data (informasjon) </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/382f6863-e38c-4143-834c-2a18b9d7c8ad.html" target="element"> utf&#248;rer </a> </td>
+																						<td> <a href="../elements/382f6863-e38c-4143-834c-2a18b9d7c8ad.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																						<td> <a href="../elements/58f8a20b-66cc-4f6c-ba1f-62f5f3341e88.html" target="element"> Roller </a> </td>
+																						<td> <a href="../elements/e4e65698-990f-4ea1-9492-d98477594031.html" target="element"> Forretningsprosesser </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/26ed15d1-f7c3-4c74-8a02-ca15a32bc778.html" target="element">  </a> </td>
+																						<td> <a href="../elements/26ed15d1-f7c3-4c74-8a02-ca15a32bc778.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																						<td> <a href="../elements/58f8a20b-66cc-4f6c-ba1f-62f5f3341e88.html" target="element"> Roller </a> </td>
+																						<td> <a href="../elements/e490448b-0aa7-4621-870b-8332132e0c22.html" target="element"> Leveranse-modeller </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/afd41af8-14e5-4a26-a85d-d2a637823243.html" target="element"> realiserer </a> </td>
+																						<td> <a href="../elements/afd41af8-14e5-4a26-a85d-d2a637823243.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/58f8a20b-66cc-4f6c-ba1f-62f5f3341e88.html" target="element"> Roller </a> </td>
+																						<td> <a href="../elements/c90f7e9d-07ef-4697-b01b-85212510a268.html" target="element"> Forretninngstjenester </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/7582cb22-942e-4b9c-9386-7a051eacc50d.html" target="element"> input/output </a> </td>
+																						<td> <a href="../elements/7582cb22-942e-4b9c-9386-7a051eacc50d.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/c90f7e9d-07ef-4697-b01b-85212510a268.html" target="element"> Forretninngstjenester </a> </td>
+																						<td> <a href="../elements/b7310c0d-6e55-47f0-a2e1-5f393c77187d.html" target="element"> Konseptuelle data (informasjon) </a> </td>
+																					</tr>
+
+													
+																			<tr>
+																				<td> <a href="../elements/ffbefd70-113f-44fe-adc4-904d73a78018.html" target="element"> brukes av </a> </td>
+																				<td> <a href="../elements/ffbefd70-113f-44fe-adc4-904d73a78018.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																				<td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element"> Forretningsarkitektur </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/e1d13ee4-5790-4c2b-b49b-42977f850a69.html" target="element">  </a> </td>
+																				<td> <a href="../elements/e1d13ee4-5790-4c2b-b49b-42977f850a69.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																				<td> <a href="../elements/687e68a1-f92f-4f7d-8009-625afff99197.html" target="element"> Applikasjons-komponenter </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/a255392e-fc36-47f9-8cb8-d8138d18f7b5.html" target="element">  </a> </td>
+																				<td> <a href="../elements/a255392e-fc36-47f9-8cb8-d8138d18f7b5.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																				<td> <a href="../elements/009531cc-ab2f-43eb-be20-fd78ce02a23a.html" target="element"> Automatiserte prosesser </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/df986ae2-bad5-41ff-9dda-05f496d9e726.html" target="element"> realiserer (automatiserer) </a> </td>
+																				<td> <a href="../elements/df986ae2-bad5-41ff-9dda-05f496d9e726.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																				<td> <a href="../elements/131072ef-75fa-457f-aa2e-19d9b5601990.html" target="element"> Forretningsarkitektur </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/e9620cc8-1982-4950-a281-302432d33a8c.html" target="element">  </a> </td>
+																				<td> <a href="../elements/e9620cc8-1982-4950-a281-302432d33a8c.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																				<td> <a href="../elements/eb476600-52e3-4a07-b3da-aa50dcaaf19e.html" target="element"> Applikasjonstjenester </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/871313ea-50c9-4217-99ef-28605f4d56c9.html" target="element">  </a> </td>
+																				<td> <a href="../elements/871313ea-50c9-4217-99ef-28605f4d56c9.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																				<td> <a href="../elements/4c88c0c9-588b-43ee-a284-cb19bceb2464.html" target="element"> API-er </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/fb2bb015-791f-49b6-b3d9-490099c946b1.html" target="element"> skriver </a> </td>
+																				<td> <a href="../elements/fb2bb015-791f-49b6-b3d9-490099c946b1.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																				<td> <a href="../elements/5bd322cd-9f1c-43f8-9481-92c818ebe1e8.html" target="element"> Logiske data (datamodeller) </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/aee207f9-5822-462a-a1cb-cddc434e2293.html" target="element"> leser </a> </td>
+																				<td> <a href="../elements/aee207f9-5822-462a-a1cb-cddc434e2293.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																				<td> <a href="../elements/6f408638-df68-4c35-8f93-cdc78e617324.html" target="element"> Applikasjonsarkitektur </a> </td>
+																				<td> <a href="../elements/5bd322cd-9f1c-43f8-9481-92c818ebe1e8.html" target="element"> Logiske data (datamodeller) </a> </td>
+																			</tr>
+
+																					<tr>
+																						<td> <a href="../elements/e1e90f45-ee3b-46bd-81d5-61f7961e7628.html" target="element"> realiserer </a> </td>
+																						<td> <a href="../elements/e1e90f45-ee3b-46bd-81d5-61f7961e7628.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/687e68a1-f92f-4f7d-8009-625afff99197.html" target="element"> Applikasjons-komponenter </a> </td>
+																						<td> <a href="../elements/eb476600-52e3-4a07-b3da-aa50dcaaf19e.html" target="element"> Applikasjonstjenester </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/fc550d63-9061-46b4-b60d-4108084d547c.html" target="element"> har </a> </td>
+																						<td> <a href="../elements/fc550d63-9061-46b4-b60d-4108084d547c.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																						<td> <a href="../elements/687e68a1-f92f-4f7d-8009-625afff99197.html" target="element"> Applikasjons-komponenter </a> </td>
+																						<td> <a href="../elements/4c88c0c9-588b-43ee-a284-cb19bceb2464.html" target="element"> API-er </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/cacb8dfe-5cdb-4179-be34-c4ddec22fa74.html" target="element"> kj&#248;rer </a> </td>
+																						<td> <a href="../elements/cacb8dfe-5cdb-4179-be34-c4ddec22fa74.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																						<td> <a href="../elements/687e68a1-f92f-4f7d-8009-625afff99197.html" target="element"> Applikasjons-komponenter </a> </td>
+																						<td> <a href="../elements/009531cc-ab2f-43eb-be20-fd78ce02a23a.html" target="element"> Automatiserte prosesser </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/42988eaf-75c5-4618-899f-ed16ab8652e0.html" target="element"> input/ourput </a> </td>
+																						<td> <a href="../elements/42988eaf-75c5-4618-899f-ed16ab8652e0.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/eb476600-52e3-4a07-b3da-aa50dcaaf19e.html" target="element"> Applikasjonstjenester </a> </td>
+																						<td> <a href="../elements/5bd322cd-9f1c-43f8-9481-92c818ebe1e8.html" target="element"> Logiske data (datamodeller) </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/8641e2d8-2af4-440b-af86-58e3922a360e.html" target="element"> tilgjengeliggj&#248;r </a> </td>
+																						<td> <a href="../elements/8641e2d8-2af4-440b-af86-58e3922a360e.html" target="element" class="i18n-elementtype-AssignmentRelationship"></a> </td>
+																						<td> <a href="../elements/4c88c0c9-588b-43ee-a284-cb19bceb2464.html" target="element"> API-er </a> </td>
+																						<td> <a href="../elements/eb476600-52e3-4a07-b3da-aa50dcaaf19e.html" target="element"> Applikasjonstjenester </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/194793d8-0f30-4ac7-8fbb-c995c43b1f9d.html" target="element"> realiserer </a> </td>
+																						<td> <a href="../elements/194793d8-0f30-4ac7-8fbb-c995c43b1f9d.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/009531cc-ab2f-43eb-be20-fd78ce02a23a.html" target="element"> Automatiserte prosesser </a> </td>
+																						<td> <a href="../elements/eb476600-52e3-4a07-b3da-aa50dcaaf19e.html" target="element"> Applikasjonstjenester </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/c7b0f3b1-1ada-4c7c-828b-923d3fc86eb8.html" target="element"> skriver/leser </a> </td>
+																						<td> <a href="../elements/c7b0f3b1-1ada-4c7c-828b-923d3fc86eb8.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/009531cc-ab2f-43eb-be20-fd78ce02a23a.html" target="element"> Automatiserte prosesser </a> </td>
+																						<td> <a href="../elements/5bd322cd-9f1c-43f8-9481-92c818ebe1e8.html" target="element"> Logiske data (datamodeller) </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/91f4f9e7-7d54-4dc0-b197-f59453e676b0.html" target="element"> realiserer </a> </td>
+																						<td> <a href="../elements/91f4f9e7-7d54-4dc0-b197-f59453e676b0.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/5bd322cd-9f1c-43f8-9481-92c818ebe1e8.html" target="element"> Logiske data (datamodeller) </a> </td>
+																						<td> <a href="../elements/b7310c0d-6e55-47f0-a2e1-5f393c77187d.html" target="element"> Konseptuelle data (informasjon) </a> </td>
+																					</tr>
+
+													
+											
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

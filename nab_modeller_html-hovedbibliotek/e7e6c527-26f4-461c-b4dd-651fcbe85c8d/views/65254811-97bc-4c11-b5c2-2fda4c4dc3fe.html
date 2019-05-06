@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Forklaring av modelller</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Forklaring av modelller</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/65254811-97bc-4c11-b5c2-2fda4c4dc3fe.png" alt="Forklaring av modelller" usemap="#65254811-97bc-4c11-b5c2-2fda4c4dc3femap"/>
+			   <map name="65254811-97bc-4c11-b5c2-2fda4c4dc3femap">
+				  		<area shape="rect" coords="10,94,143,164" href="../elements/49b0b5a9-4f7d-4325-92e9-6eddf285ae09.html"  target="element">
+				  						<area shape="rect" coords="226,94,359,164" href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html"  target="element">
+				  						<area shape="rect" coords="226,250,359,320" href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html"  target="element">
+				  						<area shape="rect" coords="430,178,563,248" href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html"  target="element">
+
+				  				<area shape="rect" coords="202,58,587,335" href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html"  target="element">
+
+				  		<area shape="rect" coords="178,22,611,347" href="../elements/5ce68350-effd-455a-a5fe-ed0ae83d0a03.html"  target="element">
+				  				<area shape="rect" coords="778,154,911,224" href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html"  target="element">
+
+				  		<area shape="rect" coords="742,118,1067,251" href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html"  target="element">
+				  		<area shape="rect" coords="790,298,923,368" href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html"  target="element">
+				  		<area shape="rect" coords="1018,298,1151,368" href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html"  target="element">
+				  		<area shape="rect" coords="898,10,1031,80" href="../elements/49b0b5a9-4f7d-4325-92e9-6eddf285ae09.html"  target="element">
+				  		<area shape="rect" coords="742,10,875,80" href="../elements/5ce68350-effd-455a-a5fe-ed0ae83d0a03.html"  target="element">
+				          <area shape="rect" coords="106,442,291,522" href="../objects/48e5c67b-f6f2-494c-abcc-269200ce1b7a.html" target="element" >
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<textarea id="docsrc" style="display:none"></textarea>
+						<div id="doctgt" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td> difi:current_language </td><td> <xmp class="no-margin" style="white-space:pre-wrap">no</xmp> </td></tr>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/49b0b5a9-4f7d-4325-92e9-6eddf285ae09.html" target="element"> Rolle som skal inneha kapabilitet </a> </td>
+											    <td> <a href="../elements/49b0b5a9-4f7d-4325-92e9-6eddf285ae09.html" target="element" class="i18n-elementtype-BusinessRole"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/5ce68350-effd-455a-a5fe-ed0ae83d0a03.html" target="element"> Overordnet kapabilitet </a> </td>
+											    <td> <a href="../elements/5ce68350-effd-455a-a5fe-ed0ae83d0a03.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+													    <td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+													</tr>
+
+															<tr>
+															    <td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element"> Prosess som realiserer kapabilitet </a> </td>
+															    <td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element" class="i18n-elementtype-BusinessProcess"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element"> Tjeneste som st&#248;tter prosess  </a> </td>
+															    <td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element" class="i18n-elementtype-BusinessService"> </a> </td>
+															</tr>
+
+															<tr>
+															    <td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element"> Sentrale data som inng&#229;r i bruken av tjeneste </a> </td>
+															    <td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element" class="i18n-elementtype-BusinessObject"> </a> </td>
+															</tr>
+
+													
+											
+											<tr>
+											    <td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+											    <td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element"> Prosess som realiserer kapabilitet </a> </td>
+													    <td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element" class="i18n-elementtype-BusinessProcess"> </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element"> Tjeneste som st&#248;tter prosess  </a> </td>
+											    <td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element" class="i18n-elementtype-BusinessService"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element"> Sentrale data som inng&#229;r i bruken av tjeneste </a> </td>
+											    <td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element" class="i18n-elementtype-BusinessObject"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/49b0b5a9-4f7d-4325-92e9-6eddf285ae09.html" target="element"> Rolle som skal inneha kapabilitet </a> </td>
+											    <td> <a href="../elements/49b0b5a9-4f7d-4325-92e9-6eddf285ae09.html" target="element" class="i18n-elementtype-BusinessRole"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/5ce68350-effd-455a-a5fe-ed0ae83d0a03.html" target="element"> Overordnet kapabilitet </a> </td>
+											    <td> <a href="../elements/5ce68350-effd-455a-a5fe-ed0ae83d0a03.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+											</tr>
+
+									        <tr>
+									           <td> <a href="../objects/48e5c67b-f6f2-494c-abcc-269200ce1b7a.html" target="element">  </a> </td>
+									           <td> <a href="../objects/48e5c67b-f6f2-494c-abcc-269200ce1b7a.html" target="element" class="i18n-elementtype-DiagramModelNote"> </a> </td>
+									        </tr>
+
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/074b3f21-3642-4a66-84c5-690cb2fd2d32.html" target="element"> har </a> </td>
+																		<td> <a href="../elements/074b3f21-3642-4a66-84c5-690cb2fd2d32.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																		<td> <a href="../elements/49b0b5a9-4f7d-4325-92e9-6eddf285ae09.html" target="element"> Rolle som skal inneha kapabilitet </a> </td>
+																		<td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/a3d94a2e-557f-4e78-a202-687f137efd8d.html" target="element">  </a> </td>
+																		<td> <a href="../elements/a3d94a2e-557f-4e78-a202-687f137efd8d.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/5ce68350-effd-455a-a5fe-ed0ae83d0a03.html" target="element"> Overordnet kapabilitet </a> </td>
+																		<td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+																	</tr>
+
+																					<tr>
+																						<td> <a href="../elements/06edcb5f-3597-4873-a019-461931e6ef46.html" target="element">  </a> </td>
+																						<td> <a href="../elements/06edcb5f-3597-4873-a019-461931e6ef46.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element"> Prosess som realiserer kapabilitet </a> </td>
+																						<td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/6c7738ab-81d4-4ee2-b73e-a1adcda0f67f.html" target="element"> output skriver </a> </td>
+																						<td> <a href="../elements/6c7738ab-81d4-4ee2-b73e-a1adcda0f67f.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element"> Prosess som realiserer kapabilitet </a> </td>
+																						<td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element"> Sentrale data som inng&#229;r i bruken av tjeneste </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/68318077-47f5-4ae0-ab22-67e87a034215.html" target="element"> input (leser) </a> </td>
+																						<td> <a href="../elements/68318077-47f5-4ae0-ab22-67e87a034215.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element"> Prosess som realiserer kapabilitet </a> </td>
+																						<td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element"> Sentrale data som inng&#229;r i bruken av tjeneste </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/55f70541-d863-4211-aba1-53206fcf8aaa.html" target="element"> input (leser) </a> </td>
+																						<td> <a href="../elements/55f70541-d863-4211-aba1-53206fcf8aaa.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element"> Tjeneste som st&#248;tter prosess  </a> </td>
+																						<td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element"> Sentrale data som inng&#229;r i bruken av tjeneste </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/e990129b-cc6a-49ca-9874-19b412a031e4.html" target="element"> tjener </a> </td>
+																						<td> <a href="../elements/e990129b-cc6a-49ca-9874-19b412a031e4.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																						<td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element"> Tjeneste som st&#248;tter prosess  </a> </td>
+																						<td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element"> Prosess som realiserer kapabilitet </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/6fc21815-bf64-4f1d-a815-db1847ee1d04.html" target="element">  </a> </td>
+																						<td> <a href="../elements/6fc21815-bf64-4f1d-a815-db1847ee1d04.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element"> Tjeneste som st&#248;tter prosess  </a> </td>
+																						<td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+																					</tr>
+																					<tr>
+																						<td> <a href="../elements/19d0366f-6ba8-4d78-b041-bedef0636c5f.html" target="element"> output (skriver) </a> </td>
+																						<td> <a href="../elements/19d0366f-6ba8-4d78-b041-bedef0636c5f.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																						<td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element"> Tjeneste som st&#248;tter prosess  </a> </td>
+																						<td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element"> Sentrale data som inng&#229;r i bruken av tjeneste </a> </td>
+																					</tr>
+
+																					<tr>
+																						<td> <a href="../elements/00683ba9-b7db-4a21-a6cf-3a296232aa0d.html" target="element">  </a> </td>
+																						<td> <a href="../elements/00683ba9-b7db-4a21-a6cf-3a296232aa0d.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																						<td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element"> Sentrale data som inng&#229;r i bruken av tjeneste </a> </td>
+																						<td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+																					</tr>
+
+													
+											
+																			<tr>
+																				<td> <a href="../elements/06edcb5f-3597-4873-a019-461931e6ef46.html" target="element">  </a> </td>
+																				<td> <a href="../elements/06edcb5f-3597-4873-a019-461931e6ef46.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element"> Prosess som realiserer kapabilitet </a> </td>
+																				<td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+																			</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/e990129b-cc6a-49ca-9874-19b412a031e4.html" target="element"> tjener </a> </td>
+																		<td> <a href="../elements/e990129b-cc6a-49ca-9874-19b412a031e4.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																		<td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element"> Tjeneste som st&#248;tter prosess  </a> </td>
+																		<td> <a href="../elements/e13e1fcc-f913-4614-afe7-97e9f1c0d8da.html" target="element"> Prosess som realiserer kapabilitet </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/55f70541-d863-4211-aba1-53206fcf8aaa.html" target="element"> input (leser) </a> </td>
+																		<td> <a href="../elements/55f70541-d863-4211-aba1-53206fcf8aaa.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element"> Tjeneste som st&#248;tter prosess  </a> </td>
+																		<td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element"> Sentrale data som inng&#229;r i bruken av tjeneste </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/19d0366f-6ba8-4d78-b041-bedef0636c5f.html" target="element"> output (skriver) </a> </td>
+																		<td> <a href="../elements/19d0366f-6ba8-4d78-b041-bedef0636c5f.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/29c6dc08-6347-45c8-b61c-0b38230f807a.html" target="element"> Tjeneste som st&#248;tter prosess  </a> </td>
+																		<td> <a href="../elements/b2b54fca-8be5-4203-9cfd-6ac4938824ac.html" target="element"> Sentrale data som inng&#229;r i bruken av tjeneste </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/074b3f21-3642-4a66-84c5-690cb2fd2d32.html" target="element"> har </a> </td>
+																		<td> <a href="../elements/074b3f21-3642-4a66-84c5-690cb2fd2d32.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																		<td> <a href="../elements/49b0b5a9-4f7d-4325-92e9-6eddf285ae09.html" target="element"> Rolle som skal inneha kapabilitet </a> </td>
+																		<td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/a3d94a2e-557f-4e78-a202-687f137efd8d.html" target="element">  </a> </td>
+																		<td> <a href="../elements/a3d94a2e-557f-4e78-a202-687f137efd8d.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/5ce68350-effd-455a-a5fe-ed0ae83d0a03.html" target="element"> Overordnet kapabilitet </a> </td>
+																		<td> <a href="../elements/0724cc02-3852-41aa-870b-ce334e099f2a.html" target="element"> Kapabilitet </a> </td>
+																	</tr>
+
+											<!-- DEBUG: Skipping element from class com.archimatetool.model.impl.DiagramModelNote -->
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
