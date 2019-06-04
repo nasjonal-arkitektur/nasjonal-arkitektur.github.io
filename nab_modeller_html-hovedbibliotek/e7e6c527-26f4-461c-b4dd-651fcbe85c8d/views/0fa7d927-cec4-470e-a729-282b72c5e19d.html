@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>DMBOK2 Reference and Master Data</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>DMBOK2 Reference and Master Data</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/0fa7d927-cec4-470e-a729-282b72c5e19d.png" alt="DMBOK2 Reference and Master Data" usemap="#0fa7d927-cec4-470e-a729-282b72c5e19dmap"/>
+			   <map name="0fa7d927-cec4-470e-a729-282b72c5e19dmap">
+				  		<area shape="rect" coords="142,10,275,81" href="../elements/61d7f9c3-2633-430e-8ece-e839f557656b.html"  target="element">
+				  		<area shape="rect" coords="442,10,575,81" href="../elements/41d44569-c42d-4f83-9577-630e46831292.html"  target="element">
+				  				<area shape="rect" coords="670,202,803,273" href="../elements/cc9ea6cb-97dd-4fd5-a0c9-356b491d41f8.html"  target="element">
+				  				<area shape="rect" coords="202,202,335,273" href="../elements/986ca477-a08a-41e9-a515-4958b8316fb5.html"  target="element">
+				  				<area shape="rect" coords="358,202,491,273" href="../elements/fd75bc65-d562-48c3-b410-06fa3934c4ea.html"  target="element">
+				  				<area shape="rect" coords="514,202,647,273" href="../elements/d49fe293-5ac8-4568-97fc-6b2d3d6bc1de.html"  target="element">
+				  				<area shape="rect" coords="34,202,167,273" href="../elements/7fd67d1d-ae32-4d43-814b-cf057287e436.html"  target="element">
+
+				  		<area shape="rect" coords="22,166,815,287" href="../elements/71abf127-c896-467d-a493-77b0dd56569e.html"  target="element">
+				  				<area shape="rect" coords="670,358,803,429" href="../elements/5aebb31d-c330-46e5-ac5e-5921cec95219.html"  target="element">
+				  				<area shape="rect" coords="826,358,959,429" href="../elements/92e28828-6953-44a0-b664-c12b4b828215.html"  target="element">
+				  				<area shape="rect" coords="514,358,647,429" href="../elements/f88c19db-180d-4a05-b2d1-9d3d32208589.html"  target="element">
+				  				<area shape="rect" coords="36,358,169,429" href="../elements/64a7a645-0708-4b0c-9b3a-de86b9cbd34d.html"  target="element">
+				  				<area shape="rect" coords="352,358,485,429" href="../elements/c0c51f8f-026d-4f6d-aba1-c50cdd5a7186.html"  target="element">
+				  				<area shape="rect" coords="190,358,323,429" href="../elements/55a98fcf-ef0d-4416-bf6d-e12f113e8592.html"  target="element">
+
+				  		<area shape="rect" coords="10,322,995,443" href="../elements/57827a74-ae9c-4ade-8238-ca2b9b941f9c.html"  target="element">
+				  		<area shape="rect" coords="10,466,995,587" href="../elements/d3a935e9-cf67-408f-a305-278cf8e6f25a.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<textarea id="docsrc" style="display:none"></textarea>
+						<div id="doctgt" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/61d7f9c3-2633-430e-8ece-e839f557656b.html" target="element"> Master Data Management (MDM) </a> </td>
+											    <td> <a href="../elements/61d7f9c3-2633-430e-8ece-e839f557656b.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/41d44569-c42d-4f83-9577-630e46831292.html" target="element"> Reference Data Management (RDM) </a> </td>
+											    <td> <a href="../elements/41d44569-c42d-4f83-9577-630e46831292.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/71abf127-c896-467d-a493-77b0dd56569e.html" target="element"> Key Processing Steps for MDM </a> </td>
+											    <td> <a href="../elements/71abf127-c896-467d-a493-77b0dd56569e.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/cc9ea6cb-97dd-4fd5-a0c9-356b491d41f8.html" target="element"> Sata Sharing&amp; Stewardship </a> </td>
+													    <td> <a href="../elements/cc9ea6cb-97dd-4fd5-a0c9-356b491d41f8.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/986ca477-a08a-41e9-a515-4958b8316fb5.html" target="element"> Data Acquisition </a> </td>
+													    <td> <a href="../elements/986ca477-a08a-41e9-a515-4958b8316fb5.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/fd75bc65-d562-48c3-b410-06fa3934c4ea.html" target="element"> Data Validation, Standardization and Enrichment </a> </td>
+													    <td> <a href="../elements/fd75bc65-d562-48c3-b410-06fa3934c4ea.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/d49fe293-5ac8-4568-97fc-6b2d3d6bc1de.html" target="element"> Entity Resolution </a> </td>
+													    <td> <a href="../elements/d49fe293-5ac8-4568-97fc-6b2d3d6bc1de.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/7fd67d1d-ae32-4d43-814b-cf057287e436.html" target="element"> Data Model Management </a> </td>
+													    <td> <a href="../elements/7fd67d1d-ae32-4d43-814b-cf057287e436.html" target="element" class="i18n-elementtype-Capability"> </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/57827a74-ae9c-4ade-8238-ca2b9b941f9c.html" target="element"> MDM Activities </a> </td>
+											    <td> <a href="../elements/57827a74-ae9c-4ade-8238-ca2b9b941f9c.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/5aebb31d-c330-46e5-ac5e-5921cec95219.html" target="element"> Define Stewardship and Maintenance Processes </a> </td>
+													    <td> <a href="../elements/5aebb31d-c330-46e5-ac5e-5921cec95219.html" target="element" class="i18n-elementtype-BusinessProcess"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/92e28828-6953-44a0-b664-c12b4b828215.html" target="element"> Establish Governance Policies to Enforce Use of Master Data </a> </td>
+													    <td> <a href="../elements/92e28828-6953-44a0-b664-c12b4b828215.html" target="element" class="i18n-elementtype-BusinessProcess"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/f88c19db-180d-4a05-b2d1-9d3d32208589.html" target="element"> Model Master Data </a> </td>
+													    <td> <a href="../elements/f88c19db-180d-4a05-b2d1-9d3d32208589.html" target="element" class="i18n-elementtype-BusinessProcess"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/64a7a645-0708-4b0c-9b3a-de86b9cbd34d.html" target="element">  Define MDM Drivers and Requirements </a> </td>
+													    <td> <a href="../elements/64a7a645-0708-4b0c-9b3a-de86b9cbd34d.html" target="element" class="i18n-elementtype-BusinessProcess"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/c0c51f8f-026d-4f6d-aba1-c50cdd5a7186.html" target="element"> Define Architectural Approach </a> </td>
+													    <td> <a href="../elements/c0c51f8f-026d-4f6d-aba1-c50cdd5a7186.html" target="element" class="i18n-elementtype-BusinessProcess"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/55a98fcf-ef0d-4416-bf6d-e12f113e8592.html" target="element"> Evaluate and Assess Data Sources </a> </td>
+													    <td> <a href="../elements/55a98fcf-ef0d-4416-bf6d-e12f113e8592.html" target="element" class="i18n-elementtype-BusinessProcess"> </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/d3a935e9-cf67-408f-a305-278cf8e6f25a.html" target="element"> RDM Actvities </a> </td>
+											    <td> <a href="../elements/d3a935e9-cf67-408f-a305-278cf8e6f25a.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+											</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																			<tr>
+																				<td> <a href="../elements/beafa0e7-a911-4bef-b348-9f13eaa1b84c.html" target="element">  </a> </td>
+																				<td> <a href="../elements/beafa0e7-a911-4bef-b348-9f13eaa1b84c.html" target="element" class="i18n-elementtype-TriggeringRelationship"></a> </td>
+																				<td> <a href="../elements/986ca477-a08a-41e9-a515-4958b8316fb5.html" target="element"> Data Acquisition </a> </td>
+																				<td> <a href="../elements/fd75bc65-d562-48c3-b410-06fa3934c4ea.html" target="element"> Data Validation, Standardization and Enrichment </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/c101c254-9dce-4e7f-912a-35371cf57b08.html" target="element">  </a> </td>
+																				<td> <a href="../elements/c101c254-9dce-4e7f-912a-35371cf57b08.html" target="element" class="i18n-elementtype-TriggeringRelationship"></a> </td>
+																				<td> <a href="../elements/fd75bc65-d562-48c3-b410-06fa3934c4ea.html" target="element"> Data Validation, Standardization and Enrichment </a> </td>
+																				<td> <a href="../elements/d49fe293-5ac8-4568-97fc-6b2d3d6bc1de.html" target="element"> Entity Resolution </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/8b9d469b-9f80-4944-aca9-27f591907652.html" target="element">  </a> </td>
+																				<td> <a href="../elements/8b9d469b-9f80-4944-aca9-27f591907652.html" target="element" class="i18n-elementtype-TriggeringRelationship"></a> </td>
+																				<td> <a href="../elements/d49fe293-5ac8-4568-97fc-6b2d3d6bc1de.html" target="element"> Entity Resolution </a> </td>
+																				<td> <a href="../elements/cc9ea6cb-97dd-4fd5-a0c9-356b491d41f8.html" target="element"> Sata Sharing&amp; Stewardship </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/14dce266-9601-4887-8b08-a42cd7657db5.html" target="element">  </a> </td>
+																				<td> <a href="../elements/14dce266-9601-4887-8b08-a42cd7657db5.html" target="element" class="i18n-elementtype-TriggeringRelationship"></a> </td>
+																				<td> <a href="../elements/7fd67d1d-ae32-4d43-814b-cf057287e436.html" target="element"> Data Model Management </a> </td>
+																				<td> <a href="../elements/986ca477-a08a-41e9-a515-4958b8316fb5.html" target="element"> Data Acquisition </a> </td>
+																			</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/2bbbc762-91dd-49d9-afb5-6b691e6f64b4.html" target="element">  </a> </td>
+																		<td> <a href="../elements/2bbbc762-91dd-49d9-afb5-6b691e6f64b4.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/57827a74-ae9c-4ade-8238-ca2b9b941f9c.html" target="element"> MDM Activities </a> </td>
+																		<td> <a href="../elements/5aebb31d-c330-46e5-ac5e-5921cec95219.html" target="element"> Define Stewardship and Maintenance Processes </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/38c65da0-0811-4057-a193-20302adc9030.html" target="element">  </a> </td>
+																		<td> <a href="../elements/38c65da0-0811-4057-a193-20302adc9030.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/57827a74-ae9c-4ade-8238-ca2b9b941f9c.html" target="element"> MDM Activities </a> </td>
+																		<td> <a href="../elements/92e28828-6953-44a0-b664-c12b4b828215.html" target="element"> Establish Governance Policies to Enforce Use of Master Data </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/d487dab2-12b6-47f5-bc8a-49c965220db1.html" target="element">  </a> </td>
+																		<td> <a href="../elements/d487dab2-12b6-47f5-bc8a-49c965220db1.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/57827a74-ae9c-4ade-8238-ca2b9b941f9c.html" target="element"> MDM Activities </a> </td>
+																		<td> <a href="../elements/f88c19db-180d-4a05-b2d1-9d3d32208589.html" target="element"> Model Master Data </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/9f6ca4fb-3bed-4836-a656-e06194135cc6.html" target="element">  </a> </td>
+																		<td> <a href="../elements/9f6ca4fb-3bed-4836-a656-e06194135cc6.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/57827a74-ae9c-4ade-8238-ca2b9b941f9c.html" target="element"> MDM Activities </a> </td>
+																		<td> <a href="../elements/64a7a645-0708-4b0c-9b3a-de86b9cbd34d.html" target="element">  Define MDM Drivers and Requirements </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/f7cc9bd6-96d4-4fbd-bfe0-8046cf7004c9.html" target="element">  </a> </td>
+																		<td> <a href="../elements/f7cc9bd6-96d4-4fbd-bfe0-8046cf7004c9.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/57827a74-ae9c-4ade-8238-ca2b9b941f9c.html" target="element"> MDM Activities </a> </td>
+																		<td> <a href="../elements/c0c51f8f-026d-4f6d-aba1-c50cdd5a7186.html" target="element"> Define Architectural Approach </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/fd0cf06c-b7e8-49a5-bdb3-38519e2e312f.html" target="element">  </a> </td>
+																		<td> <a href="../elements/fd0cf06c-b7e8-49a5-bdb3-38519e2e312f.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																		<td> <a href="../elements/57827a74-ae9c-4ade-8238-ca2b9b941f9c.html" target="element"> MDM Activities </a> </td>
+																		<td> <a href="../elements/55a98fcf-ef0d-4416-bf6d-e12f113e8592.html" target="element"> Evaluate and Assess Data Sources </a> </td>
+																	</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
