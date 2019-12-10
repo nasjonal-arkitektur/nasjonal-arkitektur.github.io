@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Organisatorisk samhandlingsavtale</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Organisatorisk samhandlingsavtale</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Contract"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Contract" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<textarea id="docsrc" style="display:none">DESCRIPTION:
+Concrete and binding documents which set out the precise obligations of two parties cooperating across an &#8216;interface&#8217; to achieve interoperability. 
+This ABB is a key interoperability enabler (*) for assessing the TERMS/CONDITIONS for SHARING&amp;REUSING AND EXCHANGING information.
+An Interoperability Agreement is the means through which organisations (public administrations, or businesses) formalises the cooperation with one another. These agreements aim at the development of interoperability solutions, which meets the functional / technical requirements and needs of one another (European Interoperability Framework). 
+
+Source ISA2, EIFv2
+https://ec.europa.eu/isa2/isa2_en
+
+(*)DECISION (EU) 2015/2240 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 25 November 2015 establishing a programme on interoperability solutions and common frameworks for European public administrations, businesses and citizens (ISA2 programme) as a means for modernising the public sector.
+
+The agreement should include purposes and goals, terms and conditions, governance, and the description of the channel(s). The EIRA&#169; differentiates the following Interoperability Agreements:
+
+&#8226;	Interoperability Service Agreement (between Public Service Consumers and Public Service Providers;
+&#8226;	Interoperability Collaboration Agreement (between Organisations); or
+&#8226;	Interoperability Provider Agreement (between Public Service Providers).
+
+INTEROPERABILITY SALIENCY:
+The Organisational Interoperability Agreement ABB &#160;is a key interoperability enabler because it helps achieve organisational interoperability by assessing and formalising terms and conditions for sharing/reusing/exchanging information between two cooperating parties as stated in the EIF Recommendation 26: "Establish interoperability agreements in all layers, complemented by operational agreements and change management procedures."
+
+EXAMPLES:
+The following implementation is an example on how this specific Architecture Building Block (ABB) can be instantiated as a Solution Building Block (SBB): 
+
+ICAO Service Level Agreement Template	
+A Service Level Agreement (SLA) is an example of Interoperability Agreement in which parties agree on the description of the services to be provided by one or several parties to the other one(s). The SLA tackles topics like: service description, optional services, exclusions, limitations, service levels, service credits, escalation procedure, reporting and points of contact.
+https://www.icao.int/ESAF/Documents/APIRG/APIRG18/Docs/wp17_appendices_en.pdf 
+</textarea>
+						<div id="doctgt" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td> ID </td><td> <xmp class="no-margin" style="white-space:pre-wrap">ABB119</xmp> </td></tr><tr><td> dct:type </td><td> <xmp class="no-margin" style="white-space:pre-wrap">eira:InteroperabilityAgreement</xmp> </td></tr><tr><td> dct:publisher </td><td> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> dct:modified </td><td> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> eira:reusability </td><td> <xmp class="no-margin" style="white-space:pre-wrap">[ Reusable | Not reusable ]</xmp> </td></tr><tr><td> eira:reuse_status </td><td> <xmp class="no-margin" style="white-space:pre-wrap">[ Reuse planned | Already reused ]</xmp> </td></tr><tr><td> eira:interoperability_type </td><td> <xmp class="no-margin" style="white-space:pre-wrap">[ Collaboration agreement | Provider agreement | Service agreement ]</xmp> </td></tr><tr><td> difi:namespace </td><td> <xmp class="no-margin" style="white-space:pre-wrap">eira</xmp> </td></tr><tr><td> difi:metaLevel </td><td> <xmp class="no-margin" style="white-space:pre-wrap">undefined</xmp> </td></tr><tr><td> difi:abstractionLevel </td><td> <xmp class="no-margin" style="white-space:pre-wrap">undefined</xmp> </td></tr><tr><td> difi:language </td><td> <xmp class="no-margin" style="white-space:pre-wrap">no</xmp> </td></tr><tr><td> difi:name_no </td><td> <xmp class="no-margin" style="white-space:pre-wrap">Organisatorisk samhandlingsavtale</xmp> </td></tr><tr><td> difi:name_en </td><td> <xmp class="no-margin" style="white-space:pre-wrap">Organisational Interoperability Agreement</xmp> </td></tr><tr><td> difi:description_no </td><td> <xmp class="no-margin" style="white-space:pre-wrap">DESCRIPTION:
+								Concrete and binding documents which set out the precise obligations of two parties cooperating across an ‘interface’ to achieve interoperability. 
+								This ABB is a key interoperability enabler (*) for assessing the TERMS/CONDITIONS for SHARING&REUSING AND EXCHANGING information.
+								An Interoperability Agreement is the means through which organisations (public administrations, or businesses) formalises the cooperation with one another. These agreements aim at the development of interoperability solutions, which meets the functional / technical requirements and needs of one another (European Interoperability Framework). 
+
+								Source ISA2, EIFv2
+								https://ec.europa.eu/isa2/isa2_en
+
+								(*)DECISION (EU) 2015/2240 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 25 November 2015 establishing a programme on interoperability solutions and common frameworks for European public administrations, businesses and citizens (ISA2 programme) as a means for modernising the public sector.
+
+								The agreement should include purposes and goals, terms and conditions, governance, and the description of the channel(s). The EIRA© differentiates the following Interoperability Agreements:
+
+								•	Interoperability Service Agreement (between Public Service Consumers and Public Service Providers;
+								•	Interoperability Collaboration Agreement (between Organisations); or
+								•	Interoperability Provider Agreement (between Public Service Providers).
+
+								INTEROPERABILITY SALIENCY:
+								The Organisational Interoperability Agreement ABB  is a key interoperability enabler because it helps achieve organisational interoperability by assessing and formalising terms and conditions for sharing/reusing/exchanging information between two cooperating parties as stated in the EIF Recommendation 26: "Establish interoperability agreements in all layers, complemented by operational agreements and change management procedures."
+
+								EXAMPLES:
+								The following implementation is an example on how this specific Architecture Building Block (ABB) can be instantiated as a Solution Building Block (SBB): 
+
+								ICAO Service Level Agreement Template	
+								A Service Level Agreement (SLA) is an example of Interoperability Agreement in which parties agree on the description of the services to be provided by one or several parties to the other one(s). The SLA tackles topics like: service description, optional services, exclusions, limitations, service levels, service credits, escalation procedure, reporting and points of contact.
+								https://www.icao.int/ESAF/Documents/APIRG/APIRG18/Docs/wp17_appendices_en.pdf 
+								</xmp> </td></tr><tr><td> difi:description_en </td><td> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> label </td><td> <xmp class="no-margin" style="white-space:pre-wrap">${name} [ns:${property:difi:namespace}]</xmp> </td></tr><tr><td> difi:notes </td><td> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
