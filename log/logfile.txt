@@ -10,3 +10,6 @@
 19.12.2019 00:04:03: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\kunnskap_\main.adoc)
 19.12.2019 00:19:15: GenerateHtml
 19.12.2019 00:19:15: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\kunnskap_\book_kunnskapsbibliotek.adoc)
+19.12.2019 00:40:06: GenerateHtml
+19.12.2019 00:43:14: GenerateHtml
+19.12.2019 00:43:14: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\kunnskap_\main.adoc)
