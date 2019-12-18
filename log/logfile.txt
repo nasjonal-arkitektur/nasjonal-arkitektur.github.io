@@ -291,3 +291,4 @@
 18.12.2019 22:57:05: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\testbok1\main.adoc)
 18.12.2019 22:57:06: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\testfolder\testdoc.adoc)
 18.12.2019 23:06:56: GenerateHtml
+18.12.2019 23:28:44: GenerateHtml
