@@ -166,6 +166,7 @@ TBD: Vurder omtale av arkitekturer og referansearkitekturer fra eHelse m.m.
 === Organisasjonsspesifikke referansearkitekturer (Organization-Specific Architectures)
 
 == Arkitekturparadigmer
+
 :leveloffset: +1
 // erik include::../kunnskap_tema_arkitekturparadigmer/book-architecture-paradigms.adoc[]
 
