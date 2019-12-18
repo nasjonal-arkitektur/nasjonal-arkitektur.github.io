@@ -462,18 +462,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_organisasjonsspesifikke_referansearkitekturer_organization_specific_architectures">5.5. Organisasjonsspesifikke referansearkitekturer (Organization-Specific Architectures)</a></li>
 </ul>
 </li>
-<li><a href="#_arkitekturparadigmer">6. Arkitekturparadigmer</a>
-<ul class="sectlevel2">
-<li><a href="#intro">6.1. Introduction</a></li>
-<li><a href="#_overview_of_paradigms_and_how_they_relate">6.2. Overview of paradigms and how they relate</a></li>
-<li><a href="#_the_resource_oriented_architecture_paradigm">6.3. The Resource Oriented Architecture paradigm</a></li>
-<li><a href="#_the_service_oriented_architecture_paradigm_soa_1_0_and_2_0">6.4. The Service-Oriented Architecture paradigm (SOA 1.0 and 2.0)</a></li>
-<li><a href="#event-driven">6.5. The Event-Driven Architecture paradigm</a></li>
-<li><a href="#_the_microservices_paradigm">6.6. The Microservices paradigm</a></li>
-<li><a href="#_the_resource_oriented_architecture_paradign">6.7. The Resource Oriented Architecture paradign</a></li>
-<li><a href="#_other_paradigms">6.8. Other paradigms</a></li>
-</ul>
-</li>
+<li><a href="#_arkitekturparadigmer">6. Arkitekturparadigmer</a></li>
 <li><a href="#_patterns_arkitekturmønstre">7. Patterns (arkitekturmønstre)</a>
 <ul class="sectlevel2">
 <li><a href="#_introduction">7.1. Introduction</a></li>
@@ -812,135 +801,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_arkitekturparadigmer"><a class="anchor" href="#_arkitekturparadigmer"></a><a class="link" href="#_arkitekturparadigmer">6. Arkitekturparadigmer</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="image"><img src="../plattform_felles/media/i-arbeid.png" alt="==== " width="45" height="45"></span><em>Under construction</em></p>
-</div>
-<div class="sect2">
-<h3 id="intro"><a class="anchor" href="#intro"></a><a class="link" href="#intro">6.1. Introduction</a></h3>
-<div class="paragraph">
-<p>The term <em>Architecture Paradigm</em> is used here about an approach to architecture,  something that is larger than an <em>architecture pattern</em> or a <em>reference architecture</em>. It relates to the term <em>design paradigm</em>, which is more specifically an approach to designing solution logic.</p>
-</div>
-<div class="paragraph">
-<p>An Architecture Paradigm may include other paradigms, and relate to other paradigms. E.g. the Service-Oriented Architecture paradigm could be said to include the Microservices paradigm and to relate to the Event-Driven Architecture paradigm (or of you consider SOA 2.0, it could include Event-Driven).</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_overview_of_paradigms_and_how_they_relate"><a class="anchor" href="#_overview_of_paradigms_and_how_they_relate"></a><a class="link" href="#_overview_of_paradigms_and_how_they_relate">6.2. Overview of paradigms and how they relate</a></h3>
-<div class="paragraph">
-<p>TBD.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_the_resource_oriented_architecture_paradigm"><a class="anchor" href="#_the_resource_oriented_architecture_paradigm"></a><a class="link" href="#_the_resource_oriented_architecture_paradigm">6.3. The Resource Oriented Architecture paradigm</a></h3>
-<div class="paragraph">
-<p>A resource-oriented architecture (ROA) is the structural design supporting the internetworking of resources. A resource, in this context, is any entity that can be identified and assigned a uniform resource identifier (URI).</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_the_service_oriented_architecture_paradigm_soa_1_0_and_2_0"><a class="anchor" href="#_the_service_oriented_architecture_paradigm_soa_1_0_and_2_0"></a><a class="link" href="#_the_service_oriented_architecture_paradigm_soa_1_0_and_2_0">6.4. The Service-Oriented Architecture paradigm (SOA 1.0 and 2.0)</a></h3>
-<div class="paragraph">
-<p>Prioritized list of recommended resources:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a href="https://en.wikipedia.org/wiki/Event-driven_SOA">Wikipedia on Event-driven SOA</a></p>
-<div class="paragraph">
-<p>SOA 2.0 is the ability to create high-level business events from numerous low-level system events. Events are created by filtering real-time data (from middleware, applications, databases, and Web services, for example) and infusing it with defining detail such as dependencies or causal relationships discovered by correlating other events.</p>
-</div>
-<div class="paragraph">
-<p>SOA 2.0 event-driven programming is structured around the concept of <span class="underline">decoupled relationships between event producers and event consumers</span>: an event consumer doesn&#8217;t care where or why an event occurs; rather, it&#8217;s concerned that it will be invoked when the event has occurred. Systems and applications that separate event producers from event consumers typically rely on an <span class="underline">event dispatcher, or channel</span>. This channel contains an event queue that acts as an intermediary between event producers and event handlers.</p>
-</div>
-<div class="paragraph">
-<p>SOA 2.0 event patterns can be designed and implemented to look for event relationships that span days, weeks, or months; and when certain criteria are met, trigger a business process to address the event pattern.</p>
-</div>
-</li>
-<li>
-<p><a href="https://my.safaribooksonline.com/book/software-engineering-and-development/soa/9780133858709">Service-Oriented Architecture: Analysis and Design for Services and Microservices, Second Edition</a></p>
-<div class="paragraph">
-<p>Thomas Erl is one of the most well renowned authors within the area of Service-Oriented Architecture; ref. <a href="https://en.wikipedia.org/wiki/Thomas_Erl" class="bare">https://en.wikipedia.org/wiki/Thomas_Erl</a>. This is the 2016 retitled second edition of the original book titled <em>Service-Oriented Architecture</em>.</p>
-</div>
-<div class="paragraph">
-<p>This book should resonate well with older as well as newer generations of architects and programmers.</p>
-</div>
-<div class="paragraph">
-<p><em>Note: See appendix C for a comprehensive set of design patterns.</em></p>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Services, as part of service-oriented solutions, exist as physically independent software programs with distinct design characteristics. Each service is assigned its own distinct functional context and is comprised of a set of capabilities related to this context. A service composition is a coordinated aggregate of services.</p>
-</div>
-<div class="paragraph">
-<p>A design paradigm is an approach to designing solution logic. When building distributed solution logic, design approaches revolve around a software engineering theory known as the “separation of concerns.” In a nutshell, this theory states that a larger problem is more effectively solved when decomposed into a set of smaller problems or concerns. This gives us the option of partitioning solution logic into capabilities, each designed to solve an individual concern. Related capabilities can be grouped into units of solution logic.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a href="http://www.opengroup.org/soa/source-book/intro/">The Open Group SOA Source Book</a></p>
-<div class="paragraph">
-<p>This is a comprehensive collection of source material for use by Enterprise Architects working with Service-Oriented Architecture.</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="event-driven"><a class="anchor" href="#event-driven"></a><a class="link" href="#event-driven">6.5. The Event-Driven Architecture paradigm</a></h3>
-<div class="paragraph">
-<p>There are numerous sources that will explain the concepts of <em>Events</em> and <em>Event-Driven Architecture</em>, in general or in context with e.g. some sort of Service-Oriented Architecture.</p>
-</div>
-<div class="paragraph">
-<p>Here are some sources that could be useful to gain insight and serve as common ground:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a href="https://en.wikipedia.org/w/index.php?title=Event-driven_architecture&amp;oldid=915117327">Wikipedia on Event-driven architecture</a></p>
-</li>
-<li>
-<p><a href="https://www.confluent.io/blog/journey-to-event-driven-part-1-why-event-first-thinking-changes-everything">A series of four articles about the Journey to Event Driven</a></p>
-</li>
-<li>
-<p><a href="https://martinfowler.com/articles/201701-event-driven.html">2017 blog article by MartinFowler: What do you mean by “Event-Driven”? </a></p>
-</li>
-<li>
-<p><a href="https://medium.com/@hugo.oliveira.rocha/what-they-dont-tell-you-about-event-sourcing-6afc23c69e9a">What they don’t tell you about event sourcing</a></p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_the_microservices_paradigm"><a class="anchor" href="#_the_microservices_paradigm"></a><a class="link" href="#_the_microservices_paradigm">6.6. The Microservices paradigm</a></h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a href="http://www.opengroup.org/soa/source-book/msawp/p1.htm">The Open Group SOA Source Book on Microservices Architecture</a></p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Further resources to follow here
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_the_resource_oriented_architecture_paradign"><a class="anchor" href="#_the_resource_oriented_architecture_paradign"></a><a class="link" href="#_the_resource_oriented_architecture_paradign">6.7. The Resource Oriented Architecture paradign</a></h3>
-
-</div>
-<div class="sect2">
-<h3 id="_other_paradigms"><a class="anchor" href="#_other_paradigms"></a><a class="link" href="#_other_paradigms">6.8. Other paradigms</a></h3>
-<div class="paragraph">
-<p>TBD.</p>
-</div>
+<p>Test, Erik:
+<a href="../kunnskap_tema_arkitekturparadigmer_eda/book-event-driven-architecture.html#intro">Event-Driven Architecture, Intro</a></p>
 </div>
 </div>
 </div>
