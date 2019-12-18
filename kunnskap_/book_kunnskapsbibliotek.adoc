@@ -170,7 +170,7 @@ TBD: Vurder omtale av arkitekturer og referansearkitekturer fra eHelse m.m.
 // erik include::../kunnskap_tema_arkitekturparadigmer/book-architecture-paradigms.adoc[]
 
 // Se link:../kunnskap_tema_arkitekturparadigmer[Arkitekturparadigmer].
-Test, Erik: 
+Test, E rik: 
 <<../kunnskap_tema_arkitekturparadigmer/event-driven-architecture.adoc#intro,Event-Driven Architecture, Intro>>
 
 :leveloffset!:
