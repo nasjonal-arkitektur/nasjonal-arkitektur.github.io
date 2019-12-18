@@ -1,0 +1,1 @@
+# ssb-altinn-tilgangsstyring

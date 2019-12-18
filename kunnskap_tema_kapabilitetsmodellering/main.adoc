@@ -1,0 +1,1 @@
+include::book-kapabilitetsbasert-modellering-og-analyse.adoc[]

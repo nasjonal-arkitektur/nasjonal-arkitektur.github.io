@@ -1,0 +1,12 @@
+:lang: no
+:doctitle: Konvensjoner for modellering med Archimate 
+:keywords: Archimate
+
+include::../plattform_felles/includes/commonincludes.adoc[]
+
+:leveloffset: +1
+= Navning
+include::archimate-navning.adoc[]
+
+= Attributter
+include::archimate-attributter.adoc[]

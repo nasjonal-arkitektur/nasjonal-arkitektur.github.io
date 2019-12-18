@@ -1,0 +1,1 @@
+include::book-about-the-platform.adoc[]
