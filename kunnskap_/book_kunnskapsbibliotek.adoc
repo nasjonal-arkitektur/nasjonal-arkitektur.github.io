@@ -168,11 +168,11 @@ TBD: Vurder omtale av arkitekturer og referansearkitekturer fra eHelse m.m.
 == Arkitekturparadigmer
 
 :leveloffset: +1
-// erik include::../kunnskap_tema_arkitekturparadigmer/book-architecture-paradigms.adoc[]
+include::../kunnskap_tema_arkitekturparadigmer/book-architecture-paradigms.adoc[]
 
 // Se link:../kunnskap_tema_arkitekturparadigmer[Arkitekturparadigmer].
-Test, Erik: 
-<<../kunnskap_tema_arkitekturparadigmer_eda/book-event-driven-architecture.adoc#intro,Event-Driven Architecture, Intro>>
+//Test, Erik: 
+//<<../kunnskap_tema_arkitekturparadigmer_eda/book-event-driven-architecture.adoc#intro,Event-Driven Architecture, Intro>>
 
 :leveloffset!:
 
@@ -180,7 +180,10 @@ Test, Erik:
 
 :leveloffset: +1
 
-Se link:../kunnskap_tema_arkitekturmønstre[Patterns]
+Se link:../kunnskap_tema_arkitekturmønstre/[Patterns]
+
+
+
 include::../kunnskap_tema_arkitekturmønstre/book-arkitekturmønstre.adoc[]
 
 :leveloffset!:
