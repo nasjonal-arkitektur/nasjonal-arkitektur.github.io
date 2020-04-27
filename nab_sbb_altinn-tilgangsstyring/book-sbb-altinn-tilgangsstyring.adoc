@@ -1,0 +1,7 @@
+:lang: no
+:doctitle: Altinn tilgangsstyring - standard SBB beskrivelse
+:keywords: nasjonal arkitektur, virksomhetsarkitektur
+:audience: alle
+include::../plattform_felles/includes/commonincludes.adoc[]
+
+include::sbb-altinn-tilgangsstyring-standard-beskrivelse.adoc[]
