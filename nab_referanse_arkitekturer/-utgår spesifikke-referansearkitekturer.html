@@ -496,22 +496,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_om_dette_mønsteret">3.1. Om dette mønsteret</a></li>
 <li><a href="#_begrepsapparat">3.2. Begrepsapparat</a></li>
-<li><a href="#_verdistrømmer">3.3. Verdistrømmer</a>
+<li><a href="#_innhenting_av_supplerende_hendelsesrelaterte_data">3.3. Innhenting av supplerende hendelsesrelaterte data</a></li>
+<li><a href="#_verdistrømmer">3.4. Verdistrømmer</a>
 <ul class="sectlevel3">
-<li><a href="#_enotifikasjon_oversikt_over_verdistrømmer">3.3.1. eNotifikasjon - oversikt over verdistrømmer</a></li>
-<li><a href="#_enotifikasjon_verdistrøm_for_datatilbyder">3.3.2. eNotifikasjon - verdistrøm for datatilbyder</a></li>
-<li><a href="#_enotifikasjon_verdistrøm_for_datakonsumenter">3.3.3. eNotifikasjon - verdistrøm for datakonsumenter</a></li>
+<li><a href="#_enotifikasjon_oversikt_over_verdistrømmer">3.4.1. eNotifikasjon - oversikt over verdistrømmer</a></li>
+<li><a href="#_enotifikasjon_verdistrøm_for_datatilbyder">3.4.2. eNotifikasjon - verdistrøm for datatilbyder</a></li>
+<li><a href="#_enotifikasjon_verdistrøm_for_datakonsumenter">3.4.3. eNotifikasjon - verdistrøm for datakonsumenter</a></li>
 </ul>
 </li>
-<li><a href="#_kapabilitetskart_for_enotifikasjon">3.4. Kapabilitetskart for eNotifikasjon</a></li>
-<li><a href="#_arkitekturmønstre">3.5. Arkitekturmønstre</a>
+<li><a href="#_kapabilitetskart_for_enotifikasjon">3.5. Kapabilitetskart for eNotifikasjon</a></li>
+<li><a href="#_arkitekturmønstre">3.6. Arkitekturmønstre</a>
 <ul class="sectlevel3">
-<li><a href="#_generer_og_publiser_notifikasjoner">3.5.1. Generer og publiser notifikasjoner</a></li>
-<li><a href="#_avgi_forespurte_notifikasjoner">3.5.2. Avgi forespurte notifikasjoner</a></li>
-<li><a href="#_konsumer_notifikasjoner">3.5.3. Konsumer notifikasjoner</a></li>
+<li><a href="#_generer_og_publiser_notifikasjoner">3.6.1. Generer og publiser notifikasjoner</a></li>
+<li><a href="#_avgi_forespurte_notifikasjoner">3.6.2. Avgi forespurte notifikasjoner</a></li>
+<li><a href="#_konsumer_notifikasjoner">3.6.3. Konsumer notifikasjoner</a></li>
 </ul>
 </li>
-<li><a href="#_løsningsmønstre">3.6. Løsningsmønstre</a></li>
+<li><a href="#_løsningsmønstre">3.7. Løsningsmønstre</a></li>
 </ul>
 </li>
 </ul>
@@ -1547,13 +1548,19 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <div class="sect2 lead">
 <h3 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">3.1. Om dette mønsteret</a></h3>
 <div class="paragraph">
-<p>eNotifikasjon dreier seg om publisering av hendelsesdata via hendelseslister som kan aksesseres av datakonsumenter via spørring og oppslag i API-er. Konsumentene kan også innhente tilleggsdata om hendelser fra datatilbydere via spørring og oppslag i API-er, ved behov. Dette er illustert i følgende figur.</p>
+<p>eNotifikasjon dreier seg om publisering av hendelsesdata via hendelseslister som kan aksesseres av datakonsumenter via spørring og oppslag i API-er.</p>
+</div>
+<div class="paragraph">
+<p>eNotifikasjon bygger på <em>grunnleggende mønster for publisering og strømming av hendelser</em>.</p>
+</div>
+<div class="paragraph">
+<p>Konsumentene kan også innhente tilleggsdata om hendelser fra datatilbydere via spørring og oppslag i API-er, ved behov. Dette er illustert i følgende figur.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Pull-basert%20publisering%20av%20notifikasjoner.png" alt="Pull-basert publisering av notifikasjoner image">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Pull-basert%20distribusjon%20av%20notifikasjoner.png" alt="Pull-basert distribusjon av notifikasjoner image">
 </div>
-<div class="title">Figur 6. Pull-basert publisering av notifikasjoner</div>
+<div class="title">Figur 6. Pull-basert distribusjon av notifikasjoner</div>
 </div>
 <div class="paragraph">
 <p>Som vist i figuren, skilles det mellom to hovedtyper API-er:</p>
@@ -1608,13 +1615,50 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../plattform_felles/media/i-arbeid.png" alt="i arbeid" width="45" height="45"></span> <mark><em>Innarbeiding av kommentarer pågår, 2020-04-27</em></mark></p>
+<p>For mønsteret eNotifikasjon gjelder en detaljering av begrepet <em>hendelsesrelaterte data</em> som følger her.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Hendelsesrelaterte%20data.png" alt="Hendelsesrelaterte data image">
+</div>
+<div class="title">Figur 7. Hendelsesrelaterte data</div>
+</div>
+<div class="paragraph">
+<p>Forkaring til modellen:</p>
+</div>
+<div class="paragraph">
+<p><em>Hendelsestype</em> kan være et entydig element i et kontrollert vokabular, men det kan også være "fritekst".</p>
+</div>
+<div class="paragraph">
+<p><em>Hendelsesrelaterte data</em> kan være små eller store <em>Datasett</em>, enten lagret samlet eller distribuert.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_verdistrømmer"><a class="anchor" href="#_verdistrømmer"></a><a class="link" href="#_verdistrømmer">3.3. Verdistrømmer</a></h3>
+<h3 id="_innhenting_av_supplerende_hendelsesrelaterte_data"><a class="anchor" href="#_innhenting_av_supplerende_hendelsesrelaterte_data"></a><a class="link" href="#_innhenting_av_supplerende_hendelsesrelaterte_data">3.3. Innhenting av supplerende hendelsesrelaterte data</a></h3>
+<div class="paragraph">
+<p>For notifikasjoner som ikke gir et tilstrekkelig sett av <em>hendelsesrelaterte data</em> for konsumentens formål, må datakonsumenten selv ta initiativ til å innhente supplerende data.</p>
+</div>
+<div class="paragraph">
+<p>Identifikasjon av aktuelle supplerende hendelsesrelaterte kan enten gjøres gjennom</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>en enkelt <em>identifikator for hendelsesrelaterte data</em> som inneholdes i notifikasjonen, Dette kan fungere godt når tilbyder har preparert det aktuelle datasettet for konsumenten ut fra spesifikasjon gitt i abonnementsoppsettet.</p>
+</li>
+<li>
+<p>separate identifikatorer for ulike deler av  notifikasjon, f.eks for <em>subjekt</em>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Selve innhentingen av <em>supplerende hendelsesrelaterte data</em> dekkes av eOppslag referansearkitektur.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verdistrømmer"><a class="anchor" href="#_verdistrømmer"></a><a class="link" href="#_verdistrømmer">3.4. Verdistrømmer</a></h3>
 <div class="sect3">
-<h4 id="_enotifikasjon_oversikt_over_verdistrømmer"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer"></a><a class="link" href="#_enotifikasjon_oversikt_over_verdistrømmer">3.3.1. eNotifikasjon - oversikt over verdistrømmer</a></h4>
+<h4 id="_enotifikasjon_oversikt_over_verdistrømmer"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer"></a><a class="link" href="#_enotifikasjon_oversikt_over_verdistrømmer">3.4.1. eNotifikasjon - oversikt over verdistrømmer</a></h4>
 <div class="paragraph">
 <p>Følgende figur viser en oversikt over verdistrømmene på tvers av datatilbyder og datakonsument for eNotifikasjon.</p>
 </div>
@@ -1622,14 +1666,14 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/eNotifikasjon%20-%20oversikt%20over%20verdistrømmer.png" alt="eNotifikasjon - oversikt over verdistrømmer image">
 </div>
-<div class="title">Figur 7. eNotifikasjon - oversikt over verdistrømmer</div>
+<div class="title">Figur 8. eNotifikasjon - oversikt over verdistrømmer</div>
 </div>
 <div class="paragraph">
 <p>Stegene i verdistrømmen er nærmere forklart under egne avsnitt om verdistrømmene for hver rolle.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enotifikasjon_verdistrøm_for_datatilbyder"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datatilbyder"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datatilbyder">3.3.2. eNotifikasjon - verdistrøm for datatilbyder</a></h4>
+<h4 id="_enotifikasjon_verdistrøm_for_datatilbyder"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datatilbyder"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datatilbyder">3.4.2. eNotifikasjon - verdistrøm for datatilbyder</a></h4>
 <div class="paragraph">
 <p>Her vises verdistrømmen for eNotifikasjon sett fra datatilbyder, med angivelse av kapabiliteter.</p>
 </div>
@@ -1640,11 +1684,11 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/eNotifikasjon%20-%20tilbyders%20verdistrøm.png" alt="eNotifikasjon - tilbyders verdistrøm image">
 </div>
-<div class="title">Figur 8. eNotifikasjon - tilbyders verdistrøm</div>
+<div class="title">Figur 9. eNotifikasjon - tilbyders verdistrøm</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_enotifikasjon_verdistrøm_for_datakonsumenter"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datakonsumenter"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datakonsumenter">3.3.3. eNotifikasjon - verdistrøm for datakonsumenter</a></h4>
+<h4 id="_enotifikasjon_verdistrøm_for_datakonsumenter"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datakonsumenter"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datakonsumenter">3.4.3. eNotifikasjon - verdistrøm for datakonsumenter</a></h4>
 <div class="paragraph">
 <p>Her vises verdistrømmen for eNotifikasjon sett fra datakonsumenter, med angivelse av kapabiliteter.</p>
 </div>
@@ -1655,12 +1699,12 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/eNotifikasjon%20-%20konsumenters%20verdistrøm.png" alt="eNotifikasjon - konsumenters verdistrøm image">
 </div>
-<div class="title">Figur 9. eNotifikasjon - konsumenters verdistrøm</div>
+<div class="title">Figur 10. eNotifikasjon - konsumenters verdistrøm</div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_kapabilitetskart_for_enotifikasjon"><a class="anchor" href="#_kapabilitetskart_for_enotifikasjon"></a><a class="link" href="#_kapabilitetskart_for_enotifikasjon">3.4. Kapabilitetskart for eNotifikasjon</a></h3>
+<h3 id="_kapabilitetskart_for_enotifikasjon"><a class="anchor" href="#_kapabilitetskart_for_enotifikasjon"></a><a class="link" href="#_kapabilitetskart_for_enotifikasjon">3.5. Kapabilitetskart for eNotifikasjon</a></h3>
 <div class="paragraph">
 <p>Modellen under viser kapabiliteter som er spesifikke for eNotifikasjon. Øvrige kapabiliteter er beskrevet i samhandlingsmønsteret for <em>deling av data på forespørsel</em>.</p>
 </div>
@@ -1668,7 +1712,7 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/Kapabiliteter%20eNotifikasjon.png" alt="Kapabiliteter eNotifikasjon image">
 </div>
-<div class="title">Figur 10. Kapabiliteter eNotifikasjon</div>
+<div class="title">Figur 11. Kapabiliteter eNotifikasjon</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Tabell 10. Elementer i view for Kapabiliteter eNotifikasjon</caption>
@@ -1707,9 +1751,9 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </table>
 </div>
 <div class="sect2">
-<h3 id="_arkitekturmønstre"><a class="anchor" href="#_arkitekturmønstre"></a><a class="link" href="#_arkitekturmønstre">3.5. Arkitekturmønstre</a></h3>
+<h3 id="_arkitekturmønstre"><a class="anchor" href="#_arkitekturmønstre"></a><a class="link" href="#_arkitekturmønstre">3.6. Arkitekturmønstre</a></h3>
 <div class="sect3">
-<h4 id="_generer_og_publiser_notifikasjoner"><a class="anchor" href="#_generer_og_publiser_notifikasjoner"></a><a class="link" href="#_generer_og_publiser_notifikasjoner">3.5.1. Generer og publiser notifikasjoner</a></h4>
+<h4 id="_generer_og_publiser_notifikasjoner"><a class="anchor" href="#_generer_og_publiser_notifikasjoner"></a><a class="link" href="#_generer_og_publiser_notifikasjoner">3.6.1. Generer og publiser notifikasjoner</a></h4>
 <div class="paragraph">
 <p>Generer og publiser notifikasjoner er den prosessen datatilbyder må gjøre for å tilby notifikasjoner gjennom hendelseslister. Hendelselister tilbys på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men det finnes spesielle krav for hendelseslister med tanke på segmentering,  filtrering og navigering.</p>
 </div>
@@ -1717,7 +1761,7 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/Generer%20og%20publiser%20notifikasjoner%20(arkitekturmønster).png" alt="Generer og publiser notifikasjoner (arkitekturmønster) image">
 </div>
-<div class="title">Figur 11. Generer og publiser notifikasjoner (arkitekturmønster)</div>
+<div class="title">Figur 12. Generer og publiser notifikasjoner (arkitekturmønster)</div>
 </div>
 <div class="paragraph">
 <p>Forklaring til figur:</p>
@@ -1778,7 +1822,7 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </table>
 </div>
 <div class="sect3">
-<h4 id="_avgi_forespurte_notifikasjoner"><a class="anchor" href="#_avgi_forespurte_notifikasjoner"></a><a class="link" href="#_avgi_forespurte_notifikasjoner">3.5.2. Avgi forespurte notifikasjoner</a></h4>
+<h4 id="_avgi_forespurte_notifikasjoner"><a class="anchor" href="#_avgi_forespurte_notifikasjoner"></a><a class="link" href="#_avgi_forespurte_notifikasjoner">3.6.2. Avgi forespurte notifikasjoner</a></h4>
 <div class="paragraph">
 <p>Notifikasjoner avgis gjennom API på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag, men tilbyder må tilpasse hendelsene som avgis etter det konsumenten har rettigheter til og etterspør. F.eks. kan konsumenten kun ha rettigheter til en delmengde av alle hendelser i hendelsesliten og også kun være interessert i enkelte typer hendelser. Konsumenten vil også normalt kun ha behov for å hente notifikasjoner som ikke er hentet tidliger, men kan også ønske å hente tidligere notifikasjoner på nytt.</p>
 </div>
@@ -1786,7 +1830,7 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/Avgi%20notifikasjoner%20på%20forespørsel.png" alt="Avgi notifikasjoner på forespørsel image">
 </div>
-<div class="title">Figur 12. Avgi notifikasjoner på forespørsel</div>
+<div class="title">Figur 13. Avgi notifikasjoner på forespørsel</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Tabell 12. Elementer i view for Avgi notifikasjoner på forespørsel</caption>
@@ -1845,7 +1889,7 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </table>
 </div>
 <div class="sect3">
-<h4 id="_konsumer_notifikasjoner"><a class="anchor" href="#_konsumer_notifikasjoner"></a><a class="link" href="#_konsumer_notifikasjoner">3.5.3. Konsumer notifikasjoner</a></h4>
+<h4 id="_konsumer_notifikasjoner"><a class="anchor" href="#_konsumer_notifikasjoner"></a><a class="link" href="#_konsumer_notifikasjoner">3.6.3. Konsumer notifikasjoner</a></h4>
 <div class="paragraph">
 <p>Notifikasjoner leses på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men konsumentene må holde orden på spesielle forhold som rekkefølge og hvilke notifikasjoner som er lest. Konsumenten må også være i stand til å vurdere relevansen av hendelsene før videre behandling av notifikasjonene.</p>
 </div>
@@ -1853,7 +1897,7 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/Innhente%20notifikasjoner%20((arkitekturmønster).png" alt="Innhente notifikasjoner ((arkitekturmønster) image">
 </div>
-<div class="title">Figur 13. Innhente notifikasjoner ((arkitekturmønster)</div>
+<div class="title">Figur 14. Innhente notifikasjoner ((arkitekturmønster)</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Tabell 13. Elementer i view for Innhente notifikasjoner ((arkitekturmønster)</caption>
@@ -1925,7 +1969,7 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </div>
 </div>
 <div class="sect2">
-<h3 id="_løsningsmønstre"><a class="anchor" href="#_løsningsmønstre"></a><a class="link" href="#_løsningsmønstre">3.6. Løsningsmønstre</a></h3>
+<h3 id="_løsningsmønstre"><a class="anchor" href="#_løsningsmønstre"></a><a class="link" href="#_løsningsmønstre">3.7. Løsningsmønstre</a></h3>
 <div class="paragraph">
 <p>Spesifikke løsningsmønstre for eNotifikasjon er inntil videre ikke utarbeidet. Det er stor variasjon i praksis, og ingen fellesløsninger er så langt etablert i Norge.</p>
 </div>
