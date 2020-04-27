@@ -21,8 +21,8 @@ eNotifikasjon bygger på _grunnleggende mønster for publisering og strømming a
 
 Konsumentene kan også innhente tilleggsdata om hendelser fra datatilbydere via spørring og oppslag i API-er, ved behov. Dette er illustert i følgende figur.
 
-.Pull-basert publisering av notifikasjoner
-image::../nab_referanse_arkitekturer_datautveksling_publisering/media/Pull-basert publisering av notifikasjoner.png[alt=Pull-basert publisering av notifikasjoner image]
+.Pull-basert distribusjon av notifikasjoner
+image::../nab_referanse_arkitekturer_datautveksling_publisering/media/Pull-basert distribusjon av notifikasjoner.png[alt=Pull-basert distribusjon av notifikasjoner image]
 
 Som vist i figuren, skilles det mellom to hovedtyper API-er: 
 
