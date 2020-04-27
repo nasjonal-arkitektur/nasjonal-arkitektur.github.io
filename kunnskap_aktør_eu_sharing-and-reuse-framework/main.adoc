@@ -1,1 +1,0 @@
-include::book-sharing-and-reuse-framework.adoc[]

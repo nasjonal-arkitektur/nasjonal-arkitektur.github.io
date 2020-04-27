@@ -1,1 +1,0 @@
-include::./book-generisk-forespørsel-svar.adoc[]
