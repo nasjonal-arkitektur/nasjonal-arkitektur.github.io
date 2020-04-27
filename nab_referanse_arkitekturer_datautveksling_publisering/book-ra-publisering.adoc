@@ -16,7 +16,7 @@ _Dette er en del av link:../nab_referanse_arkitekturer_datautveksling/[Referanse
 
 Mønstre for publisering gir deling av data og datastrømmer med løs kopling mellom tilbyder og konsument. 
 
-Det fokuseres her på mønstre som understøtter hendelsesdrevet arkitektur, og det benyttes bevisst et begrepsapparat som gjenspeiler dette. Mønstre for publisering handler derfor her i hovedsak om publisering av data om hendelser og strømming av slike data. 
+Det fokuseres her på mønstre som understøtter hendelsesdrevet arkitektur, og det benyttes et begrepsapparat som gjenspeiler dette. Mønstre for publisering handler derfor her i hovedsak om publisering av data om hendelser, samt strømming av slike data. 
 
 Det finnes flere varianter av mønstrene, og disse egner seg til ulike formål. Utvikling av arkitekturer og fellesløsninger pågår både i Norge og internasjonalt, blant annet med komponenter fra EU. Det finnes også en rekke teknologier og produkter, deriblant mye som _open source_.
 
@@ -120,8 +120,10 @@ include::../nab_referanse_arkitekturer_datautveksling_publisering/grunnleggende-
 :leveloffset: -1
 
 = Strømming av oppdaterte data (event-carried state transfer)
- 
+
+
 = Strømming av hendelser (event notification)
+
 ////
 For notifikasjoner som ikke gir det komplette _øyeblikksbildet_, må datakonsumenten avgjøre om det behøves supplerende data, og selv ta initiativ til å innhente de dataene det er behov for.
 

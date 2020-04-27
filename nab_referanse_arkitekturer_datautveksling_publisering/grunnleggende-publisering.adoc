@@ -20,8 +20,8 @@ Det grunnleggende mønsteret for publisering som omhandles her, bygger på det m
 Konseptene bak mønsteret kan oppsummeres slik (se figur under): 
 
 * Tilbydere publiserer nyheter (hendelser) via  nyhetskanaler (hendelsesstrømmer) til et konsumentmarked der konsumentene (datakonsumentene) ikke nødvendigvis er kjent på forhånd. 
-* Konsumenter kan kople seg på for å lese nyheter på tilfeldig basis (løssalgsavis).
-* Konsumenter kan eventuelt tegne abonnementer for å få levert nyhetene "på døra" (f.eks. via en meldingskø på abonnentsiden, men dette kan også gjøres på andre måter).
+* Konsumenter kan kople seg på for å lese nyheter (hendelser) på tilfeldig basis (løssalgsavis).
+* Konsumenter kan eventuelt tegne abonnementer for å få levert nyhetene (hendelsene) "på døra" (f.eks. via en meldingskø på abonnentsiden, men dette kan også gjøres på andre måter).
 * Konsumenter kan også tegne abonnementer for å få et utvalg av nyhetene (innholdsfilter.) 
 * Tilbyder kan ta betalt for innhold og tjenester, eller det kan være gratis.
 
