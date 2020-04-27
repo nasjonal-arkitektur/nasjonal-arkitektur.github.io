@@ -1,2 +1,0 @@
-:lang: no
-include::book_datadeling_verdistrømmer.adoc[]

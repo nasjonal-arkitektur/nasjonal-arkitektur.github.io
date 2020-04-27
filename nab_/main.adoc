@@ -1,1 +1,0 @@
-include::book-nasjonalt-arkitekturbibliotek.adoc[]

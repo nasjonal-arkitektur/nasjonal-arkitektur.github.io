@@ -1,8 +1,0 @@
-:lang: no
-:doctitle: Matrikkelen - standard SBB beskrivelse
-:keywords: nasjonal arkitektur, virksomhetsarkitektur
-:audience: alle
-
-include::../plattform_felles/includes/commonincludes.adoc[]
-
-include::./sbb-kartverket-matrikkelen-standard-beskrivelse.adoc[]

@@ -1,1 +1,0 @@
-include::boks-tes-cartography.adoc[]
