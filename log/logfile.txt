@@ -407,3 +407,5 @@
 27.04.2020 06:04:40: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\nab_referanse_arkitekturer_enotifikasjon\book-ra-enotifikasjon.adoc)
 27.04.2020 06:12:00: GenerateHtml
 27.04.2020 06:12:01: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\nab_referanse_arkitekturer_enotifikasjon\book-ra-enotifikasjon.adoc)
+27.04.2020 06:18:06: GenerateHtml
+27.04.2020 06:18:07: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\nab_referanse_arkitekturer_enotifikasjon\book-ra-enotifikasjon.adoc)
