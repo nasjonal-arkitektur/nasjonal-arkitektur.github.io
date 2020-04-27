@@ -119,10 +119,10 @@ include::../nab_referanse_arkitekturer_datautveksling_publisering/grunnleggende-
 
 :leveloffset: -1
 
-= Strømming av oppdaterte data (event-carried state transfer)
+//= Strømming av oppdaterte data (event-carried state transfer)
 
 
-= Strømming av hendelser (event notification)
+//= Strømming av hendelser (event notification)
 
 ////
 For notifikasjoner som ikke gir det komplette _øyeblikksbildet_, må datakonsumenten avgjøre om det behøves supplerende data, og selv ta initiativ til å innhente de dataene det er behov for.
@@ -132,7 +132,7 @@ Hvordan konsumenten identifiserer aktuelle supplerende hendelsesdata, kan varier
 TIP: En globalt unik identifikator kan fungere som en direkte peker til aktuelle dataressurser på nettet. En kan da, under visse forutsetninger, unngå behovet for å måtte innhente kopier av supplerende data, også for data som ligger hos andre virksomheter og eventuelt distribuert hos flere virksomheter. 
 ////
 
-= Regnskapsføring av hendelser (event sourcing)
+//= Regnskapsføring av hendelser (event sourcing)
 
 //== Skille mellom datamodeller for skriving og lesing (CQRS)
 

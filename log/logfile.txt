@@ -402,3 +402,6 @@
 27.04.2020 05:55:06: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\nab_referanse_arkitekturer_datautveksling_publisering\book-ra-publisering.adoc)
 27.04.2020 05:55:10: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\nab_referanse_arkitekturer_datautveksling_publisering\grunnleggende-publisering.adoc)
 27.04.2020 05:55:11: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\nab_referanse_arkitekturer_enotifikasjon\book-ra-enotifikasjon.adoc)
+27.04.2020 06:04:37: GenerateHtml
+27.04.2020 06:04:37: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\nab_referanse_arkitekturer_datautveksling_publisering\book-ra-publisering.adoc)
+27.04.2020 06:04:40: RunAsciiDoctor(C:\github\digdir\nasjonal-arkitektur.github.io\nab_referanse_arkitekturer_enotifikasjon\book-ra-enotifikasjon.adoc)
