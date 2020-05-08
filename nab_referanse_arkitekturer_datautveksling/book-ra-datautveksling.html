@@ -498,27 +498,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_mønstre_for_publisering">4. Mønstre for publisering</a>
 <ul class="sectlevel2">
 <li><a href="#_introduksjon_4">4.1. Introduksjon</a></li>
-<li><a href="#_litteraturhenvisninger">4.2. Litteraturhenvisninger</a></li>
-<li><a href="#_bruksområder">4.3. Bruksområder</a></li>
-<li><a href="#_grunnleggende_begrepsapparat_for_publisering">4.4. Grunnleggende begrepsapparat for publisering</a></li>
-<li><a href="#_grunnleggende_mønster_for_publisering_og_strømming_av_hendelser">4.5. Grunnleggende mønster for publisering og strømming av hendelser</a>
-<ul class="sectlevel4">
-<li><a href="#_om_dette_mønsteret_2">Om dette mønsteret</a></li>
-<li><a href="#_hovedkonsepter">Hovedkonsepter</a></li>
-<li><a href="#_overordnet_om_løsninger_for_utveksling_av_notifikasjoner_via_hendelseslister">Overordnet om løsninger for utveksling av notifikasjoner via hendelseslister</a></li>
-<li><a href="#_applikasjonstjenester_for_utveksling_av_notifikasjoner_via_hendelseslister_teknisk">Applikasjonstjenester for utveksling av notifikasjoner via hendelseslister (teknisk)</a></li>
-<li><a href="#_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk">Filtrering og minimering av hendelseslister og notifikasjoner (semantisk og teknisk)</a></li>
+<li><a href="#bruksområder-publisering-generelt">4.2. Bruksområder</a></li>
+<li><a href="#overskrift-grunnleggende-publisering">4.3. Konsepter for publisering og konsumering av hendelsesstrømmer</a>
+<ul class="sectlevel3">
+<li><a href="#generisk-publisering">4.3.1. Basiskonsepter</a></li>
+<li><a href="#_avanserte_konsepter">4.3.2. Avanserte konsepter</a></li>
 </ul>
 </li>
-<li><a href="#_enotifikasjon_en_aktuell_kombinasjon_av_utvalgte_mønstre">4.6. eNotifikasjon - en aktuell kombinasjon av utvalgte mønstre</a>
+<li><a href="#_enotifikasjon">4.4. eNotifikasjon</a>
 <ul class="sectlevel3">
-<li><a href="#_om_dette_mønsteret_3">4.6.1. Om dette mønsteret</a></li>
-<li><a href="#_begrepsapparat">4.6.2. Begrepsapparat</a></li>
-<li><a href="#_innhenting_av_supplerende_hendelsesrelaterte_data">4.6.3. Innhenting av supplerende hendelsesrelaterte data</a></li>
-<li><a href="#_verdistrømmer">4.6.4. Verdistrømmer</a></li>
-<li><a href="#_kapabilitetskart_for_enotifikasjon">4.6.5. Kapabilitetskart for eNotifikasjon</a></li>
-<li><a href="#_arkitekturmønstre">4.6.6. Arkitekturmønstre</a></li>
-<li><a href="#_løsningsmønstre">4.6.7. Løsningsmønstre</a></li>
+<li><a href="#_om_dette_mønsteret_2">4.4.1. Om dette mønsteret</a></li>
+<li><a href="#_verdistrømbeskrivelse">4.4.2. Verdistrømbeskrivelse</a></li>
+<li><a href="#_kapabilitetskart_for_enotifikasjon">4.4.3. Kapabilitetskart for eNotifikasjon</a></li>
+<li><a href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">4.4.4. Realisering av kapabiliteter - generisk arkitekturmønster</a></li>
+<li><a href="#_løsningsmønstre_for_enotifikasjon">4.4.5. Løsningsmønstre for eNotifikasjon</a></li>
 </ul>
 </li>
 </ul>
@@ -534,7 +527,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1.1. Generelt</a></h3>
 <div class="paragraph">
-<p><em>Referansearkitektur for datautveksling</em> gir beste praksis for arkitekturer og løsninger innen <em>temaområdet datautveksling</em>.</p>
+<p><em>Referansearkitektur for datautveksling</em> gir god praksis for arkitekturer og løsninger innen <em>temaområdet datautveksling</em>.</p>
 </div>
 <div class="paragraph">
 <p>Primære målgrupper er virksomhetsarkitekter, løsningsarkitekter og tech-leads i utviklingsteam.</p>
@@ -697,22 +690,6 @@ Basismønstrene gir grunnlag for sammensatte og mer avanserte samhandlingsmønst
 </div>
 <div class="paragraph">
 <p>Se <a href="../nab_referanse_arkitekturer_struktur_beskrivelse">leseveiledning</a>.</p>
-</div>
-<div class="paragraph">
-<p>Beskrivelsene finnes ellers både samlet og enkeltvis:</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha">
-<li>
-<p><a href="../nab_referanse_arkitekturer_datautveksling_forespørsel-svar">Mønstre for spørring og oppslag</a></p>
-</li>
-<li>
-<p><a href="../nab_referanse_arkitekturer_datautveksling_forsendelse">Mønstre for forsendelse</a></p>
-</li>
-<li>
-<p><a href="../nab_referanse_arkitekturer_datautveksling_publisering">Mønstre for publisering av hendelsesdata</a></p>
-</li>
-</ol>
 </div>
 </div>
 </div>
@@ -2795,11 +2772,35 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </div>
 <div class="sect2">
 <h3 id="_introduksjon_4"><a class="anchor" href="#_introduksjon_4"></a><a class="link" href="#_introduksjon_4">4.1. Introduksjon</a></h3>
-<div class="paragraph">
-<p>Mønstre for publisering gir deling av data og datastrømmer med løs kopling mellom tilbyder og konsument.</p>
+<div id="basiskonsept-publisering" class="paragraph">
+<p>Mønstre for publisering handler helt grunnleggende om at tilbydere publiserer datastrømmer, eller hendelsesstrømmer, uten å måtte vite hvem konsumentene er. Konsumentene kan i sin tur koble seg på disse hendelsestrømmene og ta rede på hva som skjer.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20basiskonsept.png" alt="Publisering av hendelser - basiskonsept image">
+</div>
+<div class="title">Figur 16. Publisering av hendelser - basiskonsept</div>
 </div>
 <div class="paragraph">
-<p>Det fokuseres her på mønstre som understøtter hendelsesdrevet arkitektur, og det benyttes et begrepsapparat som gjenspeiler dette. Mønstre for publisering handler derfor her i hovedsak om publisering av data om hendelser, samt strømming av slike data.</p>
+<p>Dette gir en form for løs kobling mellom aktørene som fremmer innovasjon og samhandling. Nye samhandlingsparter kan plukke opp hendelser og kople seg på i tjenesteproduksjonen. Forretningsprosessene behøver ikke være kartlagt og fastsatt i minste detalj på forhånd. Nye prosesser kan utvikles i dynamiske økosystemer. <em>Dette kan ses som et essensielt element i satsingen på sammenhengende tjenester og realisering av målsetninger om datadrevet økonomi og innovasjon; se f.eks.  <a href="https://www.regjeringen.no/no/tema/statlig-forvaltning/ikt-politikk/melding-om-datadrevet-okonomi-og-innovasjon/id2688376/">Stortingsmelding om datadrevet økonomi og innovasjon</a>.</em></p>
+</div>
+<div class="paragraph">
+<p>Endringer i IT-systemene blir også enklere, fordi det vil være mindre avhengigheter til systemene hos andre virksomheter. En ønsker generelt å komme bort fra store monolittiske systemer som ikke er lagt opp til å samspille i en distribuert kontekst.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Løs kopling mellom IT-systemene er blant de de helt grunnleggende arkitekturprinsippene innen tjenesteorientert atrkitektur. Gjeldende arkitekturprinsipper fra Digitaliseringsdirektoratet per 2020 sier blant annet: <em>Ta hensyn til anerkjente designprinsipper for tjenesteorientert arkitektur, slik som løse koplinger, modularisering, standardiserte tjenestekontrakter med videre.</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Det fokuseres her på mønstre som understøtter hendelsesdrevet arkitektur og tjenesteorientering, og det benyttes et begrepsapparat som gjenspeiler dette. Mønstre for publisering handler derfor her i hovedsak om publisering av data om hendelser, samt strømming av slike data. Andre former for publisering, slik som f.eks. publisering av API-er i en API-katalog, faller utenfor her.</p>
 </div>
 <div class="paragraph">
 <p>Det finnes flere varianter av mønstrene, og disse egner seg til ulike formål. Utvikling av arkitekturer og fellesløsninger pågår både i Norge og internasjonalt, blant annet med komponenter fra EU. Det finnes også en rekke teknologier og produkter, deriblant mye som <em>open source</em>.</p>
@@ -2817,19 +2818,16 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </table>
 </div>
 <div class="paragraph">
-<p>Dette er fremdeles for de fleste et vanskelig område å navigere i. Det finnes mange kilder til informasjon, men ingen enkelt, dekkende lærebok. Både vinkling og begrepsapparat fra ulike kilder er egnet til forviiring.</p>
+<p>Dette er fremdeles for de fleste et vanskelig område å navigere i. Det finnes mange kilder til informasjon, men ingen enkelt, dekkende lærebok. Både vinkling og begrepsapparat fra ulike kilder er egnet til forvirring.</p>
 </div>
 <div class="paragraph">
 <p>Ambisjonsnivået her er heller ikke  å gi en komplett innføring i alle aspekter. Beskrivelser og utvalg av mønstre vil være behovsdrevet og vil utvikles over tid.</p>
 </div>
+<div id="litteraturhenvisninger" class="sidebarblock">
+<div class="content">
+<div class="title">Noen litteraturhenvisninger</div>
 <div class="paragraph">
-<p>Et viktig prinsipp er å ikke "oppfinne hjulet på nytt". Det er dessuten ønskelig at et norsk begrepsapparat tilsvarer utbredte engelske begreper.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_litteraturhenvisninger"><a class="anchor" href="#_litteraturhenvisninger"></a><a class="link" href="#_litteraturhenvisninger">4.2. Litteraturhenvisninger</a></h3>
-<div class="paragraph">
-<p>Det er skrevet mye om arkitekturmønstre for publisering (eller pub-sub) og hendelsesdrevet arkitektur de siste årene, gjerne med ulike innfallsvinkler ut fra sammenhengen med arkitekturparadigmer som SOA og Microservices.</p>
+<p>Det er skrevet mye om arkitekturmønstre for publisering, strømming og hendelsesdrevet arkitektur de siste årene, gjerne med ulike innfallsvinkler ut fra sammenhengen med arkitekturparadigmer som SOA og Microservices.</p>
 </div>
 <div class="paragraph">
 <p>Noen utvalgte henvisninger:</p>
@@ -2837,16 +2835,25 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 <div class="olist arabic">
 <ol class="arabic">
 <li>
+<p><a href="https://en.wikipedia.org/wiki/Event-driven_architecture">Wikipedia om Event-driven architecture</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Event-driven_SOA">Wikipedia om Event-driven SOA</a></p>
+</li>
+<li>
+<p><a href="https://martinfowler.com/articles/201701-event-driven.html">Martin Fowler - What do you mean by “Event-Driven”?</a></p>
+</li>
+<li>
 <p><a href="https://en.wikipedia.org/w/index.php?title=Publish%E2%80%93subscribe_pattern&amp;oldid=950857039">Wikipedia om Publish-Subscribe</a></p>
 </li>
 <li>
-<p><a href="https://martinfowler.com/articles/201701-event-driven.html">What do you mean by “Event-Driven”?</a></p>
+<p><a href="https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#event-collaboration">Event Collaboration</a></p>
+</li>
+<li>
+<p><a href="https://www.sciencedirect.com/topics/computer-science/event-notification">Event Notification </a></p>
 </li>
 <li>
 <p><a href="https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#event-sourcing">Event Sourcing</a></p>
-</li>
-<li>
-<p><a href="https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#event-collaboration">Event Collaboration</a></p>
 </li>
 <li>
 <p><a href="https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#_pattern_cqrs_command_query_responsibility_segregation">CQRS</a></p>
@@ -2860,21 +2867,26 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </ol>
 </div>
 </div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="_bruksområder"><a class="anchor" href="#_bruksområder"></a><a class="link" href="#_bruksområder">4.3. Bruksområder</a></h3>
+<h3 id="bruksområder-publisering-generelt"><a class="anchor" href="#bruksområder-publisering-generelt"></a><a class="link" href="#bruksområder-publisering-generelt">4.2. Bruksområder</a></h3>
 <div class="paragraph">
-<p>Eksempler på anvendelse av mønstre for publisering:</p>
+<p>Eksempler på anvendelse av mønstre for publisering og konsumering av hendelsesstrømmer:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Strømming av forretningsmessige hendelsesdata, f.eks. i tilknytning til vedtak i offentlig saksbehandling.</p>
-</li>
-<li>
-<p>Abonnement på data brukt til analyser og statistikk.</p>
+<p>Trigging av forretningsprosesser hos samhandlingsparter som deltar i dynamiske forretningsprosesser og tilpasset saksbehandling.</p>
 </li>
 <li>
 <p>Replikering av data ved hendelsesbasert oppdatering av kopier og avledede datasett.</p>
+</li>
+<li>
+<p>Logging av hendelsesrelaterte data for formål som arkivering og verifikasjon av etterlevelse.</p>
+</li>
+<li>
+<p>Hendelsesbasert innhenting av data brukt til analyser og statistikk.</p>
 </li>
 <li>
 <p>Strømming av IoT-data, enten periodisk (tidshendelse) eller ved terskeloverskridende endringer i måleverdier</p>
@@ -2883,7 +2895,41 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </div>
 </div>
 <div class="sect2">
-<h3 id="_grunnleggende_begrepsapparat_for_publisering"><a class="anchor" href="#_grunnleggende_begrepsapparat_for_publisering"></a><a class="link" href="#_grunnleggende_begrepsapparat_for_publisering">4.4. Grunnleggende begrepsapparat for publisering</a></h3>
+<h3 id="overskrift-grunnleggende-publisering"><a class="anchor" href="#overskrift-grunnleggende-publisering"></a><a class="link" href="#overskrift-grunnleggende-publisering">4.3. Konsepter for publisering og konsumering av hendelsesstrømmer</a></h3>
+<div class="sect3">
+<h4 id="generisk-publisering"><a class="anchor" href="#generisk-publisering"></a><a class="link" href="#generisk-publisering">4.3.1. Basiskonsepter</a></h4>
+<div class="sect4">
+<h5 id="_aktørsamspill"><a class="anchor" href="#_aktørsamspill"></a><a class="link" href="#_aktørsamspill">Aktørsamspill</a></h5>
+<div class="paragraph">
+<p>Datatilbyder <span class="underline">publiserer</span> hendelsestrømmer som <span class="underline">konsumeres</span> av datakonsumenter. Tilsvarende kan en si at datatilbyders publiseringsløsning <span class="underline">skriver</span> notifikasjoner til hendelseslister etterhvert som hendelser skjer, etterfulgt av at datakonsumentene <span class="underline">leser</span> notifikasjoner gjennom sine løsninger for innhenting og mottak.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20grunnleggende%20konsept,%20med%20applikasjoner.png" alt="Publisering av hendelser - grunnleggende konsept" width="med applikasjoner image">
+</div>
+<div class="title">Figur 17. Publisering av hendelser - grunnleggende konsept, med applikasjoner</div>
+</div>
+<div class="paragraph">
+<p>Legg merke til at den publiserte hendelseslisten her er en del av tilbyders løsning og ansvar.</p>
+</div>
+<div class="paragraph">
+<p>I praksis kan også både datatilbyder og datakonsument velge å benytte en ekstern tjenesteleverandør for å formidle hendelsesdata. I så fall kan ekstern tjenesteleverandørs løsninger og tjenester anses som del av tilbyders eller konsuments løsninger og tjenester på lik linje med interne leverandører (og behøver ikke vises som egen part).</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+Det faller utenfor omfanget her å gå inn på tilfeller der  ekstern tjenesteleverandør opptrer som  mellomledd på en måte som gjør det nødvendig å se på juridiske forhold eller løsninger på tvers av partene.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="grunnleggende-begreper"><a class="anchor" href="#grunnleggende-begreper"></a><a class="link" href="#grunnleggende-begreper">Begrepsapparat</a></h5>
 <div class="paragraph">
 <p>Grunnleggende begreper og sammenhenger er vist i følgende modell.</p>
 </div>
@@ -2891,56 +2937,240 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 <div class="content">
 <img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Grunnleggende%20begreper%20for%20publisering%20av%20hendelser.png" alt="Grunnleggende begreper for publisering av hendelser image">
 </div>
-<div class="title">Figur 16. Grunnleggende begreper for publisering av hendelser</div>
-</div>
-<div class="paragraph">
-<p><em>Hendelser</em> er det som skjer i den virkelige i verden, i en strøm av hendelser, eller <em>hendelsesstrømmer</em>.</p>
-</div>
-<div class="paragraph">
-<p>Assosiert med hver hendelse finnes et <em>datagrunnlag</em> som tilsvarer tilstanden før hendelsen inntraff. I bakkant av hendelsen finnes tilsvarende  et "<em>oppdatert datagrunnlag</em>, som typisk, men ikke nødvendigvis, vil være endret.</p>
-</div>
-<div class="paragraph">
-<p><em>Subjekt</em> er hvem eller hva hendelsen omhandler, slik dette er å oppfatte i den aktuelle konteksten. Dette kan være et fysisk objekt (f.eks. person), en samling fysiske objekter (f.eks. befolkningsgruppe) eller et konsept (f.eks. politikk).</p>
-</div>
-<div class="paragraph">
-<p>I tilknytning til hver hendelse finnes <em>Hendelsesrelaterte data</em>. Dette kan være små eller store datasett som beskriver datagrunnlaget og aktuelle endringer. Nærmere om begreper og tekniske løsninger for dette gis i tilknytning til de ulike arkitekturmønstrene, med ulike måter å representere og oppdatere datagrunnlaget på, på tvers av tilbyder og konsument.</p>
-</div>
-<div class="paragraph">
-<p>En <em>notifikasjon</em> informerer om at en hendelse har inntruffet og kan inneholde  hele eller deler av det totale settet av  aktuelle <em>hendelsesrelaterte data</em> direkte eller lenke til hvor dette finnes (eventuelt en kombinasjon).</p>
-</div>
-<div class="paragraph">
-<p>Notifikasjoner samles og publiseres av tilbyder gjennom  <em>hendelseslister</em>.</p>
-</div>
-<div class="paragraph">
-<p>Em hendelse kan gi flere notifikasjoner.</p>
-</div>
-<div class="paragraph">
-<p>Samme notifikasjon kan opptre i flere hendelseslister.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_grunnleggende_mønster_for_publisering_og_strømming_av_hendelser"><a class="anchor" href="#_grunnleggende_mønster_for_publisering_og_strømming_av_hendelser"></a><a class="link" href="#_grunnleggende_mønster_for_publisering_og_strømming_av_hendelser">4.5. Grunnleggende mønster for publisering og strømming av hendelser</a></h3>
-<div class="sect4">
-<h5 id="_om_dette_mønsteret_2"><a class="anchor" href="#_om_dette_mønsteret_2"></a><a class="link" href="#_om_dette_mønsteret_2">Om dette mønsteret</a></h5>
-<div class="paragraph">
-<p>Det grunnleggende mønsteret for publisering som omhandles her, bygger på det mønsteret som i litteraturen tradisjonelt omtales som <em>publish-subscribe</em>; se f.eks. <a href="https://en.wikipedia.org/w/index.php?title=Publish%E2%80%93subscribe_pattern&amp;oldid=950857039">wikipedia om publish-subscribe pattern</a> for en enkel beskrivelse av dette.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_hovedkonsepter"><a class="anchor" href="#_hovedkonsepter"></a><a class="link" href="#_hovedkonsepter">Hovedkonsepter</a></h5>
-<div class="paragraph">
-<p>Konseptene bak mønsteret kan oppsummeres slik (se figur under):</p>
+<div class="title">Figur 18. Grunnleggende begreper for publisering av hendelser</div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Tilbydere publiserer nyheter (hendelser) via  nyhetskanaler (hendelsesstrømmer) til et konsumentmarked der konsumentene (datakonsumentene) ikke nødvendigvis er kjent på forhånd.</p>
+<p><em>Hendelser</em> er det som skjer i den virkelige i verden, i en konstant strøm av endrede data, eller <em>hendelsesstrømmer</em>.</p>
+</li>
+</ul>
+</div>
+<div id="subjekt-definisjon" class="ulist">
+<ul>
+<li>
+<p><em>Subjekt</em> er hvem eller hva hendelsen omhandler, slik dette er å oppfatte i den aktuelle konteksten. Dette kan f.eks. være et fysisk objekt (eks. bil), en person, en virksomhet eller et konsept (eks. politikk). Det kan også være en samling av underordnede subjekter, slik som f.eks. en befolkningsgruppe eller alle virksomheter som har et navn som begynner på A.</p>
 </li>
 <li>
-<p>Konsumenter kan kople seg på for å lese nyheter (hendelser) på tilfeldig basis (løssalgsavis).</p>
+<p>Assosiert med hver hendelse finnes et <em>datagrunnlag</em> som tilsvarer tilstanden før hendelsen inntraff. I bakkant av hendelsen finnes tilsvarende  et <em>oppdatert datagrunnlag</em>.</p>
+</li>
+</ul>
+</div>
+<div id="definisjon-hendelsesrelaterte-data" class="ulist">
+<ul>
+<li>
+<p>I tilknytning til hver hendelse finnes <em>Hendelsesrelaterte data</em>. Dette kan være små eller store datasett som beskriver datagrunnlaget og aktuelle endringer. Nærmere om begreper og tekniske løsninger for dette gis i tilknytning til de ulike arkitekturmønstrene, med ulike måter å representere og oppdatere datagrunnlaget på, på tvers av tilbyder og konsument.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>En <em>notifikasjon</em> informerer om at en hendelse har inntruffet og kan inneholde hele eller deler av det totale settet av aktuelle <em>hendelsesrelaterte data</em>, enten direkte eller gjennom lenke til hvor datasettet finnes (eventuelt en kombinasjon).</p>
 </li>
 <li>
-<p>Konsumenter kan eventuelt tegne abonnementer for å få levert nyhetene (hendelsene) "på døra" (f.eks. via en meldingskø på abonnentsiden, men dette kan også gjøres på andre måter).</p>
+<p>Notifikasjoner samles og publiseres av tilbyder gjennom  <em>hendelseslister</em>.</p>
+</li>
+<li>
+<p>En og samme hendelse kan være representert gjennom flere notifikasjoner som hver beskriver hendelsen på ulike måter for ulike formål og ulike målgrupper; som publisert gjennom ulike hendelseslister.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="notifikasjonsinnhold-generisk"><a class="anchor" href="#notifikasjonsinnhold-generisk"></a><a class="link" href="#notifikasjonsinnhold-generisk">Innhold i notifikasjoner</a></h5>
+<div class="paragraph">
+<p>Begrepsapparatet bygger på <a href="#grunnleggende-begreper">det grunnleggende begrepsapparatet for publisering av hendelsesstrømmer</a>.</p>
+</div>
+<div class="paragraph">
+<p>En modell som konkretiserer notifikasjonsinnholdet er vist i figuren nedenfor. Her er det også angitt relasjonene til hendelsesrelaterte data, noe som kan være et langt større datasett enn det som utveksles i notifikasjoner mellom tilbyder og konsument.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Notifikasjonsinnhold.png" alt="Notifikasjonsinnhold image">
+</div>
+<div class="title">Figur 19. Notifikasjonsinnhold</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figuren over:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>En notifikasjon inneholder som minimum en <em>identifikator for notifikasjonen</em>. Denne må være gyldig på tvers av tilbyder og konsument. Tilbyder må holde rede på sammenhengen mellom notifikasjon og assosierte, <a href="#definisjon-hendelsesrelaterte-data">hendelsesrelaterte data</a>.</p>
+</li>
+<li>
+<p>Hvilke notifikasjonsdata som forøvrig er relevante,  avhenger av hendelsestype og eventuell innholdsminimering.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Hendelsestype</em> identifiserer typen hendelse overfor konsument, som grunnlag  for filtrering og videre behandling.</p>
+</li>
+<li>
+<p>Sekvensinformasjon kan gis ved å peke på foregående notifikasjon for samme subjekt. Tidsstempel med tilstrekkelig oppløsning kan også angi sekvens, men gir  ikke generelt en like direkte og treffsikker identifisering av foregående notifikasjon. <em>Merk: Løpende sekvensnummer er også mulig å benytte, men er ikke vist her.</em></p>
+</li>
+<li>
+<p>Subjekt for hendelse: Se <a href="#subjekt-definisjon">definisjon av subjekt</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister"><a class="anchor" href="#_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister"></a><a class="link" href="#_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister">Innhenting av notifikasjoner gjennom spørring mot hendelseslister</a></h5>
+<div class="paragraph">
+<p>Pullbasert innhenting av notifikasjoner skjer gjennom at konsumenten forespør notifikasjoner fra tilbyder, etterfulgt av at forespurte notifikasjoner leveres. Dette kan være en enkelt notifikasjon eller flere i rekke. Illustrasjon (sekvensdiagram):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Spørring%20mot%20hendelseslister%20-%20basisflyt.png" alt="Spørring mot hendelseslister - basisflyt image">
+</div>
+<div class="title">Figur 20. Spørring mot hendelseslister - basisflyt</div>
+</div>
+<div class="paragraph">
+<p>Forespørsler gjøres mot tilbyders spørretjeneste, som vist i følgende diagram.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Tilbyders%20spørretjeneste%20mot%20hendelsesliste.png" alt="Tilbyders spørretjeneste mot hendelsesliste image">
+</div>
+<div class="title">Figur 21. Tilbyders spørretjeneste mot hendelsesliste</div>
+</div>
+<div class="paragraph">
+<p>Tilbyders spørretjeneste  mot hendelseslister må støtte ulike måter å lese ut aktuelle hendelser på, slik som:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Spørringer for å hente ut filtrerte utvalg av notifikasjoner og, ved behov, minimere datainnhold i hver enkelt notifikasjon.</p>
+</li>
+<li>
+<p>Avspilling av notifikasjoner innen angitt tidsrom.</p>
+</li>
+<li>
+<p>Avspilling av seneste notifikasjoner, f.eks etter en gitt identifikator.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_innhenting_av_supplerende_hendelsesrelaterte_data"><a class="anchor" href="#_innhenting_av_supplerende_hendelsesrelaterte_data"></a><a class="link" href="#_innhenting_av_supplerende_hendelsesrelaterte_data">Innhenting av supplerende hendelsesrelaterte data</a></h5>
+<div class="paragraph">
+<p>For notifikasjoner som ikke gir et tilstrekkelig sett av <em>hendelsesrelaterte data</em> for konsumentens formål, må datakonsumenten selv ta initiativ til å innhente <em>supplerende hendelsesrelaterte data</em>.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Det er uproblematisk å sende med en ny måleverdi for et termometer, mens det kan være mindre ønskelig å distribuere komplette kopier av større og distribuerte datasett. Hensyn til dataminimering (personvern eller andre hesnyn) spiller også en rolle i slike vurderinger.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Den typiske prosessen er illustrert i følgende sekvensdiagram:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Spørring%20mot%20hendelseslister%20-%20med%20innhenting%20av%20supplerende%20data.png" alt="Spørring mot hendelseslister - med innhenting av supplerende data image">
+</div>
+<div class="title">Figur 22. Spørring mot hendelseslister - med innhenting av supplerende data</div>
+</div>
+<div class="paragraph">
+<p>I <em>forespørsel om supplerende hendelsesrelaterte data</em> må det kunne identifiseres hvilke data som ønskes. Tilbyder kan gi ulike opsjoner for dette. En mulighet er at <em>identifikator for notifikasjonen</em> entydig identifiserer aktuelle datasett. En annen mulighet er f.eks. spørring etter etter spesifikke informasjonselementer for et angitt subjekt.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+Det bør sikres at <em>hendelsesrelaterte data</em> forblir identifiserbare og tilgjengelige over tid. En god måte å gjøre dette på er gjennom globalt unike identifikatorer i kombinasjon med en mekanisme for datavirtualisering.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Selve innhentingen av <em>supplerende hendelsesrelaterte data</em> dekkes av eOppslag referansearkitektur.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_avanserte_konsepter"><a class="anchor" href="#_avanserte_konsepter"></a><a class="link" href="#_avanserte_konsepter">4.3.2. Avanserte konsepter</a></h4>
+<div class="sect4">
+<h5 id="generisk-publish-subscribe"><a class="anchor" href="#generisk-publish-subscribe"></a><a class="link" href="#generisk-publish-subscribe">Abonnementsbasert publisering</a></h5>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Dette konseptet tilsvarer det som i litteraturen tradisjonelt omtales som <em>publish-subscribe</em>; se f.eks. <a href="https://en.wikipedia.org/w/index.php?title=Publish%E2%80%93subscribe_pattern&amp;oldid=950857039">wikipedia om publish-subscribe pattern</a> for en enkel beskrivelse av dette.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Her introduseres støtte for å tegne abonnementer for formål og behov som:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Støtte for strenge sanntidskrav. Unngå behov for å polle hendelseslistene for endringer og i stedet få abonnerte notifikasjoner levert fortløpende (pushbasert levering).</p>
+</li>
+<li>
+<p>Velg mellom opsjoner for å få mottak av notifikasjoner til ønsket teknisk grensesnitt (f.eks. kall av API vs. levering til meldingkø).</p>
+</li>
+<li>
+<p>SLA-avtaler, f.eks. avtale om akseptable tidsforsinkelser før levering av notifikasjoner.</p>
+</li>
+<li>
+<p>Abonnementsbasert betaling. f.eks. ut fra valg mellom ulike, volumbaserte prispakker som tilbys, eller f.eks. volumuavhengig fastpris.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Følgende figur illustrerer det forretningsmessige koneptet for abonnement på hendelsesstrømmer.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20basiskonsept%20med%20abonnement.png" alt="Publisering av hendelser - basiskonsept med abonnement image">
+</div>
+<div class="title">Figur 23. Publisering av hendelser - basiskonsept med abonnement</div>
+</div>
+<div class="paragraph">
+<p>Registrering av abonnement gjøres typisk mot en selvbetjeningsløsning for dette hos datatilbyder. Datatilbyder vil deretter sende notifikasjoner fortløpende og pushbasert til konsumentens mottaksløsning som avtalt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Pushbasert%20levering%20av%20notifikasjoner%20til%20abonnenter.png" alt="Pushbasert levering av notifikasjoner til abonnenter image">
+</div>
+<div class="title">Figur 24. Pushbasert levering av notifikasjoner til abonnenter</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Analogi til mediehus:</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Mediehus (tilbyder) publiserer nyheter  (hendelser)  via  nyhetskanaler (hendelsesstrømmer) til et konsumentmarked der konsumentene ikke nødvendigvis er kjent på forhånd.</p>
+</li>
+<li>
+<p>Konsumenter kan kople seg på for å lese nyheter på tilfeldig basis, f.eks. en løssalgsavis.</p>
+</li>
+<li>
+<p>Konsumenter kan eventuelt tegne abonnementer for å få levert nyhetene "på døra" (f.eks. til en innboks).</p>
 </li>
 <li>
 <p>Konsumenter kan også tegne abonnementer for å få et utvalg av nyhetene (innholdsfilter.)</p>
@@ -2950,167 +3180,106 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </li>
 </ul>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20basiskonsept.png" alt="Publisering av hendelser - basiskonsept image">
 </div>
-<div class="title">Figur 17. Publisering av hendelser - basiskonsept</div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_overordnet_om_løsninger_for_utveksling_av_notifikasjoner_via_hendelseslister"><a class="anchor" href="#_overordnet_om_løsninger_for_utveksling_av_notifikasjoner_via_hendelseslister"></a><a class="link" href="#_overordnet_om_løsninger_for_utveksling_av_notifikasjoner_via_hendelseslister">Overordnet om løsninger for utveksling av notifikasjoner via hendelseslister</a></h5>
+<h5 id="filtrering-og-minimering"><a class="anchor" href="#filtrering-og-minimering"></a><a class="link" href="#filtrering-og-minimering">Filtrering og minimering av hendelseslister og notifikasjoner</a></h5>
 <div class="paragraph">
-<p>Datatilbyders publiseringsløsning skriver notifikasjoner til hendelseslister etterhvert som hendelser skjer. Datakonsumentene kan deretter lese og konsumere notifikasjoner gjennom sine løsninger.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20grunnleggende%20konsept,%20med%20applikasjoner.png" alt="Publisering av hendelser - grunnleggende konsept" width="med applikasjoner image">
-</div>
-<div class="title">Figur 18. Publisering av hendelser - grunnleggende konsept, med applikasjoner</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_applikasjonstjenester_for_utveksling_av_notifikasjoner_via_hendelseslister_teknisk"><a class="anchor" href="#_applikasjonstjenester_for_utveksling_av_notifikasjoner_via_hendelseslister_teknisk"></a><a class="link" href="#_applikasjonstjenester_for_utveksling_av_notifikasjoner_via_hendelseslister_teknisk">Applikasjonstjenester for utveksling av notifikasjoner via hendelseslister (teknisk)</a></h5>
-<div class="paragraph">
-<p>Følgende figur angir aktuelle tjenester og grensesnitt.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20tjenester%20.png" alt="Publisering av hendelser - tjenester  image">
-</div>
-<div class="title">Figur 19. Publisering av hendelser - tjenester</div>
-</div>
-<div class="paragraph">
-<p>Forklaring:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Konsumenten kan innhente notifikasjoner på eget initiativ ved å spørre mot publiserte hendelseslister gjennom et grensesnitt for dette. Dersom det dreier seg om åpne data og tilbyders spørretjenester dekker behovet, kan dette gjøres uten at det tegnes abonnement eller settes opp særskilte avtaler. Lesing av notifikasjoner kan skje enkeltvis eller batchvis, avhengig av konsumentens preferanser og opsjoner i grensesnittet.</p>
-<div class="paragraph">
-<p>Grensesnittet for lesing av notifikasjoner er normalt et API (f.eks. REST eller GraphQL).</p>
-</div>
-<div class="paragraph">
-<p>Merk: Dataminimering kan løses ved at det tilbys ulike hendelseslister for samme <em>grunnlagsnotifikasjoner</em>, gjerne forbeholdt ulike konsumentgrupper eller roller, med ulike rettigheter.</p>
-</div>
-</li>
-<li>
-<p>Registrering av abonnement gjøres typisk gjennom en standardtjeneste og et API for dette. Registreringen spesifiserer abonnementet mot det grensesnittet som tilbys, og kan omfatte:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Valg av tilgjengelige opsjoner for automatisk "på døren" levering av meldinger til konsumentens integrasjonsløsning.</p>
-</li>
-<li>
-<p>Spesifisering av et utvalg av notifikasjoner fra den aktuelle hendelseslisten (server-side filtrering), ut fra tilgjengelige metadata og opsjoner.</p>
-</li>
-<li>
-<p>Spesifisering av dataminimering for notifikasjonsdata, slik at konsumenten unngår å motta f.eks. persondata som det ikke finnes rettslig grunnlag for å konsumere.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Som alternativ til at konsumenten selv tar initiativ (pull), kan tilbyder automatisk levere notifikasjoner til konsumentens integrasjonsløsning. Typiske løsninger:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Asynkrone meldinger til en meldingskø hos konsumenten.</p>
-</li>
-<li>
-<p>Kall av API hos konsumenten.</p>
-</li>
-<li>
-<p>(Filoverføring.)</p>
-</li>
-<li>
-<p>(Direkte databaseoppdatering.)</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk"><a class="anchor" href="#_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk"></a><a class="link" href="#_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk">Filtrering og minimering av hendelseslister og notifikasjoner (semantisk og teknisk)</a></h5>
-<div class="paragraph">
-<p>Filtrering av notifikasjoner kan skje på følgende måter:</p>
+<p>Filtrering og minimering av hendelseslister og notifikasjoner handler om:</p>
 </div>
 <div class="olist loweralpha">
 <ol class="loweralpha">
 <li>
-<p>Tilbyder tilbyr ulike hendelseslister, der det allerede er gjort et utvalg basert på metadata og kriterier som tema eller rettigheter.</p>
+<p>Filtrering av hendelseslister slik at en får det ønskede utvalget av subjekter og hendelser, f.eks. salg av leiligheter til under 2 millioner kroner i  din bydel. Dette handler ikke om å gjøre innhentingen stykkevis og delt. Det er normalt viktig å sørge for at den filtrerte hendelseslisten gir komplett historikk for formålet.</p>
 </li>
 <li>
-<p>Konsumenten spesifiserer et abonnement på ytterligere filtrering innen hver hendelsesliste. Det kan være to formål for dette:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Dataminimering ut fra hensyn til personvern eller konfidensialitet</p>
-</li>
-<li>
-<p>Filtrering av ikke-relevante notifikasjoner</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Konsumenten kasserer notifikasjoner etter mottak.</p>
+<p>Minimering av innholdet i notifikasjoner, slik at konsumenten unngår å motta eller få tilgang til mer informasjon enn det som er interessant for konsumenten eller det has hjemmel for ut fra personvernhensyn.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Følgende modell oppsummerer sammenhengen mellom begreper som angår filtrering og dataminimering for hendelseslister og notifikasjoner på tvers av tilbyder og konsument.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20filtrering%20og%20minimering.png" alt="Publisering av hendelser - filtrering og minimering image">
-</div>
-<div class="title">Figur 20. Publisering av hendelser - filtrering og minimering</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_enotifikasjon_en_aktuell_kombinasjon_av_utvalgte_mønstre"><a class="anchor" href="#_enotifikasjon_en_aktuell_kombinasjon_av_utvalgte_mønstre"></a><a class="link" href="#_enotifikasjon_en_aktuell_kombinasjon_av_utvalgte_mønstre">4.6. eNotifikasjon - en aktuell kombinasjon av utvalgte mønstre</a></h3>
-<div class="sect3 lead">
-<h4 id="_om_dette_mønsteret_3"><a class="anchor" href="#_om_dette_mønsteret_3"></a><a class="link" href="#_om_dette_mønsteret_3">4.6.1. Om dette mønsteret</a></h4>
-<div class="paragraph">
-<p>eNotifikasjon dreier seg om publisering av hendelsesdata via hendelseslister som kan aksesseres av datakonsumenter via spørring og oppslag i API-er.</p>
-</div>
-<div class="paragraph">
-<p>eNotifikasjon bygger på <em>grunnleggende mønster for publisering og strømming av hendelser</em>.</p>
-</div>
-<div class="paragraph">
-<p>Konsumentene kan også innhente tilleggsdata om hendelser fra datatilbydere via spørring og oppslag i API-er, ved behov. Dette er illustert i følgende figur.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Pull-basert%20distribusjon%20av%20notifikasjoner.png" alt="Pull-basert distribusjon av notifikasjoner image">
-</div>
-<div class="title">Figur 21. Pull-basert distribusjon av notifikasjoner</div>
-</div>
-<div class="paragraph">
-<p>Som vist i figuren, skilles det mellom to hovedtyper API-er:</p>
+<p>Dette kan løses på ulike måter, herunder:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>API for oppslag/spørring mot hendelseslister.</p>
+<p>Tilbyder tilbyr ulike hendelseslister, der det i utgangspunktet er gjort et utvalg fra det komplette utvalget innen tilbyders domene, basert på metadata og kriterier som tema eller konfidensialitet for hver hendelsesliste.</p>
 </li>
 <li>
-<p>API for oppslag/innhenting av supplerende hendelsesdata (ved behov).</p>
+<p>Tilbyder filtrerer innen hver hendelsesliste ut fra konsumentens spesifikasjon /spørring.</p>
+</li>
+<li>
+<p>Tilbyder minimerer innholdet i hver notifikasjon ut fra konsumentens spesifikasjon /spørring.</p>
+</li>
+<li>
+<p>Konsumenten ignorerer irrelevante notifikasjoner ved å filtrere innlesingen på konsumentsiden eller forkaste notifikasjoner etter innlesing.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Begge disse måtene å gjøre oppslag på dekkes av <em>eOppslag</em> arkitekturmønster.</p>
+<p>På veien fra tilbyder til konsument vil hendelseslister og notifikasjoner på denne måten endre innhold. Det er de samme hendelsene som gjelder, men nye datasett. Det kan være nyttig å skille mellom tilbyders publiserte notifikasjoner, utvekslede notifikasjoner (tilpasset for konsument av tilbyder) og de notifikasjonene som er relevante for konsument og tas videre til  prosessering. En kan tilsvarende se på serier av f.eks. utvekslede notifikasjoner som en utvekslet hendelsesliste. Dette begrepsapparatet er oppsummert i følgende modell.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Filtrering%20og%20minimering%20av%20hendelseslister%20og%20notifikasjoner%20på%20tvers%20av%20tilbyder%20og%20konsument.png" alt="Filtrering og minimering av hendelseslister og notifikasjoner på tvers av tilbyder og konsument image">
+</div>
+<div class="title">Figur 25. Filtrering og minimering av hendelseslister og notifikasjoner på tvers av tilbyder og konsument</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="utledning-av-subjekttilstand"><a class="anchor" href="#utledning-av-subjekttilstand"></a><a class="link" href="#utledning-av-subjekttilstand">Tilstand som resultat av hendelser</a></h5>
+<div class="paragraph">
+<p>Et subjekts tilstand kan beskrives i form av et øyeblikksbilde eller som en serie endringer ut fra et tidligere øyeblikksbilde. En notifikasjon inneholder tilsvarende enten et øyeblikksbilde av subjektet eller data om hendelsen som beskriver en inkrementell endring.</p>
 </div>
 <div class="paragraph">
-<p>Grunnleggende egenskaper ved eNotifikasjon som mønster:</p>
+<p>Eksempel: Anta at termometeravlesninger rapporteres som daglige endringer siden forrige avlesning. For å finne dagens temperatur, må det være et kjent startpunkt (øyeblikksbilde).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+En kan tenke på notifikasjoner  som transaksjoner i et regskap som gjøres opp med jevne mellomrom. Subjekttilstanden tilsvarer saldo, og ny saldo kan enkelt regnes ut ved å legge sammen alle transaksjonene siden forrige dokumenterte oppgjør. En kan også gå hele veien tilbake til oppstart, som i dette tilfellet uten videre er et kjent utgangspunkt (nullsaldo).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enotifikasjon"><a class="anchor" href="#_enotifikasjon"></a><a class="link" href="#_enotifikasjon">4.4. eNotifikasjon</a></h3>
+<div class="sect3">
+<h4 id="_om_dette_mønsteret_2"><a class="anchor" href="#_om_dette_mønsteret_2"></a><a class="link" href="#_om_dette_mønsteret_2">4.4.1. Om dette mønsteret</a></h4>
+<div class="paragraph">
+<p>eNotifikasjon er en referansearkitektur for utveksling av notifikasjoner som er innrettet på å støtte opp under "nyere" arkitekturmønstre for distribuerte applikasjoner, særlig aktuelt innen Microservices som arkitekturparadigme.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcing</em>, blant annet karakterisert ved at tilstanden til et system eller et <em>subjekt</em> kan bestemmes ut fra en logg av hendelser. Se <a href="https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#event-sourcing">litteratur om Event Sourcing</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Beskrivelsene her bygger på utvalgte deler av en separat oversikt over <a href="#overskrift-grunnleggende-publisering">konsepter for publisering og konsumering av hendelsesstrømmer</a>.</p>
+</div>
+<div class="paragraph">
+<p>Grunnleggende egenskaper ved eNotifikasjon som mønster - en oppsummering av aktuelle konsepter:</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>Tilstanden til et <em>subjekt</em> kan bestemmes gjennom å prosessere en kronologisk sekvens av hendelser, ut fra et gitt øyeblikksbilde.</p>
+</li>
 <li>
 <p>En hendelse kan representeres ved en eller flere  <em>notifikasjoner</em>.</p>
 </li>
@@ -3118,10 +3287,7 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 <p>Notifikasjoner samles i <em>hendelseslister</em>.</p>
 </li>
 <li>
-<p>Hendelser kan ikke slettes (<em>immutable</em>), og notifikasjoner slettes heller ikke fra hendelseslister.</p>
-</li>
-<li>
-<p>Notifikasjoner innhentes på initiav fra konsument (pull).</p>
+<p>Hendelser er i seg selv uforanderlige (<em>immutable</em>). Tilsvarende gjelder for notifikasjoner i hendelseslister, dvs. at notifikasjoner i regelen ikke endres eller slettes fra hendelseslister.</p>
 </li>
 <li>
 <p>Hver enkelt konsument kan lese samme notifikasjon flere ganger.</p>
@@ -3129,75 +3295,27 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 <li>
 <p>Hendelseslister kan traverseres og spørres mot.</p>
 </li>
+<li>
+<p>En hendelsesliste tilsvarer en logg, og kan benyttes som en logg.</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_begrepsapparat"><a class="anchor" href="#_begrepsapparat"></a><a class="link" href="#_begrepsapparat">4.6.2. Begrepsapparat</a></h4>
-<div class="paragraph">
-<p>Begrepsapparatet bygger på det grunnleggende begrepsapparatet for publisering; gjengitt her:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Grunnleggende%20begreper%20for%20publisering%20av%20hendelser.png" alt="Grunnleggende begreper for publisering av hendelser image">
-</div>
-</div>
-<div class="paragraph">
-<p>For mønsteret eNotifikasjon gjelder en detaljering av begrepet <em>hendelsesrelaterte data</em> som følger her.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Hendelsesrelaterte%20data.png" alt="Hendelsesrelaterte data image">
-</div>
-<div class="title">Figur 22. Hendelsesrelaterte data</div>
-</div>
-<div class="paragraph">
-<p>Forkaring til modellen:</p>
-</div>
-<div class="paragraph">
-<p><em>Hendelsestype</em> kan være et entydig element i et kontrollert vokabular, men det kan også være "fritekst".</p>
-</div>
-<div class="paragraph">
-<p><em>Hendelsesrelaterte data</em> kan være små eller store <em>Datasett</em>, enten lagret samlet eller distribuert.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_innhenting_av_supplerende_hendelsesrelaterte_data"><a class="anchor" href="#_innhenting_av_supplerende_hendelsesrelaterte_data"></a><a class="link" href="#_innhenting_av_supplerende_hendelsesrelaterte_data">4.6.3. Innhenting av supplerende hendelsesrelaterte data</a></h4>
-<div class="paragraph">
-<p>For notifikasjoner som ikke gir et tilstrekkelig sett av <em>hendelsesrelaterte data</em> for konsumentens formål, må datakonsumenten selv ta initiativ til å innhente supplerende data.</p>
-</div>
-<div class="paragraph">
-<p>Identifikasjon av aktuelle supplerende hendelsesrelaterte kan enten gjøres gjennom</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha">
-<li>
-<p>en enkelt <em>identifikator for hendelsesrelaterte data</em> som inneholdes i notifikasjonen, Dette kan fungere godt når tilbyder har preparert det aktuelle datasettet for konsumenten ut fra spesifikasjon gitt i abonnementsoppsettet.</p>
-</li>
-<li>
-<p>separate identifikatorer for ulike deler av  notifikasjon, f.eks for <em>subjekt</em>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Selve innhentingen av <em>supplerende hendelsesrelaterte data</em> dekkes av eOppslag referansearkitektur.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_verdistrømmer"><a class="anchor" href="#_verdistrømmer"></a><a class="link" href="#_verdistrømmer">4.6.4. Verdistrømmer</a></h4>
+<h4 id="_verdistrømbeskrivelse"><a class="anchor" href="#_verdistrømbeskrivelse"></a><a class="link" href="#_verdistrømbeskrivelse">4.4.2. Verdistrømbeskrivelse</a></h4>
 <div class="sect4">
 <h5 id="_enotifikasjon_oversikt_over_verdistrømmer"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer"></a><a class="link" href="#_enotifikasjon_oversikt_over_verdistrømmer">eNotifikasjon - oversikt over verdistrømmer</a></h5>
 <div class="paragraph">
-<p>Følgende figur viser en oversikt over verdistrømmene på tvers av datatilbyder og datakonsument for eNotifikasjon.</p>
+<p>Følgende modell viser en oversikt over verdistrømmene på tvers av datatilbyder og datakonsument for eNotifikasjon. Dette er en spesialisering av den generiske verdistrømbeskrivelsen som finnes under <a href="../nab_arkitekturlandskap_segmentarkitektur_datadeling_verdistrømmer/">Felles referansemodeller for datadeling</a>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/eNotifikasjon%20-%20oversikt%20over%20verdistrømmer.png" alt="eNotifikasjon - oversikt over verdistrømmer image">
 </div>
-<div class="title">Figur 23. eNotifikasjon - oversikt over verdistrømmer</div>
+<div class="title">Figur 26. eNotifikasjon - oversikt over verdistrømmer</div>
 </div>
 <div class="paragraph">
-<p>Stegene i verdistrømmen er nærmere forklart under egne avsnitt om verdistrømmene for hver rolle.</p>
+<p>Disse verdistrømmene er nærmere beskrevet for hver rolle i påfølgende avsnitt.</p>
 </div>
 </div>
 <div class="sect4">
@@ -3206,13 +3324,16 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 <p>Her vises verdistrømmen for eNotifikasjon sett fra datatilbyder, med angivelse av kapabiliteter.</p>
 </div>
 <div class="paragraph">
-<p>Det som er spesielt for eNotifikasjon er vist med uthevet skrift, dvs. <em>Generere og tilby notifikasjoner</em>. Øvrige kapabiliteter er beskrevet andre steder, blant annet i tilknytning til referansearkitekturer for eMelding (Sende data) og  eOppslag (Avgi data på forespørsel).</p>
+<p>Det som er spesifikt for eNotifikasjon er vist med uthevet skrift, dvs. <em>Inngå avtaler om tilgang og levering av hendelsesstrømmer</em>, <em>Generere og tilby notifikasjoner</em>, samt <em>Avgi forespurte notifikasjoner</em>. Realiseringen av disse kapabilitetene beskrives i prosessmodeller m.v. for eNotifikasjon.</p>
+</div>
+<div class="paragraph">
+<p>Øvrige kapabiliteter er beskrevet andre steder; se referansearkitektur for mønsteret eOppslag.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../nab_referanse_arkitekturer_enotifikasjon/media/eNotifikasjon%20-%20tilbyders%20verdistrøm.png" alt="eNotifikasjon - tilbyders verdistrøm image">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/eNotifikasjon%20-%20tilbyders%20verdistrøm.png" alt="eNotifikasjon - tilbyders verdistrøm image">
 </div>
-<div class="title">Figur 24. eNotifikasjon - tilbyders verdistrøm</div>
+<div class="title">Figur 27. eNotifikasjon - tilbyders verdistrøm</div>
 </div>
 </div>
 <div class="sect4">
@@ -3221,26 +3342,29 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 <p>Her vises verdistrømmen for eNotifikasjon sett fra datakonsumenter, med angivelse av kapabiliteter.</p>
 </div>
 <div class="paragraph">
-<p>Det som er spesielt for eNotifikasjon er vist med uthevet skrift, dvs. <em>Innhente og håndtere notifikasjoner</em>. Øvrige kapabiliteter er beskrevet andre steder, blant annet i tilknytning til referansearkitekturer for eMelding (Motta data) og  eOppslag (Innhente data ved forespørsel).</p>
+<p>Det som er spesifikt for eNotifikasjon er vist med uthevet skrift, dvs. <em>Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</em> og <em>Innhente og håndtere notifikasjoner</em>. Realiseringen av disse kapabilitetene beskrives i prosessmodeller m.v. for eNotifikasjon.</p>
+</div>
+<div class="paragraph">
+<p>Øvrige kapabiliteter er beskrevet andre steder; se referansearkitektur for mønsteret eOppslag.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/eNotifikasjon%20-%20konsumenters%20verdistrøm.png" alt="eNotifikasjon - konsumenters verdistrøm image">
 </div>
-<div class="title">Figur 25. eNotifikasjon - konsumenters verdistrøm</div>
+<div class="title">Figur 28. eNotifikasjon - konsumenters verdistrøm</div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_kapabilitetskart_for_enotifikasjon"><a class="anchor" href="#_kapabilitetskart_for_enotifikasjon"></a><a class="link" href="#_kapabilitetskart_for_enotifikasjon">4.6.5. Kapabilitetskart for eNotifikasjon</a></h4>
+<h4 id="_kapabilitetskart_for_enotifikasjon"><a class="anchor" href="#_kapabilitetskart_for_enotifikasjon"></a><a class="link" href="#_kapabilitetskart_for_enotifikasjon">4.4.3. Kapabilitetskart for eNotifikasjon</a></h4>
 <div class="paragraph">
-<p>Modellen under viser kapabiliteter som er spesifikke for eNotifikasjon. Øvrige kapabiliteter er beskrevet i samhandlingsmønsteret for <em>deling av data på forespørsel</em>.</p>
+<p>Modellen under gir en samlet oversikt over kapabiliteter som er spesifikke for eNotifikasjon, slik disse er identifisert i foregående verdistrømbeskrivelse.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../nab_referanse_arkitekturer_enotifikasjon/media/Kapabiliteter%20eNotifikasjon.png" alt="Kapabiliteter eNotifikasjon image">
 </div>
-<div class="title">Figur 26. Kapabiliteter eNotifikasjon</div>
+<div class="title">Figur 29. Kapabiliteter eNotifikasjon</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Tabell 20. Elementer i view for Kapabiliteter eNotifikasjon</caption>
@@ -3264,38 +3388,46 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 <td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente og håndtere notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å konsumere hendelseslister ved å innhente notifikasjoner.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generere og tilby notifikasjoner</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å dele informasjon om hendelser gjennom notifikasjoner som tilgjengeliggjøres for konsumenter gjennom hendelseslister.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data på forespørsel</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å avgi data på forespørsel.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å inngå avtaler med datatilbyder om tilgang til hendelser gjennom hendelseslister med notifikasjoner.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente og håndtere notifikasjoner</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å konsumere hendelseslister.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler om tilgang og levering av hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å inngå avtaler med datakonsumenter om tilgengjengeliggjøring av hendelseslister med notifikasjoner om hendelser.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å avgi notifikasjoner på forespørsel</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_arkitekturmønstre"><a class="anchor" href="#_arkitekturmønstre"></a><a class="link" href="#_arkitekturmønstre">4.6.6. Arkitekturmønstre</a></h4>
-<div class="sect4">
-<h5 id="_generer_og_publiser_notifikasjoner"><a class="anchor" href="#_generer_og_publiser_notifikasjoner"></a><a class="link" href="#_generer_og_publiser_notifikasjoner">Generer og publiser notifikasjoner</a></h5>
+<h4 id="_realisering_av_kapabiliteter_generisk_arkitekturmønster"><a class="anchor" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster"></a><a class="link" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">4.4.4. Realisering av kapabiliteter - generisk arkitekturmønster</a></h4>
 <div class="paragraph">
-<p>Generer og publiser notifikasjoner er den prosessen datatilbyder må gjøre for å tilby notifikasjoner gjennom hendelseslister. Hendelselister tilbys på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men det finnes spesielle krav for hendelseslister med tanke på segmentering,  filtrering og navigering.</p>
+<p>Her beskrives realiseringen av de kapabilitetene som er spesifikke for eNotifikasjon i form av et generisk, løsningsuavhengig arkitekturmønster. Det vil kunne være flere måter å realisere aktuelle arkitekturbyggeklosser på.</p>
+</div>
+<div class="sect4">
+<h5 id="_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></h5>
+<div class="paragraph">
+<p>Gi tilgang til notifikasjoner og hendelser er den prosessen datatilbyder må gjøre for å gi datakonsumenten tilgang til hendelseslister. Ved helt åpne hendelseslister kan prosessen være unødvendig og utgår, men vil normalt omfatte å tilgjengeliggjøre API som beskrevet i eOppslag. I tillegg kan det eventuelt registreres informasjon i tilknytning til filtrering og tilpasning av hendelselister ut fra konsumentens behov og tilganger.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../nab_referanse_arkitekturer_enotifikasjon/media/Generer%20og%20publiser%20notifikasjoner%20(arkitekturmønster).png" alt="Generer og publiser notifikasjoner (arkitekturmønster) image">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Gi%20tilgang%20til%20notifikasjoner%20og%20hendelser.png" alt="Gi tilgang til notifikasjoner og hendelser image">
 </div>
-<div class="title">Figur 27. Generer og publiser notifikasjoner (arkitekturmønster)</div>
-</div>
-<div class="paragraph">
-<p>Forklaring til figur:</p>
+<div class="title">Figur 30. Gi tilgang til notifikasjoner og hendelser</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Tabell 21. Elementer i view for Generer og publiser notifikasjoner (arkitekturmønster)</caption>
+<caption class="title">Tabell 21. Elementer i view for Gi tilgang til notifikasjoner og hendelser</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3308,22 +3440,110 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gi tilgang til notifikasjoner og hendelser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med oppsett for å gi tilgang til notifikasjoner og hendelser.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsel om tilgang til hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å motta forespørsel om tilgang til notifikasjoner på hendelseslister.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til hendelsesliste med notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å registrere seg som konsument av en hendelsesliste hos datatilbyder</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generere og tilby notifikasjoner</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å dele informasjon om hendelser gjennom notifikasjoner som tilgjengeliggjøres for konsumenter gjennom hendelseslister.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrering av konsument av hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere konsumenter av hendelseslite med notifikasjoner.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som peker til (eller representerer) en hendelse og gjøres tilgjengelig på en hendelsesliste så konsumenten får vite om hendelsen.</p>
-<p class="tableblock">En notifikasjon kan inneholde lite eller mye informasjon om selve hendelsen, men det må være nok informasjon til at konsumenten kan vurdere om hendelsen er relevant for seg.</p>
-<p class="tableblock">En notifikasjon inneholder også en referanse til hendelsen og relevante grunnlagsdata.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler om tilgang og levering av hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å inngå avtaler med datakonsumenter om tilgengjengeliggjøring av hendelseslister med notifikasjoner om hendelser.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></h5>
+<div class="paragraph">
+<p>Få tilgang til notifikasjoner og hendelser er den prosessen datakonsument må gjøre for å sette opp og få tilganger til hendelseslister. Prosessetrinnene kommer i tillegg til prosessen for å få tigang til API som beskrevet i eOppslag.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Få%20tilgang%20til%20notifikasjoner%20og%20hendelser.png" alt="Få tilgang til notifikasjoner og hendelser image">
+</div>
+<div class="title">Figur 31. Få tilgang til notifikasjoner og hendelser</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 22. Elementer i view for Få tilgang til notifikasjoner og hendelser</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beskrive behov og tilganger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å beskrive hvilke tilganger konsument har rettigeheter til og hvilken type notifikasjoner som er aktuelle.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Liste med notifikasjoner tilgjengelig for konsumenter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til hendelsesliste med notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å registrere seg som konsument av en hendelsesliste hos datatilbyder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å inngå avtaler med datatilbyder om tilgang til hendelser gjennom hendelseslister med notifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrering av konsument av hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere konsumenter av hendelseslite med notifikasjoner.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_generere_og_tilby_notifikasjoner"><a class="anchor" href="#_generere_og_tilby_notifikasjoner"></a><a class="link" href="#_generere_og_tilby_notifikasjoner">Generere og tilby notifikasjoner</a></h5>
+<div class="paragraph">
+<p>Generer og publiser notifikasjoner er den prosessen datatilbyder må gjøre for å tilby notifikasjoner gjennom hendelseslister. Hendelselister tilbys på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men det finnes spesielle krav for hendelseslister med tanke på segmentering,  filtrering og navigering.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Generer%20og%20publiser%20notifikasjoner.png" alt="Generer og publiser notifikasjoner image">
+</div>
+<div class="title">Figur 32. Generer og publiser notifikasjoner</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 23. Elementer i view for Generer og publiser notifikasjoner</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generere og publisere notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å generere notifikasjoner som data om hendelser, samt å publisere slike notifikasjoner i en eller flere hendelseslister, eventuelt tilpasset ulike målgrupper.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generer og publiser notifikasjoner</p></td>
@@ -3335,16 +3555,35 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publiser notifikasjon i hendelseslister</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å legge notifikasjoner i en eller flere hendelseslister som er eksponert overfor aktuelle konsumenter.</p>
-<p class="tableblock">.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å legge notifikasjoner i en eller flere hendelseslister som er eksponert overfor aktuelle konsumenter.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Generering av full notifikasjon</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som genererer "fulle" notifikasjoner basert på hendelser, der alle aktuelle grunnlagsdata er med eller lenket til.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En notifikasjon informerer om at en hendelse har inntruffet og kan inneholde elle  peke til hele eller deler av det totale settet av aktuelle, hendelsesrelaterte data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Liste med notifikasjoner tilgjengelig for konsumenter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generering av notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som genererer notifikasjoner basert på hendelser, der alle aktuelle grunnlagsdata er med eller lenket til.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Skriving av notifikasjon til eksponerte hendelseslister</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å skrive en notifikasjon til en eller flere hendelseslister, eventuelt med filtrering av informasjon ut fra hvem som er aktuelle konsumenter (abonnenter).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å skrive en notifikasjon til en eller flere hendelseslister, eventuelt med filtrering av informasjon ut fra hvem som er aktuelle konsumenter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komplett notifikasjon, tilbyders domene</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon som inneholder eller lenker til et fullstendig sett av hendelsesrelaterte data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste som eksponeres for konsument. En tilbyder kan tilby flere hendelselister i parallell f.eks. med ulike temaer og for konsumenter med ulike rettigheter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon som publiseres på en eller flere hendelseslister. Publiserte notifikasjoner kan være "tykke" eller "tynne" med hensyn på hvor mye informasjon om en hendelse de inneholder.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3352,16 +3591,16 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 <div class="sect4">
 <h5 id="_avgi_forespurte_notifikasjoner"><a class="anchor" href="#_avgi_forespurte_notifikasjoner"></a><a class="link" href="#_avgi_forespurte_notifikasjoner">Avgi forespurte notifikasjoner</a></h5>
 <div class="paragraph">
-<p>Notifikasjoner avgis gjennom API på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag, men tilbyder må tilpasse hendelsene som avgis etter det konsumenten har rettigheter til og etterspør. F.eks. kan konsumenten kun ha rettigheter til en delmengde av alle hendelser i hendelsesliten og også kun være interessert i enkelte typer hendelser. Konsumenten vil også normalt kun ha behov for å hente notifikasjoner som ikke er hentet tidliger, men kan også ønske å hente tidligere notifikasjoner på nytt.</p>
+<p>Notifikasjoner avgis gjennom API på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag, men tilbyder må, ved behov, tilpasse hendelsene som avgis etter det konsumenten har rettigheter til og etterspør. F.eks. kan konsumenten kun ha rettigheter til en delmengde av alle hendelser i hendelsesliten og også kun være interessert i enkelte typer hendelser. Konsumenten vil også normalt kun ha behov for å hente notifikasjoner som ikke er hentet tidliger, men kan også ønske å hente tidligere notifikasjoner på nytt.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../nab_referanse_arkitekturer_enotifikasjon/media/Avgi%20notifikasjoner%20på%20forespørsel.png" alt="Avgi notifikasjoner på forespørsel image">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Avgi%20forespurte%20notifikasjoner.png" alt="Avgi forespurte notifikasjoner image">
 </div>
-<div class="title">Figur 28. Avgi notifikasjoner på forespørsel</div>
+<div class="title">Figur 33. Avgi forespurte notifikasjoner</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Tabell 22. Elementer i view for Avgi notifikasjoner på forespørsel</caption>
+<caption class="title">Tabell 24. Elementer i view for Avgi forespurte notifikasjoner</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3374,8 +3613,8 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spørretjeneste mot hendelsesliste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for spørring og navigering av hendelsesliste gjennom API. Det kan være aktuelt å filtrere informasjon ut fra hvem som spør og hvilken informasjon det er abonnert på, i tillegg til å filtrere ut fra spesifikasjoner i hver enkelt spørring.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyders spørretjeneste mot hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for spørring og navigering av hendelsesliste gjennom API.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte data gjennom API</p></td>
@@ -3387,48 +3626,78 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsel om notifikasjoner</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsler fra konsument om å avgi notifkiasjoner.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autentisere konsument</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å autentisere en konsument.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller tilgang</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroll og håndheving av konsumentens rettigheter til å få forespurte data.  I tillegg til "validering av sikkerhetsbillet", kan det være behov for kontroll mot virksomhetsinterne policies.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsler fra konsument om å avgi notifikasjoner.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Avgi utvalgte notifikasjoner</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Avgi utvalgte hendelser basert på parametere i forespørsel om notifikasjoner.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilpass innhold til konsument (dersom aktuelt)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å tilpasse innholdet til konsument. Tilpasningen gjøres på grunnlag av parametere/informasjon i forespørselen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiser konsument og kontroller tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å autentisere en konsument og kontrollere  rettigheter til data.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data på forespørsel</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data på forespørsel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel om notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt med eventuelle parametere for spørring på notifikasjoner fra tilgjengelig hendelsesliste. Kan inneholde referanse til hvor i hendelselisten (f.eks. tid eller sekvensnummer) man ønsker å lese, avgrensning til temaer, rettigheter og liknende.
+Informasjonen er grunnlag for eventuell tilpasning av innhold og utvalg.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel om notifikasjoner</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt med eventuelle parametere for spørring på notifikasjoner fra tilgjengelig hendelsesliste. Kan inneholde referanse til hvor i hendelselisten (tid eller nummer) man ønsker å lese, avgrensning til temaer og liknende.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyders filtrerings- og minimeringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å filtrere og minimere informasjon ut fra parametere i forespørselen og hvilken informasjon konsumenten har rettigheter til.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgangskontroll-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å sjekke rettigheter til data. Kan være eksterne eller interne tjenester.
+Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, eller rollebasert fra vergemål, familierelasjon el.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å avgi notifikasjoner på forespørsel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvekslet hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste som utveksles,  filtrert ut fra konsumentens spesifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste som eksponeres for konsument. En tilbyder kan tilby flere hendelselister i parallell f.eks. med ulike temaer og for konsumenter med ulike rettigheter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon som publiseres på en eller flere hendelseslister. Publiserte notifikasjoner kan være "tykke" eller "tynne" med hensyn på hvor mye informasjon om en hendelse de inneholder.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvekslet notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon  som utveksles,  eventuelt minimert ut fra konsumentens spesifikasjoner.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_konsumer_notifikasjoner"><a class="anchor" href="#_konsumer_notifikasjoner"></a><a class="link" href="#_konsumer_notifikasjoner">Konsumer notifikasjoner</a></h5>
+<h5 id="_innhente_og_håndtere_notifikasjoner"><a class="anchor" href="#_innhente_og_håndtere_notifikasjoner"></a><a class="link" href="#_innhente_og_håndtere_notifikasjoner">Innhente og håndtere notifikasjoner</a></h5>
 <div class="paragraph">
 <p>Notifikasjoner leses på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men konsumentene må holde orden på spesielle forhold som rekkefølge og hvilke notifikasjoner som er lest. Konsumenten må også være i stand til å vurdere relevansen av hendelsene før videre behandling av notifikasjonene.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../nab_referanse_arkitekturer_enotifikasjon/media/Innhente%20notifikasjoner%20((arkitekturmønster).png" alt="Innhente notifikasjoner ((arkitekturmønster) image">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Konsumer%20notifikasjoner.png" alt="Konsumer notifikasjoner image">
 </div>
-<div class="title">Figur 29. Innhente notifikasjoner ((arkitekturmønster)</div>
+<div class="title">Figur 34. Konsumer notifikasjoner</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Tabell 23. Elementer i view for Innhente notifikasjoner ((arkitekturmønster)</caption>
+<caption class="title">Tabell 25. Elementer i view for Konsumer notifikasjoner</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3441,68 +3710,91 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente og håndtere notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å konsumere hendelseslister ved å innhente notifikasjoner.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente og håndtere notifikasjoner</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å konsumere hendelseslister.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel om notifikasjoner</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt med eventuelle parametere for spørring på notifikasjoner fra tilgjengelig hendelsesliste. Kan inneholde referanse til hvor i hendelselisten (tid eller nummer) man ønsker å lese, avgrensning til temaer og liknende.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som peker til (eller representerer) en hendelse og gjøres tilgjengelig på en hendelsesliste så konsumenten får vite om hendelsen.</p>
-<p class="tableblock">En notifikasjon kan inneholde lite eller mye informasjon om selve hendelsen, men det må være nok informasjon til at konsumenten kan vurdere om hendelsen er relevant for seg.</p>
-<p class="tableblock">En notifikasjon inneholder også en referanse til hendelsen og relevante grunnlagsdata.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kriterier og regler for vurdering</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjon om hva som legges til grunn for å vurdere relevansen av en hendelse basert på tilgjengelig notifikasjon.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Konsumer notifikasjoner</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å lese og håndtere notifikasjoner.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Les notifikasjoner</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å hente en eller flere notifikasjoner fra en hendelsesliste.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespør og motta notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å hente inn en eller flere notifikasjoner fra en hendelsesliste.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Vurdere notifikasjon</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å vurdere om en hendelsen knyttet til lest notifikasjon er relevant for egen virksomhet.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Videre behandling av notifikasjon</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med videre behandling av en notifikasjon. Vil normalt være å innhente mer informasjon om hendelsen knyttet til notifikasjonen og eventuelt agere ut i fra denne.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vurder relevans av notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å vurdere om en hendelsen knyttet til lest notifikasjon er relevant for konsumenten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Forkast notifikasjon</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å forkaste notifikasjon som ikke er relevant for virksomheten. Avhengig av krav til personvern og informasjonssikkerhet kan det være særskilte krav til hva som er lov å beholde.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spørring mot eksponert hendelsesliste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste(r) for å forespørre notifikasjoner og navigere i hendelseslister.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Videre behandling av notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med videre behandling av en notifikasjon som normalt vil være å innhente mer informasjon om hendelsen eller subjektet notifikasjonen er knyttet til og eventuelt agere ut i fra denne.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Filtrering av notifikasjoner</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å filtrere innhentede notifikasjoner. Dette er en tilleggsmekanisme for filtrering, sammenliknet med filtrering som gjøres gjennom spøringer mot datatilbyder, og benyttes ved behov.  Eksempler på behov:</p>
-<p class="tableblock">a. Datatilbyder gir ikke gode nok muligheter for filtrering.</p>
-<p class="tableblock">b. Formidling av noifikasjoner til flere og ulike typer (interne) konsumenter.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel om notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt med eventuelle parametere for spørring på notifikasjoner fra tilgjengelig hendelsesliste. Kan inneholde referanse til hvor i hendelselisten (f.eks. tid eller sekvensnummer) man ønsker å lese, avgrensning til temaer, rettigheter og liknende.
+Informasjonen er grunnlag for eventuell tilpasning av innhold og utvalg.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kriterier og regler for å vurdere relevans av notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjon om hva som legges til grunn for å vurdere relevansen av en hendelse, basert på informasjon i lest notifikasjon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En notifikasjon informerer om at en hendelse har inntruffet og kan inneholde elle  peke til hele eller deler av det totale settet av aktuelle, hendelsesrelaterte data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konsuments filtrerings- og minimeringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å filtrere innhentede notifikasjoner. Dette er en tilleggsmekanisme for filtrering og minimering, sammenliknet med det som gjøres gjennom spørringer mot datatilbyder, og benyttes ved behov. Filtreringen kan gjøres ved å filtrere selve innlesing eller ved å filtrere mottatte notifikasjoner etter innlesing. Etter innlesing kan det også gjøres minimering av innholdet i notifikasjonen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data over aktuell transportprotokoll, f.eks, gjennom asynkrone medlinger eller synkrone API-oppslag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyders spørretjeneste mot hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for spørring og navigering av hendelsesliste gjennom API.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_løsningsmønstre"><a class="anchor" href="#_løsningsmønstre"></a><a class="link" href="#_løsningsmønstre">4.6.7. Løsningsmønstre</a></h4>
+<h4 id="_løsningsmønstre_for_enotifikasjon"><a class="anchor" href="#_løsningsmønstre_for_enotifikasjon"></a><a class="link" href="#_løsningsmønstre_for_enotifikasjon">4.4.5. Løsningsmønstre for eNotifikasjon</a></h4>
 <div class="paragraph">
 <p>Spesifikke løsningsmønstre for eNotifikasjon er inntil videre ikke utarbeidet. Det er stor variasjon i praksis, og ingen fellesløsninger er så langt etablert i Norge.</p>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+Mer om fellesløsninger, standarder og løsningsmønstre vil følge her etterhvert.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p>Det beste eksempelet er så langt distriubsjonen av modernisert folkeregister fra Skatteetaten som blant annet tilbyr hendelseslister og oppslag som konsumenttjenester. Disse tjenestene er beskrevet i <a href="https://skatteetaten.github.io/folkeregisteret-api-dokumentasjon/konsumenttjenester/">Folkeregisterets API dokumentasjon</a></p>
+<p>Det finnes i mellomtiden noen gode eksempler å peke på.</p>
+</div>
+<div class="paragraph">
+<p>Her nevnes spesielt:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Modernisert folkeregister fra Skatteetaten tilbyr hendelseslister og oppslag som konsumenttjenester. Disse tjenestene er beskrevet i <a href="https://skatteetaten.github.io/folkeregisteret-api-dokumentasjon/konsumenttjenester/">Folkeregisterets API dokumentasjon</a>.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -3534,7 +3826,7 @@ Som eksempler på <em>samhandlingsmønstre</em> som det kan være aktuelt å adr
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2020-04-27 01:59:33 +0200
+Sist oppdatert 2020-04-29 21:20:00 +0200
 </div>
 </div>
 </body>

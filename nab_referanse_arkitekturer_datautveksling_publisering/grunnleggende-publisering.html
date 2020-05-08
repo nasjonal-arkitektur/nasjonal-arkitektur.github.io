@@ -7,7 +7,7 @@
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="keywords" content="TBD">
 <meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
-<title>Grunnleggende mønster for publisering</title>
+<title>Generiske mønstre for publisering og konsumering av hendelsesstrømmer</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Grunnleggende mønster for publisering</h1>
+<h1>Generiske mønstre for publisering og konsumering av hendelsesstrømmer</h1>
 <div class="details">
 <span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
 <span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
@@ -449,47 +449,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
 <ul class="sectlevel1">
-<li><a href="#_om_dette_mønsteret">1. Om dette mønsteret</a></li>
-<li><a href="#_hovedkonsepter">2. Hovedkonsepter</a></li>
-<li><a href="#_overordnet_om_løsninger_for_utveksling_av_notifikasjoner_via_hendelseslister">3. Overordnet om løsninger for utveksling av notifikasjoner via hendelseslister</a></li>
-<li><a href="#_applikasjonstjenester_for_utveksling_av_notifikasjoner_via_hendelseslister_teknisk">4. Applikasjonstjenester for utveksling av notifikasjoner via hendelseslister (teknisk)</a></li>
-<li><a href="#_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk">5. Filtrering og minimering av hendelseslister og notifikasjoner (semantisk og teknisk)</a></li>
+<li><a href="#generisk-publisering">1. Publisering og konsumering av hendelsesstrømmer (generisk mønster)</a>
+<ul class="sectlevel2">
+<li><a href="#_om_dette_mønsteret">1.1. Om dette mønsteret</a></li>
+<li><a href="#_aktørsamspill">1.2. Aktørsamspill</a></li>
+<li><a href="#_applikasjonstjenester">1.3. Applikasjonstjenester</a></li>
+<li><a href="#_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk">1.4. Filtrering og minimering av hendelseslister og notifikasjoner (semantisk og teknisk)</a></li>
+</ul>
+</li>
+<li><a href="#generisk-publish-subscribe">2. Abonnementsbasert publisering av hendelser (generisk mønster)</a>
+<ul class="sectlevel2">
+<li><a href="#_om_dette_mønsteret_2">2.1. Om dette mønsteret</a></li>
+<li><a href="#_om_dataflyt_og_pull_vs_push">2.2. Om dataflyt og pull vs. push</a></li>
+<li><a href="#_om_tekniske_grensesnitt">2.3. Om tekniske grensesnitt</a></li>
+</ul>
+</li>
+<li><a href="#_event_sourcing_generisk_mønster">3. Event sourcing (generisk mønster)</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">1. Om dette mønsteret</a></h2>
+<h2 id="generisk-publisering"><a class="anchor" href="#generisk-publisering"></a><a class="link" href="#generisk-publisering">1. Publisering og konsumering av hendelsesstrømmer (generisk mønster)</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">1.1. Om dette mønsteret</a></h3>
 <div class="paragraph">
-<p>Det grunnleggende mønsteret for publisering som omhandles her, bygger på det mønsteret som i litteraturen tradisjonelt omtales som <em>publish-subscribe</em>; se f.eks. <a href="https://en.wikipedia.org/w/index.php?title=Publish%E2%80%93subscribe_pattern&amp;oldid=950857039">wikipedia om publish-subscribe pattern</a> for en enkel beskrivelse av dette.</p>
+<p>Dette mønsteret er et <em>generisk</em> arkitekturmønster, uten konkrete valg av teknologier og løsninger.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_hovedkonsepter"><a class="anchor" href="#_hovedkonsepter"></a><a class="link" href="#_hovedkonsepter">2. Hovedkonsepter</a></h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Konseptene bak mønsteret kan oppsummeres slik (se figur under):</p>
+<p>Det grunnleggende konseptet er det samme som for andre  <em>mønstre for publisering og konsumering av hendelsesstrømmer</em>, og gjentas her:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Tilbydere publiserer nyheter (hendelser) via  nyhetskanaler (hendelsesstrømmer) til et konsumentmarked der konsumentene (datakonsumentene) ikke nødvendigvis er kjent på forhånd.</p>
-</li>
-<li>
-<p>Konsumenter kan kople seg på for å lese nyheter (hendelser) på tilfeldig basis (løssalgsavis).</p>
-</li>
-<li>
-<p>Konsumenter kan eventuelt tegne abonnementer for å få levert nyhetene (hendelsene) "på døra" (f.eks. via en meldingskø på abonnentsiden, men dette kan også gjøres på andre måter).</p>
-</li>
-<li>
-<p>Konsumenter kan også tegne abonnementer for å få et utvalg av nyhetene (innholdsfilter.)</p>
-</li>
-<li>
-<p>Tilbyder kan ta betalt for innhold og tjenester, eller det kan være gratis.</p>
-</li>
-</ul>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Tilbydere publiserer hendelsesstømmer uten å måtte vite hvem konsumentene er. Konsumentene kan i sin tur koble seg på og lese fra hendelsesstrømmen.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -499,11 +493,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_overordnet_om_løsninger_for_utveksling_av_notifikasjoner_via_hendelseslister"><a class="anchor" href="#_overordnet_om_løsninger_for_utveksling_av_notifikasjoner_via_hendelseslister"></a><a class="link" href="#_overordnet_om_løsninger_for_utveksling_av_notifikasjoner_via_hendelseslister">3. Overordnet om løsninger for utveksling av notifikasjoner via hendelseslister</a></h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Datatilbyders publiseringsløsning skriver notifikasjoner til hendelseslister etterhvert som hendelser skjer. Datakonsumentene kan deretter lese og konsumere notifikasjoner gjennom sine løsninger.</p>
+<p>Begrepsapparat bygger på  <em>grunnleggende begrepsapparatet for publisering</em>.</p>
+</div>
+<div class="paragraph">
+<p>Grunnleggende egenskaper:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hendelser kan ikke slettes (<em>immutable</em>), og notifikasjoner slettes heller ikke fra hendelseslister.</p>
+</li>
+<li>
+<p>Notifikasjoner innhentes på initiav fra konsument (pull).</p>
+</li>
+<li>
+<p>Hver enkelt konsument kan lese samme notifikasjon flere ganger.</p>
+</li>
+<li>
+<p>Hendelseslister kan traverseres og spørres mot.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aktørsamspill"><a class="anchor" href="#_aktørsamspill"></a><a class="link" href="#_aktørsamspill">1.2. Aktørsamspill</a></h3>
+<div class="paragraph">
+<p>Datatilbyder <span class="underline">publiserer</span> hendelsestrømmer som <span class="underline">konsumeres</span> av datakonsumenter.</p>
+</div>
+<div class="paragraph">
+<p>Dtatilbyders publiseringsløsning <span class="underline">skriver</span> notifikasjoner til hendelseslister etterhvert som hendelser skjer, etterfulgt av at datakonsumentene <span class="underline">leser</span> notifikasjoner gjennom sine løsninger for innhenting og mottak.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -511,11 +530,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="title">Figur 2. Publisering av hendelser - grunnleggende konsept, med applikasjoner</div>
 </div>
+<div class="paragraph">
+<p>Legg merke til at den publiserte hendelseslisten her betraktes som en del av tilbyders løsning og ansvar.</p>
+</div>
+<div class="paragraph">
+<p>I praksis kan også både datatilbyder og datakonsument velge å benytte en ekstern tjenesteleverandør for å formidle hendelsesdata. I så fall kan ekstern tjenesteleverandørs løsninger og tjenester anses som del av tilbyders eller konsuments løsninger og tjenester på lik linje med interne leverandører (og behøver ikke vises som egen part).</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+Det faller utenfor omfanget her å gå inn på tilfeller der  ekstern tjenesteleverandør opptrer som  mellomledd på en måte som gjør det nødvendig å se på juridiske forhold eller løsninger på tvers av partene.
+</td>
+</tr>
+</table>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_applikasjonstjenester_for_utveksling_av_notifikasjoner_via_hendelseslister_teknisk"><a class="anchor" href="#_applikasjonstjenester_for_utveksling_av_notifikasjoner_via_hendelseslister_teknisk"></a><a class="link" href="#_applikasjonstjenester_for_utveksling_av_notifikasjoner_via_hendelseslister_teknisk">4. Applikasjonstjenester for utveksling av notifikasjoner via hendelseslister (teknisk)</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_applikasjonstjenester"><a class="anchor" href="#_applikasjonstjenester"></a><a class="link" href="#_applikasjonstjenester">1.3. Applikasjonstjenester</a></h3>
 <div class="paragraph">
 <p>Følgende figur angir aktuelle tjenester og grensesnitt.</p>
 </div>
@@ -577,33 +612,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk"><a class="anchor" href="#_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk"></a><a class="link" href="#_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk">5. Filtrering og minimering av hendelseslister og notifikasjoner (semantisk og teknisk)</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk"><a class="anchor" href="#_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk"></a><a class="link" href="#_filtrering_og_minimering_av_hendelseslister_og_notifikasjoner_semantisk_og_teknisk">1.4. Filtrering og minimering av hendelseslister og notifikasjoner (semantisk og teknisk)</a></h3>
 <div class="paragraph">
 <p>Filtrering av notifikasjoner kan skje på følgende måter:</p>
 </div>
 <div class="olist loweralpha">
 <ol class="loweralpha">
 <li>
-<p>Tilbyder tilbyr ulike hendelseslister, der det allerede er gjort et utvalg basert på metadata og kriterier som tema eller rettigheter.</p>
+<p>Tilbyder tilbyr ulike hendelseslister, der det allerede er gjort et utvalg basert på metadata og kriterier som tema eller konfidensialitet.</p>
 </li>
 <li>
-<p>Konsumenten spesifiserer et abonnement på ytterligere filtrering innen hver hendelsesliste. Det kan være to formål for dette:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Dataminimering ut fra hensyn til personvern eller konfidensialitet</p>
+<p>Konsumenten spesifiserer et abonnement på ytterligere filtrering innen hver hendelsesliste.</p>
 </li>
 <li>
-<p>Filtrering av ikke-relevante notifikasjoner</p>
-</li>
-</ul>
-</div>
+<p>Spørring mot hendelsesliste.</p>
 </li>
 <li>
-<p>Konsumenten kasserer notifikasjoner etter mottak.</p>
+<p>Konsumenten forkaster notifikasjoner etter mottak.</p>
 </li>
 </ol>
 </div>
@@ -619,9 +645,132 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="generisk-publish-subscribe"><a class="anchor" href="#generisk-publish-subscribe"></a><a class="link" href="#generisk-publish-subscribe">2. Abonnementsbasert publisering av hendelser (generisk mønster)</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_om_dette_mønsteret_2"><a class="anchor" href="#_om_dette_mønsteret_2"></a><a class="link" href="#_om_dette_mønsteret_2">2.1. Om dette mønsteret</a></h3>
+<div class="paragraph">
+<p>Dette mønsteret bygger på <a href="#generisk-publisering">Generisk mønster for publisering og konsumering av hendelsesstrømmer</a>.</p>
+</div>
+<div class="paragraph">
+<p>Der det stilles særskilte krav til f.eks. innhold eller levering av , kan det være nødvendig å sette opp abonnementer.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Mønsteret tilsvarer  det mønsteret som i litteraturen tradisjonelt omtales som <em>publish-subscribe</em>; se f.eks. <a href="https://en.wikipedia.org/w/index.php?title=Publish%E2%80%93subscribe_pattern&amp;oldid=950857039">wikipedia om publish-subscribe pattern</a> for en enkel beskrivelse av dette.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20basiskonsept%20med%20abonnement.png" alt="Publisering av hendelser - basiskonsept med abonnement image">
+</div>
+<div class="title">Figur 5. Publisering av hendelser - basiskonsept med abonnement</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Analogi til mediehus:</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Mediehus (tilbyder) publiserer nyheter  (hendelser)  via  nyhetskanaler (hendelsesstrømmer) til et konsumentmarked der konsumentene ikke nødvendigvis er kjent på forhånd.</p>
+</li>
+<li>
+<p>Konsumenter kan kople seg på for å lese nyheter på tilfeldig basis, f.eks. en løssalgsavis.</p>
+</li>
+<li>
+<p>Konsumenter kan eventuelt tegne abonnementer for å få levert nyhetene "på døra" (f.eks. til en innboks).</p>
+</li>
+<li>
+<p>Konsumenter kan også tegne abonnementer for å få et utvalg av nyhetene (innholdsfilter.)</p>
+</li>
+<li>
+<p>Tilbyder kan ta betalt for innhold og tjenester, eller det kan være gratis.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_om_dataflyt_og_pull_vs_push"><a class="anchor" href="#_om_dataflyt_og_pull_vs_push"></a><a class="link" href="#_om_dataflyt_og_pull_vs_push">2.2. Om dataflyt og pull vs. push</a></h3>
+<div class="paragraph">
+<p>I praksis kan det være at tilbyder  skriver notifikasjoner direkte til konsumentens integrasjonløsning, som en "pushbasert" abonnementstjeneste for levering av notifikasjoner.</p>
+</div>
+<div class="paragraph">
+<p>Følgende figur viser dataflyten mellom systemene og illustrer dette.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20grunnleggende%20konsept,%20dataflyt%20mellom%20applikasjoner.png" alt="Publisering av hendelser - grunnleggende konsept" width="dataflyt mellom applikasjoner image">
+</div>
+<div class="title">Figur 6. Publisering av hendelser - grunnleggende konsept, dataflyt mellom applikasjoner</div>
+</div>
+<div class="paragraph">
+<p>Kombinasjonen av abonnement og spørring er det som bestemmer hvilke notifikasjoner som flyter fra tilbyder til konsument.</p>
+</div>
+<div class="paragraph">
+<p>Om det ikke er krav til å sette opp abonnement i forkant, kan spørringer gjøres direkte (pullbasert).</p>
+</div>
+<div class="paragraph">
+<p>Om det i registrering av abonnement på en hendelsesliste også registreres mer spesifikt hvilke notifikasjoner som ønskes levert hvordan, kan en tilsvarende få levert notifikasjoner på initiativ fra publiseringsløsningen (pushbasert).</p>
+</div>
+<div class="paragraph">
+<p>Spørringer kan også gjøres (pullbasert) med utgangspunkt i en abonnementsavtale.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_om_tekniske_grensesnitt"><a class="anchor" href="#_om_tekniske_grensesnitt"></a><a class="link" href="#_om_tekniske_grensesnitt">2.3. Om tekniske grensesnitt</a></h3>
+<div class="paragraph">
+<p>I dette <em>generiske</em> arkitekturmønsteret, gis rom for ulike tekniske løsninger.</p>
+</div>
+<div class="paragraph">
+<p>Notifikasjoner kan f.eks. leveres gjennom et synkront API eller via en asynkron meldingskø hos konsumenten. Tilsvarende kan spørringer skje synkront eller asynkront.</p>
+</div>
+<div class="paragraph">
+<p>En mulig kombinasjon er at spørringen skjer gjennom et synkront API, mens notifikasjonene deretter leveres asynkront og fortløpende (pushbasert).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+Spørringer kan også gjøres som en bestilling av framtidige notifikasjoner. Dette kan ses på som en type abonnment.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Følgende figur illustrerer disse konseptene.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../nab_referanse_arkitekturer_datautveksling_publisering/media/Publisering%20av%20hendelser%20-%20grunnleggende%20om%20tekniske%20grensesnitt.png" alt="Publisering av hendelser - grunnleggende om tekniske grensesnitt image">
+</div>
+<div class="title">Figur 7. Publisering av hendelser - grunnleggende om tekniske grensesnitt</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_event_sourcing_generisk_mønster"><a class="anchor" href="#_event_sourcing_generisk_mønster"></a><a class="link" href="#_event_sourcing_generisk_mønster">3. Event sourcing (generisk mønster)</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2020-04-27 03:20:00 +0200
+Sist oppdatert 2020-04-28 23:25:38 +0200
 </div>
 </div>
 </body>
