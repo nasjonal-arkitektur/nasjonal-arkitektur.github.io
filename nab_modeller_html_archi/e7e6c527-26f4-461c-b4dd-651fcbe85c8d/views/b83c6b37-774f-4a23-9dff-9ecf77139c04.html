@@ -1,0 +1,421 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Hva er data for datautveksling</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Hva er data for datautveksling</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/b83c6b37-774f-4a23-9dff-9ecf77139c04.png" alt="Hva er data for datautveksling" usemap="#b83c6b37-774f-4a23-9dff-9ecf77139c04map"/>
+			   <map name="b83c6b37-774f-4a23-9dff-9ecf77139c04map">
+				  				<area shape="rect" coords="274,46,407,117" href="../elements/516b0847-05aa-4fdf-a5df-59df067ebb26.html"  target="element">
+
+				  		<area shape="rect" coords="10,10,659,151" href="../elements/569b39f6-a1ec-46ff-91ce-f47b2594bd81.html"  target="element">
+				  				<area shape="rect" coords="58,604,191,675" href="../elements/7835c881-c8a9-4039-995e-5225e274f04f.html"  target="element">
+				  				<area shape="rect" coords="58,498,191,569" href="../elements/2eaa9baf-2c42-49f8-9ee6-cc4a47d0a3a6.html"  target="element">
+				  				<area shape="rect" coords="490,594,628,665" href="../elements/4a8dd68a-bb33-4fb1-b020-90d5568d977b.html"  target="element">
+				  				<area shape="rect" coords="490,474,628,545" href="../elements/ade6b6f5-405a-4712-b227-3ac8a28fd72e.html"  target="element">
+				  				<area shape="rect" coords="274,534,412,605" href="../elements/0f0c2984-4e93-43d1-a773-076ab41942cb.html"  target="element">
+
+				  		<area shape="rect" coords="10,438,659,703" href="../elements/6d573f5d-7f16-474b-bb21-b932970e7868.html"  target="element">
+				  				<area shape="rect" coords="276,186,409,257" href="../elements/61f29d88-8878-4674-aeec-d8062bd684c4.html"  target="element">
+				  				<area shape="rect" coords="58,246,196,317" href="../elements/302ccea9-ff02-4cfc-8f28-b72682bcdfaa.html"  target="element">
+				  				<area shape="rect" coords="58,342,196,413" href="../elements/d111b803-93e0-4da1-9eb7-658db4b069e9.html"  target="element">
+				  				<area shape="rect" coords="490,342,628,413" href="../elements/7f7939cb-2a35-49a4-af5d-cf6995603904.html"  target="element">
+				  				<area shape="rect" coords="274,298,412,369" href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html"  target="element">
+				  				<area shape="rect" coords="490,246,628,317" href="../elements/0dd45f16-64d3-4f4e-9e11-beab5d9ba39e.html"  target="element">
+
+				  		<area shape="rect" coords="10,150,659,439" href="../elements/0738ab9b-3cee-4387-ae35-39270c8e60f0.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">Det er vanlig &#229; skille mellom konseptuelle, logiske og fysiske data. 
+
+I tilknytning til nasjonale referansearkitekturer for datautveksling benyttes begrepet _data_ heller enn _informasjon_, s&#229; langt det gir mening. Det skilles likevel mellom data og informasjon i visse sammenhenger. Det gir f.eks. mening &#229; si _informasjonssikkerhet_, mens en snakker om _sikring av data_ for &#229; oppn&#229; _informasjonssikkerhet_.
+
+Data kan finnes med st&#248;rre eller mindre grad av struktur, og det er en flytende overgang mellom ustrukturerte, semistrukturerte og strukturerte data. Med nyere teknologier innen maskinl&#230;ring kan en ogs&#229; tolke og gi struktur og mening til data som en tidligere har definert som ustrukturerte.
+
+Data kan samles i _datasett_. Dette kan f.eks. v&#230;re dokumenter i et arkiv eller tabeller i en database.
+
+Det er den fysiske forekomsten av data i ulike systemer som vi m&#229; sikre og ha oversikt over, enten det dreier seg om data som er lagret over tid eller data som finnes midlertidig mellom systemer i en datautveksling. Begrepet _datadistrubusjon_ tilsvarer begrepet _distribution_ i DCAT-standarden.  
+
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td> difi:language </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">no</xmp> </td></tr><tr><td> difi:name_no </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">Hva er data for datautveksling</xmp> </td></tr><tr><td> difi:name_en </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:description_no </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">Hva er _data_? 
+
+								Hva er _data_ i forhold til _informasjon_? Hva er forholdet mellom data dokumenter? Hva er _datasett_? Hva menes med _bevis_ og _eBevis_?
+
+								Disse begrepene benyttes p&#229; ulike m&#229;ter og kan lett misforst&#229;s. Her gj&#248;res noen presiseringer i tilknytning til nasjonale referansearkitekurer. 
+
+								Iflg. https://en.wikipedia.org/wiki/Data: Data and information or knowledge are often used interchangeably; however data becomes information when it is viewed in context or in post-analysis.
+
+								Iflg. https://no.wikipedia.org/wiki/Data: Data er det materielle (eller fysiske) grunnlaget for &#229; tilf&#248;re mennesker informasjon. Data er dermed det materielle grunnlaget for &#229; overf&#248;re informasjon og kunnskap mellom mennesker ved kommunikasjon. Data kan registreres, lagres, behandles og flyttes av menneskeskapte innretninger som kalles datasystemer.
+
+								I tilknytning til nasjonale referansearkitekturer for datautveksling benyttes begrepet _data_ heller enn _informasjon_, s&#229; langt det gir mening. Det skilles likevel mellom data og informasjon i visse sammenhenger. Det gir f.eks. mening &#229; si _informasjonssikkerhet_, mens en snakker om _sikring av data_ for &#229; oppn&#229; _informasjonssikkerhet_.
+
+								Data kan finnes med st&#248;rre eller mindre grad av struktur, og det er en flytende overgang mellom ustrukturerte og strukturerte data. Med nyere teknologier innen maskinl&#230;ring kan en ogs&#229; tolke og gi struktur og mening til data som en tidligere har definert som ustrukturert. 
+
+								Vi skiller videre p&#229; den logiske representasjonen av _datasett_ og den fysiske representasjonen i form av _datasettdistrubusjoner_ (begrep fra DCAT-standarden).  Det er den fysiske forekomsten av data i ulike systemer som vi m&#229; sikre og ha oversikt over, enten det dreier seg om data som er lagret over tid eller data som er i bevegelse mellom systemer i form av meldinger.
+
+								Begrepet _dokument_ benyttes om "logiske dokumenter"_, mens den fysiske representasjonen kan variere. 
+
+								_Dokumenter_ kan for det f&#248;rste inneholde varierende grad av strukturert eller ustrukturert informasjon. _Dokumenter_ kan videre representeres eller materialisere seg p&#229; ulike m&#229;ter, f.eks. som et Word-dokument i et filsystem,  som en samling rader i en database eller f.eks. som nyttelasten i en meldingsforsendelse.
+
+
+
+								Kildesporing av data fra original 
+
+								Meldingsutveksling er en viktig mekanisme for  datautveksling.
+
+								I Archimate-modeller finnes Business Object (konseptuelle data), Data Object (logiske data)  og Artifact (fysiske data). 
+
+
+
+								</xmp> </td></tr><tr><td> difi:description_en </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:docViewPath </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">nab_referanse_arkitekturer_datautveksling</xmp> </td></tr><tr><td> difi:antoraViewPath </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">architecture-repository\docs\architecture-landscape\segment-architectures\modules\data-exchange</xmp> </td></tr><tr><td> difi:antoraViewImagePath </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">architecture-repository\docs\architecture-landscape\segment-architectures\modules\data-exchange\images</xmp> </td></tr>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/0738ab9b-3cee-4387-ae35-39270c8e60f0.html" target="element"> Logisk - uavhengig av representasjon </a> </td>
+											    <td> <a href="../elements/0738ab9b-3cee-4387-ae35-39270c8e60f0.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/0dd45f16-64d3-4f4e-9e11-beab5d9ba39e.html" target="element"> Metadata </a> </td>
+													    <td> <a href="../elements/0dd45f16-64d3-4f4e-9e11-beab5d9ba39e.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+													    <td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/7f7939cb-2a35-49a4-af5d-cf6995603904.html" target="element"> Datamodell </a> </td>
+													    <td> <a href="../elements/7f7939cb-2a35-49a4-af5d-cf6995603904.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/d111b803-93e0-4da1-9eb7-658db4b069e9.html" target="element"> Endringslogg </a> </td>
+													    <td> <a href="../elements/d111b803-93e0-4da1-9eb7-658db4b069e9.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/302ccea9-ff02-4cfc-8f28-b72682bcdfaa.html" target="element"> &#216;yeblikksbilde av datasett </a> </td>
+													    <td> <a href="../elements/302ccea9-ff02-4cfc-8f28-b72682bcdfaa.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/61f29d88-8878-4674-aeec-d8062bd684c4.html" target="element"> Dataobjekt </a> </td>
+													    <td> <a href="../elements/61f29d88-8878-4674-aeec-d8062bd684c4.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/6d573f5d-7f16-474b-bb21-b932970e7868.html" target="element"> Fysisk representasjon </a> </td>
+											    <td> <a href="../elements/6d573f5d-7f16-474b-bb21-b932970e7868.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/0f0c2984-4e93-43d1-a773-076ab41942cb.html" target="element"> Datadistribusjon </a> </td>
+													    <td> <a href="../elements/0f0c2984-4e93-43d1-a773-076ab41942cb.html" target="element" class="i18n-elementtype-Artifact"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/ade6b6f5-405a-4712-b227-3ac8a28fd72e.html" target="element"> Autoritativt datasett (master) </a> </td>
+													    <td> <a href="../elements/ade6b6f5-405a-4712-b227-3ac8a28fd72e.html" target="element" class="i18n-elementtype-Artifact"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/4a8dd68a-bb33-4fb1-b020-90d5568d977b.html" target="element"> Avledet datasett (slave) </a> </td>
+													    <td> <a href="../elements/4a8dd68a-bb33-4fb1-b020-90d5568d977b.html" target="element" class="i18n-elementtype-Artifact"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/2eaa9baf-2c42-49f8-9ee6-cc4a47d0a3a6.html" target="element"> Data i bevegelse </a> </td>
+													    <td> <a href="../elements/2eaa9baf-2c42-49f8-9ee6-cc4a47d0a3a6.html" target="element" class="i18n-elementtype-Artifact"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/7835c881-c8a9-4039-995e-5225e274f04f.html" target="element"> Data i ro </a> </td>
+													    <td> <a href="../elements/7835c881-c8a9-4039-995e-5225e274f04f.html" target="element" class="i18n-elementtype-Artifact"> </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/569b39f6-a1ec-46ff-91ce-f47b2594bd81.html" target="element"> Konseptuelt </a> </td>
+											    <td> <a href="../elements/569b39f6-a1ec-46ff-91ce-f47b2594bd81.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/516b0847-05aa-4fdf-a5df-59df067ebb26.html" target="element"> Forretningsobjekt </a> </td>
+													    <td> <a href="../elements/516b0847-05aa-4fdf-a5df-59df067ebb26.html" target="element" class="i18n-elementtype-BusinessObject"> </a> </td>
+													</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/38c1f7b6-7fe5-40e6-aa35-aa054583356a.html" target="element">  </a> </td>
+																		<td> <a href="../elements/38c1f7b6-7fe5-40e6-aa35-aa054583356a.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/0738ab9b-3cee-4387-ae35-39270c8e60f0.html" target="element"> Logisk - uavhengig av representasjon </a> </td>
+																		<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/77932331-963e-4ac5-af6e-e1853f12f373.html" target="element">  </a> </td>
+																		<td> <a href="../elements/77932331-963e-4ac5-af6e-e1853f12f373.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/0738ab9b-3cee-4387-ae35-39270c8e60f0.html" target="element"> Logisk - uavhengig av representasjon </a> </td>
+																		<td> <a href="../elements/61f29d88-8878-4674-aeec-d8062bd684c4.html" target="element"> Dataobjekt </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/9ccfa5a0-8238-4513-a84f-4e84a2592bd6.html" target="element">  </a> </td>
+																		<td> <a href="../elements/9ccfa5a0-8238-4513-a84f-4e84a2592bd6.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/0738ab9b-3cee-4387-ae35-39270c8e60f0.html" target="element"> Logisk - uavhengig av representasjon </a> </td>
+																		<td> <a href="../elements/7f7939cb-2a35-49a4-af5d-cf6995603904.html" target="element"> Datamodell </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/a166a5a2-010e-46e9-9841-7de0dfd1499d.html" target="element">  </a> </td>
+																		<td> <a href="../elements/a166a5a2-010e-46e9-9841-7de0dfd1499d.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/0738ab9b-3cee-4387-ae35-39270c8e60f0.html" target="element"> Logisk - uavhengig av representasjon </a> </td>
+																		<td> <a href="../elements/0dd45f16-64d3-4f4e-9e11-beab5d9ba39e.html" target="element"> Metadata </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/0a934e6d-4328-4a01-bb57-5cfec37d4068.html" target="element">  </a> </td>
+																		<td> <a href="../elements/0a934e6d-4328-4a01-bb57-5cfec37d4068.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/0738ab9b-3cee-4387-ae35-39270c8e60f0.html" target="element"> Logisk - uavhengig av representasjon </a> </td>
+																		<td> <a href="../elements/302ccea9-ff02-4cfc-8f28-b72682bcdfaa.html" target="element"> &#216;yeblikksbilde av datasett </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/7bbc0841-5e36-4f1f-bc34-e2d73876e141.html" target="element">  </a> </td>
+																		<td> <a href="../elements/7bbc0841-5e36-4f1f-bc34-e2d73876e141.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/0738ab9b-3cee-4387-ae35-39270c8e60f0.html" target="element"> Logisk - uavhengig av representasjon </a> </td>
+																		<td> <a href="../elements/d111b803-93e0-4da1-9eb7-658db4b069e9.html" target="element"> Endringslogg </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/40f51ad3-77b5-46f2-9d54-bcf1e205d521.html" target="element">  </a> </td>
+																				<td> <a href="../elements/40f51ad3-77b5-46f2-9d54-bcf1e205d521.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/0dd45f16-64d3-4f4e-9e11-beab5d9ba39e.html" target="element"> Metadata </a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/c5bb161f-93ed-4574-b94b-97f377400771.html" target="element"> kan inneholde </a> </td>
+																				<td> <a href="../elements/c5bb161f-93ed-4574-b94b-97f377400771.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/a8840550-d0d6-42f4-aebe-dcb8a06966d0.html" target="element"> relaterer til </a> </td>
+																				<td> <a href="../elements/a8840550-d0d6-42f4-aebe-dcb8a06966d0.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/43e2c371-0d16-4859-9144-10a5fbd7ce0b.html" target="element"> innrholder </a> </td>
+																				<td> <a href="../elements/43e2c371-0d16-4859-9144-10a5fbd7ce0b.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																				<td> <a href="../elements/61f29d88-8878-4674-aeec-d8062bd684c4.html" target="element"> Dataobjekt </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/a83f901c-95e9-460f-8510-fb38b38d4855.html" target="element">  </a> </td>
+																				<td> <a href="../elements/a83f901c-95e9-460f-8510-fb38b38d4855.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/7f7939cb-2a35-49a4-af5d-cf6995603904.html" target="element"> Datamodell </a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/35497591-acd7-4e3d-9ae6-e79f32136cc1.html" target="element">  </a> </td>
+																				<td> <a href="../elements/35497591-acd7-4e3d-9ae6-e79f32136cc1.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																				<td> <a href="../elements/7f7939cb-2a35-49a4-af5d-cf6995603904.html" target="element"> Datamodell </a> </td>
+																				<td> <a href="../elements/0dd45f16-64d3-4f4e-9e11-beab5d9ba39e.html" target="element"> Metadata </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/5f5120ac-8dfc-40cd-b194-d5e783e5c7e0.html" target="element">  </a> </td>
+																				<td> <a href="../elements/5f5120ac-8dfc-40cd-b194-d5e783e5c7e0.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/d111b803-93e0-4da1-9eb7-658db4b069e9.html" target="element"> Endringslogg </a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/9db67046-2498-4145-a32a-3f210efe3901.html" target="element">  </a> </td>
+																				<td> <a href="../elements/9db67046-2498-4145-a32a-3f210efe3901.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/302ccea9-ff02-4cfc-8f28-b72682bcdfaa.html" target="element"> &#216;yeblikksbilde av datasett </a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/d5add20e-3f6c-4a21-ad12-99b0ac11085d.html" target="element"> realiserer </a> </td>
+																				<td> <a href="../elements/d5add20e-3f6c-4a21-ad12-99b0ac11085d.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/61f29d88-8878-4674-aeec-d8062bd684c4.html" target="element"> Dataobjekt </a> </td>
+																				<td> <a href="../elements/516b0847-05aa-4fdf-a5df-59df067ebb26.html" target="element"> Forretningsobjekt </a> </td>
+																			</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/9e795ebc-8a77-4ef4-8545-222e4fffb736.html" target="element">  </a> </td>
+																		<td> <a href="../elements/9e795ebc-8a77-4ef4-8545-222e4fffb736.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/6d573f5d-7f16-474b-bb21-b932970e7868.html" target="element"> Fysisk representasjon </a> </td>
+																		<td> <a href="../elements/0f0c2984-4e93-43d1-a773-076ab41942cb.html" target="element"> Datadistribusjon </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/15cf190b-335a-4f4b-b54b-9ce12e083e73.html" target="element">  </a> </td>
+																		<td> <a href="../elements/15cf190b-335a-4f4b-b54b-9ce12e083e73.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/6d573f5d-7f16-474b-bb21-b932970e7868.html" target="element"> Fysisk representasjon </a> </td>
+																		<td> <a href="../elements/4a8dd68a-bb33-4fb1-b020-90d5568d977b.html" target="element"> Avledet datasett (slave) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/d621db51-f2f0-4e40-87cc-52673a5bc449.html" target="element">  </a> </td>
+																		<td> <a href="../elements/d621db51-f2f0-4e40-87cc-52673a5bc449.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/6d573f5d-7f16-474b-bb21-b932970e7868.html" target="element"> Fysisk representasjon </a> </td>
+																		<td> <a href="../elements/ade6b6f5-405a-4712-b227-3ac8a28fd72e.html" target="element"> Autoritativt datasett (master) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/ab8a45d7-d09c-492f-bd35-f5a46c016e03.html" target="element">  </a> </td>
+																		<td> <a href="../elements/ab8a45d7-d09c-492f-bd35-f5a46c016e03.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/6d573f5d-7f16-474b-bb21-b932970e7868.html" target="element"> Fysisk representasjon </a> </td>
+																		<td> <a href="../elements/7835c881-c8a9-4039-995e-5225e274f04f.html" target="element"> Data i ro </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/f94b27cd-7486-4a3e-be5b-ce5757a4b5d2.html" target="element">  </a> </td>
+																		<td> <a href="../elements/f94b27cd-7486-4a3e-be5b-ce5757a4b5d2.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/6d573f5d-7f16-474b-bb21-b932970e7868.html" target="element"> Fysisk representasjon </a> </td>
+																		<td> <a href="../elements/2eaa9baf-2c42-49f8-9ee6-cc4a47d0a3a6.html" target="element"> Data i bevegelse </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/7bcc667e-dc07-40c0-98e7-953efc038465.html" target="element"> realiserer </a> </td>
+																				<td> <a href="../elements/7bcc667e-dc07-40c0-98e7-953efc038465.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/0f0c2984-4e93-43d1-a773-076ab41942cb.html" target="element"> Datadistribusjon </a> </td>
+																				<td> <a href="../elements/e7a43b99-dd6d-4881-9c92-fcea2c2e9f49.html" target="element"> Datasett </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/3d0a833b-1f34-4449-a2d7-311efa374396.html" target="element">  </a> </td>
+																				<td> <a href="../elements/3d0a833b-1f34-4449-a2d7-311efa374396.html" target="element" class="i18n-elementtype-AggregationRelationship"></a> </td>
+																				<td> <a href="../elements/ade6b6f5-405a-4712-b227-3ac8a28fd72e.html" target="element"> Autoritativt datasett (master) </a> </td>
+																				<td> <a href="../elements/4a8dd68a-bb33-4fb1-b020-90d5568d977b.html" target="element"> Avledet datasett (slave) </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/1c5360a9-fec2-443d-8d39-474409ada487.html" target="element"> er en type </a> </td>
+																				<td> <a href="../elements/1c5360a9-fec2-443d-8d39-474409ada487.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																				<td> <a href="../elements/ade6b6f5-405a-4712-b227-3ac8a28fd72e.html" target="element"> Autoritativt datasett (master) </a> </td>
+																				<td> <a href="../elements/0f0c2984-4e93-43d1-a773-076ab41942cb.html" target="element"> Datadistribusjon </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/edab28ee-fb8c-4657-bd56-a100ba9ebd08.html" target="element">  </a> </td>
+																				<td> <a href="../elements/edab28ee-fb8c-4657-bd56-a100ba9ebd08.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																				<td> <a href="../elements/4a8dd68a-bb33-4fb1-b020-90d5568d977b.html" target="element"> Avledet datasett (slave) </a> </td>
+																				<td> <a href="../elements/0f0c2984-4e93-43d1-a773-076ab41942cb.html" target="element"> Datadistribusjon </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/b184c52f-77d7-42b4-963a-789ca7b4001e.html" target="element">  </a> </td>
+																				<td> <a href="../elements/b184c52f-77d7-42b4-963a-789ca7b4001e.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																				<td> <a href="../elements/2eaa9baf-2c42-49f8-9ee6-cc4a47d0a3a6.html" target="element"> Data i bevegelse </a> </td>
+																				<td> <a href="../elements/0f0c2984-4e93-43d1-a773-076ab41942cb.html" target="element"> Datadistribusjon </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/62853812-5b6b-47d9-8f67-5c6e548a2702.html" target="element"> er en type </a> </td>
+																				<td> <a href="../elements/62853812-5b6b-47d9-8f67-5c6e548a2702.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																				<td> <a href="../elements/7835c881-c8a9-4039-995e-5225e274f04f.html" target="element"> Data i ro </a> </td>
+																				<td> <a href="../elements/0f0c2984-4e93-43d1-a773-076ab41942cb.html" target="element"> Datadistribusjon </a> </td>
+																			</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/dc1d0885-31de-4e4a-a801-61bf80778918.html" target="element">  </a> </td>
+																		<td> <a href="../elements/dc1d0885-31de-4e4a-a801-61bf80778918.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/569b39f6-a1ec-46ff-91ce-f47b2594bd81.html" target="element"> Konseptuelt </a> </td>
+																		<td> <a href="../elements/516b0847-05aa-4fdf-a5df-59df067ebb26.html" target="element"> Forretningsobjekt </a> </td>
+																	</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
