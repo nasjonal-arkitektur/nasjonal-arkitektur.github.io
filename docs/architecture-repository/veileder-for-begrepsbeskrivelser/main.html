@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Veileder for bruk av Forvaltningsstandard for begrepsbeskrivelser :: Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</title>
+    <link rel="canonical" href="https://digdir.gitlab.io/site/architecture-repository/veileder-for-begrepsbeskrivelser/main.html">
+    <meta name="description" content="Veileder for bruk av Forvaltningsstandard for begrepsbeskrivelser">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://digdir.gitlab.io/site">Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Valg</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Rolle</a>
+            <a class="navbar-item" href="#">Preferanser</a>
+            <a class="navbar-item" href="#">Språk</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Ressurser</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Verktøy</a>
+            <a class="navbar-item" href="#">Kunnskapsbibliotek</a>
+          </div>
+        </div>	
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Hjelp</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Om NEAR-NO</a>
+            <a class="navbar-item" href="#">FAQ</a>
+          </div>
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="architecture-repository" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Nasjonalt arkitekturverksted</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Praktiske tips om bruk av arkitekturverkstedet</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reading-guide/module-reading-guide.html">Leseveiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Praktiske tips om bruk av git-verktøy</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora/module-antora.html">Praktiske tips om innholdsproduksjon og publisering med Antora og Asciidoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om arkitekturmodellering og samarbeid i Archi</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om utveksling av arkitekturmodeller</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Hvordan gi kommentarer og få svar på spørsmål</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Temaområder</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Om temaområder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Datadeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Om temaområdet <em>datadeling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing-value-streams.html">Referansemodeller for datadeling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-data-exchange/about-data-exchange.html">Datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../about-data-exchange/about-data-exchange.html">Om temaområdet <em>datautveksling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-data-exchange/about-data-exchange-reference-architecture.html">Referansearkitektur for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-roles/data-exchange-roles.html">Roller involvert i datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basismønstre for datautveksling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html">Forsendelse (one way push)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html">Generisk forsendelse</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../4-corner-model/4-hjørnersmodellen.html">4-hjørners-modellen</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../eMelding/book-ra-emelding.html">eMelding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../generic-request-reply/generic-request-reply.html">Forespørsel-svar</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../generic-request-reply/generic-request-reply.html">Generisk forespørsel-svar</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../eOppslag-conceptual/eOppslag-conceptual.html">eOppslag konseptuelt arkitekturmønster</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../eOppslag-solution-no/eOppslag-solution-no.html">eOppslag løsningsmønster med norske fellesløsninger</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../publish-subscribe/about-publish-subscribe.html">Publisering</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../event-streaming/about-event-streaming.html">Publisering og konsumering av hendelsesstrømmer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="8">
+    <a class="nav-link" href="../event-streaming/use-cases-for-event-streaming.html">Brukstilfeller for publisering av hendelsestrømmer</a>
+  </li>
+  <li class="nav-item" data-depth="8">
+    <a class="nav-link" href="../event-streaming/event-streaming-concepts.html">Konsepter for publisering av hendelsestrømmer</a>
+  </li>
+  <li class="nav-item" data-depth="8">
+    <a class="nav-link" href="../event-streaming/eNotifikasjon.html">eNotifikasjon</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Løsningsbyggeklosser for bruk og gjenbruk</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Fellesløsninger</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Tekniske tjenester og API-er</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sluttbrukertjenester</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">Føringer og standarder</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Styring og organisering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Initiativer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../proposed-reference-architectures/proposed-reference-architecture-work.html">Innspill til prioritering av videre arbeid med referansearkitekturer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/følgebrev.html">Følgebrev</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/situasjonsrapport.html">Situasjonsrapport</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/strukturering-av-spørreskjema.html">Strukturering av spørreskjema</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/forklaringer-til-spørsmålene.html">Forklaringer til spørsmålene</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../methods/methods.html">Metodikk for utvikling av nasjonal arkitektur</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../methods/reference-architecture-methods.html">Metodikk for utvikling av referansearkitekturer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../drafts/index.html">Utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Nasjonalt arkitekturverksted</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../drafts/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
+    <li><a href="main.html">Veileder for bruk av Forvaltningsstandard for begrepsbeskrivelser</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/standards/forvaltningsstandard-begrep/edit/master/docs/modules/veileder-for-begrepsbeskrivelser/pages/main.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Veileder for bruk av Forvaltningsstandard for begrepsbeskrivelser</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+Dette dokumentet kan også lastes ned <a href="document.pdf">som PDF</a> eller <a href="document.epub">som EPUB</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Publisert: 15.03.2019</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_innledning"><a class="anchor" href="#_1_innledning"></a>1. Innledning</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_1_hensikt"><a class="anchor" href="#_1_1_hensikt"></a>1.1. Hensikt</h3>
+<div class="paragraph">
+<p>Denne veilederen skal bidra til å gjøre det lettere å forstå og bruke
+<a href="https://doc.difi.no/data/forvaltningsstandard-begrepsbeskrivelser/">Forvaltningsstandard
+for begrepsbeskrivelser versjon 2.0.</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_2_omfang_og_avgrensning"><a class="anchor" href="#_1_2_omfang_og_avgrensning"></a>1.2. Omfang og avgrensning</h3>
+<div class="paragraph">
+<p>Veilederen har ikke som mål å gi veiledning til begrepsarbeid generelt,
+men er utarbeidet med vektlegging på begrepsbeskrivelser og bruk av
+standarden.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_3_om_dette_dokumentet"><a class="anchor" href="#_1_3_om_dette_dokumentet"></a>1.3. Om dette dokumentet</h3>
+<div class="paragraph">
+<p>Denne veilederen er utarbeidet av den samme arbeidsgruppen som
+utarbeidet forslag til <em>Forvaltningsstandard for begrepsbeskrivelser,
+versjon 2.0</em>. Veilederen er organisert etter ulike temaer som har vist
+seg å være viktige og til dels vanskelig å ta hensyn til i arbeidet med
+å beskrive begreper. Veilederen gir ikke en detaljert bruksanvisning for
+hvert enkelt felt i standarden.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_eksempler_på_begrepsbeskrivelser"><a class="anchor" href="#_2_eksempler_på_begrepsbeskrivelser"></a>2. Eksempler på begrepsbeskrivelser</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dette kapitlet inneholder noen eksempler på begrepsbeskrivelser, i
+henhold til <em>Forvaltningsstandard for begrepsbeskrivelser, versjon 2.0</em>.</p>
+</div>
+<div class="sect2">
+<h3 id="_2_1_beskrivelse_av_et_begrep_med_kun_obligatoriske_felter"><a class="anchor" href="#_2_1_beskrivelse_av_et_begrep_med_kun_obligatoriske_felter"></a>2.1. Beskrivelse av et begrep, med kun obligatoriske felter</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Et informativt eksempel på en beskrivelse av et begrep, ved å bruke kun
+obligatorisk informasjon, der “(nb)” markerer at teksten er skrevet på
+bokmål.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">heltidssysselsatt (nb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">person som har en avtalt ukentlig arbeidstid på 37 timer
+og mer, eller person som ved annen avtalt arbeidstid oppgir at dette
+utgjør heltid (nb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Identifikator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.ssb.no/a/metadata/conceptvariable/vardok/1127/nb"><span class="underline">https://www.ssb.no/a/metadata/conceptvariable/vardok/1127/nb</span></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvarlig virksomhet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">971 526 920 (organisasjonsnummer for Statistisk
+sentralbyrå)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_2_2_beskrivelse_av_et_begrep_også_med_noen_valgfrie_felter"><a class="anchor" href="#_2_2_beskrivelse_av_et_begrep_også_med_noen_valgfrie_felter"></a>2.2. Beskrivelse av et begrep, også med noen valgfrie felter</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Et informativt eksempel som illustrerer bruk av flere felter fra
+standarden, der den obligatoriske informasjonen er <strong>uthevet</strong> og
+språkkode oppgitt i parentes (“(nn)” for nynorsk).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">husdyr (nn)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dyr av ulike slag (pattedyr, fuglar, bier) som blir halde
+for nytteformål, til dømes for produksjon av produkt som mjølk, kjøt og
+ull, for al eller for trekkraft (nn)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Identifikator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.ssb.no/a/metadata/conceptvariable/vardok/1243/nn"><span class="underline">https://www.ssb.no/a/metadata/conceptvariable/vardok/1243/nn</span></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvarlig virksomhet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">971 526 920 (organisasjonsnummer for Statistisk
+sentralbyrå)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Merknad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kjæledyr blir ikkje rekna som husdyr (nn)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fagområde</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jordbruk, jakt og viltstell (nn)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Omfang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.ssb.no/klass/klassifikasjoner/29">Standard for klassifisering av husdyr</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_begrep_term_definisjon_referent"><a class="anchor" href="#_3_begrep_term_definisjon_referent"></a>3. Begrep - term - definisjon - referent</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Beskrivelsen er tatt med for å hjelpe brukeren til å skille mellom
+begrep, term og definisjon i utarbeiding av termlister og i arbeid med
+begrepsanalyse, begrepsbeskrivelser, begrepskoordinering og
+-harmonisering.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Man bør bygge arbeidet på de grunnleggende, terminologiske begrepene
+presentert i
+<a href="https://www.sprakradet.no/globalassets/vi-og-vart/publikasjoner/termlosen.pdf"><span class="underline">Termlosen</span></a>,
+og framstilt i en tilpasset og utvidet versjon av den semiotiske
+trekanten fra språkvitenskapen (se figur 1).</p>
+</div>
+<div class="paragraph">
+<p>Et <em>begrep</em> (<em>omgrep</em> på nynorsk) viser til meningsinnholdet, altså
+betydningen, mens en <em>term</em> viser til selve navnet, «den språklige
+merkelappen», man fester til begrepet.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/difi/data-docs/blob/master/veileder-for-begrepsbeskrivelser/begrep.png?raw=true" alt="begrep">
+</div>
+<div class="title">Figur 1: Forholdet mellom begrep, term, definisjon og referent (fra <a href="http://www.sprakradet.no/globalassets/vi-og-vart/publikasjoner/termlosen.pdf"><span class="underline">Termlosen</span></a>, omgrep er nynorsk for <em>begrep</em> på bokmål)</div>
+</div>
+<div class="paragraph">
+<p>Når vi omtaler et begrep, benytter vi oss av termer (se <a href="#term">forklaring på term</a>). I noen tilfeller benytter vi oss av flere ulike termer for
+samme begrep. De er synonymer. Termer fra ulike språk kan også vise til
+samme begrep, som <em>tre, tree, arbre</em> og <em>Baum</em> i figur 1. De er
+ekvivalente termer.</p>
+</div>
+<div class="paragraph">
+<p>Ifølge konvensjonene skriver man <em>termen</em> i kursiv og ‘begrepet’ mellom
+enkle anførselstegn når man ønsker å skille mellom dem.</p>
+</div>
+<div class="paragraph">
+<p>Denne standarden legger til grunn begreper som er allmenne
+(allmennbegreper), dvs. ikke begreper som er knyttet til et produkt, en
+organisasjon eller virksomhet, en person, en publikasjon osv. Derfor
+omfatter standarden heller ikke termer som er egennavn, produktnavn
+eller liknende.</p>
+</div>
+<div class="paragraph">
+<p>Begrepet trer frem og blir forklart gjennom en definisjon (se <a href="#definisjon ">forklaring på definisjon</a>). En definisjon er en beskrivelse av begrepet som forklarer
+hva det betyr. Ifølge terminologisk teori skal denne beskrivelsen
+avgrense begrepet mot beslektede begreper.</p>
+</div>
+<div class="paragraph">
+<p>Referenten viser til de konkrete tingene ute i verden eller spesifikke
+abstrakte fenomener.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Termene <em>tre, tree, arbre</em> og <em>Baum</em> viser til begrepet ‘tre’ (se figur
+1). Definisjonen lyder “vedplante med meir eller mindre høg og kraftig
+stamme, og greiner som går ut frå denne og ber kvister med blad (nåler),
+blomstrar og frukter” (Kilde:
+<a href="https://www.nb.no/items/f9708e6c01cc89e9843cc90db97babc8?page=0&amp;searchText=norsk%20landbruksordbok">Norsk landbruksordbok (1979)</a>). Denne definisjonen avgrenser ‘tre’ mot andre
+beslektede begreper, f.eks. ‘plante’, ‘bartre’ og ‘løvtre’. Referentene
+er trærne vi ser i skogen, parker etc.</p>
+</div>
+<div class="paragraph">
+<p>Termene <em>risikodekning, risikopensjon og risikoforsikring</em> viser til
+samme begrep (‘risikodekning’) i
+<a href="https://www.finansnorge.no/ordliste/?pageid=42026#p42026">Finans Norges termliste for pensjon</a>. Anbefalt term er <em>risikodekning</em>, mens
+<em>risikopensjon</em> og <em>risikoforsikring</em> er tillatte termer (synonymer).
+Definisjonen lyder “tilleggsforsikring til en alderspensjonsavtale som
+gir utbetaling ved uførhet og/eller død”. Referentene er den konkrete
+risikodekningen som hver og en av oss tegner med et forsikringsselskap.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_flerspråklighet"><a class="anchor" href="#_4_flerspråklighet"></a>4. Flerspråklighet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>For at man skal kunne kommunisere presist om begrepene på flere enn ett
+språk, gir <em>Forvaltningsstandard for begrepsbeskrivelser</em> mulighet til å
+spesifisere ulike språk på både term, definisjon og alternativ
+formulering:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For hver forekomst av en term, om det er en ‘anbefalt term’, en ‘tillatt
+term’ eller en ‘frarådet term’, skal man oppgi språket som termen
+gjelder for.</p>
+</li>
+<li>
+<p>For hver forekomst av tekst for en ‘definisjon’ eller en ‘alternativ
+formulering’, gjelder det samme: Man skal oppgi språket som teksten
+gjelder for.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>På denne måten kan man beskrive et begrep i flere ulike språk.
+Standarden krever imidlertid at maksimalt én ‘anbefalt term’ er tillatt
+for hvert språk, dette for å unngå tvetydighet i kommunikasjonen.
+Tilsvarende krever standarden at maksimalt én ‘definisjon’ er tillatt
+for hvert språk.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>I begrepsarbeid regnes de to målformene bokmål og nynorsk som to ulike
+språk. Det bør oppgis anbefalt term for begge målformene parallelt (selv
+om standarden krever bare én anbefalt term som minimum). Standarden
+krever som minimum én definisjon i tillegg til én anbefalt term, uten å
+si at disse bør være i samme språk/målform eller ikke. Vi anbefaler å
+oppgi som minimum én anbefalt term og én definisjon i samme
+språk/målform. F.eks. anbefalt term og definisjon på nynorsk, dette i
+tillegg til også anbefalt term på bokmål som anbefalt foran (dvs.
+fortrinnsvis ikke bare en anbefalt term på nynorsk og en definisjon på
+bokmål, en mulig kombinasjon som standarden ikke utelukker). Vi
+anbefaler med andre ord følgende for ethvert begrep: definisjon på
+nynorsk <span class="underline">eller</span> bokmål, og anbefalt term på
+<span class="underline">både</span> nynorsk og bokmål.</p>
+</div>
+<div class="paragraph">
+<p>Det frarådes på det sterkeste å benytte språkkoden <em>no</em> (norsk) siden
+den ikke spesifiserer målform. Benytt heller språkkodene <em>nb</em> (bokmål)
+og <em>nn</em> (nynorsk).</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Term: <em>begrep</em> (nb); <em>omgrep</em> (nn); <em>concept</em> (en)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="term"><a class="anchor" href="#term"></a>5. Term (Anbefalt, Tillatt, Frarådet term, Datastrukturterm)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dette kapitlet omhandler egenskapene til en term: Om en term er en
+‘anbefalt term’, en ‘tillatt term’, en ‘frarådet term’, eller en
+‘datastrukturterm’.</p>
+</div>
+<div class="sect2">
+<h3 id="anbefalt"><a class="anchor" href="#anbefalt"></a>5.1. Anbefalt term</h3>
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>For å få til kommunikasjon på en enklest mulig og mest presis måte bør
+hovedregelen være å føre opp samme anbefalt term for et gitt begrep
+uavhengig av målgruppe (‘allmennheten’ eller ‘fagspesialist’). Dette har
+standarden lagt til rette for, ved at man for et begrep alltid skal
+oppgi minst én anbefalt term, men maksimalt én anbefalt term per
+språk/målform.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Det er mest ønskelig å ha en felles anbefalt term uavhengig av
+målgruppe. Dersom det ikke er mulig, så skal den faglige termen være den
+anbefalte. Termer egnet for allmennheten skal da føres som tillatte
+termer.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Anbefalt term: <em>term</em> (faglig uttrykk, for fagspesialister)</p>
+</li>
+<li>
+<p>Tillatt term: <em>navn</em> (folkelig uttrykk, for allmennheten)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_2_tillatt_term"><a class="anchor" href="#_5_2_tillatt_term"></a>5.2. Tillatt term</h3>
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>“Kjært barn har mange navn”. I tillegg til anbefalt term kan det være
+behov for å knytte flere termer til et gitt begrep når man vet at også
+disse brukes (eller kan brukes) i kommunikasjon om det aktuelle
+begrepet. Typiske eksempler er synonymer eller kortformtermer.
+Standarden legger til rette for dette ved at en term som også kan brukes
+på begrepet (i tillegg til den anbefalte termen), oppgis som tillatt
+term. Det kan knyttes flere tillatte termer til et begrep.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Listen over tillatte termer vil som regel ikke være uttømmende, men man
+bør oppgi termer som man vet blir brukt i kommunikasjon om et gitt
+begrep.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Se eksemplene under <a href="#anbefalt">anbefalt term</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_3_frarådet_term"><a class="anchor" href="#_5_3_frarådet_term"></a>5.3. Frarådet term</h3>
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>For å unngå misforståelse i kommunikasjonen, bør det eksplisitt oppgis
+termer som man vet blir brukt, men ikke ønsker at skal brukes, på et
+gitt begrep. Dette er lagt til rette for i standarden, ved at man kan
+knytte en eller flere frarådde termer til et begrep.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Foreldede termer som ikke lenger skal brukes, bør oppgis som frarådde
+termer. Det samme gjelder termer som betegner begrep som egentlig betyr
+noe annet.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ordene “begrep” og “term” skal ikke brukes om hverandre. Derfor er
+<em>begrep</em> en frarådet term for begrepet ‘term’, og <em>term</em> en frarådet
+term for begrepet ‘begrep’.</p>
+</li>
+<li>
+<p><em>Biltilsyn</em> er en foreldet term (den anbefalte termen nå er
+<em>trafikkstasjon</em>), og kan med fordel føres opp som en frarådet term.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_4_datastrukturterm"><a class="anchor" href="#_5_4_datastrukturterm"></a>5.4. Datastrukturterm</h3>
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Benyttes for å oppgi navn som brukes i tekniske sammenhenger til eks.
+XSDer og kode, der denne avviker fra anbefalt term</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Datastrukturterm som man vet ofte brukes eller skal kunne brukes i
+kommunikasjonen, bør føres opp.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>assosiativRelasjon, generiskRelasjon, partitivRelasjon</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="definisjon"><a class="anchor" href="#definisjon"></a>6. Definisjon og Alternativ formulering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Fordi begreper er abstrakte, trenger vi definisjoner og termer for å
+uttrykke dem og kommunisere om dem. En definisjon er et muntlig eller
+skriftlig utsagn som beskriver meningsinnholdet og avgrenser et begrep
+fra et annet. Definisjonen av et begrep i et gitt fagområdet eller
+bruksområde skal si noe om kjennetegnene til begrepet.</p>
+</div>
+<div class="paragraph">
+<p>Definisjonen er med på å forklare begrepet og avgrense det mot andre,
+beslektede begreper. Relasjonen til andre begreper bidrar dermed til å
+definere omfanget til et bestemt begrep..</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Når man definerer begreper, skal man anvende kjennetegn som hver for seg
+eller sammen avgrenser begrepet og skiller det fra andre, beslektede
+begreper. Et tips er å la definisjonsteksten uttrykke det settet av
+kjennetegn som sier noe om hva fenomenet er, istedenfor å fokusere på
+hva det ikke er.</p>
+</div>
+<div class="paragraph">
+<p>En definisjon er oppbygd av et eller flere kjennetegn, fortrinnsvis satt
+sammen i én setning. Minst et av kjennetegnene bør være atskillende,
+dvs. det skiller begrepet fra andre, beslektede begreper. For eksempel
+inneholder definisjonen til ‘husdyr’ (se 2.2.) kjennetegnet ‘som blir
+halde for nytteformål’. Dette kjennetegnet gjør at begrepet skiller seg
+fra ‘kjæledyr’. I tillegg til dette atskillende kjennetegnet kan man
+legge til mer informasjon i såkalte supplerende kjennetegn. Slike
+supplerende kjennetegn gir ytterligere informasjon om begrepet.</p>
+</div>
+<div class="paragraph">
+<p>Et viktig prinsipp når man skriver en definisjon er
+utskiftingsprinsippet. Det innebærer at en term kan skiftes ut med
+definisjonen i en løpende tekst, med mindre justeringer. For å teste
+dette prinsippet kan man bytte ut termen og sette inn definisjonen.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.sprakradet.no/globalassets/vi-og-vart/publikasjoner/termlosen.pdf"><span class="underline">Termlosen</span></a>
+gir veiledning i skriving av definisjoner, bl.a. hvordan man bør tegne
+begrepssystem for å finne atskillende kjennetegn.</p>
+</div>
+<div class="paragraph">
+<p>Standarden krever at man til et gitt begrep kan oppgi maksimalt én (1)
+definisjon per språk. Alternative formuleringer brukes til å uttrykke
+definisjoner på ulike måter. Dersom de fleste begrepene i virksomheten
+har sitt opphav i regelverk eller fagtekster, kan alternative
+formuleringer typisk være “den folkelige forklaringen”, som kan benyttes
+ut til publikum og som er tilgjengelig for en større gruppe enn
+fagspesialister og jurister. Man kan også velge at den folkelige
+forklaringen er den “styrende/foretrukne” definisjonen, mens
+definisjonen som er hentet fra regelverket, blir merket/lagt inn som en
+alternativ formulering. Dette vil kunne variere ut fra virksomhetens
+forvaltningsområde og målgruppe. Betydningen i definisjonen og den
+alternative formuleringen skal alltid være den samme.</p>
+</div>
+<div class="paragraph">
+<p>Ulike virksomheter vil ha ulike behov når begrep skal defineres, også
+internt i virksomheten. Selv om offentlige virksomheter skal ha fokus på
+klarspråk, kan det i noen tilfeller være behov for å benytte en
+definisjon som ikke er i tråd med prinsippene for klarspråk. Et eksempel
+er begrep som kommer fra lovgivning. Her kan definisjonen være mest
+forståelig for rettsanvendere, og ikke like forståelig eller
+nødvendigvis intuitiv for allmennheten. Dette kan komme av at lovgiver
+har behov for å benytte avgrensninger innenfor en snevrere kontekst
+eller lovens/bestemmelsens virkeområde (f.eks. innsnevret tolkning av
+adopsjonsbegrepet i folketrygdloven), eller at definisjonene er skrevet
+på en annen tid (grunnloven, gammel straffelov, mv.). I de tilfeller
+hvor det finnes legaldefinisjoner eller andre typer definisjoner fra
+lovgivers side, bør virksomheten legge dette til grunn.</p>
+</div>
+<div class="paragraph">
+<p>Denne versjonen av standarden spesifiserer ikke hvordan man på en
+strukturert måte kan markere hva som er hhv. original eller oversettelse
+av en term eller en definisjon. Det anbefales å benytte fritekstfeltet
+“merknad” til dette formål.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler:</strong></p>
+</div>
+<div class="paragraph">
+<p>For begrepet ‘d-nummer’:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Definisjon: “identifikasjonsnummer som tildeles personer med midlertidig
+tilknytning til Norge, det vil si som ikke er bosatt i Norge.”</p>
+</li>
+<li>
+<p>Alternativ formulering som brukes i kommunikasjon med brukerne: “Et
+d-nummer er et midlertidig identifikasjonsnummer.”</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Både definisjonen og den alternative formuleringen inneholder det
+atskillende kjennetegnet ‘midlertidig’, som skiller begrepet fra det
+beslektede ‘fødselsnummer’.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_7_målgruppe"><a class="anchor" href="#_7_målgruppe"></a>7. Målgruppe</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt:</strong></p>
+</div>
+<div class="paragraph">
+<p>Visse virksomheter kan ha behov for å forklare begrepet på ulike måter
+avhengig av målgruppe. Eksempelvis kan en presis, teknisk definisjon
+være mest hensiktsmessig for fagfolk, mens begrepsbetydningen kan
+formuleres ved hjelp av et enklere og brukerorientert språk for
+allmennheten i en alternativ formulering.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling:</strong></p>
+</div>
+<div class="paragraph">
+<p>Virksomheter som ønsker å benytte seg av muligheten for differensierte
+definisjoner og alternative formuleringer, bør utarbeide interne
+retningslinjer for konsekvent bruk av de to målgruppene. Disse
+retningslinjene bør avklare hvilke brukergrupper som regnes som fagfolk
+på forvaltningsområdet og hvilke brukergrupper som regnes som
+representerer allmennheten, gjerne med eksempler.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="gyldighetsperiode"><a class="anchor" href="#gyldighetsperiode"></a>8. Gyldighetsperiode, dato sist oppdatert, erstatter og erstattes av</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Gyldighetsperiode brukes for å informere om hvilken tidsperiode en gitt
+begrepsbeskrivelse er gyldig for. At en begrepsbeskrivelse er gyldig,
+betyr at det er den gitte anbefalte termen og definisjonen som gjelder i
+(gyldighets)perioden. Dersom en har et begrep A som har én definisjon i
+perioden 2015–2016, og så justerer definisjonen i 2017, vil begrep A ha
+to gyldighetsperioder hvorav den siste er gjeldende. Dersom en i 2017
+skal arbeide med et datasett som dekker 2015, vil en bruke definisjonen
+som gjaldt for gyldighetsperioden 2015–2016.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Alle egenskaper ved en begrepsbeskrivelse kan endres. Endringene bør
+datostemples ved å bruke egenskapen dato sist oppdatert.</p>
+</div>
+<div class="paragraph">
+<p>Det er den som er faglig ansvarlig for et begrep, som bestemmer når det
+er nødvendig å definere en ny gyldighetsperiode eller når endringene er
+så store at man ikke vil lage en ny gyldighetsperiode for begrepet, men
+må etablere et nytt begrep.</p>
+</div>
+<div class="paragraph">
+<p>Det finnes ikke fasitsvar på hva som skal velges, men man bør vurdere
+blant annet følgende når man vurderer om det er behov for å opprette en
+ny gyldighetsperiode eller et nytt begrep:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Følgende endringer, alene, trenger som regel ikke å medføre oppretting
+av ny gyldighetsperiode:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>retting av skrivefeil eller mindre redaksjonelle justeringer i den
+anbefalte termen og/eller i definisjonen;</p>
+</li>
+<li>
+<p>endringer i andre egenskapene enn definisjon, anbefalt term og
+begrepsrelasjoner.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ved følgende endringer bør man vurdere å opprette en ny
+gyldighetsperiode, forutsatt at man fremdeles snakker om
+<span class="underline">samme begrep</span>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>en ny term blir valgt som den anbefalte term;</p>
+</li>
+<li>
+<p>større justeringer i definisjonen;</p>
+</li>
+<li>
+<p>endring av utvalgskriterier/beregningsmetoder/o.l.;</p>
+</li>
+<li>
+<p>endring i begrepsrelasjoner tilknyttet begrepet, spesielt generiske
+og/eller partitive begrepsrelasjoner, som ikke medfører at det egentlig
+er et annet begrep man snakker om.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ved følgende endringer bør man vurdere å opprette et nytt begrep:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>større endringer i definisjonen som gjør at man egentlig snakker om et
+annet begrep;</p>
+</li>
+<li>
+<p>endring i begrepsrelasjoner tilknyttet begrepet (se også forrige punkt),
+spesielt generiske og/eller partitive begrepsrelasjoner;</p>
+</li>
+<li>
+<p>større endringer i regimet for håndtering av data som begrepet
+representerer;</p>
+</li>
+<li>
+<p>større endringer i regelverket som regulerer anvendelsen av begrepet.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Når man vurderer at endringene er så store at man snakker om et annet
+begrep, skal det opprettes et nytt begrep som dermed får sin egen unike
+identifikator (URI). Relasjonene <em>erstatter</em> og <em>erstattes av</em> kan
+brukes til å relatere det nye til det gamle begrepet. Relasjonene
+<em>erstatter</em> og <em>erstattes av</em> skal ikke brukes mellom gyldighetsperioder
+for samme begrep.</p>
+</div>
+<div class="paragraph">
+<p>Begrepsbeskrivelser som ennå ikke skal tre i kraft, bør tydeliggjøres
+ved å bruke gyldighetsperiode som er frem i tid.</p>
+</div>
+<div class="paragraph">
+<p>Dersom et begrep har et tilknyttet omfang (se
+<a href="#omfang">forklaring på omfang</a>), er det
+viktig at gyldighetsperioden for ‘omfang’ ivaretas der ‘omfang’
+forvaltes (f.eks. der URIen skal peke på). Gyldighetsperioden for et
+begrep endrer seg vanligvis ikke selv om gyldighetsperioden for ‘omfang’
+endrer seg. Et eksempel er begrepet ‘sivilstand’ som per definisjon er
+“en persons stilling i forhold til ekteskapslovgivningen”. Verken term
+eller definisjon har endret seg på dette begrepet, men omfang har to
+ulike gyldighetsperioder: en som varte frem til 1993, og en ny f.o.m.
+1993 da partnerskap ble inkludert i omfang.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempel 1</strong>: Det ble opprettet en ny gyldighetsperiode for begrepet
+‘landbakgrunn’ da definisjonen ble justert i 2003.</p>
+</div>
+<div class="paragraph">
+<p>Fra 1994 til 2003 var ‘landbakgrunn’ definert som “For personer født i
+utlandet, er dette (med noen få unntak) eget fødeland. For personer født
+i Norge er det foreldrenes fødeland. I de tilfeller der foreldrene har
+ulikt fødeland, er det morens fødeland som blir valgt.”</p>
+</div>
+<div class="paragraph">
+<p>I 2003 ble definisjonen justert til: “For personer født i utlandet, er
+dette (med noen få unntak) eget fødeland. For personer født i Norge er
+det foreldrenes fødeland. I de tilfeller der foreldrene har ulikt
+fødeland, er det morens fødeland som blir valgt. Hvis ikke personen selv
+eller noen av foreldrene er utenlandsfødt, hentes landbakgrunn fra de
+første utenlandsfødte en treffer på i rekkefølgen mormor, morfar, farmor
+eller farfar.”</p>
+</div>
+<div class="paragraph">
+<p>Fagansvarlig anså at denne justeringen av definisjon ikke var stor nok
+til å etablere et nytt begrep, det var kun presiseringen som endret seg,
+ikke det semantiske innholdet som sådan.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempel 2</strong>: I forbindelse med ny skatteforvaltningslov innførte
+lovgiver et begrep ‘skattemelding for formues- og inntektsskatt’, som i
+stor grad dekker innholdet i begrepet ‘selvangivelse’ som var det
+gjeldende frem til da. Men i og med at innføringen av ny
+skatteforvaltningslov også medførte innføring av prinsippet for
+egenfastsetting som hovedprinsipp (i motsetning til før, da
+myndighetsfastsetting var hovedprinsippet) samt endrede regimer for
+klageadgang og tilhørende praktiske rutiner, valgte Skatteetaten da å
+anse ‘skattemelding for formues- og inntektsskatt’ som et helt nytt
+begrep og ikke som en ny gyldighetsperiode for det gamle begrepet
+‘selvangivelse’, selv om begrepsomfanget i stor grad var det samme.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_9_relasjoner_mellom_begreper"><a class="anchor" href="#_9_relasjoner_mellom_begreper"></a>9. Relasjoner mellom begreper</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Relasjoner brukes for å vise relevante sammenhenger mellom begreper. I
+standarden bruker vi tre ulike typer begrepsrelasjoner: generiske,
+partitive og assosiative, de samme som i
+<em>Termlosen</em><sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
+Se
+<em><a href="https://www.sprakradet.no/globalassets/vi-og-vart/publikasjoner/termlosen.pdf"><span class="underline">Termlosen</span></a></em>
+for forklaring på disse relasjonstypene.</p>
+</div>
+<div class="paragraph">
+<p>Standarden sier at den assosiative begrepsrelasjonen skal presiseres i
+en tekst, og man kan oppgi inndelingskriterium for en generisk eller
+partitiv relasjon.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Det er opp til fagansvarlig å vurdere om det vil være nyttig for
+brukerne å kjenne til relasjonene (dersom disse finnes) mellom et gitt
+begrep og andre begreper. Hvis en benytter assosiativ begrepsrelasjon,
+skal en alltid forklare i en tekst hva denne relasjonen går ut på.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Generisk begrepsrelasjon</strong>: ‘bartre’ - ‘gran’ (‘gran’ er en
+spesifisering/underbegrep av ‘bartre’ - har alle egenskapene til bartre,
+pluss noen i tillegg); innenfor fagområdet ‘Inntekts- og formuesskatt’
+er ‘lønn’, ‘honorar’, ‘feriepenger’ alle spesialiseringer/underbegreper
+av det mere generiske begrepet ‘arbeidsinntekt’.</p>
+</li>
+<li>
+<p><strong>Partitiv begrepsrelasjon</strong>: En ‘studiesøknad’ (helheten) kan f.eks. ha
+delene ‘studieønske’ og ‘vitnemål’.</p>
+</li>
+<li>
+<p><strong>Assosiativ begrepsrelasjon</strong>: brann–røykutvikling (årsak–virkning).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_10_fagområde_og_bruksområde"><a class="anchor" href="#_10_fagområde_og_bruksområde"></a>10. Fagområde og bruksområde</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Standarden går ut ifra at et begrep har sitt opphav i ett gitt
+fagområde, men kan brukes i mange forskjellige sammenhenger. Det vil da
+være det respektive fagområdet, mer presist representanter for dette
+fagområdet, som vil ha definisjonsmakten over hvordan begrepet navngis,
+defineres og beskrives. Derimot kan i prinsipp “hvem som helst” bruke
+begrepet i sine respektive bruksområder, det være seg systemer,
+dokumenter, brukergrensesnitt, lovtekster osv.</p>
+</div>
+<div class="paragraph">
+<p>For å muliggjøre denne nyanseringen mellom opphav vs. bruksområder for
+et begrep, gir standarden mulighet til å beskrive ‘fagområde’ der man
+spesifiserer hvilket fag eller domene et begrep tilhører, og
+‘bruksområde’ der man kan oppgi hvor begrepet brukes.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Både fagområde og bruksområde er valgfrie felter. Arbeidsgruppen
+anbefaler likevel at man alltid spesifiserer fagområde, fordi dette gir
+en klar og konkret kontekst for begrepet som gjør det umiddelbart
+enklere for brukerne å få en første idé om hva begrepet kan handle om.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Begrepet ‘helsetilstand’:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>fagområde = helse</p>
+</li>
+<li>
+<p>bruksområder (hos NAV) = hjelpemidler, trygdeytelser,
+arbeidsmarkedstiltak</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="omfang"><a class="anchor" href="#omfang"></a>11. Omfang og eksempel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>I noen tilfeller ønsker den ansvarlige virksomhet for et gitt begrep å
+regulere bruken av begrepet ved å oppgi verdiene begrepet kan anta.
+Dette er det lagt til rette for i standarden, ved at man kan knytte
+omfang (verdiområde) til et begrep. Eksempler på omfang kan være lovlige
+kodeverdier fra et kodeverk eller øvre og/eller nedre grense, f.eks.
+alle positive tall.</p>
+</div>
+<div class="paragraph">
+<p>Standarden legger også til rette for å kunne oppgi eksempler på et gitt
+begrep. Det kan benyttes til å nevne eksempler fra ‘omfang’, f.eks.
+Halden og Moss som eksempler fra listen over alle norske kommuner. Det
+kan også benyttes til å nevne eksempler på et begrep som ikke har et
+omfang, f.eks. “organisasjonsnummer”</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Hva som er tillatte verdier for et datafelt kan gi nyttig informasjon
+for brukeren. Det anbefales derfor å oppgi omfang for et begrep når det
+finnes. Dersom omfanget beskrives ved et kodeverk, vil det oftest være
+mest hensiktsmessig å sette inn ei lenke til kodeverket, og ikke ta det
+med i selve begrepsbeskrivelsen.</p>
+</div>
+<div class="paragraph">
+<p>Det anbefaler ikke å ta med eksempler i selve definisjonen, men i
+eksempel.</p>
+</div>
+<div class="paragraph">
+<p>Se også under "<a href="#gyldighetsperiode">gyldighetsperiode m.m.</a>"
+for anbefalinger ang. gyldighetsperiode for beskrivelse av et begrep og
+gyldighetsperiode for omfang tilknyttet begrepet, f.eks.
+gyldighetsperiode for definisjonen av begrepet ‘kommune’ versus
+gyldighetsperiode for omfanget, dvs. lista over alle kommuner. Siden
+kommunene endrer seg over tid, vil denne lista ha ulike
+gyldighetsperioder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Standard for sivilstand</em>
+(<a href="https://www.ssb.no/klass/klassifikasjoner/19">https://www.ssb.no/klass/klassifikasjoner/19</a>)
+oppgis som omfang for begrepet ‘sivilstand’.</p>
+</li>
+<li>
+<p>Listen over alle norske kommuner kan oppgis som omfang til begrepet
+‘kommune’.</p>
+</li>
+<li>
+<p>For begrepet “organisasjonsnummer” kan en bruke eksemplene 974 761 076
+(Skatteetaten) og 971 526 920 (Statistisk sentralbyrå)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_12_ansvarlig_virksomhet_og_kontaktpunkt"><a class="anchor" href="#_12_ansvarlig_virksomhet_og_kontaktpunkt"></a>12. Ansvarlig virksomhet og kontaktpunkt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Standarden har som mål å understøtte deling av begrepsbeskrivelser
+mellom offentlige virksomheter, og dermed økt gjenbruk av hverandres
+begrepsbeskrivelser. Det er derfor viktig å oppgi hvilken virksomhet som
+er eller har vært ansvarlig for en gitt begrepsbeskrivelse. Standarden
+krever derfor at det alltid skal oppgis virksomheten som er ansvarlig
+for beskrivelse av ethvert begrep. I tillegg legger standarden til rette
+for å kunne oppgi kontaktpunkt, som kan bistå f.eks. ved spørsmål
+vedrørende forståelse eller bruk av begrepet.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Det er den virksomhet som er ansvarlig for å beskrive et gitt begrep,
+som skal oppgis. Standarden krever også at virksomhetens
+organisasjonsnummer skal brukes, hvilket betyr at ikke alle
+organisatoriske underenheter kan oppgis som den ansvarlige. Kontaktpunkt
+kan ved behov brukes til å oppgi en organisatorisk underenhet. Det
+frarådes å bruke kontaktpunkter ned til enkeltpersoner i en virksomhet.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ansvarlig virksomhet: 974 760 673 (Brønnøysundregistrene)</p>
+</li>
+<li>
+<p>Kontaktpunkt: Enhets-, Foretaks-, Frivillighets-, og Regnskapsregisteret
+ved Brønnøysundregistrene</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_13_begrepssamling"><a class="anchor" href="#_13_begrepssamling"></a>13. Begrepssamling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hensikt</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Det kan av ulike grunner være behov for å samle sammen begreper,
+eksempelvis begreper som tilhører et gitt fagområde, begreper som
+beskriver de ulike delene av et bestemt datasett, begreper som beskriver
+en gitt digital tjeneste, eller begreper som tilhører et gitt
+bruksområde.</p>
+</div>
+<div class="paragraph">
+<p>Standarden legger til rette for å samle sammen begreper til en
+begrepssamling. Det er ikke stilt krav til at ethvert begrep må tilhøre
+minst en begrepssamling. Et begrep kan inngå i ingen, en eller flere
+begrepssamlinger.</p>
+</div>
+<div class="paragraph">
+<p><strong>Anbefaling</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Bruk gruppering som er hensiktsmessig for din virksomhet. Standarden
+spesifiserer ikke krav til eller kriterier for hva som er hensiktsmessig
+gruppering.</p>
+</div>
+<div class="paragraph">
+<p><strong>Eksempler</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://begrep.difi.no/SikkerDigitalPost/begrep/">https://begrep.difi.no/SikkerDigitalPost/begrep/</a>
+er en samling av begreper som er relevante for tjenesten sikker digital
+post.</p>
+</li>
+<li>
+<p><a href="http://www.ssb.no/nasjonalregnskap-og-konjunkturer/begreper-i-nasjonalregnskapet">http://www.ssb.no/nasjonalregnskap-og-konjunkturer/begreper-i-nasjonalregnskapet</a>
+er en samling av begreper i nasjonalregnskapet.</p>
+</li>
+</ul>
+</div>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-12685001-17', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="http://www.sprakradet.no/globalassets/vi-og-vart/publikasjoner/termlosen.pdf"><span class="underline">http://www.sprakradet.no/globalassets/vi-og-vart/publikasjoner/termlosen.pdf</span></a>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

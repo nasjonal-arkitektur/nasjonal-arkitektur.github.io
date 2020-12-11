@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Om verktøy og teknologier i plattformen :: Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</title>
+    <link rel="canonical" href="https://digdir.gitlab.io/site/architecture-repository/tools-guide/module-tools-guide.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://digdir.gitlab.io/site">Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Valg</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Rolle</a>
+            <a class="navbar-item" href="#">Preferanser</a>
+            <a class="navbar-item" href="#">Språk</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Ressurser</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Verktøy</a>
+            <a class="navbar-item" href="#">Kunnskapsbibliotek</a>
+          </div>
+        </div>	
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Hjelp</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Om NEAR-NO</a>
+            <a class="navbar-item" href="#">FAQ</a>
+          </div>
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="architecture-repository" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Nasjonalt arkitekturverksted</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Praktiske tips om bruk av arkitekturverkstedet</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reading-guide/module-reading-guide.html">Leseveiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Praktiske tips om bruk av git-verktøy</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora/module-antora.html">Praktiske tips om innholdsproduksjon og publisering med Antora og Asciidoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om arkitekturmodellering og samarbeid i Archi</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om utveksling av arkitekturmodeller</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Hvordan gi kommentarer og få svar på spørsmål</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Temaområder</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Om temaområder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Datadeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Om temaområdet <em>datadeling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing-value-streams.html">Referansemodeller for datadeling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-data-exchange/about-data-exchange.html">Datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../about-data-exchange/about-data-exchange.html">Om temaområdet <em>datautveksling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-data-exchange/about-data-exchange-reference-architecture.html">Referansearkitektur for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-roles/data-exchange-roles.html">Roller involvert i datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basismønstre for datautveksling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html">Forsendelse (one way push)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html">Generisk forsendelse</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../4-corner-model/4-hjørnersmodellen.html">4-hjørners-modellen</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../eMelding/book-ra-emelding.html">eMelding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../generic-request-reply/generic-request-reply.html">Forespørsel-svar</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../generic-request-reply/generic-request-reply.html">Generisk forespørsel-svar</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../eOppslag-conceptual/eOppslag-conceptual.html">eOppslag konseptuelt arkitekturmønster</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../eOppslag-solution-no/eOppslag-solution-no.html">eOppslag løsningsmønster med norske fellesløsninger</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../publish-subscribe/about-publish-subscribe.html">Publisering</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../event-streaming/about-event-streaming.html">Publisering og konsumering av hendelsesstrømmer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="8">
+    <a class="nav-link" href="../event-streaming/use-cases-for-event-streaming.html">Brukstilfeller for publisering av hendelsestrømmer</a>
+  </li>
+  <li class="nav-item" data-depth="8">
+    <a class="nav-link" href="../event-streaming/event-streaming-concepts.html">Konsepter for publisering av hendelsestrømmer</a>
+  </li>
+  <li class="nav-item" data-depth="8">
+    <a class="nav-link" href="../event-streaming/eNotifikasjon.html">eNotifikasjon</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Løsningsbyggeklosser for bruk og gjenbruk</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Fellesløsninger</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Tekniske tjenester og API-er</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sluttbrukertjenester</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">Føringer og standarder</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Styring og organisering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Initiativer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../proposed-reference-architectures/proposed-reference-architecture-work.html">Innspill til prioritering av videre arbeid med referansearkitekturer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/følgebrev.html">Følgebrev</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/situasjonsrapport.html">Situasjonsrapport</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/strukturering-av-spørreskjema.html">Strukturering av spørreskjema</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/forklaringer-til-spørsmålene.html">Forklaringer til spørsmålene</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../methods/methods.html">Metodikk for utvikling av nasjonal arkitektur</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../methods/reference-architecture-methods.html">Metodikk for utvikling av referansearkitekturer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../drafts/index.html">Utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Nasjonalt arkitekturverksted</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../drafts/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
+    <li><a href="module-tools-guide.html">Om verktøy og teknologier i plattformen</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/platform-components/platform/edit/master/docs/guides/modules/tools-guide/pages/module-tools-guide.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Om verktøy og teknologier i plattformen</h1>
+<div class="paragraph">
+<p><span class="image"><img src="../common/_images/under-construction.png" alt="under construction" width="45"></span>I arbeid</p>
+</div>
+<div class="paragraph lead">
+<p><strong>Plattformen for Nasjonalt arkitekturverksted utgjøres av verktøy for samarbeid, innholdsproduksjon og publisering, hovedsakelig basert på åpen kildekode og gratiskomponenter</strong>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+Her gis kort Se under <mark>praktiske tips</mark> for
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Følgende teknologier og verktøy er essensielle deler av plattformen;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lagring, versjonstyring: Git:</p>
+</li>
+<li>
+<p>Modelleringsverktøy:</p>
+</li>
+<li>
+<p>Publiseringsløsning</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Se også:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Praktiske tips for å komme i gang med innholdsproduksjon</p>
+</li>
+<li>
+<p>Mer detaljerte beskrivelser av komponentene i plattformen</p>
+</li>
+</ol>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
