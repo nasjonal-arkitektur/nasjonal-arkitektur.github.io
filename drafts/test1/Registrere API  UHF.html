@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Registrere API  UHF :: Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</title>
+    <link rel="canonical" href="https://digdir.gitlab.io/site/drafts/test1/Registrere%20API%20%20UHF.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://digdir.gitlab.io/site">Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Valg</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Rolle</a>
+            <a class="navbar-item" href="#">Preferanser</a>
+            <a class="navbar-item" href="#">Språk</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Ressurser</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Verktøy</a>
+            <a class="navbar-item" href="#">Kunnskapsbibliotek</a>
+          </div>
+        </div>	
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Hjelp</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Om NEAR-NO</a>
+            <a class="navbar-item" href="#">FAQ</a>
+          </div>
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drafts" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Utkast og innspill</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about-drafts.html">Om utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Innspill til referansearkitekturer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-integrated-processes/ra-integrated-processes-proposal.html">Referansearkitektur for samhandlingsprosesser (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-iam/ra-iam-proposal.html">Referansearkitektur for informasjonssikkerhet, tillit og personvern (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Målbilde for nasjonal samhandlingsinfrastruktur (forslag)</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for tillitstjenester</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for datadeling</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for samhandlingsprosesser</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for integrasjon med EU-s Single Digital Gateway</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for IOT</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for API management</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for fagsystemer</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for saksbehandling i kommuner</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">UNIT-test</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Informasjonsforvaltningsdomener.html">Informasjonsforvaltningsdomener</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Applikasjonsoversikt%20forsepørsel%20integrert%20med%20IAM.html">Applikasjonsoversikt forsepørsel integrert med IAM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Applikasjonsoversikt%20forsepørsel%20integrert%20nasjonalt.html">Applikasjonsoversikt forsepørsel integrert nasjonalt</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Applikasjonsoversikt%20forsepørsel.html">Applikasjonsoversikt forsepørsel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Avgi%20data%20-%20løsningsmønster%20UHF.html">Avgi data - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Dataobjekter%20eOppslag%20-%20med%20metadata%20UHF.html">Dataobjekter eOppslag - med metadata UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Dataobjekter%20eOppslag%20UHF.html">Dataobjekter eOppslag UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Delegere%20rettigheter%20til%20databehandler%20-%20løsningsmønster%20UHF.html">Delegere rettigheter til databehandler - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.html">Få tilgang til data - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Innhente%20data%20-%20løsningsmønster%20UHF.html">Innhente data - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="Registrere%20API%20%20UHF.html">Registrere API  UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Tilgjengeliggjøre%20data%20etter%20forspørsel%20løsningsmønster%20UHF.html">Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture-repository/index.html">Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Utkast og innspill</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../architecture-repository/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../architecture-repository/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Utkast og innspill</a></li>
+    <li>UNIT-test</li>
+    <li><a href="Registrere%20API%20%20UHF.html">Registrere API  UHF</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/gitlab/digdir/components/drafts/unit/modules/test1/pages/Registrere%20API%20%20UHF.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Registrere API  UHF</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_generelt">1. Generelt</a></li>
+<li><a href="#_oauth_scopes">2. OAUTH scopes</a></li>
+<li><a href="#_token_egenskaper">3. Token-egenskaper</a></li>
+<li><a href="#_datatilbyder">4. Datatilbyder</a></li>
+<li><a href="#_maskinporten">5. Maskinporten</a></li>
+<li><a href="#_registrere_api_i_uhf_sektoren">6. Registrere API i UHF sektoren</a></li>
+<li><a href="#_api_beskrivelse">7. API Beskrivelse</a></li>
+<li><a href="#_uhf_definer_rettighetter_knyttet_til_apier">8. UHF definer rettighetter knyttet til APIer</a></li>
+<li><a href="#_tilgjengeliggjøre_api">9. Tilgjengeliggjøre API</a></li>
+<li><a href="#_registrere_api">10. Registrere API</a></li>
+<li><a href="#_felles_api_katalog">11. Felles API-katalog</a></li>
+<li><a href="#_uhf_api_manager">12. UHF API manager</a>
+<ul class="sectlevel2">
+<li><a href="#_uhf_api_katalog">12.1. UHF API katalog</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_generelt"><a class="anchor" href="#_generelt"></a>1. Generelt</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/Registrere%20API%20%20UHF.png" alt="Registrere API  UHF image">
+</div>
+<div class="title">Figure 1. Registrere API  UHF</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oauth_scopes"><a class="anchor" href="#_oauth_scopes"></a>2. OAUTH scopes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hvordan får Dataobjekt som som kan beskrives som en ressurs-definisjon, og et token er som regel knyttet til ett eller flere scopes. Scopes benyttes til å styre tilganger til API-er og operasjoner, samt eventuelt hva slags responser man får fra API-er.</p>
+</div>
+<div class="paragraph">
+<p>Fra eHelse: Regler for et API som beskriver hvilke tilganger en datakonsument (representert ved organisasjonsnummer) og deres klienter skal ha tilgang til (utstedt token for).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_token_egenskaper"><a class="anchor" href="#_token_egenskaper"></a>3. Token-egenskaper</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Egenskaper som f.eks. gyldighetstid ved tilgangstoken som er Maskinportens variant av sikkerhetsbillett.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_datatilbyder"><a class="anchor" href="#_datatilbyder"></a>4. Datatilbyder</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tilbyder av data til andre aktører.</p>
+</div>
+<div class="paragraph">
+<p>API Eiere  (kan eie Data som API gir tilgang til, eller system som tilbyr APIet)??</p>
+</div>
+<div class="paragraph">
+<p>Når virksomheten tilbyr åpne data, vil det være virksomheten som eier dataene. (men det bør vel definere et domen-eier innenfor virksomheten)</p>
+</div>
+<div class="paragraph">
+<p>Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_maskinporten"><a class="anchor" href="#_maskinporten"></a>5. Maskinporten</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
+</div>
+<div class="paragraph">
+<p>Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Maskinporten:
+<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_registrere_api_i_uhf_sektoren"><a class="anchor" href="#_registrere_api_i_uhf_sektoren"></a>6. Registrere API i UHF sektoren</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_api_beskrivelse"><a class="anchor" href="#_api_beskrivelse"></a>7. API Beskrivelse</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Open API spesifikasjon (har vi føringer på format her)?</p>
+</div>
+<div class="paragraph">
+<p>VI ønsker oss beskrivelse av datamodell og begreper som finnes i begrepskatalog og datamodell katalog (per default bruker vi det nasjonale, men kan hende vi må bruke noe for sektoren om ikke funksjonalitet er dekket</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uhf_definer_rettighetter_knyttet_til_apier"><a class="anchor" href="#_uhf_definer_rettighetter_knyttet_til_apier"></a>8. UHF definer rettighetter knyttet til APIer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>UHF sentralisert selvbetjeningstjeneste for administrasjon av integrasjoner og APIer.
+Tjeneste "administrasjonssentre" vil ha rettigheter til å registrere på vegne av andre f.eks. API-katalogen
+Definere hvilke scopes finnes koblet til et API</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tilgjengeliggjøre_api"><a class="anchor" href="#_tilgjengeliggjøre_api"></a>9. Tilgjengeliggjøre API</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_registrere_api"><a class="anchor" href="#_registrere_api"></a>10. Registrere API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Prosess med å registere API i relevante tjenester, api-katalog, Maskinporten, Kapabilitetsoversikt</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_felles_api_katalog"><a class="anchor" href="#_felles_api_katalog"></a>11. Felles API-katalog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uhf_api_manager"><a class="anchor" href="#_uhf_api_manager"></a>12. UHF API manager</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API. Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener. Ansvaret til API manager inkluderer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sentralisert API administrasjon og forvaltning av API-katalogen</p>
+</li>
+<li>
+<p>Håndtering av registrerings- og introduksjonsprosesser for API utviklere</p>
+</li>
+<li>
+<p>Håndtere livssyklusen til et API</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ivareta registrering, forvaltning og og utvikling av klientrettigheter</p>
+</div>
+<div class="paragraph">
+<p>Hva tilbyr API av datamodell
+Hvordan ønsker API å sikre seg selv
+En klient må forholde seg til</p>
+</div>
+<div class="sect2">
+<h3 id="_uhf_api_katalog"><a class="anchor" href="#_uhf_api_katalog"></a>12.1. UHF API katalog</h3>
+<div class="paragraph">
+<p>Registeret skal være mest mulig selvbetjent</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

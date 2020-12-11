@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</title>
+    <link rel="canonical" href="https://digdir.gitlab.io/site/architecture-repository/forvaltningsstandard-begrepsbeskrivelser/kap3-definisjoner.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://digdir.gitlab.io/site">Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Valg</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Rolle</a>
+            <a class="navbar-item" href="#">Preferanser</a>
+            <a class="navbar-item" href="#">Språk</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Ressurser</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Verktøy</a>
+            <a class="navbar-item" href="#">Kunnskapsbibliotek</a>
+          </div>
+        </div>	
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Hjelp</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Om NEAR-NO</a>
+            <a class="navbar-item" href="#">FAQ</a>
+          </div>
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="architecture-repository" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Nasjonalt arkitekturverksted</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Praktiske tips om bruk av arkitekturverkstedet</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reading-guide/module-reading-guide.html">Leseveiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Praktiske tips om bruk av git-verktøy</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora/module-antora.html">Praktiske tips om innholdsproduksjon og publisering med Antora og Asciidoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om arkitekturmodellering og samarbeid i Archi</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om utveksling av arkitekturmodeller</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Hvordan gi kommentarer og få svar på spørsmål</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Temaområder</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Om temaområder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Datadeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Om temaområdet <em>datadeling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing-value-streams.html">Referansemodeller for datadeling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-data-exchange/about-data-exchange.html">Datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../about-data-exchange/about-data-exchange.html">Om temaområdet <em>datautveksling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-data-exchange/about-data-exchange-reference-architecture.html">Referansearkitektur for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-roles/data-exchange-roles.html">Roller involvert i datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basismønstre for datautveksling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html">Forsendelse (one way push)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html">Generisk forsendelse</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../4-corner-model/4-hjørnersmodellen.html">4-hjørners-modellen</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../eMelding/book-ra-emelding.html">eMelding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../generic-request-reply/generic-request-reply.html">Forespørsel-svar</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../generic-request-reply/generic-request-reply.html">Generisk forespørsel-svar</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../eOppslag-conceptual/eOppslag-conceptual.html">eOppslag konseptuelt arkitekturmønster</a>
+  </li>
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../eOppslag-solution-no/eOppslag-solution-no.html">eOppslag løsningsmønster med norske fellesløsninger</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../publish-subscribe/about-publish-subscribe.html">Publisering</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../event-streaming/about-event-streaming.html">Publisering og konsumering av hendelsesstrømmer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="8">
+    <a class="nav-link" href="../event-streaming/use-cases-for-event-streaming.html">Brukstilfeller for publisering av hendelsestrømmer</a>
+  </li>
+  <li class="nav-item" data-depth="8">
+    <a class="nav-link" href="../event-streaming/event-streaming-concepts.html">Konsepter for publisering av hendelsestrømmer</a>
+  </li>
+  <li class="nav-item" data-depth="8">
+    <a class="nav-link" href="../event-streaming/eNotifikasjon.html">eNotifikasjon</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Løsningsbyggeklosser for bruk og gjenbruk</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Fellesløsninger</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Tekniske tjenester og API-er</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sluttbrukertjenester</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">Føringer og standarder</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Styring og organisering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Initiativer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../proposed-reference-architectures/proposed-reference-architecture-work.html">Innspill til prioritering av videre arbeid med referansearkitekturer</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/følgebrev.html">Følgebrev</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/situasjonsrapport.html">Situasjonsrapport</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/strukturering-av-spørreskjema.html">Strukturering av spørreskjema</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/forklaringer-til-spørsmålene.html">Forklaringer til spørsmålene</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../methods/methods.html">Metodikk for utvikling av nasjonal arkitektur</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../methods/reference-architecture-methods.html">Metodikk for utvikling av referansearkitekturer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../drafts/index.html">Utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Nasjonalt arkitekturverksted</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../drafts/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/standards/forvaltningsstandard-begrep/edit/master/docs/modules/forvaltningsstandard-begrepsbeskrivelser/pages/kap3-definisjoner.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<div class="sect1">
+<h2 id="_definisjon_av_de_mest_sentrale_begrepene_i_denne_standarden"><a class="anchor" href="#_definisjon_av_de_mest_sentrale_begrepene_i_denne_standarden"></a>Definisjon av de mest sentrale begrepene i denne standarden</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dette kapitlet inneholder definisjoner av de mest sentrale begrepene i standarden. Bortsett fra begrepet ‘alternativ formulering’ som det ikke finnes noen eksisterende internasjonale definisjoner av, er definisjonene av de andre begrepene hentet fra ISO-standarder via <a href="http://www.standard.no/termbasen/">termbasen SNORRE</a> hos Standard Norge.</p>
+</div>
+<div class="paragraph">
+<p>Definisjonene og termene i dette kapitlet er normative.</p>
+</div>
+<div class="paragraph">
+<p>Språk/målform er angitt i parentes. F.eks. betyr “term (nb)” at teksten “term” er på norsk bokmål. Følgende språkkoder er brukt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>nb: bokmål</p>
+</li>
+<li>
+<p>nn: nynorsk</p>
+</li>
+<li>
+<p>en: engelsk</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_term"><a class="anchor" href="#_term"></a>Term</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>term (nb); term (nn); term (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>begrep (nb); omgrep (nn); concept (en); konsept (nb); konsept (nn); concept (en)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>betegnelse for et allmennbegrep som tilhører et fagområde (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35329" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35329</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>En term er navnelappen til et begrep, altså det ordet eller den gruppen av ord vi bruker for å uttrykke et begrep. Definisjonen viser til allmennbegrep, f.eks. organisasjon, severdighet og produkt, for å ekskludere egennavn og individualbegreper, f.eks. Røde kors, Eiffeltårnet og Solidox. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="AnbefaltTerm"><a class="anchor" href="#AnbefaltTerm"></a>Anbefalt term</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>anbefalt term (nb); tilrådd term (nn); preferred term (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>term som blir sett på som den best egnede for et bestemt begrep (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35329" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35329</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>En anbefalt term er termen som bør brukes med mindre det foreligger spesielle grunner til å bruke en tillatt term. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="TillattTerm"><a class="anchor" href="#TillattTerm"></a>Tillatt term</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>tillatt term (nb); tillaten term (nn); admitted term (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>term som blir sett på som egnet for et bestemt begrep, og som blir brukt ved siden av en anbefalt term (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35355" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35355</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>En tillatt term kan brukes i stedet for den anbefalte termen hvis det foreligger spesielle grunner, f.eks. hvis målgruppen er allmennheten og ikke fagspesialister. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="FrarådetTerm"><a class="anchor" href="#FrarådetTerm"></a>Frarådet term</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>frarådet term (nb); frårådd term (nn); deprecated term (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>term som blir sett på som uegnet for et bestemt begrep (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36723" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36723</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>Når man refererer til et begrep bør man unngå å bruke en frarådet term (anbefalt term, ev. tillatt term, bør brukes). I beskrivelse av et begrep kan det derfor være hensiktsmessig å ta med termen(e) som er frarådet, når man vet at mange feilaktig bruker termen(e) om begrepet. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_begrep"><a class="anchor" href="#_begrep"></a>Begrep</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>begrep (nb); omgrep (nn); concept (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>term (nb); term (nn); term (en); konsept (nb); konsept (nn)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>kunnskapsenhet som er dannet gjennom en unik kombinasjon av kjennetegn (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36707" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36707</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>Et begrep er en mental forestilling om et fenomen. Begrepet blir kommunisert ved hjelp av en term og forklart ved hjelp av en definisjon. Definisjonen av ‘begrep’ er under diskusjon/revisjon i den internasjonale standardiseringskomiteen ISO/TC 37. Definisjonen i vår standard vil bli justert dersom den internasjonale definisjonen blir endret, slik at de samsvarer. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="definisjon"><a class="anchor" href="#definisjon"></a>Definisjon</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>definisjon (nb); definisjon (nn); definition (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>beskrivelse som avgrenser begrepet mot beslektede begreper (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36175" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36175</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>En definisjon er meningsinnholdet til et begrep. (nb) ISO 1087-1:2000(E) er i skrivende stund under revisjon. I ISO/DIS 1087:2018(E) som har vært til avstemning, står det følgende definisjon av ‘definition’: “representation of a concept [&#8230;&#8203;] by a substitutable expression that conveys its meaning and serves to differentiate it from related concepts”. Vi har foreslått overfor ISO å endre definisjonen til “representation of a concept [&#8230;&#8203;] <span class="line-through">by a substitutable expression</span> that conveys its meaning and serves to differentiate it from <span class="line-through">related</span> <span class="underline">other</span> concepts”, som uoffisielt kan oversettes til følgende på norsk bokmål: “beskrivelse av et begrep som forteller hva det betyr og som avgrenser det mot andre begreper”, som vi mener er en bedre definisjon. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="AlternativFormulering"><a class="anchor" href="#AlternativFormulering"></a>Alternativ formulering</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>alternativ formulering (nb); alternativ formulering (nn)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>omskriving av et begreps definisjon, uten at meningen endres (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>omskriving av et begreps definisjon, uten at meningen endres (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
