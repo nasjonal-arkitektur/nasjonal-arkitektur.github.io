@@ -1,1 +1,0 @@
-include::book-tog-soa-ra.adoc[]
