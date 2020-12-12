@@ -344,8 +344,1072 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Meldingsutveksling - forsendelse</h1>
+<div class="sect1">
+<h2 id="_generisk_forsendelse"><a class="anchor" href="#_generisk_forsendelse"></a><a class="link" href="#_generisk_forsendelse">1. Generisk forsendelse</a></h2>
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker</p>
+</div>
+<div class="sect2">
+<h3 id="_introduksjon"><a class="anchor" href="#_introduksjon"></a><a class="link" href="#_introduksjon">1.1. Introduksjon</a></h3>
 <div class="paragraph">
-<p>Hei!</p>
+<p><em>Generisk mønster for meldingsforsendelse til kjent mottaker</em> beskriver meldingsutveksling i form av enkeltvise meldinger fra en avsender til en kjent mottaker. De konseptuelle beskrivelsene som gis her danner grunnlag for beskrivelser av mer avanserte og spesialiserte mønstre; men kan også stå på egne ben, med egne løsningsmønstre.</p>
+</div>
+<div class="paragraph">
+<p>Beskrivelsene skiller mellom</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Det konseptuelle arkitekturmønsteret</p>
+</li>
+<li>
+<p>Praktisk anvendelser i form av løsningsmønstre med mer konkret veiledning, f.eks. til bruk av nasjonale fellesløsninger.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_brukstilfeller"><a class="anchor" href="#_brukstilfeller"></a><a class="link" href="#_brukstilfeller">1.2. Brukstilfeller</a></h3>
+<div class="paragraph">
+<p>Aktuelle brukstilfeller for <em>Generisk mønster for meldingsforsendelse til kjent mottaker</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>melding om hendelser og data mellom to kjente parter i tverrgående forretningsprosesser, f.eks. saksbehandlingsprosesser.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>melding om  hendelser og data til datalagringsløsninger</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grunnleggende_konsepter_og_forutsetninger"><a class="anchor" href="#_grunnleggende_konsepter_og_forutsetninger"></a><a class="link" href="#_grunnleggende_konsepter_og_forutsetninger">1.3. Grunnleggende konsepter og forutsetninger</a></h3>
+<div class="sect3">
+<h4 id="_logisk_og_fysisk_dataflyt"><a class="anchor" href="#_logisk_og_fysisk_dataflyt"></a><a class="link" href="#_logisk_og_fysisk_dataflyt">1.3.1. Logisk og fysisk dataflyt</a></h4>
+<div class="paragraph">
+<p>Følgende arkitekturtegning illustrerer helt grunnleggende konsepter.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Generisk%20meldingsforsendelse.png" alt="Generisk meldingsforsendelse image">
+</div>
+<div class="title">Figur 1. Generisk meldingsforsendelse</div>
+</div>
+<div class="paragraph">
+<p>Her skilles det mellom forretningsmessig informasjonsflyt mellom partene og den fysiske dataflyten mellom IT-løsningene på hver side.</p>
+</div>
+<div class="paragraph">
+<p>Det forutsettes altså at det finnes en kommunikasjonsinfrastruktur som det kan sendes meldinger over. I sin enkleste form er dette internett. Det kan også finnes krav til bestemte formater og protokoller i en mer spesialisert meldingsinfrastruktur.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+<em>Et eksempel på dette er beskrevet i referansearkitekturen for eMelding (og anvendelser som i  PEPPOL-infrastrukturen), der det stilles krav til støtte for en standardisert meldingsprotokoll på tvers av alle samhandlingsaktører innenfor et avtalefelleskap (i PEPPOL er det AS4).</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Selv om avsender kjenner mottaker på forhånd, kan det være aktuelt å slå opp detaljer om mottakers kommunikasjonsløsning i tilknytning til selve forsendelsen. Dette gjøres typisk gjennom run-time oppslagstjenester; her vist som en (konseptuell) tjeneste for <em>Kapabilitets-og adresseoppslag</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_aktører_og_roller"><a class="anchor" href="#_aktører_og_roller"></a><a class="link" href="#_aktører_og_roller">1.3.2. Aktører og roller</a></h4>
+<div class="paragraph">
+<p>Se under <a href="../nasjonal_arkitektur\nab_arkitekturlandskap_segmentarkitektur_datadeling_roller">rollebeskrivelser for området datadeling.</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_avtaleforvaltning"><a class="anchor" href="#_avtaleforvaltning"></a><a class="link" href="#_avtaleforvaltning">1.3.3. Avtaleforvaltning</a></h4>
+<div class="paragraph">
+<p>Det forutsettes at det finnes avtaler mellom avsender og mottaker som ivaretar hensyn til interoperabilitet og informasjonssikkerhet.</p>
+</div>
+<div class="paragraph">
+<p>Følgende figur illustrerer det generelle konseptet.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Generisk%20meldingsforsendelse%20inkl.%20avtaleforvaltning.png" alt="Generisk meldingsforsendelse inkl. avtaleforvaltning image">
+</div>
+<div class="title">Figur 2. Generisk meldingsforsendelse inkl. avtaleforvaltning</div>
+</div>
+<div class="paragraph">
+<p>Begrepene Avtaleforvalter og Samhandlingsavtale kan her forstås på ulike måter, avhengig av sammehengen (slik dette også framkommer av mer spesialiserte arkitekturmønstre).</p>
+</div>
+<div class="paragraph">
+<p>Følgende figur illustrerer dette.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Former%20for%20avtaleforvaltning.png" alt="Former for avtaleforvaltning image">
+</div>
+<div class="title">Figur 3. Former for avtaleforvaltning</div>
+</div>
+<div class="paragraph">
+<p>Avtaler kan altså gjøres på flere måter:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Bilateral avtale, der avtalen registreres direkte hos hver av partene.</p>
+</li>
+<li>
+<p>Bilateral avtale, der avtalen registreres hos tiltrodd tredjepart (avtaleforvalter).</p>
+</li>
+<li>
+<p>Avtalefellesskap, der avtalen registreres hos tiltrodd tredjepart (avtaleforvalter/fellesskapsforvalter) og der andre aktører eventuelt kan registrere tilsvarende kapabiliteter for sending og mottak.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+<em>De konseptuelle beskrivelsene tar høyde for at det kan finnes et avtalefellesskap, men dette er ikke en forutsetning for dette, generiske, arkitekturmønsteret.</em>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_samhandlingsspesifikasjoner"><a class="anchor" href="#_samhandlingsspesifikasjoner"></a><a class="link" href="#_samhandlingsspesifikasjoner">1.3.4. Samhandlingsspesifikasjoner</a></h4>
+<div class="paragraph">
+<p>Samhandlingsspesifikasjoner ligger til grunn for samhandlingsavtaler (se foregående avsnitt). For <em>_Generisk mønster for meldingsforsendelse til kjent mottaker</em>  omfatter dette:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tekniske spesifikasjoner: Muliggjør datautveksling mellom systemer. Omfatter transportprotokoller,  meldingsformater, teknisk feilhåndtering, eventuell orkestreringsløsninger, m.m..</p>
+</li>
+<li>
+<p>Semantisk spesifikasjoner: Muliggjør utveksling av meningsfull informasjon. Omfatter metadata og datamodeller for aktuelle meldingsformater.</p>
+</li>
+<li>
+<p>Organisatorisk: Muliggjør forretningsprosesser på tvers av organsiasjonsenheter og systemer. Omfatter spesifikasjon av meldingsflyt på tvers av delproseser eller prosessteg (koreografi).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I dette (generiske) arkitekturmønsteret, gjøres et minimum av  konkrete spesifikasjoner.</p>
+</div>
+<div class="paragraph">
+<p>Følgende presiseres spesielt:</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+Dersom det skal utveksles meldinger i noen form for sammenhengende prosess, kreves en løsning for korrelering av meldinger. Det forutsettes her at det avtales en meldingsprotokoll på applikasjonslaget for dette med en parameter kalt "ConversationId" eller tilsvarende.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kapabilitetskart_relevante_kapabiliteter"><a class="anchor" href="#_kapabilitetskart_relevante_kapabiliteter"></a><a class="link" href="#_kapabilitetskart_relevante_kapabiliteter">1.4. Kapabilitetskart - relevante kapabiliteter</a></h3>
+<div class="paragraph">
+<p>Modellen under viser hovedinndelingen i kapabiliteter for meldingsforsendelse mellom  en avsender og en mottaker.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Kapabiliteter%20-%20meldingsforsendelse.png" alt="Kapabiliteter - meldingsforsendelse image">
+</div>
+<div class="title">Figur 4. Kapabiliteter - meldingsforsendelse</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 1. Elementer i view, Kapabiliteter for generisk meldingsforsendelse</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avsender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som sender en elektronisk melding eller tilsvarende.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottaker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som mottar en elektronisk melding eller tilsvarende.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klargjøre for deling av data ved forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evne til å klargjøre for meldingsutveksling med eksterne parter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sende data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å sende data til en mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å motta en en forsendelse fra en avsender.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Realiseringen av disse kapabilitetene er beskrevet i det følgende; først konseptuelt, så med løsningsspefikke eksempler eller anbefalinger.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konseptuelle_beskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_beskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_beskrivelser_arkitekturbyggeklosser">1.5. Konseptuelle beskrivelser (arkitekturbyggeklosser)</a></h3>
+<div class="sect3">
+<h4 id="_klargjøring_for_meldingsforsendelse"><a class="anchor" href="#_klargjøring_for_meldingsforsendelse"></a><a class="link" href="#_klargjøring_for_meldingsforsendelse">1.5.1. Klargjøring for meldingsforsendelse</a></h4>
+<div class="paragraph">
+<p>Modellen under detaljerer hvordan en samhandlingsaktør, som i dette tilfellet normalt vil være en avsender eller mottaker, blir klar for å sende data som en melding. Dette gjøres ved å inngå nødvendige avtaler for meldngsforsendelse og registrere nødvendige data i registre som er tilgjengelig for de andre samhandlingsaktørene i fellesskapet. Det vil kunne være forskjeller på hva som er nødvendig å gjøre avhengig av om samhandlingsaktøren er en avsender eller mottaker, men normalt vil man inneha begge roller i fellesskapet.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Klargjør%20for%20melding%20(arkitekturmønster).png" alt="Klargjør for eMelding (arkitekturmønster) image">
+</div>
+<div class="title">Figur 5. Klargjør for melding (arkitekturmønster)</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figur:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 2. Elementer i view for Klargjør for melding (arkitekturmønster)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samhandlingsaktør</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samlebetegnelse på roller som inngår i en samhandlingsprosess og samhandler med en annen samhandlingsaktør. Kan være en tilbyder, konsument, avsender, mottaker, leverandør etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klargjøre for deling av data ved forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evne til å klargjøre for meldingsutveksling med eksterne parter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interoperability specification</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spesifikasjoner for hvordan man samhandler i et fellesskap. Dette kan være meldingsformater, krav til tekniske komponenter etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samhandlingsavtale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avtale som regulerer forhold tilknyttet samhandlingen mellom to parter, eller deltakerne ie et fellesskap for meldingsutveksling.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kapabilitetsbeskrivelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strukturert beskrivelse av evner og kapabiliteter relevante for samhandling i fellesskapet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottakeradresse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Teknisk adresse for hvor meldinger skal sendes. Dette kan være adressen til mottaker direkte eller mottakers integrasjonspunkt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottakersertifikat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offentlig nøkkel benyttes for kryptering og validering av signatur.</p>
+<p class="tableblock">Privat nøkkel benyttes til dekryptering og signering av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avsendersertifikat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offentlig nøkkel benyttes for kryptering og validering av signatur.</p>
+<p class="tableblock">Privat nøkkel benyttes til dekryptering og signering av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klargjør for melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å klargjøre for melding ved å  inngå nødvendige avtaler og tilgjengeliggjøre nødvendig informasjon til andre samhandlingsaktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler for meldingsforsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å inngå bilaterale avtaler med sammhandlingsparter eller innmelding i et fellesskap. F.eks. gjennom å akseptere spesifikke avtaler, vilkår eller kontrakter og innrette seg etter reglene og forpliktelsene som gjelder i et fellesskap (community), eller det som er avtalt mellom samhanslingsaktørene.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer kapabiliteter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registering av kapabiliteter vil si å tilgjengeligjøre for avsendere og konsumenter hvilke meldinger og formater man kan motta og hvilke ressurser og tjenester man tilbyr.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer adresser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Med adresse menes nødvendig informasjon for å få tilgang til tjenester fra tilbyder eller for å sende melding til mottaker av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer sertifikater</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre for samhandlende parter sertifikater for bruk ved forsendelser. Dette kan være generelle eller domenespesifikke sertifikater. Eventuelt spesifikt for enkelet forretningsområder.</p>
+<p class="tableblock">Sertifikater må forvaltes og fornyes etter gjeldende regler for å være gyldige og egnet for bruk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kapabilitetsregistrering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere kapabiliteter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresseregistrering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere adresse for å sende melding til mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sertifikatregisterering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere serifikater i felles katalogtjeneste.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_operativ_meldingsforsendelse"><a class="anchor" href="#_operativ_meldingsforsendelse"></a><a class="link" href="#_operativ_meldingsforsendelse">1.5.2. Operativ meldingsforsendelse</a></h4>
+<div class="sect4">
+<h5 id="_send_melding"><a class="anchor" href="#_send_melding"></a><a class="link" href="#_send_melding">Send melding</a></h5>
+<div class="paragraph">
+<p>Her beskrives en referansemodell for operativ meldingsforsendelse. Merk: Enkelte prosess-steg kan være uaktuelle, avhengig av dataene som utveksles og spesifikasjonene for samhandling innen et eventuelt <em>avtalefellesskap</em>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Send%20melding%20(arkitekturmønster).png" alt="Send melding (arkitekturmønster) image">
+</div>
+<div class="title">Figur 6. Send melding (arkitekturmønster)</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figur:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 3. Elementer i view for Send melding (arkitekturmønster)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avsender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som sender et brev, en pakke, en e-post, en elektronisk melding, en SMS eller lignende.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sende data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å sende data til en mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingsinnhold</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingsinnholdet eller informasjonen som skal sendes til ekstern part.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottakersertifikat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offentlig nøkkel benyttes for kryptering og validering av signatur.</p>
+<p class="tableblock">Privat nøkkel benyttes til dekryptering og signering av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottakeradresse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Teknsik adresse til hvor meldinger skal sendes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avsendersertifikat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offentlig nøkkel benyttes for kryptering og validering av signatur.</p>
+<p class="tableblock">Privat nøkkel benyttes til dekryptering og signering av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den pakken som sendes til mottaker. Inkluderer forretningsmelding, metadata, adresse etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å sende en eMelding til en mottaker ved hjelp av fellestjenester.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller mottakers kapabiliteter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å slå opp og kontrollere mottakers evner til samhandling innenfor fellesskapet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formater melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å tilpasse informasjonspakken til mottakers kapabiliteter og fellesskapets standarder.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Krypter melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å sikre forsendelsen. Inkluderer konfidensialitets- og integritetssikring der dette er nødvendig. Normalt gjøres dette ved hjelp av kryptografi og sertifikater.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresser forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å adressere forsendelsen. Dette kan være til mottaker direkte eller til dennes representant eller aksesspunkt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signer forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å signere meldingen som sendes til mottaker. Til dette benyttes eget sertifikats private nøkkel.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ekspeder melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å sende melding til mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kapabilitetsoppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å slå opp kapabilitetene til en samhandlingspart</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatransformasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for  transformere data og meldinger til andre formater.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sertifikatoppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å hente krypteringssertifkat til mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresseoppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å slå opp adressen til en mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signeringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å signere en elektronisk melding. For eMelding er det signatur i form av elektronisk segl som er mest relevant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sporingstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for sporing (audit) av meldinger.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_motta_melding"><a class="anchor" href="#_motta_melding"></a><a class="link" href="#_motta_melding">Motta melding</a></h5>
+<div class="paragraph">
+<p>Motta melding detaljerer prosessen med å motta en melding etter klargjøring for forsendelse. Alle stegene i prosessen vil ikke alltid være nødvendig avhengig av dataene som utveksles og spesifikasjonene for samhandling innen fellesskapet.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Motta%20melding%20(arkitekturmønster).png" alt="Motta melding (arkitekturmønster) image">
+</div>
+<div class="title">Figur 7. Motta melding (arkitekturmønster)</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figur:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 4. Elementer i view for Motta melding (arkitekturmønster)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottaker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som mottar en melding.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å motta, validere og kvittere for mottatte meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den pakken som sendes til mottaker. Inkluderer forretningsmelding, metadata, adresse etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avsendersertifikat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offentlig nøkkel benyttes for kryptering og validering av signatur.</p>
+<p class="tableblock">Privat nøkkel benyttes til dekryptering og signering av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottakersertifikat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offentlig nøkkel benyttes for kryptering og validering av signatur.</p>
+<p class="tableblock">Privat nøkkel benyttes til dekryptering og signering av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å motta melding. Består av flere delprosesser.</p>
+<p class="tableblock">Etter mottak må mottaker følge opp og håndtere innholdet i meldingen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å motta en melding fra avsender</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å kontrollere om forsendelsen er autentisk og fra en legitim avsender.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dekrypter melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å dekryptere mottatt melding.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valider forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å kontrollere om innholdet i en forsendelse er i henhold til avtale og avtalte formater.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sporingstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for sporing (audit) av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signaturvaliderings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å validere og verifisere elektronsike signaturer. I forbindelse med eMelding er det kontroll av elektronisk segl som er mest relevant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datavaliderings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å validere meldinger mot format og forventet innhold.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_praktiske_anvendelser_av_generisk_mønster_for_meldingsforsendelse_til_kjent_mottaker"><a class="anchor" href="#_praktiske_anvendelser_av_generisk_mønster_for_meldingsforsendelse_til_kjent_mottaker"></a><a class="link" href="#_praktiske_anvendelser_av_generisk_mønster_for_meldingsforsendelse_til_kjent_mottaker">1.6. Praktiske anvendelser av generisk mønster for  meldingsforsendelse til kjent mottaker</a></h3>
+<div class="sect3">
+<h4 id="_meldingsforsendelse_gjennom_peppol_edelivery"><a class="anchor" href="#_meldingsforsendelse_gjennom_peppol_edelivery"></a><a class="link" href="#_meldingsforsendelse_gjennom_peppol_edelivery">1.6.1. Meldingsforsendelse gjennom PEPPOL eDelivery</a></h4>
+<div class="paragraph">
+<p>Se under <a href="../eMelding/book-ra-emelding.html" class="page">eMelding</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_meldingsforsendelse_gjennom_eformidlings_løsningen"><a class="anchor" href="#_meldingsforsendelse_gjennom_eformidlings_løsningen"></a><a class="link" href="#_meldingsforsendelse_gjennom_eformidlings_løsningen">1.6.2. Meldingsforsendelse gjennom eFormidlings-løsningen</a></h4>
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_meldingsforsendelse_i_helsesektoren"><a class="anchor" href="#_meldingsforsendelse_i_helsesektoren"></a><a class="link" href="#_meldingsforsendelse_i_helsesektoren">1.6.3. Meldingsforsendelse i helsesektoren</a></h4>
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_hjørners_modellen"><a class="anchor" href="#_4_hjørners_modellen"></a><a class="link" href="#_4_hjørners_modellen">2. 4-hjørners-modellen</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">2.1. Generelt</a></h3>
+<div class="paragraph">
+<p>Begrepet "firehjørnersmodell", eller “4-corner model”, stammer fra  <a href="../kunnskap_referansearkitektur_eu-edelivery">CEF eDelivery</a>.</p>
+</div>
+<div class="paragraph">
+<p>Følgende figur illustrerer aktuelle konsepter:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Firehjørnersmodellen%20-%20forvaltningsmessig.png" alt="Firehjørnersmodellen - forvaltningsmessig image">
+</div>
+<div class="title">Figur 8. Firehjørnersmodellen - forvaltningsmessig</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsvarende løs kopling mellom avsender og mottaker. Den grunnleggende forskjellen er at dette mønsteret er fullstendig distribuert og skalerer "uendelig"  over www på global basis.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>I firehjørnersmodellen kommuniserer avsenders og mottakers systemer via hver sine <em>aksesspunktløsninger</em>. Aksesspunktene konverterer mellom applikasjonsspesifikke protokoller og en standardisert, sikker meldingsprotokoll over aktuell kommunikasosjonsinfrastruktur.</p>
+</div>
+<div class="paragraph">
+<p>Hvert aksesspunkt blir en node i et tillitsfelleskap.</p>
+</div>
+<div class="paragraph">
+<p>Aksesspunktene kan eventuelt integreres i avsenders og mottakers systemer. Om dette gjøres på begge sider, vil en rent fysisk ha en punkt-til-punkt forbindelse, men uten at det endrer konseptet som sådan.</p>
+</div>
+<div class="paragraph">
+<p>Nærmere om "hjørnene":</p>
+</div>
+<div class="paragraph">
+<p><strong>Hjørne 1</strong> representerer back-end systemet (som ligger innenfor avsenders juridiske ansvar) som sender melding til et annet back-end system (hjørne 4).</p>
+</div>
+<div class="paragraph">
+<p><strong>Hjørne 2</strong> (aksesspunkt for avsender) Samhandler med hjørne 1 og slår opp mottakers adresse og kapabiliteter. Aksesspunktet har evnen til å sende på en sikker og pålitelig måte til et annet aksesspunkt.</p>
+</div>
+<div class="paragraph">
+<p><strong>Hjørne 3</strong> (aksesspunkt for mottaker) Mottakers aksesspunkt har teknisk evne til å motta meldinger på en sikker og pålitelig måte og samhandle med hjørne 4.</p>
+</div>
+<div class="paragraph">
+<p><strong>Hjørne 4</strong> representerer back-end systemet til mottaker.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_egenskaper_ved_4_hjørnersmodellen"><a class="anchor" href="#_egenskaper_ved_4_hjørnersmodellen"></a><a class="link" href="#_egenskaper_ved_4_hjørnersmodellen">2.2. Egenskaper ved  4-hjørnersmodellen</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Løs kopling mellom avsender og mottaker</p>
+</li>
+<li>
+<p>Sikker meldingsinfrastruktur (mellom aksesspunktene)</p>
+</li>
+<li>
+<p>Avtaleforvaltning gjennom betrodd tredjepart</p>
+</li>
+<li>
+<p>Mulighet for å oppdage tjenestetilbydere og inngå avtaler runtime</p>
+</li>
+<li>
+<p>Ubegrenset skalering</p>
+</li>
+<li>
+<p><span class="red">Mulig å opprette flere communities</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_backend_integrasjon"><a class="anchor" href="#_backend_integrasjon"></a><a class="link" href="#_backend_integrasjon">2.3. Backend-integrasjon</a></h3>
+<div class="paragraph">
+<p>I 4-hjørnersmodellen er det fleksibilitet gjennom hvordan man velger å integrere aksesspunktet med egen IT-arkitektur og IT-infrastruktur. Sett fra avsenderapplikasjonen er det tre måter å integrere hjørne 1/hjørne 2 og hjørne 3/hjørne 4.</p>
+</div>
+<div class="sect3">
+<h4 id="_tett_kobling"><a class="anchor" href="#_tett_kobling"></a><a class="link" href="#_tett_kobling">2.3.1. Tett kobling</a></h4>
+<div class="paragraph">
+<p>Avsender applikasjon og aksesspunkt er tett koblet ved at avsender applikasjonen har integrert funksjonaliteten til aksesspunktet. Det blir dermed et en-til-en forhold mellom aksesspunkt og avsender applikasjonen.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_semi_tett_kobling"><a class="anchor" href="#_semi_tett_kobling"></a><a class="link" href="#_semi_tett_kobling">2.3.2. Semi-tett kobling</a></h4>
+<div class="paragraph">
+<p>Avsender applikasjonen og aksesspunkt er semi-tett koblet ved at back-end og aksesspunkt er løst koblet internt, men del av det samme interne IT-arkitekturen og IT-infrastrukturen. Et aksesspunkt kan håndtere flere avsender applikasjoner.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_løs_kobling"><a class="anchor" href="#_løs_kobling"></a><a class="link" href="#_løs_kobling">2.3.3. Løs kobling</a></h4>
+<div class="paragraph">
+<p>Avsender applikasjonen og aksesspunkt er løst koblet og ikke en del av samme interne IT-arkitektur og IT-infrastruktur. Ett aksesspunkt kan håndtere meldingsutveksling for mange avsender applikasjoner fra flere virksomheter.</p>
+</div>
+<div class="paragraph">
+<p>Ved løs kobling er det spesielle hensyn ved ende til ende kryptering og integritet. Det er hjørne 1 som må pakke og kryptere informasjonen og kun hjørne 4 som kan dekryptere. Hjørne 2 og hjørne 3 har ikke lov til å pakke om, fjerne eller legge til noe til meldingen og fungerer kun som en ruting mekanisme.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_emelding"><a class="anchor" href="#_emelding"></a><a class="link" href="#_emelding">3. eMelding</a></h2>
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>eMelding er en referansearkitektur for meldingsutveksling på tvers av virksomheter, sektorer og landegrenser.</p>
+</div>
+<div class="sect2">
+<h3 id="_introduksjon_2"><a class="anchor" href="#_introduksjon_2"></a><a class="link" href="#_introduksjon_2">3.1. Introduksjon</a></h3>
+<div class="paragraph">
+<p>eMelding  kan ses på som en "beste praksis" for meldingsutveksling på tvers av virksomheter og sektorer i offentlig sektor, samt mellom offentlig sektor og privat sektor.</p>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturen tar utgangspunkt i den europeiske "byggeklossen"  <a href="../kunnskap_referansearkitektur_eu-edelivery">CEF eDelivery</a>. CEF eDelivery  spesifiserer arkitekturer og standarder for meldingsutveksling. Det finnes flere eksisterende anvendelser og gjenbrukbare løsninger for å realisere eDelivery i ulike land og virksomheter.</p>
+</div>
+<div class="paragraph">
+<p>eMelding anvendes bl.a. innen <a href="../kunnskap_losning_eu-peppol">PEPPOL-nettverket</a>, nærmere bestemt i regi av OpenPEPPOL.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+<em>OpenPEPPOL is a non-profit international association under Belgian law (Association Internationale Sans But Lucratif – AISBL) and consists of both public sector and private members. The association has assumed full responsibility for the development and maintenance of the PEPPOL specifications, building blocks and its services and implementation across Europe.</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>eMelding som referansearkitektur rendyrker konseptene og har en klar kopling til CEF eDelivery, men beskrives i utgangspunktet frikoplet fra CEF eDelivery</strong>. Med dette som utgangspunkt, angis så aktuelle løsninger og praktiske anvendelser i form av CEF eDelivery og PEPPOL/OpenPEPPOL.</p>
+</div>
+<div class="paragraph">
+<p>eMelding som referansearkitektur er avgrenset til<strong> asynkron meldingsutveksling innenfor et fellesskap (community) som samhandler under et felles interoperabilitetsregime</strong>. Når man er del av fellesskapet vil man kunne sende meldinger til andre parter i fellesskapet uten å måtte inngå bilaterale avtaler om dette. Hver enkelt part registrerer sine samhandlingskapabiliteter i felles registre, for andre til å oppdage.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+eMelding som referansearkitektur støtter mønstre for request-reply og korrelering av meldinger i prosessinstanser, tilsvarende slik dette legges opp til i spesifikasjonen av metadata i meldingsprofil for CEF eDelivery.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grunnleggende_konsepter_for_emelding"><a class="anchor" href="#_grunnleggende_konsepter_for_emelding"></a><a class="link" href="#_grunnleggende_konsepter_for_emelding">3.2. Grunnleggende konsepter for eMelding</a></h3>
+<div class="paragraph">
+<p>eMelding bygger på et arkitekturmønster hvor avsender og mottaker kan benytte ulike teknologier og transportprotkoller. Se  <a href="../4-corner-model/4-hjørnersmodellen.html" class="page">4-hjørners-modellen fra EU CEF eDelivery</a>. for en nærmere redegjørelse om selve konseptet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">3.3. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></h3>
+<div class="paragraph">
+<p>Se konseptuelle prosessbeskrivelser for <a href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html" class="page">Generisk forsendelse</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"><a class="anchor" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"></a><a class="link" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">3.4. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a></h3>
+<div class="sect3">
+<h4 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">3.4.1. Generelt</a></h4>
+<div class="paragraph">
+<p>Beskrivelsene her viser på hvordan den generiske referansearkitekturen for eMelding kan realiseres med arkitektur- og løsningskomponenter som inngår i PEPPOL-infrastrukturen; basert på CEF eDelivery.</p>
+</div>
+<div class="paragraph">
+<p>Utover de arkitekturtegningene som presenenteres, henvises til omfattende dokumentasjon av eDelivery og PEPPOL.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/PEPPOL%20eDelivery%20Network%20overview.png" alt="PEPPOL eDelivery Network overview">
+</div>
+<div class="title">Figur 9. PEPPOL eDelivery Network overview</div>
+</div>
+<div class="paragraph">
+<p>Arkitektur- og løsningsbyggeklosser:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CEF SMP (Service Metadata Publisher): Oppslagstjeneste for å finne adresse og kapabiliteter for aktuell mottaker. Inneholder mottakers ID, aksesspunktadresse og dokumenttyper som mottaker kan motta. Aktuelle løsninger:  <a href="https://samarbeid.difi.no/felleslosninger/elma">ELMA</a>.</p>
+</li>
+<li>
+<p>BCP (Business Certificate Publisher): Sertifikatutsteder. Løsninger: Se <a href="https://vefa.difi.no/bcp/" class="bare">https://vefa.difi.no/bcp/</a>.</p>
+</li>
+<li>
+<p>Adressetjenesten CEF <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/SML+service">SML</a> (Service Metadata Locater): Global oppslagstjeneste for å finne fram til aktuell SMP.</p>
+</li>
+<li>
+<p>BCL (Business Certificate Locator): Oppslagstjeneste for å finne BCP (introdusert ifm. Enhanced PEPPOL eDelivery Network).</p>
+</li>
+<li>
+<p>Elektronisk mottakeradresseregister (<a href="https://samarbeid.difi.no/felleslosninger/elma">ELMA</a>): Norsk register over foretak som kan ta i mot dokumenter i standardisert EHF-format.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">3.4.2. Klargjør for deling av data ved forsendelse (eMelding)</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/SBB_klargjøre.png" alt="Klargjør for eMelding (løsningsmønster) image">
+</div>
+<div class="title">Figur 10. Klargjør for eMelding (løsningsmønster)</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figur:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 5. Elementer i view for Klargjør for eMelding (løsningsmønster)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samhandlingsaktør</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samlebetegnelse på roller som inngår i en samhandlingsprosess og samhandler med en annen samhandlingsaktør. Kan være en tilbyder, konsument, avsender, mottaker, leverandør etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klargjøre for deling av data ved forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evne til å klargjøre for meldingsutveksling med eksterne parter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klargjør for melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å klargjøre for melding ved å  inngå nødvendige avtaler og tilgjengeliggjøre nødvendig informasjon til andre samhandlingsaktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler for meldingsforsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å inngå bilaterale avtaler med sammhandlingsparter eller innmelding i et fellesskap. F.eks. gjennom å akseptere spesifikke avtaler, vilkår eller kontrakter og innrette seg etter reglene og forpliktelsene som gjelder i et fellesskap (community), eller det som er avtalt mellom samhanslingsaktørene.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer kapabiliteter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registering av kapabiliteter vil si å tilgjengeligjøre for avsendere og konsumenter hvilke meldinger og formater man kan motta og hvilke ressurser og tjenester man tilbyr.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer adresser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Med adresse menes nødvendig informasjon for å få tilgang til tjenester fra tilbyder eller for å sende melding til mottaker av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer sertifikater</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre for samhandlende parter sertifikater for bruk ved forsendelser. Dette kan være generelle eller domenespesifikke sertifikater. Eventuelt spesifikt for enkelet forretningsområder.</p>
+<p class="tableblock">Sertifikater må forvaltes og fornyes etter gjeldende regler for å være gyldige og egnet for bruk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kapabilitetsregistrering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere kapabiliteter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresseregistrering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere adresse for å sende melding til mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sertifikatregisterering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere serifikater i felles katalogtjeneste.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenPeppol</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elektronisk mottakerregister (ELMA)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Med ELMA får brukerne dine oversikt over alle virksomheter i Norge som kan motta elektroniske fakturaer i henhold til EHF-standarden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CEF SML</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Metadata Locator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BCL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business Certificate Locater</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BCP (CommFides eller Buypass)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business Certificate Publisher</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_operativ_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding">3.4.3. Operativ deling av data ved forsendelse (eMelding)</a></h4>
+<div class="sect4">
+<h5 id="_send_emelding"><a class="anchor" href="#_send_emelding"></a><a class="link" href="#_send_emelding">Send eMelding</a></h5>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Send%20eMelding%20%20(løsningsmønster).png" alt="Send eMelding  (løsningsmønster) image">
+</div>
+<div class="title">Figur 11. Send eMelding  (løsningsmønster)</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figur:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 6. Elementer i view for Send eMelding  (løsningsmønster)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avsender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som sender et brev, en pakke, en e-post, en elektronisk melding, en SMS eller lignende.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sende data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å sende data til en mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å sende en eMelding til en mottaker ved hjelp av fellestjenester.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller mottakers kapabiliteter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å slå opp og kontrollere mottakers evner til samhandling innenfor fellesskapet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formater melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å tilpasse informasjonspakken til mottakers kapabiliteter og fellesskapets standarder.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Krypter melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å sikre forsendelsen. Inkluderer konfidensialitets- og integritetssikring der dette er nødvendig. Normalt gjøres dette ved hjelp av kryptografi og sertifikater.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresser forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å adressere forsendelsen. Dette kan være til mottaker direkte eller til dennes representant eller aksesspunkt,</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signer forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å signere meldingen som sendes til mottaker. Til dette benyttes eget sertifikats private nøkkel.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eksepeder melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å sende melding til mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kapabilitetsoppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å slå opp kapabilitetene til en samhandlingspart</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatransformasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for  transformere data og meldinger til andre formater.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sertifikatoppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å hente krypteringssertifkat til mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresseoppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å slå opp adressen til en mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signeringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å signere en elektronisk melding. For eMelding er det signatur i form av elektronisk segl som er mest relevant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sporingstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for sporing (audit) av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CEF SML</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Metadata Locator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elektronisk mottakerregister (ELMA)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Med ELMA får brukerne dine oversikt over alle virksomheter i Norge som kan motta elektroniske fakturaer i henhold til EHF-standarden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BCL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business Certificate Locater</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BCP (CommFides eller Buypass)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business Certificate Publisher</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PEPPOL</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_motta_emelding"><a class="anchor" href="#_motta_emelding"></a><a class="link" href="#_motta_emelding">Motta eMelding</a></h5>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Motta%20eMelding%20(løsningsmønster).png" alt="Motta eMelding (løsningsmønster) image">
+</div>
+<div class="title">Figur 12. Motta eMelding (løsningsmønster)</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figur:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 7. Elementer i view for Motta eMelding (løsningsmønster)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottaker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som mottar en elektronisk melding eller tilsvarende.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å motta, validere og kvittere for mottatte meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å motta melding. Består av flere delprosesser.</p>
+<p class="tableblock">Etter mottak må mottaker følge opp og håndtere innholdet i meldingen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å motta en melding fra avsender</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å kontrollere om forsendelsen er autentisk og fra en legitim avsender.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dekrypter melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å dekryptere mottatt melding.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valider forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å kontrollere om innholdet i en forsendelse er i henhold til avtale og avtalte formater.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sporingstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for sporing (audit) av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signaturvaliderings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å validere og verifisere elektronsike signaturer. I forbindelse med eMelding er det kontroll av elektronisk segl som er mest relevant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datavaliderings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å validere meldinger mot format og forventet innhold.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PEPPOL</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_videre_informasjon_om_emelding"><a class="anchor" href="#_videre_informasjon_om_emelding"></a><a class="link" href="#_videre_informasjon_om_emelding">3.5. Videre informasjon om eMelding</a></h3>
+<div class="paragraph">
+<p>Videre informasjon og og dokumentasjon om eMelding finnes under <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding" class="bare">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding</a>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://github.com/difi/nasjonal_arkitektur/blob/master/nab_referanse_arkitekturer_emelding/files/H%C3%B8ringsnotat-Strategi-og-referansearkitektur-meldingsutveksling.docx">Høringsnotat</a></p>
+</li>
+<li>
+<p><a href="https://github.com/difi/nasjonal_arkitektur/blob/master/nab_referanse_arkitekturer_emelding/files/Vedlegg-A-Forslag-Nasjonal-referansekarkitektur-og-strategi-for-meldingsutveksling-v1_1.docx">Veddlegg A - Forslag - Nasjonal referansekarkitektur og strategi for meldingsutveksling v1_1</a></p>
+</li>
+<li>
+<p><a href="https://github.com/difi/nasjonal_arkitektur/blob/master/nab_referanse_arkitekturer_emelding/files/Vedlegg-B-Referanse-arkitektur-for-eMelding-printable.pdf">Vedlegg B - Referansearkitektur for eMelding (teknisk)</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
