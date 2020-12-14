@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Pub-sub / Hendelsesstrømming :: Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</title>
+    <title>Publisering og konsumering av hendelsesstrømmer :: Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</title>
     <link rel="canonical" href="https://digdir.gitlab.io/site/architecture-repository/book-publish-subscribe/book-publish-subscribe.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -115,8 +115,11 @@
   </li>
   <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../about-data-exchange/about-data-exchange-reference-architecture.html">Referansearkitektur for datautveksling</a>
+    <a class="nav-link" href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#architecture-repository:about-data-exchange-ra:about-data-exchange-ra.adoc">Om referansearkitektur for datautveksling</a>
+  </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
   </li>
@@ -135,13 +138,13 @@
     <span class="nav-text">Basismønstre for datautveksling</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-messaging/book-messaging.html">Forsendelse (one way push)</a>
+    <a class="nav-link" href="../book-messaging/book-messaging.html">Forsendelse (eMelding)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-request-reply/book-request-reply.html">Forespørsel-svar</a>
+    <a class="nav-link" href="../book-request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
   </li>
   <li class="nav-item is-current-page" data-depth="6">
-    <a class="nav-link" href="book-publish-subscribe.html">Publisering</a>
+    <a class="nav-link" href="book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
   </li>
 </ul>
   </li>
@@ -284,75 +287,19 @@
     <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
     <li><a href="../about-topic-areas/about-topic-areas.html">Temaområder</a></li>
     <li><a href="../about-data-exchange/about-data-exchange.html">Datautveksling</a></li>
-    <li><a href="../about-data-exchange/about-data-exchange-reference-architecture.html">Referansearkitektur for datautveksling</a></li>
+    <li><a href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a></li>
     <li><a href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a></li>
     <li>Basismønstre for datautveksling</li>
-    <li><a href="book-publish-subscribe.html">Publisering</a></li>
+    <li><a href="book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/architecture-repository/edit/master/docs/architecture-landscape/topic-areas/data-exchange/patterns/publish-subscribe/modules/book-publish-subscribe/pages/book-publish-subscribe.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Pub-sub / Hendelsesstrømming</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Innholdsfortegnelse</div>
-<ul class="sectlevel1">
-<li><a href="#_om_pub_sub">1. Om "pub-sub"</a></li>
-<li><a href="#_bruksområder_for_publisering_av_hendelsesstrømmer">2. Bruksområder for publisering av hendelsesstrømmer</a></li>
-<li><a href="#_konsepter_for_publisering_av_hendelsestrømmer">3. Konsepter for publisering av hendelsestrømmer</a>
-<ul class="sectlevel2">
-<li><a href="#_introduksjon">3.1. Introduksjon</a></li>
-<li><a href="#bruksområder-publisering-generelt">3.2. Bruksområder</a></li>
-<li><a href="#overskrift-grunnleggende-publisering">3.3. Konsepter for publisering og konsumering av hendelsesstrømmer</a>
-<ul class="sectlevel3">
-<li><a href="#generisk-publisering">3.3.1. Basiskonsepter</a>
-<ul class="sectlevel4">
-<li><a href="#_aktørsamspill">3.3.1.1. Aktørsamspill</a></li>
-<li><a href="#grunnleggende-begreper">3.3.1.2. Begrepsapparat</a></li>
-<li><a href="#notifikasjonsinnhold-generisk">3.3.1.3. Innhold i notifikasjoner</a></li>
-<li><a href="#_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister">3.3.1.4. Innhenting av notifikasjoner gjennom spørring mot hendelseslister</a></li>
-<li><a href="#_innhenting_av_supplerende_hendelsesrelaterte_data">3.3.1.5. Innhenting av supplerende hendelsesrelaterte data</a></li>
-</ul>
-</li>
-<li><a href="#_avanserte_konsepter">3.3.2. Avanserte konsepter</a>
-<ul class="sectlevel4">
-<li><a href="#generisk-publish-subscribe">3.3.2.1. Abonnementsbasert publisering</a></li>
-<li><a href="#filtrering-og-minimering">3.3.2.2. Filtrering og minimering av hendelseslister og notifikasjoner</a></li>
-<li><a href="#utledning-av-subjekttilstand">3.3.2.3. Tilstand som resultat av hendelser</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_enotifikasjon">4. eNotifikasjon</a>
-<ul class="sectlevel2">
-<li><a href="#_om_dette_mønsteret">4.1. Om dette mønsteret</a></li>
-<li><a href="#_verdistrømbeskrivelse">4.2. Verdistrømbeskrivelse</a>
-<ul class="sectlevel3">
-<li><a href="#_enotifikasjon_oversikt_over_verdistrømmer">4.2.1. eNotifikasjon - oversikt over verdistrømmer</a></li>
-<li><a href="#_enotifikasjon_verdistrøm_for_datatilbyder">4.2.2. eNotifikasjon - verdistrøm for datatilbyder</a></li>
-<li><a href="#_enotifikasjon_verdistrøm_for_datakonsumenter">4.2.3. eNotifikasjon - verdistrøm for datakonsumenter</a></li>
-</ul>
-</li>
-<li><a href="#_kapabilitetskart_for_enotifikasjon">4.3. Kapabilitetskart for eNotifikasjon</a></li>
-<li><a href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">4.4. Realisering av kapabiliteter - generisk arkitekturmønster</a>
-<ul class="sectlevel3">
-<li><a href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">4.4.1. Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></li>
-<li><a href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">4.4.2. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></li>
-<li><a href="#_generere_og_tilby_notifikasjoner">4.4.3. Generere og tilby notifikasjoner</a></li>
-<li><a href="#_avgi_forespurte_notifikasjoner">4.4.4. Avgi forespurte notifikasjoner</a></li>
-<li><a href="#_innhente_og_håndtere_notifikasjoner">4.4.5. Innhente og håndtere notifikasjoner</a></li>
-</ul>
-</li>
-<li><a href="#_løsningsmønstre_for_enotifikasjon">4.5. Løsningsmønstre for eNotifikasjon</a></li>
-</ul>
-</li>
-</ul>
-</div>
+<h1 class="page">Publisering og konsumering av hendelsesstrømmer</h1>
 <div class="sect1">
-<h2 id="_om_pub_sub"><a class="anchor" href="#_om_pub_sub"></a><a class="link" href="#_om_pub_sub">1. Om "pub-sub"</a></h2>
+<h2 id="_om_publisering_og_konsumering_av_hendelsesstrømmer"><a class="anchor" href="#_om_publisering_og_konsumering_av_hendelsesstrømmer"></a><a class="link" href="#_om_publisering_og_konsumering_av_hendelsesstrømmer">1. Om publisering og konsumering av hendelsesstrømmer</a></h2>
 <div class="sectionbody">
 <div id="basiskonsept-pub-sub" class="paragraph">
 <p>Mønstre for publisering handler helt grunnleggende om at tilbydere publiserer data, uten nødvendigvis å vite om aktuelle konsumenter. Data kan i denne sammenhengen være f.eks. metadata som i Felles datakatalog, eller f.eks. data bak et API som publiseres åpent.</p>

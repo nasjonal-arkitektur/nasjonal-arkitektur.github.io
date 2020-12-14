@@ -115,8 +115,11 @@
   </li>
   <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="about-data-exchange-reference-architecture.html">Referansearkitektur for datautveksling</a>
+    <a class="nav-link" href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#architecture-repository:about-data-exchange-ra:about-data-exchange-ra.adoc">Om referansearkitektur for datautveksling</a>
+  </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
   </li>
@@ -135,13 +138,13 @@
     <span class="nav-text">Basismønstre for datautveksling</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-messaging/book-messaging.html">Forsendelse (one way push)</a>
+    <a class="nav-link" href="../book-messaging/book-messaging.html">Forsendelse (eMelding)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-request-reply/book-request-reply.html">Forespørsel-svar</a>
+    <a class="nav-link" href="../book-request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-publish-subscribe/book-publish-subscribe.html">Publisering</a>
+    <a class="nav-link" href="../book-publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
   </li>
 </ul>
   </li>
@@ -297,128 +300,13 @@
 <div class="paragraph">
 <p>Begrepet datautveksling omfatter her alle former for flyt av data eller informasjon mellom tilbydere og konsumenter, enten det er internt i en virksomhet, mellom virksomheter eller mellom virksomheter og personer.</p>
 </div>
-<div class="paragraph">
-<p>Se også: <a href="../data-for-data-exchange/data-for-data-exchange.html" class="page">Begrepsapparat for data (datautveksling)</a></p>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_omfang_og_avgrensing_for_temaområdet_datautveksling"><a class="anchor" href="#_omfang_og_avgrensing_for_temaområdet_datautveksling"></a><a class="link" href="#_omfang_og_avgrensing_for_temaområdet_datautveksling">2. Omfang og avgrensing for temaområdet datautveksling</a></h2>
+<h2 id="_referansearkitektur_for_datautveksling"><a class="anchor" href="#_referansearkitektur_for_datautveksling"></a><a class="link" href="#_referansearkitektur_for_datautveksling">2. Referansearkitektur for datautveksling</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Datautveksling kan brytes ned i et sett av avgrensede områder og kapabiliteter. På øverste nivå skilles det mellom:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Deling av data på forespørsel: Innhenting av data ved forespørsel til en eller flere datakilder.</p>
-</li>
-<li>
-<p>Deling av data ved forsendelse: Forsendelse av data fra en avsender til en eller flere mottakere.</p>
-</li>
-<li>
-<p>Deling av data ved publisering: Publisering av data eller hendelsesdata (notifikasjoner, med løs kopling mellom datatilbyder og datakonsument.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Dette er illustrert i følgende figur.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Områder%20innen%20datautveksling.png" alt="Områder innen datautveksling image">
-</div>
-<div class="title">Figur 1. Områder innen datautveksling</div>
-</div>
-<div class="paragraph">
-<p>Det skille videre mellom operative og forvaltningsmessige kapabiliteter, dvs. selve datautvekslingen og det som går på tilrettelegging og vedlikehold.</p>
-</div>
-<div class="paragraph">
-<p>Følgende figur viser en oversikt over de viktigste temaene og kapabilitetene inndelt i operativt og forvaltningsmessig og om de tilhører datatilbyder eller datakonsument. Nederst i figuren er også listet opp tverrgeånde temaer som vurderes som viktige inn i datautveksling og må ivaretas på tvers av roller og kapabiliteter.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Datautveksling%20-%20overordnet%20oversikt%20over%20kapabiliteter%20og%20temaer%20.png" alt="Datautveksling - overordnet oversikt over kapabiliteter og temaer  image">
-</div>
-<div class="title">Figur 2. Datautveksling - overordnet oversikt over kapabiliteter og temaer</div>
-</div>
-<div class="paragraph">
-<p>De tverrgående temaene beskriver områder som må ivaretas for å utveksle data i tråd med regelverk og god praksis. Dette er ikke en uttømmende liste, men angir det som anses som viktigst å beskrive.</p>
-</div>
-<div class="paragraph">
-<p>Noen av disse temaene er også aktuelle i andre sammenhenger enn datautveksling, og vil beskrives under andre overskrifter.</p>
-</div>
-<div class="paragraph">
-<p>Kort introduksjon ev hvert enkelt av disse temaene gis her.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Standarder og spesifikasjoner</strong></p>
-<div class="paragraph">
-<p>Standarder og spesifikasjoner (og andre føringer) kan finnes på alle lagene i <em>EIF-modellen</em> (juridisk, organisatorisk, semantisk, teknisk). Dokumentasjon av slike føringer kan gjøres for større eller mindre områder. I gjeldende <a href="nab_referanse_maler_asciidoc-book-sat">mal for referansearkitekturene</a> omtales dette som  <em>interoperability specifications</em>.</p>
-</div>
-</li>
-<li>
-<p><strong>Avtaleforvaltning</strong></p>
-<div class="paragraph">
-<p>Dette temaområdet omhandler oppsett og forvaltning av avtaler melom partene, enten bilateralt eller innen et felleskap (community).</p>
-</div>
-</li>
-<li>
-<p><strong>Roller</strong>
-Dette temaområdet definerer <a href="#:architecture-repository:data-exchange-roles:page$data-exchange-roles.adoc" class="page unresolved">roller involvert i datautveksling</a>.</p>
-</li>
-<li>
-<p><strong>Informasjonssikkerhet, tillit og personvern</strong>
-Dette temaområdet er omfattende. Det omhandler temaer som:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Integritet, konfidensialitet, tilgjengelighet</p>
-</li>
-<li>
-<p>Tillitskjeder</p>
-</li>
-<li>
-<p>Innsyn og transparens</p>
-</li>
-<li>
-<p>Personvern</p>
-</li>
-<li>
-<p>M.v</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Feilhåndtering ved datautveksling</strong>
-Temaområdet <em>feilhåndtering ved datautveksling</em> omhandler hvordan feil og avvik håndteres. I tillegg til generelle prinsipper og krav,  dokumenteres særskilte aspekter i tilknytning til de ulike arkitekturmønstrene.</p>
-</li>
-<li>
-<p><strong>Sporing</strong></p>
-<div class="paragraph">
-<p>Temaområdet <em>sporing</em> omfatter:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Sporing av dataaksess (stikkord: <em>informasjonssikkerhet og tillit</em>)</p>
-</li>
-<li>
-<p>Sporing av datakilder (stikkord: <em>masterdata management</em>)</p>
-</li>
-<li>
-<p>Dokumentasjon av etterlevelse av lover og regler, samt andre føringer (f.eks. obligatoriske arkitekturprinsipper)</p>
-</li>
-<li>
-<p>Dokumentasjon tilknyttet vedtak (stikkord: <em>innebygget arkiv</em>)</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
+<p>Temaområdet datautveksling er beskrevet gjennom en egen referansearkitektur; se <a href="../data-exchange-ra/book-data-exchange-ra.html" class="page"><em>Referansearkitektur for datautveksling</em></a></p>
 </div>
 </div>
 </div>
