@@ -137,8 +137,8 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basismønstre for datautveksling</span>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="#architecture-repository:one-way-push:book-one-way-push.adoc">Forsendelse (eMelding)</a>
+  <li class="nav-item is-current-page" data-depth="6">
+    <a class="nav-link" href="book-one-way-push.html">Forsendelse (eMelding)</a>
   </li>
   <li class="nav-item" data-depth="6">
     <a class="nav-link" href="../book-request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
@@ -285,7 +285,12 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
-    <li><a href="book-one-way-push.html">Meldingsutveksling - forsendelse</a></li>
+    <li><a href="../about-topic-areas/about-topic-areas.html">Temaområder</a></li>
+    <li><a href="../about-data-exchange/about-data-exchange.html">Datautveksling</a></li>
+    <li><a href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a></li>
+    <li><a href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a></li>
+    <li>Basismønstre for datautveksling</li>
+    <li><a href="book-one-way-push.html">Forsendelse (eMelding)</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/architecture-repository/edit/master/docs/architecture-landscape/topic-areas/data-exchange/patterns/one-way-push/modules/book-one-way-push/pages/book-one-way-push.adoc">Edit this Page</a></div>
@@ -293,6 +298,60 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Meldingsutveksling - forsendelse</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Innholdsfortegnelse</div>
+<ul class="sectlevel1">
+<li><a href="#_generisk_forsendelse">1. Generisk forsendelse</a>
+<ul class="sectlevel2">
+<li><a href="#_introduksjon">1.1. Introduksjon</a></li>
+<li><a href="#_brukstilfeller">1.2. Brukstilfeller</a></li>
+<li><a href="#_grunnleggende_konsepter_og_forutsetninger">1.3. Grunnleggende konsepter og forutsetninger</a>
+<ul class="sectlevel3">
+<li><a href="#_logisk_og_fysisk_dataflyt">1.3.1. Logisk og fysisk dataflyt</a>
+<ul class="sectlevel4">
+<li><a href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">1.3.1.1. Klargjør for deling av data ved forsendelse (eMelding)</a></li>
+<li><a href="#_operativ_deling_av_data_ved_forsendelse_emelding">1.3.1.2. Operativ deling av data ved forsendelse (eMelding)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_4_hjørners_modellen">2. 4-hjørners-modellen</a>
+<ul class="sectlevel2">
+<li><a href="#_generelt">2.1. Generelt</a></li>
+<li><a href="#_egenskaper_ved_4_hjørnersmodellen">2.2. Egenskaper ved  4-hjørnersmodellen</a></li>
+<li><a href="#_backend_integrasjon">2.3. Backend-integrasjon</a>
+<ul class="sectlevel3">
+<li><a href="#_tett_kobling">2.3.1. Tett kobling</a></li>
+<li><a href="#_semi_tett_kobling">2.3.2. Semi-tett kobling</a></li>
+<li><a href="#_løs_kobling">2.3.3. Løs kobling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_emelding">3. eMelding</a>
+<ul class="sectlevel2">
+<li><a href="#_introduksjon_2">3.1. Introduksjon</a></li>
+<li><a href="#_grunnleggende_konsepter_for_emelding">3.2. Grunnleggende konsepter for eMelding</a></li>
+<li><a href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">3.3. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></li>
+<li><a href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">3.4. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a>
+<ul class="sectlevel3">
+<li><a href="#_generelt_2">3.4.1. Generelt</a></li>
+<li><a href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding_2">3.4.2. Klargjør for deling av data ved forsendelse (eMelding)</a></li>
+<li><a href="#_operativ_deling_av_data_ved_forsendelse_emelding_2">3.4.3. Operativ deling av data ved forsendelse (eMelding)</a>
+<ul class="sectlevel4">
+<li><a href="#_send_emelding_2">3.4.3.1. Send eMelding</a></li>
+<li><a href="#_motta_emelding_2">3.4.3.2. Motta eMelding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_videre_informasjon_om_emelding">3.5. Videre informasjon om eMelding</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="sect1">
 <h2 id="_generisk_forsendelse"><a class="anchor" href="#_generisk_forsendelse"></a><a class="link" href="#_generisk_forsendelse">1. Generisk forsendelse</a></h2>
 <div class="sectionbody">
