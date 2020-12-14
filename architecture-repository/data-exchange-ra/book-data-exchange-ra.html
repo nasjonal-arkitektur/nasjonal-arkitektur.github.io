@@ -626,6 +626,8 @@ Tjenesteleverandører vil normalt representere en behandlingsansvarlig og også 
 <div class="sect1">
 <h2 id="_arkitekturmønstre_for_datautveksling"><a class="anchor" href="#_arkitekturmønstre_for_datautveksling"></a><a class="link" href="#_arkitekturmønstre_for_datautveksling">4. Arkitekturmønstre for datautveksling</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_om_arkitekturmønstre_for_datautveksling"><a class="anchor" href="#_om_arkitekturmønstre_for_datautveksling"></a><a class="link" href="#_om_arkitekturmønstre_for_datautveksling">4.1. Om arkitekturmønstre for datautveksling</a></h3>
 <div class="paragraph lead">
 <p>Referansearkitektur for datautveksling inneholder et sett arkitekturmønstre, fordelt på basismønstre og sammensatte mønstre.
 Det skilles videre mellom  konseptuelle beskrivelser og anvendelser med spesifikke løsningskomponenter.</p>
@@ -646,17 +648,16 @@ Det skilles videre mellom  konseptuelle beskrivelser og anvendelser med spesifik
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="_forsendelse_emelding"><a class="anchor" href="#_forsendelse_emelding"></a><a class="link" href="#_forsendelse_emelding">4.1. Forsendelse (eMelding)</a></h3>
-
 </div>
 <div class="sect2">
-<h3 id="_generisk_forsendelse"><a class="anchor" href="#_generisk_forsendelse"></a><a class="link" href="#_generisk_forsendelse">4.2. Generisk forsendelse</a></h3>
+<h3 id="_forsendelse_emelding"><a class="anchor" href="#_forsendelse_emelding"></a><a class="link" href="#_forsendelse_emelding">4.2. Forsendelse (eMelding)</a></h3>
+<div class="sect3">
+<h4 id="_generisk_forsendelse"><a class="anchor" href="#_generisk_forsendelse"></a><a class="link" href="#_generisk_forsendelse">4.2.1. Generisk forsendelse</a></h4>
 <div class="paragraph lead">
 <p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker</p>
 </div>
-<div class="sect3">
-<h4 id="_introduksjon"><a class="anchor" href="#_introduksjon"></a><a class="link" href="#_introduksjon">4.2.1. Introduksjon</a></h4>
+<div class="sect4">
+<h5 id="_introduksjon"><a class="anchor" href="#_introduksjon"></a><a class="link" href="#_introduksjon">4.2.1.1. Introduksjon</a></h5>
 <div class="paragraph">
 <p><em>Generisk mønster for meldingsforsendelse til kjent mottaker</em> beskriver meldingsutveksling i form av enkeltvise meldinger fra en avsender til en kjent mottaker. De konseptuelle beskrivelsene som gis her danner grunnlag for beskrivelser av mer avanserte og spesialiserte mønstre; men kan også stå på egne ben, med egne løsningsmønstre.</p>
 </div>
@@ -674,8 +675,8 @@ Det skilles videre mellom  konseptuelle beskrivelser og anvendelser med spesifik
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_brukstilfeller"><a class="anchor" href="#_brukstilfeller"></a><a class="link" href="#_brukstilfeller">4.2.2. Brukstilfeller</a></h4>
+<div class="sect4">
+<h5 id="_brukstilfeller"><a class="anchor" href="#_brukstilfeller"></a><a class="link" href="#_brukstilfeller">4.2.1.2. Brukstilfeller</a></h5>
 <div class="paragraph">
 <p>Aktuelle brukstilfeller for <em>Generisk mønster for meldingsforsendelse til kjent mottaker</em>:</p>
 </div>
@@ -694,10 +695,10 @@ Det skilles videre mellom  konseptuelle beskrivelser og anvendelser med spesifik
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_grunnleggende_konsepter_og_forutsetninger"><a class="anchor" href="#_grunnleggende_konsepter_og_forutsetninger"></a><a class="link" href="#_grunnleggende_konsepter_og_forutsetninger">4.2.3. Grunnleggende konsepter og forutsetninger</a></h4>
 <div class="sect4">
-<h5 id="_logisk_og_fysisk_dataflyt"><a class="anchor" href="#_logisk_og_fysisk_dataflyt"></a><a class="link" href="#_logisk_og_fysisk_dataflyt">4.2.3.1. Logisk og fysisk dataflyt</a></h5>
+<h5 id="_grunnleggende_konsepter_og_forutsetninger"><a class="anchor" href="#_grunnleggende_konsepter_og_forutsetninger"></a><a class="link" href="#_grunnleggende_konsepter_og_forutsetninger">4.2.1.3. Grunnleggende konsepter og forutsetninger</a></h5>
+<div class="sect5">
+<h6 id="_logisk_og_fysisk_dataflyt"><a class="anchor" href="#_logisk_og_fysisk_dataflyt"></a><a class="link" href="#_logisk_og_fysisk_dataflyt">4.2.1.3.1. Logisk og fysisk dataflyt</a></h6>
 <div class="paragraph">
 <p>Følgende arkitekturtegning illustrerer helt grunnleggende konsepter.</p>
 </div>
@@ -707,8 +708,8 @@ Det skilles videre mellom  konseptuelle beskrivelser og anvendelser med spesifik
 </div>
 <div class="title">Figur 6. Generisk meldingsforsendelse</div>
 </div>
-<div class="sect5">
-<h6 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">4.2.3.1.1. Klargjør for deling av data ved forsendelse (eMelding)</a></h6>
+<div class="sect6">
+<h7 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">4.2.1.3.1.1. Klargjør for deling av data ved forsendelse (eMelding)</a></h7>
 <div class="imageblock">
 <div class="content">
 <img src="../generic-one-way-push/_images/Klargjør%20for%20eMelding%20(løsningsmønster).png" alt="Klargjør for eMelding (løsningsmønster) image">
@@ -791,10 +792,10 @@ Det skilles videre mellom  konseptuelle beskrivelser og anvendelser med spesifik
 </tbody>
 </table>
 </div>
-<div class="sect5">
-<h6 id="_operativ_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding">4.2.3.1.2. Operativ deling av data ved forsendelse (eMelding)</a></h6>
 <div class="sect6">
-<h7 id="_send_emelding"><a class="anchor" href="#_send_emelding"></a><a class="link" href="#_send_emelding">4.2.3.1.2.1. Send eMelding</a></h7>
+<h7 id="_operativ_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding">4.2.1.3.1.2. Operativ deling av data ved forsendelse (eMelding)</a></h7>
+<div class="sect7">
+<h8 id="_send_emelding"><a class="anchor" href="#_send_emelding"></a><a class="link" href="#_send_emelding">4.2.1.3.1.2.1. Send eMelding</a></h8>
 <div class="imageblock">
 <div class="content">
 <img src="../generic-one-way-push/_images/Send%20eMelding%20%20(løsningsmønster).png" alt="Send eMelding  (løsningsmønster) image">
@@ -904,8 +905,8 @@ Det skilles videre mellom  konseptuelle beskrivelser og anvendelser med spesifik
 </tbody>
 </table>
 </div>
-<div class="sect6">
-<h7 id="_motta_emelding"><a class="anchor" href="#_motta_emelding"></a><a class="link" href="#_motta_emelding">4.2.3.1.2.2. Motta eMelding</a></h7>
+<div class="sect7">
+<h8 id="_motta_emelding"><a class="anchor" href="#_motta_emelding"></a><a class="link" href="#_motta_emelding">4.2.1.3.1.2.2. Motta eMelding</a></h8>
 <div class="imageblock">
 <div class="content">
 <img src="nab_referanse_arkitekturer_emelding/media/Motta%20eMelding%20(løsningsmønster).png" alt="Motta eMelding (løsningsmønster) image">
@@ -984,10 +985,10 @@ Det skilles videre mellom  konseptuelle beskrivelser og anvendelser med spesifik
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_4_hjørners_modellen"><a class="anchor" href="#_4_hjørners_modellen"></a><a class="link" href="#_4_hjørners_modellen">4.3. 4-hjørners-modellen</a></h3>
 <div class="sect3">
-<h4 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">4.3.1. Generelt</a></h4>
+<h4 id="_4_hjørners_modellen"><a class="anchor" href="#_4_hjørners_modellen"></a><a class="link" href="#_4_hjørners_modellen">4.2.2. 4-hjørners-modellen</a></h4>
+<div class="sect4">
+<h5 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">4.2.2.1. Generelt</a></h5>
 <div class="paragraph">
 <p>Begrepet "firehjørnersmodell", eller “4-corner model”, stammer fra  <a href="../kunnskap_referansearkitektur_eu-edelivery">CEF eDelivery</a>.</p>
 </div>
@@ -1037,8 +1038,8 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <p><strong>Hjørne 4</strong> representerer back-end systemet til mottaker.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_egenskaper_ved_4_hjørnersmodellen"><a class="anchor" href="#_egenskaper_ved_4_hjørnersmodellen"></a><a class="link" href="#_egenskaper_ved_4_hjørnersmodellen">4.3.2. Egenskaper ved  4-hjørnersmodellen</a></h4>
+<div class="sect4">
+<h5 id="_egenskaper_ved_4_hjørnersmodellen"><a class="anchor" href="#_egenskaper_ved_4_hjørnersmodellen"></a><a class="link" href="#_egenskaper_ved_4_hjørnersmodellen">4.2.2.2. Egenskaper ved  4-hjørnersmodellen</a></h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1062,25 +1063,25 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_backend_integrasjon"><a class="anchor" href="#_backend_integrasjon"></a><a class="link" href="#_backend_integrasjon">4.3.3. Backend-integrasjon</a></h4>
+<div class="sect4">
+<h5 id="_backend_integrasjon"><a class="anchor" href="#_backend_integrasjon"></a><a class="link" href="#_backend_integrasjon">4.2.2.3. Backend-integrasjon</a></h5>
 <div class="paragraph">
 <p>I 4-hjørnersmodellen er det fleksibilitet gjennom hvordan man velger å integrere aksesspunktet med egen IT-arkitektur og IT-infrastruktur. Sett fra avsenderapplikasjonen er det tre måter å integrere hjørne 1/hjørne 2 og hjørne 3/hjørne 4.</p>
 </div>
-<div class="sect4">
-<h5 id="_tett_kobling"><a class="anchor" href="#_tett_kobling"></a><a class="link" href="#_tett_kobling">4.3.3.1. Tett kobling</a></h5>
+<div class="sect5">
+<h6 id="_tett_kobling"><a class="anchor" href="#_tett_kobling"></a><a class="link" href="#_tett_kobling">4.2.2.3.1. Tett kobling</a></h6>
 <div class="paragraph">
 <p>Avsender applikasjon og aksesspunkt er tett koblet ved at avsender applikasjonen har integrert funksjonaliteten til aksesspunktet. Det blir dermed et en-til-en forhold mellom aksesspunkt og avsender applikasjonen.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_semi_tett_kobling"><a class="anchor" href="#_semi_tett_kobling"></a><a class="link" href="#_semi_tett_kobling">4.3.3.2. Semi-tett kobling</a></h5>
+<div class="sect5">
+<h6 id="_semi_tett_kobling"><a class="anchor" href="#_semi_tett_kobling"></a><a class="link" href="#_semi_tett_kobling">4.2.2.3.2. Semi-tett kobling</a></h6>
 <div class="paragraph">
 <p>Avsender applikasjonen og aksesspunkt er semi-tett koblet ved at back-end og aksesspunkt er løst koblet internt, men del av det samme interne IT-arkitekturen og IT-infrastrukturen. Et aksesspunkt kan håndtere flere avsender applikasjoner.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_løs_kobling"><a class="anchor" href="#_løs_kobling"></a><a class="link" href="#_løs_kobling">4.3.3.3. Løs kobling</a></h5>
+<div class="sect5">
+<h6 id="_løs_kobling"><a class="anchor" href="#_løs_kobling"></a><a class="link" href="#_løs_kobling">4.2.2.3.3. Løs kobling</a></h6>
 <div class="paragraph">
 <p>Avsender applikasjonen og aksesspunkt er løst koblet og ikke en del av samme interne IT-arkitektur og IT-infrastruktur. Ett aksesspunkt kan håndtere meldingsutveksling for mange avsender applikasjoner fra flere virksomheter.</p>
 </div>
@@ -1090,13 +1091,13 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_emelding"><a class="anchor" href="#_emelding"></a><a class="link" href="#_emelding">4.4. eMelding</a></h3>
+<div class="sect3">
+<h4 id="_emelding"><a class="anchor" href="#_emelding"></a><a class="link" href="#_emelding">4.2.3. eMelding</a></h4>
 <div class="paragraph lead">
 <p>eMelding er en referansearkitektur for meldingsutveksling på tvers av virksomheter, sektorer og landegrenser.</p>
 </div>
-<div class="sect3">
-<h4 id="_introduksjon_2"><a class="anchor" href="#_introduksjon_2"></a><a class="link" href="#_introduksjon_2">4.4.1. Introduksjon</a></h4>
+<div class="sect4">
+<h5 id="_introduksjon_2"><a class="anchor" href="#_introduksjon_2"></a><a class="link" href="#_introduksjon_2">4.2.3.1. Introduksjon</a></h5>
 <div class="paragraph">
 <p>Begrepet eMelding kan ses som en skriver seg fra strategisk arbeid med</p>
 </div>
@@ -1143,22 +1144,22 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_grunnleggende_konsepter_for_emelding"><a class="anchor" href="#_grunnleggende_konsepter_for_emelding"></a><a class="link" href="#_grunnleggende_konsepter_for_emelding">4.4.2. Grunnleggende konsepter for eMelding</a></h4>
+<div class="sect4">
+<h5 id="_grunnleggende_konsepter_for_emelding"><a class="anchor" href="#_grunnleggende_konsepter_for_emelding"></a><a class="link" href="#_grunnleggende_konsepter_for_emelding">4.2.3.2. Grunnleggende konsepter for eMelding</a></h5>
 <div class="paragraph">
 <p>eMelding bygger på et arkitekturmønster hvor avsender og mottaker kan benytte ulike teknologier og transportprotkoller. Se  <a href="../4-corner-model/4-hjørnersmodellen.html" class="page">4-hjørners-modellen fra EU CEF eDelivery</a>. for en nærmere redegjørelse om selve konseptet.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">4.4.3. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></h4>
+<div class="sect4">
+<h5 id="_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">4.2.3.3. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></h5>
 <div class="paragraph">
 <p>Se konseptuelle prosessbeskrivelser for <a href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html" class="page">Generisk forsendelse</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"><a class="anchor" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"></a><a class="link" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">4.4.4. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a></h4>
 <div class="sect4">
-<h5 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">4.4.4.1. Generelt</a></h5>
+<h5 id="_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"><a class="anchor" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"></a><a class="link" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">4.2.3.4. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a></h5>
+<div class="sect5">
+<h6 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">4.2.3.4.1. Generelt</a></h6>
 <div class="paragraph">
 <p>Beskrivelsene her viser på hvordan den generiske referansearkitekturen for eMelding kan realiseres med arkitektur- og løsningskomponenter som inngår i PEPPOL-infrastrukturen; basert på CEF eDelivery.</p>
 </div>
@@ -1194,8 +1195,8 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding_2"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding_2"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding_2">4.4.4.2. Klargjør for deling av data ved forsendelse (eMelding)</a></h5>
+<div class="sect5">
+<h6 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding_2"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding_2"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding_2">4.2.3.4.2. Klargjør for deling av data ved forsendelse (eMelding)</a></h6>
 <div class="imageblock">
 <div class="content">
 <img src="../eMelding/_images/SBB_klargjøre.png" alt="Klargjør for eMelding (løsningsmønster) image">
@@ -1282,10 +1283,10 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_operativ_deling_av_data_ved_forsendelse_emelding_2"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding_2"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding_2">4.4.4.3. Operativ deling av data ved forsendelse (eMelding)</a></h5>
 <div class="sect5">
-<h6 id="_send_emelding_2"><a class="anchor" href="#_send_emelding_2"></a><a class="link" href="#_send_emelding_2">4.4.4.3.1. Send eMelding</a></h6>
+<h6 id="_operativ_deling_av_data_ved_forsendelse_emelding_2"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding_2"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding_2">4.2.3.4.3. Operativ deling av data ved forsendelse (eMelding)</a></h6>
+<div class="sect6">
+<h7 id="_send_emelding_2"><a class="anchor" href="#_send_emelding_2"></a><a class="link" href="#_send_emelding_2">4.2.3.4.3.1. Send eMelding</a></h7>
 <div class="imageblock">
 <div class="content">
 <img src="../eMelding/_images/Send%20eMelding%20%20(løsningsmønster).png" alt="Send eMelding  (løsningsmønster) image">
@@ -1395,8 +1396,8 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </tbody>
 </table>
 </div>
-<div class="sect5">
-<h6 id="_motta_emelding_2"><a class="anchor" href="#_motta_emelding_2"></a><a class="link" href="#_motta_emelding_2">4.4.4.3.2. Motta eMelding</a></h6>
+<div class="sect6">
+<h7 id="_motta_emelding_2"><a class="anchor" href="#_motta_emelding_2"></a><a class="link" href="#_motta_emelding_2">4.2.3.4.3.2. Motta eMelding</a></h7>
 <div class="imageblock">
 <div class="content">
 <img src="../eMelding/_images/Motta%20eMelding%20(løsningsmønster).png" alt="Motta eMelding (løsningsmønster) image">
@@ -1473,21 +1474,20 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_videre_informasjon_om_emelding"><a class="anchor" href="#_videre_informasjon_om_emelding"></a><a class="link" href="#_videre_informasjon_om_emelding">4.4.5. Videre informasjon om eMelding</a></h4>
+<div class="sect4">
+<h5 id="_videre_informasjon_om_emelding"><a class="anchor" href="#_videre_informasjon_om_emelding"></a><a class="link" href="#_videre_informasjon_om_emelding">4.2.3.5. Videre informasjon om eMelding</a></h5>
 <div class="paragraph">
 <p>Videre informasjon og og dokumentasjon om eMelding finnes under <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding" class="bare">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding</a>.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_forespørsel_svar_eoppslag"><a class="anchor" href="#_forespørsel_svar_eoppslag"></a><a class="link" href="#_forespørsel_svar_eoppslag">4.5. Forespørsel-svar (eOppslag)</a></h3>
-
 </div>
 <div class="sect2">
-<h3 id="_generisk_forespørsel_svar"><a class="anchor" href="#_generisk_forespørsel_svar"></a><a class="link" href="#_generisk_forespørsel_svar">4.6. Generisk forespørsel-svar</a></h3>
+<h3 id="_forespørsel_svar_eoppslag"><a class="anchor" href="#_forespørsel_svar_eoppslag"></a><a class="link" href="#_forespørsel_svar_eoppslag">4.3. Forespørsel-svar (eOppslag)</a></h3>
 <div class="sect3">
-<h4 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">4.6.1. Om dette mønsteret</a></h4>
+<h4 id="_generisk_forespørsel_svar"><a class="anchor" href="#_generisk_forespørsel_svar"></a><a class="link" href="#_generisk_forespørsel_svar">4.3.1. Generisk forespørsel-svar</a></h4>
+<div class="sect4">
+<h5 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">4.3.1.1. Om dette mønsteret</a></h5>
 <div class="paragraph">
 <p><em>Generisk mønster for spørring og oppslag</em> adresserer området <em>Deling av data på forespørsel</em> og omhandler tilgjengeliggjøring av data og oppslag i data, som sett fra henholdvis datatilbyder og datakonsument.</p>
 </div>
@@ -1514,8 +1514,8 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_kapabiliteter_for_deling_av_data_på_forespørsel"><a class="anchor" href="#_kapabiliteter_for_deling_av_data_på_forespørsel"></a><a class="link" href="#_kapabiliteter_for_deling_av_data_på_forespørsel">4.6.2. Kapabiliteter for deling av data på forespørsel</a></h4>
+<div class="sect4">
+<h5 id="_kapabiliteter_for_deling_av_data_på_forespørsel"><a class="anchor" href="#_kapabiliteter_for_deling_av_data_på_forespørsel"></a><a class="link" href="#_kapabiliteter_for_deling_av_data_på_forespørsel">4.3.1.2. Kapabiliteter for deling av data på forespørsel</a></h5>
 <div class="paragraph">
 <p>Modellen under viser hovedinndelingen i kapabiliteter en tilbyder og en konsument må ha for å dele data gjennom spørring og oppslag. Dette er av området som omhandler <em>Deling av data på forespørsel</em>.</p>
 </div>
@@ -1606,10 +1606,10 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_eoppslag_konseptuell_beskrivelse"><a class="anchor" href="#_eoppslag_konseptuell_beskrivelse"></a><a class="link" href="#_eoppslag_konseptuell_beskrivelse">4.7. eOppslag - konseptuell beskrivelse</a></h3>
 <div class="sect3">
-<h4 id="_om_dette_mønsteret_2"><a class="anchor" href="#_om_dette_mønsteret_2"></a><a class="link" href="#_om_dette_mønsteret_2">4.7.1. Om dette mønsteret</a></h4>
+<h4 id="_eoppslag_konseptuell_beskrivelse"><a class="anchor" href="#_eoppslag_konseptuell_beskrivelse"></a><a class="link" href="#_eoppslag_konseptuell_beskrivelse">4.3.2. eOppslag - konseptuell beskrivelse</a></h4>
+<div class="sect4">
+<h5 id="_om_dette_mønsteret_2"><a class="anchor" href="#_om_dette_mønsteret_2"></a><a class="link" href="#_om_dette_mønsteret_2">4.3.2.1. Om dette mønsteret</a></h5>
 <div class="paragraph">
 <p>eOppslag som arkitekturmønster beskriver synkrone API-kall mot en datatilbyder med tilgangsstyring ved bruk av sikkerhetsbilletter.</p>
 </div>
@@ -1620,10 +1620,10 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 <p>Beskrivelsene er forsøkt å holdes generisk uten å peke til noen løsning og det vil dermed kunne være flere måter å realisere de ulike elementene på.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_klargjøring_for_deling_av_data_på_forespørsel"><a class="anchor" href="#_klargjøring_for_deling_av_data_på_forespørsel"></a><a class="link" href="#_klargjøring_for_deling_av_data_på_forespørsel">4.7.2. Klargjøring for <em>deling av data på forespørsel</em></a></h4>
 <div class="sect4">
-<h5 id="_tilgjengeliggjøre_data"><a class="anchor" href="#_tilgjengeliggjøre_data"></a><a class="link" href="#_tilgjengeliggjøre_data">4.7.2.1. Tilgjengeliggjøre data</a></h5>
+<h5 id="_klargjøring_for_deling_av_data_på_forespørsel"><a class="anchor" href="#_klargjøring_for_deling_av_data_på_forespørsel"></a><a class="link" href="#_klargjøring_for_deling_av_data_på_forespørsel">4.3.2.2. Klargjøring for <em>deling av data på forespørsel</em></a></h5>
+<div class="sect5">
+<h6 id="_tilgjengeliggjøre_data"><a class="anchor" href="#_tilgjengeliggjøre_data"></a><a class="link" href="#_tilgjengeliggjøre_data">4.3.2.2.1. Tilgjengeliggjøre data</a></h6>
 <div class="paragraph">
 <p>Tilgjengeliggjøring av API gjøres av tilbyder av data og er det tilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Registrering av konsumenters rettigheter og tilganger inngår også som et prosessteg.</p>
 </div>
@@ -1698,8 +1698,8 @@ Sette policy, og grov tilgangsstyring gjennom maskinporten.</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_få_tilgang_til_data"><a class="anchor" href="#_få_tilgang_til_data"></a><a class="link" href="#_få_tilgang_til_data">4.7.2.2. Få tilgang til data</a></h5>
+<div class="sect5">
+<h6 id="_få_tilgang_til_data"><a class="anchor" href="#_få_tilgang_til_data"></a><a class="link" href="#_få_tilgang_til_data">4.3.2.2.2. Få tilgang til data</a></h6>
 <div class="paragraph">
 <p><em>Få tilgang til API</em> er det en konsument av data må gjøre for å få tilgang til data gjennom et API. Det omfatter å få kjennskap til aktuelt API, inngå avtale om bruk av data, samt å registrere den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et <em>åpent tilgjengelig</em> API, kan enkelte delaktiviteter i prosessene hoppes over.</p>
 </div>
@@ -1762,8 +1762,8 @@ Sette policy, og grov tilgangsstyring gjennom maskinporten.</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_delegere_rettigheter_til_databehandler"><a class="anchor" href="#_delegere_rettigheter_til_databehandler"></a><a class="link" href="#_delegere_rettigheter_til_databehandler">4.7.2.3. Delegere rettigheter til databehandler</a></h5>
+<div class="sect5">
+<h6 id="_delegere_rettigheter_til_databehandler"><a class="anchor" href="#_delegere_rettigheter_til_databehandler"></a><a class="link" href="#_delegere_rettigheter_til_databehandler">4.3.2.2.3. Delegere rettigheter til databehandler</a></h6>
 <div class="paragraph">
 <p>Delegering av rettigheter til databehandler er det en konsument må gjøre for at en leverandør kan identifisere seg med sitt eget virksomhetssertifikat og opptre på vegne av konsumenten som er den som innehar behandlingsgrunnlaget for å innhente data.</p>
 </div>
@@ -1818,10 +1818,10 @@ Sette policy, og grov tilgangsstyring gjennom maskinporten.</p></td>
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_utveksling_av_data"><a class="anchor" href="#_utveksling_av_data"></a><a class="link" href="#_utveksling_av_data">4.7.3. Utveksling av data</a></h4>
 <div class="sect4">
-<h5 id="_innhente_data"><a class="anchor" href="#_innhente_data"></a><a class="link" href="#_innhente_data">4.7.3.1. Innhente data</a></h5>
+<h5 id="_utveksling_av_data"><a class="anchor" href="#_utveksling_av_data"></a><a class="link" href="#_utveksling_av_data">4.3.2.3. Utveksling av data</a></h5>
+<div class="sect5">
+<h6 id="_innhente_data"><a class="anchor" href="#_innhente_data"></a><a class="link" href="#_innhente_data">4.3.2.3.1. Innhente data</a></h6>
 <div class="paragraph">
 <p>Slå opp data gjennom et API er det en konsument må gjøre når det utføres et tjenestekall for å innhente data gjennom et API. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
 </div>
@@ -1895,8 +1895,8 @@ Sette policy, og grov tilgangsstyring gjennom maskinporten.</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_avgi_data"><a class="anchor" href="#_avgi_data"></a><a class="link" href="#_avgi_data">4.7.3.2. Avgi data</a></h5>
+<div class="sect5">
+<h6 id="_avgi_data"><a class="anchor" href="#_avgi_data"></a><a class="link" href="#_avgi_data">4.3.2.3.2. Avgi data</a></h6>
 <div class="paragraph">
 <p>Avgi forespurte data er det tilbyder av data må gjøre for å svare på en forespørsel. Prosessen kontrollere tilgang gjøres kun dersom det er enakk om å avgi data gjennom et sikret API.</p>
 </div>
@@ -1985,10 +1985,10 @@ Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, el
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_eoppslag_bruk_av_nasjonale_fellesløsninger"><a class="anchor" href="#_eoppslag_bruk_av_nasjonale_fellesløsninger"></a><a class="link" href="#_eoppslag_bruk_av_nasjonale_fellesløsninger">4.8. eOppslag - bruk av nasjonale fellesløsninger</a></h3>
 <div class="sect3">
-<h4 id="_om_dette_mønsteret_3"><a class="anchor" href="#_om_dette_mønsteret_3"></a><a class="link" href="#_om_dette_mønsteret_3">4.8.1. Om dette mønsteret</a></h4>
+<h4 id="_eoppslag_bruk_av_nasjonale_fellesløsninger"><a class="anchor" href="#_eoppslag_bruk_av_nasjonale_fellesløsninger"></a><a class="link" href="#_eoppslag_bruk_av_nasjonale_fellesløsninger">4.3.3. eOppslag - bruk av nasjonale fellesløsninger</a></h4>
+<div class="sect4">
+<h5 id="_om_dette_mønsteret_3"><a class="anchor" href="#_om_dette_mønsteret_3"></a><a class="link" href="#_om_dette_mønsteret_3">4.3.3.1. Om dette mønsteret</a></h5>
 <div class="paragraph">
 <p>Beskrivelsene her viser hvordan den konseptuelle arkitekturen for eOppslag kan realiseres med løsningskomponentene Maskinporten, API-katalogen og Altinn-autorisasjon. Disse fellesløsningene leverer de tjenestene som er beskrevet på forretningsnivå over.</p>
 </div>
@@ -2005,10 +2005,10 @@ Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, el
 <p>For å registrere API må man for i de respektive fellestjenestene ha rettigheter til dette på vegne av egen virksomhet. Dette tildeles iht. hvem som har rettigheter i enhetsregisteret og rettighetene må delegeres nedover i organisasjonen til den som skal gjennomføre registreringen. Dette foregår i Altinn.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_klargjøring_for_deling_av_data_på_forespørsel_2"><a class="anchor" href="#_klargjøring_for_deling_av_data_på_forespørsel_2"></a><a class="link" href="#_klargjøring_for_deling_av_data_på_forespørsel_2">4.8.2. Klargjøring for <em>deling av data på forespørsel</em></a></h4>
 <div class="sect4">
-<h5 id="_tilgjengeliggjøre_data_2"><a class="anchor" href="#_tilgjengeliggjøre_data_2"></a><a class="link" href="#_tilgjengeliggjøre_data_2">4.8.2.1. Tilgjengeliggjøre data</a></h5>
+<h5 id="_klargjøring_for_deling_av_data_på_forespørsel_2"><a class="anchor" href="#_klargjøring_for_deling_av_data_på_forespørsel_2"></a><a class="link" href="#_klargjøring_for_deling_av_data_på_forespørsel_2">4.3.3.2. Klargjøring for <em>deling av data på forespørsel</em></a></h5>
+<div class="sect5">
+<h6 id="_tilgjengeliggjøre_data_2"><a class="anchor" href="#_tilgjengeliggjøre_data_2"></a><a class="link" href="#_tilgjengeliggjøre_data_2">4.3.3.2.1. Tilgjengeliggjøre data</a></h6>
 <div class="paragraph">
 <p>For å tilby data gjennom et API sikret med fellestjenester må tilbyder inngå avtale for bruk av Maskinporten og Felles API-katalog. De respektive API-ene og hvem som skal ha hvilke rettighetene til disse må så registreres i løsningene.</p>
 </div>
@@ -2114,8 +2114,8 @@ Altinn autorisasjon leverer også tjenester for å registrere og kontrollere sam
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_få_tilgang_til_data_2"><a class="anchor" href="#_få_tilgang_til_data_2"></a><a class="link" href="#_få_tilgang_til_data_2">4.8.2.2. Få tilgang til data</a></h5>
+<div class="sect5">
+<h6 id="_få_tilgang_til_data_2"><a class="anchor" href="#_få_tilgang_til_data_2"></a><a class="link" href="#_få_tilgang_til_data_2">4.3.3.2.2. Få tilgang til data</a></h6>
 <div class="paragraph">
 <p>For å få tilgang til data gjennom et API sikret ved hjelp av nasjonale fellesløsninger, må konsumenten inngå avtale for bruk av Maskinporten og registrere den tekniske klienten som skal benytte løsningen.</p>
 </div>
@@ -2185,8 +2185,8 @@ Altinn autorisasjon leverer også tjenester for å registrere og kontrollere sam
 </tr>
 </tbody>
 </table>
-<div class="sect5">
-<h6 id="_delegering_av_rettigheter_til_databehandler"><a class="anchor" href="#_delegering_av_rettigheter_til_databehandler"></a><a class="link" href="#_delegering_av_rettigheter_til_databehandler">4.8.2.2.1. Delegering av rettigheter til databehandler</a></h6>
+<div class="sect6">
+<h7 id="_delegering_av_rettigheter_til_databehandler"><a class="anchor" href="#_delegering_av_rettigheter_til_databehandler"></a><a class="link" href="#_delegering_av_rettigheter_til_databehandler">4.3.3.2.2.1. Delegering av rettigheter til databehandler</a></h7>
 <div class="paragraph">
 <p>Dersom konsumenten benytter en leverandør som skal opptre på konsumentens vegne, må dette forholdet registereres gjennom Altinn autorisasjon slik at det blir tilgjengelig for Maskinporten å kontrollere representasjonsforholdet.</p>
 </div>
@@ -2246,8 +2246,8 @@ Altinn autorisasjon leverer også tjenester for å registrere og kontrollere sam
 </table>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_informasjon_som_inngår_i_klargjøring_av_forespørsel"><a class="anchor" href="#_informasjon_som_inngår_i_klargjøring_av_forespørsel"></a><a class="link" href="#_informasjon_som_inngår_i_klargjøring_av_forespørsel">4.8.2.3. Informasjon som inngår i klargjøring av forespørsel</a></h5>
+<div class="sect5">
+<h6 id="_informasjon_som_inngår_i_klargjøring_av_forespørsel"><a class="anchor" href="#_informasjon_som_inngår_i_klargjøring_av_forespørsel"></a><a class="link" href="#_informasjon_som_inngår_i_klargjøring_av_forespørsel">4.3.3.2.3. Informasjon som inngår i klargjøring av forespørsel</a></h6>
 <div class="paragraph">
 <p>Figuren under viser hvilken informasjons som må registreres i de ulike komponentene som del av klargjøringen for å forespørre data fra et API.</p>
 </div>
@@ -2312,10 +2312,10 @@ Viktig innholde er bl.a. URL</p></td>
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_utveksling_av_data_2"><a class="anchor" href="#_utveksling_av_data_2"></a><a class="link" href="#_utveksling_av_data_2">4.8.3. Utveksling av data</a></h4>
 <div class="sect4">
-<h5 id="_innhente_data_2"><a class="anchor" href="#_innhente_data_2"></a><a class="link" href="#_innhente_data_2">4.8.3.1. Innhente data</a></h5>
+<h5 id="_utveksling_av_data_2"><a class="anchor" href="#_utveksling_av_data_2"></a><a class="link" href="#_utveksling_av_data_2">4.3.3.3. Utveksling av data</a></h5>
+<div class="sect5">
+<h6 id="_innhente_data_2"><a class="anchor" href="#_innhente_data_2"></a><a class="link" href="#_innhente_data_2">4.3.3.3.1. Innhente data</a></h6>
 <div class="paragraph">
 <p>Når en konsumet skal slå opp data gjennom et API benyttes Maskinporten for å få utstedt en sikkerhetsbillett som legges ved tjenestekallet til tilbyders API. Maskinporten utsteder sikkerhetsbilletter som OAUTH2-tokens.</p>
 </div>
@@ -2421,8 +2421,8 @@ Altinn autorisasjon leverer også tjenester for å registrere og kontrollere sam
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_avgi_data_2"><a class="anchor" href="#_avgi_data_2"></a><a class="link" href="#_avgi_data_2">4.8.3.2. Avgi data</a></h5>
+<div class="sect5">
+<h6 id="_avgi_data_2"><a class="anchor" href="#_avgi_data_2"></a><a class="link" href="#_avgi_data_2">4.3.3.3.2. Avgi data</a></h6>
 <div class="paragraph">
 <p>Når tilbyder får en forspørsel om data som et API-kall og det ligger ved en sikkerhetsbillett benyttes valideringstjenesten til maskinporten for grov tilgangskontroll.</p>
 </div>
@@ -2509,12 +2509,11 @@ Også kalt policy enforcement point (PEP).</p></td>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_publisering_konsumering_enotifikasjon"><a class="anchor" href="#_publisering_konsumering_enotifikasjon"></a><a class="link" href="#_publisering_konsumering_enotifikasjon">4.9. Publisering-konsumering (eNotifikasjon)</a></h3>
-
 </div>
 <div class="sect2">
-<h3 id="_om_publisering_og_konsumering_av_hendelsesstrømmer"><a class="anchor" href="#_om_publisering_og_konsumering_av_hendelsesstrømmer"></a><a class="link" href="#_om_publisering_og_konsumering_av_hendelsesstrømmer">4.10. Om publisering og konsumering av hendelsesstrømmer</a></h3>
+<h3 id="_publisering_konsumering_enotifikasjon"><a class="anchor" href="#_publisering_konsumering_enotifikasjon"></a><a class="link" href="#_publisering_konsumering_enotifikasjon">4.4. Publisering-konsumering (eNotifikasjon)</a></h3>
+<div class="sect3">
+<h4 id="_om_publisering_og_konsumering_av_hendelsesstrømmer"><a class="anchor" href="#_om_publisering_og_konsumering_av_hendelsesstrømmer"></a><a class="link" href="#_om_publisering_og_konsumering_av_hendelsesstrømmer">4.4.1. Om publisering og konsumering av hendelsesstrømmer</a></h4>
 <div id="basiskonsept-pub-sub" class="paragraph">
 <p>Mønstre for publisering handler helt grunnleggende om at tilbydere publiserer data, uten nødvendigvis å vite om aktuelle konsumenter. Data kan i denne sammenhengen være f.eks. metadata som i Felles datakatalog, eller f.eks. data bak et API som publiseres åpent.</p>
 </div>
@@ -2522,8 +2521,8 @@ Også kalt policy enforcement point (PEP).</p></td>
 <p>Et spesialtilfelle som omhandles med en egen referansearkitektur her, er publisering av hendelsesstrømmer.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_bruksområder_for_publisering_av_hendelsesstrømmer"><a class="anchor" href="#_bruksområder_for_publisering_av_hendelsesstrømmer"></a><a class="link" href="#_bruksområder_for_publisering_av_hendelsesstrømmer">4.11. Bruksområder for publisering av hendelsesstrømmer</a></h3>
+<div class="sect3">
+<h4 id="_bruksområder_for_publisering_av_hendelsesstrømmer"><a class="anchor" href="#_bruksområder_for_publisering_av_hendelsesstrømmer"></a><a class="link" href="#_bruksområder_for_publisering_av_hendelsesstrømmer">4.4.2. Bruksområder for publisering av hendelsesstrømmer</a></h4>
 <div class="paragraph">
 <p>Eksempler på anvendelse av mønstre for publisering og konsumering av hendelsesstrømmer:</p>
 </div>
@@ -2547,10 +2546,10 @@ Også kalt policy enforcement point (PEP).</p></td>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_konsepter_for_publisering_av_hendelsestrømmer"><a class="anchor" href="#_konsepter_for_publisering_av_hendelsestrømmer"></a><a class="link" href="#_konsepter_for_publisering_av_hendelsestrømmer">4.12. Konsepter for publisering av hendelsestrømmer</a></h3>
 <div class="sect3">
-<h4 id="_introduksjon_3"><a class="anchor" href="#_introduksjon_3"></a><a class="link" href="#_introduksjon_3">4.12.1. Introduksjon</a></h4>
+<h4 id="_konsepter_for_publisering_av_hendelsestrømmer"><a class="anchor" href="#_konsepter_for_publisering_av_hendelsestrømmer"></a><a class="link" href="#_konsepter_for_publisering_av_hendelsestrømmer">4.4.3. Konsepter for publisering av hendelsestrømmer</a></h4>
+<div class="sect4">
+<h5 id="_introduksjon_3"><a class="anchor" href="#_introduksjon_3"></a><a class="link" href="#_introduksjon_3">4.4.3.1. Introduksjon</a></h5>
 <div id="basiskonsept-publisering2" class="paragraph">
 <p>Mønstre for publisering handler helt grunnleggende om at tilbydere publiserer datastrømmer, eller hendelsesstrømmer, uten å måtte vite hvem konsumentene er. Konsumentene kan i sin tur koble seg på disse hendelsestrømmene og ta rede på hva som skjer.</p>
 </div>
@@ -2648,8 +2647,8 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="bruksområder-publisering-generelt"><a class="anchor" href="#bruksområder-publisering-generelt"></a><a class="link" href="#bruksområder-publisering-generelt">4.12.2. Bruksområder</a></h4>
+<div class="sect4">
+<h5 id="bruksområder-publisering-generelt"><a class="anchor" href="#bruksområder-publisering-generelt"></a><a class="link" href="#bruksområder-publisering-generelt">4.4.3.2. Bruksområder</a></h5>
 <div class="paragraph">
 <p>Eksempler på anvendelse av mønstre for publisering og konsumering av hendelsesstrømmer:</p>
 </div>
@@ -2673,12 +2672,12 @@ I artikkelen  <a href="https://martinfowler.com/articles/201701-event-driven.htm
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="overskrift-grunnleggende-publisering"><a class="anchor" href="#overskrift-grunnleggende-publisering"></a><a class="link" href="#overskrift-grunnleggende-publisering">4.12.3. Konsepter for publisering og konsumering av hendelsesstrømmer</a></h4>
 <div class="sect4">
-<h5 id="generisk-publisering"><a class="anchor" href="#generisk-publisering"></a><a class="link" href="#generisk-publisering">4.12.3.1. Basiskonsepter</a></h5>
+<h5 id="overskrift-grunnleggende-publisering"><a class="anchor" href="#overskrift-grunnleggende-publisering"></a><a class="link" href="#overskrift-grunnleggende-publisering">4.4.3.3. Konsepter for publisering og konsumering av hendelsesstrømmer</a></h5>
 <div class="sect5">
-<h6 id="_aktørsamspill"><a class="anchor" href="#_aktørsamspill"></a><a class="link" href="#_aktørsamspill">4.12.3.1.1. Aktørsamspill</a></h6>
+<h6 id="generisk-publisering"><a class="anchor" href="#generisk-publisering"></a><a class="link" href="#generisk-publisering">4.4.3.3.1. Basiskonsepter</a></h6>
+<div class="sect6">
+<h7 id="_aktørsamspill"><a class="anchor" href="#_aktørsamspill"></a><a class="link" href="#_aktørsamspill">4.4.3.3.1.1. Aktørsamspill</a></h7>
 <div class="paragraph">
 <p>Datatilbyder <span class="underline">publiserer</span> hendelsestrømmer som <span class="underline">konsumeres</span> av datakonsumenter. Tilsvarende kan en si at datatilbyders publiseringsløsning <span class="underline">skriver</span> notifikasjoner til hendelseslister etterhvert som hendelser skjer, etterfulgt av at datakonsumentene <span class="underline">leser</span> notifikasjoner gjennom sine løsninger for innhenting og mottak.</p>
 </div>
@@ -2707,8 +2706,8 @@ Det faller utenfor omfanget her å gå inn på tilfeller der  ekstern tjenestele
 </table>
 </div>
 </div>
-<div class="sect5">
-<h6 id="grunnleggende-begreper"><a class="anchor" href="#grunnleggende-begreper"></a><a class="link" href="#grunnleggende-begreper">4.12.3.1.2. Begrepsapparat</a></h6>
+<div class="sect6">
+<h7 id="grunnleggende-begreper"><a class="anchor" href="#grunnleggende-begreper"></a><a class="link" href="#grunnleggende-begreper">4.4.3.3.1.2. Begrepsapparat</a></h7>
 <div class="paragraph">
 <p>Grunnleggende begreper og sammenhenger er vist i følgende modell.</p>
 </div>
@@ -2756,8 +2755,8 @@ Det faller utenfor omfanget her å gå inn på tilfeller der  ekstern tjenestele
 </ul>
 </div>
 </div>
-<div class="sect5">
-<h6 id="notifikasjonsinnhold-generisk"><a class="anchor" href="#notifikasjonsinnhold-generisk"></a><a class="link" href="#notifikasjonsinnhold-generisk">4.12.3.1.3. Innhold i notifikasjoner</a></h6>
+<div class="sect6">
+<h7 id="notifikasjonsinnhold-generisk"><a class="anchor" href="#notifikasjonsinnhold-generisk"></a><a class="link" href="#notifikasjonsinnhold-generisk">4.4.3.3.1.3. Innhold i notifikasjoner</a></h7>
 <div class="paragraph">
 <p>Begrepsapparatet bygger på <a href="#grunnleggende-begreper">det grunnleggende begrepsapparatet for publisering av hendelsesstrømmer</a>.</p>
 </div>
@@ -2797,8 +2796,8 @@ Det faller utenfor omfanget her å gå inn på tilfeller der  ekstern tjenestele
 </ul>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister"><a class="anchor" href="#_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister"></a><a class="link" href="#_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister">4.12.3.1.4. Innhenting av notifikasjoner gjennom spørring mot hendelseslister</a></h6>
+<div class="sect6">
+<h7 id="_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister"><a class="anchor" href="#_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister"></a><a class="link" href="#_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister">4.4.3.3.1.4. Innhenting av notifikasjoner gjennom spørring mot hendelseslister</a></h7>
 <div class="paragraph">
 <p>Pullbasert innhenting av notifikasjoner skjer gjennom at konsumenten forespør notifikasjoner fra tilbyder, etterfulgt av at forespurte notifikasjoner leveres. Dette kan være en enkelt notifikasjon eller flere i rekke. Illustrasjon (sekvensdiagram):</p>
 </div>
@@ -2834,8 +2833,8 @@ Det faller utenfor omfanget her å gå inn på tilfeller der  ekstern tjenestele
 </ul>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_innhenting_av_supplerende_hendelsesrelaterte_data"><a class="anchor" href="#_innhenting_av_supplerende_hendelsesrelaterte_data"></a><a class="link" href="#_innhenting_av_supplerende_hendelsesrelaterte_data">4.12.3.1.5. Innhenting av supplerende hendelsesrelaterte data</a></h6>
+<div class="sect6">
+<h7 id="_innhenting_av_supplerende_hendelsesrelaterte_data"><a class="anchor" href="#_innhenting_av_supplerende_hendelsesrelaterte_data"></a><a class="link" href="#_innhenting_av_supplerende_hendelsesrelaterte_data">4.4.3.3.1.5. Innhenting av supplerende hendelsesrelaterte data</a></h7>
 <div class="paragraph">
 <p>For notifikasjoner som ikke gir et tilstrekkelig sett av <em>hendelsesrelaterte data</em> for konsumentens formål, må datakonsumenten selv ta initiativ til å innhente <em>supplerende hendelsesrelaterte data</em>.</p>
 </div>
@@ -2884,10 +2883,10 @@ Selve innhentingen av <em>supplerende hendelsesrelaterte data</em> dekkes av eOp
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_avanserte_konsepter"><a class="anchor" href="#_avanserte_konsepter"></a><a class="link" href="#_avanserte_konsepter">4.12.3.2. Avanserte konsepter</a></h5>
 <div class="sect5">
-<h6 id="generisk-publish-subscribe"><a class="anchor" href="#generisk-publish-subscribe"></a><a class="link" href="#generisk-publish-subscribe">4.12.3.2.1. Abonnementsbasert publisering</a></h6>
+<h6 id="_avanserte_konsepter"><a class="anchor" href="#_avanserte_konsepter"></a><a class="link" href="#_avanserte_konsepter">4.4.3.3.2. Avanserte konsepter</a></h6>
+<div class="sect6">
+<h7 id="generisk-publish-subscribe"><a class="anchor" href="#generisk-publish-subscribe"></a><a class="link" href="#generisk-publish-subscribe">4.4.3.3.2.1. Abonnementsbasert publisering</a></h7>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2962,8 +2961,8 @@ Dette konseptet tilsvarer det som i litteraturen tradisjonelt omtales som <em>pu
 </div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="filtrering-og-minimering"><a class="anchor" href="#filtrering-og-minimering"></a><a class="link" href="#filtrering-og-minimering">4.12.3.2.2. Filtrering og minimering av hendelseslister og notifikasjoner</a></h6>
+<div class="sect6">
+<h7 id="filtrering-og-minimering"><a class="anchor" href="#filtrering-og-minimering"></a><a class="link" href="#filtrering-og-minimering">4.4.3.3.2.2. Filtrering og minimering av hendelseslister og notifikasjoner</a></h7>
 <div class="paragraph">
 <p>Filtrering og minimering av hendelseslister og notifikasjoner handler om:</p>
 </div>
@@ -3006,8 +3005,8 @@ Dette konseptet tilsvarer det som i litteraturen tradisjonelt omtales som <em>pu
 <div class="title">Figur 35. Filtrering og minimering av hendelseslister og notifikasjoner på tvers av tilbyder og konsument</div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="utledning-av-subjekttilstand"><a class="anchor" href="#utledning-av-subjekttilstand"></a><a class="link" href="#utledning-av-subjekttilstand">4.12.3.2.3. Tilstand som resultat av hendelser</a></h6>
+<div class="sect6">
+<h7 id="utledning-av-subjekttilstand"><a class="anchor" href="#utledning-av-subjekttilstand"></a><a class="link" href="#utledning-av-subjekttilstand">4.4.3.3.2.3. Tilstand som resultat av hendelser</a></h7>
 <div class="paragraph">
 <p>Et subjekts tilstand kan beskrives i form av et øyeblikksbilde eller som en serie endringer ut fra et tidligere øyeblikksbilde. En notifikasjon inneholder tilsvarende enten et øyeblikksbilde av subjektet eller data om hendelsen som beskriver en inkrementell endring.</p>
 </div>
@@ -3030,10 +3029,10 @@ En kan tenke på notifikasjoner  som transaksjoner i et regskap som gjøres opp 
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_enotifikasjon"><a class="anchor" href="#_enotifikasjon"></a><a class="link" href="#_enotifikasjon">4.13. eNotifikasjon</a></h3>
 <div class="sect3">
-<h4 id="_om_dette_mønsteret_4"><a class="anchor" href="#_om_dette_mønsteret_4"></a><a class="link" href="#_om_dette_mønsteret_4">4.13.1. Om dette mønsteret</a></h4>
+<h4 id="_enotifikasjon"><a class="anchor" href="#_enotifikasjon"></a><a class="link" href="#_enotifikasjon">4.4.4. eNotifikasjon</a></h4>
+<div class="sect4">
+<h5 id="_om_dette_mønsteret_4"><a class="anchor" href="#_om_dette_mønsteret_4"></a><a class="link" href="#_om_dette_mønsteret_4">4.4.4.1. Om dette mønsteret</a></h5>
 <div class="paragraph">
 <p>eNotifikasjon er en referansearkitektur for utveksling av notifikasjoner som er innrettet på å støtte opp under "nyere" arkitekturmønstre for distribuerte applikasjoner, særlig aktuelt innen Microservices som arkitekturparadigme.</p>
 </div>
@@ -3081,10 +3080,10 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_verdistrømbeskrivelse"><a class="anchor" href="#_verdistrømbeskrivelse"></a><a class="link" href="#_verdistrømbeskrivelse">4.13.2. Verdistrømbeskrivelse</a></h4>
 <div class="sect4">
-<h5 id="_enotifikasjon_oversikt_over_verdistrømmer"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer"></a><a class="link" href="#_enotifikasjon_oversikt_over_verdistrømmer">4.13.2.1. eNotifikasjon - oversikt over verdistrømmer</a></h5>
+<h5 id="_verdistrømbeskrivelse"><a class="anchor" href="#_verdistrømbeskrivelse"></a><a class="link" href="#_verdistrømbeskrivelse">4.4.4.2. Verdistrømbeskrivelse</a></h5>
+<div class="sect5">
+<h6 id="_enotifikasjon_oversikt_over_verdistrømmer"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer"></a><a class="link" href="#_enotifikasjon_oversikt_over_verdistrømmer">4.4.4.2.1. eNotifikasjon - oversikt over verdistrømmer</a></h6>
 <div class="paragraph">
 <p>Følgende modell viser en oversikt over verdistrømmene på tvers av datatilbyder og datakonsument for eNotifikasjon. Dette er en spesialisering av den generiske verdistrømbeskrivelsen som finnes under <mark><a href="../nab_arkitekturlandskap_segmentarkitektur_datadeling_verdistrømmer/">Felles referansemodeller for datadeling</a>.</mark></p>
 </div>
@@ -3098,8 +3097,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 <p>Disse verdistrømmene er nærmere beskrevet for hver rolle i påfølgende avsnitt.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_enotifikasjon_verdistrøm_for_datatilbyder"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datatilbyder"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datatilbyder">4.13.2.2. eNotifikasjon - verdistrøm for datatilbyder</a></h5>
+<div class="sect5">
+<h6 id="_enotifikasjon_verdistrøm_for_datatilbyder"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datatilbyder"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datatilbyder">4.4.4.2.2. eNotifikasjon - verdistrøm for datatilbyder</a></h6>
 <div class="paragraph">
 <p>Her vises verdistrømmen for eNotifikasjon sett fra datatilbyder, med angivelse av kapabiliteter.</p>
 </div>
@@ -3116,8 +3115,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 <div class="title">Figur 37. eNotifikasjon - tilbyders verdistrøm</div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_enotifikasjon_verdistrøm_for_datakonsumenter"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datakonsumenter"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datakonsumenter">4.13.2.3. eNotifikasjon - verdistrøm for datakonsumenter</a></h5>
+<div class="sect5">
+<h6 id="_enotifikasjon_verdistrøm_for_datakonsumenter"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datakonsumenter"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datakonsumenter">4.4.4.2.3. eNotifikasjon - verdistrøm for datakonsumenter</a></h6>
 <div class="paragraph">
 <p>Her vises verdistrømmen for eNotifikasjon sett fra datakonsumenter, med angivelse av kapabiliteter.</p>
 </div>
@@ -3135,8 +3134,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_kapabilitetskart_for_enotifikasjon"><a class="anchor" href="#_kapabilitetskart_for_enotifikasjon"></a><a class="link" href="#_kapabilitetskart_for_enotifikasjon">4.13.3. Kapabilitetskart for eNotifikasjon</a></h4>
+<div class="sect4">
+<h5 id="_kapabilitetskart_for_enotifikasjon"><a class="anchor" href="#_kapabilitetskart_for_enotifikasjon"></a><a class="link" href="#_kapabilitetskart_for_enotifikasjon">4.4.4.3. Kapabilitetskart for eNotifikasjon</a></h5>
 <div class="paragraph">
 <p>Modellen under gir en samlet oversikt over kapabiliteter som er spesifikke for eNotifikasjon, slik disse er identifisert i foregående verdistrømbeskrivelse.</p>
 </div>
@@ -3190,13 +3189,13 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_realisering_av_kapabiliteter_generisk_arkitekturmønster"><a class="anchor" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster"></a><a class="link" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">4.13.4. Realisering av kapabiliteter - generisk arkitekturmønster</a></h4>
+<div class="sect4">
+<h5 id="_realisering_av_kapabiliteter_generisk_arkitekturmønster"><a class="anchor" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster"></a><a class="link" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">4.4.4.4. Realisering av kapabiliteter - generisk arkitekturmønster</a></h5>
 <div class="paragraph">
 <p>Her beskrives realiseringen av de kapabilitetene som er spesifikke for eNotifikasjon i form av et generisk, løsningsuavhengig arkitekturmønster. Det vil kunne være flere måter å realisere aktuelle arkitekturbyggeklosser på.</p>
 </div>
-<div class="sect4">
-<h5 id="_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">4.13.4.1. Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></h5>
+<div class="sect5">
+<h6 id="_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">4.4.4.4.1. Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></h6>
 <div class="paragraph">
 <p>Gi tilgang til notifikasjoner og hendelser er den prosessen datatilbyder må gjøre for å gi datakonsumenten tilgang til hendelseslister. Ved helt åpne hendelseslister kan prosessen være unødvendig og utgår, men vil normalt omfatte å tilgjengeliggjøre API som beskrevet i eOppslag. I tillegg kan det eventuelt registreres informasjon i tilknytning til filtrering og tilpasning av hendelselister ut fra konsumentens behov og tilganger.</p>
 </div>
@@ -3246,8 +3245,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">4.13.4.2. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></h5>
+<div class="sect5">
+<h6 id="_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">4.4.4.4.2. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></h6>
 <div class="paragraph">
 <p>Få tilgang til notifikasjoner og hendelser er den prosessen datakonsument må gjøre for å sette opp og få tilganger til hendelseslister. Prosessetrinnene kommer i tillegg til prosessen for å få tigang til API som beskrevet i eOppslag.</p>
 </div>
@@ -3293,8 +3292,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_generere_og_tilby_notifikasjoner"><a class="anchor" href="#_generere_og_tilby_notifikasjoner"></a><a class="link" href="#_generere_og_tilby_notifikasjoner">4.13.4.3. Generere og tilby notifikasjoner</a></h5>
+<div class="sect5">
+<h6 id="_generere_og_tilby_notifikasjoner"><a class="anchor" href="#_generere_og_tilby_notifikasjoner"></a><a class="link" href="#_generere_og_tilby_notifikasjoner">4.4.4.4.3. Generere og tilby notifikasjoner</a></h6>
 <div class="paragraph">
 <p>Generer og publiser notifikasjoner er den prosessen datatilbyder må gjøre for å tilby notifikasjoner gjennom hendelseslister. Hendelselister tilbys på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men det finnes spesielle krav for hendelseslister med tanke på segmentering,  filtrering og navigering.</p>
 </div>
@@ -3368,8 +3367,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_avgi_forespurte_notifikasjoner"><a class="anchor" href="#_avgi_forespurte_notifikasjoner"></a><a class="link" href="#_avgi_forespurte_notifikasjoner">4.13.4.4. Avgi forespurte notifikasjoner</a></h5>
+<div class="sect5">
+<h6 id="_avgi_forespurte_notifikasjoner"><a class="anchor" href="#_avgi_forespurte_notifikasjoner"></a><a class="link" href="#_avgi_forespurte_notifikasjoner">4.4.4.4.4. Avgi forespurte notifikasjoner</a></h6>
 <div class="paragraph">
 <p>Notifikasjoner avgis gjennom API på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag, men tilbyder må, ved behov, tilpasse hendelsene som avgis etter det konsumenten har rettigheter til og etterspør. F.eks. kan konsumenten kun ha rettigheter til en delmengde av alle hendelser i hendelsesliten og også kun være interessert i enkelte typer hendelser. Konsumenten vil også normalt kun ha behov for å hente notifikasjoner som ikke er hentet tidliger, men kan også ønske å hente tidligere notifikasjoner på nytt.</p>
 </div>
@@ -3465,8 +3464,8 @@ Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, el
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_innhente_og_håndtere_notifikasjoner"><a class="anchor" href="#_innhente_og_håndtere_notifikasjoner"></a><a class="link" href="#_innhente_og_håndtere_notifikasjoner">4.13.4.5. Innhente og håndtere notifikasjoner</a></h5>
+<div class="sect5">
+<h6 id="_innhente_og_håndtere_notifikasjoner"><a class="anchor" href="#_innhente_og_håndtere_notifikasjoner"></a><a class="link" href="#_innhente_og_håndtere_notifikasjoner">4.4.4.4.5. Innhente og håndtere notifikasjoner</a></h6>
 <div class="paragraph">
 <p>Notifikasjoner leses på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men konsumentene må holde orden på spesielle forhold som rekkefølge og hvilke notifikasjoner som er lest. Konsumenten må også være i stand til å vurdere relevansen av hendelsene før videre behandling av notifikasjonene.</p>
 </div>
@@ -3546,8 +3545,8 @@ Informasjonen er grunnlag for eventuell tilpasning av innhold og utvalg.</p></td
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_løsningsmønstre_for_enotifikasjon"><a class="anchor" href="#_løsningsmønstre_for_enotifikasjon"></a><a class="link" href="#_løsningsmønstre_for_enotifikasjon">4.13.5. Løsningsmønstre for eNotifikasjon</a></h4>
+<div class="sect4">
+<h5 id="_løsningsmønstre_for_enotifikasjon"><a class="anchor" href="#_løsningsmønstre_for_enotifikasjon"></a><a class="link" href="#_løsningsmønstre_for_enotifikasjon">4.4.4.5. Løsningsmønstre for eNotifikasjon</a></h5>
 <div class="paragraph">
 <p>Spesifikke løsningsmønstre for eNotifikasjon er inntil videre ikke utarbeidet. Det er stor variasjon i praksis, og ingen fellesløsninger er så langt etablert i Norge.</p>
 </div>
@@ -3575,6 +3574,7 @@ Mer om fellesløsninger, standarder og løsningsmønstre vil følge her etterhve
 <p>Modernisert folkeregister fra Skatteetaten tilbyr hendelseslister og oppslag som konsumenttjenester. Disse tjenestene er beskrevet i <a href="https://skatteetaten.github.io/folkeregisteret-api-dokumentasjon/konsumenttjenester/">Folkeregisterets API dokumentasjon</a>.</p>
 </li>
 </ol>
+</div>
 </div>
 </div>
 </div>
