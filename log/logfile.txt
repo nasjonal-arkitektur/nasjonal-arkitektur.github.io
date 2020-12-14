@@ -1,0 +1,2 @@
+
+13.12.2020 22:03:02: Missing component name in C:\gitlab\digdir\components\architecture-repository\docs\architecture-landscape\topic-areas\data-exchange\patterns\one-way-push\antora.yml!

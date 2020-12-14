@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Meldingsutveksling - forsendelse :: Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</title>
-    <link rel="canonical" href="https://digdir.gitlab.io/site/architecture-repository/book-one-way-push/book-one-way-push.html">
+    <title>Untitled :: Nasjonalt arkitekturverksted (ny versjon under etablering des. 2020)</title>
+    <link rel="canonical" href="https://digdir.gitlab.io/site/architecture-repository/eMelding/--krav_eMelding.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -134,9 +134,9 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basismønstre for datautveksling</span>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="6">
+  <li class="nav-item" data-depth="6">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="book-one-way-push.html">Forsendelse (one way push)</a>
+    <a class="nav-link" href="../book-messaging/book-messaging.html">Forsendelse (one way push)</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="7">
     <a class="nav-link" href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html">Generisk forsendelse</a>
@@ -145,13 +145,13 @@
     <a class="nav-link" href="../4-corner-model/4-hjørnersmodellen.html">4-hjørners-modellen</a>
   </li>
   <li class="nav-item" data-depth="7">
-    <a class="nav-link" href="../eMelding/book-ra-emelding.html">eMelding</a>
+    <a class="nav-link" href="book-ra-emelding.html">eMelding</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="6">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../generic-request-reply/generic-request-reply.html">Forespørsel-svar</a>
+    <a class="nav-link" href="../book-request-reply/book-request-reply.html">Forespørsel-svar</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="7">
     <a class="nav-link" href="../generic-request-reply/generic-request-reply.html">Generisk forespørsel-svar</a>
@@ -166,8 +166,11 @@
   </li>
   <li class="nav-item" data-depth="6">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../publish-subscribe/about-publish-subscribe.html">Publisering</a>
+    <a class="nav-link" href="../book-publish-subscribe/book-publish-subscribe.html">Publisering</a>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="7">
+    <a class="nav-link" href="../publish-subscribe/about-publish-subscribe.html">Om "publish-subscribe"</a>
+  </li>
   <li class="nav-item" data-depth="7">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../event-streaming/about-event-streaming.html">Publisering og konsumering av hendelsesstrømmer</a>
@@ -329,29 +332,231 @@
 <button class="nav-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
-  <ul>
-    <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
-    <li><a href="../about-topic-areas/about-topic-areas.html">Temaområder</a></li>
-    <li><a href="../about-data-exchange/about-data-exchange.html">Datautveksling</a></li>
-    <li><a href="../about-data-exchange/about-data-exchange-reference-architecture.html">Referansearkitektur for datautveksling</a></li>
-    <li><a href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a></li>
-    <li>Basismønstre for datautveksling</li>
-    <li><a href="book-one-way-push.html">Forsendelse (one way push)</a></li>
-  </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/architecture-repository/edit/master/docs/architecture-landscape/topic-areas/data-exchange/patterns/one-way-push/modules/book-one-way-push/pages/book-one-way-push.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/architecture-repository/edit/master/docs/architecture-landscape/topic-areas/data-exchange/patterns/one-way-push/modules/eMelding/pages/--krav_eMelding.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Meldingsutveksling - forsendelse</h1>
-<div class="sect1">
-<h2 id="_generisk_forsendelse"><a class="anchor" href="#_generisk_forsendelse"></a><a class="link" href="#_generisk_forsendelse">1. Generisk forsendelse</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Hei!</p>
-</div>
-</div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Requirements for Norwegian eDelivery</caption>
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 42.8571%;">
+<col style="width: 42.8572%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gen-Leg01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must follow the Norwegian
+Interoperability principles and
+the EIF principles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norwegian Interoperability Principles (Norske
+Samhandlings Prinsipper) (Link)
+European Interoperability Framework
+Principles <a href="https://ec.europa.eu/isa2/eif_en" class="bare">https://ec.europa.eu/isa2/eif_en</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gen-Leg02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Should follow the eIDAS regulations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://ec.europa.eu/digital-singlemarket/en/policies/trust-services-and-eidentification" class="bare">https://ec.europa.eu/digital-singlemarket/en/policies/trust-services-and-eidentification</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDel-Leg01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must follow the set of principles set in the Norwegian eDelivery Strategy (Strategi for Norsk meldingsutveksling)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Norwegian Strategy on eDelivery (Norsk strategi for meldingsutveksling) (Link)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InfEx-Org01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must be easy accessible by Participants</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This requirement can be restated as "u se of Internet and Internet technologies" at the Technical level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDel-Org01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must encapsulate a eDelivery community.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">That only participants cleared for the community is able to
+send and receive event notifications and eDocuments.
+With eDEL-Org01, this requires other measures than
+physical division of communities e.g. by use of certificates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDel-
+Org02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An eDelivery community must
+share one interoperability
+agreement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Interoperability agreement defines the eDelivery
+community, those participants signing the agreement are
+members of the community.
+Avoiding bilateral interoperability agreements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDEL-Org03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must be possible to participate
+in mulitiple eDelivery
+communities with own
+interoperability agreements.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A participant can be part of several interoperability
+agreements e.g. eProcurement, eHealth, through a virtual
+segmentaion of the eDelivery Infrastructure.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDELOrg04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transmission of Event
+notifications and eDocuments
+should be reliable.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Event notifications and eDocuments is delivered to the
+receiver once and only once.
+Level of reliability must be adressed in the Interoperability
+agreement.
+For additional reliability see ABB-eIDAS_Regulation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDELOrg05</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transmission of Event
+notifications and eDocuments
+should be Secret.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In some cases Secrecy is not a requirement, whereas in
+other cases Secrecy is a "must" requirement.
+Level of Secrecy must be adressed in the Interoperability
+agreement.
+For additional Secrecy see ABB-eIDAS_Regulation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDELOrg06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transmission of Event
+notifications and eDocuments
+should have Authenticity of
+sender.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In some cases Autheticity is not a strong requirement,
+belonging to the eDelivery community is enough, whereas
+in other cases Authenticity is a "must" requirement.
+Level of Authenticity must be adressed in the
+Interoperability agreement.
+For additional Authenticity see ABB-eIDAS_Regulation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDELOrg07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transmission of Event
+notifications and eDocuments
+should be be with Integrity.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In some cases eDocuments will be transformed e.g. from
+one format to another, whereas in other cases Integrity is a
+"must" requirement.
+Level of Integrity and possibilities for transformation must
+be adressed in the Interoperability agreement .
+For additional Integrity see ABB-eIDAS_Regulation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDELOrg08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transmission of Event
+notifications and eDocuments
+can be Non-reputable.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Non-repudiation is the creation of a digital Notification
+and eDocument original e.g. neither parties can
+dispute the sending and reception incl. the content.
+In some cases Non-repudiation is not a requirement, trust
+in the eDelivery community and the receiver is
+enough, whereas in other cases, with high importance
+Business Processes, Non-repudiation is a "must"
+requirement.
+Use of Non-repudiation must be adressed in the
+Interoperability agreement .
+For Non-repudiation see ABB-eIDAS_Regulation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDEL-Org09</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDelivery must be flexible –
+allow and handle participants
+with different Business
+Process interoperability maturity.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Difference between participants in what business
+processes are digitalized and what parts of a business
+process is digitized.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDEL-Org10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDelivery must be flexible – allow and handle Business
+processes and eDocuments with
+different requirements.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid Business Processes, Notifications and eDocuments must be adressed in the Interoperability
+agreement .
+See eDEL-Org04, eDEL-Org05, eDEL-Org06, eDEL-Org07,
+eDEL-Org08</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDEL-Org11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDelivery must be scalable –
+number of participants</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An eDelivery community must be able to scale i.e. inherent
+in the architecture is possibilities to make solutions that
+doesn&#8217;t put up barriers for scalability</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDEL-Org12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDelivery must be scalable –
+number of transactions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An eDelivery community must be able to scale i.e. inherent
+in the architecture is possibilities to make solutions that
+doesn&#8217;t put up barriers for scalability</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDel-Sem01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must be possible to send
+multiple eDocuments with an
+Event Notification.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Event notification can be followed by multiple
+eDocuments, that are relevant to initiate (and fullfill) a
+Business Process on the receiving side.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDel-Sem02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must be eDocument agnostic.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any type of Documents are supported e.g. XML, pdf, Doc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDel-Sem03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must be able to exchange
+eDocuments at a size &lt; 2GB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current technical constraint.
+Se prinsip for at data anvendes fra Deres plasering.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDel-Tec01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must be based on Open
+standards with high traction.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Building the technical eDelivery (Meldingsformidling) on
+Open standards that are</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDel-Tec02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have flexible Change
+Management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possibility to change Building Blocks or versions in an easy
+and flexible way e.g. «long» phase-in and phase-out of
+technologies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eDel-Tec013</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must accomodate competition
+on solutions and service
+provision</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Building the technical eDelivery (Meldingsformidling)
+architecture on Open standards that are widely used
+(traction)
+Building the technical eDelivery
+(Meldingsformidling) architecture such that it offers a wide
+variaty of choices of participating e.g. directly or through
+service providers (cloud based).</p></td>
+</tr>
+</tbody>
+</table>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
