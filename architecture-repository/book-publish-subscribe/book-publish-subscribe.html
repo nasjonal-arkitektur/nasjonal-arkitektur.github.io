@@ -347,17 +347,71 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Pub-sub / Hendelsesstrømming</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Innholdsfortegnelse</div>
+<ul class="sectlevel1">
+<li><a href="#_om_pub_sub">1. Om "pub-sub"</a></li>
+<li><a href="#_bruksområder_for_publisering_av_hendelsesstrømmer">2. Bruksområder for publisering av hendelsesstrømmer</a></li>
+<li><a href="#_konsepter_for_publisering_av_hendelsestrømmer">3. Konsepter for publisering av hendelsestrømmer</a>
+<ul class="sectlevel2">
+<li><a href="#_introduksjon">3.1. Introduksjon</a></li>
+<li><a href="#bruksområder-publisering-generelt">3.2. Bruksområder</a></li>
+<li><a href="#overskrift-grunnleggende-publisering">3.3. Konsepter for publisering og konsumering av hendelsesstrømmer</a>
+<ul class="sectlevel3">
+<li><a href="#generisk-publisering">3.3.1. Basiskonsepter</a>
+<ul class="sectlevel4">
+<li><a href="#_aktørsamspill">3.3.1.1. Aktørsamspill</a></li>
+<li><a href="#grunnleggende-begreper">3.3.1.2. Begrepsapparat</a></li>
+<li><a href="#notifikasjonsinnhold-generisk">3.3.1.3. Innhold i notifikasjoner</a></li>
+<li><a href="#_innhenting_av_notifikasjoner_gjennom_spørring_mot_hendelseslister">3.3.1.4. Innhenting av notifikasjoner gjennom spørring mot hendelseslister</a></li>
+<li><a href="#_innhenting_av_supplerende_hendelsesrelaterte_data">3.3.1.5. Innhenting av supplerende hendelsesrelaterte data</a></li>
+</ul>
+</li>
+<li><a href="#_avanserte_konsepter">3.3.2. Avanserte konsepter</a>
+<ul class="sectlevel4">
+<li><a href="#generisk-publish-subscribe">3.3.2.1. Abonnementsbasert publisering</a></li>
+<li><a href="#filtrering-og-minimering">3.3.2.2. Filtrering og minimering av hendelseslister og notifikasjoner</a></li>
+<li><a href="#utledning-av-subjekttilstand">3.3.2.3. Tilstand som resultat av hendelser</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_bruk_av_nasjonale_fellesløsninger_for_hendelsesstrømming_enotifikasjon">4. Bruk av nasjonale fellesløsninger for hendelsesstrømming (eNotifikasjon)</a></li>
+<li><a href="#_enotifikasjon">5. eNotifikasjon</a>
+<ul class="sectlevel2">
+<li><a href="#_om_dette_mønsteret">5.1. Om dette mønsteret</a></li>
+<li><a href="#_verdistrømbeskrivelse">5.2. Verdistrømbeskrivelse</a>
+<ul class="sectlevel3">
+<li><a href="#_enotifikasjon_oversikt_over_verdistrømmer">5.2.1. eNotifikasjon - oversikt over verdistrømmer</a></li>
+<li><a href="#_enotifikasjon_verdistrøm_for_datatilbyder">5.2.2. eNotifikasjon - verdistrøm for datatilbyder</a></li>
+<li><a href="#_enotifikasjon_verdistrøm_for_datakonsumenter">5.2.3. eNotifikasjon - verdistrøm for datakonsumenter</a></li>
+</ul>
+</li>
+<li><a href="#_kapabilitetskart_for_enotifikasjon">5.3. Kapabilitetskart for eNotifikasjon</a></li>
+<li><a href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">5.4. Realisering av kapabiliteter - generisk arkitekturmønster</a>
+<ul class="sectlevel3">
+<li><a href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">5.4.1. Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></li>
+<li><a href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">5.4.2. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></li>
+<li><a href="#_generere_og_tilby_notifikasjoner">5.4.3. Generere og tilby notifikasjoner</a></li>
+<li><a href="#_avgi_forespurte_notifikasjoner">5.4.4. Avgi forespurte notifikasjoner</a></li>
+<li><a href="#_innhente_og_håndtere_notifikasjoner">5.4.5. Innhente og håndtere notifikasjoner</a></li>
+</ul>
+</li>
+<li><a href="#_løsningsmønstre_for_enotifikasjon">5.5. Løsningsmønstre for eNotifikasjon</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="sect1">
-<h2 id="_om_publisering_og_hendelsesstrømming"><a class="anchor" href="#_om_publisering_og_hendelsesstrømming"></a><a class="link" href="#_om_publisering_og_hendelsesstrømming">1. Om publisering og hendelsesstrømming</a></h2>
+<h2 id="_om_pub_sub"><a class="anchor" href="#_om_pub_sub"></a><a class="link" href="#_om_pub_sub">1. Om "pub-sub"</a></h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_om_pub_sub"><a class="anchor" href="#_om_pub_sub"></a><a class="link" href="#_om_pub_sub">1.1. Om pub-sub</a></h3>
 <div id="basiskonsept-pub-sub" class="paragraph">
 <p>Mønstre for publisering handler helt grunnleggende om at tilbydere publiserer data, uten nødvendigvis å vite om aktuelle konsumenter. Data kan i denne sammenhengen være f.eks. metadata som i Felles datakatalog, eller f.eks. data bak et API som publiseres åpent.</p>
 </div>
 <div class="paragraph">
 <p>Et spesialtilfelle som omhandles med en egen referansearkitektur her, er publisering av hendelsesstrømmer.</p>
-</div>
 </div>
 </div>
 </div>
@@ -871,14 +925,19 @@ En kan tenke på notifikasjoner  som transaksjoner i et regskap som gjøres opp 
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_bruk_av_nasjonale_fellesløsninger_for_hendelsesstrømming_enotifikasjon"><a class="anchor" href="#_bruk_av_nasjonale_fellesløsninger_for_hendelsesstrømming_enotifikasjon"></a><a class="link" href="#_bruk_av_nasjonale_fellesløsninger_for_hendelsesstrømming_enotifikasjon">3.4. Bruk av nasjonale fellesløsninger for hendelsesstrømming (eNotifikasjon)</a></h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bruk_av_nasjonale_fellesløsninger_for_hendelsesstrømming_enotifikasjon"><a class="anchor" href="#_bruk_av_nasjonale_fellesløsninger_for_hendelsesstrømming_enotifikasjon"></a><a class="link" href="#_bruk_av_nasjonale_fellesløsninger_for_hendelsesstrømming_enotifikasjon">4. Bruk av nasjonale fellesløsninger for hendelsesstrømming (eNotifikasjon)</a></h2>
+<div class="sectionbody">
 
 </div>
+</div>
+<div class="sect1">
+<h2 id="_enotifikasjon"><a class="anchor" href="#_enotifikasjon"></a><a class="link" href="#_enotifikasjon">5. eNotifikasjon</a></h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_enotifikasjon"><a class="anchor" href="#_enotifikasjon"></a><a class="link" href="#_enotifikasjon">3.5. eNotifikasjon</a></h3>
-<div class="sect3">
-<h4 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">3.5.1. Om dette mønsteret</a></h4>
+<h3 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">5.1. Om dette mønsteret</a></h3>
 <div class="paragraph">
 <p>eNotifikasjon er en referansearkitektur for utveksling av notifikasjoner som er innrettet på å støtte opp under "nyere" arkitekturmønstre for distribuerte applikasjoner, særlig aktuelt innen Microservices som arkitekturparadigme.</p>
 </div>
@@ -926,10 +985,10 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_verdistrømbeskrivelse"><a class="anchor" href="#_verdistrømbeskrivelse"></a><a class="link" href="#_verdistrømbeskrivelse">5.2. Verdistrømbeskrivelse</a></h3>
 <div class="sect3">
-<h4 id="_verdistrømbeskrivelse"><a class="anchor" href="#_verdistrømbeskrivelse"></a><a class="link" href="#_verdistrømbeskrivelse">3.5.2. Verdistrømbeskrivelse</a></h4>
-<div class="sect4">
-<h5 id="_enotifikasjon_oversikt_over_verdistrømmer"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer"></a><a class="link" href="#_enotifikasjon_oversikt_over_verdistrømmer">3.5.2.1. eNotifikasjon - oversikt over verdistrømmer</a></h5>
+<h4 id="_enotifikasjon_oversikt_over_verdistrømmer"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer"></a><a class="link" href="#_enotifikasjon_oversikt_over_verdistrømmer">5.2.1. eNotifikasjon - oversikt over verdistrømmer</a></h4>
 <div class="paragraph">
 <p>Følgende modell viser en oversikt over verdistrømmene på tvers av datatilbyder og datakonsument for eNotifikasjon. Dette er en spesialisering av den generiske verdistrømbeskrivelsen som finnes under <mark><a href="../nab_arkitekturlandskap_segmentarkitektur_datadeling_verdistrømmer/">Felles referansemodeller for datadeling</a>.</mark></p>
 </div>
@@ -943,8 +1002,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 <p>Disse verdistrømmene er nærmere beskrevet for hver rolle i påfølgende avsnitt.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_enotifikasjon_verdistrøm_for_datatilbyder"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datatilbyder"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datatilbyder">3.5.2.2. eNotifikasjon - verdistrøm for datatilbyder</a></h5>
+<div class="sect3">
+<h4 id="_enotifikasjon_verdistrøm_for_datatilbyder"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datatilbyder"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datatilbyder">5.2.2. eNotifikasjon - verdistrøm for datatilbyder</a></h4>
 <div class="paragraph">
 <p>Her vises verdistrømmen for eNotifikasjon sett fra datatilbyder, med angivelse av kapabiliteter.</p>
 </div>
@@ -961,8 +1020,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 <div class="title">Figur 12. eNotifikasjon - tilbyders verdistrøm</div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_enotifikasjon_verdistrøm_for_datakonsumenter"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datakonsumenter"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datakonsumenter">3.5.2.3. eNotifikasjon - verdistrøm for datakonsumenter</a></h5>
+<div class="sect3">
+<h4 id="_enotifikasjon_verdistrøm_for_datakonsumenter"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datakonsumenter"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datakonsumenter">5.2.3. eNotifikasjon - verdistrøm for datakonsumenter</a></h4>
 <div class="paragraph">
 <p>Her vises verdistrømmen for eNotifikasjon sett fra datakonsumenter, med angivelse av kapabiliteter.</p>
 </div>
@@ -980,8 +1039,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_kapabilitetskart_for_enotifikasjon"><a class="anchor" href="#_kapabilitetskart_for_enotifikasjon"></a><a class="link" href="#_kapabilitetskart_for_enotifikasjon">3.5.3. Kapabilitetskart for eNotifikasjon</a></h4>
+<div class="sect2">
+<h3 id="_kapabilitetskart_for_enotifikasjon"><a class="anchor" href="#_kapabilitetskart_for_enotifikasjon"></a><a class="link" href="#_kapabilitetskart_for_enotifikasjon">5.3. Kapabilitetskart for eNotifikasjon</a></h3>
 <div class="paragraph">
 <p>Modellen under gir en samlet oversikt over kapabiliteter som er spesifikke for eNotifikasjon, slik disse er identifisert i foregående verdistrømbeskrivelse.</p>
 </div>
@@ -1035,13 +1094,13 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_realisering_av_kapabiliteter_generisk_arkitekturmønster"><a class="anchor" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster"></a><a class="link" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">3.5.4. Realisering av kapabiliteter - generisk arkitekturmønster</a></h4>
+<div class="sect2">
+<h3 id="_realisering_av_kapabiliteter_generisk_arkitekturmønster"><a class="anchor" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster"></a><a class="link" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">5.4. Realisering av kapabiliteter - generisk arkitekturmønster</a></h3>
 <div class="paragraph">
 <p>Her beskrives realiseringen av de kapabilitetene som er spesifikke for eNotifikasjon i form av et generisk, løsningsuavhengig arkitekturmønster. Det vil kunne være flere måter å realisere aktuelle arkitekturbyggeklosser på.</p>
 </div>
-<div class="sect4">
-<h5 id="_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">3.5.4.1. Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></h5>
+<div class="sect3">
+<h4 id="_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">5.4.1. Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></h4>
 <div class="paragraph">
 <p>Gi tilgang til notifikasjoner og hendelser er den prosessen datatilbyder må gjøre for å gi datakonsumenten tilgang til hendelseslister. Ved helt åpne hendelseslister kan prosessen være unødvendig og utgår, men vil normalt omfatte å tilgjengeliggjøre API som beskrevet i eOppslag. I tillegg kan det eventuelt registreres informasjon i tilknytning til filtrering og tilpasning av hendelselister ut fra konsumentens behov og tilganger.</p>
 </div>
@@ -1091,8 +1150,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">3.5.4.2. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></h5>
+<div class="sect3">
+<h4 id="_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">5.4.2. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></h4>
 <div class="paragraph">
 <p>Få tilgang til notifikasjoner og hendelser er den prosessen datakonsument må gjøre for å sette opp og få tilganger til hendelseslister. Prosessetrinnene kommer i tillegg til prosessen for å få tigang til API som beskrevet i eOppslag.</p>
 </div>
@@ -1138,8 +1197,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_generere_og_tilby_notifikasjoner"><a class="anchor" href="#_generere_og_tilby_notifikasjoner"></a><a class="link" href="#_generere_og_tilby_notifikasjoner">3.5.4.3. Generere og tilby notifikasjoner</a></h5>
+<div class="sect3">
+<h4 id="_generere_og_tilby_notifikasjoner"><a class="anchor" href="#_generere_og_tilby_notifikasjoner"></a><a class="link" href="#_generere_og_tilby_notifikasjoner">5.4.3. Generere og tilby notifikasjoner</a></h4>
 <div class="paragraph">
 <p>Generer og publiser notifikasjoner er den prosessen datatilbyder må gjøre for å tilby notifikasjoner gjennom hendelseslister. Hendelselister tilbys på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men det finnes spesielle krav for hendelseslister med tanke på segmentering,  filtrering og navigering.</p>
 </div>
@@ -1213,8 +1272,8 @@ Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcin
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_avgi_forespurte_notifikasjoner"><a class="anchor" href="#_avgi_forespurte_notifikasjoner"></a><a class="link" href="#_avgi_forespurte_notifikasjoner">3.5.4.4. Avgi forespurte notifikasjoner</a></h5>
+<div class="sect3">
+<h4 id="_avgi_forespurte_notifikasjoner"><a class="anchor" href="#_avgi_forespurte_notifikasjoner"></a><a class="link" href="#_avgi_forespurte_notifikasjoner">5.4.4. Avgi forespurte notifikasjoner</a></h4>
 <div class="paragraph">
 <p>Notifikasjoner avgis gjennom API på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag, men tilbyder må, ved behov, tilpasse hendelsene som avgis etter det konsumenten har rettigheter til og etterspør. F.eks. kan konsumenten kun ha rettigheter til en delmengde av alle hendelser i hendelsesliten og også kun være interessert i enkelte typer hendelser. Konsumenten vil også normalt kun ha behov for å hente notifikasjoner som ikke er hentet tidliger, men kan også ønske å hente tidligere notifikasjoner på nytt.</p>
 </div>
@@ -1310,8 +1369,8 @@ Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, el
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_innhente_og_håndtere_notifikasjoner"><a class="anchor" href="#_innhente_og_håndtere_notifikasjoner"></a><a class="link" href="#_innhente_og_håndtere_notifikasjoner">3.5.4.5. Innhente og håndtere notifikasjoner</a></h5>
+<div class="sect3">
+<h4 id="_innhente_og_håndtere_notifikasjoner"><a class="anchor" href="#_innhente_og_håndtere_notifikasjoner"></a><a class="link" href="#_innhente_og_håndtere_notifikasjoner">5.4.5. Innhente og håndtere notifikasjoner</a></h4>
 <div class="paragraph">
 <p>Notifikasjoner leses på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men konsumentene må holde orden på spesielle forhold som rekkefølge og hvilke notifikasjoner som er lest. Konsumenten må også være i stand til å vurdere relevansen av hendelsene før videre behandling av notifikasjonene.</p>
 </div>
@@ -1391,8 +1450,8 @@ Informasjonen er grunnlag for eventuell tilpasning av innhold og utvalg.</p></td
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_løsningsmønstre_for_enotifikasjon"><a class="anchor" href="#_løsningsmønstre_for_enotifikasjon"></a><a class="link" href="#_løsningsmønstre_for_enotifikasjon">3.5.5. Løsningsmønstre for eNotifikasjon</a></h4>
+<div class="sect2">
+<h3 id="_løsningsmønstre_for_enotifikasjon"><a class="anchor" href="#_løsningsmønstre_for_enotifikasjon"></a><a class="link" href="#_løsningsmønstre_for_enotifikasjon">5.5. Løsningsmønstre for eNotifikasjon</a></h3>
 <div class="paragraph">
 <p>Spesifikke løsningsmønstre for eNotifikasjon er inntil videre ikke utarbeidet. Det er stor variasjon i praksis, og ingen fellesløsninger er så langt etablert i Norge.</p>
 </div>
@@ -1420,7 +1479,6 @@ Mer om fellesløsninger, standarder og løsningsmønstre vil følge her etterhve
 <p>Modernisert folkeregister fra Skatteetaten tilbyr hendelseslister og oppslag som konsumenttjenester. Disse tjenestene er beskrevet i <a href="https://skatteetaten.github.io/folkeregisteret-api-dokumentasjon/konsumenttjenester/">Folkeregisterets API dokumentasjon</a>.</p>
 </li>
 </ol>
-</div>
 </div>
 </div>
 </div>
