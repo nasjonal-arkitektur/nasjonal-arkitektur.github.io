@@ -118,7 +118,7 @@
     <a class="nav-link" href="book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="#architecture-repository:about-data-exchange-ra:about-data-exchange-ra.adoc">Om referansearkitektur for datautveksling</a>
+    <a class="nav-link" href="about-data-exchange-ra.html">Om referansearkitektur for datautveksling</a>
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
@@ -128,23 +128,23 @@
   </li>
   <li class="nav-item" data-depth="4">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+    <a class="nav-link" href="#architecture-repository:about-data-exchange-patterns:about-data-exchange-patterns.adoc">Om arkitekturmønstre for datautveksling</a>
   </li>
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basismønstre for datautveksling</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-one-way-push/book-one-way-push.html">Forsendelse (eMelding)</a>
+    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Forsendelse (eMelding)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
+    <a class="nav-link" href="../request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
+    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
   </li>
 </ul>
   </li>
@@ -295,6 +295,97 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Referansearkitektur for datautveksling</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Innholdsfortegnelse</div>
+<ul class="sectlevel1">
+<li><a href="#_om_referansearkitektur_for_datautveksling">1. Om referansearkitektur for datautveksling</a></li>
+<li><a href="#_begrepsapparat_for_data_datautveksling">2. Begrepsapparat for data (datautveksling)</a></li>
+<li><a href="#_roller_involvert_i_datautveksling">3. Roller involvert i datautveksling</a>
+<ul class="sectlevel2">
+<li><a href="#_samhandlingsaktører">3.1. Samhandlingsaktører</a></li>
+<li><a href="#_tiltrodde_tredjeparter">3.2. Tiltrodde tredjeparter</a></li>
+</ul>
+</li>
+<li><a href="#_arkitekturmønstre_for_datautveksling">4. Arkitekturmønstre for datautveksling</a>
+<ul class="sectlevel2">
+<li><a href="#_om_arkitekturmønstre_for_datautveksling">4.1. Om arkitekturmønstre for datautveksling</a></li>
+<li><a href="#_forsendelse_emelding">4.2. Forsendelse (eMelding)</a>
+<ul class="sectlevel3">
+<li><a href="#_generisk_forsendelse">4.2.1. Generisk forsendelse</a>
+<ul class="sectlevel4">
+<li><a href="#_introduksjon">4.2.1.1. Introduksjon</a></li>
+<li><a href="#_brukstilfeller">4.2.1.2. Brukstilfeller</a></li>
+<li><a href="#_grunnleggende_konsepter_og_forutsetninger">4.2.1.3. Grunnleggende konsepter og forutsetninger</a></li>
+</ul>
+</li>
+<li><a href="#_4_hjørners_modellen">4.2.2. 4-hjørners-modellen</a>
+<ul class="sectlevel4">
+<li><a href="#_generelt">4.2.2.1. Generelt</a></li>
+<li><a href="#_egenskaper_ved_4_hjørnersmodellen">4.2.2.2. Egenskaper ved  4-hjørnersmodellen</a></li>
+<li><a href="#_backend_integrasjon">4.2.2.3. Backend-integrasjon</a></li>
+</ul>
+</li>
+<li><a href="#_emelding">4.2.3. eMelding</a>
+<ul class="sectlevel4">
+<li><a href="#_introduksjon_2">4.2.3.1. Introduksjon</a></li>
+<li><a href="#_grunnleggende_konsepter_for_emelding">4.2.3.2. Grunnleggende konsepter for eMelding</a></li>
+<li><a href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">4.2.3.3. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></li>
+<li><a href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">4.2.3.4. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a></li>
+<li><a href="#_videre_informasjon_om_emelding">4.2.3.5. Videre informasjon om eMelding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_forespørsel_svar_eoppslag">4.3. Forespørsel-svar (eOppslag)</a>
+<ul class="sectlevel3">
+<li><a href="#_generisk_forespørsel_svar">4.3.1. Generisk forespørsel-svar</a>
+<ul class="sectlevel4">
+<li><a href="#_om_dette_mønsteret">4.3.1.1. Om dette mønsteret</a></li>
+<li><a href="#_kapabiliteter_for_deling_av_data_på_forespørsel">4.3.1.2. Kapabiliteter for deling av data på forespørsel</a></li>
+</ul>
+</li>
+<li><a href="#_eoppslag_konseptuell_beskrivelse">4.3.2. eOppslag - konseptuell beskrivelse</a>
+<ul class="sectlevel4">
+<li><a href="#_om_dette_mønsteret_2">4.3.2.1. Om dette mønsteret</a></li>
+<li><a href="#_klargjøring_for_deling_av_data_på_forespørsel">4.3.2.2. Klargjøring for <em>deling av data på forespørsel</em></a></li>
+<li><a href="#_utveksling_av_data">4.3.2.3. Utveksling av data</a></li>
+</ul>
+</li>
+<li><a href="#_eoppslag_bruk_av_nasjonale_fellesløsninger">4.3.3. eOppslag - bruk av nasjonale fellesløsninger</a>
+<ul class="sectlevel4">
+<li><a href="#_om_dette_mønsteret_3">4.3.3.1. Om dette mønsteret</a></li>
+<li><a href="#_klargjøring_for_deling_av_data_på_forespørsel_2">4.3.3.2. Klargjøring for <em>deling av data på forespørsel</em></a></li>
+<li><a href="#_utveksling_av_data_2">4.3.3.3. Utveksling av data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_publisering_konsumering_enotifikasjon">4.4. Publisering-konsumering (eNotifikasjon)</a>
+<ul class="sectlevel3">
+<li><a href="#_om_publisering_og_konsumering_av_hendelsesstrømmer">4.4.1. Om publisering og konsumering av hendelsesstrømmer</a></li>
+<li><a href="#_bruksområder_for_publisering_av_hendelsesstrømmer">4.4.2. Bruksområder for publisering av hendelsesstrømmer</a></li>
+<li><a href="#_konsepter_for_publisering_av_hendelsestrømmer">4.4.3. Konsepter for publisering av hendelsestrømmer</a>
+<ul class="sectlevel4">
+<li><a href="#_introduksjon_3">4.4.3.1. Introduksjon</a></li>
+<li><a href="#bruksområder-publisering-generelt">4.4.3.2. Bruksområder</a></li>
+<li><a href="#overskrift-grunnleggende-publisering">4.4.3.3. Konsepter for publisering og konsumering av hendelsesstrømmer</a></li>
+</ul>
+</li>
+<li><a href="#_enotifikasjon">4.4.4. eNotifikasjon</a>
+<ul class="sectlevel4">
+<li><a href="#_om_dette_mønsteret_4">4.4.4.1. Om dette mønsteret</a></li>
+<li><a href="#_verdistrømbeskrivelse">4.4.4.2. Verdistrømbeskrivelse</a></li>
+<li><a href="#_kapabilitetskart_for_enotifikasjon">4.4.4.3. Kapabilitetskart for eNotifikasjon</a></li>
+<li><a href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">4.4.4.4. Realisering av kapabiliteter - generisk arkitekturmønster</a></li>
+<li><a href="#_løsningsmønstre_for_enotifikasjon">4.4.4.5. Løsningsmønstre for eNotifikasjon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="sect1">
 <h2 id="_om_referansearkitektur_for_datautveksling"><a class="anchor" href="#_om_referansearkitektur_for_datautveksling"></a><a class="link" href="#_om_referansearkitektur_for_datautveksling">1. Om referansearkitektur for datautveksling</a></h2>
 <div class="sectionbody">
@@ -638,13 +729,13 @@ Det skilles videre mellom  konseptuelle beskrivelser og anvendelser med spesifik
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#architecture-repository:book-messaging:book-messaging.adoc" class="page unresolved">Forsendelse (eMelding)</a></p>
+<p><a href="../one-way-push/book-one-way-push.html" class="page">Forsendelse (eMelding)</a></p>
 </li>
 <li>
-<p><a href="../book-request-reply/book-request-reply.html" class="page">Forespørsel-svar (eOppslag)</a></p>
+<p><a href="../request-reply/book-request-reply.html" class="page">Forespørsel-svar (eOppslag)</a></p>
 </li>
 <li>
-<p><a href="../book-publish-subscribe/book-publish-subscribe.html" class="page">Publisering-konsumering (eNotifikasjon)</a></p>
+<p><a href="../publish-subscribe/book-publish-subscribe.html" class="page">Publisering-konsumering (eNotifikasjon)</a></p>
 </li>
 </ul>
 </div>

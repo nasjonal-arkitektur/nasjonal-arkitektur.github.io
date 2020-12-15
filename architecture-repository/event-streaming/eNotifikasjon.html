@@ -118,7 +118,7 @@
     <a class="nav-link" href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="#architecture-repository:about-data-exchange-ra:about-data-exchange-ra.adoc">Om referansearkitektur for datautveksling</a>
+    <a class="nav-link" href="../data-exchange-ra/about-data-exchange-ra.html">Om referansearkitektur for datautveksling</a>
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
@@ -128,23 +128,23 @@
   </li>
   <li class="nav-item" data-depth="4">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+    <a class="nav-link" href="#architecture-repository:about-data-exchange-patterns:about-data-exchange-patterns.adoc">Om arkitekturmønstre for datautveksling</a>
   </li>
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basismønstre for datautveksling</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-one-way-push/book-one-way-push.html">Forsendelse (eMelding)</a>
+    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Forsendelse (eMelding)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
+    <a class="nav-link" href="../request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
+    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
   </li>
 </ul>
   </li>
@@ -293,6 +293,30 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">eNotifikasjon</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Innholdsfortegnelse</div>
+<ul class="sectlevel1">
+<li><a href="#_om_dette_mønsteret">1. Om dette mønsteret</a></li>
+<li><a href="#_verdistrømbeskrivelse">2. Verdistrømbeskrivelse</a>
+<ul class="sectlevel2">
+<li><a href="#_enotifikasjon_oversikt_over_verdistrømmer">2.1. eNotifikasjon - oversikt over verdistrømmer</a></li>
+<li><a href="#_enotifikasjon_verdistrøm_for_datatilbyder">2.2. eNotifikasjon - verdistrøm for datatilbyder</a></li>
+<li><a href="#_enotifikasjon_verdistrøm_for_datakonsumenter">2.3. eNotifikasjon - verdistrøm for datakonsumenter</a></li>
+</ul>
+</li>
+<li><a href="#_kapabilitetskart_for_enotifikasjon">3. Kapabilitetskart for eNotifikasjon</a></li>
+<li><a href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">4. Realisering av kapabiliteter - generisk arkitekturmønster</a>
+<ul class="sectlevel2">
+<li><a href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">4.1. Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></li>
+<li><a href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">4.2. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></li>
+<li><a href="#_generere_og_tilby_notifikasjoner">4.3. Generere og tilby notifikasjoner</a></li>
+<li><a href="#_avgi_forespurte_notifikasjoner">4.4. Avgi forespurte notifikasjoner</a></li>
+<li><a href="#_innhente_og_håndtere_notifikasjoner">4.5. Innhente og håndtere notifikasjoner</a></li>
+</ul>
+</li>
+<li><a href="#_løsningsmønstre_for_enotifikasjon">5. Løsningsmønstre for eNotifikasjon</a></li>
+</ul>
+</div>
 <div class="sect1">
 <h2 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">1. Om dette mønsteret</a></h2>
 <div class="sectionbody">

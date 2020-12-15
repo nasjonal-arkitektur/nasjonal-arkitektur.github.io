@@ -118,7 +118,7 @@
     <a class="nav-link" href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="#architecture-repository:about-data-exchange-ra:about-data-exchange-ra.adoc">Om referansearkitektur for datautveksling</a>
+    <a class="nav-link" href="../data-exchange-ra/about-data-exchange-ra.html">Om referansearkitektur for datautveksling</a>
   </li>
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
@@ -128,23 +128,23 @@
   </li>
   <li class="nav-item" data-depth="4">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../about-data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+    <a class="nav-link" href="#architecture-repository:about-data-exchange-patterns:about-data-exchange-patterns.adoc">Om arkitekturmønstre for datautveksling</a>
   </li>
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Basismønstre for datautveksling</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-one-way-push/book-one-way-push.html">Forsendelse (eMelding)</a>
+    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Forsendelse (eMelding)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
+    <a class="nav-link" href="../request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../book-publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
+    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
   </li>
 </ul>
   </li>
@@ -293,6 +293,27 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">eMelding referansearkitektur</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Innholdsfortegnelse</div>
+<ul class="sectlevel1">
+<li><a href="#_introduksjon">1. Introduksjon</a></li>
+<li><a href="#_grunnleggende_konsepter_for_emelding">2. Grunnleggende konsepter for eMelding</a></li>
+<li><a href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">3. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></li>
+<li><a href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">4. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a>
+<ul class="sectlevel2">
+<li><a href="#_generelt">4.1. Generelt</a></li>
+<li><a href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">4.2. Klargjør for deling av data ved forsendelse (eMelding)</a></li>
+<li><a href="#_operativ_deling_av_data_ved_forsendelse_emelding">4.3. Operativ deling av data ved forsendelse (eMelding)</a>
+<ul class="sectlevel3">
+<li><a href="#_send_emelding">4.3.1. Send eMelding</a></li>
+<li><a href="#_motta_emelding">4.3.2. Motta eMelding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_videre_informasjon_om_emelding">5. Videre informasjon om eMelding</a></li>
+</ul>
+</div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
