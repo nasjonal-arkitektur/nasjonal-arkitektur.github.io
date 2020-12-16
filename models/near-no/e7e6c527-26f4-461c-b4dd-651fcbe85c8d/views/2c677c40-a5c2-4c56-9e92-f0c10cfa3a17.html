@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Request-Response Pattern - Forespørsel-svar med spørring mot API - konsept </title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Request-Response Pattern - Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept </b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/2c677c40-a5c2-4c56-9e92-f0c10cfa3a17.png" alt="Request-Response Pattern - Forespørsel-svar med spørring mot API - konsept " usemap="#2c677c40-a5c2-4c56-9e92-f0c10cfa3a17map"/>
+			   <map name="2c677c40-a5c2-4c56-9e92-f0c10cfa3a17map">
+				  		<area shape="rect" coords="10,70,143,141" href="../elements/079ad491-ade6-4656-a7a0-12ed14094ac3.html"  target="element">
+				  				<area shape="rect" coords="574,130,683,177" href="../elements/6d1b4e94-4e6d-41aa-b9ac-2286833f94ee.html"  target="element">
+				  				<area shape="rect" coords="263,190,396,261" href="../elements/8ddf96b9-fc26-4e2e-aee8-de5e2196d641.html"  target="element">
+				  				<area shape="rect" coords="550,274,659,321" href="../elements/6ec9cfda-21f3-49a1-9137-a560ae3f8431.html"  target="element">
+				  				<area shape="rect" coords="682,190,815,261" href="../elements/b815482d-ad37-4b01-a1a9-9a4b662365da.html"  target="element">
+				  				<area shape="rect" coords="432,190,565,261" href="../elements/d33e747f-792f-4b05-9c79-d76f7f3890f5.html"  target="element">
+				  				<area shape="rect" coords="682,46,815,117" href="../elements/a78bf9f0-ef86-4b42-b908-545afa46e6b3.html"  target="element">
+				  				<area shape="rect" coords="262,46,395,117" href="../elements/c777850b-1ce0-4af0-b1b2-d180411baaca.html"  target="element">
+
+				  		<area shape="rect" coords="226,10,854,343" href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td> difi:language </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">no</xmp> </td></tr><tr><td> difi:name_no </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">Request-Response Pattern</xmp> </td></tr><tr><td> difi:name_en </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:description_no </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:description_en </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:antoraViewPath </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:antoraViewImagePath </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element"> Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept  </a> </td>
+											    <td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/c777850b-1ce0-4af0-b1b2-d180411baaca.html" target="element"> Datatilbyder </a> </td>
+													    <td> <a href="../elements/c777850b-1ce0-4af0-b1b2-d180411baaca.html" target="element" class="i18n-elementtype-BusinessRole"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/a78bf9f0-ef86-4b42-b908-545afa46e6b3.html" target="element"> Datakonsumenter </a> </td>
+													    <td> <a href="../elements/a78bf9f0-ef86-4b42-b908-545afa46e6b3.html" target="element" class="i18n-elementtype-BusinessRole"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/d33e747f-792f-4b05-9c79-d76f7f3890f5.html" target="element"> API for sp&#248;rring mot datatilbyder </a> </td>
+													    <td> <a href="../elements/d33e747f-792f-4b05-9c79-d76f7f3890f5.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/b815482d-ad37-4b01-a1a9-9a4b662365da.html" target="element"> Datakonuments l&#248;sning for mottak av publiserte data (copy) </a> </td>
+													    <td> <a href="../elements/b815482d-ad37-4b01-a1a9-9a4b662365da.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/6ec9cfda-21f3-49a1-9137-a560ae3f8431.html" target="element"> Avgitt datadistribusjon </a> </td>
+													    <td> <a href="../elements/6ec9cfda-21f3-49a1-9137-a560ae3f8431.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/8ddf96b9-fc26-4e2e-aee8-de5e2196d641.html" target="element"> Datatilbyders l&#248;sning  </a> </td>
+													    <td> <a href="../elements/8ddf96b9-fc26-4e2e-aee8-de5e2196d641.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/6d1b4e94-4e6d-41aa-b9ac-2286833f94ee.html" target="element"> Sp&#248;rring mot API </a> </td>
+													    <td> <a href="../elements/6d1b4e94-4e6d-41aa-b9ac-2286833f94ee.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/079ad491-ade6-4656-a7a0-12ed14094ac3.html" target="element"> Foresp&#248;rsel-svar meldingsm&#248;nster </a> </td>
+											    <td> <a href="../elements/079ad491-ade6-4656-a7a0-12ed14094ac3.html" target="element" class="i18n-elementtype-Resource"> </a> </td>
+											</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/e2476fd1-d3fb-4be5-981d-ac677cf201df.html" target="element">  </a> </td>
+																		<td> <a href="../elements/e2476fd1-d3fb-4be5-981d-ac677cf201df.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element"> Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept  </a> </td>
+																		<td> <a href="../elements/a78bf9f0-ef86-4b42-b908-545afa46e6b3.html" target="element"> Datakonsumenter </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/48f97e7c-0d23-457e-bea6-1efae0d27310.html" target="element">  </a> </td>
+																		<td> <a href="../elements/48f97e7c-0d23-457e-bea6-1efae0d27310.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element"> Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept  </a> </td>
+																		<td> <a href="../elements/6d1b4e94-4e6d-41aa-b9ac-2286833f94ee.html" target="element"> Sp&#248;rring mot API </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/cdaa8ef5-d0a8-4a65-b311-82a278156a90.html" target="element"> beskriver </a> </td>
+																		<td> <a href="../elements/cdaa8ef5-d0a8-4a65-b311-82a278156a90.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																		<td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element"> Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept  </a> </td>
+																		<td> <a href="../elements/079ad491-ade6-4656-a7a0-12ed14094ac3.html" target="element"> Foresp&#248;rsel-svar meldingsm&#248;nster </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/6826eb74-38e4-40b2-a264-1dcd9e2ba820.html" target="element">  </a> </td>
+																		<td> <a href="../elements/6826eb74-38e4-40b2-a264-1dcd9e2ba820.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element"> Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept  </a> </td>
+																		<td> <a href="../elements/d33e747f-792f-4b05-9c79-d76f7f3890f5.html" target="element"> API for sp&#248;rring mot datatilbyder </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/3c19be18-3032-4556-96b4-ce39e8e20af7.html" target="element">  </a> </td>
+																		<td> <a href="../elements/3c19be18-3032-4556-96b4-ce39e8e20af7.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element"> Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept  </a> </td>
+																		<td> <a href="../elements/c777850b-1ce0-4af0-b1b2-d180411baaca.html" target="element"> Datatilbyder </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/bcf18440-48d9-468b-8d34-1674cec94b69.html" target="element">  </a> </td>
+																		<td> <a href="../elements/bcf18440-48d9-468b-8d34-1674cec94b69.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element"> Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept  </a> </td>
+																		<td> <a href="../elements/6ec9cfda-21f3-49a1-9137-a560ae3f8431.html" target="element"> Avgitt datadistribusjon </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/7faca7ab-f754-470b-b723-a250903d20da.html" target="element">  </a> </td>
+																		<td> <a href="../elements/7faca7ab-f754-470b-b723-a250903d20da.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element"> Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept  </a> </td>
+																		<td> <a href="../elements/8ddf96b9-fc26-4e2e-aee8-de5e2196d641.html" target="element"> Datatilbyders l&#248;sning  </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/1f7834f6-b490-40fc-93d6-2a63043a30a5.html" target="element">  </a> </td>
+																		<td> <a href="../elements/1f7834f6-b490-40fc-93d6-2a63043a30a5.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/f67b9c51-cce2-42f0-8abf-61696a2d037d.html" target="element"> Foresp&#248;rsel-svar med sp&#248;rring mot API - konsept  </a> </td>
+																		<td> <a href="../elements/b815482d-ad37-4b01-a1a9-9a4b662365da.html" target="element"> Datakonuments l&#248;sning for mottak av publiserte data (copy) </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/985cc05e-cf51-4655-a57a-af9ae3f68610.html" target="element"> supplerende hendelsesrelaterte data </a> </td>
+																				<td> <a href="../elements/985cc05e-cf51-4655-a57a-af9ae3f68610.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																				<td> <a href="../elements/c777850b-1ce0-4af0-b1b2-d180411baaca.html" target="element"> Datatilbyder </a> </td>
+																				<td> <a href="../elements/a78bf9f0-ef86-4b42-b908-545afa46e6b3.html" target="element"> Datakonsumenter </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/a0c95eef-64cc-4c17-908a-e51c14bb3036.html" target="element"> svar </a> </td>
+																				<td> <a href="../elements/a0c95eef-64cc-4c17-908a-e51c14bb3036.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																				<td> <a href="../elements/d33e747f-792f-4b05-9c79-d76f7f3890f5.html" target="element"> API for sp&#248;rring mot datatilbyder </a> </td>
+																				<td> <a href="../elements/b815482d-ad37-4b01-a1a9-9a4b662365da.html" target="element"> Datakonuments l&#248;sning for mottak av publiserte data (copy) </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/24f0c9f4-1da7-4fd3-ab02-fb6c44bb5a77.html" target="element"> foresp&#248;rsel </a> </td>
+																				<td> <a href="../elements/24f0c9f4-1da7-4fd3-ab02-fb6c44bb5a77.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																				<td> <a href="../elements/b815482d-ad37-4b01-a1a9-9a4b662365da.html" target="element"> Datakonuments l&#248;sning for mottak av publiserte data (copy) </a> </td>
+																				<td> <a href="../elements/d33e747f-792f-4b05-9c79-d76f7f3890f5.html" target="element"> API for sp&#248;rring mot datatilbyder </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/8cf174df-726e-4961-84a8-f34be4aaff6c.html" target="element">  </a> </td>
+																				<td> <a href="../elements/8cf174df-726e-4961-84a8-f34be4aaff6c.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																				<td> <a href="../elements/b815482d-ad37-4b01-a1a9-9a4b662365da.html" target="element"> Datakonuments l&#248;sning for mottak av publiserte data (copy) </a> </td>
+																				<td> <a href="../elements/a78bf9f0-ef86-4b42-b908-545afa46e6b3.html" target="element"> Datakonsumenter </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/a433178e-c743-4b39-97bc-197a2d273707.html" target="element">  </a> </td>
+																				<td> <a href="../elements/a433178e-c743-4b39-97bc-197a2d273707.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/6ec9cfda-21f3-49a1-9137-a560ae3f8431.html" target="element"> Avgitt datadistribusjon </a> </td>
+																				<td> <a href="../elements/a0c95eef-64cc-4c17-908a-e51c14bb3036.html" target="element"> svar </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/53e7bd8b-82ad-441e-af80-d79e3e56a5dc.html" target="element">  </a> </td>
+																				<td> <a href="../elements/53e7bd8b-82ad-441e-af80-d79e3e56a5dc.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																				<td> <a href="../elements/8ddf96b9-fc26-4e2e-aee8-de5e2196d641.html" target="element"> Datatilbyders l&#248;sning  </a> </td>
+																				<td> <a href="../elements/c777850b-1ce0-4af0-b1b2-d180411baaca.html" target="element"> Datatilbyder </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/113dc67e-14c5-4abf-bd58-27bca3fd22c7.html" target="element"> har </a> </td>
+																				<td> <a href="../elements/113dc67e-14c5-4abf-bd58-27bca3fd22c7.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																				<td> <a href="../elements/8ddf96b9-fc26-4e2e-aee8-de5e2196d641.html" target="element"> Datatilbyders l&#248;sning  </a> </td>
+																				<td> <a href="../elements/d33e747f-792f-4b05-9c79-d76f7f3890f5.html" target="element"> API for sp&#248;rring mot datatilbyder </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/e8862529-df73-44fe-9002-bd2dd088c2c8.html" target="element">  </a> </td>
+																				<td> <a href="../elements/e8862529-df73-44fe-9002-bd2dd088c2c8.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/6d1b4e94-4e6d-41aa-b9ac-2286833f94ee.html" target="element"> Sp&#248;rring mot API </a> </td>
+																				<td> <a href="../elements/24f0c9f4-1da7-4fd3-ab02-fb6c44bb5a77.html" target="element"> foresp&#248;rsel </a> </td>
+																			</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
