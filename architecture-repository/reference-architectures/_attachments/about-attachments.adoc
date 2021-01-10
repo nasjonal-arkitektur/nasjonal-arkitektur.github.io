@@ -1,0 +1,5 @@
+= About the Attachments directory
+
+An attachment is a resource, such as the ZIP archive of a sample project, that a image:architecture-repository:common:i-arbeid.png visitor can download via a link. Attachment files are saved in the attachments directory. A link to an attachment is created using the AsciiDoc link macro.
+
+Also see: https://docs.antora.org/antora/2.2/modules/#attachments-dir
