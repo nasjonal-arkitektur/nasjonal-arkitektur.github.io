@@ -205,11 +205,11 @@
 <li><a href="#_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf_oversikt">1. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF - oversikt</a></li>
 <li><a href="#_tilganger_konsument">2. Tilganger konsument</a></li>
 <li><a href="#_datatilbyder">3. Datatilbyder</a></li>
-<li><a href="#_tilgjengeliggjør_api">4. Tilgjengeliggjør API</a>
+<li><a href="#_tilgjengeliggjør_data_etter_forselpørsel">4. Tilgjengeliggjør data etter forselpørsel</a>
 <ul class="sectlevel2">
-<li><a href="#_registrere_brukere_av_samtykke">4.1. Registrere brukere av samtykke</a></li>
-<li><a href="#_tildele_tilganger_til_api">4.2. Tildele tilganger til API</a></li>
-<li><a href="#_inngå_avtale_om_tilgang_til_data">4.3. Inngå avtale om tilgang til data</a></li>
+<li><a href="#_tildele_tilganger_til_api">4.1. Tildele tilganger til API</a></li>
+<li><a href="#_inngå_avtale_om_tilgang_til_data">4.2. Inngå avtale om tilgang til data</a></li>
+<li><a href="#_registrere_brukere_av_samtykke">4.3. Registrere brukere av samtykke</a></li>
 </ul>
 </li>
 <li><a href="#_maskinporten">5. Maskinporten</a></li>
@@ -220,13 +220,16 @@
 <li><a href="#_api_tilgangs_forespørsel">10. API tilgangs-forespørsel</a></li>
 <li><a href="#_godkjenn_tilgang">11. Godkjenn tilgang</a></li>
 <li><a href="#_uhf_tildel_rettigheter_til_klienter">12. UHF tildel rettigheter til klienter</a></li>
-<li><a href="#_uhf_tilgangskontroll">13. UHF tilgangskontroll</a></li>
-<li><a href="#_forespør_dataansvarlig_behandlingsansvarlig">14. Forespør dataansvarlig (behandlingsansvarlig?)</a></li>
+<li><a href="#_ressursportal">13. Ressursportal</a></li>
+<li><a href="#_forespør_dataeier">14. Forespør dataeier</a></li>
 </ul>
 </div>
 <div class="sect1">
 <h2 id="_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf_oversikt"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf_oversikt"></a>1. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF - oversikt</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>En arbeidsflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Tilgjengeliggjøre%20data%20etter%20forspørsel%20løsningsmønster%20UHF.png" alt="Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF image">
@@ -261,13 +264,26 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_tilgjengeliggjør_api"><a class="anchor" href="#_tilgjengeliggjør_api"></a>4. Tilgjengeliggjør API</h2>
+<h2 id="_tilgjengeliggjør_data_etter_forselpørsel"><a class="anchor" href="#_tilgjengeliggjør_data_etter_forselpørsel"></a>4. Tilgjengeliggjør data etter forselpørsel</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Prosessen med å tilby data gjennom et API til aktører utenfor egen virksomhet.</p>
 </div>
 <div class="sect2">
-<h3 id="_registrere_brukere_av_samtykke"><a class="anchor" href="#_registrere_brukere_av_samtykke"></a>4.1. Registrere brukere av samtykke</h3>
+<h3 id="_tildele_tilganger_til_api"><a class="anchor" href="#_tildele_tilganger_til_api"></a>4.1. Tildele tilganger til API</h3>
+<div class="paragraph">
+<p>Prosess for å registrere hvilke databrukere som skal få tilgang
+Sette policy, og grov tilgangsstyring gjennom maskinporten.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inngå_avtale_om_tilgang_til_data"><a class="anchor" href="#_inngå_avtale_om_tilgang_til_data"></a>4.2. Inngå avtale om tilgang til data</h3>
+<div class="paragraph">
+<p>Prosess for å inngå avtale om tilgang og bruk av data.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_registrere_brukere_av_samtykke"><a class="anchor" href="#_registrere_brukere_av_samtykke"></a>4.3. Registrere brukere av samtykke</h3>
 <div class="paragraph">
 <p>Prosess for å registrere konsumenter som skal ha mulighet for å innhente samtykker som gir tilgang til en tjeneste.</p>
 </div>
@@ -275,24 +291,14 @@
 <p>Dette utføres kun om det er behov for samtykke for tilgang til dataene.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_tildele_tilganger_til_api"><a class="anchor" href="#_tildele_tilganger_til_api"></a>4.2. Tildele tilganger til API</h3>
-<div class="paragraph">
-<p>Prosess for å registrere hvilke databrukere som skal få tilgang
-Sette policy, og grov tilgangsstyring gjennom maskinporten.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_inngå_avtale_om_tilgang_til_data"><a class="anchor" href="#_inngå_avtale_om_tilgang_til_data"></a>4.3. Inngå avtale om tilgang til data</h3>
-<div class="paragraph">
-<p>Prosess for å inngå avtale om tilgang og bruk av data.</p>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_maskinporten"><a class="anchor" href="#_maskinporten"></a>5. Maskinporten</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
+</div>
 <div class="paragraph">
 <p>Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
 virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
@@ -306,6 +312,10 @@ virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandling
 <div class="sect1">
 <h2 id="_altinn_autorisasjon"><a class="anchor" href="#_altinn_autorisasjon"></a>6. Altinn autorisasjon</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
+</div>
 <div class="paragraph">
 <p>Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
 autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
@@ -363,16 +373,19 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_uhf_tilgangskontroll"><a class="anchor" href="#_uhf_tilgangskontroll"></a>13. UHF tilgangskontroll</h2>
+<h2 id="_ressursportal"><a class="anchor" href="#_ressursportal"></a>13. Ressursportal</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forespør_dataansvarlig_behandlingsansvarlig"><a class="anchor" href="#_forespør_dataansvarlig_behandlingsansvarlig"></a>14. Forespør dataansvarlig (behandlingsansvarlig?)</h2>
+<h2 id="_forespør_dataeier"><a class="anchor" href="#_forespør_dataeier"></a>14. Forespør dataeier</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Harmoniserers med rolledefinisjoner</p>
+<p>Harmoniserers med rolledefinisjoner.</p>
+</div>
+<div class="paragraph">
+<p>Kan en databehandler besvare forespørselen automatisk på grunnlag av forhåndsdefinerte instruks?</p>
 </div>
 </div>
 </div>

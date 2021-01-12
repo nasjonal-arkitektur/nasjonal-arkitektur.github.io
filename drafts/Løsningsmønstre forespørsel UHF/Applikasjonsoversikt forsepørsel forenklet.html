@@ -205,13 +205,13 @@
 <li><a href="#_applikasjonsoversikt_forsepørsel_forenklet_oversikt">1. Applikasjonsoversikt forsepørsel forenklet - oversikt</a></li>
 <li><a href="#_uhf_infrastruktur">2. UHF Infrastruktur</a>
 <ul class="sectlevel2">
-<li><a href="#_utvikle_og_vedlikeholde_api">2.1. Utvikle og vedlikeholde API</a></li>
-<li><a href="#_uhf_tilgangskontroll">2.2. UHF tilgangskontroll</a>
+<li><a href="#_ressursportal">2.1. Ressursportal</a>
 <ul class="sectlevel3">
-<li><a href="#_uhf_api_manager">2.2.1. UHF API manager</a></li>
-<li><a href="#_uhf_oauth2_autorisasjonstjener">2.2.2. UHF Oauth2 autorisasjonstjener</a></li>
+<li><a href="#_uhf_api_manager">2.1.1. UHF API manager</a></li>
+<li><a href="#_uhf_oauth2_autorisasjonstjener">2.1.2. UHF Oauth2 autorisasjonstjener</a></li>
 </ul>
 </li>
+<li><a href="#_utvikle_og_vedlikeholde_api">2.2. Utvikle og vedlikeholde API</a></li>
 </ul>
 </li>
 <li><a href="#_uix">3. UiX</a>
@@ -241,13 +241,9 @@
 <h2 id="_uhf_infrastruktur"><a class="anchor" href="#_uhf_infrastruktur"></a>2. UHF Infrastruktur</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_utvikle_og_vedlikeholde_api"><a class="anchor" href="#_utvikle_og_vedlikeholde_api"></a>2.1. Utvikle og vedlikeholde API</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_uhf_tilgangskontroll"><a class="anchor" href="#_uhf_tilgangskontroll"></a>2.2. UHF tilgangskontroll</h3>
+<h3 id="_ressursportal"><a class="anchor" href="#_ressursportal"></a>2.1. Ressursportal</h3>
 <div class="sect3">
-<h4 id="_uhf_api_manager"><a class="anchor" href="#_uhf_api_manager"></a>2.2.1. UHF API manager</h4>
+<h4 id="_uhf_api_manager"><a class="anchor" href="#_uhf_api_manager"></a>2.1.1. UHF API manager</h4>
 <div class="paragraph">
 <p>Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API. Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener. Ansvaret til API manager inkluderer:</p>
 </div>
@@ -273,14 +269,14 @@ Hvordan ønsker API å sikre seg selv
 En klient må forholde seg til</p>
 </div>
 <div class="sect4">
-<h5 id="_uhf_api_katalog"><a class="anchor" href="#_uhf_api_katalog"></a>2.2.1.1. UHF API katalog</h5>
+<h5 id="_uhf_api_katalog"><a class="anchor" href="#_uhf_api_katalog"></a>2.1.1.1. UHF API katalog</h5>
 <div class="paragraph">
-<p>Registeret skal være mest mulig selvbetjent</p>
+<p>Oversikt over alle API som er registrert</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_uhf_oauth2_autorisasjonstjener"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener"></a>2.2.2. UHF Oauth2 autorisasjonstjener</h4>
+<h4 id="_uhf_oauth2_autorisasjonstjener"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener"></a>2.1.2. UHF Oauth2 autorisasjonstjener</h4>
 <div class="paragraph">
 <p>Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
 </div>
@@ -293,10 +289,16 @@ Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
 underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 </div>
 <div class="sect4">
-<h5 id="_uhf_klientregister"><a class="anchor" href="#_uhf_klientregister"></a>2.2.2.1. UHF Klientregister</h5>
+<h5 id="_uhf_klientregister"><a class="anchor" href="#_uhf_klientregister"></a>2.1.2.1. UHF Klientregister</h5>
+<div class="paragraph">
+<p>Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utvikle_og_vedlikeholde_api"><a class="anchor" href="#_utvikle_og_vedlikeholde_api"></a>2.2. Utvikle og vedlikeholde API</h3>
 
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -305,6 +307,9 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_api_gateway_hos_dataeier_oauth_resource_server"><a class="anchor" href="#_api_gateway_hos_dataeier_oauth_resource_server"></a>3.1. API Gateway hos dataeier / OAuth resource server</h3>
+<div class="paragraph">
+<p>API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+</div>
 <div class="paragraph">
 <p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
 </div>
@@ -351,6 +356,9 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_api_gateway_hos_dataeier_oauth_resource_server_2"><a class="anchor" href="#_api_gateway_hos_dataeier_oauth_resource_server_2"></a>4.1. API Gateway hos dataeier / OAuth resource server</h3>
+<div class="paragraph">
+<p>API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+</div>
 <div class="paragraph">
 <p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
 </div>

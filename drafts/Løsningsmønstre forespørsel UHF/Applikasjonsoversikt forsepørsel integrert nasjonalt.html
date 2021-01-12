@@ -205,22 +205,22 @@
 <li><a href="#_applikasjonsoversikt_forsepørsel_integrert_nasjonalt_oversikt">1. Applikasjonsoversikt forsepørsel integrert nasjonalt - oversikt</a></li>
 <li><a href="#_uhf_infrastruktur">2. UHF Infrastruktur</a>
 <ul class="sectlevel2">
-<li><a href="#_uhf_tilgangskontroll">2.1. UHF tilgangskontroll</a>
+<li><a href="#_tokentjeneste">2.1. Tokentjeneste</a></li>
+<li><a href="#_uhf_tildel_rettigheter_til_klienter">2.2. UHF tildel rettigheter til klienter</a></li>
+<li><a href="#_registrere_api_i_uhf_sektoren">2.3. Registrere API i UHF sektoren</a></li>
+<li><a href="#_ressursportal">2.4. Ressursportal</a>
 <ul class="sectlevel3">
-<li><a href="#_uhf_api_manager">2.1.1. UHF API manager</a></li>
-<li><a href="#_uhf_oauth2_autorisasjonstjener">2.1.2. UHF Oauth2 autorisasjonstjener</a></li>
+<li><a href="#_uhf_oauth2_autorisasjonstjener">2.4.1. UHF Oauth2 autorisasjonstjener</a></li>
+<li><a href="#_uhf_api_manager">2.4.2. UHF API manager</a></li>
 </ul>
 </li>
-<li><a href="#_tokentjeneste">2.2. Tokentjeneste</a></li>
-<li><a href="#_registrere_api_i_uhf_sektoren">2.3. Registrere API i UHF sektoren</a></li>
-<li><a href="#_uhf_tildel_rettigheter_til_klienter">2.4. UHF tildel rettigheter til klienter</a></li>
 </ul>
 </li>
 <li><a href="#_nasjonal_infrastruktur">3. Nasjonal infrastruktur</a>
 <ul class="sectlevel2">
-<li><a href="#_altinn_autorisasjon">3.1. Altinn autorisasjon</a></li>
-<li><a href="#_felles_api_katalog">3.2. Felles API-katalog</a></li>
-<li><a href="#_maskinporten">3.3. Maskinporten</a></li>
+<li><a href="#_maskinporten">3.1. Maskinporten</a></li>
+<li><a href="#_altinn_autorisasjon">3.2. Altinn autorisasjon</a></li>
+<li><a href="#_felles_api_katalog">3.3. Felles API-katalog</a></li>
 </ul>
 </li>
 </ul>
@@ -240,9 +240,43 @@
 <h2 id="_uhf_infrastruktur"><a class="anchor" href="#_uhf_infrastruktur"></a>2. UHF Infrastruktur</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_uhf_tilgangskontroll"><a class="anchor" href="#_uhf_tilgangskontroll"></a>2.1. UHF tilgangskontroll</h3>
+<h3 id="_tokentjeneste"><a class="anchor" href="#_tokentjeneste"></a>2.1. Tokentjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_tildel_rettigheter_til_klienter"><a class="anchor" href="#_uhf_tildel_rettigheter_til_klienter"></a>2.2. UHF tildel rettigheter til klienter</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_registrere_api_i_uhf_sektoren"><a class="anchor" href="#_registrere_api_i_uhf_sektoren"></a>2.3. Registrere API i UHF sektoren</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ressursportal"><a class="anchor" href="#_ressursportal"></a>2.4. Ressursportal</h3>
 <div class="sect3">
-<h4 id="_uhf_api_manager"><a class="anchor" href="#_uhf_api_manager"></a>2.1.1. UHF API manager</h4>
+<h4 id="_uhf_oauth2_autorisasjonstjener"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener"></a>2.4.1. UHF Oauth2 autorisasjonstjener</h4>
+<div class="paragraph">
+<p>Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+</div>
+<div class="paragraph">
+<p>Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
+</div>
+<div class="paragraph">
+<p>Per i dag er Scopes er grovkornet
+Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
+</div>
+<div class="sect4">
+<h5 id="_uhf_klientregister"><a class="anchor" href="#_uhf_klientregister"></a>2.4.1.1. UHF Klientregister</h5>
+<div class="paragraph">
+<p>Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uhf_api_manager"><a class="anchor" href="#_uhf_api_manager"></a>2.4.2. UHF API manager</h4>
 <div class="paragraph">
 <p>Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API. Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener. Ansvaret til API manager inkluderer:</p>
 </div>
@@ -268,44 +302,12 @@ Hvordan ønsker API å sikre seg selv
 En klient må forholde seg til</p>
 </div>
 <div class="sect4">
-<h5 id="_uhf_api_katalog"><a class="anchor" href="#_uhf_api_katalog"></a>2.1.1.1. UHF API katalog</h5>
+<h5 id="_uhf_api_katalog"><a class="anchor" href="#_uhf_api_katalog"></a>2.4.2.1. UHF API katalog</h5>
 <div class="paragraph">
-<p>Registeret skal være mest mulig selvbetjent</p>
+<p>Oversikt over alle API som er registrert</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_uhf_oauth2_autorisasjonstjener"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener"></a>2.1.2. UHF Oauth2 autorisasjonstjener</h4>
-<div class="paragraph">
-<p>Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
-</div>
-<div class="paragraph">
-<p>Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
-</div>
-<div class="paragraph">
-<p>Per i dag er Scopes er grovkornet
-Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
-underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
-</div>
-<div class="sect4">
-<h5 id="_uhf_klientregister"><a class="anchor" href="#_uhf_klientregister"></a>2.1.2.1. UHF Klientregister</h5>
-
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tokentjeneste"><a class="anchor" href="#_tokentjeneste"></a>2.2. Tokentjeneste</h3>
-<div class="paragraph">
-<p>Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_registrere_api_i_uhf_sektoren"><a class="anchor" href="#_registrere_api_i_uhf_sektoren"></a>2.3. Registrere API i UHF sektoren</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_uhf_tildel_rettigheter_til_klienter"><a class="anchor" href="#_uhf_tildel_rettigheter_til_klienter"></a>2.4. UHF tildel rettigheter til klienter</h3>
-
 </div>
 </div>
 </div>
@@ -313,7 +315,25 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 <h2 id="_nasjonal_infrastruktur"><a class="anchor" href="#_nasjonal_infrastruktur"></a>3. Nasjonal infrastruktur</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_altinn_autorisasjon"><a class="anchor" href="#_altinn_autorisasjon"></a>3.1. Altinn autorisasjon</h3>
+<h3 id="_maskinporten"><a class="anchor" href="#_maskinporten"></a>3.1. Maskinporten</h3>
+<div class="paragraph">
+<p>Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
+</div>
+<div class="paragraph">
+<p>Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Maskinporten:
+<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altinn_autorisasjon"><a class="anchor" href="#_altinn_autorisasjon"></a>3.2. Altinn autorisasjon</h3>
+<div class="paragraph">
+<p>Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
+</div>
 <div class="paragraph">
 <p>Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
 autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
@@ -327,20 +347,9 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </div>
 </div>
 <div class="sect2">
-<h3 id="_felles_api_katalog"><a class="anchor" href="#_felles_api_katalog"></a>3.2. Felles API-katalog</h3>
+<h3 id="_felles_api_katalog"><a class="anchor" href="#_felles_api_katalog"></a>3.3. Felles API-katalog</h3>
 <div class="paragraph">
 <p>Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_maskinporten"><a class="anchor" href="#_maskinporten"></a>3.3. Maskinporten</h3>
-<div class="paragraph">
-<p>Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
-virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
-</div>
-<div class="paragraph">
-<p>Mer om Maskinporten:
-<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p>
 </div>
 </div>
 </div>

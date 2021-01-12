@@ -208,21 +208,21 @@
 <li><a href="#_identitetstilbyder">4. Identitetstilbyder</a></li>
 <li><a href="#_uhf_infrastruktur">5. UHF Infrastruktur</a>
 <ul class="sectlevel2">
-<li><a href="#_uhf_tilgangskontroll">5.1. UHF tilgangskontroll</a>
+<li><a href="#_uhf_tildel_rettigheter_til_klienter">5.1. UHF tildel rettigheter til klienter</a></li>
+<li><a href="#_ressursportal">5.2. Ressursportal</a>
 <ul class="sectlevel3">
-<li><a href="#_uhf_oauth2_autorisasjonstjener">5.1.1. UHF Oauth2 autorisasjonstjener</a></li>
+<li><a href="#_uhf_oauth2_autorisasjonstjener">5.2.1. UHF Oauth2 autorisasjonstjener</a></li>
 </ul>
 </li>
-<li><a href="#_uhf_tildel_rettigheter_til_klienter">5.2. UHF tildel rettigheter til klienter</a></li>
 </ul>
 </li>
 <li><a href="#_roller_og_tilgangsregler">6. Roller og tilgangsregler</a></li>
 <li><a href="#_attributter_grunndata">7. Attributter /grunndata</a></li>
 <li><a href="#_uix">8. UiX</a>
 <ul class="sectlevel2">
-<li><a href="#_api_gateway_hos_dataeier_oauth_resource_server">8.1. API Gateway hos dataeier / OAuth resource server</a></li>
-<li><a href="#_kildedata">8.2. Kildedata</a></li>
-<li><a href="#_kildedata_2">8.3. Kildedata</a></li>
+<li><a href="#_kildedata">8.1. Kildedata</a></li>
+<li><a href="#_kildedata_2">8.2. Kildedata</a></li>
+<li><a href="#_api_gateway_hos_dataeier_oauth_resource_server">8.3. API Gateway hos dataeier / OAuth resource server</a></li>
 </ul>
 </li>
 <li><a href="#_autentiseringstjeneste">9. Autentiseringstjeneste</a></li>
@@ -261,9 +261,13 @@
 <h2 id="_uhf_infrastruktur"><a class="anchor" href="#_uhf_infrastruktur"></a>5. UHF Infrastruktur</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_uhf_tilgangskontroll"><a class="anchor" href="#_uhf_tilgangskontroll"></a>5.1. UHF tilgangskontroll</h3>
+<h3 id="_uhf_tildel_rettigheter_til_klienter"><a class="anchor" href="#_uhf_tildel_rettigheter_til_klienter"></a>5.1. UHF tildel rettigheter til klienter</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ressursportal"><a class="anchor" href="#_ressursportal"></a>5.2. Ressursportal</h3>
 <div class="sect3">
-<h4 id="_uhf_oauth2_autorisasjonstjener"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener"></a>5.1.1. UHF Oauth2 autorisasjonstjener</h4>
+<h4 id="_uhf_oauth2_autorisasjonstjener"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener"></a>5.2.1. UHF Oauth2 autorisasjonstjener</h4>
 <div class="paragraph">
 <p>Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
 </div>
@@ -276,14 +280,12 @@ Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
 underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 </div>
 <div class="sect4">
-<h5 id="_uhf_klientregister"><a class="anchor" href="#_uhf_klientregister"></a>5.1.1.1. UHF Klientregister</h5>
-
+<h5 id="_uhf_klientregister"><a class="anchor" href="#_uhf_klientregister"></a>5.2.1.1. UHF Klientregister</h5>
+<div class="paragraph">
+<p>Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_uhf_tildel_rettigheter_til_klienter"><a class="anchor" href="#_uhf_tildel_rettigheter_til_klienter"></a>5.2. UHF tildel rettigheter til klienter</h3>
-
 </div>
 </div>
 </div>
@@ -303,7 +305,18 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 <h2 id="_uix"><a class="anchor" href="#_uix"></a>8. UiX</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_api_gateway_hos_dataeier_oauth_resource_server"><a class="anchor" href="#_api_gateway_hos_dataeier_oauth_resource_server"></a>8.1. API Gateway hos dataeier / OAuth resource server</h3>
+<h3 id="_kildedata"><a class="anchor" href="#_kildedata"></a>8.1. Kildedata</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_kildedata_2"><a class="anchor" href="#_kildedata_2"></a>8.2. Kildedata</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_api_gateway_hos_dataeier_oauth_resource_server"><a class="anchor" href="#_api_gateway_hos_dataeier_oauth_resource_server"></a>8.3. API Gateway hos dataeier / OAuth resource server</h3>
+<div class="paragraph">
+<p>API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+</div>
 <div class="paragraph">
 <p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
 </div>
@@ -342,14 +355,6 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 <div class="paragraph">
 <p>Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_kildedata"><a class="anchor" href="#_kildedata"></a>8.2. Kildedata</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_kildedata_2"><a class="anchor" href="#_kildedata_2"></a>8.3. Kildedata</h3>
-
 </div>
 </div>
 </div>
