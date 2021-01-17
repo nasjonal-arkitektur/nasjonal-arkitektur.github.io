@@ -409,10 +409,52 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_konvensjoner_for_bruk_av_asciidoc"><a class="anchor" href="#_konvensjoner_for_bruk_av_asciidoc"></a><a class="link" href="#_konvensjoner_for_bruk_av_asciidoc">4. Konvensjoner for bruk av Asciidoc</a></h2>
+<h2 id="_tips_om_konvertering_mellom_asciidoc_og_andre_formater"><a class="anchor" href="#_tips_om_konvertering_mellom_asciidoc_og_andre_formater"></a><a class="link" href="#_tips_om_konvertering_mellom_asciidoc_og_andre_formater">4. Tips om konvertering mellom asciidoc og andre formater</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">4.1. Generelt</a></h3>
+<div class="paragraph">
+<p>Verktøyet <a href="https://pandoc.org">Pandoc</a> er å betrakte som en "swiss army knife" for konvertering mellom en rekke formater.</p>
+</div>
+<div class="paragraph">
+<p>Du finner download og enkel installeringsoppskrift for ditt OS, f.eks. Windows (64-bit), under <a href="https://pandoc.org/installing.html">Pandoc download and installation guide</a>.</p>
+</div>
+<div class="paragraph">
+<p>Pandoc kjøres fra kommandolinjen; se <a href="https://pandoc.org/MANUAL.html">Pandoc User’s Guide</a>.</p>
+</div>
+<div class="paragraph">
+<p>I det følgende gis noen tips om de mest aktuelle konverteringsbehovene.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konvertering_fra_ms_word_docx_til_asciidoc"><a class="anchor" href="#_konvertering_fra_ms_word_docx_til_asciidoc"></a><a class="link" href="#_konvertering_fra_ms_word_docx_til_asciidoc">4.2. Konvertering fra MS Word (docx) til Asciidoc</a></h3>
+<div class="paragraph">
+<p>Konvertering fra MS Word (docx) til Asciidoc kan gjøres vha. <a href="https://pandoc.org">Pandoc</a> (se over).</p>
+</div>
+<div class="paragraph">
+<p>Eksempel:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>pandoc --from docx --to asciidoctor dokument.docx -o dokument.adoc --extract-media=./
+
+Resultat: Bilder/figurer i Word lagres som PNG-filer i en undermappe ved navn media (dette mappenavnet er default).</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konvertering_fra_asciidoc_til_pdf"><a class="anchor" href="#_konvertering_fra_asciidoc_til_pdf"></a><a class="link" href="#_konvertering_fra_asciidoc_til_pdf">4.3. Konvertering fra Asciidoc til pdf</a></h3>
+<div class="paragraph">
+<p>Se <a href="https://asciidoctor.org/docs/asciidoctor-pdf/" class="bare">https://asciidoctor.org/docs/asciidoctor-pdf/</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_konvensjoner_for_bruk_av_asciidoc"><a class="anchor" href="#_konvensjoner_for_bruk_av_asciidoc"></a><a class="link" href="#_konvensjoner_for_bruk_av_asciidoc">5. Konvensjoner for bruk av Asciidoc</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">5.1. Generelt</a></h3>
 <div class="paragraph">
 <p>Se <a href="https://asciidoctor.org/docs/asciidoc-recommended-practices/" class="bare">https://asciidoctor.org/docs/asciidoc-recommended-practices/</a> for generelle anbefalinger fra asciidoctor.org.</p>
 </div>
@@ -424,7 +466,7 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_metadata_og_attributter"><a class="anchor" href="#_metadata_og_attributter"></a><a class="link" href="#_metadata_og_attributter">4.2. Metadata og attributter</a></h3>
+<h3 id="_metadata_og_attributter"><a class="anchor" href="#_metadata_og_attributter"></a><a class="link" href="#_metadata_og_attributter">5.2. Metadata og attributter</a></h3>
 <div class="paragraph">
 <p>Absolutt minimum metadata for (norske) asciidoc-filer er at det oppgis følgende:</p>
 </div>
@@ -439,7 +481,7 @@ doctitle: &lt;dokumentittel&gt;</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_språkstøtte"><a class="anchor" href="#_språkstøtte"></a><a class="link" href="#_språkstøtte">4.3. Språkstøtte</a></h3>
+<h3 id="_språkstøtte"><a class="anchor" href="#_språkstøtte"></a><a class="link" href="#_språkstøtte">5.3. Språkstøtte</a></h3>
 <div class="paragraph">
 <p>Første linje i asciidoc-filen skal angi default språk. Angi <em>:lang: no</em> for norsk eller <em>:lang: en</em> for engelsk.</p>
 </div>
@@ -482,7 +524,7 @@ endif::[]</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_kommentering"><a class="anchor" href="#_kommentering"></a><a class="link" href="#_kommentering">4.4. Kommentering</a></h3>
+<h3 id="_kommentering"><a class="anchor" href="#_kommentering"></a><a class="link" href="#_kommentering">5.4. Kommentering</a></h3>
 <div class="paragraph">
 <p><em class="blue">ifdef-direktivet</em> kan brukes til å inkludere eller eksludere kommentarer fra visningen på en fleksibel måte.</p>
 </div>
