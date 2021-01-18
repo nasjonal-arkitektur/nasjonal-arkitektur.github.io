@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Datautveksling ved oppslag :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/unit-ra-datadeling-målarkitekturen/Datautveksling%20ved%20oppslag.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+ 		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drafts" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Utkast og innspill</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about-drafts.html">Om utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Innspill til referansearkitekturer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-integrated-processes/ra-integrated-processes-proposal.html">Referansearkitektur for samhandlingsprosesser (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-iam/ra-iam-proposal.html">Referansearkitektur for informasjonssikkerhet, tillit og personvern (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Målbilde for nasjonal samhandlingsinfrastruktur (forslag)</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for tillitstjenester</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for datadeling</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for samhandlingsprosesser</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for integrasjon med EU-s Single Digital Gateway</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for IOT</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for API management</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for fagsystemer</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for saksbehandling i kommuner</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">UNIT-test 1</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Informasjonsforvaltningsdomener.html">Informasjonsforvaltningsdomener</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Applikasjonsoversikt%20forsepørsel%20integrert%20med%20IAM.html">Applikasjonsoversikt forsepørsel integrert med IAM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Applikasjonsoversikt%20forsepørsel%20integrert%20nasjonalt.html">Applikasjonsoversikt forsepørsel integrert nasjonalt</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Applikasjonsoversikt%20forsepørsel.html">Applikasjonsoversikt forsepørsel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Avgi%20data%20-%20løsningsmønster%20UHF.html">Avgi data - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Dataobjekter%20eOppslag%20-%20med%20metadata%20UHF.html">Dataobjekter eOppslag - med metadata UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Dataobjekter%20eOppslag%20UHF.html">Dataobjekter eOppslag UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Delegere%20rettigheter%20til%20databehandler%20-%20løsningsmønster%20UHF.html">Delegere rettigheter til databehandler - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.html">Få tilgang til data - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Innhente%20data%20-%20løsningsmønster%20UHF.html">Innhente data - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Registrere%20API%20%20UHF.html">Registrere API  UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Tilgjengeliggjøre%20data%20etter%20forspørsel%20løsningsmønster%20UHF.html">Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">UNIT-test 2</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Bøker/UNIT-bok1.html">UNIT-bok1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Konvertert%20word%20doc/Referansearkitektur-datadeling.html">Referansearkitektur for deling av data i høyere utdanning og forsking</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture-repository/index.html">Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Utkast og innspill</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../architecture-repository/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../architecture-repository/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Utkast og innspill</a></li>
+    <li><a href="Datautveksling%20ved%20oppslag.html">Datautveksling ved oppslag</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/gitlab/digdir/components/draft-components/drafts/unit/modules/unit-ra-datadeling-målarkitekturen/pages/Datautveksling%20ved%20oppslag.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Datautveksling ved oppslag</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_om_datautveksling_ved_oppslag">1. Om Datautveksling ved oppslag</a></li>
+<li><a href="#_applikasjonsoversikt_forespørsel">2. Applikasjonsoversikt forespørsel</a>
+<ul class="sectlevel2">
+<li><a href="#_applikasjonsoversikt_forespørsel_oversikt">2.1. Applikasjonsoversikt forespørsel - oversikt</a></li>
+<li><a href="#_uhf_infrastruktur">2.2. UHF Infrastruktur</a>
+<ul class="sectlevel3">
+<li><a href="#_tokentjeneste">2.2.1. Tokentjeneste</a></li>
+<li><a href="#_ressursportal">2.2.2. Ressursportal</a></li>
+<li><a href="#_registrere_api_i_uhf_sektoren">2.2.3. Registrere API i UHF sektoren</a></li>
+<li><a href="#_uhf_tildel_rettigheter_til_klienter">2.2.4. UHF tildel rettigheter til klienter</a></li>
+</ul>
+</li>
+<li><a href="#_uix">2.3. UiX</a>
+<ul class="sectlevel3">
+<li><a href="#_kildedata">2.3.1. Kildedata</a></li>
+<li><a href="#_api_gateway_hos_dataeier_oauth_resource_server">2.3.2. API Gateway hos dataeier / OAuth resource server</a></li>
+<li><a href="#_kildedata_2">2.3.3. Kildedata</a></li>
+</ul>
+</li>
+<li><a href="#_uio">2.4. UiO</a>
+<ul class="sectlevel3">
+<li><a href="#_kildedata_3">2.4.1. Kildedata</a></li>
+<li><a href="#_api_gateway_hos_dataeier_oauth_resource_server_2">2.4.2. API Gateway hos dataeier / OAuth resource server</a></li>
+<li><a href="#_kildedata_4">2.4.3. Kildedata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_applikasjonsoversikt_forespørsel_integrert_med_iam">3. Applikasjonsoversikt forespørsel integrert med IAM</a>
+<ul class="sectlevel2">
+<li><a href="#_applikasjonsoversikt_forespørsel_integrert_med_iam_oversikt">3.1. Applikasjonsoversikt forespørsel integrert med IAM - oversikt</a></li>
+<li><a href="#_sluttbruker">3.2. Sluttbruker</a></li>
+<li><a href="#_klient">3.3. Klient</a></li>
+<li><a href="#_identitetstilbyder">3.4. Identitetstilbyder</a></li>
+<li><a href="#_uhf_infrastruktur_2">3.5. UHF Infrastruktur</a>
+<ul class="sectlevel3">
+<li><a href="#_uhf_tildel_rettigheter_til_klienter_2">3.5.1. UHF tildel rettigheter til klienter</a></li>
+<li><a href="#_ressursportal_2">3.5.2. Ressursportal</a></li>
+</ul>
+</li>
+<li><a href="#_roller_og_tilgangsregler">3.6. Roller og tilgangsregler</a></li>
+<li><a href="#_attributter_grunndata">3.7. Attributter /grunndata</a></li>
+<li><a href="#_uix_2">3.8. UiX</a>
+<ul class="sectlevel3">
+<li><a href="#_kildedata_5">3.8.1. Kildedata</a></li>
+<li><a href="#_kildedata_6">3.8.2. Kildedata</a></li>
+<li><a href="#_api_gateway_hos_dataeier_oauth_resource_server_3">3.8.3. API Gateway hos dataeier / OAuth resource server</a></li>
+</ul>
+</li>
+<li><a href="#_autentiseringstjeneste">3.9. Autentiseringstjeneste</a></li>
+</ul>
+</li>
+<li><a href="#_applikasjonsoversikt_forespørsel_integrert_nasjonalt">4. Applikasjonsoversikt forespørsel integrert nasjonalt</a>
+<ul class="sectlevel2">
+<li><a href="#_applikasjonsoversikt_forespørsel_integrert_nasjonalt_oversikt">4.1. Applikasjonsoversikt forespørsel integrert nasjonalt - oversikt</a></li>
+<li><a href="#_uhf_infrastruktur_3">4.2. UHF Infrastruktur</a>
+<ul class="sectlevel3">
+<li><a href="#_tokentjeneste_2">4.2.1. Tokentjeneste</a></li>
+<li><a href="#_uhf_tildel_rettigheter_til_klienter_3">4.2.2. UHF tildel rettigheter til klienter</a></li>
+<li><a href="#_registrere_api_i_uhf_sektoren_2">4.2.3. Registrere API i UHF sektoren</a></li>
+<li><a href="#_ressursportal_3">4.2.4. Ressursportal</a></li>
+</ul>
+</li>
+<li><a href="#_nasjonal_infrastruktur">4.3. Nasjonal infrastruktur</a>
+<ul class="sectlevel3">
+<li><a href="#_maskinporten">4.3.1. Maskinporten</a></li>
+<li><a href="#_altinn_autorisasjon">4.3.2. Altinn autorisasjon</a></li>
+<li><a href="#_felles_api_katalog">4.3.3. Felles API-katalog</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_registrere_api_uhf">5. Registrere API UHF</a>
+<ul class="sectlevel2">
+<li><a href="#_registrere_api_uhf_oversikt">5.1. Registrere API UHF - oversikt</a></li>
+<li><a href="#_oauth_scopes">5.2. OAUTH scopes</a></li>
+<li><a href="#_token_egenskaper">5.3. Token-egenskaper</a></li>
+<li><a href="#_datatilbyder">5.4. Datatilbyder</a></li>
+<li><a href="#_maskinporten_2">5.5. Maskinporten</a></li>
+<li><a href="#_registrere_api_i_uhf_sektoren_3">5.6. Registrere API i UHF sektoren</a></li>
+<li><a href="#_api_beskrivelse">5.7. API Beskrivelse</a></li>
+<li><a href="#_uhf_definer_rettighetter_knyttet_til_apier">5.8. UHF definer rettighetter knyttet til APIer</a></li>
+<li><a href="#_registrere_api">5.9. Registrere API</a></li>
+<li><a href="#_registrere_api_2">5.10. Registrere API</a></li>
+<li><a href="#_felles_api_katalog_2">5.11. Felles API-katalog</a></li>
+<li><a href="#_uhf_api_manager_3">5.12. UHF API manager</a>
+<ul class="sectlevel3">
+<li><a href="#_uhf_api_katalog_3">5.12.1. UHF API katalog</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf">6. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</a>
+<ul class="sectlevel2">
+<li><a href="#_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf_oversikt">6.1. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF - oversikt</a></li>
+<li><a href="#_tilganger_konsument">6.2. Tilganger konsument</a></li>
+<li><a href="#_datatilbyder_2">6.3. Datatilbyder</a></li>
+<li><a href="#_tilgjengeliggjør_data_etter_forselpørsel">6.4. Tilgjengeliggjør data etter forselpørsel</a>
+<ul class="sectlevel3">
+<li><a href="#_tildele_tilganger_til_api">6.4.1. Tildele tilganger til API</a></li>
+<li><a href="#_inngå_avtale_om_tilgang_til_data">6.4.2. Inngå avtale om tilgang til data</a></li>
+<li><a href="#_registrere_brukere_av_samtykke">6.4.3. Registrere brukere av samtykke</a></li>
+</ul>
+</li>
+<li><a href="#_maskinporten_3">6.5. Maskinporten</a></li>
+<li><a href="#_altinn_autorisasjon_2">6.6. Altinn autorisasjon</a></li>
+<li><a href="#_registrere_samtykkebasert_tilgang">6.7. Registrere samtykkebasert tilgang</a></li>
+<li><a href="#_aktører_som_kan_innhente_samtykke_for_bruk_av_api">6.8. Aktører som kan innhente samtykke for bruk av API</a></li>
+<li><a href="#_tilgjengeliggjøre_data_etter_forespørsel">6.9. Tilgjengeliggjøre data etter forespørsel</a></li>
+<li><a href="#_api_tilgangs_forespørsel">6.10. API tilgangs-forespørsel</a></li>
+<li><a href="#_godkjenn_tilgang">6.11. Godkjenn tilgang</a></li>
+<li><a href="#_uhf_tildel_rettigheter_til_klienter_4">6.12. UHF tildel rettigheter til klienter</a></li>
+<li><a href="#_ressursportal_4">6.13. Ressursportal</a></li>
+<li><a href="#_forespør_dataeier">6.14. Forespør dataeier</a></li>
+</ul>
+</li>
+<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">7. Få tilgang til data - løsningsmønster UHF</a>
+<ul class="sectlevel2">
+<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf_oversikt">7.1. Få tilgang til data - løsningsmønster UHF - oversikt</a></li>
+<li><a href="#_data_konsument">7.2. Data-konsument</a></li>
+<li><a href="#_beskrivelse_api">7.3. Beskrivelse API</a></li>
+<li><a href="#_api_søk">7.4. API-søk</a></li>
+<li><a href="#_få_tilgang_til_data_konsument">7.5. Få tilgang til data (konsument)</a></li>
+<li><a href="#_uhf_api_katalog_4">7.6. UHF API katalog</a></li>
+<li><a href="#_uhf_tildel_rettigheter_til_klienter_5">7.7. UHF tildel rettigheter til klienter</a></li>
+<li><a href="#_api_tilgangs_forespørsel_2">7.8. API tilgangs-forespørsel</a></li>
+<li><a href="#_uhf_oauth2_autorisasjonstjener_4">7.9. UHF Oauth2 autorisasjonstjener</a>
+<ul class="sectlevel3">
+<li><a href="#_uhf_klientregister_4">7.9.1. UHF Klientregister</a></li>
+</ul>
+</li>
+<li><a href="#_oauth_scopes_2">7.10. OAUTH scopes</a></li>
+</ul>
+</li>
+<li><a href="#_innhente_data_løsningsmønster_uhf">8. Innhente data - løsningsmønster UHF</a>
+<ul class="sectlevel2">
+<li><a href="#_innhente_data_løsningsmønster_uhf_oversikt">8.1. Innhente data - løsningsmønster UHF - oversikt</a></li>
+<li><a href="#_maskinporten_4">8.2. Maskinporten</a></li>
+<li><a href="#_data_konsument_2">8.3. Data-konsument</a></li>
+<li><a href="#_tokentjeneste_3">8.4. Tokentjeneste</a></li>
+<li><a href="#_virksomhetssertifikat">8.5. Virksomhetssertifikat</a></li>
+<li><a href="#_innhente_data">8.6. Innhente data</a></li>
+<li><a href="#_endepunkt_adresse">8.7. Endepunkt (adresse)</a></li>
+<li><a href="#_oppslag_representasjons_forhold">8.8. Oppslag representasjons-forhold</a></li>
+<li><a href="#_slå_opp_data_gjennom_et_api">8.9. Slå opp data gjennom et API</a>
+<ul class="sectlevel3">
+<li><a href="#_utfør_tjenestekall">8.9.1. Utfør tjenestekall</a></li>
+<li><a href="#_innhent_samtykke_ved_behov">8.9.2. Innhent samtykke ved behov</a></li>
+<li><a href="#_hent_teknisk_endepunkt_ved_behov">8.9.3. Hent teknisk endepunkt ved behov</a></li>
+<li><a href="#_be_om_tilgangstoken">8.9.4. Be om tilgangstoken</a></li>
+</ul>
+</li>
+<li><a href="#_tilganger_konsument_2">8.10. Tilganger konsument</a></li>
+<li><a href="#_altinn_autorisasjon_3">8.11. Altinn autorisasjon</a></li>
+<li><a href="#_felles_api_katalog_3">8.12. Felles API-katalog</a></li>
+<li><a href="#_adressetjeneste">8.13. Adressetjeneste</a></li>
+<li><a href="#_datautvekslings_tjeneste">8.14. Datautvekslings-tjeneste</a></li>
+<li><a href="#_samtykkeregistererings_tjeneste">8.15. Samtykkeregistererings-tjeneste</a></li>
+<li><a href="#_altinn_autorisasjon_4">8.16. Altinn autorisasjon</a></li>
+<li><a href="#_api_gateway_hos_dataeier_oauth_resource_server_4">8.17. API Gateway hos dataeier / OAuth resource server</a></li>
+<li><a href="#_uhf_oauth2_autorisasjonstjener_5">8.18. UHF Oauth2 autorisasjonstjener</a></li>
+<li><a href="#_uhf_api_katalog_5">8.19. UHF API katalog</a></li>
+</ul>
+</li>
+<li><a href="#_avgi_data_løsningsmønster_uhf">9. Avgi data - løsningsmønster UHF</a>
+<ul class="sectlevel2">
+<li><a href="#_avgi_data_løsningsmønster_uhf_oversikt">9.1. Avgi data - løsningsmønster UHF - oversikt</a></li>
+<li><a href="#_egen_autorisasjons_komponent">9.2. Egen autorisasjons-komponent</a></li>
+<li><a href="#_altinn_autorisasjon_5">9.3. Altinn autorisasjon</a></li>
+<li><a href="#_datatilbyder_3">9.4. Datatilbyder</a></li>
+<li><a href="#_tilgangskontroll_tjeneste">9.5. Tilgangskontroll-tjeneste</a></li>
+<li><a href="#_avgi_forespurte_data_gjennom_api">9.6. Avgi forespurte data gjennom API</a>
+<ul class="sectlevel3">
+<li><a href="#_motta_forespørsel_om_oppslag">9.6.1. Motta  forespørsel om oppslag</a></li>
+<li><a href="#_avgi_data">9.6.2. Avgi data</a></li>
+<li><a href="#_autentisere_konsument">9.6.3. Autentisere konsument</a></li>
+<li><a href="#_kontroller_tilgang">9.6.4. Kontroller tilgang</a></li>
+</ul>
+</li>
+<li><a href="#_datautvekslings_tjeneste_2">9.7. Datautvekslings-tjeneste</a></li>
+<li><a href="#_datautvekslings_tjeneste_3">9.8. Datautvekslings-tjeneste</a></li>
+<li><a href="#_tokenvaliderings_tjeneste">9.9. Tokenvaliderings-tjeneste</a></li>
+<li><a href="#_avgi_data_2">9.10. Avgi data</a></li>
+<li><a href="#_api_gateway_hos_dataeier_oauth_resource_server_5">9.11. API Gateway hos dataeier / OAuth resource server</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_om_datautveksling_ved_oppslag"><a class="anchor" href="#_om_datautveksling_ved_oppslag"></a>1. Om Datautveksling ved oppslag</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>undefined</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_applikasjonsoversikt_forespørsel"><a class="anchor" href="#_applikasjonsoversikt_forespørsel"></a>2. Applikasjonsoversikt forespørsel</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_applikasjonsoversikt_forespørsel_oversikt"><a class="anchor" href="#_applikasjonsoversikt_forespørsel_oversikt"></a>2.1. Applikasjonsoversikt forespørsel - oversikt</h3>
+<div class="paragraph">
+<p>undefined</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Applikasjonsoversikt%20forespørsel.png" alt="Applikasjonsoversikt forespørsel image">
+</div>
+<div class="title">Figure 1. Applikasjonsoversikt forespørsel</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_infrastruktur"><a class="anchor" href="#_uhf_infrastruktur"></a>2.2. UHF Infrastruktur</h3>
+<div class="sect3">
+<h4 id="_tokentjeneste"><a class="anchor" href="#_tokentjeneste"></a>2.2.1. Tokentjeneste</h4>
+<div class="paragraph">
+<p>Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ressursportal"><a class="anchor" href="#_ressursportal"></a>2.2.2. Ressursportal</h4>
+<div class="sect4">
+<h5 id="_uhf_api_manager"><a class="anchor" href="#_uhf_api_manager"></a>2.2.2.1. UHF API manager</h5>
+<div class="paragraph">
+<p>Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API. Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener. Ansvaret til API manager inkluderer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sentralisert API administrasjon og forvaltning av API-katalogen</p>
+</li>
+<li>
+<p>Håndtering av registrerings- og introduksjonsprosesser for API utviklere</p>
+</li>
+<li>
+<p>Håndtere livssyklusen til et API</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ivareta registrering, forvaltning og og utvikling av klientrettigheter</p>
+</div>
+<div class="paragraph">
+<p>Hva tilbyr API av datamodell
+Hvordan ønsker API å sikre seg selv
+En klient må forholde seg til</p>
+</div>
+<div class="sect5">
+<h6 id="_uhf_api_katalog"><a class="anchor" href="#_uhf_api_katalog"></a>2.2.2.1.1. UHF API katalog</h6>
+<div class="paragraph">
+<p>Oversikt over alle API som er registrert</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_uhf_oauth2_autorisasjonstjener"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener"></a>2.2.2.2. UHF Oauth2 autorisasjonstjener</h5>
+<div class="paragraph">
+<p>Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+</div>
+<div class="paragraph">
+<p>Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
+</div>
+<div class="paragraph">
+<p>Per i dag er Scopes er grovkornet
+Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
+</div>
+<div class="sect5">
+<h6 id="_uhf_klientregister"><a class="anchor" href="#_uhf_klientregister"></a>2.2.2.2.1. UHF Klientregister</h6>
+<div class="paragraph">
+<p>Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_registrere_api_i_uhf_sektoren"><a class="anchor" href="#_registrere_api_i_uhf_sektoren"></a>2.2.3. Registrere API i UHF sektoren</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_uhf_tildel_rettigheter_til_klienter"><a class="anchor" href="#_uhf_tildel_rettigheter_til_klienter"></a>2.2.4. UHF tildel rettigheter til klienter</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uix"><a class="anchor" href="#_uix"></a>2.3. UiX</h3>
+<div class="sect3">
+<h4 id="_kildedata"><a class="anchor" href="#_kildedata"></a>2.3.1. Kildedata</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_api_gateway_hos_dataeier_oauth_resource_server"><a class="anchor" href="#_api_gateway_hos_dataeier_oauth_resource_server"></a>2.3.2. API Gateway hos dataeier / OAuth resource server</h4>
+<div class="paragraph">
+<p>API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+</div>
+<div class="paragraph">
+<p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Validere tilgangstoken</p>
+</li>
+<li>
+<p>Beskytte mot inntrenging og andre trusler</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Håndtere volumbegrensninger og andre abonnementsordninger</p>
+</li>
+<li>
+<p>Håndheve tilgangsstyring</p>
+</li>
+<li>
+<p>Samle inn data om bruken av API-er</p>
+</li>
+<li>
+<p>[orkestrering mellom interntjeneser??]</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Prinsipp fra Steiner:
+Oppgaver både sikkerhetsperspektiv og forvaltningsperspektivet
+Dersom gatway skal stå for sikkerheten, MÅ VÆRE SIKKER PÅ at API ikke kan nås utenom gateway
+Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
+</div>
+<div class="paragraph">
+<p>Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kildedata_2"><a class="anchor" href="#_kildedata_2"></a>2.3.3. Kildedata</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uio"><a class="anchor" href="#_uio"></a>2.4. UiO</h3>
+<div class="sect3">
+<h4 id="_kildedata_3"><a class="anchor" href="#_kildedata_3"></a>2.4.1. Kildedata</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_api_gateway_hos_dataeier_oauth_resource_server_2"><a class="anchor" href="#_api_gateway_hos_dataeier_oauth_resource_server_2"></a>2.4.2. API Gateway hos dataeier / OAuth resource server</h4>
+<div class="paragraph">
+<p>API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+</div>
+<div class="paragraph">
+<p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Validere tilgangstoken</p>
+</li>
+<li>
+<p>Beskytte mot inntrenging og andre trusler</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Håndtere volumbegrensninger og andre abonnementsordninger</p>
+</li>
+<li>
+<p>Håndheve tilgangsstyring</p>
+</li>
+<li>
+<p>Samle inn data om bruken av API-er</p>
+</li>
+<li>
+<p>[orkestrering mellom interntjeneser??]</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Prinsipp fra Steiner:
+Oppgaver både sikkerhetsperspektiv og forvaltningsperspektivet
+Dersom gatway skal stå for sikkerheten, MÅ VÆRE SIKKER PÅ at API ikke kan nås utenom gateway
+Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
+</div>
+<div class="paragraph">
+<p>Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kildedata_4"><a class="anchor" href="#_kildedata_4"></a>2.4.3. Kildedata</h4>
+
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_applikasjonsoversikt_forespørsel_integrert_med_iam"><a class="anchor" href="#_applikasjonsoversikt_forespørsel_integrert_med_iam"></a>3. Applikasjonsoversikt forespørsel integrert med IAM</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_applikasjonsoversikt_forespørsel_integrert_med_iam_oversikt"><a class="anchor" href="#_applikasjonsoversikt_forespørsel_integrert_med_iam_oversikt"></a>3.1. Applikasjonsoversikt forespørsel integrert med IAM - oversikt</h3>
+<div class="paragraph">
+<p>undefined</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Applikasjonsoversikt%20forespørsel%20integrert%20med%20IAM.png" alt="Applikasjonsoversikt forespørsel integrert med IAM image">
+</div>
+<div class="title">Figure 2. Applikasjonsoversikt forespørsel integrert med IAM</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sluttbruker"><a class="anchor" href="#_sluttbruker"></a>3.2. Sluttbruker</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_klient"><a class="anchor" href="#_klient"></a>3.3. Klient</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_identitetstilbyder"><a class="anchor" href="#_identitetstilbyder"></a>3.4. Identitetstilbyder</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_uhf_infrastruktur_2"><a class="anchor" href="#_uhf_infrastruktur_2"></a>3.5. UHF Infrastruktur</h3>
+<div class="sect3">
+<h4 id="_uhf_tildel_rettigheter_til_klienter_2"><a class="anchor" href="#_uhf_tildel_rettigheter_til_klienter_2"></a>3.5.1. UHF tildel rettigheter til klienter</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_ressursportal_2"><a class="anchor" href="#_ressursportal_2"></a>3.5.2. Ressursportal</h4>
+<div class="sect4">
+<h5 id="_uhf_oauth2_autorisasjonstjener_2"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener_2"></a>3.5.2.1. UHF Oauth2 autorisasjonstjener</h5>
+<div class="paragraph">
+<p>Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+</div>
+<div class="paragraph">
+<p>Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
+</div>
+<div class="paragraph">
+<p>Per i dag er Scopes er grovkornet
+Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
+</div>
+<div class="sect5">
+<h6 id="_uhf_klientregister_2"><a class="anchor" href="#_uhf_klientregister_2"></a>3.5.2.1.1. UHF Klientregister</h6>
+<div class="paragraph">
+<p>Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_roller_og_tilgangsregler"><a class="anchor" href="#_roller_og_tilgangsregler"></a>3.6. Roller og tilgangsregler</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_attributter_grunndata"><a class="anchor" href="#_attributter_grunndata"></a>3.7. Attributter /grunndata</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_uix_2"><a class="anchor" href="#_uix_2"></a>3.8. UiX</h3>
+<div class="sect3">
+<h4 id="_kildedata_5"><a class="anchor" href="#_kildedata_5"></a>3.8.1. Kildedata</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_kildedata_6"><a class="anchor" href="#_kildedata_6"></a>3.8.2. Kildedata</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_api_gateway_hos_dataeier_oauth_resource_server_3"><a class="anchor" href="#_api_gateway_hos_dataeier_oauth_resource_server_3"></a>3.8.3. API Gateway hos dataeier / OAuth resource server</h4>
+<div class="paragraph">
+<p>API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+</div>
+<div class="paragraph">
+<p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Validere tilgangstoken</p>
+</li>
+<li>
+<p>Beskytte mot inntrenging og andre trusler</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Håndtere volumbegrensninger og andre abonnementsordninger</p>
+</li>
+<li>
+<p>Håndheve tilgangsstyring</p>
+</li>
+<li>
+<p>Samle inn data om bruken av API-er</p>
+</li>
+<li>
+<p>[orkestrering mellom interntjeneser??]</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Prinsipp fra Steiner:
+Oppgaver både sikkerhetsperspektiv og forvaltningsperspektivet
+Dersom gatway skal stå for sikkerheten, MÅ VÆRE SIKKER PÅ at API ikke kan nås utenom gateway
+Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
+</div>
+<div class="paragraph">
+<p>Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_autentiseringstjeneste"><a class="anchor" href="#_autentiseringstjeneste"></a>3.9. Autentiseringstjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_applikasjonsoversikt_forespørsel_integrert_nasjonalt"><a class="anchor" href="#_applikasjonsoversikt_forespørsel_integrert_nasjonalt"></a>4. Applikasjonsoversikt forespørsel integrert nasjonalt</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_applikasjonsoversikt_forespørsel_integrert_nasjonalt_oversikt"><a class="anchor" href="#_applikasjonsoversikt_forespørsel_integrert_nasjonalt_oversikt"></a>4.1. Applikasjonsoversikt forespørsel integrert nasjonalt - oversikt</h3>
+<div class="paragraph">
+<p>undefined</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Applikasjonsoversikt%20forespørsel%20integrert%20nasjonalt.png" alt="Applikasjonsoversikt forespørsel integrert nasjonalt image">
+</div>
+<div class="title">Figure 3. Applikasjonsoversikt forespørsel integrert nasjonalt</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_infrastruktur_3"><a class="anchor" href="#_uhf_infrastruktur_3"></a>4.2. UHF Infrastruktur</h3>
+<div class="sect3">
+<h4 id="_tokentjeneste_2"><a class="anchor" href="#_tokentjeneste_2"></a>4.2.1. Tokentjeneste</h4>
+<div class="paragraph">
+<p>Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uhf_tildel_rettigheter_til_klienter_3"><a class="anchor" href="#_uhf_tildel_rettigheter_til_klienter_3"></a>4.2.2. UHF tildel rettigheter til klienter</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_registrere_api_i_uhf_sektoren_2"><a class="anchor" href="#_registrere_api_i_uhf_sektoren_2"></a>4.2.3. Registrere API i UHF sektoren</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_ressursportal_3"><a class="anchor" href="#_ressursportal_3"></a>4.2.4. Ressursportal</h4>
+<div class="sect4">
+<h5 id="_uhf_oauth2_autorisasjonstjener_3"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener_3"></a>4.2.4.1. UHF Oauth2 autorisasjonstjener</h5>
+<div class="paragraph">
+<p>Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+</div>
+<div class="paragraph">
+<p>Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
+</div>
+<div class="paragraph">
+<p>Per i dag er Scopes er grovkornet
+Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
+</div>
+<div class="sect5">
+<h6 id="_uhf_klientregister_3"><a class="anchor" href="#_uhf_klientregister_3"></a>4.2.4.1.1. UHF Klientregister</h6>
+<div class="paragraph">
+<p>Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_uhf_api_manager_2"><a class="anchor" href="#_uhf_api_manager_2"></a>4.2.4.2. UHF API manager</h5>
+<div class="paragraph">
+<p>Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API. Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener. Ansvaret til API manager inkluderer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sentralisert API administrasjon og forvaltning av API-katalogen</p>
+</li>
+<li>
+<p>Håndtering av registrerings- og introduksjonsprosesser for API utviklere</p>
+</li>
+<li>
+<p>Håndtere livssyklusen til et API</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ivareta registrering, forvaltning og og utvikling av klientrettigheter</p>
+</div>
+<div class="paragraph">
+<p>Hva tilbyr API av datamodell
+Hvordan ønsker API å sikre seg selv
+En klient må forholde seg til</p>
+</div>
+<div class="sect5">
+<h6 id="_uhf_api_katalog_2"><a class="anchor" href="#_uhf_api_katalog_2"></a>4.2.4.2.1. UHF API katalog</h6>
+<div class="paragraph">
+<p>Oversikt over alle API som er registrert</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nasjonal_infrastruktur"><a class="anchor" href="#_nasjonal_infrastruktur"></a>4.3. Nasjonal infrastruktur</h3>
+<div class="sect3">
+<h4 id="_maskinporten"><a class="anchor" href="#_maskinporten"></a>4.3.1. Maskinporten</h4>
+<div class="paragraph">
+<p>Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
+</div>
+<div class="paragraph">
+<p>Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Maskinporten:
+<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_altinn_autorisasjon"><a class="anchor" href="#_altinn_autorisasjon"></a>4.3.2. Altinn autorisasjon</h4>
+<div class="paragraph">
+<p>Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
+</div>
+<div class="paragraph">
+<p>Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
+autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
+</div>
+<div class="paragraph">
+<p>Dersom en privatperson skal ta i bruk en tjeneste på vegne av en virksomhet, gjøres det et oppslag mot Enhetsregisteret for å bekrefte at personen har en rolle på vegne av virksomheten. Dette gir organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Altinn autorisasjon:
+<a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_felles_api_katalog"><a class="anchor" href="#_felles_api_katalog"></a>4.3.3. Felles API-katalog</h4>
+<div class="paragraph">
+<p>Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_registrere_api_uhf"><a class="anchor" href="#_registrere_api_uhf"></a>5. Registrere API UHF</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_registrere_api_uhf_oversikt"><a class="anchor" href="#_registrere_api_uhf_oversikt"></a>5.1. Registrere API UHF - oversikt</h3>
+<div class="paragraph">
+<p>undefined</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Registrere%20API%20UHF.png" alt="Registrere API UHF image">
+</div>
+<div class="title">Figure 4. Registrere API UHF</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oauth_scopes"><a class="anchor" href="#_oauth_scopes"></a>5.2. OAUTH scopes</h3>
+<div class="paragraph">
+<p>Hvordan får Dataobjekt som som kan beskrives som en ressurs-definisjon, og et token er som regel knyttet til ett eller flere scopes. Scopes benyttes til å styre tilganger til API-er og operasjoner, samt eventuelt hva slags responser man får fra API-er.</p>
+</div>
+<div class="paragraph">
+<p>Fra eHelse: Regler for et API som beskriver hvilke tilganger en datakonsument (representert ved organisasjonsnummer) og deres klienter skal ha tilgang til (utstedt token for).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_token_egenskaper"><a class="anchor" href="#_token_egenskaper"></a>5.3. Token-egenskaper</h3>
+<div class="paragraph">
+<p>Egenskaper som f.eks. gyldighetstid ved tilgangstoken som er Maskinportens variant av sikkerhetsbillett.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datatilbyder"><a class="anchor" href="#_datatilbyder"></a>5.4. Datatilbyder</h3>
+<div class="paragraph">
+<p>Tilbyder av data til andre aktører.</p>
+</div>
+<div class="paragraph">
+<p>API Eiere  (kan eie Data som API gir tilgang til, eller system som tilbyr APIet)??</p>
+</div>
+<div class="paragraph">
+<p>Når virksomheten tilbyr åpne data, vil det være virksomheten som eier dataene. (men det bør vel definere et domen-eier innenfor virksomheten)</p>
+</div>
+<div class="paragraph">
+<p>Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_maskinporten_2"><a class="anchor" href="#_maskinporten_2"></a>5.5. Maskinporten</h3>
+<div class="paragraph">
+<p>Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
+</div>
+<div class="paragraph">
+<p>Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Maskinporten:
+<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_registrere_api_i_uhf_sektoren_3"><a class="anchor" href="#_registrere_api_i_uhf_sektoren_3"></a>5.6. Registrere API i UHF sektoren</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_api_beskrivelse"><a class="anchor" href="#_api_beskrivelse"></a>5.7. API Beskrivelse</h3>
+<div class="paragraph">
+<p>Open API spesifikasjon (har vi føringer på format her)?</p>
+</div>
+<div class="paragraph">
+<p>VI ønsker oss beskrivelse av datamodell og begreper som finnes i begrepskatalog og datamodell katalog (per default bruker vi det nasjonale, men kan hende vi må bruke noe for sektoren om ikke funksjonalitet er dekket</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_definer_rettighetter_knyttet_til_apier"><a class="anchor" href="#_uhf_definer_rettighetter_knyttet_til_apier"></a>5.8. UHF definer rettighetter knyttet til APIer</h3>
+<div class="paragraph">
+<p>UHF sentralisert selvbetjeningstjeneste for administrasjon av integrasjoner og APIer.
+Tjeneste "administrasjonssentre" vil ha rettigheter til å registrere på vegne av andre f.eks. API-katalogen
+Definere hvilke scopes finnes koblet til et API</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_registrere_api"><a class="anchor" href="#_registrere_api"></a>5.9. Registrere API</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_registrere_api_2"><a class="anchor" href="#_registrere_api_2"></a>5.10. Registrere API</h3>
+<div class="paragraph">
+<p>Prosess med å registere API i relevante tjenester, api-katalog, Maskinporten, Kapabilitetsoversikt</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_felles_api_katalog_2"><a class="anchor" href="#_felles_api_katalog_2"></a>5.11. Felles API-katalog</h3>
+<div class="paragraph">
+<p>Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_api_manager_3"><a class="anchor" href="#_uhf_api_manager_3"></a>5.12. UHF API manager</h3>
+<div class="paragraph">
+<p>Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API. Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener. Ansvaret til API manager inkluderer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sentralisert API administrasjon og forvaltning av API-katalogen</p>
+</li>
+<li>
+<p>Håndtering av registrerings- og introduksjonsprosesser for API utviklere</p>
+</li>
+<li>
+<p>Håndtere livssyklusen til et API</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ivareta registrering, forvaltning og og utvikling av klientrettigheter</p>
+</div>
+<div class="paragraph">
+<p>Hva tilbyr API av datamodell
+Hvordan ønsker API å sikre seg selv
+En klient må forholde seg til</p>
+</div>
+<div class="sect3">
+<h4 id="_uhf_api_katalog_3"><a class="anchor" href="#_uhf_api_katalog_3"></a>5.12.1. UHF API katalog</h4>
+<div class="paragraph">
+<p>Oversikt over alle API som er registrert</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf"></a>6. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf_oversikt"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf_oversikt"></a>6.1. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF - oversikt</h3>
+<div class="paragraph">
+<p>undefined</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Tilgjengeliggjøre%20data%20etter%20forspørsel%20løsningsmønster%20UHF.png" alt="Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF image">
+</div>
+<div class="title">Figure 5. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tilganger_konsument"><a class="anchor" href="#_tilganger_konsument"></a>6.2. Tilganger konsument</h3>
+<div class="paragraph">
+<p>Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datatilbyder_2"><a class="anchor" href="#_datatilbyder_2"></a>6.3. Datatilbyder</h3>
+<div class="paragraph">
+<p>Tilbyder av data til andre aktører.</p>
+</div>
+<div class="paragraph">
+<p>API Eiere  (kan eie Data som API gir tilgang til, eller system som tilbyr APIet)??</p>
+</div>
+<div class="paragraph">
+<p>Når virksomheten tilbyr åpne data, vil det være virksomheten som eier dataene. (men det bør vel definere et domen-eier innenfor virksomheten)</p>
+</div>
+<div class="paragraph">
+<p>Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tilgjengeliggjør_data_etter_forselpørsel"><a class="anchor" href="#_tilgjengeliggjør_data_etter_forselpørsel"></a>6.4. Tilgjengeliggjør data etter forselpørsel</h3>
+<div class="paragraph">
+<p>Prosessen med å tilby data gjennom et API til aktører utenfor egen virksomhet.</p>
+</div>
+<div class="sect3">
+<h4 id="_tildele_tilganger_til_api"><a class="anchor" href="#_tildele_tilganger_til_api"></a>6.4.1. Tildele tilganger til API</h4>
+<div class="paragraph">
+<p>Prosess for å registrere hvilke databrukere som skal få tilgang
+Sette policy, og grov tilgangsstyring gjennom maskinporten.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_inngå_avtale_om_tilgang_til_data"><a class="anchor" href="#_inngå_avtale_om_tilgang_til_data"></a>6.4.2. Inngå avtale om tilgang til data</h4>
+<div class="paragraph">
+<p>Prosess for å inngå avtale om tilgang og bruk av data.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_registrere_brukere_av_samtykke"><a class="anchor" href="#_registrere_brukere_av_samtykke"></a>6.4.3. Registrere brukere av samtykke</h4>
+<div class="paragraph">
+<p>Prosess for å registrere konsumenter som skal ha mulighet for å innhente samtykker som gir tilgang til en tjeneste.</p>
+</div>
+<div class="paragraph">
+<p>Dette utføres kun om det er behov for samtykke for tilgang til dataene.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_maskinporten_3"><a class="anchor" href="#_maskinporten_3"></a>6.5. Maskinporten</h3>
+<div class="paragraph">
+<p>Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
+</div>
+<div class="paragraph">
+<p>Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Maskinporten:
+<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altinn_autorisasjon_2"><a class="anchor" href="#_altinn_autorisasjon_2"></a>6.6. Altinn autorisasjon</h3>
+<div class="paragraph">
+<p>Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
+</div>
+<div class="paragraph">
+<p>Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
+autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
+</div>
+<div class="paragraph">
+<p>Dersom en privatperson skal ta i bruk en tjeneste på vegne av en virksomhet, gjøres det et oppslag mot Enhetsregisteret for å bekrefte at personen har en rolle på vegne av virksomheten. Dette gir organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Altinn autorisasjon:
+<a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_registrere_samtykkebasert_tilgang"><a class="anchor" href="#_registrere_samtykkebasert_tilgang"></a>6.7. Registrere samtykkebasert tilgang</h3>
+<div class="paragraph">
+<p>Tjeneste for å registerer konsumenter som kan innhente samtykke som gir grunnlag for utlevering fra datatilbyder.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aktører_som_kan_innhente_samtykke_for_bruk_av_api"><a class="anchor" href="#_aktører_som_kan_innhente_samtykke_for_bruk_av_api"></a>6.8. Aktører som kan innhente samtykke for bruk av API</h3>
+<div class="paragraph">
+<p>Oversikt over aktører som skal ha mulighet til å innhente samtykke som grunnlag for å få tilgang til data gjennom et API.
+URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tilgjengeliggjøre_data_etter_forespørsel"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forespørsel"></a>6.9. Tilgjengeliggjøre data etter forespørsel</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_api_tilgangs_forespørsel"><a class="anchor" href="#_api_tilgangs_forespørsel"></a>6.10. API tilgangs-forespørsel</h3>
+<div class="paragraph">
+<p>API eieren får forespørsel om den vil gi konsumenten tilgang til APIet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_godkjenn_tilgang"><a class="anchor" href="#_godkjenn_tilgang"></a>6.11. Godkjenn tilgang</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_uhf_tildel_rettigheter_til_klienter_4"><a class="anchor" href="#_uhf_tildel_rettigheter_til_klienter_4"></a>6.12. UHF tildel rettigheter til klienter</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_ressursportal_4"><a class="anchor" href="#_ressursportal_4"></a>6.13. Ressursportal</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_forespør_dataeier"><a class="anchor" href="#_forespør_dataeier"></a>6.14. Forespør dataeier</h3>
+<div class="paragraph">
+<p>Harmoniserers med rolledefinisjoner.</p>
+</div>
+<div class="paragraph">
+<p>Kan en databehandler besvare forespørselen automatisk på grunnlag av forhåndsdefinerte instruks?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>7. Få tilgang til data - løsningsmønster UHF</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_få_tilgang_til_data_løsningsmønster_uhf_oversikt"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf_oversikt"></a>7.1. Få tilgang til data - løsningsmønster UHF - oversikt</h3>
+<div class="paragraph">
+<p>undefined</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.png" alt="Få tilgang til data - løsningsmønster UHF image">
+</div>
+<div class="title">Figure 6. Få tilgang til data - løsningsmønster UHF</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_konsument"><a class="anchor" href="#_data_konsument"></a>7.2. Data-konsument</h3>
+<div class="paragraph">
+<p>Den som innhenter eller mottar data fra andre aktører.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beskrivelse_api"><a class="anchor" href="#_beskrivelse_api"></a>7.3. Beskrivelse API</h3>
+<div class="paragraph">
+<p>Dataobjekt som er en maskinlesbar beskrivelse av REST API-er iht. Open API Specification. Dette er formatet som benyttes for å registrere et API i felles API-katalog</p>
+</div>
+<div class="paragraph">
+<p>Ønsker å bruke Open API spesifikasjon</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_api_søk"><a class="anchor" href="#_api_søk"></a>7.4. API-søk</h3>
+<div class="paragraph">
+<p>Tjeneste for å søke etter og finne tilgjengelige API-er</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_få_tilgang_til_data_konsument"><a class="anchor" href="#_få_tilgang_til_data_konsument"></a>7.5. Få tilgang til data (konsument)</h3>
+<div class="paragraph">
+<p>Evnen til å skaffe seg tilgang til tilbudte data fra annen aktør.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_api_katalog_4"><a class="anchor" href="#_uhf_api_katalog_4"></a>7.6. UHF API katalog</h3>
+<div class="paragraph">
+<p>Oversikt over alle API som er registrert</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_tildel_rettigheter_til_klienter_5"><a class="anchor" href="#_uhf_tildel_rettigheter_til_klienter_5"></a>7.7. UHF tildel rettigheter til klienter</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_api_tilgangs_forespørsel_2"><a class="anchor" href="#_api_tilgangs_forespørsel_2"></a>7.8. API tilgangs-forespørsel</h3>
+<div class="paragraph">
+<p>API eieren får forespørsel om den vil gi konsumenten tilgang til APIet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_oauth2_autorisasjonstjener_4"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener_4"></a>7.9. UHF Oauth2 autorisasjonstjener</h3>
+<div class="paragraph">
+<p>Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+</div>
+<div class="paragraph">
+<p>Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
+</div>
+<div class="paragraph">
+<p>Per i dag er Scopes er grovkornet
+Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
+</div>
+<div class="sect3">
+<h4 id="_uhf_klientregister_4"><a class="anchor" href="#_uhf_klientregister_4"></a>7.9.1. UHF Klientregister</h4>
+<div class="paragraph">
+<p>Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oauth_scopes_2"><a class="anchor" href="#_oauth_scopes_2"></a>7.10. OAUTH scopes</h3>
+<div class="paragraph">
+<p>Hvordan får Dataobjekt som som kan beskrives som en ressurs-definisjon, og et token er som regel knyttet til ett eller flere scopes. Scopes benyttes til å styre tilganger til API-er og operasjoner, samt eventuelt hva slags responser man får fra API-er.</p>
+</div>
+<div class="paragraph">
+<p>Fra eHelse: Regler for et API som beskriver hvilke tilganger en datakonsument (representert ved organisasjonsnummer) og deres klienter skal ha tilgang til (utstedt token for).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>8. Innhente data - løsningsmønster UHF</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_innhente_data_løsningsmønster_uhf_oversikt"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf_oversikt"></a>8.1. Innhente data - løsningsmønster UHF - oversikt</h3>
+<div class="paragraph">
+<p>undefined</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Innhente%20data%20-%20løsningsmønster%20UHF.png" alt="Innhente data - løsningsmønster UHF image">
+</div>
+<div class="title">Figure 7. Innhente data - løsningsmønster UHF</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_maskinporten_4"><a class="anchor" href="#_maskinporten_4"></a>8.2. Maskinporten</h3>
+<div class="paragraph">
+<p>Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
+</div>
+<div class="paragraph">
+<p>Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Maskinporten:
+<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_konsument_2"><a class="anchor" href="#_data_konsument_2"></a>8.3. Data-konsument</h3>
+<div class="paragraph">
+<p>Den som innhenter eller mottar data fra andre aktører.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tokentjeneste_3"><a class="anchor" href="#_tokentjeneste_3"></a>8.4. Tokentjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_virksomhetssertifikat"><a class="anchor" href="#_virksomhetssertifikat"></a>8.5. Virksomhetssertifikat</h3>
+<div class="paragraph">
+<p>En virksomhets elektroniske ID. Benyttes for å autentisere virksomheten overfor tokentjenesten.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_innhente_data"><a class="anchor" href="#_innhente_data"></a>8.6. Innhente data</h3>
+<div class="paragraph">
+<p>Evnen til å innhente data fra en annen aktør.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_endepunkt_adresse"><a class="anchor" href="#_endepunkt_adresse"></a>8.7. Endepunkt (adresse)</h3>
+<div class="paragraph">
+<p>Dataobjekt som representerer teknisk adresse til et API eller ressurs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oppslag_representasjons_forhold"><a class="anchor" href="#_oppslag_representasjons_forhold"></a>8.8. Oppslag representasjons-forhold</h3>
+<div class="paragraph">
+<p>Tjeneste som benyttes av tokentjenesten for å kontrollere om det foreligger et delegert representasjonsforhold fra konsument til leverendør i autorisasjonstjenesten til Altinn.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_slå_opp_data_gjennom_et_api"><a class="anchor" href="#_slå_opp_data_gjennom_et_api"></a>8.9. Slå opp data gjennom et API</h3>
+<div class="paragraph">
+<p>Prosessen med å slå opp og hente data gjennom et API.</p>
+</div>
+<div class="sect3">
+<h4 id="_utfør_tjenestekall"><a class="anchor" href="#_utfør_tjenestekall"></a>8.9.1. Utfør tjenestekall</h4>
+<div class="paragraph">
+<p>Prosessen med å benytte (gjøre et oppslag mot) et eksternt API.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_innhent_samtykke_ved_behov"><a class="anchor" href="#_innhent_samtykke_ved_behov"></a>8.9.2. Innhent samtykke ved behov</h4>
+<div class="paragraph">
+<p>Prosess for å innhente samtykke fra person eller virksomhet som grunnlag for å innhente data. Dette gjøres kun ved behov.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_hent_teknisk_endepunkt_ved_behov"><a class="anchor" href="#_hent_teknisk_endepunkt_ved_behov"></a>8.9.3. Hent teknisk endepunkt ved behov</h4>
+<div class="paragraph">
+<p>Prosessen å slå opp den tekniske adressen til et API før spørring mot API-et. Gjøres kun dersom det er nødvendig.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_be_om_tilgangstoken"><a class="anchor" href="#_be_om_tilgangstoken"></a>8.9.4. Be om tilgangstoken</h4>
+<div class="paragraph">
+<p>Prosessen med å benytte en sikkerhetsbillettjeneste for hente en sikkerhetsbillett som gir tilgang til et API. Dette forutsetter at alt er registert og satt opp riktig mot de aktuelle tjenestene.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tilganger_konsument_2"><a class="anchor" href="#_tilganger_konsument_2"></a>8.10. Tilganger konsument</h3>
+<div class="paragraph">
+<p>Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altinn_autorisasjon_3"><a class="anchor" href="#_altinn_autorisasjon_3"></a>8.11. Altinn autorisasjon</h3>
+<div class="paragraph">
+<p>Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
+</div>
+<div class="paragraph">
+<p>Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
+autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
+</div>
+<div class="paragraph">
+<p>Dersom en privatperson skal ta i bruk en tjeneste på vegne av en virksomhet, gjøres det et oppslag mot Enhetsregisteret for å bekrefte at personen har en rolle på vegne av virksomheten. Dette gir organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Altinn autorisasjon:
+<a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_felles_api_katalog_3"><a class="anchor" href="#_felles_api_katalog_3"></a>8.12. Felles API-katalog</h3>
+<div class="paragraph">
+<p>Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adressetjeneste"><a class="anchor" href="#_adressetjeneste"></a>8.13. Adressetjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste som gir mulighet til å slå opp teknisk endepunkt</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datautvekslings_tjeneste"><a class="anchor" href="#_datautvekslings_tjeneste"></a>8.14. Datautvekslings-tjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste for utveksling av data over aktuell transportprotokoll, f.eks, gjennom asynkrone medlinger eller synkrone API-oppslag.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_samtykkeregistererings_tjeneste"><a class="anchor" href="#_samtykkeregistererings_tjeneste"></a>8.15. Samtykkeregistererings-tjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste for å innhente samtykke fra den registrert som dataene gjelder. Dette kan være en person eller en virksomhet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altinn_autorisasjon_4"><a class="anchor" href="#_altinn_autorisasjon_4"></a>8.16. Altinn autorisasjon</h3>
+<div class="paragraph">
+<p>Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
+</div>
+<div class="paragraph">
+<p>Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
+autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
+</div>
+<div class="paragraph">
+<p>Dersom en privatperson skal ta i bruk en tjeneste på vegne av en virksomhet, gjøres det et oppslag mot Enhetsregisteret for å bekrefte at personen har en rolle på vegne av virksomheten. Dette gir organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Altinn autorisasjon:
+<a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_api_gateway_hos_dataeier_oauth_resource_server_4"><a class="anchor" href="#_api_gateway_hos_dataeier_oauth_resource_server_4"></a>8.17. API Gateway hos dataeier / OAuth resource server</h3>
+<div class="paragraph">
+<p>API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+</div>
+<div class="paragraph">
+<p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Validere tilgangstoken</p>
+</li>
+<li>
+<p>Beskytte mot inntrenging og andre trusler</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Håndtere volumbegrensninger og andre abonnementsordninger</p>
+</li>
+<li>
+<p>Håndheve tilgangsstyring</p>
+</li>
+<li>
+<p>Samle inn data om bruken av API-er</p>
+</li>
+<li>
+<p>[orkestrering mellom interntjeneser??]</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Prinsipp fra Steiner:
+Oppgaver både sikkerhetsperspektiv og forvaltningsperspektivet
+Dersom gatway skal stå for sikkerheten, MÅ VÆRE SIKKER PÅ at API ikke kan nås utenom gateway
+Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
+</div>
+<div class="paragraph">
+<p>Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_oauth2_autorisasjonstjener_5"><a class="anchor" href="#_uhf_oauth2_autorisasjonstjener_5"></a>8.18. UHF Oauth2 autorisasjonstjener</h3>
+<div class="paragraph">
+<p>Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+</div>
+<div class="paragraph">
+<p>Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
+</div>
+<div class="paragraph">
+<p>Per i dag er Scopes er grovkornet
+Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhf_api_katalog_5"><a class="anchor" href="#_uhf_api_katalog_5"></a>8.19. UHF API katalog</h3>
+<div class="paragraph">
+<p>Oversikt over alle API som er registrert</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>9. Avgi data - løsningsmønster UHF</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_avgi_data_løsningsmønster_uhf_oversikt"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf_oversikt"></a>9.1. Avgi data - løsningsmønster UHF - oversikt</h3>
+<div class="paragraph">
+<p>undefined</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Avgi%20data%20-%20løsningsmønster%20UHF.png" alt="Avgi data - løsningsmønster UHF image">
+</div>
+<div class="title">Figure 8. Avgi data - løsningsmønster UHF</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_egen_autorisasjons_komponent"><a class="anchor" href="#_egen_autorisasjons_komponent"></a>9.2. Egen autorisasjons-komponent</h3>
+<div class="paragraph">
+<p>Komponent for å håndheve virksomhetens regler for tilgang.
+Også kalt policy enforcement point (PEP).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_altinn_autorisasjon_5"><a class="anchor" href="#_altinn_autorisasjon_5"></a>9.3. Altinn autorisasjon</h3>
+<div class="paragraph">
+<p>Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
+</div>
+<div class="paragraph">
+<p>Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
+autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
+</div>
+<div class="paragraph">
+<p>Dersom en privatperson skal ta i bruk en tjeneste på vegne av en virksomhet, gjøres det et oppslag mot Enhetsregisteret for å bekrefte at personen har en rolle på vegne av virksomheten. Dette gir organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Altinn autorisasjon:
+<a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datatilbyder_3"><a class="anchor" href="#_datatilbyder_3"></a>9.4. Datatilbyder</h3>
+<div class="paragraph">
+<p>Tilbyder av data til andre aktører.</p>
+</div>
+<div class="paragraph">
+<p>API Eiere  (kan eie Data som API gir tilgang til, eller system som tilbyr APIet)??</p>
+</div>
+<div class="paragraph">
+<p>Når virksomheten tilbyr åpne data, vil det være virksomheten som eier dataene. (men det bør vel definere et domen-eier innenfor virksomheten)</p>
+</div>
+<div class="paragraph">
+<p>Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tilgangskontroll_tjeneste"><a class="anchor" href="#_tilgangskontroll_tjeneste"></a>9.5. Tilgangskontroll-tjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste for å sjekke rettigheter til data. Kan være eksterne eller interne tjenester. Disse rettigheter kan være mer finkornet enn tilgangene administrert av autorisasjonstjeneren.
+Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, eller rollebasert fra vergemål, familierelasjon el.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avgi_forespurte_data_gjennom_api"><a class="anchor" href="#_avgi_forespurte_data_gjennom_api"></a>9.6. Avgi forespurte data gjennom API</h3>
+<div class="paragraph">
+<p>Prosessen med å avgi data på forespørsel gjennom et egnet API.</p>
+</div>
+<div class="sect3">
+<h4 id="_motta_forespørsel_om_oppslag"><a class="anchor" href="#_motta_forespørsel_om_oppslag"></a>9.6.1. Motta  forespørsel om oppslag</h4>
+<div class="paragraph">
+<p>Motta forespørsler fra API-konsument om å avgi data.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_avgi_data"><a class="anchor" href="#_avgi_data"></a>9.6.2. Avgi data</h4>
+<div class="paragraph">
+<p>Prosessen med å gi svar på forespørselen.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_autentisere_konsument"><a class="anchor" href="#_autentisere_konsument"></a>9.6.3. Autentisere konsument</h4>
+<div class="paragraph">
+<p>Prosessen med å autentisere en konsument.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kontroller_tilgang"><a class="anchor" href="#_kontroller_tilgang"></a>9.6.4. Kontroller tilgang</h4>
+<div class="paragraph">
+<p>Kontroll og håndheving av konsumentens rettigheter til å få forespurte data.  I tillegg til "validering av sikkerhetsbillet", kan det være behov for kontroll mot virksomhetsinterne policies.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datautvekslings_tjeneste_2"><a class="anchor" href="#_datautvekslings_tjeneste_2"></a>9.7. Datautvekslings-tjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste for utveksling av data over aktuell transportprotokoll, f.eks, gjennom asynkrone medlinger eller synkrone API-oppslag.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datautvekslings_tjeneste_3"><a class="anchor" href="#_datautvekslings_tjeneste_3"></a>9.8. Datautvekslings-tjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste for utveksling av data over aktuell transportprotokoll, f.eks, gjennom asynkrone medlinger eller synkrone API-oppslag.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tokenvaliderings_tjeneste"><a class="anchor" href="#_tokenvaliderings_tjeneste"></a>9.9. Tokenvaliderings-tjeneste</h3>
+<div class="paragraph">
+<p>Tjeneste som benyttes av tilbyder for å validere og kontrollere autentisiteten til et OAUTH2 token fra Maskinporten</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avgi_data_2"><a class="anchor" href="#_avgi_data_2"></a>9.10. Avgi data</h3>
+<div class="paragraph">
+<p>Evne til å avgi data på forespørsel. Kan omfatte tilgangsstyring.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_api_gateway_hos_dataeier_oauth_resource_server_5"><a class="anchor" href="#_api_gateway_hos_dataeier_oauth_resource_server_5"></a>9.11. API Gateway hos dataeier / OAuth resource server</h3>
+<div class="paragraph">
+<p>API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+</div>
+<div class="paragraph">
+<p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Validere tilgangstoken</p>
+</li>
+<li>
+<p>Beskytte mot inntrenging og andre trusler</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Håndtere volumbegrensninger og andre abonnementsordninger</p>
+</li>
+<li>
+<p>Håndheve tilgangsstyring</p>
+</li>
+<li>
+<p>Samle inn data om bruken av API-er</p>
+</li>
+<li>
+<p>[orkestrering mellom interntjeneser??]</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Prinsipp fra Steiner:
+Oppgaver både sikkerhetsperspektiv og forvaltningsperspektivet
+Dersom gatway skal stå for sikkerheten, MÅ VÆRE SIKKER PÅ at API ikke kan nås utenom gateway
+Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
+</div>
+<div class="paragraph">
+<p>Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no</p>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

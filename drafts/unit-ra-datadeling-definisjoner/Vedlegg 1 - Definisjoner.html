@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vedlegg 1 - Definisjoner :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/unit-ra-datadeling-definisjoner/Vedlegg%201%20-%20Definisjoner.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+ 		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drafts" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Utkast og innspill</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about-drafts.html">Om utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Innspill til referansearkitekturer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-integrated-processes/ra-integrated-processes-proposal.html">Referansearkitektur for samhandlingsprosesser (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-iam/ra-iam-proposal.html">Referansearkitektur for informasjonssikkerhet, tillit og personvern (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Målbilde for nasjonal samhandlingsinfrastruktur (forslag)</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for tillitstjenester</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for datadeling</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for samhandlingsprosesser</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for integrasjon med EU-s Single Digital Gateway</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for IOT</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for API management</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for fagsystemer</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for saksbehandling i kommuner</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">UNIT-test 1</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Informasjonsforvaltningsdomener.html">Informasjonsforvaltningsdomener</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Applikasjonsoversikt%20forsepørsel%20integrert%20med%20IAM.html">Applikasjonsoversikt forsepørsel integrert med IAM</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Applikasjonsoversikt%20forsepørsel%20integrert%20nasjonalt.html">Applikasjonsoversikt forsepørsel integrert nasjonalt</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Applikasjonsoversikt%20forsepørsel.html">Applikasjonsoversikt forsepørsel</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Avgi%20data%20-%20løsningsmønster%20UHF.html">Avgi data - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Dataobjekter%20eOppslag%20-%20med%20metadata%20UHF.html">Dataobjekter eOppslag - med metadata UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Dataobjekter%20eOppslag%20UHF.html">Dataobjekter eOppslag UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Delegere%20rettigheter%20til%20databehandler%20-%20løsningsmønster%20UHF.html">Delegere rettigheter til databehandler - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.html">Få tilgang til data - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Innhente%20data%20-%20løsningsmønster%20UHF.html">Innhente data - løsningsmønster UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Registrere%20API%20%20UHF.html">Registrere API  UHF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test1/Tilgjengeliggjøre%20data%20etter%20forspørsel%20løsningsmønster%20UHF.html">Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">UNIT-test 2</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Bøker/UNIT-bok1.html">UNIT-bok1</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../Konvertert%20word%20doc/Referansearkitektur-datadeling.html">Referansearkitektur for deling av data i høyere utdanning og forsking</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture-repository/index.html">Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Utkast og innspill</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../architecture-repository/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../architecture-repository/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Utkast og innspill</a></li>
+    <li><a href="Vedlegg%201%20-%20Definisjoner.html">Vedlegg 1 - Definisjoner</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/gitlab/digdir/components/draft-components/drafts/unit/modules/unit-ra-datadeling-definisjoner/pages/Vedlegg%201%20-%20Definisjoner.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Vedlegg 1 - Definisjoner</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_om_vedlegg_1_definisjoner">1. Om Vedlegg 1 - Definisjoner</a></li>
+<li><a href="#_vedlegg_1_definisjoner">2. Vedlegg 1 Definisjoner</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_om_vedlegg_1_definisjoner"><a class="anchor" href="#_om_vedlegg_1_definisjoner"></a>1. Om Vedlegg 1 - Definisjoner</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vi mener at følgende roller, dekker behovene samt holder kompleksiteten
+på et håndterbart nivå når det gjelder informasjonsforvaltning ved
+deling av data:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tjenesteeier</p>
+</li>
+<li>
+<p>Tjenesteansvarlig</p>
+</li>
+<li>
+<p>Dataeier</p>
+</li>
+<li>
+<p>Behandlingsansvarlig</p>
+</li>
+<li>
+<p>Databehandler</p>
+</li>
+<li>
+<p>Segmentansvarlig</p>
+</li>
+<li>
+<p>Begrepseier</p>
+</li>
+<li>
+<p>Datakonsumenter</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
+<th class="tableblock halign-left valign-top">Tjenesteier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjenesteeier er den
+organisasjon/virksomhet/enhet som eier en tjeneste.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Er ansvarlig for at sine data/masterdata deles iht. Referansearkitektur
+(dvs. generiske grensesnitt og notifikasjoner, eksempel IntArk).</p>
+</div>
+<div class="paragraph">
+<p>Er ansvarlig for å definere tjenestenivå i henhold til brukeres behov, å
+kvalitetssikre faglig innhold i tjenesten og å gi faglig brukerstøtte.</p>
+</div>
+<div class="paragraph">
+<p>Er ansvarlig for at tjenesten følger gjeldende lover og regler, har
+myndighet til å foreta finansielle beslutninger og signere avtaler.</p>
+</div>
+<div class="paragraph">
+<p>Er ansvarlig for at det er utpekt en tjenesteansvarlig for tjenesten.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjenesteeier vil i de fleste tilfellene være en eller flere ledere av
+de fagavdelingene som benytter seg av løsningens funksjonalitet og som
+oppnår gevinster ved å benytte tjenesten.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
+<th class="tableblock halign-left valign-top">Tjenesteansvarlig</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Rollen har et helhetlig ansvar for at tjenesten dekke ønsker og behov
+for funksjonalitet som en kunde eller konsortium har til tjenesten.</p>
+</div>
+<div class="paragraph">
+<p>Tjenesteansvarlig er operativt ansvarlig og har større kunnskap om behov
+og praktisk bruk av tjenesten. Han/hun jobber i tett samarbeid med
+brukere/brukerrepresentanter. Tjenesteansvarlig og tjenesteeier kan være
+samme person for mindre/enklere tjenester.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><em>Drive nettverk og kommunikasjon</em></p>
+</div>
+<div class="paragraph">
+<p> -ha kontakt med
+brukerne/kundene/oppdragsgiver/myndigheter/leverandører</p>
+</div>
+<div class="paragraph">
+<p>-fremskaffe og formidle informasjon om tjenesten</p>
+</div>
+<div class="paragraph">
+<p><em>Sikre brukermedvirkning og koordinere utviklingen av tjenesten</em></p>
+</div>
+<div class="paragraph">
+<p>-sørge for oppdatert dokumentasjon av tjenesten</p>
+</div>
+<div class="paragraph">
+<p>-sørge for forankring av løpende beslutninger om utvikling av tjenesten</p>
+</div>
+<div class="paragraph">
+<p>-koordinerer beslutningsprosessen</p>
+</div>
+<div class="paragraph">
+<p><em>Sørge for tilstrekkelig kvalitet og sikkerhet i tjenesten</em></p>
+</div>
+<div class="paragraph">
+<p>-oppfølging av regelverk tilknyttet tjenesten</p>
+</div>
+<div class="paragraph">
+<p>-ansvarlig for brukerstøtte [brukerstøtte er også en del av innkjøpte
+tjenester]</p>
+</div>
+<div class="paragraph">
+<p>-ansvar for opplæring i tjenesten</p>
+</div>
+<div class="paragraph">
+<p>-ansvar for å identifisere og håndtere risiko</p>
+</div>
+<div class="paragraph">
+<p><em>Tilrettelegge for gevinstrealisering</em></p>
+</div>
+<div class="paragraph">
+<p><em>Samarbeide med brukerne om forbedring av arbeidsprosesser</em></p>
+</div>
+<div class="paragraph">
+<p>_Forvalte avtaler knyttet til tjenesten _</p>
+</div>
+<div class="paragraph">
+<p>_For innkjøpte tjenester gjelder også: _</p>
+</div>
+<div class="paragraph">
+<p>Forvalte tjenestens budsjett</p>
+</div>
+<div class="paragraph">
+<p>Følge opp ekstern(e) leverandør(er)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjenesteeier, Datakonsument</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
+<th class="tableblock halign-left valign-top">Dataeier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den virksomheten som forvalter opplysningene
+som skal deles fra sine fagsystemer, registre eller felleskomponenter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Leveranse og forvalting av data. Datakvalitet, sikkerhet,
+tilgjengelighet</p>
+</div>
+<div class="paragraph">
+<p>Motta, registrere, endre og fjerne forekomster.</p>
+</div>
+<div class="paragraph">
+<p>Sikre at bruk av data som eies av tredjepart samsvarer med vilkårene som
+gis.</p>
+</div>
+<div class="paragraph">
+<p>Overholde krav i arkivloven når det gjelder kassasjon.</p>
+</div>
+<div class="paragraph">
+<p>Rådgivning og bistand i spørsmål som angår bruk av data</p>
+</div>
+<div class="paragraph">
+<p>Kommunikasjon med alle interessenter</p>
+</div>
+<div class="paragraph">
+<p>Oppgaver:</p>
+</div>
+<div class="paragraph">
+<p>Innhente data</p>
+</div>
+<div class="paragraph">
+<p>Kvalitetsikre data</p>
+</div>
+<div class="paragraph">
+<p>Bearbeide, berike data</p>
+</div>
+<div class="paragraph">
+<p>Lagre data</p>
+</div>
+<div class="paragraph">
+<p>Lisensiere data</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
+<th class="tableblock halign-left valign-top">Behandlingsansvarlig</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behandlingsansvarlig er en fysisk eller
+juridisk person, en offentlig myndighet, en institusjon eller ethvert
+annet organ som alene eller sammen med andre bestemmer formålet med
+behandlingen av personopplysninger og hvilke midler som skal benyttes;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uttømmende informasjon om rollen finnes
+hos Datatilsynet
+<a href="https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/databehandleravtale/behandlingsansvarlig-og-databehandler/hva-er-en-behandlingsansvarlig/">(behandlingsansvarlig)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
+<th class="tableblock halign-left valign-top">Databehandler</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En databehandler er en fysisk eller juridisk
+person, offentlig myndighet, institusjon eller ethvert annet organ som
+behandler personopplysninger på vegne av den behandlingsansvarlige.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uttømmende informasjon om rollen finnes
+hos Datatilsynet
+<a href="https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/databehandleravtale/behandlingsansvarlig-og-databehandler/hva-er-en-databehandler/">(databehandler)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
+<th class="tableblock halign-left valign-top">Segmentansvarlig</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rolle:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Begrepseier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rollen som har det faglige ansvaret for et
+begreps innhold.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
+<th class="tableblock halign-left valign-top">Datakonsument</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den virksomheten som mottar opplysninger fra
+datatilbyder til sitt formål/til et annet formål.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Konsumenten har ansvar for å spesifisere hvilke opplysninger de trenger,
+og for å vurdere om disse kan deles uten hinder av taushetsplikt.</p>
+</div>
+<div class="paragraph">
+<p>Konsumenter med sammenfallende behov har ansvar for å samordne seg.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjenesteansvarlig, Dataeier, Behandlingsansvarlig, Segmentansvarlig
+(skal Segmentansvarlig være felles kontaktpunkt?)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vedlegg_1_definisjoner"><a class="anchor" href="#_vedlegg_1_definisjoner"></a>2. Vedlegg 1 Definisjoner</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Datakvalitet</strong> innebærer at data skal være korrekte, komplette,
+oppdaterte og konsistente og har evnen til å støtte de
+informasjonsformål de brukes til [kilde: data.norge.no, SKATTEETATEN]</p>
+</div>
+<div class="paragraph">
+<p><strong>Masterdata</strong>: Master data is the consistent and uniform set of
+identifiers and extended attributes that describes the core entities of
+the enterprise including customers, prospects, citizens, suppliers,
+sites, hierarchies, and chart of accounts. <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. Gartner definisjon hentet fra <a href="https://www.gartner.com/en/information-technology/glossary/master-data-management-mdm" class="bare">https://www.gartner.com/en/information-technology/glossary/master-data-management-mdm</a> 2021.01.07
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no</p>
+</footer><script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
