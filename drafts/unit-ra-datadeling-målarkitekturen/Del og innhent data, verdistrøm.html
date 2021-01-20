@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Modeller for datadeling :: Nasjonalt arkitekturverksted</title>
-    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/unit-ra-datadeling-målarkitekturen/Modeller%20for%20datadeling.html">
+    <title>Del og innhent data, verdistrøm :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/unit-ra-datadeling-målarkitekturen/Del%20og%20innhent%20data,%20verdistrøm.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -197,90 +197,45 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="Modeller%20for%20datadeling.html">Modeller for datadeling</a></li>
+    <li><a href="Del%20og%20innhent%20data,%20verdistrøm.html">Del og innhent data, verdistrøm</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///C:/gitlab/digdir/components/draft-components/drafts/unit/modules/unit-ra-datadeling-målarkitekturen/pages/Modeller%20for%20datadeling.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///C:/gitlab/digdir/components/draft-components/drafts/unit/modules/unit-ra-datadeling-målarkitekturen/pages/Del%20og%20innhent%20data,%20verdistrøm.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Modeller for datadeling</h1>
+<h1 class="page">Del og innhent data, verdistrøm</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_del_og_innhent_data_verdistrøm">1. Del og innhent data, verdistrøm</a>
+<li><a href="#_del_og_innhent_data_verdistrøm_oversikt">1. Del og innhent data, verdistrøm - oversikt</a></li>
+<li><a href="#_datatilbyder">2. Datatilbyder</a></li>
+<li><a href="#_del_data">3. Del  data</a>
 <ul class="sectlevel2">
-<li><a href="#_del_og_innhent_data_verdistrøm_oversikt">1.1. Del og innhent data, verdistrøm - oversikt</a></li>
-<li><a href="#_datatilbyder">1.2. Datatilbyder</a></li>
-<li><a href="#_del_data">1.3. Del  data</a>
-<ul class="sectlevel3">
-<li><a href="#_motta_henvendelser_om_datadeling">1.3.1. Motta henvendelser om datadeling</a></li>
-<li><a href="#_ta_rede_på_egne_data_og_krav_til_datadeling">1.3.2. Ta rede på egne data og krav til datadeling</a></li>
-<li><a href="#_tilrettelegg_for_dataoppdagelse_og_datadeling">1.3.3. Tilrettelegg for dataoppdagelse og datadeling</a></li>
-<li><a href="#_avgi_data">1.3.4. Avgi data</a></li>
-<li><a href="#_sett_opp_avtaler_løsninger_og_tilganger_etter_henvendelse">1.3.5. Sett opp avtaler, løsninger og tilganger etter henvendelse</a></li>
-<li><a href="#_forbedre_løsninger_sikkerhet_og_datakvalitet_tilbyder">1.3.6. Forbedre løsninger, sikkerhet og datakvalitet (tilbyder)</a></li>
+<li><a href="#_motta_henvendelser_om_datadeling">3.1. Motta henvendelser om datadeling</a></li>
+<li><a href="#_ta_rede_på_egne_data_og_krav_til_datadeling">3.2. Ta rede på egne data og krav til datadeling</a></li>
+<li><a href="#_tilrettelegg_for_dataoppdagelse_og_datadeling">3.3. Tilrettelegg for dataoppdagelse og datadeling</a></li>
+<li><a href="#_avgi_data">3.4. Avgi data</a></li>
+<li><a href="#_sett_opp_avtaler_løsninger_og_tilganger_etter_henvendelse">3.5. Sett opp avtaler, løsninger og tilganger etter henvendelse</a></li>
+<li><a href="#_forbedre_løsninger_sikkerhet_og_datakvalitet_tilbyder">3.6. Forbedre løsninger, sikkerhet og datakvalitet (tilbyder)</a></li>
 </ul>
 </li>
-<li><a href="#_data_konsument">1.4. Data-konsument</a></li>
-<li><a href="#_collect_data">1.5. Collect data</a>
-<ul class="sectlevel3">
-<li><a href="#_ta_rede_på_behov_for_innhenting_av_data">1.5.1. Ta rede på behov for innhenting av data</a></li>
-<li><a href="#_oppdag_data_og_datakilder">1.5.2. Oppdag data og datakilder</a></li>
-<li><a href="#_forespør_og_motta_data">1.5.3. Forespør og motta data</a></li>
-<li><a href="#_forbedre_løsninger_sikkerhet_og_datakvalitet_konsument">1.5.4. Forbedre løsninger, sikkerhet og datakvalitet (konsument)</a></li>
-<li><a href="#_be_om_tilganger_og_abonnementer">1.5.5. Be  om tilganger og abonnementer</a></li>
-<li><a href="#_etabler_avtaler_og_løsninger_for_datainnhenting">1.5.6. Etabler avtaler og løsninger for datainnhenting</a></li>
+<li><a href="#_data_konsument">4. Data-konsument</a></li>
+<li><a href="#_collect_data">5. Collect data</a>
+<ul class="sectlevel2">
+<li><a href="#_ta_rede_på_behov_for_innhenting_av_data">5.1. Ta rede på behov for innhenting av data</a></li>
+<li><a href="#_oppdag_data_og_datakilder">5.2. Oppdag data og datakilder</a></li>
+<li><a href="#_forespør_og_motta_data">5.3. Forespør og motta data</a></li>
+<li><a href="#_forbedre_løsninger_sikkerhet_og_datakvalitet_konsument">5.4. Forbedre løsninger, sikkerhet og datakvalitet (konsument)</a></li>
+<li><a href="#_be_om_tilganger_og_abonnementer">5.5. Be  om tilganger og abonnementer</a></li>
+<li><a href="#_etabler_avtaler_og_løsninger_for_datainnhenting">5.6. Etabler avtaler og løsninger for datainnhenting</a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-</div>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Når datatilbydere og datakonsumenter deler data, skjer det som en del av
-en digital samhandling. For at samhandlingen skal være vellykket, må
-tilbydere og konsumenter sikre at de handler i henhold til loven
-(juridisk samhandlingsevne), at aktørene har avklart forventninger til
-hverandre (organisatorisk samhandlingsevne), at datatilbyder og
-konsumenter har samme forståelse av dataenes betydning (semantisk
-samhandlingsevne) og at de tekniske løsningene som utfører datadeling
-fungerer sammen slik de skal (teknisk samhandlingsevne).
-<a href="https://www.digdir.no/nasjonal-arkitektur/rammeverk-digital-samhandling/2148#juridisk_samhandlingsevne">Rammeverk
-for digital samhandling</a> vist under utdyper disse samhandlingsevner.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/image4.png" alt="image" width="464" height="274"></span></p>
-</div>
-<div class="paragraph">
-<p>Modellene i referansearkitekturen beskrevet under er laget for å ivareta
-juridisk-, organisatorisk-, semantisk- og teknisk samhandlingsevner og
-hjelper dermed de som benytter modellene til å lykkes med digital
-samhandling.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://nasjonal-arkitektur.github.io/architecture-repository/about-topic-areas/about-topic-areas.html">Nasjonale
-referansearkitekturer innen datadeling og datautveksling</a> er fremdeles
-under utvikling. Vi gjenbruker her noen av modellene uendret, og
-tilpasser noen for høyere utdanning og forskning. Den overordnede
-verdistrømmen for datadeling og relaterte kapabiliteter avbildet under
-er uendret.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="master@drafts:unit-ra-datadeling-målarkitekturen:image5.png" alt="Diagram" width="567" height="224"></span></p>
-</div>
-<div class="paragraph">
-<p><mark>Legge til tekst fra modellen som beskriver figuren</mark></p>
-</div>
-</div>
 </div>
 <div class="sect1">
-<h2 id="_del_og_innhent_data_verdistrøm"><a class="anchor" href="#_del_og_innhent_data_verdistrøm"></a>1. Del og innhent data, verdistrøm</h2>
+<h2 id="_del_og_innhent_data_verdistrøm_oversikt"><a class="anchor" href="#_del_og_innhent_data_verdistrøm_oversikt"></a>1. Del og innhent data, verdistrøm - oversikt</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_del_og_innhent_data_verdistrøm_oversikt"><a class="anchor" href="#_del_og_innhent_data_verdistrøm_oversikt"></a>1.1. Del og innhent data, verdistrøm - oversikt</h3>
 <div class="paragraph">
 <p><mark>TODO (Erik): Beskrivelse av Del og innhent data, verdistrøm + hvert steg</mark></p>
 </div>
@@ -291,8 +246,10 @@ er uendret.</p>
 <div class="title">Figure 1. Del og innhent data, verdistrøm</div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_datatilbyder"><a class="anchor" href="#_datatilbyder"></a>1.2. Datatilbyder</h3>
+</div>
+<div class="sect1">
+<h2 id="_datatilbyder"><a class="anchor" href="#_datatilbyder"></a>2. Datatilbyder</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Tilbyder av data til andre aktører.</p>
 </div>
@@ -306,65 +263,70 @@ er uendret.</p>
 <p>Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_del_data"><a class="anchor" href="#_del_data"></a>3. Del  data</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_del_data"><a class="anchor" href="#_del_data"></a>1.3. Del  data</h3>
-<div class="sect3">
-<h4 id="_motta_henvendelser_om_datadeling"><a class="anchor" href="#_motta_henvendelser_om_datadeling"></a>1.3.1. Motta henvendelser om datadeling</h4>
+<h3 id="_motta_henvendelser_om_datadeling"><a class="anchor" href="#_motta_henvendelser_om_datadeling"></a>3.1. Motta henvendelser om datadeling</h3>
 
-</div>
-<div class="sect3">
-<h4 id="_ta_rede_på_egne_data_og_krav_til_datadeling"><a class="anchor" href="#_ta_rede_på_egne_data_og_krav_til_datadeling"></a>1.3.2. Ta rede på egne data og krav til datadeling</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_tilrettelegg_for_dataoppdagelse_og_datadeling"><a class="anchor" href="#_tilrettelegg_for_dataoppdagelse_og_datadeling"></a>1.3.3. Tilrettelegg for dataoppdagelse og datadeling</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_avgi_data"><a class="anchor" href="#_avgi_data"></a>1.3.4. Avgi data</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_sett_opp_avtaler_løsninger_og_tilganger_etter_henvendelse"><a class="anchor" href="#_sett_opp_avtaler_løsninger_og_tilganger_etter_henvendelse"></a>1.3.5. Sett opp avtaler, løsninger og tilganger etter henvendelse</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_forbedre_løsninger_sikkerhet_og_datakvalitet_tilbyder"><a class="anchor" href="#_forbedre_løsninger_sikkerhet_og_datakvalitet_tilbyder"></a>1.3.6. Forbedre løsninger, sikkerhet og datakvalitet (tilbyder)</h4>
-
-</div>
 </div>
 <div class="sect2">
-<h3 id="_data_konsument"><a class="anchor" href="#_data_konsument"></a>1.4. Data-konsument</h3>
+<h3 id="_ta_rede_på_egne_data_og_krav_til_datadeling"><a class="anchor" href="#_ta_rede_på_egne_data_og_krav_til_datadeling"></a>3.2. Ta rede på egne data og krav til datadeling</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_tilrettelegg_for_dataoppdagelse_og_datadeling"><a class="anchor" href="#_tilrettelegg_for_dataoppdagelse_og_datadeling"></a>3.3. Tilrettelegg for dataoppdagelse og datadeling</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_avgi_data"><a class="anchor" href="#_avgi_data"></a>3.4. Avgi data</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_sett_opp_avtaler_løsninger_og_tilganger_etter_henvendelse"><a class="anchor" href="#_sett_opp_avtaler_løsninger_og_tilganger_etter_henvendelse"></a>3.5. Sett opp avtaler, løsninger og tilganger etter henvendelse</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_forbedre_løsninger_sikkerhet_og_datakvalitet_tilbyder"><a class="anchor" href="#_forbedre_løsninger_sikkerhet_og_datakvalitet_tilbyder"></a>3.6. Forbedre løsninger, sikkerhet og datakvalitet (tilbyder)</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_konsument"><a class="anchor" href="#_data_konsument"></a>4. Data-konsument</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Den som innhenter eller mottar data fra andre aktører.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_collect_data"><a class="anchor" href="#_collect_data"></a>5. Collect data</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_collect_data"><a class="anchor" href="#_collect_data"></a>1.5. Collect data</h3>
-<div class="sect3">
-<h4 id="_ta_rede_på_behov_for_innhenting_av_data"><a class="anchor" href="#_ta_rede_på_behov_for_innhenting_av_data"></a>1.5.1. Ta rede på behov for innhenting av data</h4>
+<h3 id="_ta_rede_på_behov_for_innhenting_av_data"><a class="anchor" href="#_ta_rede_på_behov_for_innhenting_av_data"></a>5.1. Ta rede på behov for innhenting av data</h3>
 
 </div>
-<div class="sect3">
-<h4 id="_oppdag_data_og_datakilder"><a class="anchor" href="#_oppdag_data_og_datakilder"></a>1.5.2. Oppdag data og datakilder</h4>
+<div class="sect2">
+<h3 id="_oppdag_data_og_datakilder"><a class="anchor" href="#_oppdag_data_og_datakilder"></a>5.2. Oppdag data og datakilder</h3>
 
 </div>
-<div class="sect3">
-<h4 id="_forespør_og_motta_data"><a class="anchor" href="#_forespør_og_motta_data"></a>1.5.3. Forespør og motta data</h4>
+<div class="sect2">
+<h3 id="_forespør_og_motta_data"><a class="anchor" href="#_forespør_og_motta_data"></a>5.3. Forespør og motta data</h3>
 
 </div>
-<div class="sect3">
-<h4 id="_forbedre_løsninger_sikkerhet_og_datakvalitet_konsument"><a class="anchor" href="#_forbedre_løsninger_sikkerhet_og_datakvalitet_konsument"></a>1.5.4. Forbedre løsninger, sikkerhet og datakvalitet (konsument)</h4>
+<div class="sect2">
+<h3 id="_forbedre_løsninger_sikkerhet_og_datakvalitet_konsument"><a class="anchor" href="#_forbedre_løsninger_sikkerhet_og_datakvalitet_konsument"></a>5.4. Forbedre løsninger, sikkerhet og datakvalitet (konsument)</h3>
 
 </div>
-<div class="sect3">
-<h4 id="_be_om_tilganger_og_abonnementer"><a class="anchor" href="#_be_om_tilganger_og_abonnementer"></a>1.5.5. Be  om tilganger og abonnementer</h4>
+<div class="sect2">
+<h3 id="_be_om_tilganger_og_abonnementer"><a class="anchor" href="#_be_om_tilganger_og_abonnementer"></a>5.5. Be  om tilganger og abonnementer</h3>
 
 </div>
-<div class="sect3">
-<h4 id="_etabler_avtaler_og_løsninger_for_datainnhenting"><a class="anchor" href="#_etabler_avtaler_og_løsninger_for_datainnhenting"></a>1.5.6. Etabler avtaler og løsninger for datainnhenting</h4>
+<div class="sect2">
+<h3 id="_etabler_avtaler_og_løsninger_for_datainnhenting"><a class="anchor" href="#_etabler_avtaler_og_løsninger_for_datainnhenting"></a>5.6. Etabler avtaler og løsninger for datainnhenting</h3>
 
-</div>
 </div>
 </div>
 </div>
