@@ -73,9 +73,6 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../data-exchange-strategy-actions/data-exchange-strategy-actions.html">Tiltak</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../data-exchange-strategy-communication/data-exchange-strategy-communication.html">Kommunikasjon</a>
-  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
@@ -188,71 +185,63 @@
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_begreper_og_konsepter">1. Begreper og konsepter</a>
+<li><a href="#_generelt">1. Generelt</a></li>
+<li><a href="#_kontekst_for_datautveksling">2. Kontekst for datautveksling</a></li>
+<li><a href="#_arkitekturparadigmer">3. Arkitekturparadigmer</a></li>
+<li><a href="#_tjenestekjeder_og_ende_til_ende_prosesser">4. Tjenestekjeder og ende-til-ende prosesser</a></li>
+<li><a href="#_orkestrering_og_koreografi">5. Orkestrering og koreografi</a></li>
+<li><a href="#_korrelering_av_meldinger_i_prosessinstanser">6. Korrelering av meldinger i prosessinstanser</a></li>
+<li><a href="#_begrepet_data_vs_informasjon">7. Begrepet data vs. informasjon</a></li>
+<li><a href="#_synkron_vs_asynkron_kommunikasjon">8. Synkron vs. asynkron kommunikasjon</a></li>
+<li><a href="#_kvalitetsegenskaper_ved_løsninger_for_datautveksling">9. Kvalitetsegenskaper ved løsninger for datautveksling</a></li>
+<li><a href="#_utvekslingsmønstre">10. Utvekslingsmønstre</a>
 <ul class="sectlevel2">
-<li><a href="#_generelt">1.1. Generelt</a></li>
-<li><a href="#_kontekst_for_datautveksling">1.2. Kontekst for datautveksling</a></li>
-<li><a href="#_arkitekturparadigmer">1.3. Arkitekturparadigmer</a></li>
-<li><a href="#_tjenestekjeder_og_ende_til_ende_prosesser">1.4. Tjenestekjeder og ende-til-ende prosesser</a></li>
-<li><a href="#_orkestrering_og_koreografi">1.5. Orkestrering og koreografi</a></li>
-<li><a href="#_korrelering_av_meldinger_i_prosessinstanser">1.6. Korrelering av meldinger i prosessinstanser</a></li>
-<li><a href="#_begrepet_data_vs_informasjon">1.7. Begrepet data vs. informasjon</a></li>
-<li><a href="#_synkron_vs_asynkron_kommunikasjon">1.8. Synkron vs. asynkron kommunikasjon</a></li>
-<li><a href="#_kvalitetsegenskaper_ved_løsninger_for_datautveksling">1.9. Kvalitetsegenskaper ved løsninger for datautveksling</a></li>
-<li><a href="#_utvekslingsmønstre">1.10. Utvekslingsmønstre</a>
-<ul class="sectlevel3">
-<li><a href="#_grunnleggende_integrasjonsformer">1.10.1. Grunnleggende integrasjonsformer</a></li>
-<li><a href="#_tradisjonelt_utbredte_utvekslingsmønstre">1.10.2. Tradisjonelt utbredte utvekslingsmønstre</a>
-<ul class="sectlevel4">
-<li><a href="#_generelt_2">1.10.2.1. Generelt</a></li>
-<li><a href="#_one_way_push">1.10.2.2. One-way push</a></li>
-<li><a href="#_request_response">1.10.2.3. Request-Response</a></li>
-<li><a href="#_multi_cast_notifikasjon_til_kjente_mottakere">1.10.2.4. Multi-cast (notifikasjon til kjente mottakere)</a></li>
-<li><a href="#_multi_hop_4_hjørners_med_gateway_funksjonalitet">1.10.2.5. Multi-hop (4-hjørners med gateway-funksjonalitet )</a></li>
-<li><a href="#_pubsub_event_streaming_notifikasjon_til_vilkårlige_mottakere">1.10.2.6. Pub/Sub (event streaming, notifikasjon til vilkårlige mottakere)</a></li>
-<li><a href="#_batch_processing">1.10.2.7. Batch processing</a></li>
-<li><a href="#_priority_queuing">1.10.2.8. Priority Queuing</a></li>
+<li><a href="#_grunnleggende_integrasjonsformer">10.1. Grunnleggende integrasjonsformer</a></li>
+<li><a href="#_tradisjonelt_utbredte_utvekslingsmønstre">10.2. Tradisjonelt utbredte utvekslingsmønstre</a></li>
+<li><a href="#_generelt_2">10.3. Generelt</a></li>
+<li><a href="#_one_way_push">10.4. One-way push</a></li>
+<li><a href="#_request_response">10.5. Request-Response</a></li>
+<li><a href="#_multi_cast_notifikasjon_til_kjente_mottakere">10.6. Multi-cast (notifikasjon til kjente mottakere)</a></li>
+<li><a href="#_multi_hop_4_hjørners_med_gateway_funksjonalitet">10.7. Multi-hop (4-hjørners med gateway-funksjonalitet )</a></li>
+<li><a href="#_pubsub_event_streaming_notifikasjon_til_vilkårlige_mottakere">10.8. Pub/Sub (event streaming, notifikasjon til vilkårlige mottakere)</a></li>
+<li><a href="#_batch_processing">10.9. Batch processing</a></li>
+<li><a href="#_priority_queuing">10.10. Priority Queuing</a></li>
+<li><a href="#_andre_utvekslingsmønstre">10.11. Andre utvekslingsmønstre</a></li>
+<li><a href="#_parallell_spørring_mot_flere_kilder">10.12. Parallell spørring mot flere kilder</a></li>
+<li><a href="#_publishasynchronous_response">10.13. Publish/asynchronous response</a></li>
 </ul>
 </li>
-<li><a href="#_andre_utvekslingsmønstre">1.10.3. Andre utvekslingsmønstre</a>
-<ul class="sectlevel4">
-<li><a href="#_parallell_spørring_mot_flere_kilder">1.10.3.1. Parallell spørring mot flere kilder</a></li>
-<li><a href="#_publishasynchronous_response">1.10.3.2. Publish/asynchronous response</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_mer_om_meldingsutveksling">1.11. Mer om meldingsutveksling</a>
-<ul class="sectlevel3">
-<li><a href="#_abstrakt_lagdelt_modell">1.11.1. Abstrakt, lagdelt modell</a></li>
-<li><a href="#_teknologier_og_standarder_for_meldingsutveksling">1.11.2. Teknologier og standarder for meldingsutveksling</a></li>
-</ul>
-</li>
+<li><a href="#_mer_om_meldingsutveksling">11. Mer om meldingsutveksling</a>
+<ul class="sectlevel2">
+<li><a href="#_abstrakt_lagdelt_modell">11.1. Abstrakt, lagdelt modell</a></li>
+<li><a href="#_teknologier_og_standarder_for_meldingsutveksling">11.2. Teknologier og standarder for meldingsutveksling</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="_begreper_og_konsepter"><a class="anchor" href="#_begreper_og_konsepter"></a>1. Begreper og konsepter</h2>
+<h2 id="_generelt"><a class="anchor" href="#_generelt"></a>1. Generelt</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_generelt"><a class="anchor" href="#_generelt"></a>1.1. Generelt</h3>
 <div class="paragraph">
 <p>Her introduseres noen begreper og konsepter som kan være viktig for
 felles forståelse.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_kontekst_for_datautveksling"><a class="anchor" href="#_kontekst_for_datautveksling"></a>1.2. Kontekst for datautveksling</h3>
+</div>
+<div class="sect1">
+<h2 id="_kontekst_for_datautveksling"><a class="anchor" href="#_kontekst_for_datautveksling"></a>2. Kontekst for datautveksling</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Eksempel:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image7.png" alt="image" width="604" height="217"></span></p>
+<p><span class="image"><img src="_images/image7.png" alt="image" width="604" height="217"></span></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_arkitekturparadigmer"><a class="anchor" href="#_arkitekturparadigmer"></a>1.3. Arkitekturparadigmer</h3>
+</div>
+<div class="sect1">
+<h2 id="_arkitekturparadigmer"><a class="anchor" href="#_arkitekturparadigmer"></a>3. Arkitekturparadigmer</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The term Architecture Paradigm is used here about an approach to
 architecture, something that is larger than an architecture pattern or
@@ -288,33 +277,41 @@ Technologies</p>
 <a href="https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#_arkitekturparadigmer" class="bare">https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#_arkitekturparadigmer</a></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_tjenestekjeder_og_ende_til_ende_prosesser"><a class="anchor" href="#_tjenestekjeder_og_ende_til_ende_prosesser"></a>1.4. Tjenestekjeder og ende-til-ende prosesser</h3>
+</div>
+<div class="sect1">
+<h2 id="_tjenestekjeder_og_ende_til_ende_prosesser"><a class="anchor" href="#_tjenestekjeder_og_ende_til_ende_prosesser"></a>4. Tjenestekjeder og ende-til-ende prosesser</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>TBD.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_orkestrering_og_koreografi"><a class="anchor" href="#_orkestrering_og_koreografi"></a>1.5. Orkestrering og koreografi</h3>
+</div>
+<div class="sect1">
+<h2 id="_orkestrering_og_koreografi"><a class="anchor" href="#_orkestrering_og_koreografi"></a>5. Orkestrering og koreografi</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>TBD.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_korrelering_av_meldinger_i_prosessinstanser"><a class="anchor" href="#_korrelering_av_meldinger_i_prosessinstanser"></a>1.6. Korrelering av meldinger i prosessinstanser</h3>
+</div>
+<div class="sect1">
+<h2 id="_korrelering_av_meldinger_i_prosessinstanser"><a class="anchor" href="#_korrelering_av_meldinger_i_prosessinstanser"></a>6. Korrelering av meldinger i prosessinstanser</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>TBD.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_begrepet_data_vs_informasjon"><a class="anchor" href="#_begrepet_data_vs_informasjon"></a>1.7. Begrepet data vs. informasjon</h3>
+</div>
+<div class="sect1">
+<h2 id="_begrepet_data_vs_informasjon"><a class="anchor" href="#_begrepet_data_vs_informasjon"></a>7. Begrepet data vs. informasjon</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Det er i mange sammenhenger relevant å skille mellom begrepene data,
 informasjon og kunnskap (og visdom, eller kapabilitet – dvs. evne til å
 bruke kunnskapen til noe fornuftig).</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image8.png" alt="image" width="221" height="149"></span></p>
+<p><span class="image"><img src="_images/image8.png" alt="image" width="221" height="149"></span></p>
 </div>
 <div class="paragraph">
 <p>I tilknytning til <em>datautveksling</em> er ikke alle distinksjonene
@@ -329,7 +326,7 @@ konseptuelle, logiske og fysiske data.</p>
 presis definisjon på i tilknytning til datautveksling.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image9.png" alt="Hva er data for datautveksling image" width="454" height="485"></span></p>
+<p><span class="image"><img src="_images/image9.png" alt="Hva er data for datautveksling image" width="454" height="485"></span></p>
 </div>
 <div class="paragraph">
 <p>Forklaring til figuren:</p>
@@ -399,8 +396,10 @@ datautveksling.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_synkron_vs_asynkron_kommunikasjon"><a class="anchor" href="#_synkron_vs_asynkron_kommunikasjon"></a>1.8. Synkron vs. asynkron kommunikasjon</h3>
+</div>
+<div class="sect1">
+<h2 id="_synkron_vs_asynkron_kommunikasjon"><a class="anchor" href="#_synkron_vs_asynkron_kommunikasjon"></a>8. Synkron vs. asynkron kommunikasjon</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Når den prosessen som gjør en spørring må vente på svar for å komme
 videre, kalles det en synkron spørring. Det behøver ikke å bety at
@@ -413,8 +412,10 @@ prosessen som spør straks kan gå videre til andre oppgaver. Det behøver
 ikke å bety at svar tar lang tid, men konseptet tillater det.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_kvalitetsegenskaper_ved_løsninger_for_datautveksling"><a class="anchor" href="#_kvalitetsegenskaper_ved_løsninger_for_datautveksling"></a>1.9. Kvalitetsegenskaper ved løsninger for datautveksling</h3>
+</div>
+<div class="sect1">
+<h2 id="_kvalitetsegenskaper_ved_løsninger_for_datautveksling"><a class="anchor" href="#_kvalitetsegenskaper_ved_løsninger_for_datautveksling"></a>9. Kvalitetsegenskaper ved løsninger for datautveksling</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Foreløpig liste over slike kvalitetsegenskaper (quality of service) ved
 løsninger for datautveksling:</p>
@@ -487,12 +488,14 @@ som er satt).</p></td>
 </tbody>
 </table>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_utvekslingsmønstre"><a class="anchor" href="#_utvekslingsmønstre"></a>10. Utvekslingsmønstre</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_utvekslingsmønstre"><a class="anchor" href="#_utvekslingsmønstre"></a>1.10. Utvekslingsmønstre</h3>
-<div class="sect3">
-<h4 id="_grunnleggende_integrasjonsformer"><a class="anchor" href="#_grunnleggende_integrasjonsformer"></a>1.10.1. Grunnleggende integrasjonsformer</h4>
+<h3 id="_grunnleggende_integrasjonsformer"><a class="anchor" href="#_grunnleggende_integrasjonsformer"></a>10.1. Grunnleggende integrasjonsformer</h3>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image10.png" alt="image" width="604" height="109"></span></p>
+<p><span class="image"><img src="_images/image10.png" alt="image" width="604" height="109"></span></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -537,10 +540,12 @@ innebygget interoprabilitet</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_tradisjonelt_utbredte_utvekslingsmønstre"><a class="anchor" href="#_tradisjonelt_utbredte_utvekslingsmønstre"></a>1.10.2. Tradisjonelt utbredte utvekslingsmønstre</h4>
-<div class="sect4">
-<h5 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a>1.10.2.1. Generelt</h5>
+<div class="sect2">
+<h3 id="_tradisjonelt_utbredte_utvekslingsmønstre"><a class="anchor" href="#_tradisjonelt_utbredte_utvekslingsmønstre"></a>10.2. Tradisjonelt utbredte utvekslingsmønstre</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a>10.3. Generelt</h3>
 <div class="paragraph">
 <p>Det er her inntil videre tatt utgangspunkt i en oversikt over
 utvekslingsmønstre som gis i en
@@ -565,10 +570,10 @@ eller teknologi. F.eks. kan request-reponse gjøres gjennom asynkron
 melding over AS4 eller</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_one_way_push"><a class="anchor" href="#_one_way_push"></a>1.10.2.2. One-way push</h5>
+<div class="sect2">
+<h3 id="_one_way_push"><a class="anchor" href="#_one_way_push"></a>10.4. One-way push</h3>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image11.png" alt="image" width="387" height="109"></span></p>
+<p><span class="image"><img src="_images/image11.png" alt="image" width="387" height="109"></span></p>
 </div>
 <div class="paragraph">
 <p><strong>How it works:</strong></p>
@@ -599,10 +604,10 @@ it is a lightweight messaging solution very suitable for small and
 medium enterprises that have limited IT capability and resources.</em></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_request_response"><a class="anchor" href="#_request_response"></a>1.10.2.3. Request-Response</h5>
+<div class="sect2">
+<h3 id="_request_response"><a class="anchor" href="#_request_response"></a>10.5. Request-Response</h3>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image12.png" alt="image" width="375" height="149"></span></p>
+<p><span class="image"><img src="_images/image12.png" alt="image" width="375" height="149"></span></p>
 </div>
 <div class="paragraph">
 <p><strong>How it works:</strong></p>
@@ -634,10 +639,10 @@ is significant, a separate signal message can be used to confirm the
 receipt of the request message.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_multi_cast_notifikasjon_til_kjente_mottakere"><a class="anchor" href="#_multi_cast_notifikasjon_til_kjente_mottakere"></a>1.10.2.4. Multi-cast (notifikasjon til kjente mottakere)</h5>
+<div class="sect2">
+<h3 id="_multi_cast_notifikasjon_til_kjente_mottakere"><a class="anchor" href="#_multi_cast_notifikasjon_til_kjente_mottakere"></a>10.6. Multi-cast (notifikasjon til kjente mottakere)</h3>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image13.png" alt="image" width="316" height="191"></span></p>
+<p><span class="image"><img src="_images/image13.png" alt="image" width="316" height="191"></span></p>
 </div>
 <div class="paragraph">
 <p><strong>How it works:</strong></p>
@@ -666,10 +671,10 @@ resources. This pattern gets more complicated if the overall outcome
 depends on the results of the individual exchanges.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_multi_hop_4_hjørners_med_gateway_funksjonalitet"><a class="anchor" href="#_multi_hop_4_hjørners_med_gateway_funksjonalitet"></a>1.10.2.5. Multi-hop (4-hjørners med gateway-funksjonalitet )</h5>
+<div class="sect2">
+<h3 id="_multi_hop_4_hjørners_med_gateway_funksjonalitet"><a class="anchor" href="#_multi_hop_4_hjørners_med_gateway_funksjonalitet"></a>10.7. Multi-hop (4-hjørners med gateway-funksjonalitet )</h3>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image14.png" alt="image" width="604" height="257"></span></p>
+<p><span class="image"><img src="_images/image14.png" alt="image" width="604" height="257"></span></p>
 </div>
 <div class="paragraph">
 <p><strong>How it works:</strong></p>
@@ -713,10 +718,10 @@ Alice to send three separate messages which would then be forwarded to
 their destinations by the gateways.</em></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_pubsub_event_streaming_notifikasjon_til_vilkårlige_mottakere"><a class="anchor" href="#_pubsub_event_streaming_notifikasjon_til_vilkårlige_mottakere"></a>1.10.2.6. Pub/Sub (event streaming, notifikasjon til vilkårlige mottakere)</h5>
+<div class="sect2">
+<h3 id="_pubsub_event_streaming_notifikasjon_til_vilkårlige_mottakere"><a class="anchor" href="#_pubsub_event_streaming_notifikasjon_til_vilkårlige_mottakere"></a>10.8. Pub/Sub (event streaming, notifikasjon til vilkårlige mottakere)</h3>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image15.png" alt="image" width="604" height="293"></span></p>
+<p><span class="image"><img src="_images/image15.png" alt="image" width="604" height="293"></span></p>
 </div>
 <div class="paragraph">
 <p><strong>How it works:</strong></p>
@@ -753,10 +758,10 @@ industry middleware for internal integration, instead of
 cross-organisation interoperations.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_batch_processing"><a class="anchor" href="#_batch_processing"></a>1.10.2.7. Batch processing</h5>
+<div class="sect2">
+<h3 id="_batch_processing"><a class="anchor" href="#_batch_processing"></a>10.9. Batch processing</h3>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image16.png" alt="image" width="604" height="152"></span></p>
+<p><span class="image"><img src="_images/image16.png" alt="image" width="604" height="152"></span></p>
 </div>
 <div class="paragraph">
 <p><strong>How it works:</strong></p>
@@ -790,10 +795,10 @@ described here can also be solved using asynchronous exchange of
 messages and/or custom delivery policies.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_priority_queuing"><a class="anchor" href="#_priority_queuing"></a>1.10.2.8. Priority Queuing</h5>
+<div class="sect2">
+<h3 id="_priority_queuing"><a class="anchor" href="#_priority_queuing"></a>10.10. Priority Queuing</h3>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image17.png" alt="image" width="604" height="135"></span></p>
+<p><span class="image"><img src="_images/image17.png" alt="image" width="604" height="135"></span></p>
 </div>
 <div class="paragraph">
 <p><strong>How it works:</strong></p>
@@ -825,11 +830,12 @@ services with some extra cost. It is suitable for sensitive and/or
 urgent documents to be delivered faster and more securely.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_andre_utvekslingsmønstre"><a class="anchor" href="#_andre_utvekslingsmønstre"></a>10.11. Andre utvekslingsmønstre</h3>
+
 </div>
-<div class="sect3">
-<h4 id="_andre_utvekslingsmønstre"><a class="anchor" href="#_andre_utvekslingsmønstre"></a>1.10.3. Andre utvekslingsmønstre</h4>
-<div class="sect4">
-<h5 id="_parallell_spørring_mot_flere_kilder"><a class="anchor" href="#_parallell_spørring_mot_flere_kilder"></a>1.10.3.1. Parallell spørring mot flere kilder</h5>
+<div class="sect2">
+<h3 id="_parallell_spørring_mot_flere_kilder"><a class="anchor" href="#_parallell_spørring_mot_flere_kilder"></a>10.12. Parallell spørring mot flere kilder</h3>
 <div class="paragraph">
 <p>Foreløpige notater:</p>
 </div>
@@ -844,8 +850,8 @@ urgent documents to be delivered faster and more securely.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_publishasynchronous_response"><a class="anchor" href="#_publishasynchronous_response"></a>1.10.3.2. Publish/asynchronous response</h5>
+<div class="sect2">
+<h3 id="_publishasynchronous_response"><a class="anchor" href="#_publishasynchronous_response"></a>10.13. Publish/asynchronous response</h3>
 <div class="paragraph">
 <p>A service publishes a request to one or recipients, some of whom send
 back a reply</p>
@@ -853,10 +859,11 @@ back a reply</p>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_mer_om_meldingsutveksling"><a class="anchor" href="#_mer_om_meldingsutveksling"></a>11. Mer om meldingsutveksling</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_mer_om_meldingsutveksling"><a class="anchor" href="#_mer_om_meldingsutveksling"></a>1.11. Mer om meldingsutveksling</h3>
-<div class="sect3">
-<h4 id="_abstrakt_lagdelt_modell"><a class="anchor" href="#_abstrakt_lagdelt_modell"></a>1.11.1. Abstrakt, lagdelt modell</h4>
+<h3 id="_abstrakt_lagdelt_modell"><a class="anchor" href="#_abstrakt_lagdelt_modell"></a>11.1. Abstrakt, lagdelt modell</h3>
 <div class="paragraph">
 <p>Fra
 <a href="https://www.sbr.gov.au/sites/default/files/Message-Protocols-for-Enabling-Digital-Government-Services-Final-Report.pdf?acsf_files_redirect">australsk
@@ -869,7 +876,7 @@ propose an abstract model of business interoperability based on the OSI
 (Open Systems Interconnection) model [16], as shown in Figure 2.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image18.png" alt="image" width="604" height="268"></span></p>
+<p><span class="image"><img src="_images/image18.png" alt="image" width="604" height="268"></span></p>
 </div>
 <div class="paragraph">
 <p>As can be seen in the above model, the interoperations between two
@@ -877,7 +884,7 @@ organisations can be abstracted into four levels, as described in Table
 2.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image19.png" alt="image" width="604" height="240"></span></p>
+<p><span class="image"><img src="_images/image19.png" alt="image" width="604" height="240"></span></p>
 </div>
 <div class="paragraph">
 <p>There is a cross-cutting layer we labelled “Legal” across the messaging,
@@ -936,7 +943,7 @@ be implemented once and can be used by different applications, making it
 a more effective solution than implementing it in each application.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image20.png" alt="image" width="604" height="449"></span></p>
+<p><span class="image"><img src="_images/image20.png" alt="image" width="604" height="449"></span></p>
 </div>
 <div class="paragraph">
 <p>As shown in Figure 3, the messaging layer conducts cross-organisation
@@ -961,13 +968,13 @@ required by the collaborative business applications</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_teknologier_og_standarder_for_meldingsutveksling"><a class="anchor" href="#_teknologier_og_standarder_for_meldingsutveksling"></a>1.11.2. Teknologier og standarder for meldingsutveksling</h4>
+<div class="sect2">
+<h3 id="_teknologier_og_standarder_for_meldingsutveksling"><a class="anchor" href="#_teknologier_og_standarder_for_meldingsutveksling"></a>11.2. Teknologier og standarder for meldingsutveksling</h3>
 <div class="paragraph">
 <p>Oversikt over gammelt og nytt:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="master@drafts:book-data-exchange-strategy:image21.png" alt="image" width="604" height="311"></span></p>
+<p><span class="image"><img src="_images/image21.png" alt="image" width="604" height="311"></span></p>
 </div>
 <div class="paragraph">
 <p>Foreløpige stikkord:</p>
@@ -998,7 +1005,6 @@ standardprofilog mye rundt API management</p>
 <p>…</p>
 </li>
 </ul>
-</div>
 </div>
 </div>
 </div>
