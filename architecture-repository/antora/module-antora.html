@@ -328,7 +328,7 @@
 <p>Digdir har per oktober 2020 etablert et git-repo under <a href="https://gitlab.com/digdir" class="bare">https://gitlab.com/digdir</a>, som kan bygges ut og lenke inn innhold fra andre git repos (kan være fra f.eks. github eller gitbucket).</p>
 </div>
 <div class="paragraph">
-<p>Publisering gjøres inntil videre via gitlab wiki under <a href="https://digdir.gitlab.io" class="bare">https://digdir.gitlab.io</a>.</p>
+<p>Publisering gjøres inntil videre under github wiki under <a href="https://nasjonal-arkitektur.github.io" class="bare">https://nasjonal-arkitektur.github.io</a>.</p>
 </div>
 <div class="paragraph">
 <p>Se også:</p>
@@ -414,7 +414,15 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 <div class="sect2">
 <h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">4.1. Generelt</a></h3>
 <div class="paragraph">
-<p>Verktøyet <a href="https://pandoc.org">Pandoc</a> er å betrakte som en "swiss army knife" for konvertering mellom en rekke formater.</p>
+<p>I det følgende gis noen tips om de mest aktuelle konverteringsbehovene og noen utvalgte verktøy.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verktøy"><a class="anchor" href="#_verktøy"></a><a class="link" href="#_verktøy">4.2. Verktøy</a></h3>
+<div class="sect3">
+<h4 id="_pandoc"><a class="anchor" href="#_pandoc"></a><a class="link" href="#_pandoc">4.2.1. Pandoc</a></h4>
+<div class="paragraph">
+<p>Verktøyet <a href="https://pandoc.org">Pandoc</a> dekker konvertering mellom en rekke formater, og omtales gjerne som en "Swiss Army Knife".</p>
 </div>
 <div class="paragraph">
 <p>Du finner download og enkel installeringsoppskrift for ditt OS, f.eks. Windows (64-bit), under <a href="https://pandoc.org/installing.html">Pandoc download and installation guide</a>.</p>
@@ -422,12 +430,69 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 <div class="paragraph">
 <p>Pandoc kjøres fra kommandolinjen; se <a href="https://pandoc.org/MANUAL.html">Pandoc User’s Guide</a>.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_asciidoctor"><a class="anchor" href="#_asciidoctor"></a><a class="link" href="#_asciidoctor">4.2.2. Asciidoctor</a></h4>
 <div class="paragraph">
-<p>I det følgende gis noen tips om de mest aktuelle konverteringsbehovene.</p>
+<p>Asciidoctor er en publiseringsløsning for asciidoc som, i tillegg til html, også støtter visse andre formater, herunder docbook.</p>
+</div>
+<div class="paragraph">
+<p>Asciidoctor benyttes som "motor" av Antora for generering av html, men må installeres særskilt for å være tilgjengelig som CLI.</p>
+</div>
+<div class="paragraph">
+<p>Asciidoctor installeres enklest som en gem med Rubygems.</p>
+</div>
+<div class="sect4">
+<h5 id="_installer_ruby_og_rubygems_om_ikke_allerede_gjort"><a class="anchor" href="#_installer_ruby_og_rubygems_om_ikke_allerede_gjort"></a><a class="link" href="#_installer_ruby_og_rubygems_om_ikke_allerede_gjort">4.2.2.1. Installer Ruby og Rubygems (om ikke allerede gjort)</a></h5>
+<div class="paragraph">
+<p>Last ned og kjør siste versjon installasjonsprogram, f.eks. rubyinstaller-devkit-3.0.0-1-x64, fra <a href="https://rubyinstaller.org/downloads/" class="bare">https://rubyinstaller.org/downloads/</a>.</p>
+</div>
+<div class="paragraph">
+<p>Last ned rubygems zip-fil fra <a href="https://rubygems.org/pages/download" class="bare">https://rubygems.org/pages/download</a> og følg bruksanvisningen fra samme sted, dvs.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Last ned zip-fil som nevnt
+Pakk ut til "en mappe"
+Åpne kommandolinjevindu (f.eks. gitbash) i "en mappe"
+Kjør: ruby setup.rb</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_installer_asciidoctor"><a class="anchor" href="#_installer_asciidoctor"></a><a class="link" href="#_installer_asciidoctor">4.2.2.2. Installer Asciidoctor</a></h5>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>$ gem install asciidoctor</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Successfully installed asciidoctor-2.0.12
+Parsing documentation for asciidoctor-2.0.12
+Installing ri documentation for asciidoctor-2.0.12
+Done installing documentation for asciidoctor after 3 seconds
+1 gem installed</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_installer_asciidoctor_pdf"><a class="anchor" href="#_installer_asciidoctor_pdf"></a><a class="link" href="#_installer_asciidoctor_pdf">4.2.2.3. Installer Asciidoctor-pdf</a></h5>
+<div class="paragraph">
+<p>Se f.eks. <a href="https://stackoverflow.com/questions/50477523/how-to-convert-asciidoc-to-pdf" class="bare">https://stackoverflow.com/questions/50477523/how-to-convert-asciidoc-to-pdf</a></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>gem install asciidoctor-pdf --pre</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_konvertering_fra_ms_word_docx_til_asciidoc"><a class="anchor" href="#_konvertering_fra_ms_word_docx_til_asciidoc"></a><a class="link" href="#_konvertering_fra_ms_word_docx_til_asciidoc">4.2. Konvertering fra MS Word (docx) til Asciidoc</a></h3>
+<h3 id="_konvertering_fra_ms_word_docx_til_asciidoc"><a class="anchor" href="#_konvertering_fra_ms_word_docx_til_asciidoc"></a><a class="link" href="#_konvertering_fra_ms_word_docx_til_asciidoc">4.3. Konvertering fra MS Word (docx) til Asciidoc</a></h3>
 <div class="paragraph">
 <p>Konvertering fra MS Word (docx) til Asciidoc kan gjøres vha. <a href="https://pandoc.org">Pandoc</a> (se over).</p>
 </div>
@@ -443,9 +508,81 @@ Resultat: Bilder/figurer i Word lagres som PNG-filer i en undermappe ved navn me
 </div>
 </div>
 <div class="sect2">
-<h3 id="_konvertering_fra_asciidoc_til_pdf"><a class="anchor" href="#_konvertering_fra_asciidoc_til_pdf"></a><a class="link" href="#_konvertering_fra_asciidoc_til_pdf">4.3. Konvertering fra Asciidoc til pdf</a></h3>
+<h3 id="_konvertering_fra_asciidoc_til_pdf"><a class="anchor" href="#_konvertering_fra_asciidoc_til_pdf"></a><a class="link" href="#_konvertering_fra_asciidoc_til_pdf">4.4. Konvertering fra Asciidoc til pdf</a></h3>
 <div class="paragraph">
-<p>Se <a href="https://asciidoctor.org/docs/asciidoctor-pdf/" class="bare">https://asciidoctor.org/docs/asciidoctor-pdf/</a>.</p>
+<p><em>Under utprøving.</em></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+Det finnes flere alternative verktøy for generering av pdf fra asciidoc, men ikke alle fungerer like bra. Se f.eks. <a href="https://stackoverflow.com/questions/50477523/how-to-convert-asciidoc-to-pdf" class="bare">https://stackoverflow.com/questions/50477523/how-to-convert-asciidoc-to-pdf</a> om noen av alternativene. Husk at Antora har utvidelser til Asciidoc-syntaksen som ikke uten videre støttes av rene Asciidoc-verktøy.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Her anbefales en <em>toolchain</em> som går via docbook5.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Eksempel:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ asciidoctor --backend docbook5 "Del og innhent data, verdistrøm.adoc"
+$ pandoc --from docbook --to pdf "Del og innhent data, verdistrøm.xml" -o "Del og innhent data, verdistrøm.pdf"</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_konvertering_fra_asciidoc_til_docx"><a class="anchor" href="#_konvertering_fra_asciidoc_til_docx"></a><a class="link" href="#_konvertering_fra_asciidoc_til_docx">4.5. Konvertering fra Asciidoc til docx</a></h3>
+<div class="paragraph">
+<p>En oppskrift for dette er gitt under <a href="https://rmoff.net/2020/04/16/converting-from-asciidoc-to-google-docs-and-ms-word/" class="bare">https://rmoff.net/2020/04/16/converting-from-asciidoc-to-google-docs-and-ms-word/</a>.</p>
+</div>
+<div class="paragraph">
+<p>Forutsetninger:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Installert Asciidoctor</p>
+</li>
+<li>
+<p>Installert Pandoc</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Eksempel:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ asciidoctor --backend docbook5 Felleskomponenter.adoc
+$ pandoc --from docbook --to docx Felleskomponenter.xml -o Felleskomponenter.docx</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+Du kan også kjøre dette som en enkelt kommando, som en "kjede", slik dette er vist i <a href="https://rmoff.net/2020/04/16/converting-from-asciidoc-to-google-docs-and-ms-word/" class="bare">https://rmoff.net/2020/04/16/converting-from-asciidoc-to-google-docs-and-ms-word/</a>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -459,7 +596,7 @@ Resultat: Bilder/figurer i Word lagres som PNG-filer i en undermappe ved navn me
 <p>Se <a href="https://asciidoctor.org/docs/asciidoc-recommended-practices/" class="bare">https://asciidoctor.org/docs/asciidoc-recommended-practices/</a> for generelle anbefalinger fra asciidoctor.org.</p>
 </div>
 <div class="paragraph">
-<p>Difi har i tillegg til dette etablert noen konvensjoner og maler i tilknytning til arkitekturverkstedet som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde metadata, tekster på flere språk, m.m.</p>
+<p>Digdir har i tillegg til dette etablert noen konvensjoner og maler i tilknytning til arkitekturverkstedet som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde metadata, tekster på flere språk, m.m.</p>
 </div>
 <div class="paragraph">
 <p>Det er ønskelig at disse konvensjonene følges. Enkeltstående Asciidoc-artikler eller -bøker som ikke følger konvensjonene, kan likevel inkluderes i biblioteket.</p>
