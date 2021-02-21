@@ -21,8 +21,8 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable">
- 		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
@@ -266,16 +266,15 @@
     </div>
   </aside>
 </div>
-<main class="article">
+<main>
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/standards/forvaltningsstandard-begrep/edit/master/docs/modules/veileder-for-begrepsbeskrivelser/pages/innledning.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/standards/forvaltningsstandard-begrep/edit/master/docs/modules/veileder-for-begrepsbeskrivelser/pages/innledning.adoc">Rediger kilde</a></div>
   </div>
-  <div class="content">
-<article class="doc">
+<article class="doc"><a name="section-top"></a>
 <div class="sect1">
 <h2 id="_1_innledning"><a class="anchor" href="#_1_innledning"></a>1. Innledning</h2>
 <div class="sectionbody">
@@ -309,15 +308,31 @@ hvert enkelt felt i standarden.</p>
 </div>
 </div>
 </article>
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
-  </div>
-</main>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
 </div>
 <footer class="footer">
-  <p>Kontakt: nasjonalarkitektur@digdir.no</p>
-</footer><script src="../../_/js/site.js"></script>
-<script async src="../../_/js/vendor/highlight.js"></script>
-  </body>
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
 </html>

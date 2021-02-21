@@ -21,8 +21,8 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable">
- 		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
@@ -276,7 +276,7 @@ Architectures)</span>
     </div>
   </aside>
 </div>
-<main class="article">
+<main>
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
   <a href="../../architecture-repository/index.html" class="home-link"></a>
@@ -287,10 +287,9 @@ Architectures)</span>
     <li><a href="ISOIEC%20JTC1SC%207WG%2019.html">ISO/IEC JTC 1/SC 7/WG 19: Techniques for Specifying IT Systems</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/knowledge-components/knowledge/edit/master/initiatives/iso-standardization-activities/modules/ISOIEC%20JTC1SC%207WG%2019%20-%20Techniques%20for%20Specifying%20IT%20Systems/pages/ISOIEC%20JTC1SC%207WG%2019.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/knowledge-components/knowledge/edit/master/initiatives/iso-standardization-activities/modules/ISOIEC%20JTC1SC%207WG%2019%20-%20Techniques%20for%20Specifying%20IT%20Systems/pages/ISOIEC%20JTC1SC%207WG%2019.adoc">Rediger kilde</a></div>
   </div>
-  <div class="content">
-<article class="doc">
+<article class="doc"><a name="section-top"></a>
 <h1 class="page">ISO/IEC JTC 1/SC 7/WG 19: Techniques for Specifying IT Systems</h1>
 <div class="sect1">
 <h2 id="_about_iso_sc7"><a class="anchor" href="#_about_iso_sc7"></a>About ISO SC7</h2>
@@ -436,15 +435,31 @@ with a portfolio of standardized user-friendly modelling techniques.</p>
 </div>
 </div>
 </article>
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
-  </div>
-</main>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
 </div>
 <footer class="footer">
-  <p>Kontakt: nasjonalarkitektur@digdir.no</p>
-</footer><script src="../../_/js/site.js"></script>
-<script async src="../../_/js/vendor/highlight.js"></script>
-  </body>
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
 </html>

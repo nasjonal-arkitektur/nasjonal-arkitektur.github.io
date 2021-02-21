@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Praktiske tips for å komme igang med Git :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/architecture-repository/git/git.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="architecture-repository" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Nasjonalt arkitekturverksted</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Praktiske tips om bruk av arkitekturverkstedet</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reading-guide/module-reading-guide.html">Leseveiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Praktiske tips om bruk av git-verktøy</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora/module-antora.html">Praktiske tips om innholdsproduksjon og publisering med Antora og Asciidoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om arkitekturmodellering og samarbeid i Archi</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om utveksling av arkitekturmodeller</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Hvordan gi kommentarer og få svar på spørsmål</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Temaområder</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Om temaområder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Datadeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Om temaområdet <em>datadeling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing-value-streams.html">Referansemodeller for datadeling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Om temaområdet <em>datautveksling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-ra/about-data-exchange-ra.html">Om referansearkitektur for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-roles/data-exchange-roles.html">Roller involvert i datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basismønstre for datautveksling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Meldingsforsendelse (eMelding)</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Løsningsbyggeklosser for bruk og gjenbruk</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Fellesløsninger</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Tekniske tjenester og API-er</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sluttbrukertjenester</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Styring og organisering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Initiativer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Nettverk for referansearkitektur</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ra-network/reading-tips.html">Tips om aktuelt lesestoff</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../proposed-reference-architectures/proposed-reference-architecture-work.html">Innspill til prioritering av videre arbeid med referansearkitekturer (A&amp;S-rådet)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/følgebrev.html">Følgebrev</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/situasjonsrapport.html">Situasjonsrapport</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/strukturering-av-spørreskjema.html">Strukturering av spørreskjema</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/forklaringer-til-spørsmålene.html">Forklaringer til spørsmålene</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../methods/methods.html">Metodikk for utvikling av nasjonal arkitektur</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../methods/reference-architecture-methods.html">Metodikk for utvikling av referansearkitekturer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../drafts/index.html">Utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Nasjonalt arkitekturverksted</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../drafts/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
+    <li><a href="git.html">Praktiske tips for å komme igang med Git</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/platform-components/platform/edit/master/docs/tools/modules/git/pages/git.adoc">Rediger kilde</a></div>
+  </div>
+<article class="doc"><a name="section-top"></a>
+<h1 class="page">Praktiske tips for å komme igang med Git</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_generelt">1. Generelt</a></li>
+<li><a href="#_prosedyre_for_å_komme_i_gang_med_git_og_github">2. Prosedyre for å komme i gang med git og Github</a>
+<ul class="sectlevel2">
+<li><a href="#_opprett_github_bruker">2.1. Opprett GitHub bruker</a></li>
+<li><a href="#_etabler_lokal_filmappe_for_kloning_av_github_filer">2.2. Etabler lokal filmappe for kloning av github-filer</a></li>
+<li><a href="#_installer_og_konfigurer_git_for_windows">2.3. Installer og konfigurer Git for Windows</a></li>
+<li><a href="#_installer_annen_programvare_for_git_og_github">2.4. Installer annen programvare for git og GitHub</a></li>
+<li><a href="#_generelt_2">2.5. Generelt</a>
+<ul class="sectlevel3">
+<li><a href="#_alternativ_1_github_desktop">2.5.1. Alternativ 1: GitHub Desktop</a></li>
+<li><a href="#_alternativ_2_tortoisegit">2.5.2. Alternativ 2: TortoiseGit</a></li>
+<li><a href="#_alternativ_3_git_bash">2.5.3. Alternativ 3: Git Bash</a></li>
+<li><a href="#_alternativ_4_asciidoclive">2.5.4. Alternativ 4: Asciidoclive</a></li>
+</ul>
+</li>
+<li><a href="#_klon_github_prosjektet_til_din_maskin">2.6. Klon GitHub-prosjektet til din maskin</a>
+<ul class="sectlevel3">
+<li><a href="#_kloning_med_github_desktop">2.6.1. Kloning med GitHub Desktop</a></li>
+<li><a href="#_kloning_med_tortoisegit">2.6.2. Kloning med TortoiseGit</a></li>
+<li><a href="#_kloning_med_windows_kommandolinje">2.6.3. Kloning med Windows kommandolinje</a></li>
+<li><a href="#_kloning_med_git_bash">2.6.4. Kloning med Git Bash</a></li>
+</ul>
+</li>
+<li><a href="#_gjør_endringer">2.7. Gjør endringer</a></li>
+<li><a href="#_synkronisering_og_publisering_av_endringer">2.8. Synkronisering og publisering av endringer</a>
+<ul class="sectlevel3">
+<li><a href="#_synkronisering_og_publisering_med_github_desktop">2.8.1. Synkronisering og publisering med GitHub Desktop</a></li>
+<li><a href="#_publisering_med_tortoisegit">2.8.2. Publisering med TortoiseGit</a></li>
+<li><a href="#_publisering_med_windows_kommandolinje">2.8.3. Publisering med Windows kommandolinje</a></li>
+<li><a href="#_publisering_med_git_bash">2.8.4. Publisering med Git Bash</a></li>
+</ul>
+</li>
+<li><a href="#_mer_avanserte_temaer">2.9. Mer avanserte temaer</a>
+<ul class="sectlevel3">
+<li><a href="#_git_submodules">2.9.1. Git Submodules</a></li>
+<li><a href="#_annet">2.9.2. Annet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p><strong>Her gis praktiske tips om bruk av git i tilknytning til arbeidet med Nasjonal arkitektur. Det gis tips om spesifikke verktøy, men hver enkelt står fritt til å velge andre alternativer.</strong></p>
+</div>
+<div class="paragraph">
+<p><mark>Merk: I arbeid!</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generelt"><a class="anchor" href="#_generelt"></a>1. Generelt</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Git er en standard for versjonskontroll og lagring av kode og dokumenter i repositories.</p>
+</div>
+<div class="paragraph">
+<p>Det finnes flere repository-løsninger som støtter git. Blant de mest utbredte repository-løsningene for git repositories er GitHub, GitLab og Bitbucket.</p>
+</div>
+<div class="paragraph">
+<p>Det finnes også en rekke klientverktøy som støtter git; enten på generell basis eller med ekslusiv støtte for en bestemt repository-løsning.</p>
+</div>
+<div class="paragraph">
+<p>Git repositories kan brukes til å lagre vilkårlige dokumenttyper, men egner seg best for tekstbaserte dokumenter, dvs. dokumenter hvor kildeformatet er rå tekst. Det er dette <em>git</em> ble laget for, og da opprinnelig for versjonsstyring og samarbeid om
+kode (programvare).</p>
+</div>
+<div class="paragraph">
+<p>Markupspråk som Markdown og Asciidoc lar deg skrive dokumenter i ren tekst, og egner seg tilsvarende godt for den funksjonaliteten som finnes rundt versjonsstyring i Github.</p>
+</div>
+<div class="paragraph">
+<p>Standard utvekslingsformater for modelleringsspråk som Archimate, BPMN, DMN og UML er også tekstbaserte, og egner seg for versjonsstyring i Github.</p>
+</div>
+<div class="paragraph">
+<p>Nasjonalt Arkitekturbibliotek er organisert i en mappestruktur med undermapper for dokumentasjon av arkitekturer, løsninger, referansearkitekturer m.m.</p>
+</div>
+<div class="paragraph">
+<p>I tillegg finnes seperate prosjektbiblioteker. Prosjektleveranser i form av dokumentasjon kopieres til "riktig" sted i strukturen under Nasjonalt arkitekturbiblitotek før prosjektslutt, mens arbeidsversjoner, møtereferater og annet prosjektspesifikt innhold tas vare på i prosjektområdet så lenge det er interessant.</p>
+</div>
+<div class="paragraph">
+<p>Skriverettigheter til selve arkitekturbiblioteket er forbeholdt medlemmer av bibliotekredaksjonen. Tilsvarende er det kun prosjektmedlemmenene som vil ha skrivetilgang til hvert  prosjekt-repository.</p>
+</div>
+<div class="paragraph">
+<p>Andre som vil bidra med innhold kan gjøre dette ved å kopiere aktuelt GitHub repository (git Fork), gjøre endringer og så spille inn endringsforslag (git Pull Request). Redaksjonen for aktuelt GitHub-repository (arkitekturbibliotek eller prosjekt) vil så behandle endringsforslaget og eventuelt ta inn nytt eller endret innhold (git merge).</p>
+</div>
+<div class="paragraph">
+<p><em>Merk: Git gir flere muligheter enn "fork" og "pull request" for å spille inn endringsforslag, men vi anbefaler inntil videre "fork" og "pull request" som nevnt.</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prosedyre_for_å_komme_i_gang_med_git_og_github"><a class="anchor" href="#_prosedyre_for_å_komme_i_gang_med_git_og_github"></a>2. Prosedyre for å komme i gang med git og Github</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_opprett_github_bruker"><a class="anchor" href="#_opprett_github_bruker"></a>2.1. Opprett GitHub bruker</h3>
+<div class="paragraph">
+<p>Dersom du ikke allerede har en GitHub-bruker, kan dette gjøres <a href="https://github.com/join?source=header">her</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_etabler_lokal_filmappe_for_kloning_av_github_filer"><a class="anchor" href="#_etabler_lokal_filmappe_for_kloning_av_github_filer"></a>2.2. Etabler lokal filmappe for kloning av github-filer</h3>
+<div class="paragraph">
+<p>Lag en filmappe som hjemmeområde for å arbeide lokalt med github-filer, eventuelt med en undermappe for biblioteker (repos) fra Difi.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel 1: <em>C:\Users\eha\OneDrive - Difi\GitHub</em>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel 2: <em>C:\Users\eha\GitHub</em>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Det fungerer å bruke Microsoft Onedrive i kombinasjon med Github. Fordelen med dette er at det blir lett å dele enkeltfiler og mapper med andre. Det fungerer også å bruke filmapper under din Windows-bruker som kun lagres lokalt (kan kanskje gi bedre ytelse og respons i brukergrensesnittet).
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installer_og_konfigurer_git_for_windows"><a class="anchor" href="#_installer_og_konfigurer_git_for_windows"></a>2.3. Installer og konfigurer Git for Windows</h3>
+<div class="paragraph">
+<p>Det antas her at du kjører Windows. Last ned og installer Git fra
+<a href="https://git-scm.com/download/win" class="bare">https://git-scm.com/download/win</a>.</p>
+</div>
+<div class="paragraph">
+<p>Her følger en kortfattet videre beskrivelse av på norsk; se eventuelt også Git-s egen dokumentasjon om <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Getting Started - First-Time Git Setup</a>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sjekk at systemvariabelen HOME angir riktig filsti til ditt Git hjemmeområde (se over), eventuelt oppdater så verdien blir riktig.</p>
+<div class="paragraph">
+<p>En måte å sjekke dette på, er fra Windows kommandovindu (skrivebordsprogrammet Ledetekst) gjennom kommandoen <em>set HOME</em>.</p>
+</div>
+<div class="paragraph">
+<p>Systemvariabelen kan legges til og endres gjennom Kontrollpanel, System, Avanserte systeminnstillinger, miljøvariabler. Eksempel: <em>HOME=C:\Users\eha\OneDrive - Difi\GitHub</em>.</p>
+</div>
+</li>
+<li>
+<p>Sjekk og oppdater Git-konfigurasjonen med riktig user.name og user.email.</p>
+<div class="paragraph">
+<p>En måte å sjekke på: Åpne et Windows kommandovindu (skrivebordsprogrammet Ledetekst) og kjør følgende to kommandoer: <em>git config --get user.email</em> og <em>git config --get user.name</em>.</p>
+</div>
+<div class="paragraph">
+<p>En måte å endre på: Åpne et Windows kommandovindu (skrivebordsprogrammet Ledetekst) og kjør følgende to kommandoer: <em>git config --global user.name "Ditt navn"</em> og <em>git config --global din-epostadresse</em>. Det kan også gjøres gjennom annen Git programvare, som f.eks. GitHub Desktop (se nedenfor).</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+For spesielt interesserte: Om du bruker lange navn og dyp mappestruktur i Windows, kan du få problemer med en begrensning på 260
+karakterer i total lengde på filnavn. I og med Windows 10 kan denne begrensningen oppheves. Se f.eks.
+<a href="https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/" class="bare">https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/</a> for en oppskrift på
+hvordan dette kan gjøres.<br>
+<br>
+Kort fortalt: På Windows 10 Enterprise kan du kjøre gpedit.msc og endre Aktiver lange Win32 baner under
+Datamaskinkonfigurasjon, Administrative maler, System, Filsystem. Du må restarte eller logge av og på for at endringen skal tre i kraft.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installer_annen_programvare_for_git_og_github"><a class="anchor" href="#_installer_annen_programvare_for_git_og_github"></a>2.4. Installer annen programvare for git og GitHub</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a>2.5. Generelt</h3>
+<div class="paragraph">
+<p>Det finnes tre kategorier mennesker:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>De som foretrekker grafiske brukergrensesnitt</p>
+</li>
+<li>
+<p>De som foretrekker å skrive tekstkommandoer</p>
+</li>
+<li>
+<p>De som ikke har anledning til å installere programvare</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Anbefalinger for disse kategoriene er:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Bruk GitHub Desktop (enkel bruk) eller TortoiseGit (mer avansert)</p>
+</li>
+<li>
+<p>Bruk <em>Git Bash</em> eller <em>Git CMD</em> (eller Windows CMD).</p>
+</li>
+<li>
+<p>Arbeid direkte i nettleseren under <a href="https://github.com/difi/nasjonal_arkitektur" class="bare">https://github.com/difi/nasjonal_arkitektur</a> , uten å klone til lokalt filområde;  eventuelt bruk asciidoclive for asciidoc-dokumentasjon; ref. <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a></p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_alternativ_1_github_desktop"><a class="anchor" href="#_alternativ_1_github_desktop"></a>2.5.1. Alternativ 1: GitHub Desktop</h4>
+<div class="paragraph">
+<p>GitHub Desktop er en mye brukt og god klient for å klone og oppdatere GitHub-biblioteker.</p>
+</div>
+<div class="paragraph">
+<p>GitHub Desktop kan lastes ned her: <a href="https://desktop.github.com/" class="bare">https://desktop.github.com/</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_alternativ_2_tortoisegit"><a class="anchor" href="#_alternativ_2_tortoisegit"></a>2.5.2. Alternativ 2: TortoiseGit</h4>
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_alternativ_3_git_bash"><a class="anchor" href="#_alternativ_3_git_bash"></a>2.5.3. Alternativ 3: Git Bash</h4>
+<div class="paragraph">
+<p>Git Bash fås med siste versjon av Git for Windows her: <a href="https://git-scm.com/download/win" class="bare">https://git-scm.com/download/win</a></p>
+</div>
+<div class="paragraph">
+<p>Generelle tips om å komme igang med Bash kommandolinke:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://rubygarage.org/blog/most-basic-git-commands-with-examples" class="bare">https://rubygarage.org/blog/most-basic-git-commands-with-examples</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_alternativ_4_asciidoclive"><a class="anchor" href="#_alternativ_4_asciidoclive"></a>2.5.4. Alternativ 4: Asciidoclive</h4>
+<div class="paragraph">
+<p>Ingen installasjon nødvendig. Se <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Bruke MS Internet Explorer eller MS Edge! Preview fungerer ikke i Chrome eller Firefox.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_klon_github_prosjektet_til_din_maskin"><a class="anchor" href="#_klon_github_prosjektet_til_din_maskin"></a>2.6. Klon GitHub-prosjektet til din maskin</h3>
+<div class="sect3">
+<h4 id="_kloning_med_github_desktop"><a class="anchor" href="#_kloning_med_github_desktop"></a>2.6.1. Kloning med GitHub Desktop</h4>
+<div class="paragraph">
+<p>Om du bruker GitHub Desktop, kan det gjøres slik:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Åpne  GitHub-biblioteket i nettleser, dvs.   <a href="https://github.com/difi/nasjonal_arkitektur" class="bare">https://github.com/difi/nasjonal_arkitektur</a></p>
+</li>
+<li>
+<p>Velg "Clone or Download" i GitHub og velg så "Open in Desktop".</p>
+</li>
+<li>
+<p>I GitHub Desktop, velg File | Clone a repository og angi hvor filene skal legges på din harddisk, som omtalt under avsnittet om lokla filmappe ovenfor. Om du f.eks. benytter C:\Users\eha\GitHub\Difi, vil GitHub Desktop opprette C:\Users\eha\GitHub\Difi\nasjonal_arkitektur.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kloning_med_tortoisegit"><a class="anchor" href="#_kloning_med_tortoisegit"></a>2.6.2. Kloning med TortoiseGit</h4>
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kloning_med_windows_kommandolinje"><a class="anchor" href="#_kloning_med_windows_kommandolinje"></a>2.6.3. Kloning med Windows kommandolinje</h4>
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kloning_med_git_bash"><a class="anchor" href="#_kloning_med_git_bash"></a>2.6.4. Kloning med Git Bash</h4>
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gjør_endringer"><a class="anchor" href="#_gjør_endringer"></a>2.7. Gjør endringer</h3>
+<div class="paragraph">
+<p>Gitt at du har skriverettigheter, kan du endre eksisterende filer, slette filer og tilsvarende for mapper. Når du gjør dette i et lokalt, klonet, repository, må du deretter synkronisere og eventuelt publisere dette før det blir tilgjengelig for andre.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_synkronisering_og_publisering_av_endringer"><a class="anchor" href="#_synkronisering_og_publisering_av_endringer"></a>2.8. Synkronisering og publisering av endringer</h3>
+<div class="sect3">
+<h4 id="_synkronisering_og_publisering_med_github_desktop"><a class="anchor" href="#_synkronisering_og_publisering_med_github_desktop"></a>2.8.1. Synkronisering og publisering med GitHub Desktop</h4>
+<div class="paragraph">
+<p>GitHub Desktop vil kontinuerlig polle og hente ned endringer fra GitHub til valgt <em>Current Repository</em>. Du vil også løpende se hvilke endringer du selv har gjort som foreløpig ikke er synkronisert tli GitHub.</p>
+</div>
+<div class="paragraph">
+<p>For å publisere endringer med GitHub Desktop, må du først gi en <em>Description</em>, så trykke  <em>Commit to Master</em> og til sist trykke <em>Push to origin</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_publisering_med_tortoisegit"><a class="anchor" href="#_publisering_med_tortoisegit"></a>2.8.2. Publisering med TortoiseGit</h4>
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_publisering_med_windows_kommandolinje"><a class="anchor" href="#_publisering_med_windows_kommandolinje"></a>2.8.3. Publisering med Windows kommandolinje</h4>
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_publisering_med_git_bash"><a class="anchor" href="#_publisering_med_git_bash"></a>2.8.4. Publisering med Git Bash</h4>
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mer_avanserte_temaer"><a class="anchor" href="#_mer_avanserte_temaer"></a>2.9. Mer avanserte temaer</h3>
+<div class="sect3">
+<h4 id="_git_submodules"><a class="anchor" href="#_git_submodules"></a>2.9.1. Git Submodules</h4>
+<div class="paragraph">
+<p>Git Submodules brukes for prosjektarbeid der en ønsker å tildele skriverettigheter til  prosjektmedlemmene, noe som ikke uten videre er tilrådelig for hele arkitekturbiblioteket.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_annet"><a class="anchor" href="#_annet"></a>2.9.2. Annet</h4>
+<div class="paragraph">
+<p><span class="image"><img src="plattform_felles/media/i-arbeid.png" alt="i arbeid" width="45" height="45"></span>I arbeid</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
+</html>
