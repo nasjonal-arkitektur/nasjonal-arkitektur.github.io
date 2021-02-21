@@ -284,16 +284,20 @@
 <div id="toc" class="toc">
 <div id="toctitle">Innholdsfortegnelse</div>
 <ul class="sectlevel1">
-<li><a href="#_om_git">1. Om git</a></li>
-<li><a href="#_om_bruk_av_git_i_nasjonalt_arkitekturverksted">2. Om bruk av git i Nasjonalt arkitekturverksted</a></li>
+<li><a href="#_introduksjon_til_git_og_git_verktøy">1. Introduksjon til git og git-verktøy</a></li>
+<li><a href="#_introsukdjosn_til_bruk_av_git_i_nasjonalt_arkitekturverksted">2. Introsukdjosn til bruk av  git i Nasjonalt arkitekturverksted</a></li>
 <li><a href="#_tips_for_å_komme_i_gang_med_git_og_github">3. Tips for å komme i gang med git og Github</a>
 <ul class="sectlevel2">
 <li><a href="#_opprett_git_bruker_i_aktuelle_skyløsninger">3.1. Opprett git-bruker i aktuelle skyløsninger</a></li>
 <li><a href="#_installer_og_konfigurer_git_for_windows">3.2. Installer og konfigurer Git for Windows</a></li>
-<li><a href="#_installer_annen_programvare_for_git_og_github">3.3. Installer annen programvare for git og GitHub</a></li>
+<li><a href="#_installer_annen_programvare_for_git_og_github">3.3. Installer annen programvare for git og GitHub</a>
+<ul class="sectlevel3">
+<li><a href="#_tortoisegit">3.3.1. TortoiseGit</a></li>
+</ul>
+</li>
 <li><a href="#_andre_git_tips">3.4. Andre git-tips</a>
 <ul class="sectlevel3">
-<li><a href="#_tips_for_å_komme_igang_med_bash_kommandolinje">3.4.1. Tips for  å komme igang med Bash kommandolinje</a></li>
+<li><a href="#_tips_for_å_komme_igang_med_git_kommandolinje">3.4.1. Tips for  å komme igang med git kommandolinje</a></li>
 <li><a href="#_kloning_med_tortoisegit">3.4.2. Kloning med TortoiseGit</a></li>
 <li><a href="#_kloning_med_git_bash">3.4.3. Kloning med Git Bash</a></li>
 <li><a href="#_gjør_endringer">3.4.4. Gjør endringer</a></li>
@@ -316,19 +320,16 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_om_git"><a class="anchor" href="#_om_git"></a><a class="link" href="#_om_git">1. Om git</a></h2>
+<h2 id="_introduksjon_til_git_og_git_verktøy"><a class="anchor" href="#_introduksjon_til_git_og_git_verktøy"></a><a class="link" href="#_introduksjon_til_git_og_git_verktøy">1. Introduksjon til git og git-verktøy</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Git er en standard for versjonskontroll og lagring av kode og dokumenter i repositories (eller repos).</p>
 </div>
 <div class="paragraph">
-<p>Det finnes flere repository-løsninger som støtter git. Blant de mest utbredte repository-løsningene for git repositories er GitHub, GitLab og Bitbucket. De ulike løsningene har noe ulik tilleggsfunksjonalitet for automatisering, samarbeid og tilgangsstyring.</p>
+<p>Git repositories kan brukes til å lagre vilkårlige dokumenttyper, men egner seg best for tekstbaserte dokumenter, dvs. dokumenter hvor kildeformatet er lesbar tekst (ascii, unicode) og total filstørrelse blir begrenset. Det er dette <em>git</em> ble laget for, med funksjonalitet for versjonsstyring og kloning av hele repositories til egen maskin.</p>
 </div>
 <div class="paragraph">
-<p>Det finnes også en rekke klientverktøy som støtter git, enten på generell basis eller med ekslusiv støtte for en bestemt repository-løsning.</p>
-</div>
-<div class="paragraph">
-<p>Git repositories kan brukes til å lagre vilkårlige dokumenttyper, men egner seg best for tekstbaserte dokumenter, dvs. dokumenter hvor kildeformatet er rå tekst og total filstørrelse blir begrenset. Det er dette <em>git</em> ble laget for, med tanke på versjonsstyring og kloning. Noen eksempler på tekstbaserte dokumenter som egner seg for versjonsstyring i git:</p>
+<p>Noen eksempler på tekstbaserte dokumenter som egner seg for versjonsstyring i git:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -346,10 +347,16 @@
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Det finnes flere skybaserte repository-løsninger som støtter git. Blant de mest utbredte repository-løsningene for git repositories er GitHub, GitLab og Bitbucket. De ulike løsningene har noe ulik tilleggsfunksjonalitet for automatisering, samarbeid og tilgangsstyring.</p>
+</div>
+<div class="paragraph">
+<p>Du kan arbeide i (løsnigsspesifikke) brukergrensesnitt i nettleseren, gjennom (standard) kommandolinje, gjennom grafiske (løsnigsspesifikke eller ikke) klientverktøy eller mot (løsnigsspesifikke) API-er.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_om_bruk_av_git_i_nasjonalt_arkitekturverksted"><a class="anchor" href="#_om_bruk_av_git_i_nasjonalt_arkitekturverksted"></a><a class="link" href="#_om_bruk_av_git_i_nasjonalt_arkitekturverksted">2. Om bruk av git i Nasjonalt arkitekturverksted</a></h2>
+<h2 id="_introsukdjosn_til_bruk_av_git_i_nasjonalt_arkitekturverksted"><a class="anchor" href="#_introsukdjosn_til_bruk_av_git_i_nasjonalt_arkitekturverksted"></a><a class="link" href="#_introsukdjosn_til_bruk_av_git_i_nasjonalt_arkitekturverksted">2. Introsukdjosn til bruk av  git i Nasjonalt arkitekturverksted</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Nasjonalt arkitekturverksted benytter <a href="https://antora.org/">Antora</a> som "wiki-løsning". Antora støtter sømløs integrasjon av Asciidoc-innhold fra fra ulike git repositories. Dette gjør det mulig å styre skrivetilgang til ulike deler av innholdet basert på repository.</p>
@@ -382,7 +389,7 @@ Archi har også en egen collaboration plugin som benytter git for versjonsstyrin
 <div class="paragraph">
 <p>Som samarbeidsverkttøy benyttes blant annet <a href="https://docs.gitlab.com/ee/user/project/issues/">issues i gitlab</a>.</p>
 </div>
-<div class="exampleblock">
+<div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
 <p>Issues are the fundamental mechanism in GitLab to collaborate on ideas, solve problems, and plan work.</p>
@@ -437,6 +444,9 @@ Archi har også en egen collaboration plugin som benytter git for versjonsstyrin
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><span class="image"><img src="../common/_images/under-construction.png" alt="under construction" width="45"></span> <mark>TODO: Om informasjonssikkerhet - SSH vs. passord.</mark></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_installer_og_konfigurer_git_for_windows"><a class="anchor" href="#_installer_og_konfigurer_git_for_windows"></a><a class="link" href="#_installer_og_konfigurer_git_for_windows">3.2. Installer og konfigurer Git for Windows</a></h3>
@@ -446,7 +456,7 @@ Archi har også en egen collaboration plugin som benytter git for versjonsstyrin
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Last ned og installer Git fra <a href="https://git-scm.com/download/win" class="bare">https://git-scm.com/download/win</a>.</p>
+<p>Last ned og installer Git fra <a href="https://git-scm.com/download/win" class="bare">https://git-scm.com/download/win</a> eller <a href="https://gitforwindows.org/" class="bare">https://gitforwindows.org/</a>.</p>
 </li>
 <li>
 <p>Se <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Getting Started - First-Time Git Setup</a>.</p>
@@ -468,17 +478,50 @@ Archi har også en egen collaboration plugin som benytter git for versjonsstyrin
 </tr>
 </table>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Git for Windows provides a BASH emulation used to run Git from the command line. *NIX users should feel right at home, as the BASH emulation behaves just like the "git" command in LINUX and UNIX environments.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_installer_annen_programvare_for_git_og_github"><a class="anchor" href="#_installer_annen_programvare_for_git_og_github"></a><a class="link" href="#_installer_annen_programvare_for_git_og_github">3.3. Installer annen programvare for git og GitHub</a></h3>
+<div class="sect3">
+<h4 id="_tortoisegit"><a class="anchor" href="#_tortoisegit"></a><a class="link" href="#_tortoisegit">3.3.1. TortoiseGit</a></h4>
 <div class="paragraph">
-<p>Om du foretrekker å arbeide i grafiske brukergrensesnitt, anbefales TortoiseGit. Se <a href="https://tortoisegit.org/download/">TortoiseGit download</a>.</p>
+<p>Om du foretrekker å arbeide i grafiske brukergrensesnitt, finnes flere gode verktøy. Valget er ditt, men her anbefales TortoiseGit, fordi:</p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>TortoiseGit støtter git generelt. og kan dermed brukes på tvers av f.eks. Github, Gitlab og Bitbucket.</p>
+</li>
+<li>
+<p>TortoiseGit er enkel å bruke for de mest vanlige git-operasjonene (integrert mer Windows Explorer gir tilgang til funksjoner via høyreklikking på mapper og filer).</p>
+</li>
+<li>
+<p>TortoiseGit støtter også avanserte funksjoner, for avanserte brukere.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Installasjonen er enkel:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Last ned og kjør <a href="https://tortoisegit.org/download/">TortoiseGit installasjonsfil</a> (typisk valg er 64 bit Windows msi-fil).</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_andre_git_tips"><a class="anchor" href="#_andre_git_tips"></a><a class="link" href="#_andre_git_tips">3.4. Andre git-tips</a></h3>
 <div class="sect3">
-<h4 id="_tips_for_å_komme_igang_med_bash_kommandolinje"><a class="anchor" href="#_tips_for_å_komme_igang_med_bash_kommandolinje"></a><a class="link" href="#_tips_for_å_komme_igang_med_bash_kommandolinje">3.4.1. Tips for  å komme igang med Bash kommandolinje</a></h4>
+<h4 id="_tips_for_å_komme_igang_med_git_kommandolinje"><a class="anchor" href="#_tips_for_å_komme_igang_med_git_kommandolinje"></a><a class="link" href="#_tips_for_å_komme_igang_med_git_kommandolinje">3.4.1. Tips for  å komme igang med git kommandolinje</a></h4>
 <div class="ulist">
 <ul>
 <li>
