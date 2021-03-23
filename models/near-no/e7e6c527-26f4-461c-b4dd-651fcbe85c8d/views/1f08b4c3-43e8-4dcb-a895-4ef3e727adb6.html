@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Pub-Sub Pattern - 3. Data flow</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Pub-Sub Pattern - 3. Data flow</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/1f08b4c3-43e8-4dcb-a895-4ef3e727adb6.png" alt="Pub-Sub Pattern - 3. Data flow" usemap="#1f08b4c3-43e8-4dcb-a895-4ef3e727adb6map"/>
+			   <map name="1f08b4c3-43e8-4dcb-a895-4ef3e727adb6map">
+				  				<area shape="rect" coords="215,154,348,225" href="../elements/cc2ba389-72f0-4579-b4ed-969cf7b84ca8.html"  target="element">
+				  				<area shape="rect" coords="491,286,588,333" href="../elements/420526db-d148-442b-99c9-41a9f9c173b9.html"  target="element">
+				  				<area shape="rect" coords="647,264,780,335" href="../elements/e7363694-08a6-4829-8248-f4e6e1d84ce4.html"  target="element">
+				  				<area shape="rect" coords="383,46,480,93" href="../elements/bff98c3c-f2bc-485a-bf52-9d73aa35ba84.html"  target="element">
+				  				<area shape="rect" coords="647,46,780,117" href="../elements/fdfe0824-191d-4bea-8696-04528696d592.html"  target="element">
+				  				<area shape="rect" coords="647,140,780,211" href="../elements/fa022c64-fb55-4f50-a70a-e1ab10090baf.html"  target="element">
+
+				  		<area shape="rect" coords="203,10,803,360" href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html"  target="element">
+				  		<area shape="rect" coords="10,46,143,117" href="../elements/1c34a5c3-8ca6-4943-af3b-281e878fcee1.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td> difi:language </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">no</xmp> </td></tr><tr><td> difi:name_no </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">Pub-Sub Pattern</xmp> </td></tr><tr><td> difi:name_en </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:description_no </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:description_en </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:antoraViewPath </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:antoraViewImagePath </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/1c34a5c3-8ca6-4943-af3b-281e878fcee1.html" target="element"> Publisering arkitekturm&#248;nster </a> </td>
+											    <td> <a href="../elements/1c34a5c3-8ca6-4943-af3b-281e878fcee1.html" target="element" class="i18n-elementtype-Resource"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html" target="element"> Publisering - illustrasjon (logisk dataflyt) </a> </td>
+											    <td> <a href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html" target="element" class="i18n-elementtype-Grouping"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/fa022c64-fb55-4f50-a70a-e1ab10090baf.html" target="element"> Datakonsument 2 </a> </td>
+													    <td> <a href="../elements/fa022c64-fb55-4f50-a70a-e1ab10090baf.html" target="element" class="i18n-elementtype-BusinessActor"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/fdfe0824-191d-4bea-8696-04528696d592.html" target="element"> Datakonsument 1 </a> </td>
+													    <td> <a href="../elements/fdfe0824-191d-4bea-8696-04528696d592.html" target="element" class="i18n-elementtype-BusinessActor"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/bff98c3c-f2bc-485a-bf52-9d73aa35ba84.html" target="element"> Hendelsesliste A </a> </td>
+													    <td> <a href="../elements/bff98c3c-f2bc-485a-bf52-9d73aa35ba84.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/e7363694-08a6-4829-8248-f4e6e1d84ce4.html" target="element"> Datakonsument n </a> </td>
+													    <td> <a href="../elements/e7363694-08a6-4829-8248-f4e6e1d84ce4.html" target="element" class="i18n-elementtype-BusinessActor"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/420526db-d148-442b-99c9-41a9f9c173b9.html" target="element"> Hendelsesliste B </a> </td>
+													    <td> <a href="../elements/420526db-d148-442b-99c9-41a9f9c173b9.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/cc2ba389-72f0-4579-b4ed-969cf7b84ca8.html" target="element"> Datatilbyder </a> </td>
+													    <td> <a href="../elements/cc2ba389-72f0-4579-b4ed-969cf7b84ca8.html" target="element" class="i18n-elementtype-BusinessActor"> </a> </td>
+													</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/472e61c5-05f9-4b05-8e26-4b911bfb78c8.html" target="element">  </a> </td>
+																		<td> <a href="../elements/472e61c5-05f9-4b05-8e26-4b911bfb78c8.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html" target="element"> Publisering - illustrasjon (logisk dataflyt) </a> </td>
+																		<td> <a href="../elements/fa022c64-fb55-4f50-a70a-e1ab10090baf.html" target="element"> Datakonsument 2 </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/63c601ae-09af-4b89-8140-8516f3c12435.html" target="element">  </a> </td>
+																		<td> <a href="../elements/63c601ae-09af-4b89-8140-8516f3c12435.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html" target="element"> Publisering - illustrasjon (logisk dataflyt) </a> </td>
+																		<td> <a href="../elements/e7363694-08a6-4829-8248-f4e6e1d84ce4.html" target="element"> Datakonsument n </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/16988e88-574e-4d85-9c9d-24fc879c52a2.html" target="element"> beskriver </a> </td>
+																		<td> <a href="../elements/16988e88-574e-4d85-9c9d-24fc879c52a2.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																		<td> <a href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html" target="element"> Publisering - illustrasjon (logisk dataflyt) </a> </td>
+																		<td> <a href="../elements/1c34a5c3-8ca6-4943-af3b-281e878fcee1.html" target="element"> Publisering arkitekturm&#248;nster </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/ba4e7364-c576-4489-a69e-033eb29381f5.html" target="element">  </a> </td>
+																		<td> <a href="../elements/ba4e7364-c576-4489-a69e-033eb29381f5.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html" target="element"> Publisering - illustrasjon (logisk dataflyt) </a> </td>
+																		<td> <a href="../elements/fdfe0824-191d-4bea-8696-04528696d592.html" target="element"> Datakonsument 1 </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/323ecbd0-79cc-4a34-b766-04ff81cd7522.html" target="element">  </a> </td>
+																		<td> <a href="../elements/323ecbd0-79cc-4a34-b766-04ff81cd7522.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html" target="element"> Publisering - illustrasjon (logisk dataflyt) </a> </td>
+																		<td> <a href="../elements/cc2ba389-72f0-4579-b4ed-969cf7b84ca8.html" target="element"> Datatilbyder </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/9e7a9afb-0462-46ca-afb3-b769100b627e.html" target="element">  </a> </td>
+																		<td> <a href="../elements/9e7a9afb-0462-46ca-afb3-b769100b627e.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html" target="element"> Publisering - illustrasjon (logisk dataflyt) </a> </td>
+																		<td> <a href="../elements/bff98c3c-f2bc-485a-bf52-9d73aa35ba84.html" target="element"> Hendelsesliste A </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/2b756e84-50f4-420c-91d0-e96d8f7ac0f2.html" target="element">  </a> </td>
+																		<td> <a href="../elements/2b756e84-50f4-420c-91d0-e96d8f7ac0f2.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/d750eae5-c704-46c4-9c28-ddeb4199c905.html" target="element"> Publisering - illustrasjon (logisk dataflyt) </a> </td>
+																		<td> <a href="../elements/420526db-d148-442b-99c9-41a9f9c173b9.html" target="element"> Hendelsesliste B </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/af027767-6608-4c51-8db5-bd6931af54ec.html" target="element">  </a> </td>
+																				<td> <a href="../elements/af027767-6608-4c51-8db5-bd6931af54ec.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/bff98c3c-f2bc-485a-bf52-9d73aa35ba84.html" target="element"> Hendelsesliste A </a> </td>
+																				<td> <a href="../elements/9b3c67b8-50a0-4069-abc8-17a79cdeb780.html" target="element">  </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/39eaaaf7-e061-4a9d-a5ca-2699b01375e7.html" target="element">  </a> </td>
+																				<td> <a href="../elements/39eaaaf7-e061-4a9d-a5ca-2699b01375e7.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/bff98c3c-f2bc-485a-bf52-9d73aa35ba84.html" target="element"> Hendelsesliste A </a> </td>
+																				<td> <a href="../elements/991d7a4d-8cda-4841-a132-d1e4208758b9.html" target="element">  </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/491b7760-d7fd-4e52-9bd8-1572358659c2.html" target="element">  </a> </td>
+																				<td> <a href="../elements/491b7760-d7fd-4e52-9bd8-1572358659c2.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/420526db-d148-442b-99c9-41a9f9c173b9.html" target="element"> Hendelsesliste B </a> </td>
+																				<td> <a href="../elements/7de9970a-5f12-402b-97e3-513dfe455194.html" target="element">  </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/d2a0e5e4-9b55-4f7f-97bf-463ae71bc0cb.html" target="element">  </a> </td>
+																				<td> <a href="../elements/d2a0e5e4-9b55-4f7f-97bf-463ae71bc0cb.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																				<td> <a href="../elements/420526db-d148-442b-99c9-41a9f9c173b9.html" target="element"> Hendelsesliste B </a> </td>
+																				<td> <a href="../elements/9154ba5a-23ef-4dee-ba62-fbea554ed6c4.html" target="element">  </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/9b3c67b8-50a0-4069-abc8-17a79cdeb780.html" target="element">  </a> </td>
+																				<td> <a href="../elements/9b3c67b8-50a0-4069-abc8-17a79cdeb780.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																				<td> <a href="../elements/cc2ba389-72f0-4579-b4ed-969cf7b84ca8.html" target="element"> Datatilbyder </a> </td>
+																				<td> <a href="../elements/fdfe0824-191d-4bea-8696-04528696d592.html" target="element"> Datakonsument 1 </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/7de9970a-5f12-402b-97e3-513dfe455194.html" target="element">  </a> </td>
+																				<td> <a href="../elements/7de9970a-5f12-402b-97e3-513dfe455194.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																				<td> <a href="../elements/cc2ba389-72f0-4579-b4ed-969cf7b84ca8.html" target="element"> Datatilbyder </a> </td>
+																				<td> <a href="../elements/e7363694-08a6-4829-8248-f4e6e1d84ce4.html" target="element"> Datakonsument n </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/991d7a4d-8cda-4841-a132-d1e4208758b9.html" target="element">  </a> </td>
+																				<td> <a href="../elements/991d7a4d-8cda-4841-a132-d1e4208758b9.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																				<td> <a href="../elements/cc2ba389-72f0-4579-b4ed-969cf7b84ca8.html" target="element"> Datatilbyder </a> </td>
+																				<td> <a href="../elements/fa022c64-fb55-4f50-a70a-e1ab10090baf.html" target="element"> Datakonsument 2 </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/9154ba5a-23ef-4dee-ba62-fbea554ed6c4.html" target="element">  </a> </td>
+																				<td> <a href="../elements/9154ba5a-23ef-4dee-ba62-fbea554ed6c4.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																				<td> <a href="../elements/cc2ba389-72f0-4579-b4ed-969cf7b84ca8.html" target="element"> Datatilbyder </a> </td>
+																				<td> <a href="../elements/fdfe0824-191d-4bea-8696-04528696d592.html" target="element"> Datakonsument 1 </a> </td>
+																			</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
