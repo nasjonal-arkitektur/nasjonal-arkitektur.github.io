@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>eNotifikasjon :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/architecture-repository/event-streaming/eNotifikasjon.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="architecture-repository" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Nasjonalt arkitekturverksted</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#architecture-repository:about-guides:about-guides.adoc">Praktiske tips om bruk av arkitekturverkstedet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reading-guide/module-reading-guide.html">Leseveiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../git/git.html">Praktiske tips om bruk av git-verktøy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora/module-antora.html">Praktiske tips om innholdsproduksjon og publisering med Antora og Asciidoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om arkitekturmodellering og samarbeid i Archi</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om utveksling av arkitekturmodeller</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Hvordan gi kommentarer og få svar på spørsmål</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Temaområder</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Om temaområder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Datadeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Om temaområdet <em>datadeling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing-value-streams.html">Referansemodeller for datadeling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Om temaområdet <em>datautveksling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-ra/about-data-exchange-ra.html">Om referansearkitektur for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-roles/data-exchange-roles.html">Roller involvert i datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basismønstre for datautveksling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Meldingsforsendelse (eMelding)</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Løsningsbyggeklosser for bruk og gjenbruk</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Fellesløsninger</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Tekniske tjenester og API-er</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sluttbrukertjenester</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Styring og organisering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Initiativer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Nettverk for referansearkitektur</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ra-network/reading-tips.html">Tips om aktuelt lesestoff</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../proposed-reference-architectures/proposed-reference-architecture-work.html">Innspill til prioritering av videre arbeid med referansearkitekturer (A&amp;S-rådet)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/følgebrev.html">Følgebrev</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/situasjonsrapport.html">Situasjonsrapport</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/strukturering-av-spørreskjema.html">Strukturering av spørreskjema</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/forklaringer-til-spørsmålene.html">Forklaringer til spørsmålene</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../methods/methods.html">Metodikk for utvikling av nasjonal arkitektur</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../methods/reference-architecture-methods.html">Metodikk for utvikling av referansearkitekturer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../drafts/index.html">Utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Nasjonalt arkitekturverksted</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../drafts/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
+    <li><a href="eNotifikasjon.html">eNotifikasjon</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/architecture-repository/edit/master/docs/architecture-landscape/topic-areas/data-exchange/patterns/publish-subscribe/modules/event-streaming/pages/eNotifikasjon.adoc">Rediger kilde</a></div>
+  </div>
+<article class="doc"><a name="section-top"></a>
+<h1 class="page">eNotifikasjon</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Innholdsfortegnelse</div>
+<ul class="sectlevel1">
+<li><a href="#_om_dette_mønsteret">1. Om dette mønsteret</a></li>
+<li><a href="#_verdistrømbeskrivelse">2. Verdistrømbeskrivelse</a>
+<ul class="sectlevel2">
+<li><a href="#_enotifikasjon_oversikt_over_verdistrømmer">2.1. eNotifikasjon - oversikt over verdistrømmer</a></li>
+<li><a href="#_enotifikasjon_verdistrøm_for_datatilbyder">2.2. eNotifikasjon - verdistrøm for datatilbyder</a></li>
+<li><a href="#_enotifikasjon_verdistrøm_for_datakonsumenter">2.3. eNotifikasjon - verdistrøm for datakonsumenter</a></li>
+</ul>
+</li>
+<li><a href="#_kapabilitetskart_for_enotifikasjon">3. Kapabilitetskart for eNotifikasjon</a></li>
+<li><a href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">4. Realisering av kapabiliteter - generisk arkitekturmønster</a>
+<ul class="sectlevel2">
+<li><a href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">4.1. Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></li>
+<li><a href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">4.2. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></li>
+<li><a href="#_generere_og_tilby_notifikasjoner">4.3. Generere og tilby notifikasjoner</a></li>
+<li><a href="#_avgi_forespurte_notifikasjoner">4.4. Avgi forespurte notifikasjoner</a></li>
+<li><a href="#_innhente_og_håndtere_notifikasjoner">4.5. Innhente og håndtere notifikasjoner</a></li>
+</ul>
+</li>
+<li><a href="#_løsningsmønstre_for_enotifikasjon">5. Løsningsmønstre for eNotifikasjon</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">1. Om dette mønsteret</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>eNotifikasjon er en referansearkitektur for utveksling av notifikasjoner som er innrettet på å støtte opp under "nyere" arkitekturmønstre for distribuerte applikasjoner, særlig aktuelt innen Microservices som arkitekturparadigme.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+Et sentralt arkitekturmønster som støttes, er best kjent som <em>Event Sourcing</em>, blant annet karakterisert ved at tilstanden til et system eller et <em>subjekt</em> kan bestemmes ut fra en logg av hendelser. Se <a href="https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#event-sourcing">litteratur om Event Sourcing</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Beskrivelsene her bygger på utvalgte deler av en separat oversikt over <a href="#overskrift-grunnleggende-publisering">konsepter for publisering og konsumering av hendelsesstrømmer</a>.</p>
+</div>
+<div class="paragraph">
+<p>Grunnleggende egenskaper ved eNotifikasjon som mønster - en oppsummering av aktuelle konsepter:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tilstanden til et <em>subjekt</em> kan bestemmes gjennom å prosessere en kronologisk sekvens av hendelser, ut fra et gitt øyeblikksbilde.</p>
+</li>
+<li>
+<p>En hendelse kan representeres ved en eller flere  <em>notifikasjoner</em>.</p>
+</li>
+<li>
+<p>Notifikasjoner samles i <em>hendelseslister</em>.</p>
+</li>
+<li>
+<p>Hendelser er i seg selv uforanderlige (<em>immutable</em>). Tilsvarende gjelder for notifikasjoner i hendelseslister, dvs. at notifikasjoner i regelen ikke endres eller slettes fra hendelseslister.</p>
+</li>
+<li>
+<p>Hver enkelt konsument kan lese samme notifikasjon flere ganger.</p>
+</li>
+<li>
+<p>Hendelseslister kan traverseres og spørres mot.</p>
+</li>
+<li>
+<p>En hendelsesliste tilsvarer en logg, og kan benyttes som en logg.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verdistrømbeskrivelse"><a class="anchor" href="#_verdistrømbeskrivelse"></a><a class="link" href="#_verdistrømbeskrivelse">2. Verdistrømbeskrivelse</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_enotifikasjon_oversikt_over_verdistrømmer"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer"></a><a class="link" href="#_enotifikasjon_oversikt_over_verdistrømmer">2.1. eNotifikasjon - oversikt over verdistrømmer</a></h3>
+<div class="paragraph">
+<p>Følgende modell viser en oversikt over verdistrømmene på tvers av datatilbyder og datakonsument for eNotifikasjon. Dette er en spesialisering av den generiske verdistrømbeskrivelsen som finnes under <a href="../data-sharing/data-sharing-value-streams.html" class="page">Felles referansemodeller for datadeling</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/eNotifikasjon%20-%20oversikt%20over%20verdistrømmer.png" alt="eNotifikasjon - oversikt over verdistrømmer image">
+</div>
+<div class="title">Figur 1. eNotifikasjon - oversikt over verdistrømmer</div>
+</div>
+<div class="paragraph">
+<p>Disse verdistrømmene er nærmere beskrevet for hver rolle i påfølgende avsnitt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enotifikasjon_verdistrøm_for_datatilbyder"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datatilbyder"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datatilbyder">2.2. eNotifikasjon - verdistrøm for datatilbyder</a></h3>
+<div class="paragraph">
+<p>Her vises verdistrømmen for eNotifikasjon sett fra datatilbyder, med angivelse av kapabiliteter.</p>
+</div>
+<div class="paragraph">
+<p>Det som er spesifikt for eNotifikasjon er vist med uthevet skrift, dvs. <em>Inngå avtaler om tilgang og levering av hendelsesstrømmer</em>, <em>Generere og tilby notifikasjoner</em>, samt <em>Avgi forespurte notifikasjoner</em>. Realiseringen av disse kapabilitetene beskrives i prosessmodeller m.v. for eNotifikasjon.</p>
+</div>
+<div class="paragraph">
+<p>Øvrige kapabiliteter er beskrevet andre steder; se referansearkitektur for mønsteret eOppslag.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/eNotifikasjon%20-%20tilbyders%20verdistrøm.png" alt="eNotifikasjon - tilbyders verdistrøm image">
+</div>
+<div class="title">Figur 2. eNotifikasjon - tilbyders verdistrøm</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enotifikasjon_verdistrøm_for_datakonsumenter"><a class="anchor" href="#_enotifikasjon_verdistrøm_for_datakonsumenter"></a><a class="link" href="#_enotifikasjon_verdistrøm_for_datakonsumenter">2.3. eNotifikasjon - verdistrøm for datakonsumenter</a></h3>
+<div class="paragraph">
+<p>Her vises verdistrømmen for eNotifikasjon sett fra datakonsumenter, med angivelse av kapabiliteter.</p>
+</div>
+<div class="paragraph">
+<p>Det som er spesifikt for eNotifikasjon er vist med uthevet skrift, dvs. <em>Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</em> og <em>Innhente og håndtere notifikasjoner</em>. Realiseringen av disse kapabilitetene beskrives i prosessmodeller m.v. for eNotifikasjon.</p>
+</div>
+<div class="paragraph">
+<p>Øvrige kapabiliteter er beskrevet andre steder; se referansearkitektur for mønsteret eOppslag.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/eNotifikasjon%20-%20konsumenters%20verdistrøm.png" alt="eNotifikasjon - konsumenters verdistrøm image">
+</div>
+<div class="title">Figur 3. eNotifikasjon - konsumenters verdistrøm</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kapabilitetskart_for_enotifikasjon"><a class="anchor" href="#_kapabilitetskart_for_enotifikasjon"></a><a class="link" href="#_kapabilitetskart_for_enotifikasjon">3. Kapabilitetskart for eNotifikasjon</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Modellen under gir en samlet oversikt over kapabiliteter som er spesifikke for eNotifikasjon, slik disse er identifisert i foregående verdistrømbeskrivelse.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Kapabiliteter%20eNotifikasjon.png" alt="Kapabiliteter eNotifikasjon image">
+</div>
+<div class="title">Figur 4. Kapabiliteter eNotifikasjon</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 1. Elementer i view for Kapabiliteter eNotifikasjon</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente og håndtere notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å konsumere hendelseslister ved å innhente notifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generere og tilby notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å dele informasjon om hendelser gjennom notifikasjoner som tilgjengeliggjøres for konsumenter gjennom hendelseslister.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å inngå avtaler med datatilbyder om tilgang til hendelser gjennom hendelseslister med notifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler om tilgang og levering av hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å inngå avtaler med datakonsumenter om tilgengjengeliggjøring av hendelseslister med notifikasjoner om hendelser.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å avgi notifikasjoner på forespørsel</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_realisering_av_kapabiliteter_generisk_arkitekturmønster"><a class="anchor" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster"></a><a class="link" href="#_realisering_av_kapabiliteter_generisk_arkitekturmønster">4. Realisering av kapabiliteter - generisk arkitekturmønster</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Her beskrives realiseringen av de kapabilitetene som er spesifikke for eNotifikasjon i form av et generisk, løsningsuavhengig arkitekturmønster. Det vil kunne være flere måter å realisere aktuelle arkitekturbyggeklosser på.</p>
+</div>
+<div class="sect2">
+<h3 id="_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer">4.1. Inngå avtaler om tilgang og levering av hendelsesstrømmer</a></h3>
+<div class="paragraph">
+<p>Gi tilgang til notifikasjoner og hendelser er den prosessen datatilbyder må gjøre for å gi datakonsumenten tilgang til hendelseslister. Ved helt åpne hendelseslister kan prosessen være unødvendig og utgår, men vil normalt omfatte å tilgjengeliggjøre API som beskrevet i eOppslag. I tillegg kan det eventuelt registreres informasjon i tilknytning til filtrering og tilpasning av hendelselister ut fra konsumentens behov og tilganger.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Gi%20tilgang%20til%20notifikasjoner%20og%20hendelser.png" alt="Gi tilgang til notifikasjoner og hendelser image">
+</div>
+<div class="title">Figur 5. Gi tilgang til notifikasjoner og hendelser</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 2. Elementer i view for Gi tilgang til notifikasjoner og hendelser</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gi tilgang til notifikasjoner og hendelser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med oppsett for å gi tilgang til notifikasjoner og hendelser.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsel om tilgang til hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å motta forespørsel om tilgang til notifikasjoner på hendelseslister.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til hendelsesliste med notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å registrere seg som konsument av en hendelsesliste hos datatilbyder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrering av konsument av hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere konsumenter av hendelseslite med notifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler om tilgang og levering av hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å inngå avtaler med datakonsumenter om tilgengjengeliggjøring av hendelseslister med notifikasjoner om hendelser.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer"></a><a class="link" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer">4.2. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</a></h3>
+<div class="paragraph">
+<p>Få tilgang til notifikasjoner og hendelser er den prosessen datakonsument må gjøre for å sette opp og få tilganger til hendelseslister. Prosessetrinnene kommer i tillegg til prosessen for å få tigang til API som beskrevet i eOppslag.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Få%20tilgang%20til%20notifikasjoner%20og%20hendelser.png" alt="Få tilgang til notifikasjoner og hendelser image">
+</div>
+<div class="title">Figur 6. Få tilgang til notifikasjoner og hendelser</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 3. Elementer i view for Få tilgang til notifikasjoner og hendelser</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beskrive behov og tilganger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å beskrive hvilke tilganger konsument har rettigeheter til og hvilken type notifikasjoner som er aktuelle.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til hendelsesliste med notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å registrere seg som konsument av en hendelsesliste hos datatilbyder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler om tilgang og innhenting av hendelsesstrømmer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å inngå avtaler med datatilbyder om tilgang til hendelser gjennom hendelseslister med notifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrering av konsument av hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere konsumenter av hendelseslite med notifikasjoner.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_generere_og_tilby_notifikasjoner"><a class="anchor" href="#_generere_og_tilby_notifikasjoner"></a><a class="link" href="#_generere_og_tilby_notifikasjoner">4.3. Generere og tilby notifikasjoner</a></h3>
+<div class="paragraph">
+<p>Generer og publiser notifikasjoner er den prosessen datatilbyder må gjøre for å tilby notifikasjoner gjennom hendelseslister. Hendelselister tilbys på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men det finnes spesielle krav for hendelseslister med tanke på segmentering,  filtrering og navigering.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Generer%20og%20publiser%20notifikasjoner.png" alt="Generer og publiser notifikasjoner image">
+</div>
+<div class="title">Figur 7. Generer og publiser notifikasjoner</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 4. Elementer i view for Generer og publiser notifikasjoner</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generere og publisere notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å generere notifikasjoner som data om hendelser, samt å publisere slike notifikasjoner i en eller flere hendelseslister, eventuelt tilpasset ulike målgrupper.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generer og publiser notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å dele informasjon om hendelser.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generer notifikasjon ut fra hendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å generere en notifikasjon på bakgrunn av en hendelse.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publiser notifikasjon i hendelseslister</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å legge notifikasjoner i en eller flere hendelseslister som er eksponert overfor aktuelle konsumenter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En notifikasjon informerer om at en hendelse har inntruffet og kan inneholde elle  peke til hele eller deler av det totale settet av aktuelle, hendelsesrelaterte data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Liste med notifikasjoner tilgjengelig for konsumenter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generering av notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som genererer notifikasjoner basert på hendelser, der alle aktuelle grunnlagsdata er med eller lenket til.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skriving av notifikasjon til eksponerte hendelseslister</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å skrive en notifikasjon til en eller flere hendelseslister, eventuelt med filtrering av informasjon ut fra hvem som er aktuelle konsumenter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komplett notifikasjon, tilbyders domene</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon som inneholder eller lenker til et fullstendig sett av hendelsesrelaterte data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste som eksponeres for konsument. En tilbyder kan tilby flere hendelselister i parallell f.eks. med ulike temaer og for konsumenter med ulike rettigheter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon som publiseres på en eller flere hendelseslister. Publiserte notifikasjoner kan være "tykke" eller "tynne" med hensyn på hvor mye informasjon om en hendelse de inneholder.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_avgi_forespurte_notifikasjoner"><a class="anchor" href="#_avgi_forespurte_notifikasjoner"></a><a class="link" href="#_avgi_forespurte_notifikasjoner">4.4. Avgi forespurte notifikasjoner</a></h3>
+<div class="paragraph">
+<p>Notifikasjoner avgis gjennom API på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag, men tilbyder må, ved behov, tilpasse hendelsene som avgis etter det konsumenten har rettigheter til og etterspør. F.eks. kan konsumenten kun ha rettigheter til en delmengde av alle hendelser i hendelsesliten og også kun være interessert i enkelte typer hendelser. Konsumenten vil også normalt kun ha behov for å hente notifikasjoner som ikke er hentet tidliger, men kan også ønske å hente tidligere notifikasjoner på nytt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Avgi%20forespurte%20notifikasjoner.png" alt="Avgi forespurte notifikasjoner image">
+</div>
+<div class="title">Figur 8. Avgi forespurte notifikasjoner</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 5. Elementer i view for Avgi forespurte notifikasjoner</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyders spørretjeneste mot hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for spørring og navigering av hendelsesliste gjennom API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte data gjennom API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å avgi data på forespørsel gjennom et egnet API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte notifikasjoner gjennom API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å avgi notifikasjoner på forespørsel gjennom et API som</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsel om notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsler fra konsument om å avgi notifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi utvalgte notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi utvalgte hendelser basert på parametere i forespørsel om notifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilpass innhold til konsument (dersom aktuelt)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å tilpasse innholdet til konsument. Tilpasningen gjøres på grunnlag av parametere/informasjon i forespørselen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiser konsument og kontroller tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å autentisere en konsument og kontrollere  rettigheter til data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel om notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt med eventuelle parametere for spørring på notifikasjoner fra tilgjengelig hendelsesliste. Kan inneholde referanse til hvor i hendelselisten (f.eks. tid eller sekvensnummer) man ønsker å lese, avgrensning til temaer, rettigheter og liknende.
+Informasjonen er grunnlag for eventuell tilpasning av innhold og utvalg.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyders filtrerings- og minimeringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å filtrere og minimere informasjon ut fra parametere i forespørselen og hvilken informasjon konsumenten har rettigheter til.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgangskontroll-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å sjekke rettigheter til data. Kan være eksterne eller interne tjenester.
+Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, eller rollebasert fra vergemål, familierelasjon el.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å avgi notifikasjoner på forespørsel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvekslet hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste som utveksles,  filtrert ut fra konsumentens spesifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste som eksponeres for konsument. En tilbyder kan tilby flere hendelselister i parallell f.eks. med ulike temaer og for konsumenter med ulike rettigheter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon som publiseres på en eller flere hendelseslister. Publiserte notifikasjoner kan være "tykke" eller "tynne" med hensyn på hvor mye informasjon om en hendelse de inneholder.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utvekslet notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon  som utveksles,  eventuelt minimert ut fra konsumentens spesifikasjoner.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_innhente_og_håndtere_notifikasjoner"><a class="anchor" href="#_innhente_og_håndtere_notifikasjoner"></a><a class="link" href="#_innhente_og_håndtere_notifikasjoner">4.5. Innhente og håndtere notifikasjoner</a></h3>
+<div class="paragraph">
+<p>Notifikasjoner leses på tilsvarende måte som beskrevet for generelle mønstre for spørring og oppslag (herunder eOppslag), men konsumentene må holde orden på spesielle forhold som rekkefølge og hvilke notifikasjoner som er lest. Konsumenten må også være i stand til å vurdere relevansen av hendelsene før videre behandling av notifikasjonene.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Konsumer%20notifikasjoner.png" alt="Konsumer notifikasjoner image">
+</div>
+<div class="title">Figur 9. Konsumer notifikasjoner</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 6. Elementer i view for Konsumer notifikasjoner</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente og håndtere notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å konsumere hendelseslister ved å innhente notifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konsumer notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å lese og håndtere notifikasjoner.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespør og motta notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å hente inn en eller flere notifikasjoner fra en hendelsesliste.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vurder relevans av notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å vurdere om en hendelsen knyttet til lest notifikasjon er relevant for konsumenten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forkast notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å forkaste notifikasjon som ikke er relevant for virksomheten. Avhengig av krav til personvern og informasjonssikkerhet kan det være særskilte krav til hva som er lov å beholde.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Videre behandling av notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med videre behandling av en notifikasjon som normalt vil være å innhente mer informasjon om hendelsen eller subjektet notifikasjonen er knyttet til og eventuelt agere ut i fra denne.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel om notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt med eventuelle parametere for spørring på notifikasjoner fra tilgjengelig hendelsesliste. Kan inneholde referanse til hvor i hendelselisten (f.eks. tid eller sekvensnummer) man ønsker å lese, avgrensning til temaer, rettigheter og liknende.
+Informasjonen er grunnlag for eventuell tilpasning av innhold og utvalg.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kriterier og regler for å vurdere relevans av notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjon om hva som legges til grunn for å vurdere relevansen av en hendelse, basert på informasjon i lest notifikasjon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En notifikasjon informerer om at en hendelse har inntruffet og kan inneholde elle  peke til hele eller deler av det totale settet av aktuelle, hendelsesrelaterte data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konsuments filtrerings- og minimeringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å filtrere innhentede notifikasjoner. Dette er en tilleggsmekanisme for filtrering og minimering, sammenliknet med det som gjøres gjennom spørringer mot datatilbyder, og benyttes ved behov. Filtreringen kan gjøres ved å filtrere selve innlesing eller ved å filtrere mottatte notifikasjoner etter innlesing. Etter innlesing kan det også gjøres minimering av innholdet i notifikasjonen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data over aktuell transportprotokoll, f.eks, gjennom asynkrone medlinger eller synkrone API-oppslag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyders spørretjeneste mot hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for spørring og navigering av hendelsesliste gjennom API.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_løsningsmønstre_for_enotifikasjon"><a class="anchor" href="#_løsningsmønstre_for_enotifikasjon"></a><a class="link" href="#_løsningsmønstre_for_enotifikasjon">5. Løsningsmønstre for eNotifikasjon</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spesifikke løsningsmønstre for eNotifikasjon er inntil videre ikke utarbeidet. Det er stor variasjon i praksis, og ingen fellesløsninger er så langt etablert i Norge.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+Mer om fellesløsninger, standarder og løsningsmønstre vil følge her etterhvert.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Det finnes i mellomtiden noen gode eksempler å peke på.</p>
+</div>
+<div class="paragraph">
+<p>Her nevnes spesielt:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Modernisert folkeregister fra Skatteetaten tilbyr hendelseslister og oppslag som konsumenttjenester. Disse tjenestene er beskrevet i <a href="https://skatteetaten.github.io/folkeregisteret-api-dokumentasjon/konsumenttjenester/">Folkeregisterets API dokumentasjon</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
+</html>

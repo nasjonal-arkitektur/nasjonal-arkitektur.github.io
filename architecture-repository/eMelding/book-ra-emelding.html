@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>eMelding referansearkitektur :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/architecture-repository/eMelding/book-ra-emelding.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="architecture-repository" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Nasjonalt arkitekturverksted</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#architecture-repository:about-guides:about-guides.adoc">Praktiske tips om bruk av arkitekturverkstedet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reading-guide/module-reading-guide.html">Leseveiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../git/git.html">Praktiske tips om bruk av git-verktøy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora/module-antora.html">Praktiske tips om innholdsproduksjon og publisering med Antora og Asciidoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om arkitekturmodellering og samarbeid i Archi</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om utveksling av arkitekturmodeller</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Hvordan gi kommentarer og få svar på spørsmål</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Temaområder</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Om temaområder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Datadeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Om temaområdet <em>datadeling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing-value-streams.html">Referansemodeller for datadeling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Om temaområdet <em>datautveksling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-ra/about-data-exchange-ra.html">Om referansearkitektur for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-roles/data-exchange-roles.html">Roller involvert i datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basismønstre for datautveksling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Meldingsforsendelse (eMelding)</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Løsningsbyggeklosser for bruk og gjenbruk</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Fellesløsninger</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Tekniske tjenester og API-er</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sluttbrukertjenester</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Styring og organisering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Initiativer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Nettverk for referansearkitektur</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ra-network/reading-tips.html">Tips om aktuelt lesestoff</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../proposed-reference-architectures/proposed-reference-architecture-work.html">Innspill til prioritering av videre arbeid med referansearkitekturer (A&amp;S-rådet)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/følgebrev.html">Følgebrev</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/situasjonsrapport.html">Situasjonsrapport</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/strukturering-av-spørreskjema.html">Strukturering av spørreskjema</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/forklaringer-til-spørsmålene.html">Forklaringer til spørsmålene</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../methods/methods.html">Metodikk for utvikling av nasjonal arkitektur</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../methods/reference-architecture-methods.html">Metodikk for utvikling av referansearkitekturer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../drafts/index.html">Utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Nasjonalt arkitekturverksted</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../drafts/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
+    <li><a href="book-ra-emelding.html">eMelding referansearkitektur</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/architecture-repository/edit/master/docs/architecture-landscape/topic-areas/data-exchange/patterns/one-way-push/modules/eMelding/pages/book-ra-emelding.adoc">Rediger kilde</a></div>
+  </div>
+<article class="doc"><a name="section-top"></a>
+<h1 class="page">eMelding referansearkitektur</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Innholdsfortegnelse</div>
+<ul class="sectlevel1">
+<li><a href="#_introduksjon">1. Introduksjon</a></li>
+<li><a href="#_grunnleggende_konsepter_for_emelding">2. Grunnleggende konsepter for eMelding</a></li>
+<li><a href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">3. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></li>
+<li><a href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">4. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a>
+<ul class="sectlevel2">
+<li><a href="#_generelt">4.1. Generelt</a></li>
+<li><a href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">4.2. Klargjør for deling av data ved forsendelse (eMelding)</a></li>
+<li><a href="#_operativ_deling_av_data_ved_forsendelse_emelding">4.3. Operativ deling av data ved forsendelse (eMelding)</a>
+<ul class="sectlevel3">
+<li><a href="#_send_emelding">4.3.1. Send eMelding</a></li>
+<li><a href="#_motta_emelding">4.3.2. Motta eMelding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_videre_informasjon_om_emelding">5. Videre informasjon om eMelding</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>eMelding er en referansearkitektur for meldingsutveksling på tvers av virksomheter, sektorer og landegrenser.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduksjon"><a class="anchor" href="#_introduksjon"></a><a class="link" href="#_introduksjon">1. Introduksjon</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Begrepet eMelding kan ses som en skriver seg fra strategisk arbeid med</p>
+</div>
+<div class="paragraph">
+<p>Videre informasjon og og dokumentasjon om eMelding finnes under <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding" class="bare">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding</a>.</p>
+</div>
+<div class="paragraph">
+<p>eMelding  kan ses på som en "beste praksis" for meldingsutveksling på tvers av virksomheter og sektorer i offentlig sektor, samt mellom offentlig sektor og privat sektor.</p>
+</div>
+<div class="paragraph">
+<p>eMelding tar utgangspunkt i den europeiske "byggeklossen"  <a href="../kunnskap_referansearkitektur_eu-edelivery">CEF eDelivery</a>. CEF eDelivery  spesifiserer arkitekturer og standarder for meldingsutveksling. Det finnes flere eksisterende anvendelser og gjenbrukbare løsninger for å realisere eDelivery i ulike land og virksomheter.</p>
+</div>
+<div class="paragraph">
+<p>eMelding anvendes bl.a. innen <a href="../kunnskap_losning_eu-peppol">PEPPOL-nettverket</a>, nærmere bestemt i regi av OpenPEPPOL.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+<em>OpenPEPPOL is a non-profit international association under Belgian law (Association Internationale Sans But Lucratif – AISBL) and consists of both public sector and private members. The association has assumed full responsibility for the development and maintenance of the PEPPOL specifications, building blocks and its services and implementation across Europe.</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>eMelding som referansearkitektur rendyrker konseptene og har en klar kopling til CEF eDelivery, men beskrives i utgangspunktet frikoplet fra CEF eDelivery</strong>. Med dette som utgangspunkt, angis så aktuelle løsninger og praktiske anvendelser i form av CEF eDelivery og PEPPOL/OpenPEPPOL.</p>
+</div>
+<div class="paragraph">
+<p>eMelding som referansearkitektur er avgrenset til<strong> asynkron meldingsutveksling innenfor et fellesskap (community) som samhandler under et felles interoperabilitetsregime</strong>. Når man er del av fellesskapet vil man kunne sende meldinger til andre parter i fellesskapet uten å måtte inngå bilaterale avtaler om dette. Hver enkelt part registrerer sine samhandlingskapabiliteter i felles registre, for andre til å oppdage.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+eMelding som referansearkitektur støtter mønstre for request-reply og korrelering av meldinger i prosessinstanser, tilsvarende slik dette legges opp til i spesifikasjonen av metadata i meldingsprofil for CEF eDelivery.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grunnleggende_konsepter_for_emelding"><a class="anchor" href="#_grunnleggende_konsepter_for_emelding"></a><a class="link" href="#_grunnleggende_konsepter_for_emelding">2. Grunnleggende konsepter for eMelding</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>eMelding bygger på et arkitekturmønster hvor avsender og mottaker kan benytte ulike teknologier og transportprotkoller. Se  <a href="../4-corner-model/4-hjørnersmodellen.html" class="page">4-hjørners-modellen fra EU CEF eDelivery</a>. for en nærmere redegjørelse om selve konseptet.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">3. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Se konseptuelle prosessbeskrivelser for <a href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html" class="page">Generisk forsendelse</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"><a class="anchor" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"></a><a class="link" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">4. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">4.1. Generelt</a></h3>
+<div class="paragraph">
+<p>Beskrivelsene her viser på hvordan den generiske referansearkitekturen for eMelding kan realiseres med arkitektur- og løsningskomponenter som inngår i PEPPOL-infrastrukturen; basert på CEF eDelivery.</p>
+</div>
+<div class="paragraph">
+<p>Utover de arkitekturtegningene som presenenteres, henvises til omfattende dokumentasjon av eDelivery og PEPPOL.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/PEPPOL%20eDelivery%20Network%20overview.png" alt="PEPPOL eDelivery Network overview">
+</div>
+<div class="title">Figur 1. PEPPOL eDelivery Network overview</div>
+</div>
+<div class="paragraph">
+<p>Arkitektur- og løsningsbyggeklosser:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CEF SMP (Service Metadata Publisher): Oppslagstjeneste for å finne adresse og kapabiliteter for aktuell mottaker. Inneholder mottakers ID, aksesspunktadresse og dokumenttyper som mottaker kan motta. Aktuelle løsninger:  <a href="https://samarbeid.difi.no/felleslosninger/elma">ELMA</a>.</p>
+</li>
+<li>
+<p>BCP (Business Certificate Publisher): Sertifikatutsteder. Løsninger: Se <a href="https://vefa.difi.no/bcp/" class="bare">https://vefa.difi.no/bcp/</a>.</p>
+</li>
+<li>
+<p>Adressetjenesten CEF <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/SML+service">SML</a> (Service Metadata Locater): Global oppslagstjeneste for å finne fram til aktuell SMP.</p>
+</li>
+<li>
+<p>BCL (Business Certificate Locator): Oppslagstjeneste for å finne BCP (introdusert ifm. Enhanced PEPPOL eDelivery Network).</p>
+</li>
+<li>
+<p>Elektronisk mottakeradresseregister (<a href="https://samarbeid.difi.no/felleslosninger/elma">ELMA</a>): Norsk register over foretak som kan ta i mot dokumenter i standardisert EHF-format.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">4.2. Klargjør for deling av data ved forsendelse (eMelding)</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/SBB_klargjøre.png" alt="Klargjør for eMelding (løsningsmønster) image">
+</div>
+<div class="title">Figur 2. Klargjør for eMelding (løsningsmønster)</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figur:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 1. Elementer i view for Klargjør for eMelding (løsningsmønster)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samhandlingsaktør</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samlebetegnelse på roller som inngår i en samhandlingsprosess og samhandler med en annen samhandlingsaktør. Kan være en tilbyder, konsument, avsender, mottaker, leverandør etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klargjøre for deling av data ved forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evne til å klargjøre for meldingsutveksling med eksterne parter.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klargjør for melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å klargjøre for melding ved å  inngå nødvendige avtaler og tilgjengeliggjøre nødvendig informasjon til andre samhandlingsaktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtaler for meldingsforsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å inngå bilaterale avtaler med sammhandlingsparter eller innmelding i et fellesskap. F.eks. gjennom å akseptere spesifikke avtaler, vilkår eller kontrakter og innrette seg etter reglene og forpliktelsene som gjelder i et fellesskap (community), eller det som er avtalt mellom samhanslingsaktørene.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer kapabiliteter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registering av kapabiliteter vil si å tilgjengeligjøre for avsendere og konsumenter hvilke meldinger og formater man kan motta og hvilke ressurser og tjenester man tilbyr.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer adresser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Med adresse menes nødvendig informasjon for å få tilgang til tjenester fra tilbyder eller for å sende melding til mottaker av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer sertifikater</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre for samhandlende parter sertifikater for bruk ved forsendelser. Dette kan være generelle eller domenespesifikke sertifikater. Eventuelt spesifikt for enkelet forretningsområder.</p>
+<p class="tableblock">Sertifikater må forvaltes og fornyes etter gjeldende regler for å være gyldige og egnet for bruk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kapabilitetsregistrering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere kapabiliteter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresseregistrering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere adresse for å sende melding til mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sertifikatregisterering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere serifikater i felles katalogtjeneste.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenPeppol</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elektronisk mottakerregister (ELMA)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Med ELMA får brukerne dine oversikt over alle virksomheter i Norge som kan motta elektroniske fakturaer i henhold til EHF-standarden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CEF SML</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Metadata Locator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BCL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business Certificate Locater</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BCP (CommFides eller Buypass)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business Certificate Publisher</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_operativ_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding">4.3. Operativ deling av data ved forsendelse (eMelding)</a></h3>
+<div class="sect3">
+<h4 id="_send_emelding"><a class="anchor" href="#_send_emelding"></a><a class="link" href="#_send_emelding">4.3.1. Send eMelding</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Send%20eMelding%20%20(løsningsmønster).png" alt="Send eMelding  (løsningsmønster) image">
+</div>
+<div class="title">Figur 3. Send eMelding  (løsningsmønster)</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figur:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 2. Elementer i view for Send eMelding  (løsningsmønster)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avsender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som sender et brev, en pakke, en e-post, en elektronisk melding, en SMS eller lignende.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sende data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å sende data til en mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å sende en eMelding til en mottaker ved hjelp av fellestjenester.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller mottakers kapabiliteter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å slå opp og kontrollere mottakers evner til samhandling innenfor fellesskapet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formater melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å tilpasse informasjonspakken til mottakers kapabiliteter og fellesskapets standarder.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Krypter melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å sikre forsendelsen. Inkluderer konfidensialitets- og integritetssikring der dette er nødvendig. Normalt gjøres dette ved hjelp av kryptografi og sertifikater.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresser forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å adressere forsendelsen. Dette kan være til mottaker direkte eller til dennes representant eller aksesspunkt,</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signer forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å signere meldingen som sendes til mottaker. Til dette benyttes eget sertifikats private nøkkel.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eksepeder melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å sende melding til mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kapabilitetsoppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å slå opp kapabilitetene til en samhandlingspart</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatransformasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for  transformere data og meldinger til andre formater.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sertifikatoppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å hente krypteringssertifkat til mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adresseoppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å slå opp adressen til en mottaker.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signeringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å signere en elektronisk melding. For eMelding er det signatur i form av elektronisk segl som er mest relevant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sporingstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for sporing (audit) av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CEF SML</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Metadata Locator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elektronisk mottakerregister (ELMA)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Med ELMA får brukerne dine oversikt over alle virksomheter i Norge som kan motta elektroniske fakturaer i henhold til EHF-standarden.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BCL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business Certificate Locater</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BCP (CommFides eller Buypass)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business Certificate Publisher</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PEPPOL</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_motta_emelding"><a class="anchor" href="#_motta_emelding"></a><a class="link" href="#_motta_emelding">4.3.2. Motta eMelding</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Motta%20eMelding%20(løsningsmønster).png" alt="Motta eMelding (løsningsmønster) image">
+</div>
+<div class="title">Figur 4. Motta eMelding (løsningsmønster)</div>
+</div>
+<div class="paragraph">
+<p>Forklaring til figur:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 3. Elementer i view for Motta eMelding (løsningsmønster)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottaker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som mottar en elektronisk melding eller tilsvarende.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å motta, validere og kvittere for mottatte meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å motta melding. Består av flere delprosesser.</p>
+<p class="tableblock">Etter mottak må mottaker følge opp og håndtere innholdet i meldingen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å motta en melding fra avsender</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å kontrollere om forsendelsen er autentisk og fra en legitim avsender.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dekrypter melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å dekryptere mottatt melding.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valider forsendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å kontrollere om innholdet i en forsendelse er i henhold til avtale og avtalte formater.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sporingstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for sporing (audit) av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signaturvaliderings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å validere og verifisere elektronsike signaturer. I forbindelse med eMelding er det kontroll av elektronisk segl som er mest relevant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datavaliderings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å validere meldinger mot format og forventet innhold.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PEPPOL</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_videre_informasjon_om_emelding"><a class="anchor" href="#_videre_informasjon_om_emelding"></a><a class="link" href="#_videre_informasjon_om_emelding">5. Videre informasjon om eMelding</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Videre informasjon og og dokumentasjon om eMelding finnes under <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding" class="bare">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding</a>.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
+</html>

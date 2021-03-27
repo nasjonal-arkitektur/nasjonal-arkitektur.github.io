@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Forespørsel-svar :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/architecture-repository/request-reply/book-request-reply.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="architecture-repository" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Nasjonalt arkitekturverksted</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#architecture-repository:about-guides:about-guides.adoc">Praktiske tips om bruk av arkitekturverkstedet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reading-guide/module-reading-guide.html">Leseveiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../git/git.html">Praktiske tips om bruk av git-verktøy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora/module-antora.html">Praktiske tips om innholdsproduksjon og publisering med Antora og Asciidoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om arkitekturmodellering og samarbeid i Archi</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om utveksling av arkitekturmodeller</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Hvordan gi kommentarer og få svar på spørsmål</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Temaområder</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Om temaområder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Datadeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Om temaområdet <em>datadeling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing-value-streams.html">Referansemodeller for datadeling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Om temaområdet <em>datautveksling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-ra/about-data-exchange-ra.html">Om referansearkitektur for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-roles/data-exchange-roles.html">Roller involvert i datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basismønstre for datautveksling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Meldingsforsendelse (eMelding)</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="6">
+    <a class="nav-link" href="book-request-reply.html">Forespørsel-svar (eOppslag)</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Løsningsbyggeklosser for bruk og gjenbruk</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Fellesløsninger</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Tekniske tjenester og API-er</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sluttbrukertjenester</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Styring og organisering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Initiativer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Nettverk for referansearkitektur</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ra-network/reading-tips.html">Tips om aktuelt lesestoff</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../proposed-reference-architectures/proposed-reference-architecture-work.html">Innspill til prioritering av videre arbeid med referansearkitekturer (A&amp;S-rådet)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/følgebrev.html">Følgebrev</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/situasjonsrapport.html">Situasjonsrapport</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/strukturering-av-spørreskjema.html">Strukturering av spørreskjema</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/forklaringer-til-spørsmålene.html">Forklaringer til spørsmålene</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../methods/methods.html">Metodikk for utvikling av nasjonal arkitektur</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../methods/reference-architecture-methods.html">Metodikk for utvikling av referansearkitekturer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../drafts/index.html">Utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Nasjonalt arkitekturverksted</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../drafts/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
+    <li><a href="../about-topic-areas/about-topic-areas.html">Temaområder</a></li>
+    <li><a href="../data-exchange/about-data-exchange.html">Datautveksling</a></li>
+    <li><a href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a></li>
+    <li><a href="../data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a></li>
+    <li>Basismønstre for datautveksling</li>
+    <li><a href="book-request-reply.html">Forespørsel-svar (eOppslag)</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/architecture-repository/edit/master/docs/architecture-landscape/topic-areas/data-exchange/patterns/request-reply/modules/request-reply/pages/book-request-reply.adoc">Rediger kilde</a></div>
+  </div>
+<article class="doc"><a name="section-top"></a>
+<h1 class="page">Forespørsel-svar</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Innholdsfortegnelse</div>
+<ul class="sectlevel1">
+<li><a href="#_generisk_forespørsel_svar">1. Generisk forespørsel-svar</a>
+<ul class="sectlevel2">
+<li><a href="#_om_dette_mønsteret">1.1. Om dette mønsteret</a></li>
+<li><a href="#_kapabiliteter_for_deling_av_data_på_forespørsel">1.2. Kapabiliteter for deling av data på forespørsel</a></li>
+</ul>
+</li>
+<li><a href="#_eoppslag_konseptuell_beskrivelse">2. eOppslag - konseptuell beskrivelse</a>
+<ul class="sectlevel2">
+<li><a href="#_om_dette_mønsteret_2">2.1. Om dette mønsteret</a></li>
+<li><a href="#_klargjøring_for_deling_av_data_på_forespørsel">2.2. Klargjøring for <em>deling av data på forespørsel</em></a>
+<ul class="sectlevel3">
+<li><a href="#_tilgjengeliggjøre_data">2.2.1. Tilgjengeliggjøre data</a></li>
+<li><a href="#_få_tilgang_til_data">2.2.2. Få tilgang til data</a></li>
+<li><a href="#_delegere_rettigheter_til_databehandler">2.2.3. Delegere rettigheter til databehandler</a></li>
+</ul>
+</li>
+<li><a href="#_utveksling_av_data">2.3. Utveksling av data</a>
+<ul class="sectlevel3">
+<li><a href="#_innhente_data">2.3.1. Innhente data</a></li>
+<li><a href="#_avgi_data">2.3.2. Avgi data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_eoppslag_bruk_av_nasjonale_fellesløsninger">3. eOppslag - bruk av nasjonale fellesløsninger</a>
+<ul class="sectlevel2">
+<li><a href="#_om_dette_mønsteret_3">3.1. Om dette mønsteret</a></li>
+<li><a href="#_klargjøring_for_deling_av_data_på_forespørsel_2">3.2. Klargjøring for <em>deling av data på forespørsel</em></a>
+<ul class="sectlevel3">
+<li><a href="#_tilgjengeliggjøre_data_2">3.2.1. Tilgjengeliggjøre data</a></li>
+<li><a href="#_få_tilgang_til_data_2">3.2.2. Få tilgang til data</a>
+<ul class="sectlevel4">
+<li><a href="#_delegering_av_rettigheter_til_databehandler">3.2.2.1. Delegering av rettigheter til databehandler</a></li>
+</ul>
+</li>
+<li><a href="#_informasjon_som_inngår_i_klargjøring_av_forespørsel">3.2.3. Informasjon som inngår i klargjøring av forespørsel</a></li>
+</ul>
+</li>
+<li><a href="#_utveksling_av_data_2">3.3. Utveksling av data</a>
+<ul class="sectlevel3">
+<li><a href="#_innhente_data_2">3.3.1. Innhente data</a></li>
+<li><a href="#_avgi_data_2">3.3.2. Avgi data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_generisk_forespørsel_svar"><a class="anchor" href="#_generisk_forespørsel_svar"></a><a class="link" href="#_generisk_forespørsel_svar">1. Generisk forespørsel-svar</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_om_dette_mønsteret"><a class="anchor" href="#_om_dette_mønsteret"></a><a class="link" href="#_om_dette_mønsteret">1.1. Om dette mønsteret</a></h3>
+<div class="paragraph">
+<p><em>Generisk mønster for spørring og oppslag</em> adresserer området <em>Deling av data på forespørsel</em> og omhandler tilgjengeliggjøring av data og oppslag i data, som sett fra henholdvis datatilbyder og datakonsument.</p>
+</div>
+<div class="paragraph">
+<p>Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data helt uten tilgangsstyring.</p>
+</div>
+<div class="paragraph">
+<p>Mønsteret gir heller ingen begrensninger i hva slags informasjon det gjelder, om det er strukturerte eller ustrukturerte data, eller hva data skal brukes til. Tilbyder og konsument av data kan være på tvers av virksomheter eller innenfor samme virksomhet.</p>
+</div>
+<div class="paragraph">
+<p>Eksempler på bruk:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Oppslag i et felles dataregister, f.eks. Folkeregisteret.</p>
+</li>
+<li>
+<p>Oppslag av data hos en annen virksomhet .</p>
+</li>
+<li>
+<p>Oppslag av data i egen virksomhet.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kapabiliteter_for_deling_av_data_på_forespørsel"><a class="anchor" href="#_kapabiliteter_for_deling_av_data_på_forespørsel"></a><a class="link" href="#_kapabiliteter_for_deling_av_data_på_forespørsel">1.2. Kapabiliteter for deling av data på forespørsel</a></h3>
+<div class="paragraph">
+<p>Modellen under viser hovedinndelingen i kapabiliteter en tilbyder og en konsument må ha for å dele data gjennom spørring og oppslag. Dette er av området som omhandler <em>Deling av data på forespørsel</em>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../generic-request-reply/_images/Kapabiliteter,%20deling%20av%20data%20på%20forespørsel.png" alt="Kapabiliteter" width="deling av data på forespørsel image">
+</div>
+<div class="title">Figur 1. Kapabiliteter, deling av data på forespørsel</div>
+</div>
+<div class="paragraph">
+<p>Tilbyder må kunne tilgjengeliggjøre data og dette er delt i to kapabiliteter:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Tilgjengeliggjøre data</em> omhandler hvordan man registerer og setter opp tilganger.</p>
+</li>
+<li>
+<p><em>Avgi data</em> omhandler den operative delingen av data fra tilbyder.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Tilsvarende er det to detaljerte kapabiliteter tilknyttet konsument og det å innhente data:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Få tilgang til data</em> består av prosesser for oppsett av tilgang.</p>
+</li>
+<li>
+<p><em>Innhente data</em> er det konsumenten må gjøre hver gang det gjøres et oppslag.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I tillegg kan begge parter ha kapabiliteten:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Delegering av rettigheter til databehandler</em> må gjøres dersom en av partene benytter seg av en databehandler.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 1. Elementer i view for Kapabiliteter, forespørsel-svar</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegere rettigheter til databehandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å delegere rettigheter til databehandler som utfører oppgaver på vegne av behandlingsansvarlig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å gjøre data tilgjengelig for aktører utenfor egen virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Få tilgang til data (konsument)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å skaffe seg tilgang til tilbudte data fra annen aktør.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evne til å avgi data på forespørsel. Kan omfatte tilgangsstyring.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å innhente data fra en annen aktør.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eoppslag_konseptuell_beskrivelse"><a class="anchor" href="#_eoppslag_konseptuell_beskrivelse"></a><a class="link" href="#_eoppslag_konseptuell_beskrivelse">2. eOppslag - konseptuell beskrivelse</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_om_dette_mønsteret_2"><a class="anchor" href="#_om_dette_mønsteret_2"></a><a class="link" href="#_om_dette_mønsteret_2">2.1. Om dette mønsteret</a></h3>
+<div class="paragraph">
+<p>eOppslag som arkitekturmønster beskriver synkrone API-kall mot en datatilbyder med tilgangsstyring ved bruk av sikkerhetsbilletter.</p>
+</div>
+<div class="paragraph">
+<p>Her beskrives realiseringen av kapabilitetene i det generiske mønsteret for deling av data på forespørsel innenfor rammene av synkrone oppslag mot APIer og tilgangsstyring ved bruk av sikkerhetsbilletter.</p>
+</div>
+<div class="paragraph">
+<p>Beskrivelsene er forsøkt å holdes generisk uten å peke til noen løsning og det vil dermed kunne være flere måter å realisere de ulike elementene på.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_klargjøring_for_deling_av_data_på_forespørsel"><a class="anchor" href="#_klargjøring_for_deling_av_data_på_forespørsel"></a><a class="link" href="#_klargjøring_for_deling_av_data_på_forespørsel">2.2. Klargjøring for <em>deling av data på forespørsel</em></a></h3>
+<div class="sect3">
+<h4 id="_tilgjengeliggjøre_data"><a class="anchor" href="#_tilgjengeliggjøre_data"></a><a class="link" href="#_tilgjengeliggjøre_data">2.2.1. Tilgjengeliggjøre data</a></h4>
+<div class="paragraph">
+<p>Tilgjengeliggjøring av API gjøres av tilbyder av data og er det tilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Registrering av konsumenters rettigheter og tilganger inngår også som et prosessteg.</p>
+</div>
+<div class="paragraph">
+<p>Dersom det er registrering av et åpent API, er det kun relevante prossessteg som utføres.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/0134474e-0b53-4b7c-b4e2-cf2f2e957616.html"><img src="../eOppslag-conceptual/_images/ABB_Tilgjengeliggjøre.png" alt="Bilde mangler"></a>
+</div>
+<div class="title">Figur 2. Tilgjengeliggjøre data</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 2. Elementer i view for Tilgjengeliggjøre data</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å gjøre data tilgjengelig for aktører utenfor egen virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruksavtale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avtale om tilgang til og bruk av data. Dette kan for eksempel være en bilateralt utformet avtale, aksept av generelle bruksvilkår eller lisens for bruk av åpne data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å tilby data gjennom et API til aktører utenfor egen virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å registere API i relevante tjenester, api-katalog, Maskinporten, Kapabilitetsoversikt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å inngå avtale om tilgang og bruk av data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildele tilganger til API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å registrere hvilke databrukere som skal få tilgang
+Sette policy, og grov tilgangsstyring gjennom maskinporten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere brukere av samtykke</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å registrere konsumenter som skal ha mulighet for å innhente samtykker som gir tilgang til en tjeneste.</p>
+<p class="tableblock">Dette utføres kun om det er behov for samtykke for tilgang til dataene.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API-registreringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registerer de API-ene man ønsker å tilby til konsumenter og egenskaper ved disse.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrering av API-brukere</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for gjennom selvbetjening å registrere og vedlikeholde tilgangene konsumenter skal ha til API-er og scopes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere samtykkebasert tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registerer konsumenter som kan innhente samtykke som gir grunnlag for utlevering fra datatilbyder.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_få_tilgang_til_data"><a class="anchor" href="#_få_tilgang_til_data"></a><a class="link" href="#_få_tilgang_til_data">2.2.2. Få tilgang til data</a></h4>
+<div class="paragraph">
+<p><em>Få tilgang til API</em> er det en konsument av data må gjøre for å få tilgang til data gjennom et API. Det omfatter å få kjennskap til aktuelt API, inngå avtale om bruk av data, samt å registrere den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et <em>åpent tilgjengelig</em> API, kan enkelte delaktiviteter i prosessene hoppes over.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/6c5a004d-da35-4fce-b38d-4b09d1167201.html"><img src="../eOppslag-conceptual/_images/ABB_Tilgang.png" alt="Bilde mangler" width="750"></a>
+</div>
+<div class="title">Figur 3. Få tilgang til data</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 3. Elementer i view for Få tilgang til data</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Få tilgang til data (konsument)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å skaffe seg tilgang til tilbudte data fra annen aktør.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bruksavtale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avtale om tilgang til og bruk av data. Dette kan for eksempel være en bilateralt utformet avtale, aksept av generelle bruksvilkår eller lisens for bruk av åpne data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Få tilgang til API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å skaffe seg tilgang til tilbudte data fra annen aktør. Omfatte å finne API-er, inngå nødvendige avtaler og få tilganger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finn/få kjennskap til API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å finne eller få kjennskap til tilgjengelige API-er gjennom relevante kataloger og søkeløsninger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å inngå avtale om tilgang og bruk av data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registreringstjeneste for API-brukere</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere klienter som skal ha tilgang til et gitt API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API-søk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å søke etter og finne tilgjengelige API-er</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer klient med tildelt tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for konsument å registerere (provisjonering av) den klienten som skal ha tilgang til API-et ved bruk av sikkerhetsbillett. Dette forutsetter at konsumenten har avtale om bruk av sikkerhetsbillettjenesten og at tilbyder har gitt konsumenten tilgang.</p>
+<p class="tableblock">Dersom det er en leverandør som har blitt delegert rettigheter som databehandler på vegne av konsument er det leverandøren som registrer sin klient.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_delegere_rettigheter_til_databehandler"><a class="anchor" href="#_delegere_rettigheter_til_databehandler"></a><a class="link" href="#_delegere_rettigheter_til_databehandler">2.2.3. Delegere rettigheter til databehandler</a></h4>
+<div class="paragraph">
+<p>Delegering av rettigheter til databehandler er det en konsument må gjøre for at en leverandør kan identifisere seg med sitt eget virksomhetssertifikat og opptre på vegne av konsumenten som er den som innehar behandlingsgrunnlaget for å innhente data.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/7ad70658-c174-4da3-95e1-b0628688bcc1.html"><img src="../eOppslag-conceptual/_images/ABB_Delegering.png" alt="Bilde mangler" width="500"></a>
+</div>
+<div class="title">Figur 4. Delegere rettigheter til databehandler</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 4. Elementer i view for Delegere rettigheter til databehandler</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samhandlingsaktør</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samlebetegnelse på roller som inngår i en samhandlingsprosess og samhandler med en annen samhandlingsaktør. Kan være en tilbyder, konsument, avsender, mottaker, leverandør etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegere rettigheter til databehandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å delegere rettigheter til databehandler som utfører oppgaver på vegne av behandlingsansvarlig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjenesteavtale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avtale mellom leverandør og konsument som er grunnlaget for å kunne delegere rettigheter fra konsument til en leverandør</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegering av rettigheter til databehandler (leverandør)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å delegere rettigheter til databehandler/leverandør.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale med leverandør</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å inngå en avtale med leverandør. En slik avtale vil normalt være inngått tidligere og uavhengig av om man skal ta i bruk et nytt API. En tjenesteavtale med leverandør er en forutsetning for å kunne delegere en tilgang.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere delegert tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å delegere tilganger. I tilknytning til eOppslag vil formålet være å gi leverandør tilgang til å representere konsument overfor et API, men registreringen vil potensielt også kunne gjelde for andre områder.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registering av representasjonsforhold</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere et representasjonsforhold som gir leverandør mulighet til å opptre på vegne av konsument</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utveksling_av_data"><a class="anchor" href="#_utveksling_av_data"></a><a class="link" href="#_utveksling_av_data">2.3. Utveksling av data</a></h3>
+<div class="sect3">
+<h4 id="_innhente_data"><a class="anchor" href="#_innhente_data"></a><a class="link" href="#_innhente_data">2.3.1. Innhente data</a></h4>
+<div class="paragraph">
+<p>Slå opp data gjennom et API er det en konsument må gjøre når det utføres et tjenestekall for å innhente data gjennom et API. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/4742dd13-f1fe-4e78-80a8-80929a62efb9.html"><img src="../eOppslag-conceptual/_images/ABB_Innhente.png" alt="Bilde mangler"></a>
+</div>
+<div class="title">Figur 5. Innhente data</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 5. Elementer i view for Innhente data</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å innhente data fra en annen aktør.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel om data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel om data med parametetere i forespørselen, sikkerhetsbillett mv.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Slå opp data gjennom et API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å slå opp og hente data gjennom et API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhent samtykke ved behov</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å innhente samtykke fra person eller virksomhet som grunnlag for å innhente data. Dette gjøres kun ved behov.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hent teknisk endepunkt ved behov</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen å slå opp den tekniske adressen til et API før spørring mot API-et. Gjøres kun dersom det er nødvendig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Be om tilgangstoken</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å benytte en sikkerhetsbillettjeneste for hente en sikkerhetsbillett som gir tilgang til et API. Dette forutsetter at alt er registert og satt opp riktig mot de aktuelle tjenestene.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utfør tjenestekall</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å benytte (gjøre et oppslag mot) et eksternt API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samtykkeregistererings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å innhente samtykke fra den registrert som dataene gjelder. Dette kan være en person eller en virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adressetjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som gir mulighet til å slå opp teknisk endepunkt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tokentjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_avgi_data"><a class="anchor" href="#_avgi_data"></a><a class="link" href="#_avgi_data">2.3.2. Avgi data</a></h4>
+<div class="paragraph">
+<p>Avgi forespurte data er det tilbyder av data må gjøre for å svare på en forespørsel. Prosessen kontrollere tilgang gjøres kun dersom det er enakk om å avgi data gjennom et sikret API.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/c993199e-3879-4f72-967d-4339159f6641.html"><img src="../eOppslag-conceptual/_images/ABB_Avgi.png" alt="Bilde mangler"></a>
+</div>
+<div class="title">Figur 6. Avgi data</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 6. Elementer i view for Avgi data</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evne til å avgi data på forespørsel. Kan omfatte tilgangsstyring.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjon om det som forespørres.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringsdata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data som autentiserer konsument, f.eks. digitalt sertifikat eller sikkerhetsbillett.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonsdata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data som autoriserer konsument, f.eks. påstander i en sikkerhetsbillett.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Svar på forespørsel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonen som avgis til konsument som svar på en forespørsel.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte data gjennom API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å avgi data på forespørsel gjennom et egnet API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta  forespørsel om oppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsler fra API-konsument om å avgi data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentisere konsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å autentisere en kosnument.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroll og håndheving av konsumentens rettigheter til å få forespurte data.  I tillegg til "validering av sikkerhetsbillet", kan det være behov for kontroll mot virksomhetsinterne policies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å gi svar på forespørselen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å validere og kontrollere autentisiteten til et OAUTH2 token fra Maskinporten</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgangskontroll-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å sjekke rettigheter til data. Kan være eksterne eller interne tjenester.
+Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, eller rollebasert fra vergemål, familierelasjon el.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eoppslag_bruk_av_nasjonale_fellesløsninger"><a class="anchor" href="#_eoppslag_bruk_av_nasjonale_fellesløsninger"></a><a class="link" href="#_eoppslag_bruk_av_nasjonale_fellesløsninger">3. eOppslag - bruk av nasjonale fellesløsninger</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_om_dette_mønsteret_3"><a class="anchor" href="#_om_dette_mønsteret_3"></a><a class="link" href="#_om_dette_mønsteret_3">3.1. Om dette mønsteret</a></h3>
+<div class="paragraph">
+<p>Beskrivelsene her viser hvordan den konseptuelle arkitekturen for eOppslag kan realiseres med løsningskomponentene Maskinporten, API-katalogen og Altinn-autorisasjon. Disse fellesløsningene leverer de tjenestene som er beskrevet på forretningsnivå over.</p>
+</div>
+<div class="paragraph">
+<p>eOppslag kan benyttes både for sikrede API-er og API-er som tilbyr åpent tilgjengelige data uten tilgangsbegrensninger.</p>
+</div>
+<div class="paragraph">
+<p>Det er ikke hensikten å låse referansearkitekturen til spesifikke løsninger, da ulike sektorer og aktører kan ha behov som ikke passer med det som er beskrevet. For synkrone tjenestekall basert på REST og med tilgangsstyring ved hjelp av OAUTH2-tokens, vil det være god støtte i å benytte de foreslåtte løsningene.</p>
+</div>
+<div class="paragraph">
+<p>Nederst i beskrivelsen av løsningsmønstre er det en overordnet beskrivelse av hvilke data som inngår i registrering i de ulike komponentene.</p>
+</div>
+<div class="paragraph">
+<p>For å registrere API må man for i de respektive fellestjenestene ha rettigheter til dette på vegne av egen virksomhet. Dette tildeles iht. hvem som har rettigheter i enhetsregisteret og rettighetene må delegeres nedover i organisasjonen til den som skal gjennomføre registreringen. Dette foregår i Altinn.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_klargjøring_for_deling_av_data_på_forespørsel_2"><a class="anchor" href="#_klargjøring_for_deling_av_data_på_forespørsel_2"></a><a class="link" href="#_klargjøring_for_deling_av_data_på_forespørsel_2">3.2. Klargjøring for <em>deling av data på forespørsel</em></a></h3>
+<div class="sect3">
+<h4 id="_tilgjengeliggjøre_data_2"><a class="anchor" href="#_tilgjengeliggjøre_data_2"></a><a class="link" href="#_tilgjengeliggjøre_data_2">3.2.1. Tilgjengeliggjøre data</a></h4>
+<div class="paragraph">
+<p>For å tilby data gjennom et API sikret med fellestjenester må tilbyder inngå avtale for bruk av Maskinporten og Felles API-katalog. De respektive API-ene og hvem som skal ha hvilke rettighetene til disse må så registreres i løsningene.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/80c1baa6-55d8-4434-ab14-55e2d0afa827.html"><img src="../eOppslag-solution-no/_images/SBB_Tilgjengeliggjøre.png" alt="Bilde mangler"></a>
+</div>
+<div class="title">Figur 7. Tilgjengeliggjøre data</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 7. Elementer i view for Tilgjengeliggjøre data løsningsmønster</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å gjøre data tilgjengelig for aktører utenfor egen virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å tilby data gjennom et API til aktører utenfor egen virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å registere API i relevante tjenester, api-katalog, Maskinporten, Kapabilitetsoversikt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å inngå avtale om tilgang og bruk av data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildele tilganger til API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å registrere hvilke databrukere som skal få tilgang
+Sette policy, og grov tilgangsstyring gjennom maskinporten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere brukere av samtykke</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å registrere konsumenter som skal ha mulighet for å innhente samtykker som gir tilgang til en tjeneste.</p>
+<p class="tableblock">Dette utføres kun om det er behov for samtykke for tilgang til dataene.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere Open API specification¨</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste i Felles API-katalogen for å registrere API. Bruk av tjenesten forutsetter at rettigheter til å gjøre dette på vegne av tilbyders virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selvbetjeningstjeneste for administrasjon av integrasjoner og APIer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste "administrasjonssentre" vil ha rettigheter til å registrere på vegne av andre f.eks. API-katalogen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrering av API-brukere</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for gjennom selvbetjening å registrere og vedlikeholde tilgangene konsumenter skal ha til API-er og scopes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere samtykkebasert tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registerer konsumenter som kan innhente samtykke som gir grunnlag for utlevering fra datatilbyder.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beskrivelse API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som er en maskinlesbar beskrivelse av REST API-er iht. Open API Specification. Dette er formatet som benyttes for å registrere et API i felles API-katalog</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Token-egenskaper</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskaper som f.eks. gyldighetstid ved tilgangstoken som er Maskinportens variant av sikkerhetsbillett.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OAUTH scopes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som som kan beskrives som en ressurs-definisjon, og et token er som regel knyttet til ett eller flere scopes. Scopes benyttes til å styre tilganger til API-er og operasjoner, samt eventuelt hva slags responser man får fra API-er.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aktører som kan innhente samtykke for bruk av API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over aktører som skal ha mulighet til å innhente samtykke som grunnlag for å få tilgang til data gjennom et API.
+URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Felles API-katalog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_få_tilgang_til_data_2"><a class="anchor" href="#_få_tilgang_til_data_2"></a><a class="link" href="#_få_tilgang_til_data_2">3.2.2. Få tilgang til data</a></h4>
+<div class="paragraph">
+<p>For å få tilgang til data gjennom et API sikret ved hjelp av nasjonale fellesløsninger, må konsumenten inngå avtale for bruk av Maskinporten og registrere den tekniske klienten som skal benytte løsningen.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/32191953-d527-4b27-8a58-b8ec5fd93660.html"><img src="../eOppslag-solution-no/_images/SBB_Tilgang.png" alt="Bilde mangler"></a>
+</div>
+<div class="title">Figur 8. Få tilgang til data</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 8. Elementer i view for Få tilgang til data - løsningsmønster</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Få tilgang til data (konsument)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å skaffe seg tilgang til tilbudte data fra annen aktør.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Få tilgang til API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å skaffe seg tilgang til tilbudte data fra annen aktør. Omfatte å finne API-er, inngå nødvendige avtaler og få tilganger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Finn/få kjennskap til API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å finne eller få kjennskap til tilgjengelige API-er gjennom relevante kataloger og søkeløsninger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å inngå avtale om tilgang og bruk av data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrer klient med tildelt tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for konsument å registerere (provisjonering av) den klienten som skal ha tilgang til API-et ved bruk av sikkerhetsbillett. Dette forutsetter at konsumenten har avtale om bruk av sikkerhetsbillettjenesten og at tilbyder har gitt konsumenten tilgang.</p>
+<p class="tableblock">Dersom det er en leverandør som har blitt delegert rettigheter som databehandler på vegne av konsument er det leverandøren som registrer sin klient.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API-søk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å søke etter og finne tilgjengelige API-er</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registreringstjeneste for API-brukere</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere klienter som skal ha tilgang til et gitt API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beskrivelse API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som er en maskinlesbar beskrivelse av REST API-er iht. Open API Specification. Dette er formatet som benyttes for å registrere et API i felles API-katalog</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Felles API-katalog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_delegering_av_rettigheter_til_databehandler"><a class="anchor" href="#_delegering_av_rettigheter_til_databehandler"></a><a class="link" href="#_delegering_av_rettigheter_til_databehandler">3.2.2.1. Delegering av rettigheter til databehandler</a></h5>
+<div class="paragraph">
+<p>Dersom konsumenten benytter en leverandør som skal opptre på konsumentens vegne, må dette forholdet registereres gjennom Altinn autorisasjon slik at det blir tilgjengelig for Maskinporten å kontrollere representasjonsforholdet.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/3d9dcb59-8e6e-4f2d-aee7-c729dea4f53f.html"><img src="../eOppslag-solution-no/_images/SBB_Delegering.png" alt="Bilde mangler"></a>
+</div>
+<div class="title">Figur 9. Delegering av rettigheter til databehandler</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 9. Elementer i view for Delegere rettigheter til databehandler - løsningsmønster</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samhandlingsaktør</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samlebetegnelse på roller som inngår i en samhandlingsprosess og samhandler med en annen samhandlingsaktør. Kan være en tilbyder, konsument, avsender, mottaker, leverandør etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegere rettigheter til databehandler</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å delegere rettigheter til databehandler som utfører oppgaver på vegne av behandlingsansvarlig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegering av rettigheter til databehandler (leverandør)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å delegere rettigheter til databehandler/leverandør.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale med leverandør</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å inngå en avtale med leverandør. En slik avtale vil normalt være inngått tidligere og uavhengig av om man skal ta i bruk et nytt API. En tjenesteavtale med leverandør er en forutsetning forutsetning for å kunne delegere en tilgang.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere delegert tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å delegere tilganger. I tilknytning til eOppslag vil formålet være å gi leverandør tilgang til å representere konsument overfor et API, men registreringen vil potensielt også kunne gjelde for andre områder.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegerbar ressurs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som beskriver en ressurs, f.eks. et API, som det kan gis rettigheter til gjennom et representasjonsforhold.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registering av representasjonsforhold</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registrere et representasjonsforhold som gir leverandør mulighet til å opptre på vegne av konsument</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_informasjon_som_inngår_i_klargjøring_av_forespørsel"><a class="anchor" href="#_informasjon_som_inngår_i_klargjøring_av_forespørsel"></a><a class="link" href="#_informasjon_som_inngår_i_klargjøring_av_forespørsel">3.2.3. Informasjon som inngår i klargjøring av forespørsel</a></h4>
+<div class="paragraph">
+<p>Figuren under viser hvilken informasjons som må registreres i de ulike komponentene som del av klargjøringen for å forespørre data fra et API.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/6a46c6d0-64eb-43d4-97f3-2a94516c2211.html"><img src="../eOppslag-solution-no/_images/Dataobjekter%20eOppslag.png" alt="Bilde mangler" width="500"></a>
+</div>
+<div class="title">Figur 10. Informasjon som inngår i klargjøring av forespørsel</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 10. Elementer i view for Dataobjekter eOppslag</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API-katalogen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API-katalogen er en del av Felles datakatalog som inneholder API-beskrivelser med endepunktsadresser og kobling til datasett.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beskrivelse API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som er en maskinlesbar beskrivelse av REST API-er iht. Open API Specification. Dette er formatet som benyttes for å registrere et API i felles API-katalog</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endepunkt (adresse)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som representerer teknisk adresse til et API eller ressurs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegerbar ressurs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som beskriver en ressurs, f.eks. et API, som det kan gis rettigheter til gjennom et representasjonsforhold.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beskrivelse av aktør som kan innhente samtykke</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som beskriver en datakonsument som har rett til å innhente samtykke om å slå opp data.
+Viktig innholde er bl.a. URL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument/representasjonsforhold</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som beskriver hvilke tilganger til ressurser en representant (leverandør) skal ha på vegne av konsument.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OAUTH scopes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som som kan beskrives som en ressurs-definisjon, og et token er som regel knyttet til ett eller flere scopes. Scopes benyttes til å styre tilganger til API-er og operasjoner, samt eventuelt hva slags responser man får fra API-er.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_utveksling_av_data_2"><a class="anchor" href="#_utveksling_av_data_2"></a><a class="link" href="#_utveksling_av_data_2">3.3. Utveksling av data</a></h3>
+<div class="sect3">
+<h4 id="_innhente_data_2"><a class="anchor" href="#_innhente_data_2"></a><a class="link" href="#_innhente_data_2">3.3.1. Innhente data</a></h4>
+<div class="paragraph">
+<p>Når en konsumet skal slå opp data gjennom et API benyttes Maskinporten for å få utstedt en sikkerhetsbillett som legges ved tjenestekallet til tilbyders API. Maskinporten utsteder sikkerhetsbilletter som OAUTH2-tokens.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Innhente data
+image::architecture-repository:eOppslag-solution-no:SBB_Innhente.png[alt="Bilde mangler", width=750,link=https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/8d72be4b-7e31-438d-9990-c2c3f38f551e.html]</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 11. Elementer i view for Innhente data - løsningsmønster</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å innhente data fra en annen aktør.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Slå opp data gjennom et API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med lå opp og hente data gjennom et API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhent samtykke ved behov</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å innhente samtykke fra person eller virksomhet som grunnlag for å innhente data. Dette gjøres kun ved behov.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hent teknisk endepunkt ved behov</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen å slå opp den tekniske adressen til et API før spørring mot API-et. Gjøres kun dersom det er nødvendig.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Be om tilgangstoken</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å benytte en sikkerhetsbillettjeneste for hente en sikkerhetsbillett som gir tilgang til et API. Dette forutsetter at alt er registert og satt opp riktig mot de aktuelle tjenestene.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utfør tjenestekall</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å benytte (gjøre et oppslag mot) et eksternt API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samtykkeregistererings-tjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å innhente samtykke fra den registrert som dataene gjelder. Dette kan være en person eller en virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adressetjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som gir mulighet til å slå opp teknisk endepunkt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tokentjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oppslag representasjonsforhold</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tokentjenesten for å kontrollere om det foreligger et delegert representasjonsforhold fra konsument til leverendør i autorisasjonstjenesten til Altinn.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslingstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endepunkt (adresse)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Teknisk adresse til et API eller ressurs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virksomhetssertifikat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En virksomhets elektroniske ID. Benyttes for å autentisere virksomheten overfor tokentjenesten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Felles API-katalog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fellesløsning for API-sikring ved bruk av OAUTH2-tokens.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_avgi_data_2"><a class="anchor" href="#_avgi_data_2"></a><a class="link" href="#_avgi_data_2">3.3.2. Avgi data</a></h4>
+<div class="paragraph">
+<p>Når tilbyder får en forspørsel om data som et API-kall og det ligger ved en sikkerhetsbillett benyttes valideringstjenesten til maskinporten for grov tilgangskontroll.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://nasjonal-arkitektur.github.io/nab_modeller_html-hovedbibliotek/e7e6c527-26f4-461c-b4dd-651fcbe85c8d/views/5a43e372-cf45-491f-a5e9-514d83e1e259.html"><img src="../eOppslag-solution-no/_images/SBB_Avgi.png" alt="Bilde mangler" width="650"></a>
+</div>
+<div class="title">Figur 11. Avgi data</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 12. Elementer i view for Avgi data - løsningsmønster</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evne til å avgi data på forespørsel. Kan omfatte tilgangsstyring.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte data gjennom API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å avgi data på forespørsel gjennom et egnet API.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta  forespørsel om oppslag</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsler fra API-konsument om å avgi data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentisere konsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å autentisere en kosnument.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller tilgang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroll og håndheving av konsumentens rettigheter til å få forespurte data.  I tillegg til "validering av sikkerhetsbillet", kan det være behov for kontroll mot virksomhetsinterne policies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å gi svar på forespørselen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslingstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tokenvalideringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å validere og kontrollere autentisiteten til et OAUTH2 token fra Maskinporten</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgangskontrolltjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å sjekke rettigheter til data. Kan være eksterne eller interne tjenester.
+Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, eller rollebasert fra vergemål, familierelasjon el.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslingstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data. Samme som data exchange service. Benyttes av avsender og mottaker for transport av meldinger.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egen autorisasjonskomponent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komponent for å håndheve virksomhetens regler for tilgang.
+Også kalt policy enforcement point (PEP).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
+</html>

@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Begreper og konsepter :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/data-exchange-strategy-concepts/data-exchange-strategy-concepts.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drafts" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Utkast og innspill</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about-drafts.html">Om utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-strategy-book/data-exchange-strategy-book.html">Innspill til oppdatering av nasjonal strategi for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-executive-summary/data-exchange-strategy-executive-summary.html">Overordnet oppsummering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-introduction/data-exchange-strategy-introduction.html">Innledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-background/data-exchange-strategy-background.html">Bakgrunn</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-approach/data-exchange-strategy-approach.html">Tilnærming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-needs/data-exchange-strategy-needs.html">Behov</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="data-exchange-strategy-concepts.html">Begreper og konsepter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-as-is/data-exchange-strategy-as-is.html">Nåsituasjonen</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-targets/data-exchange-strategy-targets.html">Målbilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-guidance/data-exchange-strategy-guidance.html">Veiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-actions/data-exchange-strategy-actions.html">Tiltak</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Innspill til referansearkitekturer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-integrated-processes/ra-integrated-processes-proposal.html">Referansearkitektur for samhandlingsprosesser (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-iam/ra-iam-proposal.html">Referansearkitektur for informasjonssikkerhet, tillit og personvern (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Målbilde for nasjonal samhandlingsinfrastruktur (forslag)</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for tillitstjenester</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for datadeling</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for samhandlingsprosesser</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for integrasjon med EU-s Single Digital Gateway</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for IOT</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for API management</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for fagsystemer</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for saksbehandling i kommuner</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture-repository/index.html">Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Utkast og innspill</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../architecture-repository/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../architecture-repository/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Utkast og innspill</a></li>
+    <li><a href="../data-exchange-strategy-book/data-exchange-strategy-book.html">Innspill til oppdatering av nasjonal strategi for datautveksling</a></li>
+    <li><a href="data-exchange-strategy-concepts.html">Begreper og konsepter</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/draft-data-exchange-strategy/modules/data-exchange-strategy-concepts/pages/data-exchange-strategy-concepts.adoc">Rediger kilde</a></div>
+  </div>
+<article class="doc"><a name="section-top"></a>
+<h1 class="page">Begreper og konsepter</h1>
+<div class="sect1">
+<h2 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1. Generelt</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Her introduseres noen begreper og konsepter som kan være viktig for
+felles forståelse.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kontekst_for_datautveksling"><a class="anchor" href="#_kontekst_for_datautveksling"></a><a class="link" href="#_kontekst_for_datautveksling">2. Kontekst for datautveksling</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Eksempel:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image7.png" alt="image" width="604" height="217"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_arkitekturparadigmer"><a class="anchor" href="#_arkitekturparadigmer"></a><a class="link" href="#_arkitekturparadigmer">3. Arkitekturparadigmer</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The term Architecture Paradigm is used here about an approach to
+architecture, something that is larger than an architecture pattern or
+a reference architecture. It relates to the term design paradigm, which
+is more specifically an approach to designing solution logic.</p>
+</div>
+<div class="paragraph">
+<p>An Architecture Paradigm may include other paradigms, and relate to
+other paradigms. E.g. the Service-Oriented Architecture paradigm could
+be said to include the Microservices paradigm and to relate to the
+Event-Driven Architecture paradigm (or of you consider SOA 2.0, it could
+include Event-Driven).</p>
+</div>
+<div class="paragraph">
+<p>Vi skiller (foreløpig) mellom følgende arkitekturparadigmer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tjenesteorientert arkitektur (SOA), inkl. Microservices (diskutabelt)</p>
+</li>
+<li>
+<p>Ressursorientert arkitektur (RDA), inkl. REST og Linked Data/Semantic
+Technologies</p>
+</li>
+<li>
+<p>Hendelsesdrevet arkitektur (EDA)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Se også (midlertidig lenke) :
+<a href="https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#_arkitekturparadigmer" class="bare">https://doc.difi.no/nasjonal-arkitektur/kunnskap_/#_arkitekturparadigmer</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tjenestekjeder_og_ende_til_ende_prosesser"><a class="anchor" href="#_tjenestekjeder_og_ende_til_ende_prosesser"></a><a class="link" href="#_tjenestekjeder_og_ende_til_ende_prosesser">4. Tjenestekjeder og ende-til-ende prosesser</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_orkestrering_og_koreografi"><a class="anchor" href="#_orkestrering_og_koreografi"></a><a class="link" href="#_orkestrering_og_koreografi">5. Orkestrering og koreografi</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_korrelering_av_meldinger_i_prosessinstanser"><a class="anchor" href="#_korrelering_av_meldinger_i_prosessinstanser"></a><a class="link" href="#_korrelering_av_meldinger_i_prosessinstanser">6. Korrelering av meldinger i prosessinstanser</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_begrepet_data_vs_informasjon"><a class="anchor" href="#_begrepet_data_vs_informasjon"></a><a class="link" href="#_begrepet_data_vs_informasjon">7. Begrepet data vs. informasjon</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Det er i mange sammenhenger relevant å skille mellom begrepene data,
+informasjon og kunnskap (og visdom, eller kapabilitet – dvs. evne til å
+bruke kunnskapen til noe fornuftig).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image8.png" alt="image" width="221" height="149"></span></p>
+</div>
+<div class="paragraph">
+<p>I tilknytning til <em>datautveksling</em> er ikke alle distinksjonene
+nødvendigvis relevante. Så langt det gir mening, benyttes begrepet
+<em>data</em> heller enn <em>informasjon</em>. Det gir f.eks. mening å si
+<em>informasjonssikkerhet</em>, mens en snakker om <em>sikring av data</em> for å
+oppnå <em>informasjonssikkerhet</em>. En skiller også gjerne mellom
+konseptuelle, logiske og fysiske data.</p>
+</div>
+<div class="paragraph">
+<p>Figuren nedenfor introduserer noen begreper som det er viktig å ha en
+presis definisjon på i tilknytning til datautveksling.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image9.png" alt="Hva er data for datautveksling image" width="454" height="485"></span></p>
+</div>
+<div class="paragraph">
+<p>Forklaring til figuren:</p>
+</div>
+<div class="paragraph">
+<p>Data kan samles i <em>datasett</em>, som beskrives i form av metadata og
+datamodeller.</p>
+</div>
+<div class="paragraph">
+<p>Data og datasett er å oppfatte som "logiske" definisjoner, uten binding
+til representasjon, teknisk løsning eller fysiske forekomster.</p>
+</div>
+<div class="paragraph">
+<p>Innholdet i datasett ("selve dataene") kan redegjøres for i form av
+tidsstemplede <em>øyeblikksbilder</em> eller ved <em>endringslogger</em> ut fra gitte
+øyeblikksbilder.</p>
+</div>
+<div class="paragraph">
+<p>Begrepet <em>datadistrubusjon</em> tilsvarer begrepet
+<a href="https://www.w3.org/TR/vocab-dcat/" class="bare">https://www.w3.org/TR/vocab-dcat/</a><mark>Class:_Distribution[<em>[.underline]#distribution</mark></em>]
+i DCAT-standarden. Dette kan f.eks. være dokumenter i et dokumentarkiv
+eller tabeller i en database. Det kan også være «data i bevegelse»,
+f.eks. en melding i en datautveksling.</p>
+</div>
+<div class="paragraph">
+<p>Det er den fysiske forekomsten av data i ulike systemer som må sikres,
+enten det dreier seg om data som er lagret over tid (data at rest) eller
+data som finnes midlertidig mellom systemer i en datautveksling (data in
+motion).</p>
+</div>
+<div class="paragraph">
+<p>Det skilles videre mellom autoritative datasett (masterdata) og avledete
+data (slavedata)</p>
+</div>
+<div class="paragraph">
+<p>Merk:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Data kan finnes med større eller mindre grad av struktur, og det er en
+flytende overgang mellom ustrukturerte, semistrukturerte og strukturerte
+data. Med nyere teknologier innen maskinlæring kan en også tolke og gi
+struktur og mening til data som en tidligere har definert som
+ustrukturerte</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Det finnes ulik praksis for bruk av begrepet <em>dokument</em>. Dette
+begrepet brukes ikke i sammenheng med referansearkitekturer for
+datautveksling.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_synkron_vs_asynkron_kommunikasjon"><a class="anchor" href="#_synkron_vs_asynkron_kommunikasjon"></a><a class="link" href="#_synkron_vs_asynkron_kommunikasjon">8. Synkron vs. asynkron kommunikasjon</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Når den prosessen som gjør en spørring må vente på svar for å komme
+videre, kalles det en synkron spørring. Det behøver ikke å bety at
+svaret kommer raskt, men selve kommunikasjonsinfrastrukturen er typisk
+lagt opp til effektiv transport av data.</p>
+</div>
+<div class="paragraph">
+<p>Spørringer kan også gjøres asynkront, med asynkrone meldinger, der den
+prosessen som spør straks kan gå videre til andre oppgaver. Det behøver
+ikke å bety at svar tar lang tid, men konseptet tillater det.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kvalitetsegenskaper_ved_løsninger_for_datautveksling"><a class="anchor" href="#_kvalitetsegenskaper_ved_løsninger_for_datautveksling"></a><a class="link" href="#_kvalitetsegenskaper_ved_løsninger_for_datautveksling">9. Kvalitetsegenskaper ved løsninger for datautveksling</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Foreløpig liste over slike kvalitetsegenskaper (quality of service) ved
+løsninger for datautveksling:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Leveringstid for meldinger</th>
+<th class="tableblock halign-left valign-top">Garantert leveringstid vs. krav til
+leveringstid Mål: Mikrosekunder, millisekunder, sekunder, timer, dager,</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responstid for spørringer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Garantert responstid vs. krav til
+responstid. Mål: Mikrosekunder, millisekunder, sekunder, timer, dager,</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Leveringssikkerhet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grad av garantert levering (uten behov for
+tilbakemelding på applikasjonslaget). Mål: Prosentvis sannsynlighet for
+vellykket levering og mottak.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transaksjonssikkerhet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Informasjonssikkerhet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konfidensialitet (å sikre at informasjon og
+informasjonssystemer kun er tilgjengelig for de som skal ha tilgang),
+integritet (sikre at informasjon og informasjonssystemer er korrekte,
+gyldige og fullstendige), tilgjengelighet (sikre at informasjon og
+informasjonssystemer er tilgjengelig innenfor de tilgjengelighetskrav
+som er satt).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kronologisk rekkefølge</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prioritet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sporbarhet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Etterlevelse</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">«Store» meldinger</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Synkron vs. asynkron respons</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innebygget unntakshåndtering</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utvekslingsmønstre"><a class="anchor" href="#_utvekslingsmønstre"></a><a class="link" href="#_utvekslingsmønstre">10. Utvekslingsmønstre</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_grunnleggende_integrasjonsformer"><a class="anchor" href="#_grunnleggende_integrasjonsformer"></a><a class="link" href="#_grunnleggende_integrasjonsformer">10.1. Grunnleggende integrasjonsformer</a></h3>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image10.png" alt="image" width="604" height="109"></span></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Integrasjonsform</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Forklaring</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File Transfer integration style</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Have each application produce files of
+shared data for others to consume, and consume files that others have
+produced.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shared database integration style</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Have the applications store the data
+they wish to share in a common database. Legg merke til at denne er
+med!!</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remote Procedure Invocation integration style</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Have each application
+expose some of its procedures so that they can be invoked remotely, and
+have applications invoke those to run behavior and exchange data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Messaging integration style</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Have each application connect to a common
+messaging system, and exchange data and invoke behavior using messages.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linked Data integration style</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samtidig spørring mot flere ukjente,
+innebygget interoprabilitet</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_tradisjonelt_utbredte_utvekslingsmønstre"><a class="anchor" href="#_tradisjonelt_utbredte_utvekslingsmønstre"></a><a class="link" href="#_tradisjonelt_utbredte_utvekslingsmønstre">10.2. Tradisjonelt utbredte utvekslingsmønstre</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">10.3. Generelt</a></h3>
+<div class="paragraph">
+<p>Det er her inntil videre tatt utgangspunkt i en oversikt over
+utvekslingsmønstre som gis i en
+<a href="https://www.sbr.gov.au/sites/default/files/Message-Protocols-for-Enabling-Digital-Government-Services-Final-Report.pdf?acsf_files_redirect">australsk
+rapport om Message Protocols for Enabling Digital Services, datert juli
+2015</a>, fordi denne oversikten dekker (la oss si) 80% av vårt behov for
+en enkel oversikt.</p>
+</div>
+<div class="paragraph">
+<p>Det finnes MANGE andre gode kilder til informasjon om arkitekturmønstre
+av ulike typer, men de fleste patterns-samlingene inneholder veldig mye
+forskjellig, stort og smått, gjerne med mye kontekst opp mot
+arkitekturparadigmer som f.eks. Microservices.</p>
+</div>
+<div class="paragraph">
+<p>NB: Beskrivelsene som er limt inn er foreløpige – her kan vi selv legge
+inn bedre beskrivelser!</p>
+</div>
+<div class="paragraph">
+<p>Legg merke til at det ikke forutsettes noe bestemt om teknisk løsning
+eller teknologi. F.eks. kan request-reponse gjøres gjennom asynkron
+melding over AS4 eller</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_one_way_push"><a class="anchor" href="#_one_way_push"></a><a class="link" href="#_one_way_push">10.4. One-way push</a></h3>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image11.png" alt="image" width="387" height="109"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>How it works:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alice sends a document to Bob</p>
+</li>
+<li>
+<p>Optionally, Bob may return a receipt or an error signal (if any)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Comments:</strong></p>
+</div>
+<div class="paragraph">
+<p>This is the simplest messaging pattern. The sender can send a document
+to a destination with a one-way call. This pattern can be implemented in
+asynchronous fashion so that the sender does not have to wait for
+anything.</p>
+</div>
+<div class="paragraph">
+<p><em>If this exchange is implemented using a pulling mechanism where the
+receiver (Bob) actively retrieves the message from the sender (Alice),
+it is a lightweight messaging solution very suitable for small and
+medium enterprises that have limited IT capability and resources.</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_request_response"><a class="anchor" href="#_request_response"></a><a class="link" href="#_request_response">10.5. Request-Response</a></h3>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image12.png" alt="image" width="375" height="149"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>How it works:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alice sends a request to Bob.</p>
+</li>
+<li>
+<p>Bob sends back a response to Alice, which contains either data
+requested by Alice, or an error message.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Comments:</strong></p>
+</div>
+<div class="paragraph">
+<p>This is the most common messaging pattern, also called request-reply. It
+has good support from a large amount of middleware. It is the equivalent
+of a one way pull and two way message exchange pattern (MEP) in terms of
+functionality and capability.</p>
+</div>
+<div class="paragraph">
+<p>It can be implemented either synchronously or asynchronously. When
+implemented asynchronously, if the time between the request and response
+is significant, a separate signal message can be used to confirm the
+receipt of the request message.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_multi_cast_notifikasjon_til_kjente_mottakere"><a class="anchor" href="#_multi_cast_notifikasjon_til_kjente_mottakere"></a><a class="link" href="#_multi_cast_notifikasjon_til_kjente_mottakere">10.6. Multi-cast (notifikasjon til kjente mottakere)</a></h3>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image13.png" alt="image" width="316" height="191"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>How it works:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alice sends a document to multiple endpoints altogether, e.g.
+Organisations A, C and D as shown in the above figure.</p>
+</li>
+<li>
+<p>Alice knows who should receive her document.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Comments :</strong></p>
+</div>
+<div class="paragraph">
+<p>This pattern is useful for an organisation that often needs to
+distribute the same information to a large number of business partners
+at once. An example is a request for proposal in a tender procedure.
+Through this pattern, the organisation can send documents within a
+particular group of organisations with little extra effort and
+resources. This pattern gets more complicated if the overall outcome
+depends on the results of the individual exchanges.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_multi_hop_4_hjørners_med_gateway_funksjonalitet"><a class="anchor" href="#_multi_hop_4_hjørners_med_gateway_funksjonalitet"></a><a class="link" href="#_multi_hop_4_hjørners_med_gateway_funksjonalitet">10.7. Multi-hop (4-hjørners med gateway-funksjonalitet )</a></h3>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image14.png" alt="image" width="604" height="257"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>How it works:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alice sends a message consisting of a set of documents to Gateway 1.</p>
+</li>
+<li>
+<p>Based on information in the message, Gateway 1 can forward the message
+to the other organisations, say Organisation A and Gateway 2, for
+further distribution to this organisation and other agencies.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Comments:</strong></p>
+</div>
+<div class="paragraph">
+<p>This pattern can simplify implementation and execution of relatively
+complex business processes that need to involve multiple organisations,
+and/or comply with government regulations by automatically forwarding
+and notifying something to relevant organisations or government
+agencies.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Notes:</em></strong></p>
+</div>
+<div class="paragraph">
+<p><em>It should be noted that the multi-hop pattern defined here is quite
+different from the multi-hop model used in the ebMS and SOAP
+specifications, where the intermediary nodes are simply routers that
+forward the message to a single next node. Therefore, the pattern as
+defined here is sometimes also called a four corner model because the
+gateways play an active role in the message exchange.</em></p>
+</div>
+<div class="paragraph">
+<p><em>Implementing the above exchange in the ebMS/SOAP model would require
+Alice to send three separate messages which would then be forwarded to
+their destinations by the gateways.</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pubsub_event_streaming_notifikasjon_til_vilkårlige_mottakere"><a class="anchor" href="#_pubsub_event_streaming_notifikasjon_til_vilkårlige_mottakere"></a><a class="link" href="#_pubsub_event_streaming_notifikasjon_til_vilkårlige_mottakere">10.8. Pub/Sub (event streaming, notifikasjon til vilkårlige mottakere)</a></h3>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image15.png" alt="image" width="604" height="293"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>How it works:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The publisher sends documents to a topic that is relevant to the
+documents.</p>
+</li>
+<li>
+<p>Subscribers who have subscribed to the topic will automatically
+receive the documents sent to the topic.</p>
+</li>
+<li>
+<p>Usually, the publisher does not know who will receive its documents
+because subscription is dynamic in nature.</p>
+</li>
+<li>
+<p>Alice Gateway 1 Gateway 2 Organisation C Forward Organisation A
+Organisation B</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Comments:</strong></p>
+</div>
+<div class="paragraph">
+<p>This pattern is useful for an organisation to publish company
+information (e.g., company news, events, new product release, etc.) to
+its existing and potential customers/partners. It is a well-known
+pattern in the enterprise integration community and well-supported by
+industry middleware for internal integration, instead of
+cross-organisation interoperations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_batch_processing"><a class="anchor" href="#_batch_processing"></a><a class="link" href="#_batch_processing">10.9. Batch processing</a></h3>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image16.png" alt="image" width="604" height="152"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>How it works:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alice sends a set of documents (or a very large document) to
+Organisation A.</p>
+</li>
+<li>
+<p>These documents are processed according to Organisation A’s schedule,
+e.g., at a particular time or when Organisation A’s environmental
+conditions make the processing feasible.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Comments:</strong></p>
+</div>
+<div class="paragraph">
+<p>This is a classic pattern, which has been widely used in industry for a
+long time. It is suitable for application scenarios where the endpoints
+cannot process the request in real time, due to having too many jobs or
+jobs being too big. The jobs may require many computing resources (CPU,
+memory) and thus may slow down the whole system. Note that rather than
+sending a large amount of documents to Organisation A directly, Alice
+can store the documents somewhere and send its reference instead. Then
+Organisation A can retrieve the documents when required. The problem
+described here can also be solved using asynchronous exchange of
+messages and/or custom delivery policies.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_priority_queuing"><a class="anchor" href="#_priority_queuing"></a><a class="link" href="#_priority_queuing">10.10. Priority Queuing</a></h3>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image17.png" alt="image" width="604" height="135"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>How it works:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alice and Bob send messages to a gateway that supports priority
+queuing.</p>
+</li>
+<li>
+<p>Since Alice’s messages are marked as “high priority”, they are routed
+to the priority queue. At the same time, Bob’s and other senders’ normal
+messages are routed to the regular queue.</p>
+</li>
+<li>
+<p>Usually, the documents in the priority queue will be processed with
+more resources (e.g., high-end servers and/or faster networks), and/or
+scheduled to be processed in advance</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Comments:</strong></p>
+</div>
+<div class="paragraph">
+<p>This pattern is also a QoS, which offers fast-track and/or more secure
+services with some extra cost. It is suitable for sensitive and/or
+urgent documents to be delivered faster and more securely.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_andre_utvekslingsmønstre"><a class="anchor" href="#_andre_utvekslingsmønstre"></a><a class="link" href="#_andre_utvekslingsmønstre">10.11. Andre utvekslingsmønstre</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_parallell_spørring_mot_flere_kilder"><a class="anchor" href="#_parallell_spørring_mot_flere_kilder"></a><a class="link" href="#_parallell_spørring_mot_flere_kilder">10.12. Parallell spørring mot flere kilder</a></h3>
+<div class="paragraph">
+<p>Foreløpige notater:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Støttes av SPARQL/RDF; ref. STIRdat-prosjektet (Digdir/EU)</p>
+</li>
+<li>
+<p>Kan realiseres gjennom «publisering»</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publishasynchronous_response"><a class="anchor" href="#_publishasynchronous_response"></a><a class="link" href="#_publishasynchronous_response">10.13. Publish/asynchronous response</a></h3>
+<div class="paragraph">
+<p>A service publishes a request to one or recipients, some of whom send
+back a reply</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mer_om_meldingsutveksling"><a class="anchor" href="#_mer_om_meldingsutveksling"></a><a class="link" href="#_mer_om_meldingsutveksling">11. Mer om meldingsutveksling</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_abstrakt_lagdelt_modell"><a class="anchor" href="#_abstrakt_lagdelt_modell"></a><a class="link" href="#_abstrakt_lagdelt_modell">11.1. Abstrakt, lagdelt modell</a></h3>
+<div class="paragraph">
+<p>Fra
+<a href="https://www.sbr.gov.au/sites/default/files/Message-Protocols-for-Enabling-Digital-Government-Services-Final-Report.pdf?acsf_files_redirect">australsk
+rapport om Message Protocols for Enabling Digital Services, datert juli
+2015</a>:</p>
+</div>
+<div class="paragraph">
+<p>To better understand the role of messaging protocols/profiles, we
+propose an abstract model of business interoperability based on the OSI
+(Open Systems Interconnection) model [16], as shown in Figure 2.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image18.png" alt="image" width="604" height="268"></span></p>
+</div>
+<div class="paragraph">
+<p>As can be seen in the above model, the interoperations between two
+organisations can be abstracted into four levels, as described in Table
+2.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image19.png" alt="image" width="604" height="240"></span></p>
+</div>
+<div class="paragraph">
+<p>There is a cross-cutting layer we labelled “Legal” across the messaging,
+business data and application layers. When multiple organisations
+involving intermediaries/gateways share data or conduct business
+transactions, there are always legal contracts or regulatory compliance
+requirements to be negotiated and implemented. This should be taken into
+account when designing each layer.</p>
+</div>
+<div class="paragraph">
+<p>For example, when an important transaction occurs between organisation A
+and B, the two business partners should be well aware of the
+consequences of this particular transaction and the corresponding
+compliance obligations that they should conduct, e.g., need to
+immediately notify ASIC (Australian Securities &amp; Investments Commission)
+to comply with related regulations.</p>
+</div>
+<div class="paragraph">
+<p>At the business data layer, the legal implication may refer to a
+specific well-defined ontology and/or taxonomy agreed to be used for
+cross-organisation documentation exchange, whose syntax and semantics
+may bind to legal liability and obligations.</p>
+</div>
+<div class="paragraph">
+<p>The legal implication at the messaging layer likely focuses on data
+security and legal responsibilities related to messaging QoS. For
+example, different contents in a document require different levels of
+data protection. As a result, a regulation or a contract may require a
+particular configuration to enforce a particular set of security
+protections for a specific class of data contents.</p>
+</div>
+<div class="paragraph">
+<p>The traditional, often human-intensive, approaches to handling contracts
+and compliance may not scale well if an organisation needs to
+collaborate with a large number of counter-parties, even in an on-demand
+basis. Latest technologies in smart contracts and automated regulation
+compliance using business process analysis can be integrated to scale up
+the contract/compliance aspects of B2B collaborations.</p>
+</div>
+<div class="paragraph">
+<p>Note that while Figure 2 uses a direct line to represent messaging
+between two parties, one or more intermediary gateways can exist between
+Party A and Party B. A dedicated messaging layer can decouple
+applications across organisations and provide a variety of qualities for
+messaging services to meet different business requirements without
+having impact on the application layer.</p>
+</div>
+<div class="paragraph">
+<p>Next, we look more closely at the messaging layer to examine the basic
+functionalities of the layer and the additional qualities of service
+(QoS) functions it can offer. Although we are focusing on the messaging
+layer, the QoS functions can also be built into the application layer,
+as also noted in some of the interviews. The advantage of having this
+functionality in the messaging layer, however, is that it only needs to
+be implemented once and can be used by different applications, making it
+a more effective solution than implementing it in each application.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image20.png" alt="image" width="604" height="449"></span></p>
+</div>
+<div class="paragraph">
+<p>As shown in Figure 3, the messaging layer conducts cross-organisation
+information exchanges in the following steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Package a message using a standard pre-agreed format</p>
+</li>
+<li>
+<p>Send the message to its destination either directly or via an
+intermediary gateway using one or more standard transportation protocols</p>
+</li>
+<li>
+<p>Receive and unpack the message using the same pre-agreed format</p>
+</li>
+<li>
+<p>Conduct the extra operations to provide a set of particular QoS
+required by the collaborative business applications</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_teknologier_og_standarder_for_meldingsutveksling"><a class="anchor" href="#_teknologier_og_standarder_for_meldingsutveksling"></a><a class="link" href="#_teknologier_og_standarder_for_meldingsutveksling">11.2. Teknologier og standarder for meldingsutveksling</a></h3>
+<div class="paragraph">
+<p>Oversikt over gammelt og nytt:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image21.png" alt="image" width="604" height="311"></span></p>
+</div>
+<div class="paragraph">
+<p>Foreløpige stikkord:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>eDelivery benytter AS4, som er basert på ebMS3. AS4 er nylig blitt en
+ISO-standard (2020) , og har nå støtte for «store» meldinger.</p>
+</li>
+<li>
+<p>eHelse benytter ebMS2</p>
+</li>
+<li>
+<p>SOAP er i bruk flere steder, mer er ikke like pop lengre</p>
+</li>
+<li>
+<p>REST er stadig mer pop. Mye arbeid på g i EU, blant annet med
+standardprofilog mye rundt API management</p>
+</li>
+<li>
+<p>I tillegg til dette kan nevnes GraphQL</p>
+</li>
+<li>
+<p>Og SPARQL…</p>
+</li>
+<li>
+<p>…</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
+</html>

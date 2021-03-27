@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Forvaltningsstandard for beskrivelse av begreper - Versjon 2.0 :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/architecture-repository/forvaltningsstandard-begrepsbeskrivelser/main.html">
+    <meta name="description" content="Forvaltningsstandard for beskrivelse av begreper versjon 2.0">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="architecture-repository" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Nasjonalt arkitekturverksted</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#architecture-repository:about-guides:about-guides.adoc">Praktiske tips om bruk av arkitekturverkstedet</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../reading-guide/module-reading-guide.html">Leseveiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../git/git.html">Praktiske tips om bruk av git-verktøy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../antora/module-antora.html">Praktiske tips om innholdsproduksjon og publisering med Antora og Asciidoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om arkitekturmodellering og samarbeid i Archi</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../archi/module-archi.html">Praktiske tips om utveksling av arkitekturmodeller</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Hvordan gi kommentarer og få svar på spørsmål</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Temaområder</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../about-topic-areas/about-topic-areas.html">Om temaområder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Datadeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing.html">Om temaområdet <em>datadeling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-sharing/data-sharing-value-streams.html">Referansemodeller for datadeling</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-exchange/about-data-exchange.html">Om temaområdet <em>datautveksling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-ra/about-data-exchange-ra.html">Om referansearkitektur for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-for-data-exchange/data-for-data-exchange.html">Begrepsapparat for data (datautveksling)</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../data-exchange-roles/data-exchange-roles.html">Roller involvert i datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Arkitekturmønstre for datautveksling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../data-exchange-patterns/about-data-exchange-patterns.html">Om arkitekturmønstre for datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Basismønstre for datautveksling</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Meldingsforsendelse (eMelding)</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
+  </li>
+  <li class="nav-item" data-depth="6">
+    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Løsningsbyggeklosser for bruk og gjenbruk</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Fellesløsninger</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Tekniske tjenester og API-er</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sluttbrukertjenester</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Styring og organisering</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Initiativer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Nettverk for referansearkitektur</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ra-network/reading-tips.html">Tips om aktuelt lesestoff</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../proposed-reference-architectures/proposed-reference-architecture-work.html">Innspill til prioritering av videre arbeid med referansearkitekturer (A&amp;S-rådet)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/følgebrev.html">Følgebrev</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/situasjonsrapport.html">Situasjonsrapport</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/strukturering-av-spørreskjema.html">Strukturering av spørreskjema</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../proposed-reference-architectures/forklaringer-til-spørsmålene.html">Forklaringer til spørsmålene</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../methods/methods.html">Metodikk for utvikling av nasjonal arkitektur</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../methods/reference-architecture-methods.html">Metodikk for utvikling av referansearkitekturer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../drafts/index.html">Utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Nasjonalt arkitekturverksted</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../drafts/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Nasjonalt arkitekturverksted</a></li>
+    <li><a href="main.html">Forvaltningsstandard for beskrivelse av begreper - Versjon 2.0</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/standards/forvaltningsstandard-begrep/edit/master/docs/modules/forvaltningsstandard-begrepsbeskrivelser/pages/main.adoc">Rediger kilde</a></div>
+  </div>
+<article class="doc"><a name="section-top"></a>
+<h1 class="page">Forvaltningsstandard for beskrivelse av begreper - Versjon 2.0</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+Dette dokumentet kan også lastes ned <a href="document.pdf">som PDF</a> eller <a href="document.epub">som EPUB</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Publisert: 15.03.2019</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_forord"><a class="anchor" href="#_forord"></a>Forord</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Difi har ansvaret for å forvalte en oversikt over anbefalte og obligatoriske IT-standarder i forvaltningen - <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen"><em>Referansekatalogen</a></em>. <em>Referansekatalogen<em></em> </em>er etablert for å sikre at innbyggere og næringsliv får tilgang til offentlig informasjon og tjenester på en standardisert måte (uavhengig av brukerutstyr), sikre god samhandling mellom offentlige virksomheter, hindre bindinger til bestemte leverandører og sikre god konkurranse i IT-markedet.</p>
+</div>
+<div class="paragraph">
+<p>Difi utreder, hører og beslutter anbefalte krav som inngår i <em>Referansekatalogen</em>. Disse kravene skal følges med mindre virksomheten har en god grunn til å la være. Obligatoriske krav utredes og høres av Difi. Høringen oppsummeres og oversendes Kommunal- og moderniseringsdepartementet, som fremmer revidert  <a href="https://lovdata.no/dokument/SF/forskrift/2013-04-05-959"><em>Forskrift om IT-standarder i offentlig forvaltning</a></em> med nye obligatoriske krav til beslutning i regjeringen.</p>
+</div>
+<div class="paragraph">
+<p>IT-ministeren satte i 2006 ned et bredt sammensatt <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/standardiseringsradet">Standardiseringsråd</a> med medlemmer fra både kommunal og statlig sektor. Difi får råd fra Standardiseringsrådet om hvilke standarder som bør være anbefalt eller obligatorisk i offentlig sektor.</p>
+</div>
+<div class="paragraph">
+<p>Det foreliggende dokumentet er utarbeidet av en arbeidsgruppe ledet av Difi, i henhold til Standardiseringsrådets arbeidsmetodikk.</p>
+</div>
+<div class="paragraph">
+<p>Standarden inngår i <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen/begrepsanalyse-og-definisjonsarbeid">bruksområdet “Begrepsanalyse og definisjonsarbeid”</a> i <em>Referansekatalogen</em>. Denne versjonen skal erstatte den første versjonen fra mai 2012.</p>
+</div>
+<div class="paragraph">
+<p>Se <a href="#vedleggb">vedlegg B</a> for de viktigste endringene fra versjon 1 til denne versjonen (versjon 2) av standarden.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_formål_omfang_og_avgrensinger"><a class="anchor" href="#_formål_omfang_og_avgrensinger"></a>Formål, omfang og avgrensinger</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Det er et uttrykt ønske, både<em> </em>fra regjeringshold og fra offentlig sektor, at ulike deler av forvaltningen skal kunne gjenbruke hverandres informasjon (ofte data) i mye større grad enn i dag. Dette vil bl.a. spare både offentlig sektor og dens brukere for dobbeltarbeid knyttet til innsamling/avgiving av informasjon og vil hjelpe til å oppfylle “kun én gang”-prinsippet, dvs. samme informasjon (f.eks. sivilstand) skal bare samles inn ett sted i forvaltningen og så gjenbrukes av alle andre som har behov for og rettslig grunnlag til å bruke denne informasjonen.</p>
+</div>
+<div class="paragraph">
+<p>For å identifisere hvilken informasjon som er aktuell til deling og gjenbruk er det imidlertid nødvendig å vite hva de ulike etatene legger i begrepene som er knyttet til data. For f.eks. å vite om en kan gjenbruke Skatteetatens data for lønn, må en vite om Skatteetaten definerer lønn på samme måte som ens egen etat. Dette betyr at offentlig sektor må definere og tilgjengeliggjøre sine begreper. Denne standarden skal sikre at begrepene forvaltet av offentlige virksomheter, beskrives på en felles, strukturert måte.</p>
+</div>
+<div class="paragraph">
+<p>Standarden spesifiserer kun krav til innholdet i en begrepsbeskrivelse, ikke hvordan begrepsarbeidet generelt gjennomføres eller hvordan innholdet skal tilgjengeliggjøres elektronisk. Se ellers bruksområde “Begrepsanalyse og definisjonsarbeid” i <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen"><em>Referansekatalogen</a></em> for andre aktuelle standarder og veiledere.</p>
+</div>
+<div class="paragraph">
+<p>Denne versjonen av standarden fokuserer på informasjon som er nødvendig for å støtte deling<strong> </strong>av begrepsbeskrivelser. Virksomhetsinterne behov blir derfor ikke prioritert i foreliggende versjon.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_normative_referanser"><a class="anchor" href="#_normative_referanser"></a>Normative referanser</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Følgende referanser er normative og danner grunnlag for denne standarden:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NS-ISO 704:2009 <em>Terminologiarbeid - Prinsipper og metoder</em></p>
+</li>
+<li>
+<p>NS-ISO 1087:2000 <em>Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser</em></p>
+</li>
+<li>
+<p><em>Termlosen</em>, som er en anbefalt forvaltningsstandard for begrepsanalyse og definisjonsarbeid</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_definisjon_av_de_mest_sentrale_begrepene_i_denne_standarden"><a class="anchor" href="#_definisjon_av_de_mest_sentrale_begrepene_i_denne_standarden"></a>Definisjon av de mest sentrale begrepene i denne standarden</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dette kapitlet inneholder definisjoner av de mest sentrale begrepene i standarden. Bortsett fra begrepet ‘alternativ formulering’ som det ikke finnes noen eksisterende internasjonale definisjoner av, er definisjonene av de andre begrepene hentet fra ISO-standarder via <a href="http://www.standard.no/termbasen/">termbasen SNORRE</a> hos Standard Norge.</p>
+</div>
+<div class="paragraph">
+<p>Definisjonene og termene i dette kapitlet er normative.</p>
+</div>
+<div class="paragraph">
+<p>Språk/målform er angitt i parentes. F.eks. betyr “term (nb)” at teksten “term” er på norsk bokmål. Følgende språkkoder er brukt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>nb: bokmål</p>
+</li>
+<li>
+<p>nn: nynorsk</p>
+</li>
+<li>
+<p>en: engelsk</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_term"><a class="anchor" href="#_term"></a>Term</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>term (nb); term (nn); term (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>begrep (nb); omgrep (nn); concept (en); konsept (nb); konsept (nn); concept (en)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>betegnelse for et allmennbegrep som tilhører et fagområde (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35329" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35329</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>En term er navnelappen til et begrep, altså det ordet eller den gruppen av ord vi bruker for å uttrykke et begrep. Definisjonen viser til allmennbegrep, f.eks. organisasjon, severdighet og produkt, for å ekskludere egennavn og individualbegreper, f.eks. Røde kors, Eiffeltårnet og Solidox. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="AnbefaltTerm"><a class="anchor" href="#AnbefaltTerm"></a>Anbefalt term</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>anbefalt term (nb); tilrådd term (nn); preferred term (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>term som blir sett på som den best egnede for et bestemt begrep (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35329" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35329</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>En anbefalt term er termen som bør brukes med mindre det foreligger spesielle grunner til å bruke en tillatt term. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="TillattTerm"><a class="anchor" href="#TillattTerm"></a>Tillatt term</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>tillatt term (nb); tillaten term (nn); admitted term (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>term som blir sett på som egnet for et bestemt begrep, og som blir brukt ved siden av en anbefalt term (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35355" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=35355</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>En tillatt term kan brukes i stedet for den anbefalte termen hvis det foreligger spesielle grunner, f.eks. hvis målgruppen er allmennheten og ikke fagspesialister. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="FrarådetTerm"><a class="anchor" href="#FrarådetTerm"></a>Frarådet term</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>frarådet term (nb); frårådd term (nn); deprecated term (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>term som blir sett på som uegnet for et bestemt begrep (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36723" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36723</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>Når man refererer til et begrep bør man unngå å bruke en frarådet term (anbefalt term, ev. tillatt term, bør brukes). I beskrivelse av et begrep kan det derfor være hensiktsmessig å ta med termen(e) som er frarådet, når man vet at mange feilaktig bruker termen(e) om begrepet. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_begrep"><a class="anchor" href="#_begrep"></a>Begrep</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>begrep (nb); omgrep (nn); concept (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>term (nb); term (nn); term (en); konsept (nb); konsept (nn)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>kunnskapsenhet som er dannet gjennom en unik kombinasjon av kjennetegn (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36707" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36707</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>Et begrep er en mental forestilling om et fenomen. Begrepet blir kommunisert ved hjelp av en term og forklart ved hjelp av en definisjon. Definisjonen av ‘begrep’ er under diskusjon/revisjon i den internasjonale standardiseringskomiteen ISO/TC 37. Definisjonen i vår standard vil bli justert dersom den internasjonale definisjonen blir endret, slik at de samsvarer. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="definisjon"><a class="anchor" href="#definisjon"></a>Definisjon</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>definisjon (nb); definisjon (nn); definition (en)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>beskrivelse som avgrenser begrepet mot beslektede begreper (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>Sitat fra NS-ISO 1087-1:2000: Terminologiarbeid - Ordliste - Del 1: Teori og anvendelser <a href="http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36175" class="bare">http://www.standard.no/toppvalg/termbasen/Termpost/?TermPostId=36175</a></p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>En definisjon er meningsinnholdet til et begrep. (nb) ISO 1087-1:2000(E) er i skrivende stund under revisjon. I ISO/DIS 1087:2018(E) som har vært til avstemning, står det følgende definisjon av ‘definition’: “representation of a concept [&#8230;&#8203;] by a substitutable expression that conveys its meaning and serves to differentiate it from related concepts”. Vi har foreslått overfor ISO å endre definisjonen til “representation of a concept [&#8230;&#8203;] <span class="line-through">by a substitutable expression</span> that conveys its meaning and serves to differentiate it from <span class="line-through">related</span> <span class="underline">other</span> concepts”, som uoffisielt kan oversettes til følgende på norsk bokmål: “beskrivelse av et begrep som forteller hva det betyr og som avgrenser det mot andre begreper”, som vi mener er en bedre definisjon. (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="AlternativFormulering"><a class="anchor" href="#AlternativFormulering"></a>Alternativ formulering</h3>
+<div class="dlist properties">
+<dl>
+<dt>Anbefalt term</dt>
+<dd>
+<p>alternativ formulering (nb); alternativ formulering (nn)</p>
+</dd>
+<dt>Frarådet term</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Definisjon</dt>
+<dd>
+<p>omskriving av et begreps definisjon, uten at meningen endres (nb)</p>
+</dd>
+<dt>Kilde</dt>
+<dd>
+<p>(ingen)</p>
+</dd>
+<dt>Merknad</dt>
+<dd>
+<p>omskriving av et begreps definisjon, uten at meningen endres (nb)</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_krav_til_innhold_i_beskrivelse_av_et_begrep"><a class="anchor" href="#_krav_til_innhold_i_beskrivelse_av_et_begrep"></a>Krav til innhold i beskrivelse av et begrep</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dette kapittelet beskriver hva som skal dokumenteres for at en begrepsbeskrivelse skal være i samsvar med standarden. Noe av informasjonen er obligatorisk, resten er valgfri. Blant den valgfrie informasjonen kan en velge å inkludere de delene en finner hensiktsmessig. Når den valgfrie informasjonen inkluderes, skal den følge standarden. Overordnet kan man si at standarden gir mulighet til å:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>dokumentere begrepets anbefalte term og eventuelle tillatte og frarådde termer</p>
+</li>
+<li>
+<p>dokumentere begrepets definisjon og eventuelle alternative formuleringer av samme definisjon</p>
+</li>
+<li>
+<p>beskrive eventuelle relasjoner begrepet måtte ha til andre begreper</p>
+</li>
+<li>
+<p>beskrive et begrep på flere språk</p>
+</li>
+<li>
+<p>knytte begrepet til en gruppering av begreper (begrepssamling, se <a href="#kap5">kapittel 5</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I normativt <a href="#vedlegga">vedlegg A</a> til dette dokumentet er kravene også beskrevet i form av en <a href="http://www.uml.org/">UML</a>-modell.</p>
+</div>
+<div class="paragraph">
+<p>Det er utarbeidet en informativ veileder for bruk av denne standarden. Veilederen inneholder mer utfyllende forklaring og eksempler på bruk av standarden. Se under <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen/begrepsanalyse-og-definisjonsarbeid">bruksområdet Begrepsanalyse og definisjonsarbeid</a> i <em>Referansekatalogen</em>.</p>
+</div>
+<div class="sect2">
+<h3 id="_obligatorisk_informasjon"><a class="anchor" href="#_obligatorisk_informasjon"></a>Obligatorisk informasjon</h3>
+<div class="paragraph">
+<p>Når et begrep beskrives, skal følgende informasjon alltid tas med:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Anbefalt term</strong>: En begrepsbeskrivelse skal alltid inneholde minst én <a href="#AnbefaltTerm">anbefalt term</a>, men maksimalt én per språk/målform.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Språk/målform som termen er skrevet i, skal alltid oppgis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Definisjon</strong>: En begrepsbeskrivelse skal alltid inneholde minst én <a href="#definisjon">definisjon</a>, men maksimalt én per språk/målform.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Språk/målform som definisjonen er skrevet i, skal alltid oppgis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Identifikator</strong>: En begrepsbeskrivelse skal alltid inneholde en unik og varig identifikator til det aktuelle begrepet.
+Ansvarlig virksomhet: En begrepsbeskrivelse skal alltid inneholde opplysninger om den ansvarlige virksomheten.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 1. Et informativt eksempel på en beskrivelse av et begrep, ved å bruke kun obligatorisk informasjon, der “(nb)” markerer at teksten er skrevet på bokmål.</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">heltidssysselsatt (nb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">person som har en avtalt ukentlig arbeidstid på 37 timer og mer, samt personer med annen avtalt arbeidstid som oppgir at dette utgjør heltid. (nb)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Identifikator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.ssb.no/a/metadata/conceptvariable/vardok/1127/nb">https://www.ssb.no/a/metadata/conceptvariable/vardok/1127/nb</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvarlig virksomhet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">971 526 920 (med organisasjonsnr, i henhold til standarden)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_valgfri_informasjon"><a class="anchor" href="#_valgfri_informasjon"></a>Valgfri informasjon</h3>
+<div class="paragraph">
+<p>I tillegg til obligatorisk informasjon som en alltid skal ta med i en begrepsbeskrivelse, kan følgende valgfri informasjon også tas med:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tillatt term: en eller flere <a href="#TillattTerm">tillatte termer</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Når en tar med en tillatt term, skal språk/målform termen er skrevet i, oppgis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Frarådet term: en eller flere<a href="#FrarådetTerm">frarådede termer</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Når en tar med en frarådet term, skal språk/målform termen er skrevet i, oppgis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Datastrukturterm: en eller flere termer som brukes i en datastruktur eller lignende (f.eks. navn for en klasse eller attributt i et UML-diagram, tagnavn i en XML-fil osv.)</p>
+</li>
+<li>
+<p>Alternativ formulering: en eller flere <a href="#AlternativFormulering">alternative formuleringer</a> av definisjonen.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Når en tar med en alternativ formulering, skal språk/målform den alternative formuleringen er skrevet i, oppgis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Merknad: en eller flere utdypende forklaringer til definisjon eller alternativ formulering.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Når merknad tas med, skal språk/målform teksten er skrevet i, oppgis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Eksempel: et eller flere eksempler som eksemplifiserer begrepet.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Når eksempel tas med, skal språk/målform teksten er skrevet i, oppgis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Omfang: lovlige kategorier eller verdiområder for et begrep.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Eksempel på kategorier: <em>Standard for sivilstand</em> spesifiserer hva som er lovlige kategorier for begrepet ‘sivilstand’, f.eks. ugift, gift og skilt.</p>
+</li>
+<li>
+<p>Eksempel på verdiområde: For begrepet ‘alder’<em> </em>kan verdiområdet beskrives som “alle positive tall”.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Fagområde: fagområde som begrepet har sitt opphav fra.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Når fagområde tas med, skal språk/målform teksten er skrevet i, oppgis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bruksområde: et eller flere anvendelsesområder der begrepet brukes i.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Når bruksområde tas med, skal språk/målform teksten er skrevet i, oppgis.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Beskrivelse av kilde til definisjon eller alternativ formulering:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Kilde(r) til definisjon eller alternativ formulering kan oppgis når definisjonen eller den alternative formuleringen er hentet fra eller basert på en eller flere kilder.</p>
+</li>
+<li>
+<p>En kan også oppgi om en definisjon eller en alternativ formulering er: ‘sitat fra kilde’, ‘basert på kilde’, eller ‘egendefinert’. Se <a href="#kodelisteForholdTilKilde">Kodeliste Forhold til kilde (ForholdTilKilde)</a> for forklaring på lovlige verdier for ‘forhold til kilde’.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Målgruppe: Til en ‘tillatt term’, ‘definisjon’ eller ‘alternativ formulering’, kan en oppgi målgruppen teksten er ment for. Valgmulighetene her er ‘allmennheten’ eller ‘fagspesialist’. Se <a href="#kodelisteMålgruppe">Kodeliste Målgruppe (Målgruppe)</a> for forklaring på lovlige verdier til ‘målgruppe’.</p>
+</li>
+<li>
+<p>Relasjoner til andre begreper: et begrep kan ha en eller flere relasjoner til andre begreper.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Assosiative, generiske eller partitive relasjoner:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Til en gitt assosiativ relasjon skal det alltid tas med minst én beskrivelse, men maksimalt én per språk/målform.</p>
+</li>
+<li>
+<p>Til en generisk eller partitiv relasjon kan man beskrive inndelingskriteriet, maksimalt én beskrivelse per språk/målform.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>‘Se også’-relasjoner: Et gitt begrep kan ha ‘se også’-relasjon til et eller flere andre begreper.</p>
+</li>
+<li>
+<p>‘Erstatter’-/‘erstattes av’-relasjoner:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Erstatter: et eller flere andre begreper som det aktuelle begrepet erstatter.</p>
+</li>
+<li>
+<p>Erstattes av: et eller flere andre begreper som det aktuelle begrepet blir erstattet av.</p>
+</li>
+<li>
+<p>Merknad: ‘erstatter’ / ‘erstattes av’ skal ikke brukes mellom versjoner av samme begrep (dvs. begrepsbeskrivelse som har samme identifikator).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Gyldighetsperiode: Til et begrep kan en ta med tidsperioden beskrivelsen av begrepet er gyldig innenfor, som oppgis som ‘dato gyldig fra og med’ og/eller ‘dato gyldig til og med’.</p>
+</li>
+<li>
+<p>Sist oppdatert: En kan oppgi dato når en gitt beskrivelse er sist oppdatert. Dette gjelder: begrepsbeskrivelse i sin helhet, en ‘anbefalt term’, en ‘tillatt term’, en ‘frarådet term’, en ‘datastrukturterm’, en ‘definisjon’, en ‘alternativ formulering’, en assosiativ/generisk/partitiv relasjon til et annet begrep.</p>
+</li>
+<li>
+<p>Kontaktpunkt: En kan oppgi kontaktpunkt i den ansvarlige virksomhet.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Tabell 2. Et informativt eksempel som illustrerer bruk av flere felter fra standarden, der den obligatoriske informasjonen er <strong>uthevet</strong> og språkkode oppgitt i parentes (“(nn)” for norsk nynorsk).</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Anbefalt term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">husdyr (nn)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definisjon</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dyr av ulike slag (pattedyr, fuglar, bier) som blir halde for nytteformål, til dømes for produksjon av produkt som mjølk, kjøt og ull, for al eller for trekkraft (nn)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Identifikator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.ssb.no/a/metadata/conceptvariable/vardok/1243/nn">https://www.ssb.no/a/metadata/conceptvariable/vardok/1243/nn</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvarlig virksomhet</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">971 526 920  (med organisasjonsnr, i henhold til standarden)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Merknad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kjæledyr blir ikkje rekna som husdyr (nn)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fagområde</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jordbruk, jakt og viltstell (nn)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Omfang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.ssb.no/klass/klassifikasjoner/29">https://www.ssb.no/klass/klassifikasjoner/29</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kap5"><a class="anchor" href="#kap5"></a>Krav til innhold i beskrivelse av en begrepssamling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Standarden spesifiserer også hva som skal dokumenteres i beskrivelsen av en samling av begreper (i denne standarden kalt ‘begrepssamling’). Det er valgfritt å gruppere begreper i begrepssamling. Når en velger å bruke begrepssamling skal standardens krav følges.</p>
+</div>
+<div class="paragraph">
+<p>Standarden skiller mellom obligatorisk informasjon som alltid skal tas med i en beskrivelse av en begrepssamling, og valgfri informasjon som kan tas med. Når en valgfri informasjon tas med, skal den følge standarden.</p>
+</div>
+<div class="paragraph">
+<p>Obligatorisk informasjon:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Navn</strong>: En begrepssamling skal alltid ha et navn.</p>
+</li>
+<li>
+<p><strong>Identifikator</strong>: En begrepssamling skal alltid ha en unik identifikator.</p>
+</li>
+<li>
+<p><strong>Ansvarlig virksomhet</strong>: En begrepssamling skal alltid ha en ansvarlig virksomhet.</p>
+</li>
+<li>
+<p><strong>Begrep</strong>: En begrepssamling skal ha minst ett begrep i seg.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Valgfri informasjon:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Beskrivelse: En begrepssamling kan ha en tekstlig beskrivelse.</p>
+</li>
+<li>
+<p>Kontaktpunkt: En kan oppgi kontaktpunkt i den ansvarlige virksomhet.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Kravene er også beskrevet i form av en <a href="http://www.uml.org/">UML</a>-modell i <a href="#vedlegga">vedlegg A</a> som er normativt.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="vedlegga"><a class="anchor" href="#vedlegga"></a>Vedlegg A (normativt) - UML-modell som beskriver krav til innhold i beskrivelse av begreper og begrepssamlinger</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/UML-v2.0.png" alt="UML v2.0">
+</div>
+</div>
+<div class="paragraph">
+<p>Last ned modell:
+<a href="_images/UML-v2.0.png">png</a> |
+<a href="_attachments/StandardForBegrepsbeskrivelse.xsd">xsd</a></p>
+</div>
+<div class="sect2">
+<h3 id="uriA"><a class="anchor" href="#uriA"></a>A.1. Krav til bruk av standardiserte datatyper</h3>
+<div class="paragraph">
+<p>Det anbefales å bruke standardiserte formater til å representere enkelttypene som er brukt i UML-modellen, i intern lagring og maskinell tilgjengeliggjøring eksternt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Dato</strong>: NS-ISO 8601 brukes for intern lagring og maskinell tilgjengeliggjøring eksternt. For presentasjon i brukergrensesnitt se råd fra Språkrådet <a href="http://www.sprakradet.no/sprakhjelp/Skriveregler/Dato/#dato">http://www.sprakradet.no/sprakhjelp/Skriveregler/Dato/#dato</a>.</p>
+</li>
+<li>
+<p><strong>URI</strong>: Se kravene i bruksområdet “Pekere til offentlige ressurser på nett” i <em>Referansekatalogen</em>, <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen/pekere-til-offentlige-ressurser-pa-nett">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen/pekere-til-offentlige-ressurser-pa-nett</a>.</p>
+</li>
+<li>
+<p><strong>Organisasjonsnummer</strong>: Se spesifikasjon fra Brønnøysundregistrene, <a href="https://www.brreg.no/om-oss-nn/oppgavene-vare/registera-vare/om-einingsregisteret/organisasjonsnummeret/">https://www.brreg.no/om-oss-nn/oppgavene-vare/registera-vare/om-einingsregisteret/organisasjonsnummeret/</a>.</p>
+</li>
+<li>
+<p><strong>VCard:Kind</strong>: Se spesifikasjon fra W3C, <em>vCard Ontology - for describing People and Organizations</em>, <a href="https://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e1819">https://www.w3.org/TR/2014/NOTE-vcard-rdf-20140522/#d4e1819</a>.</p>
+</li>
+<li>
+<p><strong>Tekst</strong>: Se kravene i bruksområdet “Publisering av tekstdokumenter” i_ Referansekatalogen_, <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen/publisering-av-tekstdokumenter">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen/publisering-av-tekstdokumenter</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="begrepA"><a class="anchor" href="#begrepA"></a>A.2. Klasse Begrep (Begrep)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter og relasjoner til et ‘begrep’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>: <br>
+Inneholder 1..* (maksimalt én per språk/målform) ‘<a href="#anbefaltTermA">Anbefalt term</a>’ ‘med verdi (by value)’ <br>
+Inneholder 0..* ‘<a href="#TillattTermA">Tillatt term</a>’ ‘med verdi (by value)’<br>
+Inneholder 0..* ‘<a href="#FrarådetTermA">Frarådet term</a>’ ‘med verdi (by value)’<br>
+Inneholder 0..* ‘<a href="#datastrukturtermA">Datastrukturterm</a>’ ‘med verdi (by value)’<br>
+Inneholder 1..* (maksimalt én per språk/målform) ‘<a href="#definisjonA">Definisjon</a>’ ‘med verdi (by value)’ <br>
+Inneholder 0..* ‘<a href="#AlternativFormuleringA">Alternativ formulering</a>’ ‘med verdi (by value)’<br>
+Inneholder 0..* ‘<a href="#AssosiativRelasjonA">Assosiativ relasjon</a>’ ‘med verdi (by value)’<br>
+Inneholder 0..* ‘<a href="#GeneriskRelasjonA">Generisk relasjon</a>’ ‘med verdi (by value)’<br>
+Inneholder 0..* ‘<a href="#PartitivRelasjonA">Partitiv relasjon</a>’ ‘med verdi (by value)’<br>
+Har “se også”-relasjon til 0..* andre ‘<a href="#_begrep">Begrep</a>’ ‘med referanse (by reference)’<br>
+Erstatter 0..* ‘<a href="#_begrep">Begrep</a>’ ‘med referanse (by reference)’<br>
+Erstattes av 0..* ‘<a href="#_begrep">Begrep</a>’ ‘med referanse (by reference)’<br>
+Inngår i 0..* ‘<a href="#Begrepssamling">[Begrepssamling]</a>’ ‘med referanse (by reference)’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter</em></strong>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identifikator (identifikator)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">URI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi identifikator(er) til et begrep</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ansvarlig virksomhet (ansvarligVirksomhet)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Organisasjonsnummer</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi hvilken virksomhet som har registrert begrepsbeskrivelsen eller registeret den forvaltes i</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fagområde (fagområde)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#datatypeTekstMedSpråkkode">Tekst med språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi hvilket fagområde begrepet tilhører og er definert innenfor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bruksområde (bruksområde)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#datatypeTekstMedSpråkkode">Tekst med språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi bruksområde(r) til et begrep</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gyldighetsperiode (gyldighetsperiode)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#gyldighetsperiodeA">Gyldighetsperiode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi gyldighetsperioden(e) til en gitt beskrivelse av et begrep</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kontaktpunkt (kontaktpunkt)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Vcard:Kind</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi kontaktpunkt i den ansvarlige virksomheten</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dato sist oppdatert (sistOppdatert)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Dato</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi dato for siste oppdatering av en begrepsbeskrivelse</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="anbefaltTermA"><a class="anchor" href="#anbefaltTermA"></a>A.3. Klasse Anbefalt term (AnbefaltTerm)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å oppgi en ‘anbefalt term’ til et ‘begrep’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er en del av ‘<a href="#_begrep">Begrep</a>’ ‘med verdi (by value)’<br>
+Er spesialisering av ‘<a href="#_term">Term</a>’</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="TillattTermA"><a class="anchor" href="#TillattTermA"></a>A.4. Klasse Tillatt term (TillattTerm)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å oppgi en ‘tillatt term’ til et ‘begrep’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er en del av ‘<a href="#_begrep">Begrep</a>’ ‘med verdi (by value)’<br>
+Er spesialisering av ‘<a href="#_term">Term</a>’</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">målgruppe (målgruppe)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodet verdi, se <a href="#kodelisteMålgruppe">kodelisten Målgruppe</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi målgruppen som en tillatt term er opprettet/ment for</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="FrarådetTermA"><a class="anchor" href="#FrarådetTermA"></a>A.5. Klasse Frarådet term (FrarådetTerm)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å oppgi en ‘frarådet term’ til et ‘begrep’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er en del av ‘<a href="#_begrep">Begrep</a>’ ‘med verdi (by value)’<br>
+Er spesialisering av ‘<a href="#_term">Term</a>’</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="datastrukturtermA"><a class="anchor" href="#datastrukturtermA"></a>A.6. Klasse Datastrukturterm (Datastrukturterm)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å oppgi en ‘datastrukturterm’ til et ‘begrep’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er en del av ‘<a href="#_begrep">Begrep</a>’ ‘med verdi (by value)’<br>
+Er spesialisering av ‘<a href="#_term">Term</a>’</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="termA"><a class="anchor" href="#termA"></a>A.7. Abstrakt klasse Term (Term)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributtene til en ‘term’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er generalisering av konkrete klasser ‘<a href="#anbefaltTermA">Anbefalt term</a>’, ‘<a href="#TillattTermA">Tillatt term</a>’, ‘<a href="#FrarådetTermA">Frarådet term</a>’, ‘<a href="#datastrukturtermA">Datastrukturterm</a>’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navn (navn)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#datatypeTekstMedSpråkkode">Tekst med språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi termehttps://docs.google.com/document/d/1oLk57PEZ4pyG5MqN2zBjeeHE4mEEx3JusAoA0Jg-wIk/edit#heading=h.ohsdkwb99ftr[<a href="https://docs.google.com/document/d/1oLk57PEZ4pyG5MqN2zBjeeHE4mEEx3JusAoA0Jg-wIk/edit#heading=h.ohsdkwb99ftr">n</a>] til et begrep</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dato sist oppdatert (sistOppdatert)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Dato</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi når en term er oppdatert sist</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="definisjonA"><a class="anchor" href="#definisjonA"></a>A.8. Klasse Definisjon (Definisjon)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å oppgi ‘definisjon’ til et ‘begrep’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er en del av ‘<a href="#_begrep">Begrep</a>’ ‘med verdi (by value)’<br>
+Er spesialisering av ‘<a href="#BetydningsbeskrivelseA">Betydningsbeskrivelse</a>’</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="AlternativFormuleringA"><a class="anchor" href="#AlternativFormuleringA"></a>A.9. Klasse Alternativ formulering (AlternativFormulering)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å oppgi en ‘alternativ formulering’ av betydningen til et ‘begrep’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er en del av ‘<a href="#_begrep">Begrep</a>’ ‘med verdi (by value)’<br>
+Er spesialisering av ‘<a href="#BetydningsbeskrivelseA">Betydningsbeskrivelse</a>’</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="BetydningsbeskrivelseA"><a class="anchor" href="#BetydningsbeskrivelseA"></a>A.10. Abstrakt klasse Betydningsbeskrivelse (Betydningsbeskrivelse)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter og relasjoner til en ‘Betydningsbeskrivelse’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er generalisering av konkrete klasser ‘<a href="#definisjonA">Definisjon</a>’, ’<a href="#AlternativFormuleringA">Alternativ formulering</a>’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tekst (tekst)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#datatypeTekstMedSpråkkode">Tekst med språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi en definisjon eller en alternativ formulering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kildebeskrivelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#kildebeskrivelseA">Kildebeskrivelse</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å beskrive kilde(r) til en definisjon eller en alternativ formulering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">merknad (merknad)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#datatypeTekstMedSpråkkode">Tekst med språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi merknad(er) til en definisjon eller en alternativ formulering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eksempel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#datatypeTekstMedSpråkkode">Tekst med språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi eksempel/eksempler til et begrep</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">målgruppe (målgruppe)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodet verdi, se <a href="#kodelisteMålgruppe">kodelisten Målgruppe</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi målgruppe som definisjon eller alternativ formulering er laget for</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">omfang</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1<a href="#uriA">URI og/eller tekst</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi omfang til et gitt begrep</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dato sist oppdatert (sistOppdatert)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="AssosiativRelasjonA"><a class="anchor" href="#AssosiativRelasjonA"></a>A.11. Klasse Assosiativ relasjon (AssosiativRelasjon)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter og relasjoner til en ‘Assosiativ relasjon’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er en del av <a href="#_begrep">Begrep</a>’ ‘med verdi (by value)’<br>
+Har 1 assosiert ‘<a href="#_begrep">Begrep</a>’ ‘med referanse (by reference)’<br>
+Er spesialisering av ‘<a href="#begrepsrelasjonA">Begrepsrelasjon</a>’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">beskrivelse (beskrivelse)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#datatypeTekstMedSpråkkode">Tekst med språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å beskrive den aktuelle assosiative relasjonen (maksimalt én beskrivelse per språk/målform)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="GeneriskRelasjonA"><a class="anchor" href="#GeneriskRelasjonA"></a>A.12. Klasse Generisk relasjon (GeneriskRelasjon)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter og relasjoner til en ‘Generisk relasjon’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er en del av ‘<a href="#_begrep">Begrep</a>’ ‘med verdi (by value)’<br>
+Har 0..1 overordnet ‘<a href="#_begrep">Begrep</a>’ ‘med referanse (by reference)’<br>
+Har 0..1 underordnet ‘<a href="#_begrep">Begrep</a>’ ‘med referanse (by reference)’<br>
+Er spesialisering av ‘<a href="#begrepsrelasjonA">Begrepsrelasjon</a>’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inndelingskriterium (inndelingskriterium)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#datatypeTekstMedSpråkkode">Tekst med språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å beskrive inndelingskriteriet for den aktuelle generiske relasjonen (maksimalt én beskrivelse per språk/målform)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="PartitivRelasjonA"><a class="anchor" href="#PartitivRelasjonA"></a>A.13. Klasse Partitiv relasjon (PartitivRelasjon)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter og relasjoner til en ‘Partitiv relasjon’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er en del av ‘<a href="#_begrep">Begrep</a>’ ‘med verdi (by value)’<br>
+Har 0..1 overordnet ‘<a href="#_begrep">Begrep</a>’ ‘med referanse (by reference)’<br>
+Har 0..1 underordnet ‘<a href="#_begrep">Begrep</a>’ ‘med referanse (by reference)’<br>
+Er spesialisering av ‘<a href="#begrepsrelasjonA">Begrepsrelasjon</a>’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inndelingskriterium (inndelingskriterium)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#datatypeTekstMedSpråkkode">Tekst med språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å beskrive inndelingskriteriet for den aktuelle partitive relasjonen (maksimalt én beskrivelse per språk/målform)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="begrepsrelasjonA"><a class="anchor" href="#begrepsrelasjonA"></a>A.14. Abstrakt klasse Begrepsrelasjon (Begrepsrelasjon)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter og relasjoner til en ‘Begrepsrelasjon’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Er generalisering av konkrete klasser <a href="#AssosiativRelasjonA">Assosiativ relasjon</a>, <a href="#GeneriskRelasjonA">Generisk relasjon</a>, <a href="#PartitivRelasjonA">Partitiv relasjon</a></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dato sist oppdatert (sistOppdatert)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Dato</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi dato for siste oppdatering av en begrepsrelasjon</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_a_15_klasse_begrepssamling_begrepssamling"><a class="anchor" href="#_a_15_klasse_begrepssamling_begrepssamling"></a>A.15. Klasse Begrepssamling (Begrepssamling)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter og relasjoner til en ‘Begrepssamling’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Assosierte klasser</em></strong>:<br>
+Har 1..* <a href="#_begrep">Begrep</a> ‘med referanse (by reference)’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navn (navn)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Tekst</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å navngi en gitt begrepssamling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identifikator (identifikator)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">URI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi identifikator til en gitt begrepssamling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ansvarlig virksomhet (ansvarligVirksomhet)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Organisasjonsnummer</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi hvilken virksomhet som har ansvar for en gitt begrepssamling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">beskrivelse (beskrivelse)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Tekst</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi informasjon om en gitt begrepssamling</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kontaktpunkt (kontaktpunkt)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Vcard:Kind</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi kontaktpunkt i den ansvarlige virksomheten</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="gyldighetsperiodeA"><a class="anchor" href="#gyldighetsperiodeA"></a>A.16. Datatype Gyldighetsperiode (Gyldighetsperiode)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter til en ‘gyldighetsperiode’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dato gyldig fra og med (gyldigFraOgMed)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Dato</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi datoen fra og med hvilken en gyldighetsperiode starter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dato gyldig til og med (gyldigTilOgMed)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Dato</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi datoen til og med hvilken en gyldighetsperiode varer</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="kildebeskrivelseA"><a class="anchor" href="#kildebeskrivelseA"></a>A.17. Datatype Kildebeskrivelse (Kildebeskrivelse)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter til en ‘kildebeskrivelse’</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter</em></strong>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kilde (kilde)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">URI og/eller tekst</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi kilde(r) til en definisjon eller en alternativ formulering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forhold til kilde (forholdTilKilde)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodet verdi, se <a href="#kodelisteForholdTilKilde">kodelisten Forhold til kilde</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi sammenheng mellom kilden(e) og definisjonsteksten eller den alternative formuleringen</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="datatypeTekstMedSpråkkode"><a class="anchor" href="#datatypeTekstMedSpråkkode"></a>A.18. Datatype Tekst med språkkode (TekstMedSpråkkode)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter tekst og språkkode</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tekst (tekst)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Tekst</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi en tekst</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">språk/målform (språkMålform)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kodet verdi, se <a href="#kodelisteSpråkkode">Kodelisten Språkkode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi språk/målform den aktuelle teksten er skrevet i</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_a_19_datatype_uri_ogeller_tekst_uritekst"><a class="anchor" href="#_a_19_datatype_uri_ogeller_tekst_uritekst"></a>A.19. Datatype URI og/eller tekst (URITekst)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å knytte sammen attributter URI og Tekst, som brukes av attributt “omfang” hhv. “kilde” i klasse <a href="#BetydningsbeskrivelseA">Betydningsbeskrivelse</a></p>
+</div>
+<div class="paragraph">
+<p><strong><em>Attributter:</em></strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Attributt</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Krav</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Formål</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI (URI)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">URI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi URI til spesifikasjon/definisjon av et omfang, hhv. en gitt kilde</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tekst (tekst)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#uriA">Tekst</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for å oppgi informasjon om et gitt omfang, hhv. en gitt kilde.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="kodelisteForholdTilKilde"><a class="anchor" href="#kodelisteForholdTilKilde"></a>A.20. Kodeliste Forhold til kilde (ForholdTilKilde)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å liste opp lovlige verdier til <a href="#kildebeskrivelseA">attributt “Forhold til kilde” i datatype “Kildebeskrivelse”</a></p>
+</div>
+<div class="paragraph">
+<p>Kodelisten inneholder følgende lovlige verdier:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sitat fra kilde (sitatFraKilde): brukes når ‘definisjon’ eller ‘alternativ formulering’ er ordrett sitat fra en gitt kilde</p>
+</li>
+<li>
+<p>basert på kilde (basertPåKilde): brukes når ‘definisjon’ eller ‘alternativ formulering’ ikke er ordrett sitat fra, men basert på, en gitt kilde</p>
+</li>
+<li>
+<p>egendefinert (egendefinert): brukes når ‘definisjon’ eller ‘alternativ formulering’ ikke er hentet fra eller basert på noen kilde, men er egendefinert eksempelvis etablert gjennom et prosjekt.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="kodelisteMålgruppe"><a class="anchor" href="#kodelisteMålgruppe"></a>A.21. Kodeliste Målgruppe (Målgruppe)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å liste opp lovlige verdier til <a href="#BetydningsbeskrivelseA">attributt “målgruppe” i klasse “Betydningsbeskrivelse”</a> hhv. <a href="#TillattTermA">attributt “målgruppe” i klasse “Tillatt term”</a>.</p>
+</div>
+<div class="paragraph">
+<p>Kodelisten inneholder følgende lovlige verdier:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>allmennheten (allmennheten): brukes når det ikke forutsettes noe forkunnskap i det aktuelle fagområdet for begrepet</p>
+</li>
+<li>
+<p>fagspesialist (fagspesialist): brukes når det forutsettes et visst kunnskapsnivå i det aktuelle fagområdet for begrepet</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="kodelisteSpråkkode"><a class="anchor" href="#kodelisteSpråkkode"></a>A.22. Kodeliste Språkkode (Språkkode)</h3>
+<div class="paragraph">
+<p><strong><em>Formål</em></strong>: for å liste opp lovlige verdier til <a href="#datatypeTekstMedSpråkkode">attributt “språk/målform” i datatype “Tekst med språkkode”</a></p>
+</div>
+<div class="paragraph">
+<p>Se “Bruk av språkkodar på offentlege nettsider” i Referansekatalogen, <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen/bruk-av-sprakkodar-pa-offentlege-nettsider">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/standarder/referansekatalogen/bruk-av-sprakkodar-pa-offentlege-nettsider</a></p>
+</div>
+<div class="paragraph">
+<p>Eksempler (listen under er ikke uttømmende):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>bokmål: <a href="http://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=nb">nb</a> (ISO 639-1)</p>
+</li>
+<li>
+<p>nynorsk: <a href="http://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=nn">nn</a> (ISO 639-1)</p>
+</li>
+<li>
+<p>norsk - brukes kun når målformen er ukjent (eller blandet): <a href="http://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=no">no</a> (ISO 639-1)</p>
+</li>
+<li>
+<p>engelsk: <a href="http://www.loc.gov/standards/iso639-2/php/langcodes_name.php?iso_639_1=en">en</a> (ISO 639-1)</p>
+</li>
+<li>
+<p>osv.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="vedleggb"><a class="anchor" href="#vedleggb"></a>Vedlegg B (informativt) - Endringer fra versjon 1.0 til versjon 2.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>De viktigste endringene fra versjon 1 til denne versjonen (versjon 2.0) av standarden er som følger:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Denne versjonen presiserer ved tittel at dette er en forvaltningsstandard.</p>
+</li>
+<li>
+<p>Denne versjonen av standarden prioriterer å støtte deling av begrepsbeskrivelser mellom virksomheter i norsk offentlig forvaltning. Virksomhetsinterne behov blir derfor ikke prioritert i denne versjonen.</p>
+</li>
+<li>
+<p>Denne versjonen skiller kun mellom obligatoriske og valgfrie felter, mens forrige versjon er inndelt i “obligatorisk del”, “utvidelse (anbefalt)”, “ytterligere utvidelser” samt “anbefalinger om forvaltningsdokumentasjon”.</p>
+</li>
+<li>
+<p>Denne versjonen dokumenterer innholdskravene i form av en <a href="http://www.uml.org/what-is-uml.htm">UML</a>-modell med kardinalitet/multipliimage:architecture-repository:common:i-arbeid.pngt, noe som var savnet i forrige versjon.</p>
+</li>
+<li>
+<p>Denne versjonen inneholder færre obligatoriske krav til en begrepsbeskrivelse:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>‘anbefalt term’</p>
+</li>
+<li>
+<p>‘definisjon’</p>
+</li>
+<li>
+<p>I tillegg to administrative beskrivelser: ‘identifikator’ og ‘ansvarlig virksomhet’</p>
+</li>
+<li>
+<p>Forrige versjon hadde i tillegg til forannevnte, også følgende i “obligatorisk del” (selv om flere av disse kravene er utformet som “dersom … ”):</p>
+<div class="ulist">
+<ul>
+<li>
+<p>‘kilde’</p>
+</li>
+<li>
+<p>‘fagområde’</p>
+</li>
+<li>
+<p>‘gyldig fra’</p>
+</li>
+<li>
+<p>‘gyldig til’</p>
+</li>
+<li>
+<p>‘referanse til versjoner’</p>
+</li>
+<li>
+<p>‘klassifikasjon’</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Begge versjoner krever dokumentasjon av språk/målform.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Denne versjonen stiller ikke eksplisitt innholdskrav til ‘referanse til versjoner’ som var i forrige versjon. Vi mener imidlertid at administrative beskrivelser som ‘gyldighetsperiode’ og ‘dato sist oppdatert’ vil danne et godt nok grunnlag for å ha denne type funksjonalitet i et IT-verktøy.</p>
+</li>
+<li>
+<p>Denne versjonen legger til rette for mer eksplisitt beskrivelse av relasjoner mellom begreper (i form av ‘assosiativ’, ‘generisk’, ‘partitiv’, ‘se også’, ‘erstatter’ og ‘erstattes av’-relasjoner), istedenfor ‘relaterte begreper’ i “utvidelse(anbefalt)” i forrige versjon.</p>
+</li>
+<li>
+<p>Denne versjonen har med flere valgfrie felter eksplisitt, hovedsakelig:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>‘tillatt term’ og ‘frarådet term’, som var implisitt tatt med i “ytterligere utvidelser” i forrige versjon.</p>
+</li>
+<li>
+<p>‘alternativ formulering’ (bl.a. med hensyn til “klarspråk”), ‘målgruppe’, ‘bruksområde’, ‘eksempel’, ‘datastrukturterm’.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Noen navn er endret, f.eks. <em>omfang</em> i denne versjonen istedenfor <em>klassifikasjon</em> i forrige, <em>gyldig fra og med</em> hhv. <em>gyldig til og med</em> i denne versjonen istedenfor <em>gyldig fra</em> hhv. <em>gyldig til</em> i forrige.</p>
+</li>
+<li>
+<p>Denne versjonen spesifiserer også krav til begrepssamling som er valgfri.</p>
+</li>
+</ul>
+</div>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-12685001-17', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
+</html>
