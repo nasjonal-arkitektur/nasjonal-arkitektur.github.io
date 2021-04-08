@@ -117,13 +117,13 @@
     <span class="nav-text">Basismønstre for datautveksling</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Meldingsforsendelse (eMelding)</a>
+    <a class="nav-link" href="../one-way-push/book-one-way-push.html">Meldingsforsendelse</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../request-reply/book-request-reply.html">Forespørsel-svar (eOppslag)</a>
+    <a class="nav-link" href="../request-reply/book-request-reply.html">Forespørsel-svar)</a>
   </li>
   <li class="nav-item" data-depth="6">
-    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering (eNotifikasjon)</a>
+    <a class="nav-link" href="../publish-subscribe/book-publish-subscribe.html">Publisering-konsumering</a>
   </li>
 </ul>
   </li>
@@ -1159,7 +1159,7 @@ Dersom det skal utveksles meldinger i noen form for sammenhengende prosess, krev
 <div class="sect4">
 <h5 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">4.2.2.1. Generelt</a></h5>
 <div class="paragraph">
-<p>Begrepet "firehjørnersmodell", eller “4-corner model”, stammer fra  <a href="../kunnskap_referansearkitektur_eu-edelivery">CEF eDelivery</a>.</p>
+<p>Begrepet "firehjørnersmodell", eller “4-corner model”, stammer fra  <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a>.</p>
 </div>
 <div class="paragraph">
 <p>Følgende figur illustrerer aktuelle konsepter:</p>
@@ -1215,7 +1215,7 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <p>Løs kopling mellom avsender og mottaker</p>
 </li>
 <li>
-<p>Sikker meldingsinfrastruktur (mellom aksesspunktene)</p>
+<p>Sikker meldingsinfrastruktur mellom aksesspunktene</p>
 </li>
 <li>
 <p>Avtaleforvaltning gjennom betrodd tredjepart</p>
@@ -1227,7 +1227,7 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <p>Ubegrenset skalering</p>
 </li>
 <li>
-<p><span class="red">Mulig å opprette flere communities</span></p>
+<p>Mulig å opprette flere communities</p>
 </li>
 </ul>
 </div>
@@ -1262,25 +1262,42 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </div>
 <div class="sect3">
 <h4 id="_emelding"><a class="anchor" href="#_emelding"></a><a class="link" href="#_emelding">4.2.3. eMelding</a></h4>
-<div class="paragraph lead">
-<p>eMelding er en referansearkitektur for meldingsutveksling på tvers av virksomheter, sektorer og landegrenser.</p>
-</div>
 <div class="sect4">
 <h5 id="_introduksjon_2"><a class="anchor" href="#_introduksjon_2"></a><a class="link" href="#_introduksjon_2">4.2.3.1. Introduksjon</a></h5>
 <div class="paragraph">
-<p>Begrepet eMelding kan ses som en skriver seg fra strategisk arbeid med</p>
+<p><em>eMelding</em> framstilles her som en løsningsnær spesialisering av <a href="../4-corner-model/4-hjørnersmodellen.html" class="page">4-hjørners-modellen</a>. Dette er en norsk variant av <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for asynkron meldingsutveksling. Det finnes flere eksisterende anvendelser og gjenbrukbare løsninger for å realisere eDelivery i ulike land og virksomheter.</p>
 </div>
 <div class="paragraph">
-<p>Videre informasjon og og dokumentasjon om eMelding finnes under <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding" class="bare">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding</a>.</p>
+<p>eMelding (og eDelivery) angir tekniske spesifikasjoner, standarder, programvare, fellesløsninger og støttetjenester for sikker meldingsutveksling mellom medlemmer i et felles nettverk.</p>
 </div>
 <div class="paragraph">
-<p>eMelding  kan ses på som en "beste praksis" for meldingsutveksling på tvers av virksomheter og sektorer i offentlig sektor, samt mellom offentlig sektor og privat sektor.</p>
+<p>Når man er del av fellesskapet, vil man kunne sende meldinger til andre parter i fellesskapet uten å måtte inngå bilaterale avtaler om dette. Hver enkelt part registrerer sine samhandlingskapabiliteter i felles registre, for andre til å oppdage. Dette dreier seg i hovedsak om hvilke prosesser og meldinger som støttes.</p>
 </div>
-<div class="paragraph">
-<p>eMelding tar utgangspunkt i den europeiske "byggeklossen"  <a href="../kunnskap_referansearkitektur_eu-edelivery">CEF eDelivery</a>. CEF eDelivery  spesifiserer arkitekturer og standarder for meldingsutveksling. Det finnes flere eksisterende anvendelser og gjenbrukbare løsninger for å realisere eDelivery i ulike land og virksomheter.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tips"></i>
+</td>
+<td class="content">
+Meldingsspesifikasjonene i eDelivery støtter mønstre for request-reply og korrelering av meldinger i prosessinstanser.
+</td>
+</tr>
+</table>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">4.2.3.2. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></h5>
 <div class="paragraph">
-<p>eMelding anvendes bl.a. innen <a href="../kunnskap_losning_eu-peppol">PEPPOL-nettverket</a>, nærmere bestemt i regi av OpenPEPPOL.</p>
+<p>Se konseptuelle prosessbeskrivelser for <a href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html" class="page">Generisk forsendelse</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"><a class="anchor" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"></a><a class="link" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">4.2.3.3. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a></h5>
+<div class="sect5">
+<h6 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">4.2.3.3.1. Generelt</a></h6>
+<div class="paragraph">
+<p>Innen EU anvendes eDelivery innen flere domener og nettverk. I Norge anvendes eDelivery/eMelding så langt (2020) innen domenet e-handel i  <a href="https://peppol.eu/what-is-peppol/">PEPPOL-nettverket</a>, i regi av <a href="https://peppol.eu/about-openpeppol/what-is-openpeppol/">OpenPEPPOL</a> som forvaltningsorgan (segmentsansvarlig) for multilaterale avtaler.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1295,45 +1312,10 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </table>
 </div>
 <div class="paragraph">
-<p><strong>eMelding som referansearkitektur rendyrker konseptene og har en klar kopling til CEF eDelivery, men beskrives i utgangspunktet frikoplet fra CEF eDelivery</strong>. Med dette som utgangspunkt, angis så aktuelle løsninger og praktiske anvendelser i form av CEF eDelivery og PEPPOL/OpenPEPPOL.</p>
-</div>
-<div class="paragraph">
-<p>eMelding som referansearkitektur er avgrenset til<strong> asynkron meldingsutveksling innenfor et fellesskap (community) som samhandler under et felles interoperabilitetsregime</strong>. Når man er del av fellesskapet vil man kunne sende meldinger til andre parter i fellesskapet uten å måtte inngå bilaterale avtaler om dette. Hver enkelt part registrerer sine samhandlingskapabiliteter i felles registre, for andre til å oppdage.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tips"></i>
-</td>
-<td class="content">
-eMelding som referansearkitektur støtter mønstre for request-reply og korrelering av meldinger i prosessinstanser, tilsvarende slik dette legges opp til i spesifikasjonen av metadata i meldingsprofil for CEF eDelivery.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_grunnleggende_konsepter_for_emelding"><a class="anchor" href="#_grunnleggende_konsepter_for_emelding"></a><a class="link" href="#_grunnleggende_konsepter_for_emelding">4.2.3.2. Grunnleggende konsepter for eMelding</a></h5>
-<div class="paragraph">
-<p>eMelding bygger på et arkitekturmønster hvor avsender og mottaker kan benytte ulike teknologier og transportprotkoller. Se  <a href="../4-corner-model/4-hjørnersmodellen.html" class="page">4-hjørners-modellen fra EU CEF eDelivery</a>. for en nærmere redegjørelse om selve konseptet.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">4.2.3.3. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></h5>
-<div class="paragraph">
-<p>Se konseptuelle prosessbeskrivelser for <a href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html" class="page">Generisk forsendelse</a>.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"><a class="anchor" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"></a><a class="link" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">4.2.3.4. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a></h5>
-<div class="sect5">
-<h6 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">4.2.3.4.1. Generelt</a></h6>
-<div class="paragraph">
 <p>Beskrivelsene her viser på hvordan den generiske referansearkitekturen for eMelding kan realiseres med arkitektur- og løsningskomponenter som inngår i PEPPOL-infrastrukturen; basert på CEF eDelivery.</p>
 </div>
 <div class="paragraph">
-<p>Utover de arkitekturtegningene som presenenteres, henvises til omfattende dokumentasjon av eDelivery og PEPPOL.</p>
+<p>Utover de arkitekturtegningene som presenenteres her, henvises til omfattende veiledningsmateriell fra eDelivery og PEPPOL.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1365,7 +1347,7 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </div>
 </div>
 <div class="sect5">
-<h6 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">4.2.3.4.2. Klargjør for deling av data ved forsendelse (eMelding)</a></h6>
+<h6 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">4.2.3.3.2. Klargjør for deling av data ved forsendelse (eMelding)</a></h6>
 <div class="imageblock">
 <div class="content">
 <img src="../eMelding/_images/SBB_klargjøre.png" alt="Klargjør for eMelding (løsningsmønster) image">
@@ -1453,9 +1435,9 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </table>
 </div>
 <div class="sect5">
-<h6 id="_operativ_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding">4.2.3.4.3. Operativ deling av data ved forsendelse (eMelding)</a></h6>
+<h6 id="_operativ_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding">4.2.3.3.3. Operativ deling av data ved forsendelse (eMelding)</a></h6>
 <div class="sect6">
-<h7 id="_send_emelding"><a class="anchor" href="#_send_emelding"></a><a class="link" href="#_send_emelding">4.2.3.4.3.1. Send eMelding</a></h7>
+<h7 id="_send_emelding"><a class="anchor" href="#_send_emelding"></a><a class="link" href="#_send_emelding">4.2.3.3.3.1. Send eMelding</a></h7>
 <div class="imageblock">
 <div class="content">
 <img src="../eMelding/_images/Send%20eMelding%20%20(løsningsmønster).png" alt="Send eMelding  (løsningsmønster) image">
@@ -1566,7 +1548,7 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </table>
 </div>
 <div class="sect6">
-<h7 id="_motta_emelding"><a class="anchor" href="#_motta_emelding"></a><a class="link" href="#_motta_emelding">4.2.3.4.3.2. Motta eMelding</a></h7>
+<h7 id="_motta_emelding"><a class="anchor" href="#_motta_emelding"></a><a class="link" href="#_motta_emelding">4.2.3.3.3.2. Motta eMelding</a></h7>
 <div class="imageblock">
 <div class="content">
 <img src="../eMelding/_images/Motta%20eMelding%20(løsningsmønster).png" alt="Motta eMelding (løsningsmønster) image">
@@ -1644,7 +1626,7 @@ eMelding som referansearkitektur støtter mønstre for request-reply og korreler
 </div>
 </div>
 <div class="sect4">
-<h5 id="_videre_informasjon_om_emelding"><a class="anchor" href="#_videre_informasjon_om_emelding"></a><a class="link" href="#_videre_informasjon_om_emelding">4.2.3.5. Videre informasjon om eMelding</a></h5>
+<h5 id="_videre_informasjon_om_emelding"><a class="anchor" href="#_videre_informasjon_om_emelding"></a><a class="link" href="#_videre_informasjon_om_emelding">4.2.3.4. Videre informasjon om eMelding</a></h5>
 <div class="paragraph">
 <p>Videre informasjon og og dokumentasjon om eMelding finnes under <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding" class="bare">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding</a>.</p>
 </div>

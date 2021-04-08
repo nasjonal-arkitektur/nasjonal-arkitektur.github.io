@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Oppdatering av referansearkitektur og strategi for eMelding - stikkord :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/data-exchange-strategy-emelding/emelding-oppdatert-stikkord.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drafts" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Utkast og innspill</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about-drafts.html">Om utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Blogginnlegg</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitekturen, høna eller egget?</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-strategy-book/data-exchange-strategy-book.html">Innspill til oppdatering av nasjonal strategi for datautveksling (tidlig kladd)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-executive-summary/data-exchange-strategy-executive-summary.html">Overordnet oppsummering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-introduction/data-exchange-strategy-introduction.html">Innledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-background/data-exchange-strategy-background.html">Bakgrunn</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-approach/data-exchange-strategy-approach.html">Tilnærming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-needs/data-exchange-strategy-needs.html">Behov</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-concepts/data-exchange-strategy-concepts.html">Begreper og konsepter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-as-is/data-exchange-strategy-as-is.html">Nåsituasjonen</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-targets/data-exchange-strategy-targets.html">Målbilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-guidance/data-exchange-strategy-guidance.html">Veiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-actions/data-exchange-strategy-actions.html">Tiltak</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Innspill til referansearkitekturer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-integrated-processes/ra-integrated-processes-proposal.html">Referansearkitektur for samhandlingsprosesser (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-iam/ra-iam-proposal.html">Referansearkitektur for informasjonssikkerhet, tillit og personvern (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Målbilde for nasjonal samhandlingsinfrastruktur (forslag)</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for tillitstjenester</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for datadeling</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for samhandlingsprosesser</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for integrasjon med EU-s Single Digital Gateway</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for IOT</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for API management</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for fagsystemer</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for saksbehandling i kommuner</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture-repository/index.html">Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Utkast og innspill</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../architecture-repository/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../architecture-repository/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Utkast og innspill</a></li>
+    <li><a href="emelding-oppdatert-stikkord.html">Oppdatering av referansearkitektur og strategi for eMelding - stikkord</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/draft-data-exchange-strategy/modules/data-exchange-strategy-emelding/pages/emelding-oppdatert-stikkord.adoc">Rediger kilde</a></div>
+  </div>
+<article class="doc"><a name="section-top"></a>
+<h1 class="page">Oppdatering av referansearkitektur og strategi for eMelding - stikkord</h1>
+<div class="sect1">
+<h2 id="_overordnet_oppsummering_veldig_tidlig_kladdeutkast_kanskje_feil_inngang"><a class="anchor" href="#_overordnet_oppsummering_veldig_tidlig_kladdeutkast_kanskje_feil_inngang"></a><a class="link" href="#_overordnet_oppsummering_veldig_tidlig_kladdeutkast_kanskje_feil_inngang">1. Overordnet oppsummering (veldig tidlig kladdeutkast, kanskje feil inngang)</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Det er behov for oppdatering og utvidelser av eksisterende nasjonale referansearkitekturer. Deler av arbeidet kan gjøres innenfor mindre områder, slik som&#8230;&#8203; mens &#8230;&#8203; også behov for å se sammenhenger&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Tilnærming (bimodal):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ta hånd om presserende behov&#8230;&#8203; (eMelding)</p>
+</li>
+<li>
+<p>Langsiktig og kontinuerlig arbeid mot helhetlige nasjonale og internasjonale (EU) målbilder, med veiledning til valg mellom aktuelle alternativer.</p>
+</li>
+<li>
+<p>Smidig tilnærming</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>eMelding = "presserende behov"&#8230;&#8203;&#8230;&#8203;&#8230;&#8203;..</p>
+</div>
+<div class="paragraph">
+<p>Overordnet strategi:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For samhandlingsaktører: Veiledning til fornuftig valg av alternativer framfor harde føringer om bestemte valg.</p>
+</li>
+<li>
+<p>For løsningsleverandører: Klare krav til grunnleggende egenskaper innen informasjonssikkerhet og etterlevelse.</p>
+</li>
+<li>
+<p>For segementansvarlige/samarbeidsnettverk: Praktisk veiledning for etablering av domenespesifikke forvaltnigsregimer.</p>
+</li>
+<li>
+<p>For samhandlingsaktører: Praktisk veiledning til å etablere løsninger, generelt og spesifikt innen domener.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_motivasjon_for_oppdatering_av_emelding_referansearkitektur_og_strategi_nå"><a class="anchor" href="#_motivasjon_for_oppdatering_av_emelding_referansearkitektur_og_strategi_nå"></a><a class="link" href="#_motivasjon_for_oppdatering_av_emelding_referansearkitektur_og_strategi_nå">2. Motivasjon for oppdatering av eMelding referansearkitektur og strategi NÅ</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>eMelding er fremdeles et aktuelt arkitekturmønster, ved siden av andre mønstre og løsninger.</p>
+</li>
+<li>
+<p>Selv om det ideelt sett hadde vært ønskelig med en samlet strategi der alle alternativene var med, er det mulig å behandle eMelding isolert (i likhet med andre mønstre).</p>
+</li>
+<li>
+<p>Rydde bort usikkerhet om hva som er gjeldende strategi, slik at løsningsleverandørene har noe mer fast å basere sine produktstrategier på.</p>
+</li>
+<li>
+<p>Det oppleves i dag såpass vanskelig å etablere eMelding for nye domener, at det i praksis ikke skjer.  Hindere for dette må ryddes av veien.</p>
+</li>
+<li>
+<p>Ny situasjon, i og med utrullingen av DPI til alle statlige virksomheter, dvs. at alle statlige virksomheter snart vil ha etablert aksesspunkter (forutsatt vellykket etablerig av rammeavtale med aksesspunktleverandører i pågående anskaffelsesprosess).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bakgrunn"><a class="anchor" href="#_bakgrunn"></a><a class="link" href="#_bakgrunn">3. Bakgrunn</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>De siste års arbeid med arkitekturer og strategier for datautveksling
+bygger på Difis rapporter om meldingsutveksling, ref.
+<a href="https://www.digdir.no/digitalisering-og-samordning/meldingsutveksling-internt-i-forvaltninga/1376">2013:13
+- Meldingsutveksling internt i forvaltninga</a> og
+<a href="https://www.digdir.no/digitalisering-og-samordning/losning-meldingsutveksling-i-offentlig-sektor/1390">2015:3
+- Løsning for meldingsutveksling i offentlig sektor</a></p>
+</div>
+<div class="paragraph">
+<p>Et strategidokument og en teknisk beskrivelse av referansearkitektur for
+eMelding ble sendt på høring av Difi våren 2018. En kopi av de aktuelle
+dokumentene finnes inntil videre
+<a href="https://github.com/difi/nasjonal_arkitektur/tree/master/nab_referanse_arkitekturer_emelding/files">her</a>.
+Responsen var overveiende positiv, men det kom også noen kritiske
+kommentarer.</p>
+</div>
+<div class="paragraph">
+<p><em>Blant de kommentarene som gikk igjen i høringen om eMelding, nevnes her
+spesielt (fritt gjengitt):</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Problematisk å forholde seg til en strategi om en bestemt type
+meldingsutveksling (asynkron meldingsutveksling med
+«4-hjørners-modellen»), uten at det settes i sammenheng med alternative
+mønstre for meldingsutveksling eller datautveksling mer generelt.</em></p>
+</li>
+<li>
+<p><em>Veiledning og anbefalinger foretrekkes framfor sterke føringer og
+standardisering.</em></p>
+</li>
+<li>
+<p><em>Kompleksitet og uoversiktlig kostnadsbilde.</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I ettertid (2019) er selve beskrivelsen av eMelding omskrevet og tatt
+inn under
+<a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur
+for datautveksling</a>, der eMelding beskrives som ett av flere
+mønstre for datautveksling.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.regjeringen.no/no/dokumenter/digitaliseringsrundskrivet/id2683652/">Digitaliseringsrundskrivet</a>,
+datert 20.12.2019, sier: <em>«Ved nyutvikling av løsninger for
+informasjonsutveksling, <strong>bør</strong> referansearkitekturene for eMelding og
+eOppslag benyttes.»</em></p>
+</div>
+<div class="paragraph">
+<p>Anbefalingen om bruk av eMelding har i praksis vist seg å være vanskelig å forholde seg til, utenom EHF-området, der det lenge har fungert godt.</p>
+</div>
+<div class="paragraph">
+<p>Det</p>
+</div>
+<div class="paragraph">
+<p>Det har i nyere tid vært reist spørsmål om hva som er gjeldende strategi.</p>
+</div>
+<div class="paragraph">
+<p>samtidig som den nevnte strategien har vært lagt til grunn for
+tenkingen rundt målbilder og produktstrategier i deler av Digdir.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overordnet_beskrivelse_av_emelding_som_en_ikke_eksklusiv_strategisk_satsing_fra_digdir"><a class="anchor" href="#_overordnet_beskrivelse_av_emelding_som_en_ikke_eksklusiv_strategisk_satsing_fra_digdir"></a><a class="link" href="#_overordnet_beskrivelse_av_emelding_som_en_ikke_eksklusiv_strategisk_satsing_fra_digdir">4. Overordnet beskrivelse av eMelding som en ikke-eksklusiv strategisk  satsing fra Digdir</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_kort_oppsummert"><a class="anchor" href="#_kort_oppsummert"></a><a class="link" href="#_kort_oppsummert">4.1. Kort oppsummert</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>eMelding som referansearkitektur bygger på <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for sikker meldingsutveksling mellom ulike aktører og teknologier over en felles infrastruktur.</p>
+<div class="paragraph">
+<p><em>Merk: Felles infrastruktur er per i dag basert på ebMS 3.0/AS4 som meldingsstandard. Dette kan endres over tid, uten at det berører prosesser eller tekniske løsninger på baksiden av aksesspunktene til hver enkelt samhandlingsaktør.</em></p>
+</div>
+</li>
+<li>
+<p>EU stiller krav til å støtte eDelivery/eMelding for meldingsutveksling med andre land innen EU.</p>
+</li>
+<li>
+<p>I Norge har en svært gode erfaringer med eDelivery/eMelding innen e-handel som domene, der DFØ nå kan bidra med sin kompetanse og erfaring.</p>
+</li>
+<li>
+<p>Digdir vil støtte utbredelsen av eDelivery/eMelding gjennom veiledning og fellesløsninger, som en av flere strategiske satsinger på veien mot mer effektiv samhandling på tvers av virksomheter og sektorer, både i Norge og internasjonalt.</p>
+</li>
+<li>
+<p>Det legges opp til finansieringsmodeller ut fra politiske føringer om brukerbetaling og involvering av markedet for levering av løsninger og tjenester. Større grad av sentralfinansiering og gratis standardtjenester kan eventuelt bli aktuelt senere, men Digdir må forholde seg til gjeldende politikk. Dette gjelder for eMelding på lik linje med andre fellesløsninger. @Rune: Si noe om hvem en kan ta betalt av.</p>
+</li>
+<li>
+<p>Digdir anser at utbredelse av eMelding må skje i konkurranse med alternative mønstre, teknologier og løsninger. Det finnes helt klart alternativer som egner seg like godt eller bedre i mange sammenhenger, avhengig av aktuelle behov og krav.</p>
+</li>
+<li>
+<p>Behov for konsolidering av sektorløsniger?</p>
+</li>
+<li>
+<p>eMelding som arkitekturmønster omfatter flere tverrgående temaer som overlapper med konkurrerende arkitekturmønstre for datautveksling, slik som&#8230;&#8203; Det er viktig at</p>
+</li>
+<li>
+<p>Domener&#8230;&#8203; overlapp</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Merk: Interoperabilitet mellom eMelding</p>
+</div>
+<div class="paragraph">
+<p>Standardisering av felles infrastruktur er ikke eneste</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kostnader - politikk - ikke ta betalt av konsument?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>dekker aktuelle behov innen  , ved siden av andre mønstre og løsninger.
+* Vi vil gi veiledning til når</p>
+</div>
+<div class="paragraph">
+<p>behov overlapper med andre&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hva_er_emelding"><a class="anchor" href="#_hva_er_emelding"></a><a class="link" href="#_hva_er_emelding">4.2. Hva er eMelding?</a></h3>
+<div class="paragraph">
+<p>eMelding</p>
+</div>
+<div class="paragraph">
+<p>eMelding som referansearkitektur bygger på <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for sikker meldingsutveksling mellom ulike aktører og teknologier over en felles infrastruktur.</p>
+</div>
+<div class="paragraph">
+<p><em>Merk: Felles infrastruktur er per i dag basert på ebMS 3.0/AS4 som meldingsstandard. Dette kan endres over tid, uten at det berører prosesser eller tekniske løsninger på baksiden av aksesspunktene til hver enkelt samhandlingsaktør.</em></p>
+</div>
+<div class="paragraph">
+<p>Avgrens problemstillingen til asynkron meldingsutveksling gjennom meldingskø til adresserte mottakere, i forhold til alternativer som API og pub-sub.</p>
+</div>
+<div class="paragraph">
+<p>Referer til gjeldende refark - eventuelt oppdater den om den ikke er god nok. Forøvrig kort oppsummert:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>er et arkitekturmønster</p>
+</li>
+<li>
+<p>er standardbasert - AS4</p>
+</li>
+<li>
+<p>finnes infrastruktur - kapabilitets- og adresseoppslag</p>
+</li>
+<li>
+<p>finnes veiledere fra EU om hvordan komme igang</p>
+</li>
+<li>
+<p>forvaltningsregime for avtaler og meldingsstandarder: <a href="https://peppol.eu/what-is-peppol/">PEPPOL</a> is a set of artifacts and specifications enabling cross-border eProcurement. The use of PEPPOL is governed by a multi-lateral agreement structure which is owned and maintained by <a href="https://peppol.eu/about-openpeppol/what-is-openpeppol/">OpenPEPPOL</a>.</p>
+</li>
+<li>
+<p>Communities</p>
+</li>
+<li>
+<p>domener</p>
+</li>
+<li>
+<p>avtaler gjøres mellom aksesspunkt</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_brukstilfeller_og_fordeler"><a class="anchor" href="#_brukstilfeller_og_fordeler"></a><a class="link" href="#_brukstilfeller_og_fordeler">4.3. Brukstilfeller og fordeler</a></h3>
+<div class="paragraph">
+<p>Angi viktigste brukstilfeller og fordeler, men henvis til egen veileder (i arbeid) for valg mellom alternative mønstre og løsninger.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sikker meldingsutveksling mellom aksesspunktene</p>
+</li>
+<li>
+<p>Innebygget interoperabiitet</p>
+</li>
+<li>
+<p>Frikopling / løs kopling</p>
+</li>
+<li>
+<p>..</p>
+</li>
+<li>
+<p>Ikke stålkonttroll på hvem du skal kommunisere med, trenger adresseoppslag og kapabilititetsoppslag</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alternativer"><a class="anchor" href="#_alternativer"></a><a class="link" href="#_alternativer">4.4. Alternativer</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Presiser at eMelding og aktuelle fellesløsninger konkurrerer med andre teknologier og løsninger.</p>
+</li>
+<li>
+<p>List og beskriv kort noen utvalgte alternativer for asynkron meldingsutveksling, slik som f.eks.  Altinn, osv.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_interessenter"><a class="anchor" href="#_interessenter"></a><a class="link" href="#_interessenter">5. Interessenter</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Foreløpig interessentanalyse! Samarbeid med FDF/Digdir om å å få opp aktuelle caser, interessenter  og samarbeidspartnere på tvers av sektorene. Eksempel: Norsk Helsenett&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_forskrifter_lover_og_regler"><a class="anchor" href="#_forskrifter_lover_og_regler"></a><a class="link" href="#_forskrifter_lover_og_regler">6. Forskrifter, lover og regler</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bilaterale avtaler vs. fellesskap</p>
+</div>
+<div class="paragraph">
+<p>Personvernforordningen,
+GDPR
+Arkivloven
+Forvaltningsloven
+Offentleglova</p>
+</div>
+<div class="paragraph">
+<p>Eriks/EUs: Krav til infomasjonssikkerhet, dataproviens og dokumentert etterlevelse</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_forslag_til_tiltak_for_utbredelse_veiledere_støtteapparat_forvaltningsregime_fellesløsninger"><a class="anchor" href="#_forslag_til_tiltak_for_utbredelse_veiledere_støtteapparat_forvaltningsregime_fellesløsninger"></a><a class="link" href="#_forslag_til_tiltak_for_utbredelse_veiledere_støtteapparat_forvaltningsregime_fellesløsninger">7. Forslag til tiltak for utbredelse (veiledere, støtteapparat, forvaltningsregime, fellesløsninger).</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Beskriv hva som mangler for å få eMelding til å "fly" på kort og mellomlang sikt; slik som bedre veiledning og støtteapparat for å komme igang innen nye domener og communities, et felles forvaltningsregime for å definere datamodeller og meldingsformater, veileder for å ta fram nye prosesser/koreografier og meldingsformater.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_veiledere_generelt"><a class="anchor" href="#_veiledere_generelt"></a><a class="link" href="#_veiledere_generelt">7.1. Veiledere generelt</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>For samhandlingsaktører: Veiledning til valg blant alternativer</p>
+</li>
+<li>
+<p>For samhandlingsaktører: Praktisk veiledning til å etablere løsninger, generelt og spesifikt innen domener. Notater: Prosessrammverk, felles datamodeller&#8230;&#8203;</p>
+</li>
+<li>
+<p>For løsningsleverandører: Klare krav til grunnleggende egenskaper innen informasjonssikkerhet og etterlevelse.</p>
+</li>
+<li>
+<p>For segmentansvarlige/samarbeidsnettverk: Praktisk veiledning for etablering av domenespesifikke forvaltningsregimer. Husk: "Prosessrammeverk"</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_veiledere_spesifikt_for_emeldingedelivery"><a class="anchor" href="#_veiledere_spesifikt_for_emeldingedelivery"></a><a class="link" href="#_veiledere_spesifikt_for_emeldingedelivery">7.2. Veiledere spesifikt for eMelding/eDelivery</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>For samhandlingsaktører: Praktisk veiledning til å velge aksesspunktleverandør (eventuelt seg selv)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>*
+Rune: Snu opp ned!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_støtteapparat"><a class="anchor" href="#_støtteapparat"></a><a class="link" href="#_støtteapparat">7.3. Støtteapparat</a></h3>
+<div class="paragraph">
+<p>Forvaltningsregime</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_felles_datamodeller"><a class="anchor" href="#_felles_datamodeller"></a><a class="link" href="#_felles_datamodeller">7.4. Felles datamodeller</a></h3>
+<div class="paragraph">
+<p>Sjekk NIEM!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_standardisering_av_meldinger_og_koreografier"><a class="anchor" href="#_standardisering_av_meldinger_og_koreografier"></a><a class="link" href="#_standardisering_av_meldinger_og_koreografier">7.5. Standardisering av meldinger (og koreografier)</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_innmelding_i_fellesskapcommunity"><a class="anchor" href="#_innmelding_i_fellesskapcommunity"></a><a class="link" href="#_innmelding_i_fellesskapcommunity">7.6. Innmelding i fellesskap/community</a></h3>
+<div class="paragraph">
+<p>F.eks. PEPPOL/OPenPeppol</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aksesspunktleverandører"><a class="anchor" href="#_aksesspunktleverandører"></a><a class="link" href="#_aksesspunktleverandører">7.7. Aksesspunktleverandører</a></h3>
+<div class="paragraph">
+<p>Se PEPPOL.eu</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_skisse_til_rammeverk_for_forvaltning_av_veiledninger_til_valg_mellom_alternative_mønstre_og_løsninger"><a class="anchor" href="#_skisse_til_rammeverk_for_forvaltning_av_veiledninger_til_valg_mellom_alternative_mønstre_og_løsninger"></a><a class="link" href="#_skisse_til_rammeverk_for_forvaltning_av_veiledninger_til_valg_mellom_alternative_mønstre_og_løsninger">8. Skisse til rammeverk for forvaltning av veiledninger til valg mellom alternative mønstre og løsninger</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Valg av arkitekturmønstre og løsninger for datautveksling/samhandling må gjøres ut fra forretningsmessige behov og kvalitetskrav.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://nasjonal-arkitektur.github.io/drafts/data-exchange-strategy-guidance/data-exchange-strategy-guidance.html">Foreløpige notater om veiledning</a> lister slike kvalitetskrav&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_johannes_valg_å_ta_status"><a class="anchor" href="#_johannes_valg_å_ta_status"></a><a class="link" href="#_johannes_valg_å_ta_status">9. Johannes, Valg å ta, status</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>fordel: adhoc, frdige avtaler</p>
+</div>
+<div class="paragraph">
+<p>Vi har ingen infra mellom sektorer</p>
+</div>
+<div class="paragraph">
+<p>DPI på gang gir 4H - ulysning av aksesspunktleveranse</p>
+</div>
+<div class="paragraph">
+<p>Forholdet til andre meldingsformidlere
+KS
+eInnsyn????
+Altinn</p>
+</div>
+<div class="paragraph">
+<p>Ønsker konsolidering, men</p>
+</div>
+<div class="paragraph">
+<p>eGovernment domene, annex 5, dpi + eformidling, men med mulighet for n</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
+</html>
