@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hva kom først, referansearkitekturen eller løsningen (utkast 1)? :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/2021-ra-blogs/Hva%20kom%20først,%20referansearkitekturen%20eller%20løsningen,%20utkast1.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drafts" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Utkast og innspill</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about-drafts.html">Om utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Utkast til blogginnlegg</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="Hva%20kom%20først,%20referansearkitekturen%20eller%20løsningen,%20utkast1.html">Hva kom først, referansearkitekturen eller løsningen (utkast1)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Hva%20kom%20først,%20referansearkitekturen%20eller%20løsningen,%20utkast2.html">Hva kom først, referansearkitekturen eller løsningen (utkast2)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../data-exchange-strategy-emelding/emelding-oppdatert-strategi-innspill.html">Innspill til oppdatering av strategi foro eMelding</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-exchange-strategy-book/data-exchange-strategy-book.html">Innspill til oppdatering av nasjonal strategi for datautveksling (tidlig kladd)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-executive-summary/data-exchange-strategy-executive-summary.html">Overordnet oppsummering</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-introduction/data-exchange-strategy-introduction.html">Innledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-background/data-exchange-strategy-background.html">Bakgrunn</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-approach/data-exchange-strategy-approach.html">Tilnærming</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-needs/data-exchange-strategy-needs.html">Behov</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-concepts/data-exchange-strategy-concepts.html">Begreper og konsepter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-as-is/data-exchange-strategy-as-is.html">Nåsituasjonen</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-targets/data-exchange-strategy-targets.html">Målbilder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-guidance/data-exchange-strategy-guidance.html">Veiledning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-actions/data-exchange-strategy-actions.html">Tiltak</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Innspill til referansearkitekturer</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-integrated-processes/ra-integrated-processes-proposal.html">Referansearkitektur for samhandlingsprosesser (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-iam/ra-iam-proposal.html">Referansearkitektur for informasjonssikkerhet, tillit og personvern (forslag)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Målbilde for nasjonal samhandlingsinfrastruktur (forslag)</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for tillitstjenester</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for datadeling</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for samhandlingsprosesser</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for integrasjon med EU-s Single Digital Gateway</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for IOT</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for API management</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for fagsystemer</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Referansearkitektur for saksbehandling i kommuner</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture-repository/index.html">Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Utkast og innspill</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../architecture-repository/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../architecture-repository/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Utkast og innspill</a></li>
+    <li>Utkast til blogginnlegg</li>
+    <li><a href="Hva%20kom%20først,%20referansearkitekturen%20eller%20løsningen,%20utkast1.html">Hva kom først, referansearkitekturen eller løsningen (utkast1)</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/blogs/modules/2021-ra-blogs/pages/Hva%20kom%20først,%20referansearkitekturen%20eller%20løsningen,%20utkast1.adoc">Rediger kilde</a></div>
+  </div>
+<article class="doc"><a name="section-top"></a>
+<h1 class="page">Hva kom først, referansearkitekturen eller løsningen (utkast 1)?</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Du er i godt selskap om du er usikker på hva som er riktig svar på dette spørsmålet. I dette innlegget vil jeg gi noen hint og fortelle om hva referansearkitekturer er, hvem det er for, hvor vi står, og hvor vi går i utviklingen av denne formen for veiledning i Norge. Mange ser nytteverdien og ønsker seg felles referansearkitekturer. Det handler om å bygge gode digitale løsninger.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hva_er_en_referansearkitektur_egentlig"><a class="anchor" href="#_hva_er_en_referansearkitektur_egentlig"></a><a class="link" href="#_hva_er_en_referansearkitektur_egentlig">1. Hva er en referansearkitektur, egentlig?</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hus kan være skreddersydd, modulbasert eller masseprodusert, men er koplet  til samme ledningsnett. Ingen byer er like, men de fleste byer er bygd ut fra samme krav til innbyggertjenester. Mellom byene går det veier og toglinjer som møtes på midten, og vi har et digitalt internett som gjør at vi kan møtes uten å reise.</p>
+</div>
+<div class="paragraph">
+<p>Dagens hus, byer og infrastrukturer er kompliserte, og mange fagdisipliner må inn og gjøre sin del av jobben når noe skal bygges. Det må finnes rom for å tenke nytt, men det må også finnes bygningsforskrifter som sikrer at husene ikke raser sammen.  Vi har heller ikke råd til å tenke nytt hver gang. Vi bygger med byggeklosser, ut fra mer eller mindre faste oppskrifter.</p>
+</div>
+<div class="paragraph">
+<p>I min jobb bygger vi ikke hus, men digitale løsninger,  og jeg kaller oppskriftene for referansearkitekturer.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/buildings.png" alt="buildings" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Her er min enkle definisjon av hva som menes med dette begrepet:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><em>Referansearkitekturer fungerer som oppskrifter for å bygge arkitekturer og løsninger innen avgrensede områder, enten i form av gjenbrukbar god praksis, eller som kompass for navigering i ukjent terreng. Området kan være stort eller lite. Oppskriften kan være generell eller spesifikk. Beskrivelsene bør være utformet for å treffe aktuelle målgrupper, og omfatte begrepsapparat, føringer og veiledning til valg mellom alternativer.</em></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hvem_er_referansearkitekturer_for"><a class="anchor" href="#_hvem_er_referansearkitekturer_for"></a><a class="link" href="#_hvem_er_referansearkitekturer_for">2. Hvem er referansearkitekturer for?</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En og samme referansearkitektur kan ha flere interessenter – det kommer an på hvor godt en kan avgrense problemstillingene. Som arkitekt, ønsker jeg meg modeller med presise og konsistente beskrivelser av hvordan byggeklossene henger sammen. Er du jurist, må du kanskje forstå noen av de tekniske spesifikasjonene for å utforme avtaler. Er du beslutningstaker, holder det kanskje å kjenne til bruksområde, kostnader og strategiske føringer.</p>
+</div>
+<div class="paragraph">
+<p>Arkitekter bruker begrepet «viewpoints» om å lage brukertilpassede framstillinger for ulike interessenter. På norsk kalles det også visninger eller perspektiver. Her er en framstilling av en god, gammel <a href="https://en.wikipedia.org/wiki/ISO/IEC_42010">ISO-standard for arkitekturbeskrivelser</a> som jeg synes illustrerer dette godt:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/stakeholders.png" alt="stakeholders" width="700"></span></p>
+</div>
+<div class="paragraph">
+<p>Legg her spesielt merke til skillet mellom «functional» og «implementation». Vi snakker tilsvarende om arkitekturbyggeklosser (f.eks. regnearkprogram) og løsningsbyggeklosser (f.eks. Excel).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/abb-vs-sbb.png" alt="abb vs sbb" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturer kan være helt generiske eller fungere som faste løsningsmaler som bare skal utplasseres, eller det kan være noe midt imellom.</p>
+</div>
+<div class="paragraph">
+<p>Generiske referansearkitekturer er nyttige for å sammenlikne og rydde i arkitekturer og løsninger, f.eks. for å få tjenester til å spille bedre sammen på tvers av sektorene. Løsningsnære referansearkitekturer er nyttige for de som skal lage løsninger raskt og effektivt, men kan virke begrensende om de gjøres for detaljerte, eller om det gis for harde føringer om bruk. Nasjonale referansearkitekturer viser bruk av nasjonale fellesløsninger, men for å være relevante for sektorene i dagens situasjon, må de samtidig kunne tilpasses løsningslandskapet i sektorene.</p>
+</div>
+<div class="paragraph">
+<p>I <a href="https://www.digdir.no/digitale-felleslosninger/hva-er-det-nasjonale-okosystemet-og-hvorfor-snakker-alle-om-det/2236">økosystemet for digital samhandling og tjenesteutvikling</a> fungerer referansearkitekturer som rammer for å bygge løsningsbyggeklosser etter mønster av arkitekturbyggeklosser. Også i utviklingen av referansearkitekturer, kan aktørene i økosystemet bidra, f.eks. gjennom smidig utvikling av arkitekturer og løsninger.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hvor_står_vi"><a class="anchor" href="#_hvor_står_vi"></a><a class="link" href="#_hvor_står_vi">3. Hvor står vi?</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>KS og regjeringens digitaliseringsstrategi - <a href="https://www.regjeringen.no/no/tema/statlig-forvaltning/ikt-politikk/digitaliseringsstrategi-for-offentlig-sektor/id2612415/">Én digital offentlig sektor</a> - har som mål at offentlige tjenester skal oppleves sammenhengende og helhetlige av brukerne, uavhengig av hvilke virksomheter som tilbyr dem. Dette stiller krav til samhandling på tvers av virksomheter og sektorer, samt på tvers av fagdisipliner.</p>
+</div>
+<div class="paragraph">
+<p>En forutsetning for all samhandling er evnen til å utveksle informasjon. Da vi startet arbeidet med nasjonale referansearkitekturer, ble det definert følgende tre hovedmønstre for dette:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/3e.png" alt="3e"></span></p>
+</div>
+<div class="paragraph">
+<p>Det finnes nå en samlet nasjonal <a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">referansearkitektur for datautveksling</a>, der disse mønstrene inngår. Gjennom <a href="https://nasjonal-arkitektur.github.io/architecture-repository/proposed-reference-architectures/situasjonsrapport.html#_tilbakemeldinger_fra_intervjuer">intervjuer</a> og <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=D1aOAK8I7EygVrNUR1A5keziuyF4CghNqY906RnTk91UMkkxMEExRlA2VEJEWVZPTEFMRDBaSzY5Vy4u">spørreundersøkelser</a> i 2020, har vi fått gode tilbakemeldinger med tanke på nytteverdien, men det er samtidig sterkt ønsket at vi arbeider videre med dette området; i tillegg til at vi går inn på nye områder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hvor_går_vi"><a class="anchor" href="#_hvor_går_vi"></a><a class="link" href="#_hvor_går_vi">4. Hvor går vi?</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vi vil forbedre det vi har innen området datautveksling, i takt med utviklingen.  F.eks. er eMelding som digitalt «jernbanenett» for meldingsutveksling i Norge fremdeles en god ide, men det finnes alternative løsninger som fungerer til sitt bruk og tilfredsstiller «byggeforskriftene» med tanke på informasjonssikkerhet og etterlevelse. Det kan være komplisert å forholde seg til alternativer, men da er god veiledning viktig.</p>
+</div>
+<div class="paragraph">
+<p>Vi har også fått innspill og ønsker om felles referansearkitekturer innen flere andre områder, slik som sammenhengende tjenester, saksbehandling, digital tvilling, smarte byer, stordata, dataanalyse og informasjonssikkerhet, for å nevne noe.</p>
+</div>
+<div class="paragraph">
+<p>Digdir har ikke nok ressurser til å dra dette lasset alene.  Vi må prioritere bort noe, og vi må jobbe smart.</p>
+</div>
+<div class="paragraph">
+<p>Vi må blant annet fortsette å ta hjem viktig EU-arbeid. Vi bygger allerede på <a href="https://joinup.ec.europa.eu/collection/european-interoperability-reference-architecture-eira/solution/eira/eira-v400-online-documentation">European Interoperability Reference Architecture</a>. Suksessen med eMelding innen e-handel har mye å gjøre med at den er basert på EUs CEF eDelivery. EU videreutvikler nå eDelivery med REST og API-er som alternativ til asynkron meldingsutveksling. Vi følger også med på forskningsrapporter som <a href="https://www.opendei.eu/case-studies/d2-1-reference-architecture-for-cross-domain-digital-transformation/">Reference Architecture for Cross-Domain Digital Transformation</a>. Her gjelder det å følge med for den som vil henge med.</p>
+</div>
+<div class="paragraph">
+<p>Vi må også samarbeide med sektorene. Det finnes allerede mye bra som er gjort i sektorene som bør løftes opp og deles på tvers. For deling av data og datamodeller har vi <a href="https://data.norge.no/about">Felles datakatalog</a>. Hvorfor deler vi ikke også referansearkitekturer og arkitekturmodeller i en tilsvarende katalog?</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><em>TIPS: FRA21 er akronym for Felles referansearkitekturarbeid fra og med 2021. Dette er et nystartet nettverk med ambisjon om å gjøre noe sammen.</em></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Hva kom først? <a href="https://www.aftenposten.no/norge/i/7lJ0w/gaaten-er-loest-egget-kom-foerst">Egget kom før høna</a>, den er grei. Spørsmålet om referansearkitekturer eller løsninger er noe annet, men neste gang du vil lage en løsning, tenker du kanskje referansearkitektur først?</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
+</html>
