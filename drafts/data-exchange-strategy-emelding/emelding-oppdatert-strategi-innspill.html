@@ -242,40 +242,81 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_motivasjon_for_oppdatering_av_emelding_referansearkitektur_og_strategi_nå"><a class="anchor" href="#_motivasjon_for_oppdatering_av_emelding_referansearkitektur_og_strategi_nå"></a><a class="link" href="#_motivasjon_for_oppdatering_av_emelding_referansearkitektur_og_strategi_nå">2. Motivasjon for oppdatering av eMelding referansearkitektur og strategi NÅ</a></h2>
+<h2 id="_hva_er_emelding"><a class="anchor" href="#_hva_er_emelding"></a><a class="link" href="#_hva_er_emelding">2. Hva er eMelding</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>eMelding som referansearkitektur bygger på <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for sikker meldingsutveksling mellom ulike aktører og teknologier over en felles infrastruktur, slik dette ble beskrevet i <a href="https://github.com/difi/nasjonal_arkitektur/tree/master/nab_referanse_arkitekturer_emelding/files">høringen om eMelding (2018)</a>, med en knytning til 4-hjørnersmodellen og <a href="https://peppol.eu/what-is-peppol/">PEPPOL-nettverket</a>.</p>
+</div>
+<div class="paragraph">
+<p>En <a href="../../architecture-repository/eMelding/book-ra-emelding.html" class="page">nyere beskrivelse av eMelding</a> baseres på et mer <a href="https://nasjonal-arkitektur.github.io/architecture-repository/one-way-push/book-one-way-push.html#_emelding">generisk mønster for meldingsforsendelse</a> under
+en større <a href="../../architecture-repository/data-exchange-ra/book-data-exchange-ra.html" class="page">referansearkitektur for datautveksling</a>.
+Her skilles det mellom de generiske konseptene for 4-hjørnersmodellen, avtaleforvaltning m.m., i forhold til eMelding som en løsning.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+Denne forskjellen i måten å beskrive eMelding på er viktig når vi ser på egenskapene til eMelding opp mot alternativer.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>I tillegg til <a href="https://nasjonal-arkitektur.github.io/architecture-repository/one-way-push/book-one-way-push.html#_egenskaper_ved_4_hj%C3%B8rnersmodellen">egenskaper ved 4-hjørnersmodellen</a>, er egenskapene til eMelding</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="master@drafts:data-exchange-strategy-background:eDelivery1.png" alt="eDelivery">
+</div>
+<div class="title">Figur 1. eDelivery - konseptskisse</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="master@drafts:data-exchange-strategy-background:eMelding-1.png" alt="eMelding">
+</div>
+<div class="title">Figur 2. eMelding - asynkron meldingsforsendelse gjennom CEF eDelivery</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="master@drafts:data-exchange-strategy-background:eMelding-2.png" alt="eMelding">
+</div>
+<div class="title">Figur 3. eMelding - eksempel på</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_motivasjon_for_oppdatering_av_emelding_referansearkitektur_og_strategi_nå"><a class="anchor" href="#_motivasjon_for_oppdatering_av_emelding_referansearkitektur_og_strategi_nå"></a><a class="link" href="#_motivasjon_for_oppdatering_av_emelding_referansearkitektur_og_strategi_nå">3. Motivasjon for oppdatering av eMelding referansearkitektur og strategi NÅ</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Tidligere forslag til strategi for eMelding er ikke landet, og det hersker fremdeles en viss forvirring (per 2021) med tanke på hvilke føringer som gjelder, valg mellom alternativer og hvordan en i praksis skal gå fram for å realisere løsninger (innen andre områder enn e-handel).</p>
+<p>Tidligere forslag til strategi for eMelding (som i EU-s CEF eDelivery og PEPPOL-nettverket) er ikke landet -  det er behov for å rydde opp i misforståelser og peke vei.</p>
 </li>
 </ul>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Selv om det ideelt sett hadde vært ønskelig med en samlet strategi der alle alternativene var med, er det mulig å besvare mange av spørsmålene ved å betrakte eMelding for seg.</p>
+<p>eMelding har vist seg svært vellykket innen e-handel som domene, og har tilsvarende potensiale for andre domener.</p>
 </li>
 <li>
-<p>eMelding er uansett fremdeles et aktuelt mønster, ved siden av andre mønstre og løsninger. Dette er udiskutabelt innen e-handel, både nasjonalt og internasjonalt, der utbredelsen er betydelig.  I Norge er det lovpålagt å sende eFaktura til offentlige virksomheter, og rundt regnet 80% av private aktører kan nå gjøre dette via aksesspunkter til PEPPOL-nettverket.</p>
+<p>Digdir er i prosess med ny arkitektur for noen av fellesløsningene (DPI, eFormidling) basert på eMelding og eGovernment som nytt PEPPOL-domene  Dette vil kunne bane vei for nye anvendelser.</p>
 </li>
 <li>
-<p>Noe av det som er nytt i dagens situasjon, er at  PEPPOL-nettverket blir et praktisk alternativ for nye domener, i tillegg til e-handel. Digdir har avtale med OpenPEPPOL om eGovernment som domene, Dette gir muligheter for rask etablering av nye prosesser og tjenestekjeder på tvers av sektorer og domener, noe som kan bli en svært viktig faktor for å realisere regjeringens og KS digitaliseringsstrategi om sammenhengende tjenester.</p>
+<p>DFØ er norsk PEPPOL-myndighet, og er rustet for bidra i praktisk  etablering og forvaltning av standard meldingsformater, nasjonalt og inn mot PEPPOL.</p>
 </li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
 <li>
-<p>Det vil også bli en ny situasjon dersom en lykkes med den planlagte utrullingen av ny DPI-løsning til alle statlige virksomheter, dvs. at alle statlige virksomheter i så fall snart vil ha etablert aksesspunkter.
-Valget av eMelding som arkitektur for DPI kan islolert sett sies å være "overkill", men valget er gjort som et første steg på veien til meldingsutveksling innen eGovernment-domenet.</p>
+<p>EU stiller krav til å støtte eDelivery for grenseoverskridende tjenester i tilknytning til Single Digital Gateway Regulation (SDGR er foreløpig ikke del av norsk lov, men forventes å bli det, tilsvarende GDPR).</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_bakgrunn"><a class="anchor" href="#_bakgrunn"></a><a class="link" href="#_bakgrunn">3. Bakgrunn</a></h2>
+<h2 id="_bakgrunn"><a class="anchor" href="#_bakgrunn"></a><a class="link" href="#_bakgrunn">4. Bakgrunn</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>De siste års arbeid med arkitekturer og strategier for datautveksling
@@ -290,11 +331,10 @@ bygger på Difis rapporter om meldingsutveksling, ref.
 eMelding ble sendt på høring av Difi våren 2018. En kopi av de aktuelle
 dokumentene finnes inntil videre
 <a href="https://github.com/difi/nasjonal_arkitektur/tree/master/nab_referanse_arkitekturer_emelding/files">her</a>.
-Responsen var overveiende positiv, men det kom også noen kritiske
-kommentarer.</p>
+Responsen var overveiende positiv, men det kom også noen kritiske kommentarer.</p>
 </div>
 <div class="paragraph">
-<p><em>Blant de kommentarene som gikk igjen i høringen om eMelding, nevnes her
+<p><em>Blant de kommentarene som gikk igjen i <a href="https://github.com/difi/nasjonal_arkitektur/tree/master/nab_referanse_arkitekturer_emelding/files">høringen om eMelding (2018)</a>, nevnes her
 spesielt (fritt gjengitt):</em></p>
 </div>
 <div class="ulist">
@@ -324,8 +364,7 @@ mønstre for datautveksling.</p>
 <div class="paragraph">
 <p><a href="https://www.regjeringen.no/no/dokumenter/digitaliseringsrundskrivet/id2683652/">Digitaliseringsrundskrivet</a>,
 datert 20.12.2019, sier: <em>«Ved nyutvikling av løsninger for
-informasjonsutveksling, <strong>bør</strong> referansearkitekturene for eMelding og
-eOppslag benyttes.»</em></p>
+informasjonsutveksling, <strong>bør</strong> referansearkitekturene for eMelding og eOppslag benyttes.»</em></p>
 </div>
 <div class="paragraph">
 <p>Anbefalingen om bruk av eMelding har i praksis vist seg å være vanskelig å forholde seg til, utenom ehandels-området, der det lenge har fungert godt.</p>
@@ -335,12 +374,12 @@ eOppslag benyttes.»</em></p>
 <p>En hovedgunn til dette har vært manglende støtte for å etablere nye meldingsformater innen andre områder.</p>
 </div>
 <div class="paragraph">
-<p>Det har vært reist spørsmål om hva som er gjeldende strategi for eMelding i Norge. Det er viktig å rydde opp i uklarheter rundt dette. Slik det er nå, sitter løsningsleverandørene på gjerdet, i påvente av avklaringer.</p>
+<p>Det har vært reist spørsmål om hva som er gjeldende strategi for eMelding i Norge. Det er viktig å rydde opp i uklarheter rundt dette.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hva_skjer_rundt_oss_hvilke_hester_skal_vi_satse_på"><a class="anchor" href="#_hva_skjer_rundt_oss_hvilke_hester_skal_vi_satse_på"></a><a class="link" href="#_hva_skjer_rundt_oss_hvilke_hester_skal_vi_satse_på">4. Hva skjer rundt oss - hvilke hester skal vi satse på</a></h2>
+<h2 id="_hva_skjer_rundt_oss_hvilke_hester_skal_vi_satse_på"><a class="anchor" href="#_hva_skjer_rundt_oss_hvilke_hester_skal_vi_satse_på"></a><a class="link" href="#_hva_skjer_rundt_oss_hvilke_hester_skal_vi_satse_på">5. Hva skjer rundt oss - hvilke hester skal vi satse på</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://www.regjeringen.no/no/dokumenter/prop.-179-s-20202021/id2845471/">Prop. 179 S (2020–2021)</a> gir tilråding fra Utenriksdepartementet 23. april 2021, godkjent i statsråd samme dag, om deltakelse i DIGITAL – programmet for et digitalt Europa 2021-2027. Dette programmet er foreslått å ha en ramme på 7,17 milliarder euro. Det totale norske bidraget til DIGITAL er estimert til 180 millioner euro (i 2021-priser), som tilsvarer cirka 1,9 milliarder kroner.</p>
@@ -360,21 +399,25 @@ eOppslag benyttes.»</em></p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_overordnet_beskrivelse_av_emelding_som_en_ikke_eksklusiv_strategisk_satsing_fra_digdir"><a class="anchor" href="#_overordnet_beskrivelse_av_emelding_som_en_ikke_eksklusiv_strategisk_satsing_fra_digdir"></a><a class="link" href="#_overordnet_beskrivelse_av_emelding_som_en_ikke_eksklusiv_strategisk_satsing_fra_digdir">5. Overordnet beskrivelse av eMelding som en ikke-eksklusiv strategisk  satsing fra Digdir</a></h2>
+<h2 id="_overordnet_beskrivelse_av_emelding_som_en_ikke_eksklusiv_strategisk_satsing_fra_digdir"><a class="anchor" href="#_overordnet_beskrivelse_av_emelding_som_en_ikke_eksklusiv_strategisk_satsing_fra_digdir"></a><a class="link" href="#_overordnet_beskrivelse_av_emelding_som_en_ikke_eksklusiv_strategisk_satsing_fra_digdir">6. Overordnet beskrivelse av eMelding som en ikke-eksklusiv strategisk  satsing fra Digdir</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_kort_oppsummert"><a class="anchor" href="#_kort_oppsummert"></a><a class="link" href="#_kort_oppsummert">5.1. Kort oppsummert</a></h3>
-<div class="paragraph">
-<p>Status:</p>
-</div>
+<h3 id="_kort_oppsummert"><a class="anchor" href="#_kort_oppsummert"></a><a class="link" href="#_kort_oppsummert">6.1. Kort oppsummert</a></h3>
+<div class="sect3">
+<h4 id="_status_emelding_per_april_2021"><a class="anchor" href="#_status_emelding_per_april_2021"></a><a class="link" href="#_status_emelding_per_april_2021">6.1.1. Status eMelding per april 2021</a></h4>
 <div class="ulist">
 <ul>
 <li>
 <p>eMelding som referansearkitektur bygger på <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for sikker meldingsutveksling mellom ulike aktører og teknologier over en felles infrastruktur.</p>
 </li>
-<li>
-<p>I norsk offentlig sektor ikke landet hvordan løses&#8230;&#8203; til inspirasjon</p>
-</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>*Digitaliseringsrundskrivet
+I norsk offentlig sektor ikke landet hvordan løses&#8230;&#8203; til inspirasjon</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>EU stiller krav til å støtte eDelivery/eMelding for meldingsutveksling med andre land innen EU.</p>
 </li>
@@ -399,7 +442,7 @@ eOppslag benyttes.»</em></p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Ny formulering av strategi (foreløpige "ideer"):</p>
+<p>Innspill til ny formulering av strategi for eMelding:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -407,8 +450,36 @@ eOppslag benyttes.»</em></p>
 <p>Digdir vil støtte utbredelsen av eDelivery/eMelding gjennom veiledning og fellesløsninger, som en av flere strategiske satsinger på veien mot mer effektiv samhandling på tvers av virksomheter og sektorer, både i Norge og internasjonalt.</p>
 </li>
 <li>
-<p>Digdir anser at utbredelse av eMelding må skje i konkurranse med alternative mønstre, teknologier og løsninger. Det finnes alternativer som egner seg like godt eller bedre i mange sammenhenger, avhengig av aktuelle behov og krav.</p>
+<p>Digdir anser eMelding som en mulig faktor i å få til konsolidering av løsningslandskapet for meldingsutveksling på tvers av sektorene i Norge.</p>
+<div class="paragraph">
+<p><em>Merk: Konsolidering kan bidra til reduserte kostnader og økt samhandlingsevne, men det kan virke hemmende for innovasjon dersom det gjøres for sterke bindinger til bestemte løsninger og teknologier.</em></p>
+</div>
 </li>
+<li>
+<p>Digdir vil legge opp til at utbredelse av eMelding skjer i konkurranse med alternative arkitekturer, teknologier og løsninger.</p>
+</li>
+<li>
+<p>Digdir vil gi veiledning til valg mellom alternative mønstre, teknologier og løsninger for ulike behov og krav til funksjonalitet eller tjenestekvalitet, uten særskilte preferanser for eMelding.</p>
+</li>
+<li>
+<p>Digdir vil følge opp  prinsippet fra eDelivery om «no roaming fees». Dette innebærer blant annet at det ikke kan påløpe transaksjonskostnader for mottak av meldinger.</p>
+</li>
+<li>
+<p>Digdir forholder seg til gjeldende politiske føringer om brukerbetaling og  involvering av markedet for levering av løsninger og tjenester. Dette gjelder for eMeldings-nettverket på lik linje med andre fellesløsninger.</p>
+</li>
+<li>
+<p>Digdir vil innføre ny arkitektur for eFormidling basert på eMelding for å gi brukerne mulighet til smertefri overgang til andre løsningsleverandører.</p>
+</li>
+<li>
+<p>Digdir vil fortsette å støtte eMelding gjennom fellesløsninger for adresse- og kapabilitetsoppslag, med utgangspunkt i dagens ELMA-løsning.</p>
+</li>
+<li>
+<p>Digdir vil søke etablering av forskrifter, metoder, organisasjon, fellesløsninger og veiledere som i minst mulig grad er teknologiavhengige. Eksempel: Heller enn å stille krav til bruk av spesifikke løsninger, bør det stilles spesifikke krav til løsningene, f.eks. til informasjonssikkerhet, sporing og etterlevelse.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Det er på sikt ønskelig å få til en konsolidering av løsningslandskapet for meldingsutveksling på tvers av sektorene i Norge. Digdir anser eMelding som en mulig faktor i dette, men har inntil videre ikke planer om harde føringer.</p>
 </li>
@@ -427,8 +498,9 @@ eOppslag benyttes.»</em></p>
 </ul>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_hva_er_emelding"><a class="anchor" href="#_hva_er_emelding"></a><a class="link" href="#_hva_er_emelding">5.2. Hva er eMelding?</a></h3>
+<h3 id="_hva_er_emelding_2"><a class="anchor" href="#_hva_er_emelding_2"></a><a class="link" href="#_hva_er_emelding_2">6.2. Hva er eMelding?</a></h3>
 <div class="paragraph">
 <p>eMelding som referansearkitektur bygger på <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for sikker meldingsutveksling mellom ulike aktører og teknologier over en felles infrastruktur.</p>
 </div>
@@ -471,7 +543,7 @@ eOppslag benyttes.»</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_egenskaper"><a class="anchor" href="#_egenskaper"></a><a class="link" href="#_egenskaper">5.3. Egenskaper</a></h3>
+<h3 id="_egenskaper"><a class="anchor" href="#_egenskaper"></a><a class="link" href="#_egenskaper">6.3. Egenskaper</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -500,16 +572,16 @@ eOppslag benyttes.»</em></p>
 <p>ISO-standard</p>
 </li>
 <li>
-<p>Støtte for store meldinger</p>
+<p>Støtte for store meldinger??? NB: ikek i eGovernment</p>
 </li>
 <li>
-<p>Støtte for</p>
+<p>QoS: Rask leverig, men ikke garanti, ref. eGovernment</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_brukstilfeller"><a class="anchor" href="#_brukstilfeller"></a><a class="link" href="#_brukstilfeller">5.4. Brukstilfeller</a></h3>
+<h3 id="_brukstilfeller"><a class="anchor" href="#_brukstilfeller"></a><a class="link" href="#_brukstilfeller">6.4. Brukstilfeller</a></h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -525,16 +597,19 @@ Her nevnes de viktigste brukstilfellene for eMelding, isolert sett. Det arbeides
 <div class="ulist">
 <ul>
 <li>
-<p>eMelding kan</p>
+<p>eMelding kan brukes til "alt", men &#8230;&#8203;</p>
 </li>
 <li>
-<p>Ikke stålkonttroll på hvem du skal kommunisere med, trenger adresseoppslag og kapabilititetsoppslag</p>
+<p>"Ikke stålkonttroll" på hvem du skal kommunisere med, trenger adresseoppslag og kapabilititetsoppslag</p>
+</li>
+<li>
+<p>Anbefaling: Offentlig saksbehandling</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_alternativer"><a class="anchor" href="#_alternativer"></a><a class="link" href="#_alternativer">5.5. Alternativer</a></h3>
+<h3 id="_alternativer"><a class="anchor" href="#_alternativer"></a><a class="link" href="#_alternativer">6.5. Alternativer</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -549,7 +624,7 @@ Her nevnes de viktigste brukstilfellene for eMelding, isolert sett. Det arbeides
 </div>
 </div>
 <div class="sect1">
-<h2 id="_interessenter"><a class="anchor" href="#_interessenter"></a><a class="link" href="#_interessenter">6. Interessenter</a></h2>
+<h2 id="_interessenter"><a class="anchor" href="#_interessenter"></a><a class="link" href="#_interessenter">7. Interessenter</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -561,7 +636,7 @@ Her nevnes de viktigste brukstilfellene for eMelding, isolert sett. Det arbeides
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forskrifter_lover_og_regler"><a class="anchor" href="#_forskrifter_lover_og_regler"></a><a class="link" href="#_forskrifter_lover_og_regler">7. Forskrifter, lover og regler</a></h2>
+<h2 id="_forskrifter_lover_og_regler"><a class="anchor" href="#_forskrifter_lover_og_regler"></a><a class="link" href="#_forskrifter_lover_og_regler">8. Forskrifter, lover og regler</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Bilaterale avtaler vs. fellesskap</p>
@@ -581,7 +656,7 @@ Offentleglova</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_forslag_til_tiltak_for_utbredelse_veiledere_støtteapparat_forvaltningsregime_fellesløsninger"><a class="anchor" href="#_forslag_til_tiltak_for_utbredelse_veiledere_støtteapparat_forvaltningsregime_fellesløsninger"></a><a class="link" href="#_forslag_til_tiltak_for_utbredelse_veiledere_støtteapparat_forvaltningsregime_fellesløsninger">8. Forslag til tiltak for utbredelse (veiledere, støtteapparat, forvaltningsregime, fellesløsninger).</a></h2>
+<h2 id="_forslag_til_tiltak_for_utbredelse_veiledere_støtteapparat_forvaltningsregime_fellesløsninger"><a class="anchor" href="#_forslag_til_tiltak_for_utbredelse_veiledere_støtteapparat_forvaltningsregime_fellesløsninger"></a><a class="link" href="#_forslag_til_tiltak_for_utbredelse_veiledere_støtteapparat_forvaltningsregime_fellesløsninger">9. Forslag til tiltak for utbredelse (veiledere, støtteapparat, forvaltningsregime, fellesløsninger).</a></h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -591,7 +666,7 @@ Offentleglova</pre>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_veiledere_generelt"><a class="anchor" href="#_veiledere_generelt"></a><a class="link" href="#_veiledere_generelt">8.1. Veiledere generelt</a></h3>
+<h3 id="_veiledere_generelt"><a class="anchor" href="#_veiledere_generelt"></a><a class="link" href="#_veiledere_generelt">9.1. Veiledere generelt</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -610,7 +685,7 @@ Offentleglova</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_veiledere_spesifikt_for_emeldingedelivery"><a class="anchor" href="#_veiledere_spesifikt_for_emeldingedelivery"></a><a class="link" href="#_veiledere_spesifikt_for_emeldingedelivery">8.2. Veiledere spesifikt for eMelding/eDelivery</a></h3>
+<h3 id="_veiledere_spesifikt_for_emeldingedelivery"><a class="anchor" href="#_veiledere_spesifikt_for_emeldingedelivery"></a><a class="link" href="#_veiledere_spesifikt_for_emeldingedelivery">9.2. Veiledere spesifikt for eMelding/eDelivery</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -624,29 +699,29 @@ Rune: Snu opp ned!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_støtteapparat"><a class="anchor" href="#_støtteapparat"></a><a class="link" href="#_støtteapparat">8.3. Støtteapparat</a></h3>
+<h3 id="_støtteapparat"><a class="anchor" href="#_støtteapparat"></a><a class="link" href="#_støtteapparat">9.3. Støtteapparat</a></h3>
 <div class="paragraph">
 <p>Forvaltningsregime</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_felles_datamodeller"><a class="anchor" href="#_felles_datamodeller"></a><a class="link" href="#_felles_datamodeller">8.4. Felles datamodeller</a></h3>
+<h3 id="_felles_datamodeller"><a class="anchor" href="#_felles_datamodeller"></a><a class="link" href="#_felles_datamodeller">9.4. Felles datamodeller</a></h3>
 <div class="paragraph">
 <p>Sjekk NIEM!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_standardisering_av_meldinger_og_koreografier"><a class="anchor" href="#_standardisering_av_meldinger_og_koreografier"></a><a class="link" href="#_standardisering_av_meldinger_og_koreografier">8.5. Standardisering av meldinger (og koreografier)</a></h3>
+<h3 id="_standardisering_av_meldinger_og_koreografier"><a class="anchor" href="#_standardisering_av_meldinger_og_koreografier"></a><a class="link" href="#_standardisering_av_meldinger_og_koreografier">9.5. Standardisering av meldinger (og koreografier)</a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="_innmelding_i_fellesskapcommunity"><a class="anchor" href="#_innmelding_i_fellesskapcommunity"></a><a class="link" href="#_innmelding_i_fellesskapcommunity">8.6. Innmelding i fellesskap/community</a></h3>
+<h3 id="_innmelding_i_fellesskapcommunity"><a class="anchor" href="#_innmelding_i_fellesskapcommunity"></a><a class="link" href="#_innmelding_i_fellesskapcommunity">9.6. Innmelding i fellesskap/community</a></h3>
 <div class="paragraph">
 <p>F.eks. PEPPOL/OPenPeppol</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_aksesspunktleverandører"><a class="anchor" href="#_aksesspunktleverandører"></a><a class="link" href="#_aksesspunktleverandører">8.7. Aksesspunktleverandører</a></h3>
+<h3 id="_aksesspunktleverandører"><a class="anchor" href="#_aksesspunktleverandører"></a><a class="link" href="#_aksesspunktleverandører">9.7. Aksesspunktleverandører</a></h3>
 <div class="paragraph">
 <p>Se PEPPOL.eu</p>
 </div>
@@ -654,7 +729,7 @@ Rune: Snu opp ned!</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_skisse_til_rammeverk_for_forvaltning_av_veiledninger_til_valg_mellom_alternative_mønstre_og_løsninger"><a class="anchor" href="#_skisse_til_rammeverk_for_forvaltning_av_veiledninger_til_valg_mellom_alternative_mønstre_og_løsninger"></a><a class="link" href="#_skisse_til_rammeverk_for_forvaltning_av_veiledninger_til_valg_mellom_alternative_mønstre_og_løsninger">9. Skisse til rammeverk for forvaltning av veiledninger til valg mellom alternative mønstre og løsninger</a></h2>
+<h2 id="_skisse_til_rammeverk_for_forvaltning_av_veiledninger_til_valg_mellom_alternative_mønstre_og_løsninger"><a class="anchor" href="#_skisse_til_rammeverk_for_forvaltning_av_veiledninger_til_valg_mellom_alternative_mønstre_og_løsninger"></a><a class="link" href="#_skisse_til_rammeverk_for_forvaltning_av_veiledninger_til_valg_mellom_alternative_mønstre_og_løsninger">10. Skisse til rammeverk for forvaltning av veiledninger til valg mellom alternative mønstre og løsninger</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Valg av arkitekturmønstre og løsninger for datautveksling/samhandling må gjøres ut fra forretningsmessige behov og kvalitetskrav.</p>
@@ -665,7 +740,7 @@ Rune: Snu opp ned!</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_johannes_valg_å_ta_status"><a class="anchor" href="#_johannes_valg_å_ta_status"></a><a class="link" href="#_johannes_valg_å_ta_status">10. Johannes, Valg å ta, status</a></h2>
+<h2 id="_johannes_valg_å_ta_status"><a class="anchor" href="#_johannes_valg_å_ta_status"></a><a class="link" href="#_johannes_valg_å_ta_status">11. Johannes, Valg å ta, status</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>fordel: adhoc, frdige avtaler</p>
@@ -687,6 +762,27 @@ Altinn</p>
 </div>
 <div class="paragraph">
 <p>eGovernment domene, annex 5, dpi + eformidling, men med mulighet for n</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erik_foreløpige_notater"><a class="anchor" href="#_erik_foreløpige_notater"></a><a class="link" href="#_erik_foreløpige_notater">12. Erik, foreløpige notater</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Få med at vi i dagens bekrivelse av referansearkitektur for meldingsutveksling (one-way push), beskriver det generiske konseptet for eDelivery, slik at</p>
+</li>
+<li>
+<p>Skill mellom fordeler som gjelder eMelding spesifikt, dvs. AS4 og PEPPOL, vs. avtalefelleskap/segmentansvarlig og andre protokoller enn AS4</p>
+</li>
+<li>
+<p>List de API-baserte mønstrene som er tatt fram i eDelivery-prosjektet</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>*</p>
 </div>
 </div>
 </div>

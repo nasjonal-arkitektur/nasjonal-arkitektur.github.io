@@ -294,6 +294,16 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </ul>
 </div>
 </li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Prosessens levetid</strong></p>
+<div class="paragraph">
+<p>Relevant for feilhåndtering: Kortlevde prosesser med innebygd transaksjonssikkerhet kan tilbakerulles gjennom generelle mekanismer, f.eks. slik dette støttes av <em>rollback</em> i relasjonsdatabaser. Langlevde prosesser krever skreddersydde <em>kompensasjonsaksjoner</em>.</p>
+</div>
+</li>
 <li>
 <p><strong>Ansvarsfordeling</strong></p>
 <div class="paragraph">
@@ -305,23 +315,32 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </div>
 <div class="sect2">
 <h3 id="_egenskaper_relatert_til_teknisk_samhandlingsevne"><a class="anchor" href="#_egenskaper_relatert_til_teknisk_samhandlingsevne"></a><a class="link" href="#_egenskaper_relatert_til_teknisk_samhandlingsevne">3.3. Egenskaper relatert til teknisk samhandlingsevne</a></h3>
+<div class="sect3">
+<h4 id="_utvekslingsprotokoller"><a class="anchor" href="#_utvekslingsprotokoller"></a><a class="link" href="#_utvekslingsprotokoller">3.3.1. Utvekslingsprotokoller</a></h4>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Utvekslingsprotokoller</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Synkron eller asynkron kommunikasjon</p>
+<p>Synkron eller asynkron kmmunikasjon</p>
 </li>
 <li>
 <p>Aktuell infrastruktur</p>
 </li>
 </ul>
 </div>
-</li>
+</div>
+<div class="sect3">
+<h4 id="_tjenestekvalitet_qos"><a class="anchor" href="#_tjenestekvalitet_qos"></a><a class="link" href="#_tjenestekvalitet_qos">3.3.2. Tjenestekvalitet (QoS)</a></h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><em>QoS refers to the maintenance of the session once established and covers aspects such as throughput, error recovery/detection.</em></p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><strong>Leveringstid for meldinger</strong> (kvalitetskrav)</p>
+<p><strong>Leveringstid for meldinger</strong></p>
 <div class="paragraph">
 <p>Garantert leveringstid vs. krav til leveringstid</p>
 </div>
@@ -330,7 +349,7 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </div>
 </li>
 <li>
-<p><strong>Responstid for spørringer</strong> (kvalitetskrav)</p>
+<p><strong>Responstid for spørringer</strong></p>
 <div class="paragraph">
 <p>Garantert responstid vs. krav til responstid</p>
 </div>
@@ -339,7 +358,7 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </div>
 </li>
 <li>
-<p><strong>Leveringssikkerhet</strong> (kvalitetskrav)</p>
+<p><strong>Leveringssikkerhet</strong></p>
 <div class="paragraph">
 <p>Grad av garantert levering (uten behov for tilbakemelding på <em>applikasjonslaget</em>)</p>
 </div>
@@ -349,15 +368,35 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </li>
 </ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_tjenestegrad_gos"><a class="anchor" href="#_tjenestegrad_gos"></a><a class="link" href="#_tjenestegrad_gos">3.3.3. Tjenestegrad (GoS)</a></h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><em>GoS refers to the ability to access and establish services and includes the time
+required to establish sessions, system reliability (assessment of mean time
+before failure (MTBF) and meant time to repair (MTTR) for example) and
+recovery and system resilience (i.e. how it degrades).</em></p>
+</div>
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Prosessens levetid</strong></p>
-<div class="paragraph">
-<p>Relevant for feilhåndtering: Kortlevde prosesser med innebygd transaksjonssikkerhet kan tilbakerulles gjennom generelle mekanismer, f.eks. slik dette støttes av <em>rollback</em> i relasjonsdatabaser. Langlevde prosesser krever skreddersydde <em>kompensasjonsaksjoner</em>.</p>
-</div>
+<p>Service establishment time</p>
+</li>
+<li>
+<p>System reliability</p>
+</li>
+<li>
+<p>System MTBF</p>
+</li>
+<li>
+<p>System MTTR</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 <div class="sect2">
