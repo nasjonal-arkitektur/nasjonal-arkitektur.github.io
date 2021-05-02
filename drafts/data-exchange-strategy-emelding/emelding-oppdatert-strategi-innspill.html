@@ -207,58 +207,36 @@
 <h2 id="_bakgrunn"><a class="anchor" href="#_bakgrunn"></a><a class="link" href="#_bakgrunn">2. Bakgrunn</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>De siste års arbeid med arkitekturer og strategier for datautveksling bygger på Difis rapporter om meldingsutveksling, ref.
+<p>eMelding som referansearkitektur er en norsk versjon av <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for sikker, asynkron meldingsutveksling mellom ulike aktører og teknologier over en felles infrastruktur, slik dette ble beskrevet i <a href="https://github.com/difi/nasjonal_arkitektur/tree/master/nab_referanse_arkitekturer_emelding/files">forslag til referansearkitektur og strategi for eMelding</a> i 2018; dvs. med en knytning til 4-hjørnersmodellen og PEPPOL-nettverket.</p>
+</div>
+<div class="paragraph">
+<p>Forslaget om strategi for eMelding følger tidligere Difi-rapporter om meldingsutveksling, ref.
 <a href="https://www.digdir.no/digitalisering-og-samordning/meldingsutveksling-internt-i-forvaltninga/1376">2013:13
 - Meldingsutveksling internt i forvaltninga</a> og
 <a href="https://www.digdir.no/digitalisering-og-samordning/losning-meldingsutveksling-i-offentlig-sektor/1390">2015:3
 - Løsning for meldingsutveksling i offentlig sektor</a>.</p>
 </div>
 <div class="paragraph">
-<p>Sistnevnte rapport konkluderte blant annet med at det på kort sikt ikke er realistisk å konsolidere transportinfrastrukturenes grensesnitt gjennom standardisering eller gjennom sammenslåing av transportinfrastrukturer. Denne rapporten anbefalte også at krav om konsolidering av meldingsplattformer og grensesnitt inntil videre ble håndtert gjennom en frittstående integrasjonsmodul; eller «integrasjonspunktet», nå gitt av fellesløsningen eFormidling. Det ble ikke sett som et reelt alternativ å velge én transportinfrastruktur, men det ble anbefalt å "<em>følge med på utviklingen av CEF eDelivery DSI og påse at arkitekturvalg i den nasjonale arkitekturen for meldingsutveksling er i samsvar med valgene som blir gjort på det europeiske nivået</em>".</p>
+<p>Sistnevnte rapport konkluderte blant annet med at det på kort sikt ikke er realistisk å konsolidere transportinfrastrukturenes grensesnitt gjennom standardisering eller gjennom sammenslåing av transportinfrastrukturer. Denne rapporten anbefalte også at krav om konsolidering av meldingsplattformer og grensesnitt inntil videre ble håndtert gjennom en frittstående integrasjonsmodul; eller «integrasjonspunktet», nå gitt av fellesløsningen eFormidling.
+Det ble ikke sett som et reelt alternativ å velge én transportinfrastruktur, men det ble anbefalt å "<em>følge med på utviklingen av CEF eDelivery DSI og påse at arkitekturvalg i den nasjonale arkitekturen for meldingsutveksling er i samsvar med valgene som blir gjort på det europeiske nivået</em>".</p>
 </div>
 <div class="paragraph">
-<p>eMelding som referansearkitektur er en norsk versjon av <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for sikker meldingsutveksling mellom ulike aktører og teknologier over en felles infrastruktur, slik dette ble beskrevet i <a href="https://github.com/difi/nasjonal_arkitektur/tree/master/nab_referanse_arkitekturer_emelding/files">forslag til strategi om eMelding i 2018</a>, med en knytning til 4-hjørnersmodellen og <a href="https://peppol.eu/what-is-peppol/">PEPPOL-nettverket</a>.</p>
+<p>Ved introduksjonen av referansearkitektur for eMelding, basert på CEF eDelivey, så en for seg at dette kunne gi en vei til konsolidering av løsningslandskapet for meldingsutveksling i Norge, og at at "integrasjonspunktet" etterhvert kunne fases ut.</p>
 </div>
 <div class="paragraph">
-<p>Teknisk beskrivelse av referansearkitektur for
-eMelding ble, sammen med et forslag til strategi, sendt på høring av Difi våren 2018. En kopi av de aktuelle
-dokumentene finnes <a href="https://github.com/difi/nasjonal_arkitektur/tree/master/nab_referanse_arkitekturer_emelding/files">her</a>.
-Responsen var overveiende positiv, men det kom også noen kritiske kommentarer.</p>
+<p>Responsen på nevnte høring om eMelding var overveiende positiv, men det kom også noen kritiske kommentarer. Blant kommentarene som gikk igjen, kan nevnes skepsis til for harde føringer om bruk, samt bekymringer rundt kompleksitet og kostnader.</p>
 </div>
 <div class="paragraph">
-<p><em>Blant de kommentarene som gikk igjen i <a href="https://github.com/difi/nasjonal_arkitektur/tree/master/nab_referanse_arkitekturer_emelding/files">høringen om eMelding (2018)</a>, nevnes her
-spesielt (fritt gjengitt):</em></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>Problematisk å forholde seg til en strategi om en bestemt type
-meldingsutveksling (asynkron meldingsutveksling med
-«4-hjørners-modellen»), uten at det settes i sammenheng med alternative
-mønstre for meldingsutveksling eller datautveksling mer generelt.</em></p>
-</li>
-<li>
-<p><em>Veiledning og anbefalinger foretrekkes framfor sterke føringer og
-standardisering.</em></p>
-</li>
-<li>
-<p><em>Komplekst og uoversiktlig kostnadsbilde.</em></p>
-</li>
-</ul>
+<p>Gjeldende føringer finnes i form av en anbefaling i  <a href="https://www.regjeringen.no/no/dokumenter/digitaliseringsrundskrivet/id2826781/">Digitaliseringsrundskrivet</a>, datert 05.01.2021: <em>«Ved nyutvikling av løsninger for informasjonsutveksling, <strong>bør</strong> referansearkitekturene for eMelding og eOppslag benyttes.»</em>; med referanse til en oppdatert beskrivelse av eMelding under en større overskrift om referansearkitektur for datautveksling.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://www.regjeringen.no/no/dokumenter/digitaliseringsrundskrivet/id2683652/">Digitaliseringsrundskrivet</a>,
-datert 20.12.2019, sier: <em>«Ved nyutvikling av løsninger for
-informasjonsutveksling, <strong>bør</strong> referansearkitekturene for eMelding og eOppslag benyttes.»</em></p>
+<p><a href="https://www.digdir.no/nasjonal-arkitektur/referansearkitekturer/2131" class="bare">https://www.digdir.no/nasjonal-arkitektur/referansearkitekturer/2131</a>.</p>
 </div>
 <div class="paragraph">
-<p>Anbefalingen om bruk av eMelding har i praksis vist seg å være vanskelig å forholde seg til, utenom e-handelsområdet, der det lenge har fungert godt. En viktig grunn  til dette har vært manglende støtte for å etablere nye meldingsformater innen andre områder en e-handel.</p>
+<p>Denne anbefalingen om bruk av eMelding har i praksis vist seg å være vanskelig å forholde seg til, utenom e-handelsområdet, der det lenge har fungert godt. En viktig grunn  til dette har vært manglende støtte for å etablere nye meldingsformater innen andre områder en e-handel.</p>
 </div>
 <div class="paragraph">
 <p>I dagens situasjon (april 2021) finnes noen nye momenter å forholde seg til, og det er behov for å oppdatere strategien for eMelding, både isolert sett og i et større bilde.</p>
-</div>
-<div class="paragraph">
-<p>Dette forslaget</p>
 </div>
 </div>
 </div>
