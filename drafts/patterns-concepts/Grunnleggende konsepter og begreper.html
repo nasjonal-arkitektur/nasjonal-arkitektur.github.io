@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Forretningsmessige samhandlingsmønstre :: Nasjonalt arkitekturverksted</title>
-    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-use-cases/Forretningsmessige%20samhandlingsmønstre.html">
+    <title>Grunnleggende konsepter og begreper :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-concepts/Grunnleggende%20konsepter%20og%20begreper.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -194,41 +194,55 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="Forretningsmessige%20samhandlingsmønstre.html">Forretningsmessige samhandlingsmønstre</a></li>
+    <li><a href="Grunnleggende%20konsepter%20og%20begreper.html">Grunnleggende konsepter og begreper</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-use-cases/pages/Forretningsmessige%20samhandlingsmønstre.adoc">Rediger kilde</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-concepts/pages/Grunnleggende%20konsepter%20og%20begreper.adoc">Rediger kilde</a></div>
   </div>
 <article class="doc"><a name="section-top"></a>
-<h1 class="page">Forretningsmessige samhandlingsmønstre</h1>
+<h1 class="page">Grunnleggende konsepter og begreper</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_samhandlingsmønstre_de_viktigste">1. Samhandlingsmønstre - de viktigste</a></li>
+<li><a href="#_grunnleggende_modell_for_meldingsutveksling">1. Grunnleggende modell for meldingsutveksling</a></li>
+<li><a href="#_meldinger_grunnleggende_objektmodell">2. Meldinger - grunnleggende objektmodell</a></li>
 </ul>
 </div>
-<div id="preamble">
+<div class="sect1">
+<h2 id="_grunnleggende_modell_for_meldingsutveksling"><a class="anchor" href="#_grunnleggende_modell_for_meldingsutveksling"></a>1. Grunnleggende modell for meldingsutveksling</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Intro&#8230;&#8203;</p>
+<p>Samhandlingsaktører kommuniserer ved å sende meldinger via sine aksesspunkter til den tekniske  meldingsinfrastrukturen.
+Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av teknologi i kommunikasjonsinfrastrukturen.</p>
+</div>
+<div class="paragraph">
+<p>I beskrivelsen av datautvekslingsmønstre, tas det utgangspunkt i en slik logisk meldingsflyt.</p>
+</div>
+<div class="paragraph">
+<p>​Det tas f.eks. ikke stilling til om meldinger sendes synkront eller asynkront. Aktuelle kommunikasjonsstandarder kan f.eks. være ebXML, HTTP, REST, GraphQL eller SPARQL. Det kan dreie seg on felles infrastruktur og punkt-til-punkt kommunikasjon, eller det kan være en mer kompleks infrastruktur som arter seg ulikt på hver side.</p>
+</div>
+<div class="paragraph">
+<p>Dette er ikke det samme som å si at valg av teknologi og løsninger ikke er viktig. Aktuelle krav til tjenestekvalitet m.m. bestemmer hvilke teknologier og løsninger som passer.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Grunnleggende%20modell%20for%20meldingsutveksling.png" alt="Grunnleggende modell for meldingsutveksling image">
+</div>
+<div class="title">Figure 1. Grunnleggende modell for meldingsutveksling</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_samhandlingsmønstre_de_viktigste"><a class="anchor" href="#_samhandlingsmønstre_de_viktigste"></a>1. Samhandlingsmønstre - de viktigste</h2>
+<h2 id="_meldinger_grunnleggende_objektmodell"><a class="anchor" href="#_meldinger_grunnleggende_objektmodell"></a>2. Meldinger - grunnleggende objektmodell</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Narrativ&#8230;&#8203;</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Samhandlingsmønstre%20-%20de%20viktigste.png" alt="Samhandlingsmønstre - de viktigste image">
+<img src="_images/Meldinger%20-%20grunnleggende%20objektmodell.png" alt="Meldinger - grunnleggende objektmodell image">
 </div>
-<div class="title">Figure 1. Samhandlingsmønstre - de viktigste</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="Samhandlingsmønstre%20-%20de%20viktigste.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
+<div class="title">Figure 2. Meldinger - grunnleggende objektmodell</div>
 </div>
 </div>
 </div>
