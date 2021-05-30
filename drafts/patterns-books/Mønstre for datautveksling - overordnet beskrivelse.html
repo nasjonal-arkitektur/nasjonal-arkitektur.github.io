@@ -214,10 +214,9 @@
 </li>
 <li><a href="#_grunnleggende_konsepter_og_begreper">2. Grunnleggende konsepter og begreper</a>
 <ul class="sectlevel2">
-<li><a href="#_generelt">2.1. Generelt</a></li>
-<li><a href="#_sentrale_begreper">2.2. Sentrale begreper</a></li>
-<li><a href="#_grunnleggende_modell_for_datautveksling">2.3. Grunnleggende modell for datautveksling</a></li>
-<li><a href="#_meldinger_basis_objektmodell">2.4. Meldinger - basis objektmodell</a></li>
+<li><a href="#_sentrale_begreper">2.1. Sentrale begreper</a></li>
+<li><a href="#_grunnleggende_modell_for_datautveksling">2.2. Grunnleggende modell for datautveksling</a></li>
+<li><a href="#_meldinger_basis_objektmodell">2.3. Meldinger - basis objektmodell</a></li>
 </ul>
 </li>
 <li><a href="#_samhandlingsmønstre">3. Samhandlingsmønstre</a>
@@ -271,7 +270,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Mon May 31 2021 00:51:21 GMT+0200 (CEST)</pre>
+<pre>Mon May 31 2021 00:58:12 GMT+0200 (CEST)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -365,35 +364,7 @@
 <h2 id="_grunnleggende_konsepter_og_begreper"><a class="anchor" href="#_grunnleggende_konsepter_og_begreper"></a>2. Grunnleggende konsepter og begreper</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_generelt"><a class="anchor" href="#_generelt"></a>2.1. Generelt</h3>
-<div class="paragraph">
-<p>Lærebøker, artikler og blogger fra akademia, produktleverandører og frittstående forfattere gir ulike framstillinger av konsepter og begreper.</p>
-</div>
-<div class="paragraph">
-<p>I boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>, skilles det mellom følgende grunnleggende intragrasjonsstiler (med en kortfattet omskriving av betydningen):</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Messaging. Asynkron meldingsutveksling.</p>
-</li>
-<li>
-<p>Remote Procedure Invocation. Synkrone API-kall.</p>
-</li>
-<li>
-<p>File transfer. Filoverføring. F.eks. via FTP.</p>
-</li>
-<li>
-<p>Shared database integration. F.eks. via en datasjø.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Her avgrenses</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_sentrale_begreper"><a class="anchor" href="#_sentrale_begreper"></a>2.2. Sentrale begreper</h3>
+<h3 id="_sentrale_begreper"><a class="anchor" href="#_sentrale_begreper"></a>2.1. Sentrale begreper</h3>
 <div class="paragraph">
 <p>Meldingsutveksling er en form for datautveksling som transporterer pakker med meldingsinnhold mellom avsendere og mottakere ut fra en avtalt eller ad hoc koreografi.</p>
 </div>
@@ -418,7 +389,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_grunnleggende_modell_for_datautveksling"><a class="anchor" href="#_grunnleggende_modell_for_datautveksling"></a>2.3. Grunnleggende modell for datautveksling</h3>
+<h3 id="_grunnleggende_modell_for_datautveksling"><a class="anchor" href="#_grunnleggende_modell_for_datautveksling"></a>2.2. Grunnleggende modell for datautveksling</h3>
 <div class="paragraph">
 <p>Samhandlingsaktører kommuniserer ved å sende meldinger via sine aksesspunkter til den tekniske  meldingsinfrastrukturen.
 Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av teknologi i kommunikasjonsinfrastrukturen.</p>
@@ -433,7 +404,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <p>Dette er ikke det samme som å si at valg av teknologi og løsninger ikke er viktig. Aktuelle krav til tjenestekvalitet m.m. bestemmer hvilke teknologier og løsninger som passer.</p>
 </div>
 <div class="paragraph">
-<p>Modellen som vises her kan ses som en forenklet utgave av lagdelte modeller som <a href="https://no.wikipedia.org/wiki/OSI-modellen">OSI-modellen</a> (7 lag) eller TCP/IP (4 lag).</p>
+<p>Modellen som vises her kan ses som en forenklet utgave av lagdelte modeller som {OSI-modellen} (7 lag) eller TCP/IP (4 lag).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -443,7 +414,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 </div>
 </div>
 <div class="sect2">
-<h3 id="_meldinger_basis_objektmodell"><a class="anchor" href="#_meldinger_basis_objektmodell"></a>2.4. Meldinger - basis objektmodell</h3>
+<h3 id="_meldinger_basis_objektmodell"><a class="anchor" href="#_meldinger_basis_objektmodell"></a>2.3. Meldinger - basis objektmodell</h3>
 <div class="paragraph">
 <p>En elektronisk melding kan ses på som en type brev, med innhold pakket i en konvolutt med adresse eller annen informasjon som grunnlag for ruting av innholdet til en eller flere mottakere.  Som alternativ til å inkludere alt relevant innhold i selve meldingen, kan meldingen gi referanser til meldingsrelaterte data som mottakerne eventuelt kan foespørre.</p>
 </div>
@@ -614,7 +585,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="sect3">
 <h4 id="_publisering_fra_en_til_flere_ukjente_via_felles_kø"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø"></a>4.6.1. Publisering fra en til flere ukjente via felles kø</h4>
 <div class="paragraph">
-<p>Merk: Det tas ikek her stilling til om det er pull eller push mot mottakerne</p>
+<p>Merk: Det tas ikke her stilling til om det er pull eller push mot mottakerne.</p>
 </div>
 <div class="imageblock">
 <div class="content">
