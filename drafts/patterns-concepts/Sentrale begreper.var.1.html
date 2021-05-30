@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Generelt :: Nasjonalt arkitekturverksted</title>
-    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-concepts/Generelt.html">
+    <title>Sentrale begreper :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-concepts/Sentrale%20begreper.var.1.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -194,37 +194,172 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="Generelt.html">Generelt</a></li>
+    <li><a href="Sentrale%20begreper.var.1.html">Sentrale begreper</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-concepts/pages/Generelt.adoc">Rediger kilde</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-concepts/pages/Sentrale%20begreper.var.1.adoc">Rediger kilde</a></div>
   </div>
 <article class="doc"><a name="section-top"></a>
-<h1 class="page">Generelt</h1>
+<h1 class="page">Sentrale begreper</h1>
 <div class="paragraph">
-<p>Lærebøker, artikler og blogger fra akademia, produktleverandører og frittstående forfattere gir ulike framstillinger av konsepter og begreper.</p>
+<p>Meldingsutveksling er en form for datautveksling som transporterer pakker med meldingsinnhold mellom avsendere og mottakere ut fra en avtalt eller ad hoc koreografi.</p>
 </div>
 <div class="paragraph">
-<p>I boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>, skilles det mellom følgende grunnleggende intragrasjonsstiler (med en kortfattet omskriving av betydningen):</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Messaging. Asynkron meldingsutveksling.</p>
-</li>
-<li>
-<p>Remote Procedure Invocation. Synkrone API-kall.</p>
-</li>
-<li>
-<p>File transfer. Filoverføring. F.eks. via FTP.</p>
-</li>
-<li>
-<p>Shared database integration. F.eks. via en datasjø.</p>
-</li>
-</ol>
+<p>Litteraturen er delt i synet på om meldingsutveksling kun drier seg om asynkron kommunikasjon. Her fastholdes at meldingsutveksling støtter både asynkron og synkron kommunikasjon. Dette ses på som en egenskap ved løsningen, på linje med andre egenskaper, som f.eks. leveringstid.</p>
 </div>
 <div class="paragraph">
-<p>Her avgrenses</p>
+<p>Sett fra mottaker, kommer meldinger via meldingskanaler. Kanaler kan være realisert på ulike måter. Her er det skilt mellom begrepene kø, hendelessliste og blockchain.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Sentrale%20begreper.png" alt="Sentrale begreper image">
+</div>
+<div class="title">Figure 1. Sentrale begreper</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vinduet om det er nytt)
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Elementer i view for Sentrale begreper</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingskanal</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emne</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subjekt</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingsutveksling</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kommunikasjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelse</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesstrøm</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aynkrom kommuniikasjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Synkron kommunikasjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingkø</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Blockchain</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kjente/ukjente mottakere</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautveksling</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Koreografi</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kommando</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dokument</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Melding</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>En melding er en inforrmasjonspakke som sendes fra en avsender til en eller flere mottakere.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingsinnhold</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Meldingsinnholdet bærer informasjon fra avsender til mottaker.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingskonvolutt</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Meldingskonvolutten innholder informasjon for ruting av meldinger til aktuelle mottakere i kommunikasjonsinfrastrukturen, samt parametre som f.eks. korrelasjons-id for å knytte sammen meldinger som er del av samme prosessinstans.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avsender</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mottaker</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesliste</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sidebarblock">
+<div class="content">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vinduet om det er nytt)
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </article>
 <aside class="article-aside hidden" role="navigation">

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Generelt :: Nasjonalt arkitekturverksted</title>
-    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-concepts/Generelt.html">
+    <title>Viktige utvekslingsmønstre - oversikt :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-selected-patterns/Viktige%20utvekslingsmønstre%20-%20oversikt.var.1.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -194,37 +194,143 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="Generelt.html">Generelt</a></li>
+    <li><a href="Viktige%20utvekslingsmønstre%20-%20oversikt.var.1.html">Viktige utvekslingsmønstre - oversikt</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-concepts/pages/Generelt.adoc">Rediger kilde</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-selected-patterns/pages/Viktige%20utvekslingsmønstre%20-%20oversikt.var.1.adoc">Rediger kilde</a></div>
   </div>
 <article class="doc"><a name="section-top"></a>
-<h1 class="page">Generelt</h1>
-<div class="paragraph">
-<p>Lærebøker, artikler og blogger fra akademia, produktleverandører og frittstående forfattere gir ulike framstillinger av konsepter og begreper.</p>
+<h1 class="page">Viktige utvekslingsmønstre - oversikt</h1>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Viktige%20utvekslingsmønstre%20-%20oversikt.png" alt="Viktige utvekslingsmønstre - oversikt image">
+</div>
+<div class="title">Figure 1. Viktige utvekslingsmønstre - oversikt</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vinduet om det er nytt)
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Elementer i view for Viktige utvekslingsmønstre - oversikt</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viktige utvekslingsmønstre</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere ukjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret kombinerer mønstrene <em>publish-subscribe</em> og <em>Forsendelse - flere til en</em>.</p>
 </div>
 <div class="paragraph">
-<p>I boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>, skilles det mellom følgende grunnleggende intragrasjonsstiler (med en kortfattet omskriving av betydningen):</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Messaging. Asynkron meldingsutveksling.</p>
-</li>
-<li>
-<p>Remote Procedure Invocation. Synkrone API-kall.</p>
-</li>
-<li>
-<p>File transfer. Filoverføring. F.eks. via FTP.</p>
-</li>
-<li>
-<p>Shared database integration. F.eks. via en datasjø.</p>
-</li>
-</ol>
+<p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
 </div>
 <div class="paragraph">
-<p>Her avgrenses</p>
+<p>Dette mønsteret støtter også datavirtualisering</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere kjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="paragraph">
+<p>Det er et mye brukt mønster og støttes av flere produkter for datavirtualisering.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering til ukjente mottakere</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente med abonnement på emne (publish-subscribe)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via felles kø</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via hendelseslister (event streaming)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via hendelseslister (event-streaming)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Ref. . <a href="https://sookocheff.com/post/api/marrying-restful-http-with-asynchronous-design/">Marrying RESTful HTTP with Asynchronous and Event-Driven Services</a>:</p>
+</div>
+<div class="paragraph">
+<p>Event streaming: Events are written to a log. Events are strictly ordered (within a partition) and durable. Clients don’t subscribe to the stream, instead a client can read from any part of the stream. The client is responsible for advancing its position in the stream. That means a client can join at any time, and can replay events.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse til kjente mottakere</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - flere til en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt meldingskø (kanal) hos mottaker.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker. Dette kan skje direkte og synkront,eller via meldingskøer.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til flere kjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forsendelse fra en til flere kjente bygger på <em>basismønsteret for forsendelse fra en til</em>, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sidebarblock">
+<div class="content">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vinduet om det er nytt)
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </article>
 <aside class="article-aside hidden" role="navigation">

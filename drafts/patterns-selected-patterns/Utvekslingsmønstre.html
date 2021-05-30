@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Grunnleggende konsepter og begreper :: Nasjonalt arkitekturverksted</title>
-    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-concepts/Grunnleggende%20konsepter%20og%20begreper.html">
+    <title>Utvekslingsmønstre :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-selected-patterns/Utvekslingsmønstre.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -194,129 +194,210 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="Grunnleggende%20konsepter%20og%20begreper.html">Grunnleggende konsepter og begreper</a></li>
+    <li><a href="Utvekslingsmønstre.html">Utvekslingsmønstre</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-concepts/pages/Grunnleggende%20konsepter%20og%20begreper.adoc">Rediger kilde</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-selected-patterns/pages/Utvekslingsmønstre.adoc">Rediger kilde</a></div>
   </div>
 <article class="doc"><a name="section-top"></a>
-<h1 class="page">Grunnleggende konsepter og begreper</h1>
+<h1 class="page">Utvekslingsmønstre</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_generelt">1. Generelt</a></li>
-<li><a href="#_sentrale_begreper">2. Sentrale begreper</a></li>
-<li><a href="#_grunnleggende_modell_for_datautveksling">3. Grunnleggende modell for datautveksling</a></li>
-<li><a href="#_meldinger_basis_objektmodell">4. Meldinger - basis objektmodell</a></li>
+<li><a href="#_viktige_utvekslingsmønstre_oversikt">1. Viktige utvekslingsmønstre - oversikt</a></li>
+<li><a href="#_utvekslingsmønstre_oversikt_alternativ_grafikk">2. Utvekslingsmønstre - oversikt (alternativ grafikk)</a></li>
+<li><a href="#_map_utvekslingsmønstre_til_samhandlingsmønstre">3. Map utvekslingsmønstre til samhandlingsmønstre</a></li>
+<li><a href="#_forsendelse">4. Forsendelse</a>
+<ul class="sectlevel2">
+<li><a href="#_forsendelse_en_til_en">4.1. Forsendelse - en til en</a></li>
+<li><a href="#_forsendelse_en_til_flere_kjente">4.2. Forsendelse - en til flere kjente</a></li>
+<li><a href="#_forsendelse_flere_til_en">4.3. Forsendelse - flere til en</a></li>
+</ul>
+</li>
+<li><a href="#_forespørsel_svar">5. Forespørsel-svar</a>
+<ul class="sectlevel2">
+<li><a href="#_forespørsel_svar_en_mot_en">5.1. Forespørsel-svar - en mot en</a></li>
+<li><a href="#_forespørsel_svar_en_mot_flere_kjente">5.2. Forespørsel-svar - en mot flere kjente</a></li>
+<li><a href="#_forespørsel_svar_en_mot_flere_ukjente">5.3. Forespørsel-svar - en mot flere ukjente</a></li>
+</ul>
+</li>
+<li><a href="#_publisering_av_hendelsesdata">6. Publisering av hendelsesdata</a>
+<ul class="sectlevel2">
+<li><a href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø">6.1. Publisering fra en til flere ukjente via felles kø</a></li>
+<li><a href="#_publisering_fra_en_til_flere_ukjente_med_abonnement_på_emne">6.2. Publisering fra en til flere ukjente med abonnement på emne</a></li>
+<li><a href="#_publisering_fra_en_til_flere_ukjente_via_hendelseslister">6.3. Publisering fra en til flere ukjente via hendelseslister</a></li>
+<li><a href="#_publisering_flere_til_flere_ukjente_via_hendelseslister">6.4. Publisering flere til flere ukjente via hendelseslister</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<div class="sect1">
-<h2 id="_generelt"><a class="anchor" href="#_generelt"></a>1. Generelt</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Lærebøker, artikler og blogger fra akademia, produktleverandører og frittstående forfattere gir ulike framstillinger av konsepter og begreper.</p>
-</div>
-<div class="paragraph">
-<p>I boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>, skilles det mellom følgende grunnleggende intragrasjonsstiler (med en kortfattet omskriving av betydningen):</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Messaging. Asynkron meldingsutveksling.</p>
-</li>
-<li>
-<p>Remote Procedure Invocation. Synkrone API-kall.</p>
-</li>
-<li>
-<p>File transfer. Filoverføring. F.eks. via FTP.</p>
-</li>
-<li>
-<p>Shared database integration. F.eks. via en datasjø.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Her avgrenses</p>
+<p>Intro&#8230;&#8203;</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_sentrale_begreper"><a class="anchor" href="#_sentrale_begreper"></a>2. Sentrale begreper</h2>
+<h2 id="_viktige_utvekslingsmønstre_oversikt"><a class="anchor" href="#_viktige_utvekslingsmønstre_oversikt"></a>1. Viktige utvekslingsmønstre - oversikt</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Meldingsutveksling er en form for datautveksling som transporterer pakker med meldingsinnhold mellom avsendere og mottakere ut fra en avtalt eller ad hoc koreografi.</p>
-</div>
-<div class="paragraph">
-<p>Litteraturen er delt i synet på om meldingsutveksling kun drier seg om asynkron kommunikasjon. Her fastholdes at meldingsutveksling støtter både asynkron og synkron kommunikasjon. Dette ses på som en egenskap ved løsningen, på linje med andre egenskaper, som f.eks. leveringstid.</p>
-</div>
-<div class="paragraph">
-<p>Sett fra mottaker, kommer meldinger via meldingskanaler. Kanaler kan være realisert på ulike måter. Her er det skilt mellom begrepene kø, hendelessliste og blockchain.</p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Sentrale%20begreper.png" alt="Sentrale begreper image">
+<img src="_images/Viktige%20utvekslingsmønstre%20-%20oversikt.png" alt="Viktige utvekslingsmønstre - oversikt image">
 </div>
-<div class="title">Figure 1. Sentrale begreper</div>
+<div class="title">Figure 1. Viktige utvekslingsmønstre - oversikt</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p><a href="Sentrale%20begreper.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+<p><a href="Viktige%20utvekslingsmønstre%20-%20oversikt.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_grunnleggende_modell_for_datautveksling"><a class="anchor" href="#_grunnleggende_modell_for_datautveksling"></a>3. Grunnleggende modell for datautveksling</h2>
+<h2 id="_utvekslingsmønstre_oversikt_alternativ_grafikk"><a class="anchor" href="#_utvekslingsmønstre_oversikt_alternativ_grafikk"></a>2. Utvekslingsmønstre - oversikt (alternativ grafikk)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Samhandlingsaktører kommuniserer ved å sende meldinger via sine aksesspunkter til den tekniske  meldingsinfrastrukturen.
-Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av teknologi i kommunikasjonsinfrastrukturen.</p>
-</div>
-<div class="paragraph">
-<p>I beskrivelsen av datautvekslingsmønstre, tas det utgangspunkt i en slik logisk meldingsflyt.</p>
-</div>
-<div class="paragraph">
-<p>​Det tas f.eks. ikke stilling til om meldinger sendes synkront eller asynkront. Aktuelle kommunikasjonsstandarder kan f.eks. være ebXML, HTTP, REST, GraphQL eller SPARQL. Det kan dreie seg om felles infrastruktur og punkt-til-punkt kommunikasjon, eller det kan være en mer kompleks infrastruktur som arter seg ulikt på hver side.</p>
-</div>
-<div class="paragraph">
-<p>Dette er ikke det samme som å si at valg av teknologi og løsninger ikke er viktig. Aktuelle krav til tjenestekvalitet m.m. bestemmer hvilke teknologier og løsninger som passer.</p>
-</div>
-<div class="paragraph">
-<p>Modellen som vises her kan ses som en forenklet utgave av lagdelte modeller som <a href="https://no.wikipedia.org/wiki/OSI-modellen">OSI-modellen</a> (7 lag) eller TCP/IP (4 lag).</p>
+<p><mark>Merk: Denne oversikten er i arbeid.</mark></p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Grunnleggende%20modell%20for%20datautveksling.png" alt="Grunnleggende modell for datautveksling image">
+<img src="_images/Utvekslingsmønstre%20-%20oversikt%20(alternativ%20grafikk).png" alt="Utvekslingsmønstre - oversikt (alternativ grafikk) image">
 </div>
-<div class="title">Figure 2. Grunnleggende modell for datautveksling</div>
+<div class="title">Figure 2. Utvekslingsmønstre - oversikt (alternativ grafikk)</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_meldinger_basis_objektmodell"><a class="anchor" href="#_meldinger_basis_objektmodell"></a>4. Meldinger - basis objektmodell</h2>
+<h2 id="_map_utvekslingsmønstre_til_samhandlingsmønstre"><a class="anchor" href="#_map_utvekslingsmønstre_til_samhandlingsmønstre"></a>3. Map utvekslingsmønstre til samhandlingsmønstre</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>En elektronisk melding kan ses på som en type brev, med innhold pakket i en konvolutt med adresse eller annen informasjon som grunnlag for ruting av innholdet til en eller flere mottakere.  Som alternativ til å inkludere alt relevant innhold i selve meldingen, kan meldingen gi referanser til meldingsrelaterte data som mottakerne eventuelt kan foespørre.</p>
-</div>
-<div class="paragraph">
-<p>Begrepene hendelsesmelding, kommandomelding og dokumentmelding er her hentet fra boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>. Hendelsesmeldinger forteller om at noe har skjedd, for den det måtte angå. Kommandomeldinger ber noen om å gjøre noe. Dokumentmeldinger inneholder informasjon, typisk som svar på forespørsel.</p>
-</div>
-<div class="paragraph">
-<p>Den videre spesialiseringen av disse begrepene her, bygger på flere kilde, for å gi felles begreper i omtalen av mønstre for samhandling og datautveksling.</p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Meldinger%20-%20basis%20objektmodell.png" alt="Meldinger - basis objektmodell image">
+<img src="../patterns-books/_images/Map%20utvekslingsmønstre%20til%20samhandlingsmønstre.png" alt="Map utvekslingsmønstre til samhandlingsmønstre image">
 </div>
-<div class="title">Figure 3. Meldinger - basis objektmodell</div>
+<div class="title">Figure 3. Map utvekslingsmønstre til samhandlingsmønstre</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p><a href="Meldinger%20-%20basis%20objektmodell.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+<p><a href="../patterns-books/Map%20utvekslingsmønstre%20til%20samhandlingsmønstre.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_forsendelse"><a class="anchor" href="#_forsendelse"></a>4. Forsendelse</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_forsendelse_en_til_en"><a class="anchor" href="#_forsendelse_en_til_en"></a>4.1. Forsendelse - en til en</h3>
+<div class="paragraph">
+<p>One-way-push&#8230;&#8203;</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Forsendelse%20-%20en%20til%20en.png" alt="Forsendelse - en til en image">
+</div>
+<div class="title">Figure 4. Forsendelse - en til en</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_forsendelse_en_til_flere_kjente"><a class="anchor" href="#_forsendelse_en_til_flere_kjente"></a>4.2. Forsendelse - en til flere kjente</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Forsendelse%20-%20en%20til%20flere%20kjente.png" alt="Forsendelse - en til flere kjente image">
+</div>
+<div class="title">Figure 5. Forsendelse - en til flere kjente</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_forsendelse_flere_til_en"><a class="anchor" href="#_forsendelse_flere_til_en"></a>4.3. Forsendelse - flere til en</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Forsendelse%20-%20flere%20til%20en.png" alt="Forsendelse - flere til en image">
+</div>
+<div class="title">Figure 6. Forsendelse - flere til en</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_forespørsel_svar"><a class="anchor" href="#_forespørsel_svar"></a>5. Forespørsel-svar</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_forespørsel_svar_en_mot_en"><a class="anchor" href="#_forespørsel_svar_en_mot_en"></a>5.1. Forespørsel-svar - en mot en</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Forespørsel-svar%20-%20en%20mot%20en.png" alt="Forespørsel-svar - en mot en image">
+</div>
+<div class="title">Figure 7. Forespørsel-svar - en mot en</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_forespørsel_svar_en_mot_flere_kjente"><a class="anchor" href="#_forespørsel_svar_en_mot_flere_kjente"></a>5.2. Forespørsel-svar - en mot flere kjente</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Forespørsel-svar%20-%20en%20mot%20flere%20kjente.png" alt="Forespørsel-svar - en mot flere kjente image">
+</div>
+<div class="title">Figure 8. Forespørsel-svar - en mot flere kjente</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_forespørsel_svar_en_mot_flere_ukjente"><a class="anchor" href="#_forespørsel_svar_en_mot_flere_ukjente"></a>5.3. Forespørsel-svar - en mot flere ukjente</h3>
+<div class="paragraph">
+<p>Forespørsel brytes opp i flere parallelle forespørsler</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Forespørsel-svar%20-%20en%20mot%20flere%20ukjente.png" alt="Forespørsel-svar - en mot flere ukjente image">
+</div>
+<div class="title">Figure 9. Forespørsel-svar - en mot flere ukjente</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publisering_av_hendelsesdata"><a class="anchor" href="#_publisering_av_hendelsesdata"></a>6. Publisering av hendelsesdata</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_publisering_fra_en_til_flere_ukjente_via_felles_kø"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø"></a>6.1. Publisering fra en til flere ukjente via felles kø</h3>
+<div class="paragraph">
+<p>Merk: Det tas ikek her stilling til om det er pull eller push mot mottakerne</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20felles%20kø.png" alt="Publisering fra en til flere ukjente via felles kø image">
+</div>
+<div class="title">Figure 10. Publisering fra en til flere ukjente via felles kø</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publisering_fra_en_til_flere_ukjente_med_abonnement_på_emne"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_med_abonnement_på_emne"></a>6.2. Publisering fra en til flere ukjente med abonnement på emne</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Publisering%20fra%20en%20til%20flere%20ukjente%20med%20abonnement%20på%20emne.png" alt="Publisering fra en til flere ukjente med abonnement på emne image">
+</div>
+<div class="title">Figure 11. Publisering fra en til flere ukjente med abonnement på emne</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publisering_fra_en_til_flere_ukjente_via_hendelseslister"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_hendelseslister"></a>6.3. Publisering fra en til flere ukjente via hendelseslister</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20hendelseslister.png" alt="Publisering fra en til flere ukjente via hendelseslister image">
+</div>
+<div class="title">Figure 12. Publisering fra en til flere ukjente via hendelseslister</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publisering_flere_til_flere_ukjente_via_hendelseslister"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_via_hendelseslister"></a>6.4. Publisering flere til flere ukjente via hendelseslister</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Publisering%20flere%20til%20flere%20ukjente%20via%20hendelseslister.png" alt="Publisering flere til flere ukjente via hendelseslister image">
+</div>
+<div class="title">Figure 13. Publisering flere til flere ukjente via hendelseslister</div>
 </div>
 </div>
 </div>
