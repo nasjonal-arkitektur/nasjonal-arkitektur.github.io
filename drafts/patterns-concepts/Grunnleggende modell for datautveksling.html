@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Tilnærming :: Nasjonalt arkitekturverksted</title>
-    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/data-exchange-strategy-approach/data-exchange-strategy-approach.html">
+    <title>Grunnleggende modell for datautveksling :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-concepts/Grunnleggende%20modell%20for%20datautveksling.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -70,8 +70,8 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../data-exchange-strategy-background/data-exchange-strategy-background.html">Bakgrunn</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="data-exchange-strategy-approach.html">Tilnærming</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-approach/data-exchange-strategy-approach.html">Tilnærming</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../data-exchange-strategy-needs/data-exchange-strategy-needs.html">Behov</a>
@@ -194,140 +194,34 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="../data-exchange-strategy-book/data-exchange-strategy-book.html">Innspill til oppdatering av nasjonal strategi for datautveksling (tidlig kladd)</a></li>
-    <li><a href="data-exchange-strategy-approach.html">Tilnærming</a></li>
+    <li><a href="Grunnleggende%20modell%20for%20datautveksling.html">Grunnleggende modell for datautveksling</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/draft-data-exchange-strategy/modules/data-exchange-strategy-approach/pages/data-exchange-strategy-approach.adoc">Rediger kilde</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-concepts/pages/Grunnleggende%20modell%20for%20datautveksling.adoc">Rediger kilde</a></div>
   </div>
 <article class="doc"><a name="section-top"></a>
-<h1 class="page">Tilnærming</h1>
-<div class="sect1">
-<h2 id="_utgangspunkt_i_faktiske_behov_og_rammebetingelser"><a class="anchor" href="#_utgangspunkt_i_faktiske_behov_og_rammebetingelser"></a><a class="link" href="#_utgangspunkt_i_faktiske_behov_og_rammebetingelser">1. Utgangspunkt i faktiske behov og rammebetingelser</a></h2>
-<div class="sectionbody">
+<h1 class="page">Grunnleggende modell for datautveksling</h1>
 <div class="paragraph">
-<p>Det er de faktiske behovene som virksomheter og personer har for
-datautveksling som må være styrende. Politiske føringer skal i
-utgangspunktet være et instrument for å få dette til å skje. Det er
-derfor naturlig å ta utgangspunkt i politiske føringer for de store
-linjene, før en dykker videre inn i detaljerte behov.</p>
+<p>Samhandlingsaktører kommuniserer ved å sende meldinger via sine aksesspunkter til den tekniske  meldingsinfrastrukturen.
+Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av teknologi i kommunikasjonsinfrastrukturen.</p>
 </div>
 <div class="paragraph">
-<p>I forlengelsen av politiske føringer på regjerings- og departementsnivå,
-kommer også føringer for operasjonaliseringen av regjeringens
-digitaliseringsstrategi, blant annet som gitt av Digdir. Det dreier seg
-her om et sett av «harde» og «myke» føringer, i spennet fra standarder
-til referansearkitekturer, veiledning og gode eksempler. «Verktøykasser»
-for dette vil være i utvikling framover.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_om_handlingsplan_for_regjeringens_digitaliseringsstrategi"><a class="anchor" href="#_om_handlingsplan_for_regjeringens_digitaliseringsstrategi"></a><a class="link" href="#_om_handlingsplan_for_regjeringens_digitaliseringsstrategi">2. Om handlingsplan for regjeringens digitaliseringsstrategi</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="https://www.digdir.no/digitalisering-og-samordning/handlingsplan-regjeringens-digitaliseringsstrategi/1229">Handlingsplan
-for regjeringens digitaliseringsstrategi</a> er utarbeidet av KS, Skate og
-Digitaliseringsdirektoratet, og er basert på regjeringens
-digitaliseringsstrategi:
-<a href="https://www.regjeringen.no/no/dokumenter/en-digital-offentlig-sektor/id2653874/">Én
-digital offentlig sektor</a>. Handlingsplanen inneholder flere
-innsatsområder, og for hvert innsatsområde er det flere initiativer. På
-øverste nivå er følgende innsatsområder definert:</p>
+<p>I beskrivelsen av datautvekslingsmønstre, tas det utgangspunkt i en slik logisk meldingsflyt.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/image1.png" alt="image" width="382" height="230"></span></p>
+<p>​Det tas f.eks. ikke stilling til om meldinger sendes synkront eller asynkront. Aktuelle kommunikasjonsstandarder kan f.eks. være ebXML, HTTP, REST, GraphQL eller SPARQL. Det kan dreie seg om felles infrastruktur og punkt-til-punkt kommunikasjon, eller det kan være en mer kompleks infrastruktur som arter seg ulikt på hver side.</p>
 </div>
 <div class="paragraph">
-<p>Flere av innsatsområdene og initiativene er relevante for arbeidet med
-datautveksling. Her nevnes:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Sammenhengende tjenester for sluttbrukerne må støttes av
-datautveksling mellom aktører i alle ledd av bakenforliggende
-tjenestekjeder og arbeidsprosesser.</p>
-</li>
-<li>
-<p>Datautveksling ses her som en delmengde av <em>Deling av data</em> som et
-større område i strategien.</p>
-</li>
-<li>
-<p>Nasjonale fellesløsninger og teknisk infrastruktur utvikles i «felles
-økosystem».</p>
-</li>
-<li>
-<p>Et minimum av styring og samordning er nødvendig for velfungerende
-økosystemer.</p>
-</li>
-<li>
-<p>Digital sikkerhet må bygges inn i løsninger for datautveksling.</p>
-</li>
-<li>
-<p>Samarbeidet med privat sektor må ivaretas slik at arkitekturer og
-fellesløsninger for datautveksling i offentlig sektor kommer til
-anvendelse der dette er viktig for interoperabilitet og samhandling.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_behovskartlegging_gjennom_brukerhistorier_og_kundekontakt"><a class="anchor" href="#_behovskartlegging_gjennom_brukerhistorier_og_kundekontakt"></a><a class="link" href="#_behovskartlegging_gjennom_brukerhistorier_og_kundekontakt">3. Behovskartlegging gjennom brukerhistorier og kundekontakt</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Digdir har utstrakt kundekontakt i utviklingen av fellesløsningene.
-Dette vil vi utnytte i videre arbeid med referansearkitekturer og
-målbilder, og være tett på de faktiske behovene.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_veiledning_med_aktuelle_eksempler_fra_virkeligheten"><a class="anchor" href="#_veiledning_med_aktuelle_eksempler_fra_virkeligheten"></a><a class="link" href="#_veiledning_med_aktuelle_eksempler_fra_virkeligheten">4. Veiledning med aktuelle eksempler fra virkeligheten</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Referansearkitekturer er ment å fungere som veiledning, men kan bli
-tunge å fordøye uten eksempler. Vi vil derfor legge vekt på å få fram
-gode eksempler i det videre arbeidet.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_arkitektur_i_tråd_med_eu"><a class="anchor" href="#_arkitektur_i_tråd_med_eu"></a><a class="link" href="#_arkitektur_i_tråd_med_eu">5. Arkitektur i tråd med EU</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Norge deltar i EU-s digitaliseringsprogram
-<a href="https://ec.europa.eu/digital-single-market/en/europe-investing-digital-digital-europe-programme">Digital
-Europe</a>, og vil være forpliktet til å støtte aktuelle standarder og
-krav. For datautveksling er det asynkron meldingsutveksling og eDelivery
-som er eneste aktuelle og gjeldende standard for datautveksling over
-landegrensene her og nå, slik dette er omtalt under
-<a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur
-for datautveksling</a>. Det arbeides imidlertid med nye utvekslingsmønstre,
-teknologier og standarder i EU, både i form av praktiske løsninger på
-kort sikt og langsiktige visjoner og målarkitekturer. Dette kan det være
-smart å følge med på, og gjenbruke, i Norge. Se nærmere om dette i eget
-kapittel om målarkitektur.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_etablering_av_felles_begrepsapparat"><a class="anchor" href="#_etablering_av_felles_begrepsapparat"></a><a class="link" href="#_etablering_av_felles_begrepsapparat">6. Etablering av felles begrepsapparat</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Det er lett å snakke forbi hverandre! Vi legger ulike betydninger i selv
-de enkleste begreper som meldingsutveksling. Vi vet at det finnes ulike
-oppfatninger av hva som egentlig dekkes av referansearkitektur for
-«eMelding» – om det er meldingsutveksling generelt eller bare en enkelt
-variant som bygger på den europeiske eDelivery.</p>
+<p>Dette er ikke det samme som å si at valg av teknologi og løsninger ikke er viktig. Aktuelle krav til tjenestekvalitet m.m. bestemmer hvilke teknologier og løsninger som passer.</p>
 </div>
 <div class="paragraph">
-<p>Det gjøres derfor en nærmere definisjon av noen sentrale begreper og
-aktuelle utvekslingsmønstre før vi går inn i bekrivelser av arkitekturer
-og veiledninger.</p>
+<p>Modellen som vises her kan ses som en forenklet utgave av lagdelte modeller som {OSI-modellen} (7 lag) eller TCP/IP (4 lag).</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Grunnleggende%20modell%20for%20datautveksling.png" alt="Grunnleggende modell for datautveksling image">
 </div>
+<div class="title">Figure 1. Grunnleggende modell for datautveksling</div>
 </div>
 </article>
 <aside class="article-aside hidden" role="navigation">

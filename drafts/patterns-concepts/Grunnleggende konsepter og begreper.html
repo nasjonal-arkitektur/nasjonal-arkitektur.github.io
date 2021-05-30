@@ -55,40 +55,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../patterns-books/Mønstre%20for%20datautveksling%20-%20overordnet%20beskrivelse.html">Mønstre for datautveksling (arbeid pågår)</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Introduksjon</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Grunnleggende konsepter og begreper</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Forretningsmessige samhandlingsmønstre</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Tekniske utvekslingsmønstre</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Kvalitetsegenskaper</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Løsninger og teknologier</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Veiledning til valg av mønstre og løsninger</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Begreper</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../patterns-references/Referanser.html">Referanser</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Vedlegg A - Sammenligning med alternative framstillinger</span>
-  </li>
-</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -238,7 +205,7 @@
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_generelt">1. Generelt</a></li>
-<li><a href="#_meldingsutveksling">2. Meldingsutveksling</a></li>
+<li><a href="#_grunnleggende_modell_for_datautveksling">2. Grunnleggende modell for datautveksling</a></li>
 <li><a href="#_meldinger_basis_objektmodell">3. Meldinger - basis objektmodell</a></li>
 </ul>
 </div>
@@ -246,10 +213,29 @@
 <h2 id="_generelt"><a class="anchor" href="#_generelt"></a>1. Generelt</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Test:</p>
+<p><a href="https://no.wikipedia.org/wiki/OSI-modellen">OSI-modellen</a></p>
 </div>
 <div class="paragraph">
-<p>ref. 	<a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a></p>
+<p>Lærebøker, artikler og blogger fra akademia, produktleverandører og frittstående forfattere gir ulike framstillinger av konsepter og begreper.</p>
+</div>
+<div class="paragraph">
+<p>I boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>, skilles det mellom følgende grunnlegggende intragrasjonsstiler:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Messaging. Meldingsutveksling.</p>
+</li>
+<li>
+<p>Remote Procedure Invocation. Synkrone API-kal.</p>
+</li>
+<li>
+<p>File transfer. Filoverføring. F.eks. via FTP.</p>
+</li>
+<li>
+<p>Shared database integration. F.eks. via en datasjø.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><a href="../patterns-references/Referanser.html" class="page">Referanser</a></p>
@@ -257,7 +243,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_meldingsutveksling"><a class="anchor" href="#_meldingsutveksling"></a>2. Meldingsutveksling</h2>
+<h2 id="_grunnleggende_modell_for_datautveksling"><a class="anchor" href="#_grunnleggende_modell_for_datautveksling"></a>2. Grunnleggende modell for datautveksling</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Samhandlingsaktører kommuniserer ved å sende meldinger via sine aksesspunkter til den tekniske  meldingsinfrastrukturen.
@@ -272,17 +258,23 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="paragraph">
 <p>Dette er ikke det samme som å si at valg av teknologi og løsninger ikke er viktig. Aktuelle krav til tjenestekvalitet m.m. bestemmer hvilke teknologier og løsninger som passer.</p>
 </div>
+<div class="paragraph">
+<p>Modellen som vises her kan ses som en forenklet utgave av lagdelte modeller som  (7 lag) eller TCP/IP (4 lag).</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Meldingsutveksling.png" alt="Meldingsutveksling image">
+<img src="_images/Grunnleggende%20modell%20for%20datautveksling.png" alt="Grunnleggende modell for datautveksling image">
 </div>
-<div class="title">Figure 1. Meldingsutveksling</div>
+<div class="title">Figure 1. Grunnleggende modell for datautveksling</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_meldinger_basis_objektmodell"><a class="anchor" href="#_meldinger_basis_objektmodell"></a>3. Meldinger - basis objektmodell</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://no.wikipedia.org/wiki/OSI-modellen">OSI-modellen</a></p>
+</div>
 <div class="paragraph">
 <p>En elektronisk melding kan ses på som en type brev, med innhold pakket i en konvolutt med adresse eller annen informasjon som grunnlag for ruting av innholdet til en eller flere mottakere.  Som alternativ til å inkludere alt relevant innhold i selve meldingen, kan meldingen gi referanser til meldingsrelaterte data som mottakerne eventuelt kan foespørre.</p>
 </div>
@@ -291,9 +283,6 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 </div>
 <div class="paragraph">
 <p>Den videre spesialiseringen av disse begrepene her, bygger på flere kilde, for å gi felles begreper i omtalen av mønstre for samhandling og datautveksling.</p>
-</div>
-<div class="paragraph">
-<p>Merk: Forskjellen på publisering til ukjente mottakere og forsendelse til kjente mottakere er her vist for hendelsesmeldinger. Kommandomeldinger og dokumentmeldinger sendes typisk til kjente mottakere, men kan også publiseres.</p>
 </div>
 <div class="imageblock">
 <div class="content">
