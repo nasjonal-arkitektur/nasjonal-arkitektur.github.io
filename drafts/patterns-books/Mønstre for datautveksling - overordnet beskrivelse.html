@@ -247,8 +247,8 @@
 <li><a href="#_grunnleggende_konsepter_og_begreper">2. Grunnleggende konsepter og begreper</a>
 <ul class="sectlevel2">
 <li><a href="#_generelt">2.1. Generelt</a></li>
-<li><a href="#_valgt_modell_for_meldingsutveksling">2.2. Valgt modell for meldingsutveksling</a></li>
-<li><a href="#_meldinger_grunnleggende_objektmodell">2.3. Meldinger - grunnleggende objektmodell</a></li>
+<li><a href="#_meldingsutveksling">2.2. Meldingsutveksling</a></li>
+<li><a href="#_meldinger_basis_objektmodell">2.3. Meldinger - basis objektmodell</a></li>
 </ul>
 </li>
 <li><a href="#_forretningsmessige_samhandlingsmønstre">3. Forretningsmessige samhandlingsmønstre</a>
@@ -302,7 +302,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Sun May 30 2021 00:36:05 GMT+0200 (CEST)</pre>
+<pre>Sun May 30 2021 16:12:23 GMT+0200 (CEST)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -376,7 +376,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_valgt_modell_for_meldingsutveksling"><a class="anchor" href="#_valgt_modell_for_meldingsutveksling"></a>2.2. Valgt modell for meldingsutveksling</h3>
+<h3 id="_meldingsutveksling"><a class="anchor" href="#_meldingsutveksling"></a>2.2. Meldingsutveksling</h3>
 <div class="paragraph">
 <p>Samhandlingsaktører kommuniserer ved å sende meldinger via sine aksesspunkter til den tekniske  meldingsinfrastrukturen.
 Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av teknologi i kommunikasjonsinfrastrukturen.</p>
@@ -385,28 +385,44 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <p>I beskrivelsen av datautvekslingsmønstre, tas det utgangspunkt i en slik logisk meldingsflyt.</p>
 </div>
 <div class="paragraph">
-<p>​Det tas f.eks. ikke stilling til om meldinger sendes synkront eller asynkront. Aktuelle kommunikasjonsstandarder kan f.eks. være ebXML, HTTP, REST, GraphQL eller SPARQL. Det kan dreie seg on felles infrastruktur og punkt-til-punkt kommunikasjon, eller det kan være en mer kompleks infrastruktur som arter seg ulikt på hver side.</p>
+<p>​Det tas f.eks. ikke stilling til om meldinger sendes synkront eller asynkront. Aktuelle kommunikasjonsstandarder kan f.eks. være ebXML, HTTP, REST, GraphQL eller SPARQL. Det kan dreie seg om felles infrastruktur og punkt-til-punkt kommunikasjon, eller det kan være en mer kompleks infrastruktur som arter seg ulikt på hver side.</p>
 </div>
 <div class="paragraph">
 <p>Dette er ikke det samme som å si at valg av teknologi og løsninger ikke er viktig. Aktuelle krav til tjenestekvalitet m.m. bestemmer hvilke teknologier og løsninger som passer.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../patterns-concepts/_images/Valgt%20modell%20for%20meldingsutveksling.png" alt="Valgt modell for meldingsutveksling image">
+<img src="../patterns-concepts/_images/Meldingsutveksling.png" alt="Meldingsutveksling image">
 </div>
-<div class="title">Figure 1. Valgt modell for meldingsutveksling</div>
+<div class="title">Figure 1. Meldingsutveksling</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_meldinger_grunnleggende_objektmodell"><a class="anchor" href="#_meldinger_grunnleggende_objektmodell"></a>2.3. Meldinger - grunnleggende objektmodell</h3>
+<h3 id="_meldinger_basis_objektmodell"><a class="anchor" href="#_meldinger_basis_objektmodell"></a>2.3. Meldinger - basis objektmodell</h3>
 <div class="paragraph">
-<p>Narrativ&#8230;&#8203;</p>
+<p>En elektronisk melding kan ses på som en type brev, med innhold pakket i en konvolutt med adresse eller annen informasjon som grunnlag for ruting av innholdet til en eller flere mottakere.  Som alternativ til å inkludere alt relevant innhold i selve meldingen, kan meldingen gi referanser til meldingsrelaterte data som mottakerne eventuelt kan foespørre.</p>
+</div>
+<div class="paragraph">
+<p>Begrepene hendelsesmelding, kommandomelding og dokumentmelding er her hentet fra boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>. Hendelsesmeldinger forteller om at noe har skjedd, for den det måtte angå. Kommandomeldinger ber noen om å gjøre noe. Dokumentmeldinger inneholder informasjon, typisk som svar på forespørsel.</p>
+</div>
+<div class="paragraph">
+<p>Den videre spesialiseringen av disse begrepene her, bygger på flere kilde, for å gi felles begreper i omtalen av mønstre for samhandling og datautveksling.</p>
+</div>
+<div class="paragraph">
+<p>Merk: Forskjellen på publisering til ukjente mottakere og forsendelse til kjente mottakere er her vist for hendelsesmeldinger. Kommandomeldinger og dokumentmeldinger sendes typisk til kjente mottakere, men kan også publiseres.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../patterns-concepts/_images/Meldinger%20-%20grunnleggende%20objektmodell.png" alt="Meldinger - grunnleggende objektmodell image">
+<img src="../patterns-concepts/_images/Meldinger%20-%20basis%20objektmodell.png" alt="Meldinger - basis objektmodell image">
 </div>
-<div class="title">Figure 2. Meldinger - grunnleggende objektmodell</div>
+<div class="title">Figure 2. Meldinger - basis objektmodell</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="../patterns-concepts/Meldinger%20-%20basis%20objektmodell.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+</div>
+</div>
 </div>
 </div>
 </div>
