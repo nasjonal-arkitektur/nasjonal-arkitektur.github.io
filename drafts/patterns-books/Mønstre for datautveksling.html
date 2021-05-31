@@ -54,8 +54,8 @@
   </li>
 </ul>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="Mønstre%20for%20datautveksling.html">Mønstre for datautveksling (arbeid pågår)</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#drafts:patterns-books:Mønstre for datautveksling - overordnet beskrivelse.adoc">Mønstre for datautveksling (arbeid pågår)</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -194,7 +194,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="Mønstre%20for%20datautveksling.html">Mønstre for datautveksling (arbeid pågår)</a></li>
+    <li><a href="Mønstre%20for%20datautveksling.html">Mønstre for datautveksling</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-books/pages/Mønstre%20for%20datautveksling.adoc">Rediger kilde</a></div>
@@ -207,24 +207,26 @@
 <li><a href="#_introduksjon">1. Introduksjon</a>
 <ul class="sectlevel2">
 <li><a href="#_bakgrunn">1.1. Bakgrunn</a></li>
-<li><a href="#_formål_og_omfang">1.2. Formål og omfang</a></li>
-<li><a href="#_tilnærming">1.3. Tilnærming</a></li>
+<li><a href="#_formål">1.2. Formål</a></li>
+<li><a href="#_omfang_og_avgrensing">1.3. Omfang og avgrensing</a></li>
+<li><a href="#_tilnærming">1.4. Tilnærming</a></li>
 </ul>
 </li>
-<li><a href="#_grunnleggende_konsepter">2. Grunnleggende konsepter</a>
+<li><a href="#_grunnleggende_konsepter_og_begreper">2. Grunnleggende konsepter og begreper</a>
 <ul class="sectlevel2">
-<li><a href="#_grunnleggende_modell_for_meldingsutveksling">2.1. Grunnleggende modell for meldingsutveksling</a></li>
-<li><a href="#_meldinger_grunnleggende_objektmodell">2.2. Meldinger - grunnleggende objektmodell</a></li>
+<li><a href="#_sentrale_begreper">2.1. Sentrale begreper</a></li>
+<li><a href="#_grunnleggende_modell_for_datautveksling">2.2. Grunnleggende modell for datautveksling</a></li>
+<li><a href="#_meldinger_basis_objektmodell">2.3. Meldinger - basis objektmodell</a></li>
 </ul>
 </li>
-<li><a href="#_forretningsmessige_samhandlingsmønstre">3. Forretningsmessige samhandlingsmønstre</a>
+<li><a href="#_samhandlingsmønstre">3. Samhandlingsmønstre</a>
 <ul class="sectlevel2">
-<li><a href="#_samhandlingsmønstre_de_viktigste">3.1. Samhandlingsmønstre - de viktigste</a></li>
+<li><a href="#_viktige_samhandlingsmønstre_oversikt">3.1. Viktige samhandlingsmønstre - oversikt</a></li>
 </ul>
 </li>
-<li><a href="#_tekniske_utveklsingsmønstre">4. Tekniske utveklsingsmønstre</a>
+<li><a href="#_utvekslingsmønstre">4. Utvekslingsmønstre</a>
 <ul class="sectlevel2">
-<li><a href="#_utvekslingsmønstre_de_viktigste">4.1. Utvekslingsmønstre - de viktigste</a></li>
+<li><a href="#_viktige_utvekslingsmønstre_oversikt">4.1. Viktige utvekslingsmønstre - oversikt</a></li>
 <li><a href="#_utvekslingsmønstre_oversikt_alternativ_grafikk">4.2. Utvekslingsmønstre - oversikt (alternativ grafikk)</a></li>
 <li><a href="#_map_utvekslingsmønstre_til_samhandlingsmønstre">4.3. Map utvekslingsmønstre til samhandlingsmønstre</a></li>
 <li><a href="#_forsendelse">4.4. Forsendelse</a>
@@ -252,17 +254,23 @@
 </ul>
 </li>
 <li><a href="#_kvalitetsegenskaper">5. Kvalitetsegenskaper</a></li>
-<li><a href="#_feilhåndtering">6. Feilhåndtering</a></li>
-<li><a href="#_løsninger_og_teknologier">7. Løsninger og teknologier</a></li>
-<li><a href="#_veiledning_til_valg_av_mønstre_og_løsninger">8. Veiledning til valg av mønstre og løsninger</a></li>
-<li><a href="#_begreper">9. Begreper</a></li>
+<li><a href="#_løsninger_og_teknologier">6. Løsninger og teknologier</a></li>
+<li><a href="#_veiledning_til_valg_av_mønstre_og_løsninger">7. Veiledning til valg av mønstre og løsninger</a></li>
+<li><a href="#_begreper">8. Begreper</a></li>
+<li><a href="#_referanser">9. Referanser</a></li>
+<li><a href="#_vedlegg_a_sammenligning_med_alternative_framstillinger">10. Vedlegg A - Sammenligning med alternative framstillinger</a>
+<ul class="sectlevel2">
+<li><a href="#_map_nasjonale_samhandlingsmønstre_mot_ehelse">10.1. Map nasjonale samhandlingsmønstre mot eHelse</a></li>
+<li><a href="#_map_nytt_sett_samhandlingsmønstre_til_ver_1_nav">10.2. Map nytt sett samhandlingsmønstre til ver. 1 (NAV)</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Fri May 28 2021 13:55:13 GMT+0200 (CEST)</pre>
+<pre>Mon May 31 2021 02:37:57 GMT+0200 (CEST)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -276,35 +284,67 @@
 <div class="sect2">
 <h3 id="_bakgrunn"><a class="anchor" href="#_bakgrunn"></a>1.1. Bakgrunn</h3>
 <div class="paragraph">
-<p>Nasjonale referansearkitekturer for datautveksling er i dag (2020) bygd opp rundt en struktur med tre typer utvekslingsmønstre, dvs. meldingsforsendelse, forespørsel-svar og publisering av hendelsesdata.</p>
+<p>Lærebøker, artikler og blogger fra akademia, produktleverandører og frittstående forfattere gir ulike framstillinger av konsepter og begreper i tilknytning til datautveksling.</p>
 </div>
 <div class="paragraph">
-<p>I parallell ned utviklingen av dette har det foregått tilsvarende arbeid i noen av sektorene.</p>
+<p>Nasjonale referansearkitekturer for datautveksling er i dag bygd opp rundt en struktur med tre typer utvekslingsmønstre, dvs. meldingsforsendelse, forespørsel-svar og publisering av hendelsesdata.</p>
 </div>
 <div class="paragraph">
-<p>Arbeidet med Referansearkitektur for deling av data i høyere utdanning og forsking har tatt utgangspunkt i de nasjonale referansearkitekturene og er rimelig godt koordinert. Selve definisjonen av begrepet datadeling er likevel ulik.</p>
+<p>I parallell ned utviklingen av dette har det foregått tilsvarende arbeid i noen av sektorene, bare delvis samordnet.</p>
 </div>
 <div class="paragraph">
-<p>I helsesektoren har &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Har begynt å samarbeide og ønsker å løfte det som bør være felles til et nasjonalt plan.</p>
+<p>Arkitektmiljøene i de ulike sektorene har etablert samarbeidsarenaer, men arbeider fremdeles med sektorielle arkitekturprodukter.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_formål_og_omfang"><a class="anchor" href="#_formål_og_omfang"></a>1.2. Formål og omfang</h3>
+<h3 id="_formål"><a class="anchor" href="#_formål"></a>1.2. Formål</h3>
 <div class="paragraph">
-<p>Formålet er her primært å identifisere viktige mønstre for datautveklsing med tanke på samhandlingsevne, som utgangspunkt for videre arbeid med referansearkitekturer og veiledning til valg mellom alternativer.</p>
+<p>Formålet er her primært å identifisere viktige mønstre for datautveksling med tanke på samhandlingsevne, som utgangspunkt for videre arbeid med nasjonale referansearkitekturer og veiledning til valg mellom alternativer.</p>
 </div>
 <div class="paragraph">
-<p>Det er samtidig ønskelig å etablere et begrepsapparat som kan fungere for bedre koordinert videreutvikling av referansearkitekturene innen datadeling og datautveksling på tvers av sektorene.</p>
-</div>
-<div class="paragraph">
-<p>Merk: Samhandlingsmønstre er et omfattede tema. Det har ingen hensikt å lage en komplett lærebok her.. ref&#8230;&#8203;</p>
+<p>Det er samtidig ønskelig å etablere et begrepsapparat som kan fungere for bedre koordinert videreutvikling av referansearkitekturene innen samhandling, datadeling og datautveksling på tvers av sektorene.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tilnærming"><a class="anchor" href="#_tilnærming"></a>1.3. Tilnærming</h3>
+<h3 id="_omfang_og_avgrensing"><a class="anchor" href="#_omfang_og_avgrensing"></a>1.3. Omfang og avgrensing</h3>
+<div class="paragraph">
+<p>Dette er et svært omfattende tema. Det har ingen hensikt å lage en komplett lærebok her - det finnes allerede mange, og det finnes et virvar av ulike artikler fra akademia og produktleverandører. Utfordringen er å gripe fatt i en essens som gir nytte for å bygge samhandlingsevne på tvers.</p>
+</div>
+<div class="paragraph">
+<p>I boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>, skilles det mellom følgende grunnleggende intragrasjonsstiler (her med en kortfattet omskriving av betydningen):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Messaging. Asynkron meldingsutveksling.</strong></p>
+</li>
+<li>
+<p><strong>Remote Procedure Invocation. Synkrone API-kall.</strong></p>
+</li>
+<li>
+<p>File transfer. Filoverføring. F.eks. via FTP.</p>
+</li>
+<li>
+<p>Shared database integration. F.eks. via en datasjø.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Her avgrenses omfanget til de to første av disse intragrasjonsstilene. Begrunnelsen for dette er:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Filoverføring betraktes her som en løsning for meldingsforsendelse.</p>
+</li>
+<li>
+<p><em>Shared database</em> dekkes inntil videre gjennom å se dette som en genuin datatilbyder, heller enn en del av infrastrukturen for datautveksling.   Det kan tenkes å være særskilte juridiske eller avtalemessige  problemstillinger i tilknytning til dette som en type mønster, men tilsvarende problemstillinger finnes også f.eks. i mønstre for datautveksling gjennom persistente meldingskøer eller hendelseslister.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tilnærming"><a class="anchor" href="#_tilnærming"></a>1.4. Tilnærming</h3>
 <div class="paragraph">
 <p>Det bygges videre på tidligere struktur med tre hovedtyper utvekslingsmønstre, dvs. forsendelse, forespørsel-svar og publisering av hendelsesdata.</p>
 </div>
@@ -312,7 +352,7 @@
 <p>For å samsvare bedre med slik det er gjort i eHelse, etableres i tillegg et sett av mer forretningsorienterte samhandlingsmønstre.</p>
 </div>
 <div class="paragraph">
-<p>Det etableres også et begrepsapparat som bygger bro mellom ulike bruk av viktige begreper som f.eks. datadeling og dokumentdeling.</p>
+<p>Det etableres også et begrepsapparat som bygger bro mellom ulike bruk av viktige begreper som f.eks. datadeling, dokumentdeling, meldingsutveksling og dokumentutveksling.</p>
 </div>
 <div class="paragraph">
 <p>Dokumentstrukturen legger opp til at omfanget kan utvides til å dekke mer enn bare en overordnet beskrivelse av datautveksling, slik som veiledning til valg mellom mønstre. Deler av innholdet bør dessuten kunne integreres med eksisterende beskrivelser av referansearkitekturene.</p>
@@ -321,10 +361,35 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_grunnleggende_konsepter"><a class="anchor" href="#_grunnleggende_konsepter"></a>2. Grunnleggende konsepter</h2>
+<h2 id="_grunnleggende_konsepter_og_begreper"><a class="anchor" href="#_grunnleggende_konsepter_og_begreper"></a>2. Grunnleggende konsepter og begreper</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_grunnleggende_modell_for_meldingsutveksling"><a class="anchor" href="#_grunnleggende_modell_for_meldingsutveksling"></a>2.1. Grunnleggende modell for meldingsutveksling</h3>
+<h3 id="_sentrale_begreper"><a class="anchor" href="#_sentrale_begreper"></a>2.1. Sentrale begreper</h3>
+<div class="paragraph">
+<p>Meldingsutveksling er en form for datautveksling som transporterer pakker med meldingsinnhold mellom avsendere og mottakere ut fra en avtalt eller ad hoc koreografi.</p>
+</div>
+<div class="paragraph">
+<p>Litteraturen er delt i synet på om meldingsutveksling kun dreier seg om asynkron kommunikasjon. Her fastholdes at meldingsutveksling støtter både asynkron og synkron kommunikasjon. Dette ses på som en egenskap ved løsningen, på linje med andre egenskaper, som f.eks. leveringstid.</p>
+</div>
+<div class="paragraph">
+<p>Sett fra mottaker, kommer meldinger via meldingskanaler. Kanaler kan være realisert på ulike måter. Her er det skilt mellom begrepene kø, hendelsesliste og blockchain.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../patterns-concepts/_images/Sentrale%20begreper.png" alt="Sentrale begreper image">
+</div>
+<div class="title">Figure 1. Sentrale begreper</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="../patterns-concepts/Sentrale%20begreper.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_grunnleggende_modell_for_datautveksling"><a class="anchor" href="#_grunnleggende_modell_for_datautveksling"></a>2.2. Grunnleggende modell for datautveksling</h3>
 <div class="paragraph">
 <p>Samhandlingsaktører kommuniserer ved å sende meldinger via sine aksesspunkter til den tekniske  meldingsinfrastrukturen.
 Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av teknologi i kommunikasjonsinfrastrukturen.</p>
@@ -333,50 +398,42 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <p>I beskrivelsen av datautvekslingsmønstre, tas det utgangspunkt i en slik logisk meldingsflyt.</p>
 </div>
 <div class="paragraph">
-<p>​Det tas f.eks. ikke stilling til om meldinger sendes synkront eller asynkront. Aktuelle kommunikasjonsstandarder kan f.eks. være ebXML, HTTP, REST, GraphQL eller SPARQL. Det kan dreie seg on felles infrastruktur og punkt-til-punkt kommunikasjon, eller det kan være en mer kompleks infrastruktur som arter seg ulikt på hver side.</p>
+<p>​Det tas f.eks. ikke stilling til om meldinger sendes synkront eller asynkront. Aktuelle kommunikasjonsstandarder kan f.eks. være ebXML, HTTP, REST, GraphQL eller SPARQL. Det kan dreie seg om felles infrastruktur og punkt-til-punkt kommunikasjon, eller det kan være en mer kompleks infrastruktur som arter seg ulikt på hver side.</p>
 </div>
 <div class="paragraph">
 <p>Dette er ikke det samme som å si at valg av teknologi og løsninger ikke er viktig. Aktuelle krav til tjenestekvalitet m.m. bestemmer hvilke teknologier og løsninger som passer.</p>
 </div>
+<div class="paragraph">
+<p>Modellen som vises her kan ses som en forenklet utgave av lagdelte modeller som <a href="https://no.wikipedia.org/wiki/OSI-modellen">OSI-modellen</a> (7 lag) eller TCP/IP (4 lag).</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="../patterns-concepts/_images/Grunnleggende%20modell%20for%20meldingsutveksling.png" alt="Grunnleggende modell for meldingsutveksling image">
+<img src="../patterns-concepts/_images/Grunnleggende%20modell%20for%20datautveksling.png" alt="Grunnleggende modell for datautveksling image">
 </div>
-<div class="title">Figure 1. Grunnleggende modell for meldingsutveksling</div>
+<div class="title">Figure 2. Grunnleggende modell for datautveksling</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_meldinger_grunnleggende_objektmodell"><a class="anchor" href="#_meldinger_grunnleggende_objektmodell"></a>2.2. Meldinger - grunnleggende objektmodell</h3>
+<h3 id="_meldinger_basis_objektmodell"><a class="anchor" href="#_meldinger_basis_objektmodell"></a>2.3. Meldinger - basis objektmodell</h3>
 <div class="paragraph">
-<p>Narrativ&#8230;&#8203;</p>
+<p>En elektronisk melding kan ses på som en type brev, med innhold pakket i en konvolutt med adresse eller annen informasjon som grunnlag for ruting av innholdet til en eller flere mottakere.  Som alternativ til å inkludere alt relevant innhold i selve meldingen, kan meldingen gi referanser til meldingsrelaterte data som mottakerne eventuelt kan foespørre.</p>
+</div>
+<div class="paragraph">
+<p>Begrepene hendelsesmelding, kommandomelding og dokumentmelding er her hentet fra boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>. Hendelsesmeldinger forteller om at noe har skjedd, for den det måtte angå. Kommandomeldinger ber noen om å gjøre noe. Dokumentmeldinger inneholder informasjon, typisk som svar på forespørsel.</p>
+</div>
+<div class="paragraph">
+<p>Den videre spesialiseringen av disse begrepene her, bygger på flere kilde, for å gi felles begreper i omtalen av mønstre for samhandling og datautveksling.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../patterns-concepts/_images/Meldinger%20-%20grunnleggende%20objektmodell.png" alt="Meldinger - grunnleggende objektmodell image">
+<img src="../patterns-concepts/_images/Meldinger%20-%20basis%20objektmodell.png" alt="Meldinger - basis objektmodell image">
 </div>
-<div class="title">Figure 2. Meldinger - grunnleggende objektmodell</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_forretningsmessige_samhandlingsmønstre"><a class="anchor" href="#_forretningsmessige_samhandlingsmønstre"></a>3. Forretningsmessige samhandlingsmønstre</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Intro&#8230;&#8203;</p>
-</div>
-<div class="sect2">
-<h3 id="_samhandlingsmønstre_de_viktigste"><a class="anchor" href="#_samhandlingsmønstre_de_viktigste"></a>3.1. Samhandlingsmønstre - de viktigste</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../patterns-use-cases/_images/Samhandlingsmønstre%20-%20de%20viktigste.png" alt="Samhandlingsmønstre - de viktigste image">
-</div>
-<div class="title">Figure 3. Samhandlingsmønstre - de viktigste</div>
+<div class="title">Figure 3. Meldinger - basis objektmodell</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p><a href="../patterns-use-cases/Samhandlingsmønstre%20-%20de%20viktigste.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+<p><a href="../patterns-concepts/Meldinger%20-%20basis%20objektmodell.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
 </div>
 </div>
 </div>
@@ -384,23 +441,41 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 </div>
 </div>
 <div class="sect1">
-<h2 id="_tekniske_utveklsingsmønstre"><a class="anchor" href="#_tekniske_utveklsingsmønstre"></a>4. Tekniske utveklsingsmønstre</h2>
+<h2 id="_samhandlingsmønstre"><a class="anchor" href="#_samhandlingsmønstre"></a>3. Samhandlingsmønstre</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Intro&#8230;&#8203;</p>
-</div>
 <div class="sect2">
-<h3 id="_utvekslingsmønstre_de_viktigste"><a class="anchor" href="#_utvekslingsmønstre_de_viktigste"></a>4.1. Utvekslingsmønstre - de viktigste</h3>
+<h3 id="_viktige_samhandlingsmønstre_oversikt"><a class="anchor" href="#_viktige_samhandlingsmønstre_oversikt"></a>3.1. Viktige samhandlingsmønstre - oversikt</h3>
 <div class="imageblock">
 <div class="content">
-<img src="../patterns-selected-patterns/_images/Utvekslingsmønstre%20-%20de%20viktigste.png" alt="Utvekslingsmønstre - de viktigste image">
+<img src="../patterns-use-cases/_images/Viktige%20samhandlingsmønstre%20-%20oversikt.png" alt="Viktige samhandlingsmønstre - oversikt image">
 </div>
-<div class="title">Figure 4. Utvekslingsmønstre - de viktigste</div>
+<div class="title">Figure 4. Viktige samhandlingsmønstre - oversikt</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p><a href="../patterns-selected-patterns/Utvekslingsmønstre%20-%20de%20viktigste.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+<p><a href="../patterns-use-cases/Viktige%20samhandlingsmønstre%20-%20oversikt.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utvekslingsmønstre"><a class="anchor" href="#_utvekslingsmønstre"></a>4. Utvekslingsmønstre</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_viktige_utvekslingsmønstre_oversikt"><a class="anchor" href="#_viktige_utvekslingsmønstre_oversikt"></a>4.1. Viktige utvekslingsmønstre - oversikt</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../patterns-selected-patterns/_images/Viktige%20utvekslingsmønstre%20-%20oversikt.png" alt="Viktige utvekslingsmønstre - oversikt image">
+</div>
+<div class="title">Figure 5. Viktige utvekslingsmønstre - oversikt</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="../patterns-selected-patterns/Viktige%20utvekslingsmønstre%20-%20oversikt.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
 </div>
 </div>
 </div>
@@ -414,7 +489,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Utvekslingsmønstre%20-%20oversikt%20(alternativ%20grafikk).png" alt="Utvekslingsmønstre - oversikt (alternativ grafikk) image">
 </div>
-<div class="title">Figure 5. Utvekslingsmønstre - oversikt (alternativ grafikk)</div>
+<div class="title">Figure 6. Utvekslingsmønstre - oversikt (alternativ grafikk)</div>
 </div>
 </div>
 <div class="sect2">
@@ -423,7 +498,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="_images/Map%20utvekslingsmønstre%20til%20samhandlingsmønstre.png" alt="Map utvekslingsmønstre til samhandlingsmønstre image">
 </div>
-<div class="title">Figure 6. Map utvekslingsmønstre til samhandlingsmønstre</div>
+<div class="title">Figure 7. Map utvekslingsmønstre til samhandlingsmønstre</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -444,7 +519,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Forsendelse%20-%20en%20til%20en.png" alt="Forsendelse - en til en image">
 </div>
-<div class="title">Figure 7. Forsendelse - en til en</div>
+<div class="title">Figure 8. Forsendelse - en til en</div>
 </div>
 </div>
 <div class="sect3">
@@ -453,7 +528,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Forsendelse%20-%20en%20til%20flere%20kjente.png" alt="Forsendelse - en til flere kjente image">
 </div>
-<div class="title">Figure 8. Forsendelse - en til flere kjente</div>
+<div class="title">Figure 9. Forsendelse - en til flere kjente</div>
 </div>
 </div>
 <div class="sect3">
@@ -462,7 +537,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Forsendelse%20-%20flere%20til%20en.png" alt="Forsendelse - flere til en image">
 </div>
-<div class="title">Figure 9. Forsendelse - flere til en</div>
+<div class="title">Figure 10. Forsendelse - flere til en</div>
 </div>
 </div>
 </div>
@@ -474,7 +549,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Forespørsel-svar%20-%20en%20mot%20en.png" alt="Forespørsel-svar - en mot en image">
 </div>
-<div class="title">Figure 10. Forespørsel-svar - en mot en</div>
+<div class="title">Figure 11. Forespørsel-svar - en mot en</div>
 </div>
 </div>
 <div class="sect3">
@@ -483,7 +558,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Forespørsel-svar%20-%20en%20mot%20flere%20kjente.png" alt="Forespørsel-svar - en mot flere kjente image">
 </div>
-<div class="title">Figure 11. Forespørsel-svar - en mot flere kjente</div>
+<div class="title">Figure 12. Forespørsel-svar - en mot flere kjente</div>
 </div>
 </div>
 <div class="sect3">
@@ -495,7 +570,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Forespørsel-svar%20-%20en%20mot%20flere%20ukjente.png" alt="Forespørsel-svar - en mot flere ukjente image">
 </div>
-<div class="title">Figure 12. Forespørsel-svar - en mot flere ukjente</div>
+<div class="title">Figure 13. Forespørsel-svar - en mot flere ukjente</div>
 </div>
 </div>
 </div>
@@ -504,13 +579,13 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="sect3">
 <h4 id="_publisering_fra_en_til_flere_ukjente_via_felles_kø"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø"></a>4.6.1. Publisering fra en til flere ukjente via felles kø</h4>
 <div class="paragraph">
-<p>Merk: Det tas ikek her stilling til om det er pull eller push mot mottakerne</p>
+<p>Merk: Det tas ikke her stilling til om det er pull eller push mot mottakerne.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20felles%20kø.png" alt="Publisering fra en til flere ukjente via felles kø image">
 </div>
-<div class="title">Figure 13. Publisering fra en til flere ukjente via felles kø</div>
+<div class="title">Figure 14. Publisering fra en til flere ukjente via felles kø</div>
 </div>
 </div>
 <div class="sect3">
@@ -519,7 +594,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20med%20abonnement%20på%20emne.png" alt="Publisering fra en til flere ukjente med abonnement på emne image">
 </div>
-<div class="title">Figure 14. Publisering fra en til flere ukjente med abonnement på emne</div>
+<div class="title">Figure 15. Publisering fra en til flere ukjente med abonnement på emne</div>
 </div>
 </div>
 <div class="sect3">
@@ -528,7 +603,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20hendelseslister.png" alt="Publisering fra en til flere ukjente via hendelseslister image">
 </div>
-<div class="title">Figure 15. Publisering fra en til flere ukjente via hendelseslister</div>
+<div class="title">Figure 16. Publisering fra en til flere ukjente via hendelseslister</div>
 </div>
 </div>
 <div class="sect3">
@@ -537,7 +612,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="content">
 <img src="../patterns-selected-patterns/_images/Publisering%20flere%20til%20flere%20ukjente%20via%20hendelseslister.png" alt="Publisering flere til flere ukjente via hendelseslister image">
 </div>
-<div class="title">Figure 16. Publisering flere til flere ukjente via hendelseslister</div>
+<div class="title">Figure 17. Publisering flere til flere ukjente via hendelseslister</div>
 </div>
 </div>
 </div>
@@ -547,39 +622,116 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <h2 id="_kvalitetsegenskaper"><a class="anchor" href="#_kvalitetsegenskaper"></a>5. Kvalitetsegenskaper</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_løsninger_og_teknologier"><a class="anchor" href="#_løsninger_og_teknologier"></a>6. Løsninger og teknologier</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_veiledning_til_valg_av_mønstre_og_løsninger"><a class="anchor" href="#_veiledning_til_valg_av_mønstre_og_løsninger"></a>7. Veiledning til valg av mønstre og løsninger</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TBD.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_begreper"><a class="anchor" href="#_begreper"></a>8. Begreper</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Se sentrale begreper i introdiksjonen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_referanser"><a class="anchor" href="#_referanser"></a>9. Referanser</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>. Bobby Woolf; Gregor Hohpe. Addison-Wesley Professional, 2003.</p>
+</li>
+<li>
+<p><a href="https://www.sbr.gov.au/sites/default/files/Message-Protocols-for-Enabling-Digital-Government-Services-Final-Report.pdf?acsf_files_redirect">Message Protocols for Enabling Digital Services: A Report for the Australian Government, June 2015</a></p>
+</li>
+<li>
+<p><a href="https://www.researchgate.net/publication/339124293_Difference_Between_Synchronous_and_Asynchronous_Messages_Synchronous_Messages">Difference Between Synchronous and Asynchronous Messages</a></p>
+</li>
+<li>
+<p><a href="https://sookocheff.com/post/api/marrying-restful-http-with-asynchronous-design/">Marrying RESTful HTTP with Asynchronous and Event-Driven Services (Kevin Sookocheff)</a></p>
+</li>
+<li>
+<p><a href="https://www.ibm.com/docs/en/ibm-mq/8.0?topic=queuing-message-terminology">Message queuing terminology (IBM MQ)</a></p>
+</li>
+<li>
+<p><a href="https://blogs.mulesoft.com/api-integration/patterns/asynchronous-messaging-patterns/">Asynchronous Messaging Patterns (Mulesoft)</a></p>
+</li>
+<li>
+<p><a href="https://tuhrig.de/queues-vs-topics-vs-virtual-topics-in-activemq/">Queues vs. Topics vs. Virtual Topics (in ActiveMQ)</a></p>
+</li>
+<li>
+<p><a href="https://microservices.io/patterns/microservices.html">Pattern: Microservice Architecture (microservices.io)</a></p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features">Features and terminology in Azure Event Hubs</a></p>
+</li>
+<li>
+<p><a href="https://no.wikipedia.org/wiki/OSI-modellen">OSI-modellen</a></p>
+</li>
+<li>
+<p><a href="https://www.ehelse.no/standarder/malarkitektur-for-datadeling-i-helse-og-omsorgssektoren/_/attachment/inline/a5a908cd-5054-4d21-8eaf-8b795dcb25ea:761793d5dd6b6a1f2b9dd334a44e3a754d5b88e6/M%C3%A5larkitektur%20for%20datadeling%20i%20helse-%20og%20omsorgssektoren%20(HITR%201231_2021).pdf">Målarkitektur for datadeling i helse-og omsorgssektoren, versjon 1.0</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vedlegg_a_sammenligning_med_alternative_framstillinger"><a class="anchor" href="#_vedlegg_a_sammenligning_med_alternative_framstillinger"></a>10. Vedlegg A - Sammenligning med alternative framstillinger</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>Tekst&#8230;&#8203;</p>
 </div>
+<div class="sect2">
+<h3 id="_map_nasjonale_samhandlingsmønstre_mot_ehelse"><a class="anchor" href="#_map_nasjonale_samhandlingsmønstre_mot_ehelse"></a>10.1. Map nasjonale samhandlingsmønstre mot eHelse</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../patterns-compare-others/_images/Map%20nasjonale%20samhandlingsmønstre%20mot%20eHelse.png" alt="Map nasjonale samhandlingsmønstre mot eHelse image">
 </div>
+<div class="title">Figure 18. Map nasjonale samhandlingsmønstre mot eHelse</div>
 </div>
-<div class="sect1">
-<h2 id="_feilhåndtering"><a class="anchor" href="#_feilhåndtering"></a>6. Feilhåndtering</h2>
-<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
 <div class="paragraph">
-<p>Tekst</p>
+<p><a href="../patterns-compare-others/Map%20nasjonale%20samhandlingsmønstre%20mot%20eHelse.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_løsninger_og_teknologier"><a class="anchor" href="#_løsninger_og_teknologier"></a>7. Løsninger og teknologier</h2>
-<div class="sectionbody">
+</div>
+<div class="sect2">
+<h3 id="_map_nytt_sett_samhandlingsmønstre_til_ver_1_nav"><a class="anchor" href="#_map_nytt_sett_samhandlingsmønstre_til_ver_1_nav"></a>10.2. Map nytt sett samhandlingsmønstre til ver. 1 (NAV)</h3>
 <div class="paragraph">
-<p>Tekst&#8230;&#8203;</p>
+<p>Figuren nedenfor viser en foreløpig oversikt over brukstilfeller.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../patterns-compare-others/_images/Map%20nytt%20sett%20samhandlingsmønstre%20til%20ver.%201%20(NAV).png" alt="Map nytt sett samhandlingsmønstre til ver. 1 (NAV) image">
 </div>
+<div class="title">Figure 19. Map nytt sett samhandlingsmønstre til ver. 1 (NAV)</div>
 </div>
-<div class="sect1">
-<h2 id="_veiledning_til_valg_av_mønstre_og_løsninger"><a class="anchor" href="#_veiledning_til_valg_av_mønstre_og_løsninger"></a>8. Veiledning til valg av mønstre og løsninger</h2>
-<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
 <div class="paragraph">
-<p>Tekst</p>
+<p><a href="../patterns-compare-others/Map%20nytt%20sett%20samhandlingsmønstre%20til%20ver.%201%20(NAV).var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_begreper"><a class="anchor" href="#_begreper"></a>9. Begreper</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Tekst&#8230;&#8203;</p>
 </div>
 </div>
 </div>
