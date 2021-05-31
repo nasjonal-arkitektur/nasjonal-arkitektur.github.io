@@ -273,23 +273,38 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente med abonnement på emne (publish-subscribe)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via felles kø</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via hendelseslister (event streaming)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via hendelseslister (event-streaming)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Ref. . <a href="https://sookocheff.com/post/api/marrying-restful-http-with-asynchronous-design/">Marrying RESTful HTTP with Asynchronous and Event-Driven Services</a>:</p>
+<p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
 </div>
 <div class="paragraph">
-<p>Event streaming: Events are written to a log. Events are strictly ordered (within a partition) and durable. Clients don’t subscribe to the stream, instead a client can read from any part of the stream. The client is responsible for advancing its position in the stream. That means a client can join at any time, and can replay events.</p>
+<p>Merk: Det kan diskuteres om dette skal ha status som et eget mønster for datautveklsling. som en formidlingstjeneste mellom flere tilbydere og konsumenter. Det er uansett interessant å se på fellesløsninger som svarer på behovet for slike formidlingstjensester. Et målbilde for offentlig sektor kan omfatte dette som en arkitektur for at "alle" aktører skal kunne få tilgang til "alle" hendelser om vedtak på tvers  av sektorer og virksomheter.</p>
+</div>
+<div class="paragraph">
+<p>Dette er et avansert mønster som</p>
+</div>
+<div class="paragraph">
+<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
 </div></div></td>
 </tr>
 <tr>
