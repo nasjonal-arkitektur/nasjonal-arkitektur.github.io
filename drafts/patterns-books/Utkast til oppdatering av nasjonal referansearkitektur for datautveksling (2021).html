@@ -207,7 +207,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Thu Jun 03 2021 13:07:22 GMT+0200 (CEST)</pre>
+<pre>Thu Jun 03 2021 13:10:09 GMT+0200 (CEST)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -402,14 +402,121 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_viktige_utvekslingsmønstre_oversikt"><a class="anchor" href="#_viktige_utvekslingsmønstre_oversikt"></a>4.1. Viktige utvekslingsmønstre - oversikt</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Viktige utvekslingsmønstre - oversikt</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Elementer i view for Viktige utvekslingsmønstre - oversikt</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viktige utvekslingsmønstre</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere ukjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret kombinerer mønstrene <em>publish-subscribe</em> og <em>Forsendelse - flere til en</em>.</p>
+</div>
 <div class="paragraph">
-<p><a href="../patterns-selected-patterns/Viktige%20utvekslingsmønstre%20-%20oversikt.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+<p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
 </div>
+<div class="paragraph">
+<p>Dette mønsteret støtter også datavirtualisering</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere kjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
 </div>
+<div class="paragraph">
+<p>Det er et mye brukt mønster og støttes av flere produkter for datavirtualisering.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering til ukjente mottakere</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente med abonnement på emne (publish-subscribe)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via felles kø</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via hendelseslister (event streaming)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
 </div>
+<div class="paragraph">
+<p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via hendelseslister (event-streaming)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
+</div>
+<div class="paragraph">
+<p>Merk: Det kan diskuteres om dette skal ha status som et eget mønster for datautveklsling. som en formidlingstjeneste mellom flere tilbydere og konsumenter. Det er uansett interessant å se på fellesløsninger som svarer på behovet for slike formidlingstjensester. Et målbilde for offentlig sektor kan omfatte dette som en arkitektur for at "alle" aktører skal kunne få tilgang til "alle" hendelser om vedtak på tvers  av sektorer og virksomheter.</p>
+</div>
+<div class="paragraph">
+<p>Dette er et avansert mønster som</p>
+</div>
+<div class="paragraph">
+<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse til kjente mottakere</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - flere til en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt meldingskø (kanal) hos mottaker.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker. Dette kan skje direkte og synkront,eller via meldingskøer.</p>
+</div>
+<div class="paragraph">
+<p><a href="../patterns-selected-patterns/Forsendelse%20-%20en%20til%20en.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til flere kjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forsendelse fra en til flere kjente bygger på <em>basismønsteret for forsendelse fra en til</em>, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_utvekslingsmønstre_oversikt_alternativ_grafikk"><a class="anchor" href="#_utvekslingsmønstre_oversikt_alternativ_grafikk"></a>4.2. Utvekslingsmønstre - oversikt (alternativ grafikk)</h3>
