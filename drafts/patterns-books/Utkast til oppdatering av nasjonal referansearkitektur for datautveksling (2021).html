@@ -129,14 +129,7 @@
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_introduksjon">1. Introduksjon</a>
-<ul class="sectlevel2">
-<li><a href="#_bakgrunn">1.1. Bakgrunn</a></li>
-<li><a href="#_formål">1.2. Formål</a></li>
-<li><a href="#_omfang_og_avgrensing">1.3. Omfang og avgrensing</a></li>
-<li><a href="#_tilnærming">1.4. Tilnærming</a></li>
-</ul>
-</li>
+<li><a href="#_introduksjon">1. Introduksjon</a></li>
 <li><a href="#_grunnleggende_konsepter_og_begreper">2. Grunnleggende konsepter og begreper</a>
 <ul class="sectlevel2">
 <li><a href="#_sentrale_begreper">2.1. Sentrale begreper</a></li>
@@ -151,11 +144,18 @@
 </li>
 <li><a href="#_samhandlingsmønstre_og_utvekslingsmønstre">4. Samhandlingsmønstre og utvekslingsmønstre</a>
 <ul class="sectlevel2">
-<li><a href="#_generelt">4.1. Generelt</a></li>
+<li><a href="#_introduksjon_2">4.1. Introduksjon</a>
+<ul class="sectlevel3">
+<li><a href="#_bakgrunn">4.1.1. Bakgrunn</a></li>
+<li><a href="#_formål">4.1.2. Formål</a></li>
+<li><a href="#_omfang_og_avgrensing">4.1.3. Omfang og avgrensing</a></li>
+<li><a href="#_tilnærming">4.1.4. Tilnærming</a></li>
+</ul>
+</li>
 <li><a href="#_generiske_samhandlingsmønstre">4.2. Generiske samhandlingsmønstre</a></li>
 <li><a href="#_utvekslingsmønstre">4.3. Utvekslingsmønstre</a>
 <ul class="sectlevel3">
-<li><a href="#_generelt_2">4.3.1. Generelt</a></li>
+<li><a href="#_generelt">4.3.1. Generelt</a></li>
 <li><a href="#_viktige_utvekslingsmønstre_oversikt">4.3.2. Viktige utvekslingsmønstre - oversikt</a></li>
 <li><a href="#_forsendelse">4.3.3. Forsendelse</a>
 <ul class="sectlevel4">
@@ -212,7 +212,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Thu Jun 03 2021 23:12:39 GMT+0200 (CEST)</pre>
+<pre>Fri Jun 04 2021 00:16:44 GMT+0200 (CEST)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -223,82 +223,14 @@
 <div class="sect1">
 <h2 id="_introduksjon"><a class="anchor" href="#_introduksjon"></a>1. Introduksjon</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_bakgrunn"><a class="anchor" href="#_bakgrunn"></a>1.1. Bakgrunn</h3>
 <div class="paragraph">
-<p>Lærebøker, artikler og blogger fra akademia, produktleverandører og frittstående forfattere gir ulike framstillinger av konsepter og begreper i tilknytning til datautveksling.</p>
+<p>Gjeldende (mai 2021) <a href="../../architecture-repository/data-exchange-ra/book-data-exchange-ra.html" class="page">referansearkitektur for datautveksling</a> bør oppdateres med noen tillegg og noen strukturelle endringer.</p>
 </div>
 <div class="paragraph">
-<p>Nasjonale referansearkitekturer for datautveksling er i dag bygd opp rundt en struktur med tre typer utvekslingsmønstre, dvs. meldingsforsendelse, forespørsel-svar og publisering av hendelsesdata.</p>
+<p>Her følger utkast til noen slike oppdateringer. Deler av innholdet her vil kunne flyttes direkte inn som del av gjeldende beskrivelser, mens det for andre deler behøves mer "massering".</p>
 </div>
 <div class="paragraph">
-<p>I parallell ned utviklingen av dette har det foregått tilsvarende arbeid i noen av sektorene, bare delvis samordnet.</p>
-</div>
-<div class="paragraph">
-<p>Arkitektmiljøene i de ulike sektorene har etablert samarbeidsarenaer, men arbeider fremdeles med sektorielle arkitekturprodukter.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_formål"><a class="anchor" href="#_formål"></a>1.2. Formål</h3>
-<div class="paragraph">
-<p>Formålet er her primært å identifisere viktige mønstre for datautveksling med tanke på samhandlingsevne, som utgangspunkt for videre arbeid med nasjonale referansearkitekturer og veiledning til valg mellom alternativer.</p>
-</div>
-<div class="paragraph">
-<p>Det er samtidig ønskelig å etablere et begrepsapparat som kan fungere for bedre koordinert videreutvikling av referansearkitekturene innen samhandling, datadeling og datautveksling på tvers av sektorene.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_omfang_og_avgrensing"><a class="anchor" href="#_omfang_og_avgrensing"></a>1.3. Omfang og avgrensing</h3>
-<div class="paragraph">
-<p>Dette er et svært omfattende tema. Det har ingen hensikt å lage en komplett lærebok her - det finnes allerede mange, og det finnes et virvar av ulike artikler fra akademia og produktleverandører. Utfordringen er å gripe fatt i en essens som gir nytte for å bygge samhandlingsevne på tvers.</p>
-</div>
-<div class="paragraph">
-<p>I boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>, skilles det mellom følgende grunnleggende intragrasjonsstiler (her med en kortfattet omskriving av betydningen):</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Messaging. Asynkron meldingsutveksling.</strong></p>
-</li>
-<li>
-<p><strong>Remote Procedure Invocation. Synkrone API-kall.</strong></p>
-</li>
-<li>
-<p>File transfer. Filoverføring. F.eks. via FTP.</p>
-</li>
-<li>
-<p>Shared database integration. F.eks. via en datasjø.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Her avgrenses omfanget til de to første av disse intragrasjonsstilene. Begrunnelsen for dette er:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Filoverføring betraktes her som en løsning for meldingsforsendelse.</p>
-</li>
-<li>
-<p><em>Shared database</em> dekkes inntil videre gjennom å se dette som en genuin datatilbyder, heller enn en del av infrastrukturen for datautveksling.   Det kan tenkes å være særskilte juridiske eller avtalemessige  problemstillinger i tilknytning til dette som en type mønster, men tilsvarende problemstillinger finnes også f.eks. i mønstre for datautveksling gjennom persistente meldingskøer eller hendelseslister.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tilnærming"><a class="anchor" href="#_tilnærming"></a>1.4. Tilnærming</h3>
-<div class="paragraph">
-<p>Det bygges videre på tidligere struktur med tre hovedtyper utvekslingsmønstre, dvs. forsendelse, forespørsel-svar og publisering av hendelsesdata.</p>
-</div>
-<div class="paragraph">
-<p>For å samsvare bedre med slik det er gjort i eHelse, etableres i tillegg et sett av mer forretningsorienterte samhandlingsmønstre.</p>
-</div>
-<div class="paragraph">
-<p>Det etableres også et begrepsapparat som bygger bro mellom ulike bruk av viktige begreper som f.eks. datadeling, dokumentdeling, meldingsutveksling og dokumentutveksling.</p>
-</div>
-<div class="paragraph">
-<p>Dokumentstrukturen legger opp til at omfanget kan utvides til å dekke mer enn bare en overordnet beskrivelse av datautveksling, slik som veiledning til valg mellom mønstre. Deler av innholdet bør dessuten kunne integreres med eksisterende beskrivelser av referansearkitekturene.</p>
-</div>
+<p>Innholdet her vil endres fortløpende, i takt med oppdatering av gjeldende beskrivelser og nye innspill eller utkast.</p>
 </div>
 </div>
 </div>
@@ -346,7 +278,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <p>Dette er ikke det samme som å si at valg av teknologi og løsninger ikke er viktig. Aktuelle krav til tjenestekvalitet m.m. bestemmer hvilke teknologier og løsninger som passer.</p>
 </div>
 <div class="paragraph">
-<p>Modellen som vises her kan ses som en forenklet utgave av lagdelte modeller som <a href="https://no.wikipedia.org/wiki/OSI-modellen">OSI-modellen</a> (7 lag) eller TCP/IP (4 lag).</p>
+<p>Modellen som vises her kan ses som en forenklet utgave av lagdelte modeller som {OSI-modellen} (7 lag) eller TCP/IP (4 lag).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -397,8 +329,161 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <h2 id="_samhandlingsmønstre_og_utvekslingsmønstre"><a class="anchor" href="#_samhandlingsmønstre_og_utvekslingsmønstre"></a>4. Samhandlingsmønstre og utvekslingsmønstre</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_generelt"><a class="anchor" href="#_generelt"></a>4.1. Generelt</h3>
-
+<h3 id="_introduksjon_2"><a class="anchor" href="#_introduksjon_2"></a>4.1. Introduksjon</h3>
+<div class="paragraph">
+<p><strong>Bakgrunn:</strong></p>
+</div>
+<div class="paragraph">
+<p>Lærebøker, artikler og blogger fra akademia, produktleverandører og frittstående forfattere gir ulike framstillinger av konsepter og begreper i tilknytning til datautveksling.</p>
+</div>
+<div class="paragraph">
+<p>Nasjonale referansearkitekturer for datautveksling er i dag bygd opp rundt en struktur med tre typer utvekslingsmønstre, dvs. meldingsforsendelse, forespørsel-svar og publisering av hendelsesdata.</p>
+</div>
+<div class="paragraph">
+<p>I parallell ned utviklingen av dette har det foregått tilsvarende arbeid i noen av sektorene, bare delvis samordnet.</p>
+</div>
+<div class="paragraph">
+<p>Arkitektmiljøene i de ulike sektorene har etablert samarbeidsarenaer, men arbeider fremdeles med sektorielle arkitekturprodukter.</p>
+</div>
+<div class="paragraph">
+<p><strong>Formål:</strong></p>
+</div>
+<div class="paragraph">
+<p>Formålet er her primært å identifisere viktige mønstre for datautveksling med tanke på samhandlingsevne, som utgangspunkt for videre arbeid med nasjonale referansearkitekturer og veiledning til valg mellom alternativer.</p>
+</div>
+<div class="paragraph">
+<p>Det er samtidig ønskelig å etablere et begrepsapparat som kan fungere for bedre koordinert videreutvikling av referansearkitekturene innen samhandling, datadeling og datautveksling på tvers av sektorene.</p>
+</div>
+<div class="paragraph">
+<p><strong>Omfang og avgrensing:</strong></p>
+</div>
+<div class="paragraph">
+<p>Dette er et svært omfattende tema. Det har ingen hensikt å lage en komplett lærebok her - det finnes allerede mange, og det finnes et virvar av ulike artikler fra akademia og produktleverandører. Utfordringen er å gripe fatt i en essens som gir nytte for å bygge samhandlingsevne på tvers.</p>
+</div>
+<div class="paragraph">
+<p>I boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>, skilles det mellom følgende grunnleggende intragrasjonsstiler (her med en kortfattet omskriving av betydningen):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Messaging. Asynkron meldingsutveksling.</strong></p>
+</li>
+<li>
+<p><strong>Remote Procedure Invocation. Synkrone API-kall.</strong></p>
+</li>
+<li>
+<p>File transfer. Filoverføring. F.eks. via FTP.</p>
+</li>
+<li>
+<p>Shared database integration. F.eks. via en datasjø.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Her avgrenses omfanget til de to første av disse intragrasjonsstilene. Begrunnelsen for dette er:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Filoverføring betraktes her som en løsning for meldingsforsendelse.</p>
+</li>
+<li>
+<p><em>Shared database</em> dekkes inntil videre gjennom å se dette som en genuin datatilbyder, heller enn en del av infrastrukturen for datautveksling.   Det kan tenkes å være særskilte juridiske eller avtalemessige  problemstillinger i tilknytning til dette som en type mønster, men tilsvarende problemstillinger finnes også f.eks. i mønstre for datautveksling gjennom persistente meldingskøer eller hendelseslister.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Tilnærming:</strong></p>
+</div>
+<div class="paragraph">
+<p>Det bygges videre på tidligere struktur med tre hovedtyper utvekslingsmønstre, dvs. forsendelse, forespørsel-svar og publisering av hendelsesdata.</p>
+</div>
+<div class="paragraph">
+<p>For å samsvare bedre med slik det er gjort i eHelse, etableres i tillegg et sett av mer forretningsorienterte samhandlingsmønstre.</p>
+</div>
+<div class="paragraph">
+<p>Det etableres også et begrepsapparat som bygger bro mellom ulike bruk av viktige begreper som f.eks. datadeling, dokumentdeling, meldingsutveksling og dokumentutveksling.</p>
+</div>
+<div class="paragraph">
+<p>Dokumentstrukturen legger opp til at omfanget kan utvides til å dekke mer enn bare en overordnet beskrivelse av datautveksling, slik som veiledning til valg mellom mønstre. Deler av innholdet bør dessuten kunne integreres med eksisterende beskrivelser av referansearkitekturene.</p>
+</div>
+<div class="sect3">
+<h4 id="_bakgrunn"><a class="anchor" href="#_bakgrunn"></a>4.1.1. Bakgrunn</h4>
+<div class="paragraph">
+<p>Lærebøker, artikler og blogger fra akademia, produktleverandører og frittstående forfattere gir ulike framstillinger av konsepter og begreper i tilknytning til datautveksling.</p>
+</div>
+<div class="paragraph">
+<p>Nasjonale referansearkitekturer for datautveksling er i dag bygd opp rundt en struktur med tre typer utvekslingsmønstre, dvs. meldingsforsendelse, forespørsel-svar og publisering av hendelsesdata.</p>
+</div>
+<div class="paragraph">
+<p>I parallell ned utviklingen av dette har det foregått tilsvarende arbeid i noen av sektorene, bare delvis samordnet.</p>
+</div>
+<div class="paragraph">
+<p>Arkitektmiljøene i de ulike sektorene har etablert samarbeidsarenaer, men arbeider fremdeles med sektorielle arkitekturprodukter.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_formål"><a class="anchor" href="#_formål"></a>4.1.2. Formål</h4>
+<div class="paragraph">
+<p>Formålet er her primært å identifisere viktige mønstre for datautveksling med tanke på samhandlingsevne, som utgangspunkt for videre arbeid med nasjonale referansearkitekturer og veiledning til valg mellom alternativer.</p>
+</div>
+<div class="paragraph">
+<p>Det er samtidig ønskelig å etablere et begrepsapparat som kan fungere for bedre koordinert videreutvikling av referansearkitekturene innen samhandling, datadeling og datautveksling på tvers av sektorene.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_omfang_og_avgrensing"><a class="anchor" href="#_omfang_og_avgrensing"></a>4.1.3. Omfang og avgrensing</h4>
+<div class="paragraph">
+<p>Dette er et svært omfattende tema. Det har ingen hensikt å lage en komplett lærebok her - det finnes allerede mange, og det finnes et virvar av ulike artikler fra akademia og produktleverandører. Utfordringen er å gripe fatt i en essens som gir nytte for å bygge samhandlingsevne på tvers.</p>
+</div>
+<div class="paragraph">
+<p>I boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>, skilles det mellom følgende grunnleggende intragrasjonsstiler (her med en kortfattet omskriving av betydningen):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Messaging. Asynkron meldingsutveksling.</strong></p>
+</li>
+<li>
+<p><strong>Remote Procedure Invocation. Synkrone API-kall.</strong></p>
+</li>
+<li>
+<p>File transfer. Filoverføring. F.eks. via FTP.</p>
+</li>
+<li>
+<p>Shared database integration. F.eks. via en datasjø.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Her avgrenses omfanget til de to første av disse intragrasjonsstilene. Begrunnelsen for dette er:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Filoverføring betraktes her som en løsning for meldingsforsendelse.</p>
+</li>
+<li>
+<p><em>Shared database</em> dekkes inntil videre gjennom å se dette som en genuin datatilbyder, heller enn en del av infrastrukturen for datautveksling.   Det kan tenkes å være særskilte juridiske eller avtalemessige  problemstillinger i tilknytning til dette som en type mønster, men tilsvarende problemstillinger finnes også f.eks. i mønstre for datautveksling gjennom persistente meldingskøer eller hendelseslister.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tilnærming"><a class="anchor" href="#_tilnærming"></a>4.1.4. Tilnærming</h4>
+<div class="paragraph">
+<p>Det bygges videre på tidligere struktur med tre hovedtyper utvekslingsmønstre, dvs. forsendelse, forespørsel-svar og publisering av hendelsesdata.</p>
+</div>
+<div class="paragraph">
+<p>For å samsvare bedre med slik det er gjort i eHelse, etableres i tillegg et sett av mer forretningsorienterte samhandlingsmønstre.</p>
+</div>
+<div class="paragraph">
+<p>Det etableres også et begrepsapparat som bygger bro mellom ulike bruk av viktige begreper som f.eks. datadeling, dokumentdeling, meldingsutveksling og dokumentutveksling.</p>
+</div>
+<div class="paragraph">
+<p>Dokumentstrukturen legger opp til at omfanget kan utvides til å dekke mer enn bare en overordnet beskrivelse av datautveksling, slik som veiledning til valg mellom mønstre. Deler av innholdet bør dessuten kunne integreres med eksisterende beskrivelser av referansearkitekturene.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_generiske_samhandlingsmønstre"><a class="anchor" href="#_generiske_samhandlingsmønstre"></a>4.2. Generiske samhandlingsmønstre</h3>
@@ -412,7 +497,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="sect2">
 <h3 id="_utvekslingsmønstre"><a class="anchor" href="#_utvekslingsmønstre"></a>4.3. Utvekslingsmønstre</h3>
 <div class="sect3">
-<h4 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a>4.3.1. Generelt</h4>
+<h4 id="_generelt"><a class="anchor" href="#_generelt"></a>4.3.1. Generelt</h4>
 
 </div>
 <div class="sect3">
