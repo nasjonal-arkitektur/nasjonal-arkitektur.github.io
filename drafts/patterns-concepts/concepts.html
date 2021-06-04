@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Forespørsel-svar :: Nasjonalt arkitekturverksted</title>
-    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-selected-patterns/Forespørsel-svar.html">
+    <title>Grunnleggende konsepter og begreper :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/patterns-concepts/concepts.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -119,54 +119,99 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="Forespørsel-svar.html">Forespørsel-svar</a></li>
+    <li><a href="concepts.html">Grunnleggende konsepter og begreper</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-selected-patterns/pages/Forespørsel-svar.adoc">Rediger kilde</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/patterns/modules/patterns-concepts/pages/concepts.adoc">Rediger kilde</a></div>
   </div>
 <article class="doc"><a name="section-top"></a>
-<h1 class="page">Forespørsel-svar</h1>
+<h1 class="page">Grunnleggende konsepter og begreper</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_forespørsel_svar_en_mot_en">1. Forespørsel-svar - en mot en</a></li>
-<li><a href="#_forespørsel_svar_en_mot_flere_kjente">2. Forespørsel-svar - en mot flere kjente</a></li>
-<li><a href="#_forespørsel_svar_en_mot_flere_ukjente">3. Forespørsel-svar - en mot flere ukjente</a></li>
+<li><a href="#_grunnleggende_modell_for_datautveksling">1. Grunnleggende modell for datautveksling</a></li>
+<li><a href="#_sentrale_begreper">2. Sentrale begreper</a></li>
+<li><a href="#_meldinger_basis_objektmodell">3. Meldinger - basis objektmodell</a></li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="_forespørsel_svar_en_mot_en"><a class="anchor" href="#_forespørsel_svar_en_mot_en"></a>1. Forespørsel-svar - en mot en</h2>
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="_images/Forespørsel-svar%20-%20en%20mot%20en.png" alt="Forespørsel-svar - en mot en image">
-</div>
-<div class="title">Figure 1. Forespørsel-svar - en mot en</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_forespørsel_svar_en_mot_flere_kjente"><a class="anchor" href="#_forespørsel_svar_en_mot_flere_kjente"></a>2. Forespørsel-svar - en mot flere kjente</h2>
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="_images/Forespørsel-svar%20-%20en%20mot%20flere%20kjente.png" alt="Forespørsel-svar - en mot flere kjente image">
-</div>
-<div class="title">Figure 2. Forespørsel-svar - en mot flere kjente</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_forespørsel_svar_en_mot_flere_ukjente"><a class="anchor" href="#_forespørsel_svar_en_mot_flere_ukjente"></a>3. Forespørsel-svar - en mot flere ukjente</h2>
+<h2 id="_grunnleggende_modell_for_datautveksling"><a class="anchor" href="#_grunnleggende_modell_for_datautveksling"></a>1. Grunnleggende modell for datautveksling</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Forespørsel brytes opp i flere parallelle forespørsler</p>
+<p>Samhandlingsaktører kommuniserer ved å sende meldinger via sine aksesspunkter til den tekniske  meldingsinfrastrukturen.
+Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av teknologi i kommunikasjonsinfrastrukturen.</p>
+</div>
+<div class="paragraph">
+<p>I beskrivelsen av datautvekslingsmønstre, tas det utgangspunkt i en slik logisk meldingsflyt.</p>
+</div>
+<div class="paragraph">
+<p>​Det tas f.eks. ikke stilling til om meldinger sendes synkront eller asynkront. Aktuelle kommunikasjonsstandarder kan f.eks. være ebXML, HTTP, REST, GraphQL eller SPARQL. Det kan dreie seg om felles infrastruktur og punkt-til-punkt kommunikasjon, eller det kan være en mer kompleks infrastruktur som arter seg ulikt på hver side.</p>
+</div>
+<div class="paragraph">
+<p>Dette er ikke det samme som å si at valg av teknologi og løsninger ikke er viktig. Aktuelle krav til tjenestekvalitet m.m. bestemmer hvilke teknologier og løsninger som passer.</p>
+</div>
+<div class="paragraph">
+<p>Modellen som vises her kan ses som en forenklet utgave av lagdelte modeller som {OSI-modellen} (7 lag) eller TCP/IP (4 lag).</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Forespørsel-svar%20-%20en%20mot%20flere%20ukjente.png" alt="Forespørsel-svar - en mot flere ukjente image">
+<img src="_images/Grunnleggende%20modell%20for%20datautveksling.png" alt="Grunnleggende modell for datautveksling image">
 </div>
-<div class="title">Figure 3. Forespørsel-svar - en mot flere ukjente</div>
+<div class="title">Figure 1. Grunnleggende modell for datautveksling</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sentrale_begreper"><a class="anchor" href="#_sentrale_begreper"></a>2. Sentrale begreper</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Meldingsutveksling er en form for datautveksling som transporterer pakker med meldingsinnhold mellom avsendere og mottakere ut fra en avtalt eller ad hoc koreografi.</p>
+</div>
+<div class="paragraph">
+<p>Litteraturen er delt i synet på om meldingsutveksling kun dreier seg om asynkron kommunikasjon. Her fastholdes at meldingsutveksling støtter både asynkron og synkron kommunikasjon. Dette ses på som en egenskap ved løsningen, på linje med andre egenskaper, som f.eks. leveringstid.</p>
+</div>
+<div class="paragraph">
+<p>Sett fra mottaker, kommer meldinger via meldingskanaler. Kanaler kan være realisert på ulike måter. Her er det skilt mellom begrepene kø, hendelsesliste og blockchain.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Sentrale%20begreper.png" alt="Sentrale begreper image">
+</div>
+<div class="title">Figure 2. Sentrale begreper</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="Sentrale%20begreper.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_meldinger_basis_objektmodell"><a class="anchor" href="#_meldinger_basis_objektmodell"></a>3. Meldinger - basis objektmodell</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En elektronisk melding kan ses på som en type brev, med innhold pakket i en konvolutt med adresse eller annen informasjon som grunnlag for ruting av innholdet til en eller flere mottakere.  Som alternativ til å inkludere alt relevant innhold i selve meldingen, kan meldingen gi referanser til meldingsrelaterte data som mottakerne eventuelt kan foespørre.</p>
+</div>
+<div class="paragraph">
+<p>Begrepene hendelsesmelding, kommandomelding og dokumentmelding er her hentet fra boka <a href="https://learning.oreilly.com/library/view/enterprise-integration-patterns/0321200683/">Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions</a>. Hendelsesmeldinger forteller om at noe har skjedd, for den det måtte angå. Kommandomeldinger ber noen om å gjøre noe. Dokumentmeldinger inneholder informasjon, typisk som svar på forespørsel.</p>
+</div>
+<div class="paragraph">
+<p>Den videre spesialiseringen av disse begrepene her, bygger på flere kilde, for å gi felles begreper i omtalen av mønstre for samhandling og datautveksling.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Meldinger%20-%20basis%20objektmodell.png" alt="Meldinger - basis objektmodell image">
+</div>
+<div class="title">Figure 3. Meldinger - basis objektmodell</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="Meldinger%20-%20basis%20objektmodell.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+</div>
+</div>
 </div>
 </div>
 </div>
