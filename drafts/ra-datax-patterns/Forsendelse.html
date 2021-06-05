@@ -180,7 +180,7 @@
 <div class="title">Figure 1. Forsendelse - en til en</div>
 </div>
 <div class="paragraph">
-<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker.</p>
+<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender gjennom en kanal til en kjent mottaker.</p>
 </div>
 <div class="paragraph">
 <p>Signalisering av bekeftelse om meldingsmottak fra mottaker til avsender, eventuelt feilmelding, forutsettes dersom det er krav til tjenestekvakitet som f.eks. garantert levering. Slik signalisering ivaretas typisk gjennom standardfunksjonalitet i kommunikasjonsinfrastrukturen.</p>
@@ -224,19 +224,32 @@
 </div>
 <div class="title">Figure 2. Forsendelse - en til flere kjente</div>
 </div>
+<div class="paragraph">
+<p>Forsendelse fra en til flere kjente bygger på _basismønsteret for forsendelse fra en til en, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_forsendelse_flere_til_en"><a class="anchor" href="#_forsendelse_flere_til_en"></a>3. Forsendelse - flere til en</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Eksempel: Innraportering til Skatt via Altinn.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Forsendelse%20-%20flere%20til%20en.png" alt="Forsendelse - flere til en image">
 </div>
 <div class="title">Figure 3. Forsendelse - flere til en</div>
+</div>
+<div class="paragraph">
+<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
+</div>
+<div class="paragraph">
+<p>Brukstilfeller (eksempler):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Innraportering til Skatt via Altinn.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>

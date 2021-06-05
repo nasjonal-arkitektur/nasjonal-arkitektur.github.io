@@ -339,6 +339,9 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot en</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
+</div>
+<div class="paragraph">
+<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -348,6 +351,9 @@
 </div>
 <div class="paragraph">
 <p>Det er et mye brukt mønster og støttes av flere produkter for datavirtualisering.</p>
+</div>
+<div class="paragraph">
+<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -357,6 +363,9 @@
 </div>
 <div class="paragraph">
 <p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="paragraph">
+<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
 </div>
 <div class="paragraph">
 <p>Dette mønsteret støtter også datavirtualisering</p>
@@ -374,13 +383,38 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til flere kjente</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Forsendelse fra en til flere kjente bygger på <em>basismønsteret for forsendelse fra en til</em>, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
+<p>Forsendelse fra en til flere kjente bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
+</div>
+<div class="paragraph">
+<p><a href="sending-one-to-many.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - flere til en</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt meldingskø (kanal) hos mottaker.</p>
+<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
+</div>
+<div class="paragraph">
+<p>Brukstilfeller (eksempler):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Innraportering til Skatt via Altinn.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente abonnenter (pub-sub)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>asdasd</p>
+</div>
+<div class="paragraph">
+<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -399,15 +433,21 @@
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente med abonnement på emne (publish-subscribe)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente abonnementer (pub-sub)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
+</div>
+<div class="paragraph">
+<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via felles kø</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
+</div>
+<div class="paragraph">
+<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -417,6 +457,9 @@
 </div>
 <div class="paragraph">
 <p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 </tbody>
@@ -433,7 +476,7 @@
 <div class="title">Figure 3. Forsendelse - en til en</div>
 </div>
 <div class="paragraph">
-<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker.</p>
+<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender gjennom en kanal til en kjent mottaker.</p>
 </div>
 <div class="paragraph">
 <p>Signalisering av bekeftelse om meldingsmottak fra mottaker til avsender, eventuelt feilmelding, forutsettes dersom det er krav til tjenestekvakitet som f.eks. garantert levering. Slik signalisering ivaretas typisk gjennom standardfunksjonalitet i kommunikasjonsinfrastrukturen.</p>
@@ -475,17 +518,30 @@
 </div>
 <div class="title">Figure 4. Forsendelse - en til flere kjente</div>
 </div>
+<div class="paragraph">
+<p>Forsendelse fra en til flere kjente bygger på _basismønsteret for forsendelse fra en til en, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_forsendelse_flere_til_en"><a class="anchor" href="#_forsendelse_flere_til_en"></a>3.3.3. Forsendelse - flere til en</h4>
-<div class="paragraph">
-<p>Eksempel: Innraportering til Skatt via Altinn.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Forsendelse%20-%20flere%20til%20en.png" alt="Forsendelse - flere til en image">
 </div>
 <div class="title">Figure 5. Forsendelse - flere til en</div>
+</div>
+<div class="paragraph">
+<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
+</div>
+<div class="paragraph">
+<p>Brukstilfeller (eksempler):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Innraportering til Skatt via Altinn.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -511,14 +567,14 @@
 </div>
 <div class="sect3">
 <h4 id="_forespørsel_svar_en_mot_flere_ukjente"><a class="anchor" href="#_forespørsel_svar_en_mot_flere_ukjente"></a>3.4.3. Forespørsel-svar - en mot flere ukjente</h4>
-<div class="paragraph">
-<p>Forespørsel brytes opp i flere parallelle forespørsler</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Forespørsel-svar%20-%20en%20mot%20flere%20ukjente.png" alt="Forespørsel-svar - en mot flere ukjente image">
 </div>
 <div class="title">Figure 8. Forespørsel-svar - en mot flere ukjente</div>
+</div>
+<div class="paragraph">
+<p>Forespørsel brytes opp i flere parallelle forespørsler</p>
 </div>
 </div>
 </div>
@@ -526,14 +582,14 @@
 <h3 id="_publisering_av_hendelsesdata"><a class="anchor" href="#_publisering_av_hendelsesdata"></a>3.5. Publisering av hendelsesdata</h3>
 <div class="sect3">
 <h4 id="_publisering_fra_en_til_flere_ukjente_via_felles_kø"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø"></a>3.5.1. Publisering fra en til flere ukjente via felles kø</h4>
-<div class="paragraph">
-<p>Uttak fra kø.</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20felles%20kø.png" alt="Publisering fra en til flere ukjente via felles kø image">
 </div>
 <div class="title">Figure 9. Publisering fra en til flere ukjente via felles kø</div>
+</div>
+<div class="paragraph">
+<p>Uttak fra kø.</p>
 </div>
 </div>
 <div class="sect3">
@@ -556,14 +612,14 @@
 </div>
 <div class="sect3">
 <h4 id="_publisering_flere_til_flere_ukjente_via_hendelseslister"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_via_hendelseslister"></a>3.5.4. Publisering flere til flere ukjente via hendelseslister</h4>
-<div class="paragraph">
-<p>Må settes opp egne kanaler til hver enkelt abonnent</p>
-</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Publisering%20flere%20til%20flere%20ukjente%20via%20hendelseslister.png" alt="Publisering flere til flere ukjente via hendelseslister image">
 </div>
 <div class="title">Figure 12. Publisering flere til flere ukjente via hendelseslister</div>
+</div>
+<div class="paragraph">
+<p>Må settes opp egne kanaler til hver enkelt abonnent</p>
 </div>
 </div>
 </div>
