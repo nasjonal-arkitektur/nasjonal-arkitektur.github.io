@@ -162,6 +162,37 @@
   </div>
 <article class="doc"><a name="section-top"></a>
 <h1 class="page">Forsendelse - en til en</h1>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Forsendelse%20-%20en%20til%20en.png" alt="Forsendelse - en til en image">
+</div>
+<div class="title">Figure 1. Forsendelse - en til en</div>
+</div>
+<div class="paragraph">
+<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker.</p>
+</div>
+<div class="paragraph">
+<p>Signalisering av bekeftelse om meldingsmottak fra mottaker til avsender, eventuelt feilmelding, forutsettes dersom det er krav til tjenestekvakitet som f.eks. garantert levering. Slik signalisering ivaretas typisk gjennom standardfunksjonalitet i kommunikasjonsinfrastrukturen.</p>
+</div>
+<div class="paragraph">
+<p>Realisering - typiske alterativer:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Asynkront gjennom push til meldingskø hos mottaker</p>
+</li>
+<li>
+<p>Synkront gjennom push til API hos mottaker</p>
+</li>
+<li>
+<p>Asynkront gjennom pull mot API hos avsender</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Se også:</p>
+</div>
 <div class="paragraph">
 <p>Dette mønsteret er beskrevet som et basismønstre som del av nasjonal referansearkitektur for datautveksling; se under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/one-way-push/book-one-way-push.html">meldingsforsendelse</a>.</p>
 </div>
@@ -170,12 +201,6 @@
 </div>
 <div class="paragraph">
 <p>Det beskrives deretter en variant av mønsteret i form av  <a href="https://nasjonal-arkitektur.github.io/architecture-repository/one-way-push/book-one-way-push.html#_4_hj%C3%B8rners_modellen">konseptuell 4-hjørnersmodell</a>. basert på konsepter fra EU CEF eDelivery.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Forsendelse%20-%20en%20til%20en.png" alt="Forsendelse - en til en image">
-</div>
-<div class="title">Figure 1. Forsendelse - en til en</div>
 </div>
 </article>
 <aside class="article-aside hidden" role="navigation">
