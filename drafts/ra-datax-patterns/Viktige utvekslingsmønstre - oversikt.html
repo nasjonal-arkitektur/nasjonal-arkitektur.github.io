@@ -193,7 +193,7 @@
 <p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
 </div>
 <div class="paragraph">
-<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
+<p><a href="request-reply-basic.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -205,7 +205,7 @@
 <p>Det er et mye brukt mønster og støttes av flere produkter for datavirtualisering.</p>
 </div>
 <div class="paragraph">
-<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
+<p><a href="request-reply-many-known.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -217,7 +217,7 @@
 <p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
 </div>
 <div class="paragraph">
-<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
+<p><a href="request-reply-many-unknown.html" class="page">Videre detaljer</a></p>
 </div>
 <div class="paragraph">
 <p>Dette mønsteret støtter også datavirtualisering</p>
@@ -266,11 +266,11 @@
 <p>asdasd</p>
 </div>
 <div class="paragraph">
-<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
+<p><a href="pub-sub-m2m.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via hendelseslister (event-streaming)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via en hendelsesliste (event-streaming)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
 </div>
@@ -282,6 +282,18 @@
 </div>
 <div class="paragraph">
 <p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
+</div>
+<div class="paragraph">
+<p><a href="event-streaming-m2m-one-log.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere via kombinerte hendelseslister</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>TBD</p>
+</div>
+<div class="paragraph">
+<p><a href="event-streaming-m2m-combined-logs.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -290,7 +302,19 @@
 <p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
 </div>
 <div class="paragraph">
-<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
+<p><a href="pub-sub-one-to-many.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="event-streaming-12m-one-log.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -299,19 +323,7 @@
 <p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
 </div>
 <div class="paragraph">
-<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via hendelseslister (event streaming)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
-</div>
-<div class="paragraph">
-<p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
-</div>
-<div class="paragraph">
-<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
+<p><a href="pub-to-queue.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 </tbody>
