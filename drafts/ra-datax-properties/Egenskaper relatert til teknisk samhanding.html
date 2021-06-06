@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Kvalitetsegenskaper :: Nasjonalt arkitekturverksted</title>
-    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/ra-datax-properties/Kvalitetsegenskaper.html">
+    <title>Egenskaper relatert til teknisk samhanding :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/ra-datax-properties/Egenskaper%20relatert%20til%20teknisk%20samhanding.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -155,173 +155,24 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="Kvalitetsegenskaper.html">Kvalitetsegenskaper</a></li>
+    <li><a href="Egenskaper%20relatert%20til%20teknisk%20samhanding.html">Egenskaper relatert til teknisk samhanding</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/ra-data-exchange/modules/ra-datax-properties/pages/Kvalitetsegenskaper.adoc">Rediger kilde</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/ra-data-exchange/modules/ra-datax-properties/pages/Egenskaper%20relatert%20til%20teknisk%20samhanding.adoc">Rediger kilde</a></div>
   </div>
 <article class="doc"><a name="section-top"></a>
-<h1 class="page">Kvalitetsegenskaper</h1>
+<h1 class="page">Egenskaper relatert til teknisk samhanding</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
-<ul class="sectlevel2">
-<li><a href="#_egenskaper_relatert_til_juridiske_forhold">1. Egenskaper relatert til juridiske forhold</a></li>
-<li><a href="#_egenskaper_relatert_til_organisatorisk_samhandlingsevne">2. Egenskaper relatert til organisatorisk samhandlingsevne</a></li>
-<li><a href="#_generelt">3. Generelt</a></li>
-<li><a href="#_egenskaper_relatert_til_juridiske_forhold_2">4. Egenskaper relatert til juridiske forhold</a></li>
-<li><a href="#_egenskaper_relatert_til_organisatorisk_samhandling">5. Egenskaper relatert til organisatorisk samhandling</a></li>
-<li><a href="#_egenskaper_relatert_til_semantisk_interoperabilitet">6. Egenskaper relatert til semantisk interoperabilitet</a></li>
-<li><a href="#_egenskaper_relatert_til_teknisk_samhanding">7. Egenskaper relatert til teknisk samhanding</a>
-<ul class="sectlevel2">
-<li><a href="#_utvekslingsprotokoller">7.1. Utvekslingsprotokoller</a></li>
-<li><a href="#_tjenestekvalitet_qos">7.2. Tjenestekvalitet (QoS)</a></li>
-<li><a href="#_tjenestegrad_gos">7.3. Tjenestegrad (GoS)</a></li>
+<ul class="sectlevel1">
+<li><a href="#_utvekslingsprotokoller">1. Utvekslingsprotokoller</a></li>
+<li><a href="#_tjenestekvalitet_qos">2. Tjenestekvalitet (QoS)</a></li>
+<li><a href="#_tjenestegrad_gos">3. Tjenestegrad (GoS)</a></li>
 </ul>
-</li>
-<li><a href="#_andre_egenskaper">8. Andre egenskaper</a></li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_egenskaper_relatert_til_juridiske_forhold"><a class="anchor" href="#_egenskaper_relatert_til_juridiske_forhold"></a>1. Egenskaper relatert til juridiske forhold</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Gjeldende lovpålagte krav</strong></p>
-<div class="paragraph">
-<p>Eksempel: GDPR med krav til dataminimering mv.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_egenskaper_relatert_til_organisatorisk_samhandlingsevne"><a class="anchor" href="#_egenskaper_relatert_til_organisatorisk_samhandlingsevne"></a>2. Egenskaper relatert til organisatorisk samhandlingsevne</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type forretningsprosess</strong></p>
-<div class="paragraph">
-<p>Eksempler:  Bilateral prosess mellom to kjente parter (herunder spørring og forhåndsavtalt, periodisk distriusjon);
-Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske oppdagete parter.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Antall samhandlingsparter</strong></p>
-<div class="paragraph">
-<p>En-til-en, en-til-mange, mange-til-mange, mange-til-en</p>
-</div>
-</li>
-<li>
-<p><strong>Kjente eller ukjente mottakere</strong></p>
-<div class="paragraph">
-<p>Fast eller dynamisk gruppe med samhandlingsparter</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Prosessens levetid</strong></p>
-<div class="paragraph">
-<p>Relevant for feilhåndtering: Kortlevde prosesser med innebygd transaksjonssikkerhet kan tilbakerulles gjennom generelle mekanismer, f.eks. slik dette støttes av <em>rollback</em> i relasjonsdatabaser. Langlevde prosesser krever skreddersydde <em>kompensasjonsaksjoner</em>.</p>
-</div>
-</li>
-<li>
-<p><strong>Ansvarsfordeling</strong></p>
-<div class="paragraph">
-<p>Hvem skal ha ansvar for hva? Hvem sier om du får tilgang til opplysninger eller ikke.</p>
-</div>
-</li>
-</ul>
-</div>
 </div>
 <div class="sect1">
-<h2 id="_generelt"><a class="anchor" href="#_generelt"></a>3. Generelt</h2>
+<h2 id="_utvekslingsprotokoller"><a class="anchor" href="#_utvekslingsprotokoller"></a>1. Utvekslingsprotokoller</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Det gis her en oversikt over kvalitetsegenskaper og forhold som kan være avgjørende for valg av samhandlingsmønstre og løsninger</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_egenskaper_relatert_til_juridiske_forhold_2"><a class="anchor" href="#_egenskaper_relatert_til_juridiske_forhold_2"></a>4. Egenskaper relatert til juridiske forhold</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Gjeldende lovpålagte krav</strong></p>
-<div class="paragraph">
-<p>Eksempel: GDPR med krav til dataminimering mv.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_egenskaper_relatert_til_organisatorisk_samhandling"><a class="anchor" href="#_egenskaper_relatert_til_organisatorisk_samhandling"></a>5. Egenskaper relatert til organisatorisk samhandling</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type forretningsprosess</strong></p>
-<div class="paragraph">
-<p>Eksempler:  Bilateral prosess mellom to kjente parter (herunder spørring og forhåndsavtalt, periodisk distriusjon);
-Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske oppdagete parter.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Antall samhandlingsparter</strong></p>
-<div class="paragraph">
-<p>En-til-en, en-til-mange, mange-til-mange, mange-til-en</p>
-</div>
-</li>
-<li>
-<p><strong>Kjente eller ukjente mottakere</strong></p>
-<div class="paragraph">
-<p>Fast eller dynamisk gruppe med samhandlingsparter</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Prosessens levetid</strong></p>
-<div class="paragraph">
-<p>Relevant for feilhåndtering: Kortlevde prosesser med innebygd transaksjonssikkerhet kan tilbakerulles gjennom generelle mekanismer, f.eks. slik dette støttes av <em>rollback</em> i relasjonsdatabaser. Langlevde prosesser krever skreddersydde <em>kompensasjonsaksjoner</em>.</p>
-</div>
-</li>
-<li>
-<p><strong>Ansvarsfordeling</strong></p>
-<div class="paragraph">
-<p>Hvem skal ha ansvar for hva? Hvem sier om du får tilgang til opplysninger eller ikke.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_egenskaper_relatert_til_semantisk_interoperabilitet"><a class="anchor" href="#_egenskaper_relatert_til_semantisk_interoperabilitet"></a>6. Egenskaper relatert til semantisk interoperabilitet</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_egenskaper_relatert_til_teknisk_samhanding"><a class="anchor" href="#_egenskaper_relatert_til_teknisk_samhanding"></a>7. Egenskaper relatert til teknisk samhanding</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_utvekslingsprotokoller"><a class="anchor" href="#_utvekslingsprotokoller"></a>7.1. Utvekslingsprotokoller</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -333,8 +184,10 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_tjenestekvalitet_qos"><a class="anchor" href="#_tjenestekvalitet_qos"></a>7.2. Tjenestekvalitet (QoS)</h3>
+</div>
+<div class="sect1">
+<h2 id="_tjenestekvalitet_qos"><a class="anchor" href="#_tjenestekvalitet_qos"></a>2. Tjenestekvalitet (QoS)</h2>
+<div class="sectionbody">
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -374,8 +227,10 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_tjenestegrad_gos"><a class="anchor" href="#_tjenestegrad_gos"></a>7.3. Tjenestegrad (GoS)</h3>
+</div>
+<div class="sect1">
+<h2 id="_tjenestegrad_gos"><a class="anchor" href="#_tjenestegrad_gos"></a>3. Tjenestegrad (GoS)</h2>
+<div class="sectionbody">
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -399,77 +254,6 @@ recovery and system resilience (i.e. how it degrades).</em></p>
 </li>
 <li>
 <p>System MTTR</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_andre_egenskaper"><a class="anchor" href="#_andre_egenskaper"></a>8. Andre egenskaper</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Føringer</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Prinsipper</p>
-<div class="paragraph">
-<p>For eksempel SOA-prinsipper, samhandlingsprinsipper.</p>
-</div>
-</li>
-<li>
-<p>Standarder</p>
-<div class="paragraph">
-<p>Ref. <em>Referansekatalogen</em>, bransjestandarder, mv.</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Kompetanse</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Kompleksitet</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Avtaler</strong></p>
-</li>
-<li>
-<p><strong>Kostnader</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pris</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Informasjonssikkerhet</strong></p>
-<div class="paragraph">
-<p>Herunder:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Risikoanalyser</p>
-</li>
-<li>
-<p>Kvalitetskrav for konfidensialitet, integritet og tilgjengelighet</p>
-</li>
-<li>
-<p>Mekanismer for autentisering, autorisasjon, kryptering, ikke-benektelse, mv.</p>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>

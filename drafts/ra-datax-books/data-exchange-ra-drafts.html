@@ -218,8 +218,31 @@
 <li><a href="#_map_utvekslingsmønstre_til_samhandlingsmønstre">4.4. Map utvekslingsmønstre til samhandlingsmønstre</a></li>
 </ul>
 </li>
-<li><a href="#_kvalitetsegenskaper">5. Kvalitetsegenskaper</a></li>
-<li><a href="#_veiledning_til_valg_av_mønstre_og_løsninger">6. Veiledning til valg av mønstre og løsninger</a></li>
+<li><a href="#_kvalitetsegenskaper">5. Kvalitetsegenskaper</a>
+<ul class="sectlevel3">
+<li><a href="#_egenskaper_relatert_til_juridiske_forhold">5.1. Egenskaper relatert til juridiske forhold</a></li>
+<li><a href="#_egenskaper_relatert_til_organisatorisk_samhandlingsevne">5.2. Egenskaper relatert til organisatorisk samhandlingsevne</a></li>
+<li><a href="#_generelt_2">5.3. Generelt</a></li>
+<li><a href="#_egenskaper_relatert_til_juridiske_forhold_2">5.4. Egenskaper relatert til juridiske forhold</a></li>
+<li><a href="#_egenskaper_relatert_til_organisatorisk_samhandling">5.5. Egenskaper relatert til organisatorisk samhandling</a></li>
+<li><a href="#_egenskaper_relatert_til_semantisk_interoperabilitet">5.6. Egenskaper relatert til semantisk interoperabilitet</a></li>
+<li><a href="#_egenskaper_relatert_til_teknisk_samhanding">5.7. Egenskaper relatert til teknisk samhanding</a>
+<ul class="sectlevel3">
+<li><a href="#_utvekslingsprotokoller">5.7.1. Utvekslingsprotokoller</a></li>
+<li><a href="#_tjenestekvalitet_qos">5.7.2. Tjenestekvalitet (QoS)</a></li>
+<li><a href="#_tjenestegrad_gos">5.7.3. Tjenestegrad (GoS)</a></li>
+</ul>
+</li>
+<li><a href="#_andre_egenskaper">5.8. Andre egenskaper</a></li>
+</ul>
+</li>
+<li><a href="#_veiledning_til_valg_av_mønstre_og_løsninger">6. Veiledning til valg av mønstre og løsninger</a>
+<ul class="sectlevel2">
+<li><a href="#_generelt_3">6.1. Generelt</a></li>
+<li><a href="#_anbefalt_metode">6.2. Anbefalt metode</a></li>
+<li><a href="#_faktorer_for_valg_av_mønstre_og_løsninger">6.3. Faktorer for valg av mønstre og løsninger</a></li>
+</ul>
+</li>
 <li><a href="#_referanser">7. Referanser</a></li>
 <li><a href="#_vedlegg_a_sammenligning_med_alternative_framstillinger">8. Vedlegg A - Sammenligning med alternative framstillinger</a>
 <ul class="sectlevel2">
@@ -230,7 +253,7 @@
 </li>
 <li><a href="#_vedlegg_b_referanse_til_europa">9. Vedlegg B - Referanse til Europa</a>
 <ul class="sectlevel2">
-<li><a href="#_generelt_2">9.1. Generelt</a></li>
+<li><a href="#_generelt_4">9.1. Generelt</a></li>
 <li><a href="#_cef_edelivery_api_pilot">9.2. CEF eDelivery API pilot</a></li>
 <li><a href="#_single_digital_gateway_regulation">9.3. Single Digital Gateway Regulation</a></li>
 <li><a href="#_international_data_spaces_reference_architecture_model">9.4. International Data Spaces Reference Architecture Model</a></li>
@@ -245,7 +268,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Sun Jun 06 2021 12:43:11 GMT+0200 (CEST)</pre>
+<pre>Sun Jun 06 2021 13:28:59 GMT+0200 (CEST)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -824,8 +847,287 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="sect1">
 <h2 id="_kvalitetsegenskaper"><a class="anchor" href="#_kvalitetsegenskaper"></a>5. Kvalitetsegenskaper</h2>
 <div class="sectionbody">
+<div class="sect3">
+<h4 id="_egenskaper_relatert_til_juridiske_forhold"><a class="anchor" href="#_egenskaper_relatert_til_juridiske_forhold"></a>5.1. Egenskaper relatert til juridiske forhold</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Gjeldende lovpålagte krav</strong></p>
 <div class="paragraph">
-<p>TBD.</p>
+<p>Eksempel: GDPR med krav til dataminimering mv.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_egenskaper_relatert_til_organisatorisk_samhandlingsevne"><a class="anchor" href="#_egenskaper_relatert_til_organisatorisk_samhandlingsevne"></a>5.2. Egenskaper relatert til organisatorisk samhandlingsevne</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type forretningsprosess</strong></p>
+<div class="paragraph">
+<p>Eksempler:  Bilateral prosess mellom to kjente parter (herunder spørring og forhåndsavtalt, periodisk distriusjon);
+Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske oppdagete parter.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Antall samhandlingsparter</strong></p>
+<div class="paragraph">
+<p>En-til-en, en-til-mange, mange-til-mange, mange-til-en</p>
+</div>
+</li>
+<li>
+<p><strong>Kjente eller ukjente mottakere</strong></p>
+<div class="paragraph">
+<p>Fast eller dynamisk gruppe med samhandlingsparter</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Prosessens levetid</strong></p>
+<div class="paragraph">
+<p>Relevant for feilhåndtering: Kortlevde prosesser med innebygd transaksjonssikkerhet kan tilbakerulles gjennom generelle mekanismer, f.eks. slik dette støttes av <em>rollback</em> i relasjonsdatabaser. Langlevde prosesser krever skreddersydde <em>kompensasjonsaksjoner</em>.</p>
+</div>
+</li>
+<li>
+<p><strong>Ansvarsfordeling</strong></p>
+<div class="paragraph">
+<p>Hvem skal ha ansvar for hva? Hvem sier om du får tilgang til opplysninger eller ikke.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a>5.3. Generelt</h3>
+<div class="paragraph">
+<p>Det gis her en oversikt over kvalitetsegenskaper og forhold som kan være avgjørende for valg av samhandlingsmønstre og løsninger</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_egenskaper_relatert_til_juridiske_forhold_2"><a class="anchor" href="#_egenskaper_relatert_til_juridiske_forhold_2"></a>5.4. Egenskaper relatert til juridiske forhold</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Gjeldende lovpålagte krav</strong></p>
+<div class="paragraph">
+<p>Eksempel: GDPR med krav til dataminimering mv.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_egenskaper_relatert_til_organisatorisk_samhandling"><a class="anchor" href="#_egenskaper_relatert_til_organisatorisk_samhandling"></a>5.5. Egenskaper relatert til organisatorisk samhandling</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Type forretningsprosess</strong></p>
+<div class="paragraph">
+<p>Eksempler:  Bilateral prosess mellom to kjente parter (herunder spørring og forhåndsavtalt, periodisk distriusjon);
+Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske oppdagete parter.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Antall samhandlingsparter</strong></p>
+<div class="paragraph">
+<p>En-til-en, en-til-mange, mange-til-mange, mange-til-en</p>
+</div>
+</li>
+<li>
+<p><strong>Kjente eller ukjente mottakere</strong></p>
+<div class="paragraph">
+<p>Fast eller dynamisk gruppe med samhandlingsparter</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Prosessens levetid</strong></p>
+<div class="paragraph">
+<p>Relevant for feilhåndtering: Kortlevde prosesser med innebygd transaksjonssikkerhet kan tilbakerulles gjennom generelle mekanismer, f.eks. slik dette støttes av <em>rollback</em> i relasjonsdatabaser. Langlevde prosesser krever skreddersydde <em>kompensasjonsaksjoner</em>.</p>
+</div>
+</li>
+<li>
+<p><strong>Ansvarsfordeling</strong></p>
+<div class="paragraph">
+<p>Hvem skal ha ansvar for hva? Hvem sier om du får tilgang til opplysninger eller ikke.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_egenskaper_relatert_til_semantisk_interoperabilitet"><a class="anchor" href="#_egenskaper_relatert_til_semantisk_interoperabilitet"></a>5.6. Egenskaper relatert til semantisk interoperabilitet</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_egenskaper_relatert_til_teknisk_samhanding"><a class="anchor" href="#_egenskaper_relatert_til_teknisk_samhanding"></a>5.7. Egenskaper relatert til teknisk samhanding</h3>
+<div class="sect3">
+<h4 id="_utvekslingsprotokoller"><a class="anchor" href="#_utvekslingsprotokoller"></a>5.7.1. Utvekslingsprotokoller</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Synkron eller asynkron kmmunikasjon</p>
+</li>
+<li>
+<p>Aktuell infrastruktur</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tjenestekvalitet_qos"><a class="anchor" href="#_tjenestekvalitet_qos"></a>5.7.2. Tjenestekvalitet (QoS)</h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><em>QoS refers to the maintenance of the session once established and covers aspects such as throughput, error recovery/detection.</em></p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Leveringstid for meldinger</strong></p>
+<div class="paragraph">
+<p>Garantert leveringstid vs. krav til leveringstid</p>
+</div>
+<div class="paragraph">
+<p>Mål: Mikrosekunder, millisekunder, sekunder, timer, dager</p>
+</div>
+</li>
+<li>
+<p><strong>Responstid for spørringer</strong></p>
+<div class="paragraph">
+<p>Garantert responstid vs. krav til responstid</p>
+</div>
+<div class="paragraph">
+<p>Mål: Mikrosekunder, millisekunder, sekunder, timer, dager</p>
+</div>
+</li>
+<li>
+<p><strong>Leveringssikkerhet</strong></p>
+<div class="paragraph">
+<p>Grad av garantert levering (uten behov for tilbakemelding på <em>applikasjonslaget</em>)</p>
+</div>
+<div class="paragraph">
+<p>Mål: Prosentvis sannsynlighet for vellykket levering og mottak.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tjenestegrad_gos"><a class="anchor" href="#_tjenestegrad_gos"></a>5.7.3. Tjenestegrad (GoS)</h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><em>GoS refers to the ability to access and establish services and includes the time
+required to establish sessions, system reliability (assessment of mean time
+before failure (MTBF) and meant time to repair (MTTR) for example) and
+recovery and system resilience (i.e. how it degrades).</em></p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Service establishment time</p>
+</li>
+<li>
+<p>System reliability</p>
+</li>
+<li>
+<p>System MTBF</p>
+</li>
+<li>
+<p>System MTTR</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_andre_egenskaper"><a class="anchor" href="#_andre_egenskaper"></a>5.8. Andre egenskaper</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Føringer</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Prinsipper</p>
+<div class="paragraph">
+<p>For eksempel SOA-prinsipper, samhandlingsprinsipper.</p>
+</div>
+</li>
+<li>
+<p>Standarder</p>
+<div class="paragraph">
+<p>Ref. <em>Referansekatalogen</em>, bransjestandarder, mv.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Kompetanse</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Kompleksitet</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Avtaler</strong></p>
+</li>
+<li>
+<p><strong>Kostnader</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pris</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Informasjonssikkerhet</strong></p>
+<div class="paragraph">
+<p>Herunder:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Risikoanalyser</p>
+</li>
+<li>
+<p>Kvalitetskrav for konfidensialitet, integritet og tilgjengelighet</p>
+</li>
+<li>
+<p>Mekanismer for autentisering, autorisasjon, kryptering, ikke-benektelse, mv.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -834,6 +1136,24 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="sectionbody">
 <div class="paragraph">
 <p>TBD.</p>
+</div>
+<div class="sect2">
+<h3 id="_generelt_3"><a class="anchor" href="#_generelt_3"></a>6.1. Generelt</h3>
+<div class="paragraph">
+<p>Det gis her en oversikt over kvalitetsegenskaper og forhold som kan være avgjørende for valg av samhandlingsmønstre og løsninger</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_anbefalt_metode"><a class="anchor" href="#_anbefalt_metode"></a>6.2. Anbefalt metode</h3>
+<div class="paragraph">
+<p>Det gis her en oversikt over kvalitetsegenskaper og forhold som kan være avgjørende for valg av samhandlingsmønstre og løsninger</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_faktorer_for_valg_av_mønstre_og_løsninger"><a class="anchor" href="#_faktorer_for_valg_av_mønstre_og_løsninger"></a>6.3. Faktorer for valg av mønstre og løsninger</h3>
+<div class="paragraph">
+<p>Det gis her en oversikt over kvalitetsegenskaper og forhold som kan være avgjørende for valg av samhandlingsmønstre og løsninger</p>
+</div>
 </div>
 </div>
 </div>
@@ -948,7 +1268,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <h2 id="_vedlegg_b_referanse_til_europa"><a class="anchor" href="#_vedlegg_b_referanse_til_europa"></a>9. Vedlegg B - Referanse til Europa</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a>9.1. Generelt</h3>
+<h3 id="_generelt_4"><a class="anchor" href="#_generelt_4"></a>9.1. Generelt</h3>
 <div class="paragraph">
 <p>Det foregår mye i Europa som det er verdt å følge med på om vi skal unngå</p>
 </div>
