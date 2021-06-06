@@ -166,14 +166,14 @@
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_introduksjon">1. Introduksjon</a></li>
-<li><a href="#_grunnleggende_konsepter_og_begreper">2. Grunnleggende konsepter og begreper</a>
+<li><a href="#_forretningsmessige_brukstilfeller">2. Forretningsmessige brukstilfeller</a></li>
+<li><a href="#_grunnleggende_konsepter_og_begreper">3. Grunnleggende konsepter og begreper</a>
 <ul class="sectlevel2">
-<li><a href="#_grunnleggende_modell_for_datautveksling">2.1. Grunnleggende modell for datautveksling</a></li>
-<li><a href="#_sentrale_begreper">2.2. Sentrale begreper</a></li>
-<li><a href="#_meldinger_basis_objektmodell">2.3. Meldinger - basis objektmodell</a></li>
+<li><a href="#_grunnleggende_modell_for_datautveksling">3.1. Grunnleggende modell for datautveksling</a></li>
+<li><a href="#_sentrale_begreper">3.2. Sentrale begreper</a></li>
+<li><a href="#_meldinger_basis_objektmodell">3.3. Meldinger - basis objektmodell</a></li>
 </ul>
 </li>
-<li><a href="#_brukstilfeller">3. Brukstilfeller</a></li>
 <li><a href="#_samhandlingsmønstre_og_utvekslingsmønstre">4. Samhandlingsmønstre og utvekslingsmønstre</a>
 <ul class="sectlevel2">
 <li><a href="#_introduksjon_2">4.1. Introduksjon</a>
@@ -219,21 +219,19 @@
 </ul>
 </li>
 <li><a href="#_kvalitetsegenskaper">5. Kvalitetsegenskaper</a>
+<ul class="sectlevel2">
+<li><a href="#_generelt_2">5.1. Generelt</a></li>
+<li><a href="#_egenskaper_relatert_til_juridiske_forhold">5.2. Egenskaper relatert til juridiske forhold</a></li>
+<li><a href="#_egenskaper_relatert_til_organisatorisk_samhandling">5.3. Egenskaper relatert til organisatorisk samhandling</a></li>
+<li><a href="#_egenskaper_relatert_til_semantisk_interoperabilitet">5.4. Egenskaper relatert til semantisk interoperabilitet</a></li>
+<li><a href="#_egenskaper_relatert_til_teknisk_samhanding">5.5. Egenskaper relatert til teknisk samhanding</a>
 <ul class="sectlevel3">
-<li><a href="#_egenskaper_relatert_til_juridiske_forhold">5.1. Egenskaper relatert til juridiske forhold</a></li>
-<li><a href="#_egenskaper_relatert_til_organisatorisk_samhandlingsevne">5.2. Egenskaper relatert til organisatorisk samhandlingsevne</a></li>
-<li><a href="#_generelt_2">5.3. Generelt</a></li>
-<li><a href="#_egenskaper_relatert_til_juridiske_forhold_2">5.4. Egenskaper relatert til juridiske forhold</a></li>
-<li><a href="#_egenskaper_relatert_til_organisatorisk_samhandling">5.5. Egenskaper relatert til organisatorisk samhandling</a></li>
-<li><a href="#_egenskaper_relatert_til_semantisk_interoperabilitet">5.6. Egenskaper relatert til semantisk interoperabilitet</a></li>
-<li><a href="#_egenskaper_relatert_til_teknisk_samhanding">5.7. Egenskaper relatert til teknisk samhanding</a>
-<ul class="sectlevel3">
-<li><a href="#_utvekslingsprotokoller">5.7.1. Utvekslingsprotokoller</a></li>
-<li><a href="#_tjenestekvalitet_qos">5.7.2. Tjenestekvalitet (QoS)</a></li>
-<li><a href="#_tjenestegrad_gos">5.7.3. Tjenestegrad (GoS)</a></li>
+<li><a href="#_utvekslingsprotokoller">5.5.1. Utvekslingsprotokoller</a></li>
+<li><a href="#_tjenestekvalitet_qos">5.5.2. Tjenestekvalitet (QoS)</a></li>
+<li><a href="#_tjenestegrad_gos">5.5.3. Tjenestegrad (GoS)</a></li>
 </ul>
 </li>
-<li><a href="#_andre_egenskaper">5.8. Andre egenskaper</a></li>
+<li><a href="#_andre_egenskaper">5.6. Andre egenskaper</a></li>
 </ul>
 </li>
 <li><a href="#_veiledning_til_valg_av_mønstre_og_løsninger">6. Veiledning til valg av mønstre og løsninger</a>
@@ -268,7 +266,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Sun Jun 06 2021 13:28:59 GMT+0200 (CEST)</pre>
+<pre>Sun Jun 06 2021 14:02:51 GMT+0200 (CEST)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -297,10 +295,92 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_grunnleggende_konsepter_og_begreper"><a class="anchor" href="#_grunnleggende_konsepter_og_begreper"></a>2. Grunnleggende konsepter og begreper</h2>
+<h2 id="_forretningsmessige_brukstilfeller"><a class="anchor" href="#_forretningsmessige_brukstilfeller"></a>2. Forretningsmessige brukstilfeller</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kontekst for datautveksling er forretningsmessige behov for samhandling og datautveksling.</p>
+</div>
+<div class="paragraph">
+<p>Mønstre og løsninger for datautveksling svarer på forretningsmessige behov. Her gis inntil videre eksempler på forretningsmessige brukstilfeller.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Direktoratet for e-helse har i et prosjekt om helthetlig samhandling nylig gjort en større kartøegging av behovet for informajsonstjenester i helsesektoren , gruppert i 7 kategorier. Digdir er i dialog med eHelse om å identifisere et tilsvarende sett av informasjonstjenester (eller generiske brukstilfeller) som gjelder tverrsektorielt.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Foreløpig liste over forretningsmessige brukstileller:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Trigge neste ledd i  samhandlingsprosess (tjenestekjede)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Digital post til innbygger</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Digital post mellom virksomheter</p>
+</li>
+<li>
+<p>Innhenting av datagrunnlag for ledd i tverrgående samhandlingsprosess</p>
+</li>
+<li>
+<p>Innhenting av datagrunnlag for dataanalyse</p>
+</li>
+<li>
+<p>Notifikasjon (publisering) om vedtak i offentlig saksbehandling</p>
+</li>
+<li>
+<p>Notifikasjon (publisering) om endret datasett (master); for
+oppdatering av avledete datasett (slaver)</p>
+</li>
+<li>
+<p>Innsending av måledata (iOT) og Innsamling av innsendte måledata (iOT)</p>
+</li>
+<li>
+<p>Overføring av data til langtidslagring</p>
+</li>
+<li>
+<p>Innrapportering til sentral instans, f.eks. til Skatt via Altinn (fra mange til
+en, men hver enkelt innrapportering er fra en avsender til en kjent
+mottaker)</p>
+</li>
+<li>
+<p>Innsending av søknad om tjeneste fra en person til en statlig etat</p>
+</li>
+<li>
+<p>Innsending av søknad om tjeneste fra en person til en kommunal etat</p>
+</li>
+<li>
+<p>Innsending av søknad om tjeneste fra en virksomhet til en statlig etat</p>
+</li>
+<li>
+<p>Innsending av søknad om tjeneste fra en virksomhet til en kommunal etat</p>
+</li>
+<li>
+<p>Søknad om tjeneste fra en person til en offentlig instans (ikke bare innsending, men et forløp)</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grunnleggende_konsepter_og_begreper"><a class="anchor" href="#_grunnleggende_konsepter_og_begreper"></a>3. Grunnleggende konsepter og begreper</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_grunnleggende_modell_for_datautveksling"><a class="anchor" href="#_grunnleggende_modell_for_datautveksling"></a>2.1. Grunnleggende modell for datautveksling</h3>
+<h3 id="_grunnleggende_modell_for_datautveksling"><a class="anchor" href="#_grunnleggende_modell_for_datautveksling"></a>3.1. Grunnleggende modell for datautveksling</h3>
 <div class="paragraph">
 <p>Samhandlingsaktører kommuniserer ved å sende meldinger via sine aksesspunkter til den tekniske  meldingsinfrastrukturen.
 Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av teknologi i kommunikasjonsinfrastrukturen.</p>
@@ -325,7 +405,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sentrale_begreper"><a class="anchor" href="#_sentrale_begreper"></a>2.2. Sentrale begreper</h3>
+<h3 id="_sentrale_begreper"><a class="anchor" href="#_sentrale_begreper"></a>3.2. Sentrale begreper</h3>
 <div class="paragraph">
 <p>Meldingsutveksling er en form for datautveksling som transporterer pakker med meldingsinnhold mellom avsendere og mottakere ut fra en avtalt eller ad hoc koreografi.</p>
 </div>
@@ -350,7 +430,7 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 </div>
 </div>
 <div class="sect2">
-<h3 id="_meldinger_basis_objektmodell"><a class="anchor" href="#_meldinger_basis_objektmodell"></a>2.3. Meldinger - basis objektmodell</h3>
+<h3 id="_meldinger_basis_objektmodell"><a class="anchor" href="#_meldinger_basis_objektmodell"></a>3.3. Meldinger - basis objektmodell</h3>
 <div class="paragraph">
 <p>En elektronisk melding kan ses på som en type brev, med innhold pakket i en konvolutt med adresse eller annen informasjon som grunnlag for ruting av innholdet til en eller flere mottakere.  Som alternativ til å inkludere alt relevant innhold i selve meldingen, kan meldingen gi referanser til meldingsrelaterte data som mottakerne eventuelt kan foespørre.</p>
 </div>
@@ -374,12 +454,6 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_brukstilfeller"><a class="anchor" href="#_brukstilfeller"></a>3. Brukstilfeller</h2>
-<div class="sectionbody">
-
 </div>
 </div>
 <div class="sect1">
@@ -847,73 +921,14 @@ Den logiske ende-til-ende meldingsflyten kan likevel beskrives uavhengig av tekn
 <div class="sect1">
 <h2 id="_kvalitetsegenskaper"><a class="anchor" href="#_kvalitetsegenskaper"></a>5. Kvalitetsegenskaper</h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="_egenskaper_relatert_til_juridiske_forhold"><a class="anchor" href="#_egenskaper_relatert_til_juridiske_forhold"></a>5.1. Egenskaper relatert til juridiske forhold</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Gjeldende lovpålagte krav</strong></p>
-<div class="paragraph">
-<p>Eksempel: GDPR med krav til dataminimering mv.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_egenskaper_relatert_til_organisatorisk_samhandlingsevne"><a class="anchor" href="#_egenskaper_relatert_til_organisatorisk_samhandlingsevne"></a>5.2. Egenskaper relatert til organisatorisk samhandlingsevne</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Type forretningsprosess</strong></p>
-<div class="paragraph">
-<p>Eksempler:  Bilateral prosess mellom to kjente parter (herunder spørring og forhåndsavtalt, periodisk distriusjon);
-Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske oppdagete parter.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Antall samhandlingsparter</strong></p>
-<div class="paragraph">
-<p>En-til-en, en-til-mange, mange-til-mange, mange-til-en</p>
-</div>
-</li>
-<li>
-<p><strong>Kjente eller ukjente mottakere</strong></p>
-<div class="paragraph">
-<p>Fast eller dynamisk gruppe med samhandlingsparter</p>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Prosessens levetid</strong></p>
-<div class="paragraph">
-<p>Relevant for feilhåndtering: Kortlevde prosesser med innebygd transaksjonssikkerhet kan tilbakerulles gjennom generelle mekanismer, f.eks. slik dette støttes av <em>rollback</em> i relasjonsdatabaser. Langlevde prosesser krever skreddersydde <em>kompensasjonsaksjoner</em>.</p>
-</div>
-</li>
-<li>
-<p><strong>Ansvarsfordeling</strong></p>
-<div class="paragraph">
-<p>Hvem skal ha ansvar for hva? Hvem sier om du får tilgang til opplysninger eller ikke.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
 <div class="sect2">
-<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a>5.3. Generelt</h3>
+<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a>5.1. Generelt</h3>
 <div class="paragraph">
 <p>Det gis her en oversikt over kvalitetsegenskaper og forhold som kan være avgjørende for valg av samhandlingsmønstre og løsninger</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_egenskaper_relatert_til_juridiske_forhold_2"><a class="anchor" href="#_egenskaper_relatert_til_juridiske_forhold_2"></a>5.4. Egenskaper relatert til juridiske forhold</h3>
+<h3 id="_egenskaper_relatert_til_juridiske_forhold"><a class="anchor" href="#_egenskaper_relatert_til_juridiske_forhold"></a>5.2. Egenskaper relatert til juridiske forhold</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -926,7 +941,7 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_egenskaper_relatert_til_organisatorisk_samhandling"><a class="anchor" href="#_egenskaper_relatert_til_organisatorisk_samhandling"></a>5.5. Egenskaper relatert til organisatorisk samhandling</h3>
+<h3 id="_egenskaper_relatert_til_organisatorisk_samhandling"><a class="anchor" href="#_egenskaper_relatert_til_organisatorisk_samhandling"></a>5.3. Egenskaper relatert til organisatorisk samhandling</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -972,13 +987,13 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_egenskaper_relatert_til_semantisk_interoperabilitet"><a class="anchor" href="#_egenskaper_relatert_til_semantisk_interoperabilitet"></a>5.6. Egenskaper relatert til semantisk interoperabilitet</h3>
+<h3 id="_egenskaper_relatert_til_semantisk_interoperabilitet"><a class="anchor" href="#_egenskaper_relatert_til_semantisk_interoperabilitet"></a>5.4. Egenskaper relatert til semantisk interoperabilitet</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_egenskaper_relatert_til_teknisk_samhanding"><a class="anchor" href="#_egenskaper_relatert_til_teknisk_samhanding"></a>5.7. Egenskaper relatert til teknisk samhanding</h3>
+<h3 id="_egenskaper_relatert_til_teknisk_samhanding"><a class="anchor" href="#_egenskaper_relatert_til_teknisk_samhanding"></a>5.5. Egenskaper relatert til teknisk samhanding</h3>
 <div class="sect3">
-<h4 id="_utvekslingsprotokoller"><a class="anchor" href="#_utvekslingsprotokoller"></a>5.7.1. Utvekslingsprotokoller</h4>
+<h4 id="_utvekslingsprotokoller"><a class="anchor" href="#_utvekslingsprotokoller"></a>5.5.1. Utvekslingsprotokoller</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -991,7 +1006,7 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_tjenestekvalitet_qos"><a class="anchor" href="#_tjenestekvalitet_qos"></a>5.7.2. Tjenestekvalitet (QoS)</h4>
+<h4 id="_tjenestekvalitet_qos"><a class="anchor" href="#_tjenestekvalitet_qos"></a>5.5.2. Tjenestekvalitet (QoS)</h4>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -1032,7 +1047,7 @@ Tverrgående prosess mellom faste parter; Tverrgående prosess mellom dynamiske 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_tjenestegrad_gos"><a class="anchor" href="#_tjenestegrad_gos"></a>5.7.3. Tjenestegrad (GoS)</h4>
+<h4 id="_tjenestegrad_gos"><a class="anchor" href="#_tjenestegrad_gos"></a>5.5.3. Tjenestegrad (GoS)</h4>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -1062,7 +1077,7 @@ recovery and system resilience (i.e. how it degrades).</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_andre_egenskaper"><a class="anchor" href="#_andre_egenskaper"></a>5.8. Andre egenskaper</h3>
+<h3 id="_andre_egenskaper"><a class="anchor" href="#_andre_egenskaper"></a>5.6. Andre egenskaper</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1134,9 +1149,6 @@ recovery and system resilience (i.e. how it degrades).</em></p>
 <div class="sect1">
 <h2 id="_veiledning_til_valg_av_mønstre_og_løsninger"><a class="anchor" href="#_veiledning_til_valg_av_mønstre_og_løsninger"></a>6. Veiledning til valg av mønstre og løsninger</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>TBD.</p>
-</div>
 <div class="sect2">
 <h3 id="_generelt_3"><a class="anchor" href="#_generelt_3"></a>6.1. Generelt</h3>
 <div class="paragraph">
@@ -1335,7 +1347,7 @@ document.</p>
 <div class="sect2">
 <h3 id="_opendei_raf"><a class="anchor" href="#_opendei_raf"></a>9.6. OPENDEI RAF</h3>
 <div class="paragraph">
-<p>Ref. {OPENDEI-D2.1-RA}.</p>
+<p>Ref. <a href="https://www.opendei.eu/wp-content/uploads/2020/10/D2.1-REF-ARCH-FOR-CROSS-DOMAIN-DT-V1_UPDATED.pdf">OPENDEI D2.1 REFERENCE ARCHITECTURE FOR  CROSS-DOMAIN DIGITAL TRANSFORMATION</a>.</p>
 </div>
 <div class="paragraph">
 <p>Dette presenterer en omforent referanserkitektur med utgangspunkt i en rekke eksisterende referansearkitekturer, inkl.</p>
