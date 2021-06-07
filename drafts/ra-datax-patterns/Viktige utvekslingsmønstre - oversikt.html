@@ -263,7 +263,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente abonnenter (pub-sub)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>asdasd</p>
+<p>Dette mønsteret likner på "Publisering fra en til flere ukjente abonnementer (pub-sub)", og bygger også på dette. Forskjellen ligger i at det flere tilbydere rapporterer til samme topic. Dermed behøves , en meglerløsning "i midten", på tvers av alle tilbydere og konsumenter.</p>
 </div>
 <div class="paragraph">
 <p><a href="pub-sub-m2m.html" class="page">Videre detaljer</a></p>
@@ -272,16 +272,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via en hendelsesliste (event-streaming)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
-</div>
-<div class="paragraph">
-<p>Merk: Det kan diskuteres om dette skal ha status som et eget mønster for datautveklsling. som en formidlingstjeneste mellom flere tilbydere og konsumenter. Det er uansett interessant å se på fellesløsninger som svarer på behovet for slike formidlingstjensester. Et målbilde for offentlig sektor kan omfatte dette som en arkitektur for at "alle" aktører skal kunne få tilgang til "alle" hendelser om vedtak på tvers  av sektorer og virksomheter.</p>
-</div>
-<div class="paragraph">
-<p>Dette er et avansert mønster som</p>
-</div>
-<div class="paragraph">
-<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
+<p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
 </div>
 <div class="paragraph">
 <p><a href="event-streaming-m2m-one-log.html" class="page">Videre detaljer</a></p>
@@ -290,7 +281,7 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere via kombinerte hendelseslister</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>TBD</p>
+<p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
 </div>
 <div class="paragraph">
 <p><a href="event-streaming-m2m-combined-logs.html" class="page">Videre detaljer</a></p>
@@ -308,6 +299,9 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret tilsvarer "Publisering fra en til flere ukjente abonnementer (pub-sub)". Forskjeller:</p>
+</div>
+<div class="paragraph">
 <p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
 </div>
 <div class="paragraph">
