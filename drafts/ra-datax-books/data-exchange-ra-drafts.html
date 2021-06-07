@@ -206,7 +206,12 @@
 </li>
 <li><a href="#_publisering">4.3.5. Publisering</a>
 <ul class="sectlevel4">
-<li><a href="#_publisering_flere_til_flere_ukjente_abonnenter">4.3.5.1. Publisering flere til flere ukjente abonnenter</a></li>
+<li><a href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø">4.3.5.1. Publisering fra en til flere ukjente via felles kø</a></li>
+<li><a href="#_publisering_fra_en_til_flere_ukjente_abonnementer_pub_sub">4.3.5.2. Publisering fra en til flere ukjente abonnementer (pub-sub)</a></li>
+<li><a href="#_publisering_flere_til_flere_ukjente_abonnenter_pub_sub">4.3.5.3. Publisering flere til flere ukjente abonnenter (pub-sub)</a></li>
+<li><a href="#_publisering_fra_en_til_flere_ukjente_via_en_hendelsesliste_event_streaming">4.3.5.4. Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</a></li>
+<li><a href="#_publisering_flere_til_flere_ukjente_via_en_hendelsesliste">4.3.5.5. Publisering flere til flere ukjente via en hendelsesliste</a></li>
+<li><a href="#_publisering_flere_til_flere_via_kombinerte_hendelseslister">4.3.5.6. Publisering flere til flere via kombinerte hendelseslister</a></li>
 </ul>
 </li>
 </ul>
@@ -262,7 +267,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Mon Jun 07 2021 20:48:05 GMT+0200 (CEST)</pre>
+<pre>Mon Jun 07 2021 21:05:56 GMT+0200 (CEST)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -679,7 +684,7 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <p>Dette mønsteret likner på "Publisering fra en til flere ukjente abonnementer (pub-sub)", og bygger også på dette. Forskjellen ligger i at det flere tilbydere rapporterer til samme topic. Dermed behøves , en meglerløsning "i midten", på tvers av alle tilbydere og konsumenter.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:pub-sub-m2m.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="../ra-datax-patterns/pub-sub-m2m.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -688,7 +693,7 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:event-streaming-m2m-one-log.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="../ra-datax-patterns/event-streaming-m2m-one-log.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -697,7 +702,7 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:event-streaming-m2m-combined-logs.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="../ra-datax-patterns/event-streaming-m2m-combined-logs.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -706,7 +711,7 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:pub-sub-one-to-many.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="../ra-datax-patterns/pub-sub-one-to-many.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -721,7 +726,7 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:event-streaming-12m-one-log.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="../ra-datax-patterns/event-streaming-12m-one-log.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -730,7 +735,7 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:pub-to-queue.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="../ra-datax-patterns/pub-to-queue.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 </tbody>
@@ -852,15 +857,93 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <div class="sect3">
 <h4 id="_publisering"><a class="anchor" href="#_publisering"></a>4.3.5. Publisering</h4>
 <div class="sect4">
-<h5 id="_publisering_flere_til_flere_ukjente_abonnenter"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_abonnenter"></a>4.3.5.1. Publisering flere til flere ukjente abonnenter</h5>
-<div class="paragraph">
-<p>Må settes opp egne kanaler til hver enkelt abonnent</p>
-</div>
+<h5 id="_publisering_fra_en_til_flere_ukjente_via_felles_kø"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø"></a>4.3.5.1. Publisering fra en til flere ukjente via felles kø</h5>
 <div class="imageblock">
 <div class="content">
-<img src="../ra-datax-patterns/_images/Publisering%20flere%20til%20flere%20ukjente%20abonnenter.png" alt="Publisering flere til flere ukjente abonnenter image">
+<img src="../ra-datax-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20felles%20kø.png" alt="Publisering fra en til flere ukjente via felles kø image">
 </div>
-<div class="title">Figure 12. Publisering flere til flere ukjente abonnenter</div>
+<div class="title">Figure 12. Publisering fra en til flere ukjente via felles kø</div>
+</div>
+<div class="paragraph">
+<p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_publisering_fra_en_til_flere_ukjente_abonnementer_pub_sub"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_abonnementer_pub_sub"></a>4.3.5.2. Publisering fra en til flere ukjente abonnementer (pub-sub)</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20abonnementer%20(pub-sub).png" alt="Publisering fra en til flere ukjente abonnementer (pub-sub) image">
+</div>
+<div class="title">Figure 13. Publisering fra en til flere ukjente abonnementer (pub-sub)</div>
+</div>
+<div class="paragraph">
+<p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_publisering_flere_til_flere_ukjente_abonnenter_pub_sub"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_abonnenter_pub_sub"></a>4.3.5.3. Publisering flere til flere ukjente abonnenter (pub-sub)</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Publisering%20flere%20til%20flere%20ukjente%20abonnenter%20(pub-sub).png" alt="Publisering flere til flere ukjente abonnenter (pub-sub) image">
+</div>
+<div class="title">Figure 14. Publisering flere til flere ukjente abonnenter (pub-sub)</div>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret likner på "Publisering fra en til flere ukjente abonnementer (pub-sub)", og bygger også på dette. Forskjellen ligger i at det flere tilbydere rapporterer til samme topic. Dermed behøves , en meglerløsning "i midten", på tvers av alle tilbydere og konsumenter.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_publisering_fra_en_til_flere_ukjente_via_en_hendelsesliste_event_streaming"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_en_hendelsesliste_event_streaming"></a>4.3.5.4. Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20en%20hendelsesliste%20(event%20streaming).png" alt="Publisering fra en til flere ukjente via en hendelsesliste (event streaming) image">
+</div>
+<div class="title">Figure 15. Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</div>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret tilsvarer "Publisering fra en til flere ukjente abonnementer (pub-sub)". Forskjeller:</p>
+</div>
+<div class="paragraph">
+<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_publisering_flere_til_flere_ukjente_via_en_hendelsesliste"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_via_en_hendelsesliste"></a>4.3.5.5. Publisering flere til flere ukjente via en hendelsesliste</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Publisering%20flere%20til%20flere%20ukjente%20via%20en%20hendelsesliste.png" alt="Publisering flere til flere ukjente via en hendelsesliste image">
+</div>
+<div class="title">Figure 16. Publisering flere til flere ukjente via en hendelsesliste</div>
+</div>
+<div class="paragraph">
+<p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_publisering_flere_til_flere_via_kombinerte_hendelseslister"><a class="anchor" href="#_publisering_flere_til_flere_via_kombinerte_hendelseslister"></a>4.3.5.6. Publisering flere til flere via kombinerte hendelseslister</h5>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Publisering%20flere%20til%20flere%20via%20kombinerte%20hendelseslister.png" alt="Publisering flere til flere via kombinerte hendelseslister image">
+</div>
+<div class="title">Figure 17. Publisering flere til flere via kombinerte hendelseslister</div>
+</div>
+<div class="paragraph">
+<p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Dette er interessant som del av et nasjonalt målbilde.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -871,7 +954,7 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <div class="content">
 <img src="../ra-datax-patterns/_images/Map%20utvekslingsmønstre%20til%20samhandlingsmønstre.png" alt="Map utvekslingsmønstre til samhandlingsmønstre image">
 </div>
-<div class="title">Figure 13. Map utvekslingsmønstre til samhandlingsmønstre</div>
+<div class="title">Figure 18. Map utvekslingsmønstre til samhandlingsmønstre</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1213,7 +1296,7 @@ recovery and system resilience (i.e. how it degrades).</em></p>
 <div class="content">
 <img src="../ra-datax-compare/_images/eHelse%20samhandlingsformer.png" alt="eHelse samhandlingsformer image">
 </div>
-<div class="title">Figure 14. eHelse samhandlingsformer</div>
+<div class="title">Figure 19. eHelse samhandlingsformer</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1229,7 +1312,7 @@ recovery and system resilience (i.e. how it degrades).</em></p>
 <div class="content">
 <img src="../ra-datax-compare/_images/Map%20nasjonale%20samhandlingsmønstre%20mot%20eHelse.png" alt="Map nasjonale samhandlingsmønstre mot eHelse image">
 </div>
-<div class="title">Figure 15. Map nasjonale samhandlingsmønstre mot eHelse</div>
+<div class="title">Figure 20. Map nasjonale samhandlingsmønstre mot eHelse</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1248,7 +1331,7 @@ recovery and system resilience (i.e. how it degrades).</em></p>
 <div class="content">
 <img src="../ra-datax-compare/_images/Map%20nytt%20sett%20samhandlingsmønstre%20til%20ver.%201%20(NAV).png" alt="Map nytt sett samhandlingsmønstre til ver. 1 (NAV) image">
 </div>
-<div class="title">Figure 16. Map nytt sett samhandlingsmønstre til ver. 1 (NAV)</div>
+<div class="title">Figure 21. Map nytt sett samhandlingsmønstre til ver. 1 (NAV)</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1288,13 +1371,13 @@ recovery and system resilience (i.e. how it degrades).</em></p>
 <div class="content">
 <img src="../ra-datax-europe/_images/IDS-RAM%20Message%20taxonomy%20(excerpt).png" alt="IDS RAM Message taxonomy (excerpt)">
 </div>
-<div class="title">Figure 17. IDS-RAM Message taxonomy (excerpt)</div>
+<div class="title">Figure 22. IDS-RAM Message taxonomy (excerpt)</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../ra-datax-europe/_images/IDS-RAM%20Taxonomy%20of%20Operation%20types%20for%20Resource%20exchange.png" alt="IDS RAM Taxonomy of Operation types for Resource exchange">
 </div>
-<div class="title">Figure 18. IDS-RAM Taxonomy of Operation types for Resource exchange</div>
+<div class="title">Figure 23. IDS-RAM Taxonomy of Operation types for Resource exchange</div>
 </div>
 </div>
 <div class="sect2">
@@ -1350,7 +1433,7 @@ document.</p>
 <div class="content">
 <img src="../ra-datax-europe/_images/OPEN%20DEI%20REFERENCE%20ARCHITECTURE%20FRAMEWORK.png" alt="OPEN DEI REFERENCE ARCHITECTURE FRAMEWORK">
 </div>
-<div class="title">Figure 19. IDS-RAM Message taxonomy (excerpt)</div>
+<div class="title">Figure 24. IDS-RAM Message taxonomy (excerpt)</div>
 </div>
 </div>
 </div>

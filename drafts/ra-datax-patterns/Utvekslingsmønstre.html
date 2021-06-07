@@ -183,7 +183,12 @@
 </li>
 <li><a href="#_publisering">5. Publisering</a>
 <ul class="sectlevel2">
-<li><a href="#_publisering_flere_til_flere_ukjente_abonnenter">5.1. Publisering flere til flere ukjente abonnenter</a></li>
+<li><a href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø">5.1. Publisering fra en til flere ukjente via felles kø</a></li>
+<li><a href="#_publisering_fra_en_til_flere_ukjente_abonnementer_pub_sub">5.2. Publisering fra en til flere ukjente abonnementer (pub-sub)</a></li>
+<li><a href="#_publisering_flere_til_flere_ukjente_abonnenter_pub_sub">5.3. Publisering flere til flere ukjente abonnenter (pub-sub)</a></li>
+<li><a href="#_publisering_fra_en_til_flere_ukjente_via_en_hendelsesliste_event_streaming">5.4. Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</a></li>
+<li><a href="#_publisering_flere_til_flere_ukjente_via_en_hendelsesliste">5.5. Publisering flere til flere ukjente via en hendelsesliste</a></li>
+<li><a href="#_publisering_flere_til_flere_via_kombinerte_hendelseslister">5.6. Publisering flere til flere via kombinerte hendelseslister</a></li>
 </ul>
 </li>
 </ul>
@@ -306,7 +311,7 @@
 <p>Dette mønsteret likner på "Publisering fra en til flere ukjente abonnementer (pub-sub)", og bygger også på dette. Forskjellen ligger i at det flere tilbydere rapporterer til samme topic. Dermed behøves , en meglerløsning "i midten", på tvers av alle tilbydere og konsumenter.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:pub-sub-m2m.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="pub-sub-m2m.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -315,7 +320,7 @@
 <p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:event-streaming-m2m-one-log.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="event-streaming-m2m-one-log.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -324,7 +329,7 @@
 <p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:event-streaming-m2m-combined-logs.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="event-streaming-m2m-combined-logs.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -333,7 +338,7 @@
 <p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:pub-sub-one-to-many.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="pub-sub-one-to-many.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -348,7 +353,7 @@
 <p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:event-streaming-12m-one-log.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="event-streaming-12m-one-log.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -357,7 +362,7 @@
 <p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
 </div>
 <div class="paragraph">
-<p><a href="#drafts:ra-datax-patterns:pub-to-queue.adoc" class="page unresolved">Videre detaljer</a></p>
+<p><a href="pub-to-queue.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 </tbody>
@@ -485,15 +490,93 @@
 <h2 id="_publisering"><a class="anchor" href="#_publisering"></a>5. Publisering</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_publisering_flere_til_flere_ukjente_abonnenter"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_abonnenter"></a>5.1. Publisering flere til flere ukjente abonnenter</h3>
-<div class="paragraph">
-<p>Må settes opp egne kanaler til hver enkelt abonnent</p>
-</div>
+<h3 id="_publisering_fra_en_til_flere_ukjente_via_felles_kø"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø"></a>5.1. Publisering fra en til flere ukjente via felles kø</h3>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Publisering%20flere%20til%20flere%20ukjente%20abonnenter.png" alt="Publisering flere til flere ukjente abonnenter image">
+<img src="_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20felles%20kø.png" alt="Publisering fra en til flere ukjente via felles kø image">
 </div>
-<div class="title">Figure 8. Publisering flere til flere ukjente abonnenter</div>
+<div class="title">Figure 8. Publisering fra en til flere ukjente via felles kø</div>
+</div>
+<div class="paragraph">
+<p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publisering_fra_en_til_flere_ukjente_abonnementer_pub_sub"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_abonnementer_pub_sub"></a>5.2. Publisering fra en til flere ukjente abonnementer (pub-sub)</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Publisering%20fra%20en%20til%20flere%20ukjente%20abonnementer%20(pub-sub).png" alt="Publisering fra en til flere ukjente abonnementer (pub-sub) image">
+</div>
+<div class="title">Figure 9. Publisering fra en til flere ukjente abonnementer (pub-sub)</div>
+</div>
+<div class="paragraph">
+<p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publisering_flere_til_flere_ukjente_abonnenter_pub_sub"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_abonnenter_pub_sub"></a>5.3. Publisering flere til flere ukjente abonnenter (pub-sub)</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Publisering%20flere%20til%20flere%20ukjente%20abonnenter%20(pub-sub).png" alt="Publisering flere til flere ukjente abonnenter (pub-sub) image">
+</div>
+<div class="title">Figure 10. Publisering flere til flere ukjente abonnenter (pub-sub)</div>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret likner på "Publisering fra en til flere ukjente abonnementer (pub-sub)", og bygger også på dette. Forskjellen ligger i at det flere tilbydere rapporterer til samme topic. Dermed behøves , en meglerløsning "i midten", på tvers av alle tilbydere og konsumenter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publisering_fra_en_til_flere_ukjente_via_en_hendelsesliste_event_streaming"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_en_hendelsesliste_event_streaming"></a>5.4. Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20en%20hendelsesliste%20(event%20streaming).png" alt="Publisering fra en til flere ukjente via en hendelsesliste (event streaming) image">
+</div>
+<div class="title">Figure 11. Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</div>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret tilsvarer "Publisering fra en til flere ukjente abonnementer (pub-sub)". Forskjeller:</p>
+</div>
+<div class="paragraph">
+<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publisering_flere_til_flere_ukjente_via_en_hendelsesliste"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_via_en_hendelsesliste"></a>5.5. Publisering flere til flere ukjente via en hendelsesliste</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Publisering%20flere%20til%20flere%20ukjente%20via%20en%20hendelsesliste.png" alt="Publisering flere til flere ukjente via en hendelsesliste image">
+</div>
+<div class="title">Figure 12. Publisering flere til flere ukjente via en hendelsesliste</div>
+</div>
+<div class="paragraph">
+<p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publisering_flere_til_flere_via_kombinerte_hendelseslister"><a class="anchor" href="#_publisering_flere_til_flere_via_kombinerte_hendelseslister"></a>5.6. Publisering flere til flere via kombinerte hendelseslister</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Publisering%20flere%20til%20flere%20via%20kombinerte%20hendelseslister.png" alt="Publisering flere til flere via kombinerte hendelseslister image">
+</div>
+<div class="title">Figure 13. Publisering flere til flere via kombinerte hendelseslister</div>
+</div>
+<div class="paragraph">
+<p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Dette er interessant som del av et nasjonalt målbilde.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
