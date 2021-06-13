@@ -174,18 +174,6 @@
 <div class="paragraph">
 <p>Det gis deretter et foreløpig forslag til prioritering.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Det du ser her et utkast. Innholdet vil oppdateres fortløpende fram mot møte i A&amp;S-rådet 15. juni 2021.
-</td>
-</tr>
-</table>
-</div>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -193,7 +181,31 @@ Det du ser her et utkast. Innholdet vil oppdateres fortløpende fram mot møte i
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Se også <a href="../../architecture-repository/methods/reference-architecture-methods.html#what-is" class="page">om begrepet referansearkitektur</a> og <a href="../../architecture-repository/methods/reference-architecture-methods.html#motivation" class="page">verdibidraget</a>.
+<a href="../../architecture-repository/methods/reference-architecture-methods.html#what-is" class="page">Om begrepet referansearkitektur</a> og <a href="../../architecture-repository/methods/reference-architecture-methods.html#motivation" class="page">om hvorfor referansearkitekturer</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Det du ser her et utkast. Innholdet vil oppdateres fortløpende fram mot møte i A&amp;S-rådet 15. juni 2021. En tidligere oversikt finnes under <a href="../../architecture-repository/proposed-reference-architectures/proposed-reference-architecture-work.html" class="page">Innspill til prioritering av videre arbeid med referansearkitekturer (A&amp;S-rådet, okt. 2020)</a>. Det gis her en ny, samlet oversikt, med vekt på hva som har vært diskutert i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/ra-network/about-FRA21.html">FRA21-nettverket</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Arbeidet med referansearkitekturer i Digdir foregår for tiden som en linjeaktivitet, men med mange avhengigheter til annet arbeid, slik som arbeidet med Felles Økosystem, deling av data, sammenhengende tjenester, livshendelsene, utvikling av fellesløsninger, m.m.
 </td>
 </tr>
 </table>
@@ -203,50 +215,127 @@ Se også <a href="../../architecture-repository/methods/reference-architecture-m
 <div class="sect1">
 <h2 id="_mottatte_forslag_overordnet_oversikt"><a class="anchor" href="#_mottatte_forslag_overordnet_oversikt"></a>Mottatte forslag - overordnet oversikt</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Se også <a href="../../architecture-repository/proposed-reference-architectures/proposed-reference-architecture-work.html" class="page">Innspill til prioritering av videre arbeid med referansearkitekturer (A&amp;S-rådet, okt. 2020)</a></p>
-</div>
 <div class="sect2">
 <h3 id="_ra_datautveksling"><a class="anchor" href="#_ra_datautveksling"></a>RA Datautveksling</h3>
 <div class="paragraph">
-<p>Foreløpige stikkord:</p>
+<p>Gjeldende (mai 2021) <a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a> er første versjon. Denne referansearkiteturen har blitt godt mottatt og har blitt tatt inn i  tilsvarende arbeid i sektorene, spesielt i eHelse og UNIT. Vi har diskutert mulighetene for å samkjøre videre utvikling bedre, og det er stor interesse for utvidelser, blant annet innen hendelsesdrevet arkitektur.</p>
+</div>
+<div class="paragraph">
+<p>Aktuelle utvidelser er (ikke uttømmende):</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Veiledning til valg av mønstre og løsninger ut fra forretningsmessige behov</p>
+<p>Veiledning til valg av mønstre og løsninger ut fra forretningsmessige behov.</p>
 </li>
 <li>
-<p>Felles begrepsapparat og felles definisjon av utvekslingsmønstre</p>
+<p>Harmonisering av begrepsapparat og utvekslingsmønstre på tvers av sektorene.</p>
 </li>
 <li>
-<p>Felles målbilder og strategier for datautveksling på tvers av sektorene</p>
+<p>Felles målbilder og strategier for datautveksling på tvers av sektorene (koordinert med utviklingen av Felles Økosystem).</p>
 </li>
 <li>
-<p>Forvaltningsregime for standardisering av meldinger</p>
+<p>Metodikk og veiledning til standardisering av meldinger og utvekslingsformater, som grunnlag for etablering av et felles forvaltningsregime og aktuelle fellesløsninger. Det antas at en da kan ta utgangspunkt i slik DFØ har organisert arbeidet med standariserung av meldinger i PEPPOL-nettverket, men dette er ikke en forutsetning. Fellesløsninger omfatter kataloger (prosess, hendelser/meldinger, felles vokabularer) og oppslagstjenester (tilsvarende dagens ELMA, men uavhengig av domene og tekniske løsninger for meldingsutveksling).</p>
 </li>
 <li>
-<p>Videre arbeid med mønstre for datautveksling og datadeling. Ta «hjem» arbeid som er gjort i sektorene, UNIT m.fl. Mer på API-er som løsning for meldingsutveksling. Utvidet rollebegrep. Tettere kopling til veiledere fra Ressurssenteret.</p>
+<p>Videre arbeid med mønstre for datautveksling og datadeling. Stikkord: Ta «hjem» arbeid som er gjort i sektorene, UNIT m.fl. Mer på API-er som løsning for meldingsutveksling, ref. pågående pilotering i EU CEF eDelivery. Utvidet rollebegrep (forvaltningsroller). Mer om løsninger for publisering og hendelsesstrømming. Tettere kopling til veiledere fra Ressurssenteret.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Se også: <a href="../ra-datax-books/data-exchange-ra-drafts.html" class="page">Utkast til oppdatering av nasjonal referansearkitektur for datautveksling (2021)</a></p>
+<p>Organisering:</p>
+</div>
+<div class="paragraph">
+<p>Organisering av videre arbeid med nasjonale referansearkitekturer for datautveksling er ikke foreløpig diskutert. Det foreslås her en organsisering med forpliktende samarbeid på tvers av sektorene, i et felles prosjekt.</p>
+</div>
+<div class="paragraph">
+<p>Se også:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur for datautveksling</a></p>
+</li>
+<li>
+<p><a href="https://www.digdir.no/apne-data/nasjonal-verktoykasse-deling-av-data/2243">Nasjonal verktøykasse for deling av data</a></p>
+</li>
+<li>
+<p><a href="../ra-datax-books/data-exchange-ra-drafts.html" class="page">Utkast til oppdatering av nasjonal referansearkitektur for datautveksling (2021)</a></p>
+</li>
+<li>
+<p><a href="https://nasjonal-arkitektur.github.io/drafts/data-exchange-strategy-emelding/emelding-oppdatert-strategi-forslag.html">Notat - Strategisk retning for utbredelse av eMelding</a>.</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_ra_offentlig_saksbehandling"><a class="anchor" href="#_ra_offentlig_saksbehandling"></a>RA offentlig saksbehandling</h3>
+<div class="paragraph">
+<p>Saksbehandling utgjør en vesentlig del av arbeidet i offentlig sektor, og det koster samfunnet store summer. Det gjøres fremdeles for mye manuelt arbeid, og det lages stadig nye saksbehandlingsløsninger fra bunnen, innrettet på oppgaveløsningen til hver enkelt virksomhet.</p>
+</div>
+<div class="paragraph">
+<p>Det er derfor grunn til å se på mulighetene for effektivisisering og forbedring. Dette blir både viktigere og mer komplisert når det i dagens situasjon og framover stilles krav til sammenhengende tjenester, innebygget arkivering m.m.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Lovverket (stikkord)</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Forvaltningsloven: Taushetsplikt og habilitet. Enkeltvedtak. Dokumentasjon og likebehandling. Klagerett. NB: Se <a href="https://www.regjeringen.no/no/dokumenter/nou-2019-5/id2632006/">NOU 2019:5 om forslag til ny forvaltningslov</a>.</p>
+</li>
+<li>
+<p>Arkivloven: Krav om arkiv. Kulturell og forskningsmessig verdi. Rettslig eller viktig forvaltningsmessig dokumentasjon. Fra skapelse til arkiv.​NB: Se <a href="https://www.regjeringen.no/no/dokumenter/nou-2019-9/id2639106/">NOU 2019:9 om forslag til ny arkivlov</a></p>
+</li>
+<li>
+<p>Offentleglova: Rett til innsyn i dokument i offentleg verksemd. Sikrer en åpen, tillitsfull og transparent forvaltning. Viderebruksdirektivet for offentlig informasjon.</p>
+</li>
+<li>
+<p>Personopplysningsloven: Opplysninger som direkte eller indirekte kan knyttes til fysisk person. Behandlingsansvarlig, databehandler. Krav til kvalitet, formål, lagringstid.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Dette innspillet kommer opprinnelig fra arkitektmiljøet i UDI, men har vært diskutert i flere møter og workshops i regi av <a href="https://nasjonal-arkitektur.github.io/architecture-repository/ra-network/about-FRA21.html">FRA21-nettverket</a>. En egen arbeidsgruppe i FRA21-nettverket har også begynt å se på hva en slik referansearkitektur bør omfatte, og hvordan det kan støtte opp under arbeidet med sammenhengende tjenester og livshendelser. Selv om dette handler om mye av det samme som for sammenhengende tjenester ellers, kan en med offentlig saksbehandling som omfang bli mer konkret.</p>
+</div>
+<div class="paragraph">
+<p>Det er laget et utkast til en generisk verdistrøm for offentlig saksbehandling som er vist nedenfor. Denne verdistrømmen gir et ende-til-ende pespektiv på saksbehandling, fra søknad til behandling og videre oppfølging etter vedtak.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Overordnet%20verdistrøm%20(RA%20saksbehandling).png" alt="Overordnet verdistrøm (RA saksbehandling)">
 </div>
 <div class="title">Figure 1. Generisk verdistrøm for offentlig saksbehandling</div>
 </div>
+<div class="paragraph">
+<p>Det er også laget et overordnet kapabilitetskart som vist i følgende figur. Under dette finnes også et mer detajert bilde, som en så langt har begynt å se på med utgangspunkt i UDI som eksempel.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/RA%20saksbehandling%20kapabiliteter.png" alt="RA saksbehandling kapabiliteter">
 </div>
 <div class="title">Figure 2. Overordnet kapabilitetskart for offentlig saksbehandling</div>
+</div>
+<div class="paragraph">
+<p>Organisering:</p>
+</div>
+<div class="paragraph">
+<p>Flere har uttrykt stor interesse for å bli med i et kjerneteam i et eventuelt slikt arbeid. Med presisering av at dette så langt er uforpliktende og ikke nødvendigvis forankret internt hos hver enkelt virksomhet, nevnes her spesielt  Digdir, KS, Statsforvalteren, Arkivverket, DFØ, UDI og Statnett. Det antas i tillegg involvering av blant andre Lånekassen, Skatt, NAV, eHelse og flere kommuner.</p>
+</div>
+<div class="paragraph">
+<p>Caser (antydningsvis):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Livshendelsen ny i Norge foreslås som strategisk hovedcase, mer spesifikt enten Familiegjenforening eller Studieopphold.</p>
+</li>
+<li>
+<p>Forøvrig finnes et meget stort utvalg av caser å plukke fra, av stort og smått fra de som har vært med på å diskutere dette så langt.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -261,52 +350,131 @@ Se også <a href="../../architecture-repository/methods/reference-architecture-m
 <p><strong>Hvorfor RA digital tvilling?</strong></p>
 </div>
 <div class="paragraph">
-<p>Mange ulike initiativer pågår som ikke nødvendigvis:
-Etablerer felles arkitekturer (iht. EIF)
-Harmoniserer ulike datasett til gjentagende bruk i digitale tvillinger
-Benytter kjente standarder
-Etablerer teknologiske plattformer/komponenter egnet for felles gjenbruk
-Tilpasser seg felles digitalt økosystem
-Utnytter/baserer seg på kjent internasjonalt arbeid eller prosjekter for digitale tvillinger
-Har gjort forutgående ROS-analyser og utført ev tiltak</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ra_iot"><a class="anchor" href="#_ra_iot"></a>RA IoT</h3>
-<div class="paragraph">
-<p>Hva er IoT (tingenes internett)?</p>
+<p>Mange ulike og lite koordinerte initiativer pågår eller er planlagt. Jo lenger en venter med en samordnet referansearkitektur, desto større blir jobben med å rydde opp i netse omgang.</p>
 </div>
 <div class="paragraph">
-<p>Veldig enkelt forklart er tingenes internett et nettverk av fysiske ting og sensorer som er koblet til internett. Disse tingene kan være nærmest hva som helst; for eksempel kaffemaskiner, strømadaptere, PCer, mobiler, klokker, biler, trafikklys, vindmøller, basestasjoner og til og med brikker folk har sydd inn i kroppen. Tingene er identifiserbare, har sensorer og kalles gjerne IoT-enheter.</p>
+<p>Det behøves:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Felles arkitekturer (iht. EIF)</p>
+</li>
+<li>
+<p>Harmonisering av  ulike datasett til gjentatt bruk i digitale tvillinger</p>
+</li>
+<li>
+<p>Etablering av felles  standarder</p>
+</li>
+<li>
+<p>Etablerering av fellesløsninger</p>
+</li>
+<li>
+<p>Tilpasning til Felles økosystem
+Utnytter/baserer seg på kjent internasjonalt arbeid eller prosjekter for digitale tvillinger</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Se f.eks. <a href="https://www.youtube.com/watch?v=HFhzGhKgS24">Avmystifisering av teknologier: Tingenes internett</a>.</p>
+<p>Dette initiativet kommer i utgnagspunkte fra Kartverket, og har blitt diskutert i flere møter i FRA21-nettverket; senest i workshop 4. juni; se presentasjoner og videopptak fra workshop.</p>
 </div>
 <div class="paragraph">
-<p>Hvorfor RA IoT?</p>
+<p>Organsiering: &#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Caser: &#8230;&#8203;</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ra_sammenhengende_tjenester"><a class="anchor" href="#_ra_sammenhengende_tjenester"></a>RA sammenhengende tjenester</h3>
-
+<h3 id="_samarbeidsplattform_for_arkitektur_og_referansearktitektur_modelx"><a class="anchor" href="#_samarbeidsplattform_for_arkitektur_og_referansearktitektur_modelx"></a>Samarbeidsplattform for arkitektur og referansearktitektur (ModelX)</h3>
+<div class="paragraph">
+<p>Referansearkitekturer handler om alt fra gode eksempler til beste praksis og standarder.</p>
+</div>
+<div class="paragraph">
+<p>Hvordan får vi øye på de gode eksemplene, og hvordan kan vi samarbeide om å ta fram de gode eksemplene og beste praksis på tvers av sektorene?</p>
+</div>
+<div class="paragraph">
+<p>PÅ initiativ fra arkitektressurser i KS, eHelse og Digdir, ble det høsten 2020 etablert et nettverkssamarbeid ved navn ModelX. Utgangspunktet var å få til samarbeid om arkitektur basert på utveksling av arkitekturmodeller mellom ulike modelleringsvertøy. Standard utvekslingsformater som gjør dette mulig finnes for de mest brukte modelleringsspråkene, dvs. Archimate, UML, BPMN og DMN, men det behøves i tillegg å etablere et minimum av felles metamodeller og kjøreregler for å få til praktisk gjenbruk.</p>
+</div>
+<div class="paragraph">
+<p>En ønsket også å kunne samle  modeller i et felles arkitekturbibliotek, som delingsplattform og som utstillingsvindu for gode eksempler og referansearkitekturer.</p>
+</div>
+<div class="paragraph">
+<p>ModelX-initiativet har så langt vært en suksess, og flere virksomheter har deltatt. F.eks. har DFØ og UDI blitt koplet inn i diskusjoner rundt BPMN og DMN. Spesielt har UDI erfaring med å bruke BPMN og DMN for prosessautomatisering.</p>
+</div>
+<div class="paragraph">
+<p>Digdir har bidratt i oppstartsfasen, men har ikke hatt forankring for å ta en aktiv rolle i samarbeidet så langt gjennom 2021. ModelX-samarbeidet har så langt vært ledet av KS.</p>
+</div>
+<div class="paragraph">
+<p>Som en praktisk løsning for felles arkitekturbiblotek, har en så langt benyttet gitlab (tilsvarende slik det er gjort for Digdirs arkitekturverksted).</p>
+</div>
+<div class="paragraph">
+<p>eHelse, KS m.fl. ser dette som et viktig arbeid, og vil uansett fortsette ModelX-initiativet. For å bredde dette til flere virksomheter, behøves mer arbeid med veiledere, metamodeller og funksjonalitet i felles arkitekturbibliotek.</p>
+</div>
+<div class="paragraph">
+<p>Opprinnelige ambisjoner for ModelX-samarbeidet finnes dokumentert i følgende oversikt.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/modelx-motivation.png" alt="modelx motivation">
+</div>
+<div class="title">Figure 3. Opprinnelig motivasjonsmodell for ModelX-samarbeidet (des. 2020)</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+En annen arbeidsgruppe, ledet av Digdir, har parallelt arbeidet med etablering av modelleringskonvensjoner og standarder for informasjonsmodeller. Dette kan sies å passe inn som del av omfanget til ModelX, men en har foreløpig arbeidet uavhengig, uten at dette har vært et problem.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_ra_innebygget_arkiv"><a class="anchor" href="#_ra_innebygget_arkiv"></a>RA Innebygget arkiv</h3>
-
+<h3 id="_andre_forslag"><a class="anchor" href="#_andre_forslag"></a>Andre forslag</h3>
+<div class="paragraph">
+<p>Flere andre forslag til referansearkitekturarbeid har vært spilt inn i diskusjoner med Digdir. Her listes disse, foreløpig uten nærmere forklaring:</p>
 </div>
-<div class="sect2">
-<h3 id="_ra_api_management"><a class="anchor" href="#_ra_api_management"></a>RA API-management</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>RA IoT</p>
+</li>
+<li>
+<p>RA sammenhengende tjenester</p>
+</li>
+<li>
+<p>RA Innebygget arkiv</p>
+</li>
+<li>
+<p>RA API-management</p>
+</li>
+<li>
+<p>RA IAM (tillitstjenester)</p>
+</li>
+<li>
+<p>RA stordata</p>
+</li>
+<li>
+<p>RA Blockchain</p>
+</li>
+<li>
+<p>RA dataanalyse</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_ra_iam"><a class="anchor" href="#_ra_iam"></a>RA IAM</h3>
-
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_foreløpig_forslag_til_prioritering"><a class="anchor" href="#_foreløpig_forslag_til_prioritering"></a>Foreløpig forslag til prioritering</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Det foreslås her at videre arbeid med tverrsektorielle og nasjonale referansearkitekturer fokuserer på følgende temaer:</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -319,6 +487,21 @@ Har gjort forutgående ROS-analyser og utført ev tiltak</p>
 <p>RA Digital tvilling</p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p>Alle disse temaene har en fellesnevner i datautveksling, og kan eventuelt starte med dette som fokusområde.</p>
+</div>
+<div class="paragraph">
+<p>I tillegg forelås at Digdir deltar i videre arbeid med Samarbeidsplattform for arkitekturer og referansearktitekturer (ModelX).</p>
+</div>
+<div class="paragraph">
+<p>Mer om hvert av disse temaene er gitt ovenfor.</p>
+</div>
+<div class="paragraph">
+<p>Parallell igangsetting av arbeid på alle disse områdene forutsetter hensiktsmessig organisering, med forpliktende bidrag fra flere enn Digdir.</p>
+</div>
+<div class="paragraph">
+<p>Merk: Det understrekes at referansearkitekturene må komme inn på "alle" EIF-lag, dvs. juridisk, organisatorisk, semantisk og teknisk, i tillegg til styring. Dette krever samordning av aktiviteter også internt i Digdir, på tvers av flere fagmiljøer og prosjekter.</p>
 </div>
 </div>
 </div>
