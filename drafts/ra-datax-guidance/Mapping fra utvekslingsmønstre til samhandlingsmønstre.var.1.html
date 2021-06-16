@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sentrale begreper :: Nasjonalt arkitekturverksted</title>
-    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/ra-datax-concepts/Sentrale%20begreper.var.1.html">
+    <title>Mapping fra utvekslingsmønstre til samhandlingsmønstre :: Nasjonalt arkitekturverksted</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/ra-datax-guidance/Mapping%20fra%20utvekslingsmønstre%20til%20samhandlingsmønstre.var.1.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -155,27 +155,18 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Utkast og innspill</a></li>
-    <li><a href="Sentrale%20begreper.var.1.html">Sentrale begreper</a></li>
+    <li><a href="Mapping%20fra%20utvekslingsmønstre%20til%20samhandlingsmønstre.var.1.html">Mapping fra utvekslingsmønstre til samhandlingsmønstre</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/ra-data-exchange/modules/ra-datax-concepts/pages/Sentrale%20begreper.var.1.adoc">Rediger kilde</a></div>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/ra-data-exchange/modules/ra-datax-guidance/pages/Mapping%20fra%20utvekslingsmønstre%20til%20samhandlingsmønstre.var.1.adoc">Rediger kilde</a></div>
   </div>
 <article class="doc"><a name="section-top"></a>
-<h1 class="page">Sentrale begreper</h1>
-<div class="paragraph">
-<p>Meldingsutveksling er en form for datautveksling som transporterer pakker med meldingsinnhold mellom avsendere og mottakere ut fra en avtalt eller ad hoc koreografi.</p>
-</div>
-<div class="paragraph">
-<p>Litteraturen er delt i synet på om meldingsutveksling kun dreier seg om asynkron kommunikasjon. Her fastholdes at meldingsutveksling støtter både asynkron og synkron kommunikasjon. Dette ses på som en egenskap ved løsningen, på linje med andre egenskaper, som f.eks. leveringstid.</p>
-</div>
-<div class="paragraph">
-<p>Sett fra mottaker, kommer meldinger via meldingskanaler. Kanaler kan være realisert på ulike måter, f.eks. gjennom teknologier som meldingskø, hendelsesliste eller blockchain.</p>
-</div>
+<h1 class="page">Mapping fra utvekslingsmønstre til samhandlingsmønstre</h1>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Sentrale%20begreper.png" alt="Sentrale begreper image">
+<img src="_images/Mapping%20fra%20utvekslingsmønstre%20til%20samhandlingsmønstre.png" alt="Mapping fra utvekslingsmønstre til samhandlingsmønstre image">
 </div>
-<div class="title">Figure 1. Sentrale begreper</div>
+<div class="title">Figure 1. Mapping fra utvekslingsmønstre til samhandlingsmønstre</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -190,7 +181,7 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Elementer i view for Sentrale begreper</caption>
+<caption class="title">Table 1. Elementer i view for Mapping fra utvekslingsmønstre til samhandlingsmønstre</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -203,27 +194,105 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Emne</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot en</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Synonymer: Partisjon</p>
+<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/request-reply-basic.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Melding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere kjente</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>En melding er en inforrmasjonspakke som sendes fra en avsender til en eller flere mottakere.</p>
+<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/request-reply-many-known.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingsinnhold</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere ukjente</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Meldingsinnholdet bærer informasjon fra avsender til mottaker.</p>
+<p>Dette mønsteret kombinerer mønstrene <em>publish-subscribe</em> og <em>Forsendelse - flere til en</em>.</p>
+</div>
+<div class="paragraph">
+<p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/request-reply-many-unknown.html" class="page">Videre detaljer</a></p>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret støtter også datavirtualisering</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingskonvolutt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til en</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Meldingskonvolutten innholder informasjon for ruting av meldinger til aktuelle mottakere i kommunikasjonsinfrastrukturen, samt parametre som f.eks. korrelasjons-id for å knytte sammen meldinger som er del av samme prosessinstans.</p>
+<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker. Dette kan skje direkte og synkront,eller via meldingskøer.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/sending-one-to-one.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til flere kjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forsendelse fra en til flere kjente bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/sending-one-to-many.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - flere til en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/sending-many-to-one.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via en hendelsesliste (event-streaming)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/event-streaming-m2m-one-log.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente abonnementer (pub-sub)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/pub-sub-one-to-many.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret tilsvarer "Publisering fra en til flere ukjente abonnementer (pub-sub)". Forskjeller:</p>
+</div>
+<div class="paragraph">
+<p>Konsumentene behøver ikke å sette opp abonnement, men kan kople seg direkte på en hendelsesstrøm via en hendelsesliste som kan navigeres og leses fra ønsket sted i hendelsesstrømmen. Hendelsesstrømmen er "durable" og hendelsene er "immutable".</p>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/event-streaming-12m-one-log.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via felles kø</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/pub-to-queue.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 </tbody>
