@@ -234,7 +234,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>Mon Jun 21 2021 16:21:49 GMT+0200 (CEST)</pre>
+<pre>Sun Oct 31 2021 19:39:39 GMT+0100 (CET)</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -246,7 +246,7 @@
 <h2 id="_introduksjon"><a class="anchor" href="#_introduksjon"></a>1. Introduksjon</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Gjeldende (mai 2021) <a href="../../architecture-repository/data-exchange-ra/book-data-exchange-ra.html" class="page">referansearkitektur for datautveksling</a> bør oppdateres med noen tillegg og noen strukturelle endringer.</p>
+<p>Gjeldende (mai 2021) <a href="../../architecture-repository/data-exchange-ra/book-data-exchange-ra.html" class="page">referansearkitektur for datautveksling</a> bør oppdateres med noen tillegg og strukturelle endringer.</p>
 </div>
 <div class="paragraph">
 <p>Her følger utkast til noen slike oppdateringer. Deler av innholdet her vil kunne flyttes direkte inn som del av gjeldende beskrivelser, mens det for andre deler behøves mer "massering".</p>
@@ -576,64 +576,8 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot en</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
-</div>
-<div class="paragraph">
-<p><a href="../ra-datax-patterns/request-reply-basic.html" class="page">Videre detaljer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere kjente</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
-</div>
-<div class="paragraph">
-<p><a href="../ra-datax-patterns/request-reply-many-known.html" class="page">Videre detaljer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere ukjente</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Dette mønsteret kombinerer mønstrene <em>publish-subscribe</em> og <em>Forsendelse - flere til en</em>.</p>
-</div>
-<div class="paragraph">
-<p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
-</div>
-<div class="paragraph">
-<p><a href="../ra-datax-patterns/request-reply-many-unknown.html" class="page">Videre detaljer</a></p>
-</div>
-<div class="paragraph">
-<p>Dette mønsteret støtter også datavirtualisering</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til en</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker. Dette kan skje direkte og synkront,eller via meldingskøer.</p>
-</div>
-<div class="paragraph">
-<p><a href="../ra-datax-patterns/sending-one-to-one.html" class="page">Videre detaljer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til flere kjente</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Forsendelse fra en til flere kjente bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
-</div>
-<div class="paragraph">
-<p><a href="../ra-datax-patterns/sending-one-to-many.html" class="page">Videre detaljer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - flere til en</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
-</div>
-<div class="paragraph">
-<p><a href="../ra-datax-patterns/sending-many-to-one.html" class="page">Videre detaljer</a></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viktige utvekslingsmønstre</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering til abonnenter (pub-sub)</p></td>
@@ -668,6 +612,66 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <p><a href="../ra-datax-patterns/pub-to-queue.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker. Dette kan skje direkte og synkront,eller via meldingskøer.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/sending-one-to-one.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - en til flere kjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forsendelse fra en til flere kjente bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/sending-one-to-many.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - flere til en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/sending-many-to-one.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere ukjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret kombinerer mønstrene <em>publish-subscribe</em> og <em>Forsendelse - flere til en</em>.</p>
+</div>
+<div class="paragraph">
+<p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/request-reply-many-unknown.html" class="page">Videre detaljer</a></p>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret støtter også datavirtualisering</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere kjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/request-reply-many-known.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
+</div>
+<div class="paragraph">
+<p><a href="../ra-datax-patterns/request-reply-basic.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -675,12 +679,6 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <h4 id="_forsendelse"><a class="anchor" href="#_forsendelse"></a>4.3.3. Forsendelse</h4>
 <div class="sect4">
 <h5 id="_forsendelse_en_til_en"><a class="anchor" href="#_forsendelse_en_til_en"></a>4.3.3.1. Forsendelse - en til en</h5>
-<div class="imageblock">
-<div class="content">
-<img src="../ra-datax-patterns/_images/Forsendelse%20-%20en%20til%20en.png" alt="Forsendelse - en til en image">
-</div>
-<div class="title">Figure 6. Forsendelse - en til en</div>
-</div>
 <div class="sect5">
 <h6 id="_generisk_mønster"><a class="anchor" href="#_generisk_mønster"></a>4.3.3.1.1. Generisk mønster</h6>
 <div class="paragraph">
@@ -739,16 +737,16 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <div class="paragraph">
 <p>Se <a href="https://nasjonal-arkitektur.github.io/architecture-repository/one-way-push/book-one-way-push.html#_4_hj%C3%B8rners_modellen">konseptuell 4-hjørnersmodell</a> for nærmere beskrivelse av mønster og anvendelser.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Forsendelse%20-%20en%20til%20en.png" alt="Forsendelse - en til en image">
+</div>
+<div class="title">Figure 6. Forsendelse - en til en</div>
+</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_forsendelse_en_til_flere_kjente"><a class="anchor" href="#_forsendelse_en_til_flere_kjente"></a>4.3.3.2. Forsendelse - en til flere kjente</h5>
-<div class="imageblock">
-<div class="content">
-<img src="../ra-datax-patterns/_images/Forsendelse%20-%20en%20til%20flere%20kjente.png" alt="Forsendelse - en til flere kjente image">
-</div>
-<div class="title">Figure 7. Forsendelse - en til flere kjente</div>
-</div>
 <div class="paragraph">
 <p>Forsendelse fra en til flere kjente bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
 </div>
@@ -765,15 +763,15 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Forsendelse%20-%20en%20til%20flere%20kjente.png" alt="Forsendelse - en til flere kjente image">
+</div>
+<div class="title">Figure 7. Forsendelse - en til flere kjente</div>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_forsendelse_flere_til_en"><a class="anchor" href="#_forsendelse_flere_til_en"></a>4.3.3.3. Forsendelse - flere til en</h5>
-<div class="imageblock">
-<div class="content">
-<img src="../ra-datax-patterns/_images/Forsendelse%20-%20flere%20til%20en.png" alt="Forsendelse - flere til en image">
-</div>
-<div class="title">Figure 8. Forsendelse - flere til en</div>
-</div>
 <div class="paragraph">
 <p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
 </div>
@@ -787,47 +785,53 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Forsendelse%20-%20flere%20til%20en.png" alt="Forsendelse - flere til en image">
+</div>
+<div class="title">Figure 8. Forsendelse - flere til en</div>
+</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_forespørsel_svar"><a class="anchor" href="#_forespørsel_svar"></a>4.3.4. Forespørsel-svar</h4>
 <div class="sect4">
 <h5 id="_forespørsel_svar_en_mot_en"><a class="anchor" href="#_forespørsel_svar_en_mot_en"></a>4.3.4.1. Forespørsel-svar - en mot en</h5>
+<div class="paragraph">
+<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../ra-datax-patterns/_images/Forespørsel-svar%20-%20en%20mot%20en.png" alt="Forespørsel-svar - en mot en image">
 </div>
 <div class="title">Figure 9. Forespørsel-svar - en mot en</div>
 </div>
-<div class="paragraph">
-<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_forespørsel_svar_en_mot_flere_kjente"><a class="anchor" href="#_forespørsel_svar_en_mot_flere_kjente"></a>4.3.4.2. Forespørsel-svar - en mot flere kjente</h5>
+<div class="paragraph">
+<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../ra-datax-patterns/_images/Forespørsel-svar%20-%20en%20mot%20flere%20kjente.png" alt="Forespørsel-svar - en mot flere kjente image">
 </div>
 <div class="title">Figure 10. Forespørsel-svar - en mot flere kjente</div>
 </div>
-<div class="paragraph">
-<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_forespørsel_svar_en_mot_flere_ukjente"><a class="anchor" href="#_forespørsel_svar_en_mot_flere_ukjente"></a>4.3.4.3. Forespørsel-svar - en mot flere ukjente</h5>
-<div class="imageblock">
-<div class="content">
-<img src="../ra-datax-patterns/_images/Forespørsel-svar%20-%20en%20mot%20flere%20ukjente.png" alt="Forespørsel-svar - en mot flere ukjente image">
-</div>
-<div class="title">Figure 11. Forespørsel-svar - en mot flere ukjente</div>
-</div>
 <div class="paragraph">
 <p>Dette mønsteret kombinerer mønstrene <em>publish-subscribe</em> og <em>Forsendelse - flere til en</em>.</p>
 </div>
 <div class="paragraph">
 <p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Forespørsel-svar%20-%20en%20mot%20flere%20ukjente.png" alt="Forespørsel-svar - en mot flere ukjente image">
+</div>
+<div class="title">Figure 11. Forespørsel-svar - en mot flere ukjente</div>
 </div>
 </div>
 </div>
@@ -835,48 +839,42 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <h4 id="_publisering"><a class="anchor" href="#_publisering"></a>4.3.5. Publisering</h4>
 <div class="sect4">
 <h5 id="_publisering_fra_en_til_flere_ukjente_via_felles_kø"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_felles_kø"></a>4.3.5.1. Publisering fra en til flere ukjente via felles kø</h5>
+<div class="paragraph">
+<p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../ra-datax-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20felles%20kø.png" alt="Publisering fra en til flere ukjente via felles kø image">
 </div>
 <div class="title">Figure 12. Publisering fra en til flere ukjente via felles kø</div>
 </div>
-<div class="paragraph">
-<p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_publisering_fra_en_til_flere_ukjente_abonnementer_pub_sub"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_abonnementer_pub_sub"></a>4.3.5.2. Publisering fra en til flere ukjente abonnementer (pub-sub)</h5>
+<div class="paragraph">
+<p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../ra-datax-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20abonnementer%20(pub-sub).png" alt="Publisering fra en til flere ukjente abonnementer (pub-sub) image">
 </div>
 <div class="title">Figure 13. Publisering fra en til flere ukjente abonnementer (pub-sub)</div>
 </div>
-<div class="paragraph">
-<p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_publisering_flere_til_flere_ukjente_abonnenter_pub_sub"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_abonnenter_pub_sub"></a>4.3.5.3. Publisering flere til flere ukjente abonnenter (pub-sub)</h5>
+<div class="paragraph">
+<p>Dette mønsteret likner på "Publisering fra en til flere ukjente abonnementer (pub-sub)", og bygger også på dette. Forskjellen ligger i at det flere tilbydere rapporterer til samme topic. Dermed behøves , en meglerløsning "i midten", på tvers av alle tilbydere og konsumenter.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../ra-datax-patterns/_images/Publisering%20flere%20til%20flere%20ukjente%20abonnenter%20(pub-sub).png" alt="Publisering flere til flere ukjente abonnenter (pub-sub) image">
 </div>
 <div class="title">Figure 14. Publisering flere til flere ukjente abonnenter (pub-sub)</div>
 </div>
-<div class="paragraph">
-<p>Dette mønsteret likner på "Publisering fra en til flere ukjente abonnementer (pub-sub)", og bygger også på dette. Forskjellen ligger i at det flere tilbydere rapporterer til samme topic. Dermed behøves , en meglerløsning "i midten", på tvers av alle tilbydere og konsumenter.</p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_publisering_fra_en_til_flere_ukjente_via_en_hendelsesliste_event_streaming"><a class="anchor" href="#_publisering_fra_en_til_flere_ukjente_via_en_hendelsesliste_event_streaming"></a>4.3.5.4. Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</h5>
-<div class="imageblock">
-<div class="content">
-<img src="../ra-datax-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20en%20hendelsesliste%20(event%20streaming).png" alt="Publisering fra en til flere ukjente via en hendelsesliste (event streaming) image">
-</div>
-<div class="title">Figure 15. Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</div>
-</div>
 <div class="paragraph">
 <p>Dette mønsteret tilsvarer "Publisering fra en til flere ukjente abonnementer (pub-sub)". Forskjeller:</p>
 </div>
@@ -886,27 +884,27 @@ I valg av begreper, har det vært et spesielt poeng å etablerte noe som bygger 
 <div class="paragraph">
 <p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Publisering%20fra%20en%20til%20flere%20ukjente%20via%20en%20hendelsesliste%20(event%20streaming).png" alt="Publisering fra en til flere ukjente via en hendelsesliste (event streaming) image">
+</div>
+<div class="title">Figure 15. Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</div>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_publisering_flere_til_flere_ukjente_via_en_hendelsesliste"><a class="anchor" href="#_publisering_flere_til_flere_ukjente_via_en_hendelsesliste"></a>4.3.5.5. Publisering flere til flere ukjente via en hendelsesliste</h5>
+<div class="paragraph">
+<p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../ra-datax-patterns/_images/Publisering%20flere%20til%20flere%20ukjente%20via%20en%20hendelsesliste.png" alt="Publisering flere til flere ukjente via en hendelsesliste image">
 </div>
 <div class="title">Figure 16. Publisering flere til flere ukjente via en hendelsesliste</div>
 </div>
-<div class="paragraph">
-<p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_publisering_flere_til_flere_via_kombinerte_hendelseslister"><a class="anchor" href="#_publisering_flere_til_flere_via_kombinerte_hendelseslister"></a>4.3.5.6. Publisering flere til flere via kombinerte hendelseslister</h5>
-<div class="imageblock">
-<div class="content">
-<img src="../ra-datax-patterns/_images/Publisering%20flere%20til%20flere%20via%20kombinerte%20hendelseslister.png" alt="Publisering flere til flere via kombinerte hendelseslister image">
-</div>
-<div class="title">Figure 17. Publisering flere til flere via kombinerte hendelseslister</div>
-</div>
 <div class="paragraph">
 <p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
 </div>
@@ -927,6 +925,12 @@ Gjeldende referansearkitektur for datautveksling belyser utfordringer og løsnin
 </td>
 </tr>
 </table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../ra-datax-patterns/_images/Publisering%20flere%20til%20flere%20via%20kombinerte%20hendelseslister.png" alt="Publisering flere til flere via kombinerte hendelseslister image">
+</div>
+<div class="title">Figure 17. Publisering flere til flere via kombinerte hendelseslister</div>
 </div>
 </div>
 </div>

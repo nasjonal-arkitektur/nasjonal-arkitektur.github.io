@@ -158,36 +158,36 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot en</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
-</div>
-<div class="paragraph">
-<p><a href="request-reply-basic.html" class="page">Videre detaljer</a></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spørring og svar på spørring</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere kjente</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
-</div>
-<div class="paragraph">
-<p><a href="request-reply-many-known.html" class="page">Videre detaljer</a></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering av notifikasjoner om hendelser</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere ukjente</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oppdatering av data i annen løsning</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversendelse av datadistribusjon (dokument)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon til kjente parter</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse til kjente mottakere</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - flere til en</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Dette mønsteret kombinerer mønstrene <em>publish-subscribe</em> og <em>Forsendelse - flere til en</em>.</p>
+<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
 </div>
 <div class="paragraph">
-<p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
-</div>
-<div class="paragraph">
-<p><a href="request-reply-many-unknown.html" class="page">Videre detaljer</a></p>
-</div>
-<div class="paragraph">
-<p>Dette mønsteret støtter også datavirtualisering</p>
+<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -209,22 +209,8 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forsendelse - flere til en</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
-</div>
-<div class="paragraph">
-<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via en hendelsesliste (event-streaming)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
-</div>
-<div class="paragraph">
-<p><a href="event-streaming-m2m-one-log.html" class="page">Videre detaljer</a></p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering til ukjente mottakere</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publisering til abonnenter (pub-sub)</p></td>
@@ -233,6 +219,15 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </div>
 <div class="paragraph">
 <p><a href="pub-sub-one-to-many.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering via felles kø</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
+</div>
+<div class="paragraph">
+<p><a href="pub-to-queue.html" class="page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -251,13 +246,58 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering via felles kø</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via en hendelsesliste (event-streaming)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
+<p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
 </div>
 <div class="paragraph">
-<p><a href="pub-to-queue.html" class="page">Videre detaljer</a></p>
+<p><a href="event-streaming-m2m-one-log.html" class="page">Videre detaljer</a></p>
 </div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere ukjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret kombinerer mønstrene <em>publish-subscribe</em> og <em>Forsendelse - flere til en</em>.</p>
+</div>
+<div class="paragraph">
+<p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="paragraph">
+<p><a href="request-reply-many-unknown.html" class="page">Videre detaljer</a></p>
+</div>
+<div class="paragraph">
+<p>Dette mønsteret støtter også datavirtualisering</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot flere kjente</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="paragraph">
+<p><a href="request-reply-many-known.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespørsel-svar - en mot en</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
+</div>
+<div class="paragraph">
+<p><a href="request-reply-basic.html" class="page">Videre detaljer</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oppdatering av data i annen løsning</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innrapportering</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
 </table>

@@ -137,45 +137,45 @@
 <div class="sect1">
 <h2 id="_forespørsel_svar_en_mot_en"><a class="anchor" href="#_forespørsel_svar_en_mot_en"></a>1. Forespørsel-svar - en mot en</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Forespørsel-svar%20-%20en%20mot%20en.png" alt="Forespørsel-svar - en mot en image">
 </div>
 <div class="title">Figure 1. Forespørsel-svar - en mot en</div>
 </div>
-<div class="paragraph">
-<p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_forespørsel_svar_en_mot_flere_kjente"><a class="anchor" href="#_forespørsel_svar_en_mot_flere_kjente"></a>2. Forespørsel-svar - en mot flere kjente</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Forespørsel-svar%20-%20en%20mot%20flere%20kjente.png" alt="Forespørsel-svar - en mot flere kjente image">
 </div>
 <div class="title">Figure 2. Forespørsel-svar - en mot flere kjente</div>
 </div>
-<div class="paragraph">
-<p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_forespørsel_svar_en_mot_flere_ukjente"><a class="anchor" href="#_forespørsel_svar_en_mot_flere_ukjente"></a>3. Forespørsel-svar - en mot flere ukjente</h2>
 <div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="_images/Forespørsel-svar%20-%20en%20mot%20flere%20ukjente.png" alt="Forespørsel-svar - en mot flere ukjente image">
-</div>
-<div class="title">Figure 3. Forespørsel-svar - en mot flere ukjente</div>
-</div>
 <div class="paragraph">
 <p>Dette mønsteret kombinerer mønstrene <em>publish-subscribe</em> og <em>Forsendelse - flere til en</em>.</p>
 </div>
 <div class="paragraph">
 <p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Forespørsel-svar%20-%20en%20mot%20flere%20ukjente.png" alt="Forespørsel-svar - en mot flere ukjente image">
+</div>
+<div class="title">Figure 3. Forespørsel-svar - en mot flere ukjente</div>
 </div>
 </div>
 </div>
