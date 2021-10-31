@@ -265,34 +265,7 @@
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente abonnenter (pub-sub)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Dette mønsteret likner på "Publisering fra en til flere ukjente abonnementer (pub-sub)", og bygger også på dette. Forskjellen ligger i at det flere tilbydere rapporterer til samme topic. Dermed behøves , en meglerløsning "i midten", på tvers av alle tilbydere og konsumenter.</p>
-</div>
-<div class="paragraph">
-<p><a href="pub-sub-m2m.html" class="page">Videre detaljer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere ukjente via en hendelsesliste (event-streaming)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Flere kan skrive mot samme hendelsesliste. som kan leses av interesserte konsumenter.</p>
-</div>
-<div class="paragraph">
-<p><a href="event-streaming-m2m-one-log.html" class="page">Videre detaljer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering flere til flere via kombinerte hendelseslister</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Flere kan skrive mot samme hendelsesliste og ulike hendelseslister kan kombineres og leses av flere konsumenter.</p>
-</div>
-<div class="paragraph">
-<p><a href="event-streaming-m2m-combined-logs.html" class="page">Videre detaljer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente abonnementer (pub-sub)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering til abonnenter (pub-sub)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
 </div>
@@ -301,7 +274,7 @@
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via en hendelsesliste (event streaming)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering via en hendelsesliste (event streaming)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Dette mønsteret tilsvarer "Publisering fra en til flere ukjente abonnementer (pub-sub)". Forskjeller:</p>
 </div>
@@ -316,7 +289,7 @@
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering fra en til flere ukjente via felles kø</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisering via felles kø</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
 </div>
