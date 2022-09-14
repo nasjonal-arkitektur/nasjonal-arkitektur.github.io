@@ -1,0 +1,354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Prinsipp 5: Del og gjenbruk løsninger</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Prinsipp 5: Del og gjenbruk l&#248;sninger</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/babccce6-2f6d-49e4-9563-5a48eb7c820b.png" alt="Prinsipp 5: Del og gjenbruk løsninger" usemap="#babccce6-2f6d-49e4-9563-5a48eb7c820bmap"/>
+			   <map name="babccce6-2f6d-49e4-9563-5a48eb7c820bmap">
+				  				<area shape="rect" coords="250,358,392,443" href="../elements/c9bdd8d7-bad6-4fd9-ba79-c03d30a7d476.html"  target="element">
+				  				<area shape="rect" coords="718,358,860,443" href="../elements/2befb2af-18fe-4990-ab90-98327f3b298e.html"  target="element">
+				  				<area shape="rect" coords="562,358,704,443" href="../elements/8abfef29-6278-46be-9249-c0ffdc297aa9.html"  target="element">
+				  				<area shape="rect" coords="406,358,548,443" href="../elements/3e85da9d-eaea-4b34-9762-16bf2828f2c1.html"  target="element">
+
+				  		<area shape="rect" coords="214,322,1151,462" href="../elements/da733d5b-9134-49f7-8f58-7ff0bf8833d8.html"  target="element">
+				  				<area shape="rect" coords="958,202,1127,287" href="../elements/1335ae00-00a5-4b91-8d3a-4ef1a1a40adc.html"  target="element">
+				  				<area shape="rect" coords="778,202,947,287" href="../elements/135cc85d-0a7b-4a16-a13f-f6e265380b53.html"  target="element">
+				  				<area shape="rect" coords="418,202,587,287" href="../elements/41f5afbe-4fb8-4faf-a1d3-20c55e8d63c4.html"  target="element">
+				  				<area shape="rect" coords="238,202,407,287" href="../elements/e3bdf982-7047-40fe-b4a9-ee75eb1bebbc.html"  target="element">
+				  				<area shape="rect" coords="598,202,767,287" href="../elements/b695703c-0597-4258-aca4-980ca9bc6cde.html"  target="element">
+
+				  		<area shape="rect" coords="214,166,1151,310" href="../elements/289e8f1b-8512-4a82-a980-0365f2db2d8a.html"  target="element">
+				  				<area shape="rect" coords="418,46,587,131" href="../elements/e5ff8966-2aaf-4ef5-80d6-f51bd5997765.html"  target="element">
+				  				<area shape="rect" coords="598,46,767,131" href="../elements/090c3d53-ebe7-4ce0-8c20-e8f783c1f4a3.html"  target="element">
+				  				<area shape="rect" coords="238,46,407,131" href="../elements/139c281d-0a72-40f9-952d-067cbfde8d7d.html"  target="element">
+				  				<area shape="rect" coords="778,46,947,131" href="../elements/0a8d7d84-b1a0-43ee-8ef6-e866ead325bc.html"  target="element">
+
+				  		<area shape="rect" coords="214,10,1151,154" href="../elements/538663c2-f892-4f80-bb03-ce07f9b907ad.html"  target="element">
+				  		<area shape="rect" coords="10,10,143,457" href="../elements/5e6c9758-4188-4e7b-a2de-018482548923.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">[.lead]
+Deling og gjenbruk av l&#248;sninger omfatter arkitekturprodukter, l&#248;sningskomponenter og tjenester. Dette omfatter l&#248;sninger som er nasjonale, sektorielle og p&#229; virksomhetsniv&#229;.
+
+== Forklaring
+
+
+== Begrunnelse
+Begrunnelsen for prinsippet er at deling og gjenbruk fremmer samhandlingsevne, innovasjon og effektivitet, og bidrar til harmonisering, informasjonssikkerhet og personvern. Dette gj&#248;r at virksomhetene kan fokusere p&#229; digitalisering av kjernevirksomhet fremfor &#229; l&#248;se utfordringer som allerede er l&#248;st.</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/5e6c9758-4188-4e7b-a2de-018482548923.html" target="element"> Prinsipp 5: Del og gjenbruk l&#248;sninger </a> </td>
+											    <td> <a href="../elements/5e6c9758-4188-4e7b-a2de-018482548923.html" target="element" class="i18n-elementtype-Principle">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/538663c2-f892-4f80-bb03-ce07f9b907ad.html" target="element"> Krav (prinsipp 5) </a> </td>
+											    <td> <a href="../elements/538663c2-f892-4f80-bb03-ce07f9b907ad.html" target="element" class="i18n-elementtype-Grouping">
+											    </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/0a8d7d84-b1a0-43ee-8ef6-e866ead325bc.html" target="element"> 5.4 Vurder anskaffelse av markeds- og skyl&#248;sninger fremfor egenutvikling av l&#248;sninger. </a> </td>
+													    <td> <a href="../elements/0a8d7d84-b1a0-43ee-8ef6-e866ead325bc.html" target="element" class="i18n-elementtype-Requirement">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/139c281d-0a72-40f9-952d-067cbfde8d7d.html" target="element"> 5.1 Kartlegg eksisterende og planlagte l&#248;sninger som kan v&#230;re aktuelle &#229; gjenbruke. </a> </td>
+													    <td> <a href="../elements/139c281d-0a72-40f9-952d-067cbfde8d7d.html" target="element" class="i18n-elementtype-Requirement">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/090c3d53-ebe7-4ce0-8c20-e8f783c1f4a3.html" target="element"> 5.3 S&#248;rg for arkitektur som gir systemer og tjenester evne til endring og vedlikehold over tid. </a> </td>
+													    <td> <a href="../elements/090c3d53-ebe7-4ce0-8c20-e8f783c1f4a3.html" target="element" class="i18n-elementtype-Requirement">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/e5ff8966-2aaf-4ef5-80d6-f51bd5997765.html" target="element"> 5.2 Bruk tilgjengelige felleskomponenter og fellesl&#248;sninger der disse er egnet for form&#229;let. </a> </td>
+													    <td> <a href="../elements/e5ff8966-2aaf-4ef5-80d6-f51bd5997765.html" target="element" class="i18n-elementtype-Requirement">
+													    </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/289e8f1b-8512-4a82-a980-0365f2db2d8a.html" target="element"> Anbefalinger (prinsipp 5) </a> </td>
+											    <td> <a href="../elements/289e8f1b-8512-4a82-a980-0365f2db2d8a.html" target="element" class="i18n-elementtype-Grouping">
+											    </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/b695703c-0597-4258-aca4-980ca9bc6cde.html" target="element"> 5.7 Ta hensyn til anerkjente designprinsipper for tjenesteorientert arkitektur, slik som l&#248;se koplinger, modularisering, standardiserte tjenestekontrakter med videre. </a> </td>
+													    <td> <a href="../elements/b695703c-0597-4258-aca4-980ca9bc6cde.html" target="element" class="i18n-elementtype-Constraint">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/e3bdf982-7047-40fe-b4a9-ee75eb1bebbc.html" target="element"> 5.5 Gi innspill til forbedringer av l&#248;sninger og arkitekturprodukter til forvalterne, slik at de kan videreutvikles og forbedres. </a> </td>
+													    <td> <a href="../elements/e3bdf982-7047-40fe-b4a9-ee75eb1bebbc.html" target="element" class="i18n-elementtype-Constraint">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/41f5afbe-4fb8-4faf-a1d3-20c55e8d63c4.html" target="element"> 5.6 Vurder om bindinger til enkeltleverand&#248;rer kan unng&#229;s for &#229; bevare fleksibilitet og gjenbrukspotensiale. </a> </td>
+													    <td> <a href="../elements/41f5afbe-4fb8-4faf-a1d3-20c55e8d63c4.html" target="element" class="i18n-elementtype-Constraint">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/135cc85d-0a7b-4a16-a13f-f6e265380b53.html" target="element"> 5.8 Tilgjengeliggj&#248;r informasjon om, og tilby gjenbruk av egne l&#248;sninger som kan v&#230;re interessante for andre. </a> </td>
+													    <td> <a href="../elements/135cc85d-0a7b-4a16-a13f-f6e265380b53.html" target="element" class="i18n-elementtype-Constraint">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/1335ae00-00a5-4b91-8d3a-4ef1a1a40adc.html" target="element"> 5.9 Reduser kompleksitet og teknisk gjeld i systemer, grensesnitt og tjenester. </a> </td>
+													    <td> <a href="../elements/1335ae00-00a5-4b91-8d3a-4ef1a1a40adc.html" target="element" class="i18n-elementtype-Constraint">
+													    </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/da733d5b-9134-49f7-8f58-7ff0bf8833d8.html" target="element"> Ressurser (prinsipp 5) </a> </td>
+											    <td> <a href="../elements/da733d5b-9134-49f7-8f58-7ff0bf8833d8.html" target="element" class="i18n-elementtype-Grouping">
+											    </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/3e85da9d-eaea-4b34-9762-16bf2828f2c1.html" target="element"> Oversikt over nasjonale fellesl&#248;sninger (Digdir) </a> </td>
+													    <td> <a href="../elements/3e85da9d-eaea-4b34-9762-16bf2828f2c1.html" target="element" class="i18n-elementtype-Resource">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/8abfef29-6278-46be-9249-c0ffdc297aa9.html" target="element"> Strategiske prinsipper for bruk og utvikling av nasjonale felleskomponenter (Regjeringen) </a> </td>
+													    <td> <a href="../elements/8abfef29-6278-46be-9249-c0ffdc297aa9.html" target="element" class="i18n-elementtype-Resource">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/2befb2af-18fe-4990-ab90-98327f3b298e.html" target="element"> The SOA Sourcebook (The Open Group) </a> </td>
+													    <td> <a href="../elements/2befb2af-18fe-4990-ab90-98327f3b298e.html" target="element" class="i18n-elementtype-Resource">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/c9bdd8d7-bad6-4fd9-ba79-c03d30a7d476.html" target="element"> Nasjonal arkitektur (Digdir) </a> </td>
+													    <td> <a href="../elements/c9bdd8d7-bad6-4fd9-ba79-c03d30a7d476.html" target="element" class="i18n-elementtype-Resource">
+													    </a> </td>
+													</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/0b0e7541-f407-4b21-8277-884a3db197b4.html" target="element">  </a> </td>
+																		<td> <a href="../elements/0b0e7541-f407-4b21-8277-884a3db197b4.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/538663c2-f892-4f80-bb03-ce07f9b907ad.html" target="element"> Krav (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/139c281d-0a72-40f9-952d-067cbfde8d7d.html" target="element"> 5.1 Kartlegg eksisterende og planlagte l&#248;sninger som kan v&#230;re aktuelle &#229; gjenbruke. </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/376dbfed-8045-4fbc-bb0d-80d5ad75ed38.html" target="element">  </a> </td>
+																		<td> <a href="../elements/376dbfed-8045-4fbc-bb0d-80d5ad75ed38.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/538663c2-f892-4f80-bb03-ce07f9b907ad.html" target="element"> Krav (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/0a8d7d84-b1a0-43ee-8ef6-e866ead325bc.html" target="element"> 5.4 Vurder anskaffelse av markeds- og skyl&#248;sninger fremfor egenutvikling av l&#248;sninger. </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/6233b4f2-c6cb-4ea6-832a-b742d052f78c.html" target="element">  </a> </td>
+																		<td> <a href="../elements/6233b4f2-c6cb-4ea6-832a-b742d052f78c.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/538663c2-f892-4f80-bb03-ce07f9b907ad.html" target="element"> Krav (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/e5ff8966-2aaf-4ef5-80d6-f51bd5997765.html" target="element"> 5.2 Bruk tilgjengelige felleskomponenter og fellesl&#248;sninger der disse er egnet for form&#229;let. </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/43b7c377-e1dc-4f52-a412-e64bddfcfcac.html" target="element">  </a> </td>
+																		<td> <a href="../elements/43b7c377-e1dc-4f52-a412-e64bddfcfcac.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/538663c2-f892-4f80-bb03-ce07f9b907ad.html" target="element"> Krav (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/090c3d53-ebe7-4ce0-8c20-e8f783c1f4a3.html" target="element"> 5.3 S&#248;rg for arkitektur som gir systemer og tjenester evne til endring og vedlikehold over tid. </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/ef7d901e-3d39-4c37-b9aa-a30e68f5e99b.html" target="element">  </a> </td>
+																		<td> <a href="../elements/ef7d901e-3d39-4c37-b9aa-a30e68f5e99b.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/538663c2-f892-4f80-bb03-ce07f9b907ad.html" target="element"> Krav (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/5e6c9758-4188-4e7b-a2de-018482548923.html" target="element"> Prinsipp 5: Del og gjenbruk l&#248;sninger </a> </td>
+																	</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/ea3dec89-e21c-44a9-9ac3-dcf577c4582a.html" target="element">  </a> </td>
+																		<td> <a href="../elements/ea3dec89-e21c-44a9-9ac3-dcf577c4582a.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/289e8f1b-8512-4a82-a980-0365f2db2d8a.html" target="element"> Anbefalinger (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/41f5afbe-4fb8-4faf-a1d3-20c55e8d63c4.html" target="element"> 5.6 Vurder om bindinger til enkeltleverand&#248;rer kan unng&#229;s for &#229; bevare fleksibilitet og gjenbrukspotensiale. </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/aa7f7420-b2cd-4d74-ad33-f056e7c207bf.html" target="element">  </a> </td>
+																		<td> <a href="../elements/aa7f7420-b2cd-4d74-ad33-f056e7c207bf.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/289e8f1b-8512-4a82-a980-0365f2db2d8a.html" target="element"> Anbefalinger (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/b695703c-0597-4258-aca4-980ca9bc6cde.html" target="element"> 5.7 Ta hensyn til anerkjente designprinsipper for tjenesteorientert arkitektur, slik som l&#248;se koplinger, modularisering, standardiserte tjenestekontrakter med videre. </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/05338fb3-ec46-4c65-b611-353c1c77da28.html" target="element">  </a> </td>
+																		<td> <a href="../elements/05338fb3-ec46-4c65-b611-353c1c77da28.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/289e8f1b-8512-4a82-a980-0365f2db2d8a.html" target="element"> Anbefalinger (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/e3bdf982-7047-40fe-b4a9-ee75eb1bebbc.html" target="element"> 5.5 Gi innspill til forbedringer av l&#248;sninger og arkitekturprodukter til forvalterne, slik at de kan videreutvikles og forbedres. </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/b0e7259b-a320-45a4-86f2-31c4e5e35938.html" target="element">  </a> </td>
+																		<td> <a href="../elements/b0e7259b-a320-45a4-86f2-31c4e5e35938.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/289e8f1b-8512-4a82-a980-0365f2db2d8a.html" target="element"> Anbefalinger (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/135cc85d-0a7b-4a16-a13f-f6e265380b53.html" target="element"> 5.8 Tilgjengeliggj&#248;r informasjon om, og tilby gjenbruk av egne l&#248;sninger som kan v&#230;re interessante for andre. </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/f7dc25d7-3b72-4b02-8027-0b2a98c723a4.html" target="element">  </a> </td>
+																		<td> <a href="../elements/f7dc25d7-3b72-4b02-8027-0b2a98c723a4.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/289e8f1b-8512-4a82-a980-0365f2db2d8a.html" target="element"> Anbefalinger (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/5e6c9758-4188-4e7b-a2de-018482548923.html" target="element"> Prinsipp 5: Del og gjenbruk l&#248;sninger </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/b7298d50-a810-4b7d-b242-17c87ffa1524.html" target="element">  </a> </td>
+																		<td> <a href="../elements/b7298d50-a810-4b7d-b242-17c87ffa1524.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/289e8f1b-8512-4a82-a980-0365f2db2d8a.html" target="element"> Anbefalinger (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/1335ae00-00a5-4b91-8d3a-4ef1a1a40adc.html" target="element"> 5.9 Reduser kompleksitet og teknisk gjeld i systemer, grensesnitt og tjenester. </a> </td>
+																	</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/c3d288b7-ebf9-4ffe-abda-8255348c4bd7.html" target="element">  </a> </td>
+																		<td> <a href="../elements/c3d288b7-ebf9-4ffe-abda-8255348c4bd7.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/da733d5b-9134-49f7-8f58-7ff0bf8833d8.html" target="element"> Ressurser (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/8abfef29-6278-46be-9249-c0ffdc297aa9.html" target="element"> Strategiske prinsipper for bruk og utvikling av nasjonale felleskomponenter (Regjeringen) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/8f96f007-e024-430e-9eb2-dde42923074a.html" target="element">  </a> </td>
+																		<td> <a href="../elements/8f96f007-e024-430e-9eb2-dde42923074a.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/da733d5b-9134-49f7-8f58-7ff0bf8833d8.html" target="element"> Ressurser (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/3e85da9d-eaea-4b34-9762-16bf2828f2c1.html" target="element"> Oversikt over nasjonale fellesl&#248;sninger (Digdir) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/507c7c81-9abc-4baf-a68c-23b3dc93f5a2.html" target="element">  </a> </td>
+																		<td> <a href="../elements/507c7c81-9abc-4baf-a68c-23b3dc93f5a2.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/da733d5b-9134-49f7-8f58-7ff0bf8833d8.html" target="element"> Ressurser (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/2befb2af-18fe-4990-ab90-98327f3b298e.html" target="element"> The SOA Sourcebook (The Open Group) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/57255666-4ddd-43d8-87bd-dcfa1535c1f2.html" target="element">  </a> </td>
+																		<td> <a href="../elements/57255666-4ddd-43d8-87bd-dcfa1535c1f2.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/da733d5b-9134-49f7-8f58-7ff0bf8833d8.html" target="element"> Ressurser (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/5e6c9758-4188-4e7b-a2de-018482548923.html" target="element"> Prinsipp 5: Del og gjenbruk l&#248;sninger </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/ea76d9cc-ca9e-460b-bf5a-cc68457ec90e.html" target="element">  </a> </td>
+																		<td> <a href="../elements/ea76d9cc-ca9e-460b-bf5a-cc68457ec90e.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/da733d5b-9134-49f7-8f58-7ff0bf8833d8.html" target="element"> Ressurser (prinsipp 5) </a> </td>
+																		<td> <a href="../elements/c9bdd8d7-bad6-4fd9-ba79-c03d30a7d476.html" target="element"> Nasjonal arkitektur (Digdir) </a> </td>
+																	</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

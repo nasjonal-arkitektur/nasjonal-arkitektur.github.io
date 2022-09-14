@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>System Adaptation</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>System Adaptation</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Resource"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Resource" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">One of the main functions of a data space is to facilitate the transfer of data to and from participants&#8217; systems (i.e. database systems, data-processing systems, enterprise systems [like CRM, ERP, MRP or MES systems], but also cyberphysical systems and IoT-enabled systems). Regardless of the system, there is a need for a System Adaptation building block that interfaces with the various data resources exported by the system and performs the necessary transformation of the data formats adopted for data exchange within the data space (see &#8216;Data Exchange APIs&#8217; building block). The interface depends on the nature of the system: For example, IoT protocols (e.g. CoAP [Constrained Application Protocol] or MQTT [Message Queuing Telemetry Transport]) can be used to interface with IoT resources, database protocols (e.g. JDBC [Java Database Connectivity] or SQL [Structured Query Language]) can be used to interface with databases, and API protocols (e.g. RESTful services) can be used to interface with enterprise systems and applications. To maintain confidentiality and privacy when transferring data from participants&#8217; systems to the data space and vice versa, data encryption and anonymization may be required. Additional data and metadata may also be incorporated in order to transport relevant information required for other data space building blocks (e.g., on data accountability/traceability or usage control) to work.</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

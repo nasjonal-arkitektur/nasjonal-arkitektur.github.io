@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Service Metadata Locator (SML)</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Service Metadata Locator (SML)</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-ApplicationComponent"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-ApplicationComponent" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/SML+service
+
+The Service Metadata Locator (SML) is the key component that enables dynamic discovery of participants in message exchange networks. As a result, these networks can scale up without being affected by the management of an increasing number of participants. Instead of having participants managed by a central node, address resolution becomes fully distributed and consequently much more scalable.
+
+CEF's eDelivery SML Service uses DNS (Domain Name System) lookups to find information concerning a given participant in a message exchange network. This approach does not need a single, central server to run the discovery interface (with its associated single point of failure). Instead, the use of the DNS makes it highly resilient. At runtime, the SML uses decentralised DNS for load balancing of requests, thus supporting a full European-wide upscaling of performance. Since CEF eDelivery interfaces with the global DNS system, the SML can virtually operate 24/7/365. In case of failure, participants would still be able to discover each other based on the information stored on the DNS.
+
+The current CEF eDelivery SML Service implements both the CEF eDelivery SML specifications and the PEPPOL Transport Infrastructure SML specifications. It is based on the sample implementation of the SML software maintained by the European Commission
+
+The CEF eDelivery SML Service is intended for the following type of users:
+
+* Service Providers: may offer services to integrate national backend systems with CEF's eDelivery SML Service or to install and operate a CEF eDelivery SML Service.
+* Software Providers: may develop software conformant with the specifications of the CEF eDelivery SML Service to sell it as a commercial product or as an Open Source project.
+* Policy Domain Owners: may use the CEF eDelivery SML Service to help them build their policy network and facilitate the dynamic registration and discovery of participants.
+
+The CEF eDelivery SML Service has been designed to generate a list of benefits to the users of the service:
+
+* Dynamic, global and centralized information management about the participants' SMP location on a Domain Name System (DNS) out of the box;
+* Well established processes and procedures supported by the CEF eDelivery Support office;
+* Scaling up of message exchange networks with hundreds or thousands of participants.</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td> difi:metaLevel </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">undefined</xmp> </td></tr><tr><td> dct:type </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">archi:application-component</xmp> </td></tr><tr><td> difi:namespace </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">-</xmp> </td></tr><tr><td> difi:abstractionLevel </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">undefined</xmp> </td></tr><tr><td> difi:language </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">no</xmp> </td></tr><tr><td> difi:name_no </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">Service Metadata Locator (SML)</xmp> </td></tr><tr><td> difi:name_en </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> difi:description_no </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/SML+service
+
+								The Service Metadata Locator (SML) is the key component that enables dynamic discovery of participants in message exchange networks. As a result, these networks can scale up without being affected by the management of an increasing number of participants. Instead of having participants managed by a central node, address resolution becomes fully distributed and consequently much more scalable.
+
+								CEF's eDelivery SML Service uses DNS (Domain Name System) lookups to find information concerning a given participant in a message exchange network. This approach does not need a single, central server to run the discovery interface (with its associated single point of failure). Instead, the use of the DNS makes it highly resilient. At runtime, the SML uses decentralised DNS for load balancing of requests, thus supporting a full European-wide upscaling of performance. Since CEF eDelivery interfaces with the global DNS system, the SML can virtually operate 24/7/365. In case of failure, participants would still be able to discover each other based on the information stored on the DNS.
+
+								The current CEF eDelivery SML Service implements both the CEF eDelivery SML specifications and the PEPPOL Transport Infrastructure SML specifications. It is based on the sample implementation of the SML software maintained by the European Commission
+
+								The CEF eDelivery SML Service is intended for the following type of users:
+
+								* Service Providers: may offer services to integrate national backend systems with CEF's eDelivery SML Service or to install and operate a CEF eDelivery SML Service.
+								* Software Providers: may develop software conformant with the specifications of the CEF eDelivery SML Service to sell it as a commercial product or as an Open Source project.
+								* Policy Domain Owners: may use the CEF eDelivery SML Service to help them build their policy network and facilitate the dynamic registration and discovery of participants.
+
+								The CEF eDelivery SML Service has been designed to generate a list of benefits to the users of the service:
+
+								* Dynamic, global and centralized information management about the participants' SMP location on a Domain Name System (DNS) out of the box;
+								* Well established processes and procedures supported by the CEF eDelivery Support office;
+								* Scaling up of message exchange networks with hundreds or thousands of participants.</xmp> </td></tr><tr><td> difi:description_en </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr><tr><td> label </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap">${name}</xmp> </td></tr><tr><td> difi:notes </td><td class="convertlinks"> <xmp class="no-margin" style="white-space:pre-wrap"></xmp> </td></tr>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
