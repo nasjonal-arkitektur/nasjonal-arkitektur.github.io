@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Datadeling :: Nasjonalt arkitekturverksted 2019-2021 (opprydding pågår høst 2022)</title>
+    <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/data-sharing/data-sharing.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://nasjonal-arkitektur.github.io">Nasjonalt arkitekturverksted 2019-2021 (opprydding pågår høst 2022)</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        </div>
+		<a id="twitter-link" class="navbar-item" href="https://twitter.com/janakaSteph" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="drafts" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Utkast og innspill</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../about-drafts.html">Om utkast og innspill</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Utkast til blogginnlegg</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../2021-ra-blogs/Blogginnlegg%20om%20referansearkitekturer.html">Hva kom først, referansearkitekturen eller løsningen?</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Utkast til notater</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-exchange-strategy-emelding/emelding-oppdatert-strategi-forslag.html">Notat - Strategisk retning for utbredelse av eMelding</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Tidligere innhold i arkitekturverksted - flyttet hit (utkast)</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="data-sharing.html">Datadeling</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="data-sharing.html">Om temaområdet <em>datadeling</em></a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data-sharing-value-streams.html">Referansemodeller for datadeling</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Innspill til videre referansearkiturarbeid</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-proposals/ra-proposals.html">Innspill til videre referansearkitekturarbeid (2020)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ra-datax-books/data-exchange-ra-drafts.html">Utkast til oppdatering av nasjonal referansearkitektur for datautveksling (2021)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Initiativer (innspill)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../architecture-repository/ra-network/about-FRA21.html">Nettverk for referansearkitektursamarbeid (FRA21)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../architecture-repository/ra-network/about-FRA21.html">Om FRA21-nettverket</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../architecture-repository/ra-network/nettverksaktiviteter.html">Nettverksaktiviteter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../architecture-repository/ra-network/reading-tips.html">Tips om aktuelt lesestoff</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../architecture-repository/proposed-reference-architectures/proposed-reference-architecture-work.html">Innspill til prioritering av videre arbeid med referansearkitekturer (A&amp;S-rådet, okt. 2020)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../architecture-repository/proposed-reference-architectures/følgebrev.html">Følgebrev</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../architecture-repository/proposed-reference-architectures/situasjonsrapport.html">Situasjonsrapport</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../architecture-repository/proposed-reference-architectures/strukturering-av-spørreskjema.html">Strukturering av spørreskjema</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../architecture-repository/proposed-reference-architectures/forklaringer-til-spørsmålene.html">Forklaringer til spørsmålene</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../architecture-repository/methods/methods.html">Metodikk for utvikling av nasjonal arkitektur (innspill)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture-repository/methods/reference-architecture-methods.html">Metodikk for utvikling av referansearkitekturer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Løsningsbyggeklosser for bruk og gjenbruk</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Fellesløsninger</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Tekniske tjenester og API-er</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sluttbrukertjenester</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">Modelleringskonvensjoner</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Se også</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture-repository/index.html">Nasjonalt arkitekturverksted</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../knowledge/index.html">Arkitekturfaglig kunnskapsverksted</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Utkast og innspill</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Arkitekturfaglig kunnskapsverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../knowledge/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Nasjonalt arkitekturverksted</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../architecture-repository/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Utkast og innspill</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../architecture-repository/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Utkast og innspill</a></li>
+    <li>Tidligere innhold i arkitekturverksted - flyttet hit (utkast)</li>
+    <li><a href="data-sharing.html">Datadeling</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://gitlab.com/digdir/components/draft-components/drafts/edit/master/data-sharing-draft/modules/data-sharing/pages/data-sharing.adoc">Rediger kilde</a></div>
+  </div>
+<article class="doc"><a name="section-top"></a>
+<h1 class="page">Datadeling</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="_images/datadeling-logo.png" alt="datadeling logo" width="300"></span></p>
+</div>
+<div class="paragraph lead">
+<p><strong><em>Datadeling</em> handler om å forsyne forretningsprosesser og dataanalyse med nødvendig datagrunnlag.</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../architecture-repository/common/_images/i-arbeid.png" alt="i arbeid" width="45" height="45"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1. Generelt</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_hva_er_datadeling"><a class="anchor" href="#_hva_er_datadeling"></a><a class="link" href="#_hva_er_datadeling">1.1. Hva er "datadeling"?</a></h3>
+<div class="paragraph">
+<p>Formålet med datadeling er å forsyne forretningsprosesser og dataanalyse med nødvendig datagrunnlag for aktuell opgaveløsning.</p>
+</div>
+<div class="paragraph">
+<p>De fleste aktører sitter på begge sider i dette bildet, og må kunne både <em>dele</em> og <em>innhente</em> data. Det skilles  på rollene som <em>tilbyder</em> og <em>konsument</em>.</p>
+</div>
+<div class="paragraph">
+<p>I noen sammenhenger skilles det også  mellom <em>data</em> og <em>hendelser</em>. En hendelse kan f.eks. være at det er gjort et vedtak i en sak, noe som utløser behov for å informere andre. Dette gjøres typisk gjennom meldinger som gir varsel (notifikasjon) om hva som har skjedd, der konsumentene så eventuelt må tilbake til tilbyder for å ta rede på detaljene.</p>
+</div>
+<div class="paragraph">
+<p>Begrepet <em>datadeling</em> omfatter her dessuten  meldingsutveksling i tverrgående prosesser, dvs. prosesser som går på tvers av ulike organisasjonsenheter eller virksomheter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_motivasjon_for_deling_av_data"><a class="anchor" href="#_motivasjon_for_deling_av_data"></a><a class="link" href="#_motivasjon_for_deling_av_data">1.2. Motivasjon for deling av data</a></h3>
+<div class="paragraph">
+<p>Deling av data er definert som et insatsområde i regjeringens digitaliseringsstrategi for 2019-2025.</p>
+</div>
+<div class="paragraph">
+<p>Bakgrunnen for dette ligger i verdien for ulike interessenter, enten det dreier seg om egen oppgaveløsning, verdiøkende tjenester eller sekundær bruk i form av dataanalyse.</p>
+</div>
+<div class="paragraph">
+<p>Grovt sett, kan en si at det finnes følgende formål for "datadeling":</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Generell deling av data, for vilkårlige tredjeparter og deres formål. Dette kan være primærbruk i egen oppgaveløsning, eller sekundær bruk i form av verdiøkende tjenester eller dataanalyse.</p>
+</li>
+<li>
+<p>Samhandling mellom samhandlingsaktører i tverrgående prosesser.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For den som skal dele data, kan motivasjonen for "generell deling av data" være vanskelig å få øye på. Det kreves effektive virkemidler og gode fellesløsninger for at dette skal prioriteres på bekostning av egen oppgaveløsning, spesielt der det følger med risiko for å trå feil med tanke på informasjonssikkerhet (kompromittering av taushetsbelagte opplysninger).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datadeling_i_kontekst"><a class="anchor" href="#_datadeling_i_kontekst"></a><a class="link" href="#_datadeling_i_kontekst">1.3. Datadeling i kontekst</a></h3>
+<div class="paragraph">
+<p>Datadeling gir ikke verdi uten at data benyttes i oppgaveløsning og tjenesteproduksjon.</p>
+</div>
+<div class="paragraph">
+<p>Datadeling inngår i saksbehandling og tverrgående prosesser for tjenesteproduksjon.</p>
+</div>
+<div class="paragraph">
+<p>Aktuelle mål om sammenhengende tjenester for personer og virksomheter, krever fungerende arbeidsprosesser på tvers av forvaltningen. Dette omtales gjerne som <em>tverrgående prosesser</em>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Utvikle,%20drift%20og%20forvalt%20tverrgående%20prosess.png" alt="Utvikle" width="drift og forvalt tverrgående prosess image">
+</div>
+<div class="title">Figur 1. Utvikle, drift og forvalt tverrgående prosess</div>
+</div>
+<div class="paragraph">
+<p>Tverrgående prosesser finnes i flere former.</p>
+</div>
+<div class="paragraph">
+<p>De enkleste prosessene kan kartlegges og standardiseres. Slike prosesser kan typisk automatiseres - så langt det er mulig å definere reglene for dette (eventuelt med kunstig intelligens)</p>
+</div>
+<div class="paragraph">
+<p>For mer komplekse oppgaver kreves andre tilnærminger. De mest komplekse oppgavene løses av kunnskapsmedarbeidere i økosystemer på tvers av forvaltningen. Arbeidsprosessene kan ikke da på forhånd kartlegges eller automatiseres i sin helhet, men en kan støtte saksbehandlere med verktøy for dynamisk saksbehandling og enkelte deler av prosessene kan kanskje uansett automatiseres.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Sammenheng%20-%20datadeling%20og%20faste%20vs.%20dynamiske%20prosesser.png" alt="Sammenheng - datadeling og faste vs. dynamiske prosesser image">
+</div>
+<div class="title">Figur 2. Sammenheng - datadeling og faste vs. dynamiske prosesser</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_omfang_og_avgrensing_for_området_datadeling"><a class="anchor" href="#_omfang_og_avgrensing_for_området_datadeling"></a><a class="link" href="#_omfang_og_avgrensing_for_området_datadeling">1.4. Omfang og avgrensing for området datadeling</a></h3>
+<div class="paragraph">
+<p>Området datadeling kan ses som del av <a href="../nab_arkitekturlandskap_segmentarkitektur_informasjonsforvaltning">informasjonsforvaltning</a> som et større område.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../architecture-repository/common/_images/i-arbeid.png" alt="i arbeid" width="45" height="45"></span> <em>I arbeid (høst 2019)</em></p>
+</div>
+<div class="paragraph">
+<p>Som en pragmatisk tilnærming, gis her et forslag til temaområder innen datadeling der avgrensingen mot tilsvarende områder innen informasjonsforvaltning ikke er spesifisert. Dette er temaer som uansett må dekkes.</p>
+</div>
+<div class="paragraph">
+<p>Foreløpig oversikt over prioriterte temaområder innen datadeling:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Prioriterte%20temaer%20innen%20datadeling%20(2019).png" alt="Prioriterte temaer innen datadeling (2019) image">
+</div>
+<div class="title">Figur 3. Prioriterte temaer innen datadeling (2019)</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+Beskrivelsene bygges ut og oppdateres i tilknytning til løpende prosjektarbeid.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_felles_referansemodeller_for_datadeling"><a class="anchor" href="#_felles_referansemodeller_for_datadeling"></a><a class="link" href="#_felles_referansemodeller_for_datadeling">2. Felles referansemodeller for datadeling</a></h2>
+<div class="sectionbody">
+<div class="paragraph lead">
+<p><em>Disse modellene er tatt fram for å gi felles referanse og rammer for beskrivelser av ulke aspekter inn området datadeling.</em></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Info"></i>
+</td>
+<td class="content">
+Se <a href="../nab_referanse_modelleringskonvensjoner">modelleringskonvensjoner</a> om gjeldende modelleringskonvensjoner (<em>verdistrømmer</em>).
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_overordnet_verdistrøm_for_datadeling"><a class="anchor" href="#_overordnet_verdistrøm_for_datadeling"></a><a class="link" href="#_overordnet_verdistrøm_for_datadeling">2.1. Overordnet verdistrøm for datadeling</a></h3>
+<div class="paragraph">
+<p>Ende-til-ende verdistrømmer for både datatilbydere og datakonsumenter er vist i følgende figur.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Overordnet%20verdistrøm%20for%20deling%20av%20data.png" alt="Overordnet verdistrøm for deling av data" width="image">
+</div>
+<div class="title">Figur 4. Overordnet verdistrøm for deling av data</div>
+</div>
+<div class="paragraph">
+<p>Videre kommentarer til figuren over: TBD.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_detaljering_av_stegene_i_overordnet_verdistrøm"><a class="anchor" href="#_detaljering_av_stegene_i_overordnet_verdistrøm"></a><a class="link" href="#_detaljering_av_stegene_i_overordnet_verdistrøm">2.2. Detaljering av stegene i overordnet verdistrøm</a></h3>
+<div class="sect3">
+<h4 id="_steg_tilgjengeliggjør_egne_data_og_klargjør_for_datadeling"><a class="anchor" href="#_steg_tilgjengeliggjør_egne_data_og_klargjør_for_datadeling"></a><a class="link" href="#_steg_tilgjengeliggjør_egne_data_og_klargjør_for_datadeling">2.2.1. Steg: Tilgjengeliggjør egne data og klargjør for datadeling</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Tilgjengeliggjør%20egne%20data%20og%20klargjør%20for%20datadeling.png" alt="Tilgjengeliggjør egne data og klargjør for datadeling image">
+</div>
+<div class="title">Figur 5. Tilgjengeliggjør egne data og klargjør for datadeling</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_roller"><a class="anchor" href="#_roller"></a><a class="link" href="#_roller">3. Roller</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Innhold</h3>
+  <div id="article-toc"></div>
+</aside></main>
+</div>
+<footer class="footer">
+  <p>Kontakt: nasjonalarkitektur@digdir.no, eventuelt erik.hagen@digdir.no, tlf. +47 90631013.</p>
+  <p>Digitaliseringsirektoratet, 2020.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                  tocSelector: '#article-toc',
+                  contentSelector: 'article',
+                  headingSelector: 'h2, h3, h4, h5, h6',
+                  collapseDepth: 6,
+                  positionFixedSelector: '#article-toc',
+                  scrollSmooth: false
+                } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>  </body>
+</html>
