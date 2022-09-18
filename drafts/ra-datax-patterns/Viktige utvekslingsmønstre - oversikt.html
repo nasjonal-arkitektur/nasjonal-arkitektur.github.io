@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Viktige utvekslingsmønstre - oversikt :: Nasjonalt arkitekturverksted 2019-2021 (opprydding pågår høst 2022)</title>
     <link rel="canonical" href="https://nasjonal-arkitektur.github.io/drafts/ra-datax-patterns/Viktige%20utvekslingsmønstre%20-%20oversikt.html">
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.1.0">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
   <body class="article">
@@ -184,7 +184,7 @@
     <li class="component">
       <span class="title">Arkitekturfaglig kunnskapsverksted</span>
       <ul class="versions">
-        <li class="version is-latest">
+        <li class="version">
           <a href="../../knowledge/index.html">master</a>
         </li>
       </ul>
@@ -192,7 +192,7 @@
     <li class="component">
       <span class="title">Nasjonalt arkitekturverksted</span>
       <ul class="versions">
-        <li class="version is-latest">
+        <li class="version">
           <a href="../../architecture-repository/index.html">master</a>
         </li>
       </ul>
@@ -200,7 +200,7 @@
     <li class="component is-current">
       <span class="title">Utkast og innspill</span>
       <ul class="versions">
-        <li class="version is-current is-latest">
+        <li class="version is-current">
           <a href="../index.html">master</a>
         </li>
       </ul>
@@ -259,7 +259,7 @@
 <p>Publisert meldingsinnhold kan leses av alle interesserte abonnenter på det aktuelle emnet, så lenge innholdet er tilgjengelig (tidsbegrenset eller andre kriterier for gyldighet).</p>
 </div>
 <div class="paragraph">
-<p><a href="pub-sub-one-to-many.html" class="page">Videre detaljer</a></p>
+<p><a href="pub-sub-one-to-many.html" class="xref page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -274,7 +274,7 @@
 <p>Dette mønsteret er nærmere beskrevet under <a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">Publisering og konsumering av hendelsesstrømmer</a> i <a href="https://nasjonal-arkitektur.github.io/architecture-repository/index.html">arkitekturverkstedet</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="event-streaming-12m-one-log.html" class="page">Videre detaljer</a></p>
+<p><a href="event-streaming-12m-one-log.html" class="xref page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -283,7 +283,7 @@
 <p>Meldinger tas ut av køen ved lesing, slik at hver melding bare går til en mottaker.</p>
 </div>
 <div class="paragraph">
-<p><a href="pub-to-queue.html" class="page">Videre detaljer</a></p>
+<p><a href="pub-to-queue.html" class="xref page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -292,7 +292,7 @@
 <p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker. Dette kan skje direkte og synkront,eller via meldingskøer.</p>
 </div>
 <div class="paragraph">
-<p><a href="sending-one-to-one.html" class="page">Videre detaljer</a></p>
+<p><a href="sending-one-to-one.html" class="xref page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -301,7 +301,7 @@
 <p>Forsendelse fra en til flere kjente bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at samme innhold sendes gjennom gjentatte, men separate meldinger til et antall kjente mottakere.</p>
 </div>
 <div class="paragraph">
-<p><a href="sending-one-to-many.html" class="page">Videre detaljer</a></p>
+<p><a href="sending-one-to-many.html" class="xref page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -310,7 +310,7 @@
 <p>Forsendelse fra flere til en kjent mottaker bygger på <em>basismønsteret for forsendelse fra en til en</em>, ved at ulike meldinger med ulikt innhold sendes til bestemt kanal hos mottaker.</p>
 </div>
 <div class="paragraph">
-<p><a href="sending-many-to-one.html" class="page">Videre detaljer</a></p>
+<p><a href="sending-many-to-one.html" class="xref page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -322,7 +322,7 @@
 <p>Forespørsler publiseres, slik at en ikke er låst til svar fra bestemte tilbydere. Mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
 </div>
 <div class="paragraph">
-<p><a href="request-reply-many-unknown.html" class="page">Videre detaljer</a></p>
+<p><a href="request-reply-many-unknown.html" class="xref page">Videre detaljer</a></p>
 </div>
 <div class="paragraph">
 <p>Dette mønsteret støtter også datavirtualisering</p>
@@ -334,7 +334,7 @@
 <p>Dette mønsteret bygger på basismønsteret for forespørsel-svar. Samme forespørsel sendes mot flere kjente tilbydere og mottatte svar prosesseres ut fra valgt strategi. F.eks. kan strategien være at første svar bestandig velges, eller f.eks. kan alle svar kombineres til et samlet svar.</p>
 </div>
 <div class="paragraph">
-<p><a href="request-reply-many-known.html" class="page">Videre detaljer</a></p>
+<p><a href="request-reply-many-known.html" class="xref page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -343,7 +343,7 @@
 <p>Dette er et basismønster som omhandler oppslag i data fra en datakonsument mot en datatilbyder. Mønsteret dekker både asynkrone og synkrone oppslag, og det tas ikke stilling til kommunikasjonsprotokoll. Spørring og oppslag kan gjøres både mot data med ulike grader av tilgangsbegrensninger og mot åpne data, dvs. uten  helt uten behvo for tilgangsstyring.</p>
 </div>
 <div class="paragraph">
-<p><a href="request-reply-basic.html" class="page">Videre detaljer</a></p>
+<p><a href="request-reply-basic.html" class="xref page">Videre detaljer</a></p>
 </div></div></td>
 </tr>
 </tbody>

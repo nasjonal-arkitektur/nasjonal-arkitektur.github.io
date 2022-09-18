@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Meldingsforsendelse :: Nasjonalt arkitekturverksted 2019-2021 (opprydding pågår høst 2022)</title>
     <link rel="canonical" href="https://nasjonal-arkitektur.github.io/architecture-repository/one-way-push/book-one-way-push.html">
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.1.0">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
   <body class="article">
@@ -145,7 +145,7 @@
     <li class="component">
       <span class="title">Arkitekturfaglig kunnskapsverksted</span>
       <ul class="versions">
-        <li class="version is-latest">
+        <li class="version">
           <a href="../../knowledge/index.html">master</a>
         </li>
       </ul>
@@ -153,7 +153,7 @@
     <li class="component is-current">
       <span class="title">Nasjonalt arkitekturverksted</span>
       <ul class="versions">
-        <li class="version is-current is-latest">
+        <li class="version is-current">
           <a href="../index.html">master</a>
         </li>
       </ul>
@@ -161,7 +161,7 @@
     <li class="component">
       <span class="title">Utkast og innspill</span>
       <ul class="versions">
-        <li class="version is-latest">
+        <li class="version">
           <a href="../../drafts/index.html">master</a>
         </li>
       </ul>
@@ -190,13 +190,32 @@
 <article class="doc"><a name="section-top"></a>
 <h1 class="page">Meldingsforsendelse</h1>
 <div class="sect1">
-<h2 id="_generisk_forsendelse"><a class="anchor" href="#_generisk_forsendelse"></a><a class="link" href="#_generisk_forsendelse">1. Generisk forsendelse</a></h2>
+<h2 id="_om_mønstre_for_meldingsforsendelse"><a class="anchor" href="#_om_mønstre_for_meldingsforsendelse"></a><a class="link" href="#_om_mønstre_for_meldingsforsendelse">1. Om mønstre for meldingsforsendelse</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Meldingsforsendelse handler om å levere en pakke med informasjon fra en avsender til en mottaker. Dette kan gjøres gjennom ulike transportprotokoller og løsninger. Det kan f.eks. gjøres gjennom et synkront API-kall eller asynkront gjennom en meldingskø.</p>
+</div>
+<div class="paragraph">
+<p>Det finnes pt. ingen enkelt arkitektur eller løsning for dette som dekker alle behov. Derfor finnes det også flere teknologier og mange løsninger.</p>
+</div>
+<div class="paragraph">
+<p>Så lenge lovmessige krav ivaretas (informasjonssikkerhet, personvern, sporing, arkivering), er det fritt opp til partene å velge løsninger som fungerer bilateralt eller i avtalefelleskap innenfor eller mellom avgrensede domener.</p>
+</div>
+<div class="paragraph">
+<p>Denne referansearkitekturen for meldingsforsendelse beskriver flere konsepter og løsninger, men hovedvekten er lagt på samhandlingscenarier der det finnes behov for felles standarder, infrastruktur og styringsmekanismer på tvers av mange aktører, enten nasjonalt eller internasjonalt.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_konseptuelle_mønstre"><a class="anchor" href="#_konseptuelle_mønstre"></a><a class="link" href="#_konseptuelle_mønstre">2. Konseptuelle mønstre</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_generisk_forsendelse_konsept"><a class="anchor" href="#_generisk_forsendelse_konsept"></a><a class="link" href="#_generisk_forsendelse_konsept">2.1. Generisk forsendelse (konsept)</a></h3>
 <div class="paragraph lead">
 <p>Det mest grunnleggende mønsteret for meldingsutveksling omhandler enkeltvise meldinger fra en avsender til en kjent mottaker</p>
 </div>
-<div class="sect2">
-<h3 id="_introduksjon"><a class="anchor" href="#_introduksjon"></a><a class="link" href="#_introduksjon">1.1. Introduksjon</a></h3>
+<div class="sect3">
+<h4 id="_introduksjon"><a class="anchor" href="#_introduksjon"></a><a class="link" href="#_introduksjon">2.1.1. Introduksjon</a></h4>
 <div class="paragraph">
 <p><em>Generisk mønster for meldingsforsendelse til kjent mottaker</em> beskriver meldingsutveksling i form av enkeltvise meldinger fra en avsender til en kjent mottaker. De konseptuelle beskrivelsene som gis her danner grunnlag for beskrivelser av mer avanserte og spesialiserte mønstre; men kan også stå på egne ben, med egne løsningsmønstre.</p>
 </div>
@@ -214,8 +233,8 @@
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_brukstilfeller"><a class="anchor" href="#_brukstilfeller"></a><a class="link" href="#_brukstilfeller">1.2. Brukstilfeller</a></h3>
+<div class="sect3">
+<h4 id="_brukstilfeller"><a class="anchor" href="#_brukstilfeller"></a><a class="link" href="#_brukstilfeller">2.1.2. Brukstilfeller</a></h4>
 <div class="paragraph">
 <p>Aktuelle brukstilfeller for <em>Generisk mønster for meldingsforsendelse til kjent mottaker</em>:</p>
 </div>
@@ -234,10 +253,10 @@
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_grunnleggende_konsepter_og_forutsetninger"><a class="anchor" href="#_grunnleggende_konsepter_og_forutsetninger"></a><a class="link" href="#_grunnleggende_konsepter_og_forutsetninger">1.3. Grunnleggende konsepter og forutsetninger</a></h3>
 <div class="sect3">
-<h4 id="_logisk_og_fysisk_dataflyt"><a class="anchor" href="#_logisk_og_fysisk_dataflyt"></a><a class="link" href="#_logisk_og_fysisk_dataflyt">1.3.1. Logisk og fysisk dataflyt</a></h4>
+<h4 id="_grunnleggende_konsepter_og_forutsetninger"><a class="anchor" href="#_grunnleggende_konsepter_og_forutsetninger"></a><a class="link" href="#_grunnleggende_konsepter_og_forutsetninger">2.1.3. Grunnleggende konsepter og forutsetninger</a></h4>
+<div class="sect4">
+<h5 id="_logisk_og_fysisk_dataflyt"><a class="anchor" href="#_logisk_og_fysisk_dataflyt"></a><a class="link" href="#_logisk_og_fysisk_dataflyt">2.1.3.1. Logisk og fysisk dataflyt</a></h5>
 <div class="paragraph">
 <p>Følgende arkitekturtegning illustrerer helt grunnleggende konsepter.</p>
 </div>
@@ -248,14 +267,14 @@
 <div class="title">Figur 1. Generisk meldingsforsendelse</div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_aktører_og_roller"><a class="anchor" href="#_aktører_og_roller"></a><a class="link" href="#_aktører_og_roller">1.3.2. Aktører og roller</a></h4>
+<div class="sect4">
+<h5 id="_aktører_og_roller"><a class="anchor" href="#_aktører_og_roller"></a><a class="link" href="#_aktører_og_roller">2.1.3.2. Aktører og roller</a></h5>
 <div class="paragraph">
-<p>Se under <a href="../data-exchange-roles/data-exchange-roles.html" class="page">roller involvert i datautveksling</a>.</p>
+<p>Se under <a href="../data-exchange-roles/data-exchange-roles.html" class="xref page">roller involvert i datautveksling</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_avtaleforvaltning"><a class="anchor" href="#_avtaleforvaltning"></a><a class="link" href="#_avtaleforvaltning">1.3.3. Avtaleforvaltning</a></h4>
+<div class="sect4">
+<h5 id="_avtaleforvaltning"><a class="anchor" href="#_avtaleforvaltning"></a><a class="link" href="#_avtaleforvaltning">2.1.3.3. Avtaleforvaltning</a></h5>
 <div class="paragraph">
 <p>Det forutsettes at det finnes avtaler mellom avsender og mottaker som ivaretar hensyn til interoperabilitet og informasjonssikkerhet.</p>
 </div>
@@ -309,8 +328,8 @@
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_samhandlingsspesifikasjoner"><a class="anchor" href="#_samhandlingsspesifikasjoner"></a><a class="link" href="#_samhandlingsspesifikasjoner">1.3.4. Samhandlingsspesifikasjoner</a></h4>
+<div class="sect4">
+<h5 id="_samhandlingsspesifikasjoner"><a class="anchor" href="#_samhandlingsspesifikasjoner"></a><a class="link" href="#_samhandlingsspesifikasjoner">2.1.3.4. Samhandlingsspesifikasjoner</a></h5>
 <div class="paragraph">
 <p>Samhandlingsspesifikasjoner ligger til grunn for samhandlingsavtaler (se foregående avsnitt). For <em>_Generisk mønster for meldingsforsendelse til kjent mottaker</em>  omfatter dette:</p>
 </div>
@@ -337,7 +356,7 @@
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
+<i class="fa icon-warning" title="NB!"></i>
 </td>
 <td class="content">
 Dersom det skal utveksles meldinger i noen form for sammenhengende prosess, kreves en løsning for korrelering av meldinger. Det forutsettes her at det avtales en meldingsprotokoll på applikasjonslaget for dette med en parameter kalt "ConversationId" eller tilsvarende.
@@ -347,8 +366,8 @@ Dersom det skal utveksles meldinger i noen form for sammenhengende prosess, krev
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_kapabilitetskart_relevante_kapabiliteter"><a class="anchor" href="#_kapabilitetskart_relevante_kapabiliteter"></a><a class="link" href="#_kapabilitetskart_relevante_kapabiliteter">1.4. Kapabilitetskart - relevante kapabiliteter</a></h3>
+<div class="sect3">
+<h4 id="_kapabilitetskart_relevante_kapabiliteter"><a class="anchor" href="#_kapabilitetskart_relevante_kapabiliteter"></a><a class="link" href="#_kapabilitetskart_relevante_kapabiliteter">2.1.4. Kapabilitetskart - relevante kapabiliteter</a></h4>
 <div class="paragraph">
 <p>Modellen under viser hovedinndelingen i kapabiliteter for meldingsforsendelse mellom  en avsender og en mottaker.</p>
 </div>
@@ -397,10 +416,10 @@ Dersom det skal utveksles meldinger i noen form for sammenhengende prosess, krev
 <p>Realiseringen av disse kapabilitetene er beskrevet i det følgende; først konseptuelt, så med løsningsspefikke eksempler eller anbefalinger.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_konseptuelle_beskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_beskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_beskrivelser_arkitekturbyggeklosser">1.5. Konseptuelle beskrivelser (arkitekturbyggeklosser)</a></h3>
 <div class="sect3">
-<h4 id="_klargjøring_for_meldingsforsendelse"><a class="anchor" href="#_klargjøring_for_meldingsforsendelse"></a><a class="link" href="#_klargjøring_for_meldingsforsendelse">1.5.1. Klargjøring for meldingsforsendelse</a></h4>
+<h4 id="_konseptuelle_beskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_beskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_beskrivelser_arkitekturbyggeklosser">2.1.5. Konseptuelle beskrivelser (arkitekturbyggeklosser)</a></h4>
+<div class="sect4">
+<h5 id="_klargjøring_for_meldingsforsendelse"><a class="anchor" href="#_klargjøring_for_meldingsforsendelse"></a><a class="link" href="#_klargjøring_for_meldingsforsendelse">2.1.5.1. Klargjøring for meldingsforsendelse</a></h5>
 <div class="paragraph">
 <p>Modellen under detaljerer hvordan en samhandlingsaktør, som i dette tilfellet normalt vil være en avsender eller mottaker, blir klar for å sende data som en melding. Dette gjøres ved å inngå nødvendige avtaler for meldngsforsendelse og registrere nødvendige data i registre som er tilgjengelig for de andre samhandlingsaktørene i fellesskapet. Det vil kunne være forskjeller på hva som er nødvendig å gjøre avhengig av om samhandlingsaktøren er en avsender eller mottaker, men normalt vil man inneha begge roller i fellesskapet.</p>
 </div>
@@ -496,10 +515,10 @@ Dersom det skal utveksles meldinger i noen form for sammenhengende prosess, krev
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_operativ_meldingsforsendelse"><a class="anchor" href="#_operativ_meldingsforsendelse"></a><a class="link" href="#_operativ_meldingsforsendelse">1.5.2. Operativ meldingsforsendelse</a></h4>
 <div class="sect4">
-<h5 id="_send_melding"><a class="anchor" href="#_send_melding"></a><a class="link" href="#_send_melding">1.5.2.1. Send melding</a></h5>
+<h5 id="_operativ_meldingsforsendelse"><a class="anchor" href="#_operativ_meldingsforsendelse"></a><a class="link" href="#_operativ_meldingsforsendelse">2.1.5.2. Operativ meldingsforsendelse</a></h5>
+<div class="sect5">
+<h6 id="_send_melding"><a class="anchor" href="#_send_melding"></a><a class="link" href="#_send_melding">2.1.5.2.1. Send melding</a></h6>
 <div class="paragraph">
 <p>Her beskrives en referansemodell for operativ meldingsforsendelse. Merk: Enkelte prosess-steg kan være uaktuelle, avhengig av dataene som utveksles og spesifikasjonene for samhandling innen et eventuelt <em>avtalefellesskap</em>.</p>
 </div>
@@ -614,8 +633,8 @@ Dersom det skal utveksles meldinger i noen form for sammenhengende prosess, krev
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_motta_melding"><a class="anchor" href="#_motta_melding"></a><a class="link" href="#_motta_melding">1.5.2.2. Motta melding</a></h5>
+<div class="sect5">
+<h6 id="_motta_melding"><a class="anchor" href="#_motta_melding"></a><a class="link" href="#_motta_melding">2.1.5.2.2. Motta melding</a></h6>
 <div class="paragraph">
 <p>Motta melding detaljerer prosessen med å motta en melding etter klargjøring for forsendelse. Alle stegene i prosessen vil ikke alltid være nødvendig avhengig av dataene som utveksles og spesifikasjonene for samhandling innen fellesskapet.</p>
 </div>
@@ -706,12 +725,10 @@ Dersom det skal utveksles meldinger i noen form for sammenhengende prosess, krev
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_4_hjørners_modellen"><a class="anchor" href="#_4_hjørners_modellen"></a><a class="link" href="#_4_hjørners_modellen">2. 4-hjørners-modellen</a></h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">2.1. Generelt</a></h3>
+<h3 id="_4_hjørners_modellen_konsept"><a class="anchor" href="#_4_hjørners_modellen_konsept"></a><a class="link" href="#_4_hjørners_modellen_konsept">2.2. 4-hjørners-modellen (konsept)</a></h3>
+<div class="sect3">
+<h4 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">2.2.1. Generelt</a></h4>
 <div class="paragraph">
 <p>Begrepet "firehjørnersmodell", eller “4-corner model”, stammer fra  <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a>.</p>
 </div>
@@ -761,8 +778,8 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 <p><strong>Hjørne 4</strong> representerer back-end systemet til mottaker.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_egenskaper_ved_4_hjørnersmodellen"><a class="anchor" href="#_egenskaper_ved_4_hjørnersmodellen"></a><a class="link" href="#_egenskaper_ved_4_hjørnersmodellen">2.2. Egenskaper ved  4-hjørnersmodellen</a></h3>
+<div class="sect3">
+<h4 id="_egenskaper_ved_4_hjørnersmodellen"><a class="anchor" href="#_egenskaper_ved_4_hjørnersmodellen"></a><a class="link" href="#_egenskaper_ved_4_hjørnersmodellen">2.2.2. Egenskaper ved  4-hjørnersmodellen</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -786,25 +803,25 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_backend_integrasjon"><a class="anchor" href="#_backend_integrasjon"></a><a class="link" href="#_backend_integrasjon">2.3. Backend-integrasjon</a></h3>
+<div class="sect3">
+<h4 id="_backend_integrasjon"><a class="anchor" href="#_backend_integrasjon"></a><a class="link" href="#_backend_integrasjon">2.2.3. Backend-integrasjon</a></h4>
 <div class="paragraph">
 <p>I 4-hjørnersmodellen er det fleksibilitet gjennom hvordan man velger å integrere aksesspunktet med egen IT-arkitektur og IT-infrastruktur. Sett fra avsenderapplikasjonen er det tre måter å integrere hjørne 1/hjørne 2 og hjørne 3/hjørne 4.</p>
 </div>
-<div class="sect3">
-<h4 id="_tett_kobling"><a class="anchor" href="#_tett_kobling"></a><a class="link" href="#_tett_kobling">2.3.1. Tett kobling</a></h4>
+<div class="sect4">
+<h5 id="_tett_kobling"><a class="anchor" href="#_tett_kobling"></a><a class="link" href="#_tett_kobling">2.2.3.1. Tett kobling</a></h5>
 <div class="paragraph">
 <p>Avsender applikasjon og aksesspunkt er tett koblet ved at avsender applikasjonen har integrert funksjonaliteten til aksesspunktet. Det blir dermed et en-til-en forhold mellom aksesspunkt og avsender applikasjonen.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_semi_tett_kobling"><a class="anchor" href="#_semi_tett_kobling"></a><a class="link" href="#_semi_tett_kobling">2.3.2. Semi-tett kobling</a></h4>
+<div class="sect4">
+<h5 id="_semi_tett_kobling"><a class="anchor" href="#_semi_tett_kobling"></a><a class="link" href="#_semi_tett_kobling">2.2.3.2. Semi-tett kobling</a></h5>
 <div class="paragraph">
 <p>Avsender applikasjonen og aksesspunkt er semi-tett koblet ved at back-end og aksesspunkt er løst koblet internt, men del av det samme interne IT-arkitekturen og IT-infrastrukturen. Et aksesspunkt kan håndtere flere avsender applikasjoner.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_løs_kobling"><a class="anchor" href="#_løs_kobling"></a><a class="link" href="#_løs_kobling">2.3.3. Løs kobling</a></h4>
+<div class="sect4">
+<h5 id="_løs_kobling"><a class="anchor" href="#_løs_kobling"></a><a class="link" href="#_løs_kobling">2.2.3.3. Løs kobling</a></h5>
 <div class="paragraph">
 <p>Avsender applikasjonen og aksesspunkt er løst koblet og ikke en del av samme interne IT-arkitektur og IT-infrastruktur. Ett aksesspunkt kan håndtere meldingsutveksling for mange avsender applikasjoner fra flere virksomheter.</p>
 </div>
@@ -815,13 +832,16 @@ Denne modellen kan minne om en "tjenestebuss" (ESB), der det også finnes tilsva
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_emelding"><a class="anchor" href="#_emelding"></a><a class="link" href="#_emelding">3. eMelding</a></h2>
+<h2 id="_løsninger"><a class="anchor" href="#_løsninger"></a><a class="link" href="#_løsninger">3. Løsninger</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_introduksjon_2"><a class="anchor" href="#_introduksjon_2"></a><a class="link" href="#_introduksjon_2">3.1. Introduksjon</a></h3>
+<h3 id="_emelding_basert_på_eu_edelivery_løsning"><a class="anchor" href="#_emelding_basert_på_eu_edelivery_løsning"></a><a class="link" href="#_emelding_basert_på_eu_edelivery_løsning">3.1. eMelding basert på EU eDelivery (løsning)</a></h3>
+<div class="sect3">
+<h4 id="_introduksjon_2"><a class="anchor" href="#_introduksjon_2"></a><a class="link" href="#_introduksjon_2">3.1.1. Introduksjon</a></h4>
 <div class="paragraph">
-<p><em>eMelding</em> framstilles her som en løsningsnær spesialisering av <a href="../4-corner-model/4-hjørnersmodellen.html" class="page">4-hjørners-modellen</a>. Dette er en norsk variant av <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for asynkron meldingsutveksling. Det finnes flere eksisterende anvendelser og gjenbrukbare løsninger for å realisere eDelivery i ulike land og virksomheter.</p>
+<p><em>eMelding</em> framstilles her som en løsningsnær spesialisering av <a href="../4-corner-model/4-hjørnersmodellen.html" class="xref page">4-hjørners-modellen</a>. Dette er en norsk variant av <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery">EU-s CEF eDelivery</a> for asynkron meldingsutveksling. Det finnes flere eksisterende anvendelser og gjenbrukbare løsninger for å realisere eDelivery i ulike land og virksomheter.</p>
 </div>
 <div class="paragraph">
 <p>eMelding (og eDelivery) angir tekniske spesifikasjoner, standarder, programvare, fellesløsninger og støttetjenester for sikker meldingsutveksling mellom medlemmer i et felles nettverk.</p>
@@ -842,16 +862,16 @@ Meldingsspesifikasjonene i eDelivery støtter mønstre for request-reply og korr
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">3.2. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></h3>
-<div class="paragraph">
-<p>Se konseptuelle prosessbeskrivelser for <a href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html" class="page">Generisk forsendelse</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"><a class="anchor" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"></a><a class="link" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">3.3. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a></h3>
 <div class="sect3">
-<h4 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">3.3.1. Generelt</a></h4>
+<h4 id="_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"><a class="anchor" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser"></a><a class="link" href="#_konseptuelle_prosessbeskrivelser_arkitekturbyggeklosser">3.1.2. Konseptuelle prosessbeskrivelser (arkitekturbyggeklosser)</a></h4>
+<div class="paragraph">
+<p>Se konseptuelle prosessbeskrivelser under <a href="../generic-one-way-push/book-ra-generisk-meldingsutveksling.html" class="xref page">Generisk forsendelse</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"><a class="anchor" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge"></a><a class="link" href="#_anvendelse_av_emelding_i_peppol_infrastrukturen_i_norge">3.1.3. Anvendelse av eMelding i PEPPOL-infrastrukturen i Norge</a></h4>
+<div class="sect4">
+<h5 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">3.1.3.1. Generelt</a></h5>
 <div class="paragraph">
 <p>Innen EU anvendes eDelivery innen flere domener og nettverk. I Norge anvendes eDelivery/eMelding så langt (2020) innen domenet e-handel i  <a href="https://peppol.eu/what-is-peppol/">PEPPOL-nettverket</a>, i regi av <a href="https://peppol.eu/about-openpeppol/what-is-openpeppol/">OpenPEPPOL</a> som forvaltningsorgan (segmentsansvarlig) for multilaterale avtaler.</p>
 </div>
@@ -902,8 +922,8 @@ Meldingsspesifikasjonene i eDelivery støtter mønstre for request-reply og korr
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">3.3.2. Klargjør for deling av data ved forsendelse (eMelding)</a></h4>
+<div class="sect4">
+<h5 id="_klargjør_for_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_klargjør_for_deling_av_data_ved_forsendelse_emelding">3.1.3.2. Klargjør for deling av data ved forsendelse (eMelding)</a></h5>
 <div class="imageblock">
 <div class="content">
 <img src="../eMelding/_images/SBB_klargjøre.png" alt="Klargjør for eMelding (løsningsmønster) image">
@@ -990,10 +1010,10 @@ Meldingsspesifikasjonene i eDelivery støtter mønstre for request-reply og korr
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_operativ_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding">3.3.3. Operativ deling av data ved forsendelse (eMelding)</a></h4>
 <div class="sect4">
-<h5 id="_send_emelding"><a class="anchor" href="#_send_emelding"></a><a class="link" href="#_send_emelding">3.3.3.1. Send eMelding</a></h5>
+<h5 id="_operativ_deling_av_data_ved_forsendelse_emelding"><a class="anchor" href="#_operativ_deling_av_data_ved_forsendelse_emelding"></a><a class="link" href="#_operativ_deling_av_data_ved_forsendelse_emelding">3.1.3.3. Operativ deling av data ved forsendelse (eMelding)</a></h5>
+<div class="sect5">
+<h6 id="_send_emelding"><a class="anchor" href="#_send_emelding"></a><a class="link" href="#_send_emelding">3.1.3.3.1. Send eMelding</a></h6>
 <div class="imageblock">
 <div class="content">
 <img src="../eMelding/_images/Send%20eMelding%20%20(løsningsmønster).png" alt="Send eMelding  (løsningsmønster) image">
@@ -1103,8 +1123,8 @@ Meldingsspesifikasjonene i eDelivery støtter mønstre for request-reply og korr
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_motta_emelding"><a class="anchor" href="#_motta_emelding"></a><a class="link" href="#_motta_emelding">3.3.3.2. Motta eMelding</a></h5>
+<div class="sect5">
+<h6 id="_motta_emelding"><a class="anchor" href="#_motta_emelding"></a><a class="link" href="#_motta_emelding">3.1.3.3.2. Motta eMelding</a></h6>
 <div class="imageblock">
 <div class="content">
 <img src="../eMelding/_images/Motta%20eMelding%20(løsningsmønster).png" alt="Motta eMelding (løsningsmønster) image">
@@ -1181,10 +1201,17 @@ Meldingsspesifikasjonene i eDelivery støtter mønstre for request-reply og korr
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_videre_informasjon_om_emelding"><a class="anchor" href="#_videre_informasjon_om_emelding"></a><a class="link" href="#_videre_informasjon_om_emelding">3.4. Videre informasjon om eMelding</a></h3>
+<div class="sect3">
+<h4 id="_videre_informasjon_om_emelding"><a class="anchor" href="#_videre_informasjon_om_emelding"></a><a class="link" href="#_videre_informasjon_om_emelding">3.1.4. Videre informasjon om eMelding</a></h4>
 <div class="paragraph">
 <p>Videre informasjon og og dokumentasjon om eMelding finnes under <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding" class="bare">https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur-old/referansearkitektur-meldingsutveksling-emelding</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_andre_løsninger"><a class="anchor" href="#_andre_løsninger"></a><a class="link" href="#_andre_løsninger">3.2. Andre løsninger</a></h3>
+<div class="paragraph">
+<p>Andre løsninger er foreløpig ikke beskrevet her, men det understrekes at det finnes en rekke teknologier og løsninger som kan egne seg for ulike formål.</p>
 </div>
 </div>
 </div>
