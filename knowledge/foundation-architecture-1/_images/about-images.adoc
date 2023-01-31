@@ -1,4 +1,0 @@
-= About the Images directory
-Photographs, diagrams, screenshots, and other graphics files are saved in the images directory. They’re inserted into a page using the block or inline image macros. AsciiDoc supports PNG, JPG, SVG, and GIF (static and animated) image file formats.
-
-Also see: https://docs.antora.org/antora/2.2/modules/#images-dir
